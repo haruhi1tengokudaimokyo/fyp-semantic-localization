@@ -1,0 +1,59 @@
+diff --git a/data_utils/data_utils_zind.py b/data_utils/data_utils_zind.py
+index 501de00..645cc11 100644
+--- a/data_utils/data_utils_zind.py
++++ b/data_utils/data_utils_zind.py
+@@ -183,7 +183,7 @@ class LocalizationDataset(Dataset):
+         # Index within the scene
+         idx_within_scene = idx - self.scene_start_idx[scene_idx]
+     
+-        ref_pose = self.gt_pose[scene_idx][idx_within_scene]            
++        ref_pose = self.gt_pose[scene_idx][idx_within_scene].copy()            
+         x, y, th = ref_pose
+     
+         pano_image_name= self.gt_original_path[scene_idx][idx_within_scene]
+@@ -237,7 +237,7 @@ class LocalizationDataset(Dataset):
+         data_dict = {
+             "scene_name": scene_name,
+             "idx_within_scene": idx_within_scene,
+-            "ref_depth": torch.tensor(depth_ref, dtype=torch.long),
++            "ref_depth": torch.tensor(depth_ref, dtype=torch.float32),
+             "ref_semantics": torch.tensor(semantic_ref, dtype=torch.int),
+             "ref_pose": ref_pose,
+             "ref_noise": 0,
+@@ -247,7 +247,7 @@ class LocalizationDataset(Dataset):
+         
+         data_dict["ref_img"] = ref_img
+         data_dict["original_pano"] = query_image
+-        mask = np.ones(list(ref_img.shape[:2]), dtype=np.uint8)
++        mask = np.ones(list(ref_img.shape[1:]), dtype=np.uint8)
+         data_dict["ref_mask"] = mask
+ 
+         room_label_str = self.gt_room_label[scene_idx][idx_within_scene]
+diff --git a/data_utils/zind/create_casting_files_zind.py b/data_utils/zind/create_casting_files_zind.py
+index 42d4b16..78a1fd6 100644
+--- a/data_utils/zind/create_casting_files_zind.py
++++ b/data_utils/zind/create_casting_files_zind.py
+@@ -147,13 +147,12 @@ def create_raycast_file(
+         }
+ 
+         for j, ang in enumerate(angs):
+-            dist, pred_class, hit_coords_walls, normal = ray_cast(
++            dist, pred_class, hit_coords_walls = ray_cast(
+                 img_semantic, 
+                 np.array([x*100, y*100]), 
+                 ang, 
+                 dist_max=15 * 100, 
+                 min_dist=5, 
+-                cast_type=2
+             )
+ 
+             end_x, end_y = hit_coords_walls
+@@ -164,7 +163,7 @@ def create_raycast_file(
+                 'start_position_semantic': {'x': x, 'y': y},
+                 'start_position_walls': {'x': x, 'y': y},
+                 'end_position': {'x': end_x, 'y': end_y},
+-                'normal': normal
++                'normal': None
+             }
+             cam_data['rays'].append(ray_data)
+ 

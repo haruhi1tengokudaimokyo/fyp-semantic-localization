@@ -1,0 +1,54 @@
+diff --git a/Train_models/Train.py b/Train_models/Train.py
+index 5118c0b..2963ef2 100644
+--- a/Train_models/Train.py
++++ b/Train_models/Train.py
+@@ -6,7 +6,7 @@ from lightning.pytorch import Trainer
+ from lightning.pytorch.callbacks import ModelCheckpoint
+ from torch.utils.data import DataLoader
+ import torch
+-from attrdict import AttrDict
++from utils.config import AttrDict
+ from modules.depth.depth_net_pl import depth_net_pl
+ from modules.semantic.semantic_net_pl import semantic_net_pl
+ 
+@@ -28,8 +28,8 @@ def setup_dataset_and_loader(config, dataset_dir, split):
+         train_set = LocalizationDatasetZind(dataset_dir, split.train)
+         val_set = LocalizationDatasetZind(dataset_dir, split.val)
+     else:
+-        train_set = LocalizationDataset(dataset_dir, split.train)
+-        val_set = LocalizationDataset(dataset_dir, split.val)
++        train_set = LocalizationDataset(os.path.join(dataset_dir, "processed"), split.train)
++        val_set = LocalizationDataset(os.path.join(dataset_dir, "processed"), split.val)
+ 
+     train_loader = DataLoader(train_set, batch_size=config.batch_size, shuffle=True, num_workers=4)
+     val_loader = DataLoader(val_set, batch_size=config.batch_size, shuffle=False, num_workers=4)
+@@ -60,7 +60,7 @@ def main():
+         # default= r".\Train_models\configurations\S3D\depth_net_config.yaml", #S3D depth
+         # default= r".\Train_models\configurations\S3D\semantic_net_config.yaml", #S3D semantic
+         # default= r".\Train_models\configurations\zind\depth_net_config.yaml", #Zind depth
+-        default= r".\Train_models\configurations\zind\semantic_net_config.yaml", #Zind semantic
++        default="Train_models/configurations/zind/semantic_net_config.yaml", #Zind semantic
+         help="Path to the config file",
+     )
+     args = parser.parse_args()
+@@ -104,7 +104,7 @@ def main():
+         max_epochs=config.epochs,
+         callbacks=[checkpoint_callback],
+         accelerator="gpu" if torch.cuda.is_available() else "cpu",
+-        devices= 0 if torch.cuda.is_available() else 1,
++        devices=1,
+         log_every_n_steps=500,
+     )
+ 
+diff --git a/utils/config.py b/utils/config.py
+new file mode 100644
+index 0000000..05c93e9
+--- /dev/null
++++ b/utils/config.py
+@@ -0,0 +1,6 @@
++class AttrDict(dict):
++    def __init__(self, value):
++        super().__init__({k: AttrDict(v) if isinstance(v, dict) else v for k,v in value.items()})
++    def __getattr__(self, key):
++        try: return self[key]
++        except KeyError as e: raise AttributeError(key) from e

@@ -1,0 +1,31 @@
+diff --git a/evaluation/eval_localization.py b/evaluation/eval_localization.py
+index 0a2b34a..5b71a67 100644
+--- a/evaluation/eval_localization.py
++++ b/evaluation/eval_localization.py
+@@ -4,7 +4,7 @@ import yaml
+ import numpy as np
+ import torch
+ import torch.nn.functional as F
+-from attrdict import AttrDict
++from utils.config import AttrDict
+ import math
+ import tqdm
+ 
+@@ -164,7 +164,7 @@ def evaluate_localization_pipeline(config):
+         test_set = LocalizationDataset(os.path.join(config.dataset_dir, "processed"), split.test[:config.num_of_scenes])
+     
+     depth_net = None if config.use_ground_truth_depth else depth_net_pl.load_from_checkpoint(config.depth_weights).to(device).eval()
+-    semantic_net = None if config.use_ground_truth_semantic else semantic_net_pl.load_from_checkpoint(config.semantic_weights, num_classes=config.num_classes, num_room_types=config.num_room_types).to(device).eval()
++    semantic_net = None if config.use_ground_truth_semantic else semantic_net_pl.load_from_checkpoint(config.semantic_weights, num_ray_classes=config.num_classes, num_room_types=config.num_room_types).to(device).eval()
+ 
+     depth_df, semantic_df, maps, gt_poses, valid_scene_names, walls = load_scene_data(test_set, os.path.join(config.dataset_dir, "processed"), os.path.join(config.dataset_dir, "df"))
+ 
+@@ -190,7 +190,7 @@ def evaluate_localization_pipeline(config):
+             pred_rays_semantic, pred_semantics_np, room_logits = get_predicted_rays(semantic_net, img_torch, mask_torch, config, config.use_ground_truth_semantic, {"semantics": data["ref_semantics"]})
+             
+             prob_vol_depth, _, _, _ = localize(torch.tensor(depth_df[scene_name]), torch.tensor(pred_rays_depth), return_np=False)
+-            prob_vol_semantic, _, _, _ = localize(torch.tensor(semantic_df[scene_name]), torch.tensor(pred_rays_semantic), return_np=False)
++            prob_vol_semantic, _, _, _ = localize(torch.tensor(semantic_df[scene_name]), torch.tensor(pred_rays_semantic), return_np=False, localize_type="semantic")
+             
+             combined_prob_vol = combine_prob_volumes(prob_vol_depth, prob_vol_semantic, depth_weight, semantic_weight)
+ 
