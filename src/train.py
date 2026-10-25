@@ -12,9 +12,7 @@ def main():
     if args.smoke:
         train=manifest[:1] if isinstance(manifest,list) else manifest['engineering_only'][:1]; val=[]
     else:
-        train=manifest['train']; val=manifest['val']; test=manifest['test']
-        groups=[{read_sample(x)[0]['building_id'] for x in paths} for paths in [train,val,test]]
-        if not all(groups) or any(groups[i]&groups[j] for i,j in [(0,1),(0,2),(1,2)]): raise ValueError('Require nonempty building-disjoint train/val/test; no random image split.')
+        raise RuntimeError('Formal training is gated: independent-building baseline, full validation and best-checkpoint protocol are not yet verified. --smoke is engineering only.')
     torch.manual_seed(42); device='cuda' if torch.cuda.is_available() else 'cpu'
     depth,sem=models(); depth.to(device); sem.to(device)
     for model,backbone in [(depth,depth.depth_feature.resnet),(sem,sem.semantic_feature.resnet)]:

@@ -1,3 +1,5 @@
+# Legacy V1 engineering interface, preserved for reproducibility.
+# Audited P0/P1 entry points: audit.py and localize.py; see docs/AUDIT_V2.md.
 """Optional torchvision LR-ASPP MobileNetV3 pretrained person segmentation.
 No FYP data training. Download only on explicit invocation; TORCH_HOME stays on /data.
 """

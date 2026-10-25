@@ -1,3 +1,5 @@
+# Legacy V1 engineering interface, preserved for reproducibility.
+# Audited P0/P1 entry points: audit.py and localize.py; see docs/AUDIT_V2.md.
 """Official coarse matcher plus confidence extension; metric image-map coordinates."""
 from common import *
 from utils.localization_utils import localize,get_ray_from_depth,get_ray_from_semantics

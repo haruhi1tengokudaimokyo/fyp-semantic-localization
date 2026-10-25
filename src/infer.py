@@ -1,3 +1,5 @@
+# Legacy V1 engineering interface, preserved for reproducibility.
+# Audited P0/P1 entry points: audit.py and localize.py; see docs/AUDIT_V2.md.
 """RGB -> official depth/semantic rays -> official map matching -> metric pose."""
 from common import *
 from matching import atlas,match
