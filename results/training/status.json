@@ -1,0 +1,16 @@
+{
+  "state": "complete",
+  "engineering_smoke": true,
+  "validation_available": false,
+  "validation_loss": [],
+  "step": 20,
+  "amp_scale": 128.0,
+  "optimizer_updates": 20,
+  "loss": 0.4884921610355377,
+  "depth_l1": 0.1791069507598877,
+  "shape_loss": 0.21405935287475586,
+  "semantic_ce": 0.09532584995031357,
+  "peak_mib": 298.40966796875,
+  "peak_reserved_mib": 342.0,
+  "seconds": 4.6340309659717605
+}
