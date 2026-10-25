@@ -139,7 +139,7 @@ P1通过后先比较无处理/真实人物分割过滤/独立校准不确定性�
 - 原工程新增 `src/localization/{datasets,models,floorplan,matching,evaluation}`；在线 `src/localize.py` 与离线 `src/audit.py` 分开。
 - 配置 `configs/official_reproduction` / `integration` / `experimental` 清楚区分；补丁与测试可审阅。
 - 本轮完整原始逐图JSON和热图npz位于 `/data/fyp-semrayloc/runs/audit_v2/diagnostic_controlled/per_image`；交付目录 `results/audit_v2/raw_per_image` 是本机链接。汇总CSV/JSON、版本/权重SHA、真实命令、日志、32幅逐图图和4幅总图已交付；图册 `results/audit_v2/gallery.html`。
-- 本机图册服务 http://127.0.0.1:18766/gallery.html，旧训练记录18765保留；跨机器须重新启动本地服务或打开图册文件。
+- 本机图册服务 [本机图册](http://127.0.0.1:18766/gallery.html)，旧训练记录18765保留；跨机器须重新启动本地服务或打开图册文件。
 - 新的推理/诊断/可视化复跑命令见 `docs/AUDIT_V2.md`。完整审计可直接运行网络，不必依赖本轮感知缓存。
 
 当前真实阻碍：完整授权数据与独立建筑缺失；原checkpoint训练约定/重叠未知；候选与fine在GT输入上仍会失败；深度误差和门窗漏检明显；成功概率尚未校准；机器人内参与视点尚未适配。下一步先取得少量授权且建筑互斥的数据，核实checkpoint的训练深度约定并复跑完整官方Baseline；进一步用精确GT/离散网格/候选覆盖/候选选择实验定位剩余matcher失败。确认有效Baseline后才能正式微调或做鲁棒性研究。

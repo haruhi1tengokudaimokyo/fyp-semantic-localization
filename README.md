@@ -12,7 +12,7 @@
 
 - [本轮严谨中文报告](REPORT_AUDIT_zh.md)：诊断表、证据/假设、失败与未完成项。
 - [运行命令与接口](docs/AUDIT_V2.md)：新在线入口 `src/localize.py`，离线诊断 `src/audit.py`。
-- [逐图图册（本机生成）](results/audit_v2/gallery.html)、[完整指标](results/audit_v2/summary.json)、[逐图CSV](results/audit_v2/per_image_metrics.csv)、[真实运行及权重哈希](results/audit_v2/run_manifest.json)。本机服务 http://127.0.0.1:18766/gallery.html。
+- [逐图图册（本机生成）](results/audit_v2/gallery.html)、[完整指标](results/audit_v2/summary.json)、[逐图CSV](results/audit_v2/per_image_metrics.csv)、[真实运行及权重哈希](results/audit_v2/run_manifest.json)。本机服务 [本机图册](http://127.0.0.1:18766/gallery.html)。
 - 配置明确分为 `configs/official_reproduction`、`configs/integration`、`configs/experimental`；[行为补丁说明](patches/README.md)。原始匹配分数不作为成功概率，正式训练已门控。
 
 以下为 **v1历史工程记录**，保留原始数字；旧 `infer.py`/`evaluate.py`/`matching.py` 不代表本轮完整Baseline。旧mask/JSD只属工程实验，不作为研究改进证据。
