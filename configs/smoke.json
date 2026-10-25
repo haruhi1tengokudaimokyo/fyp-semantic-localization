@@ -1,0 +1,21 @@
+{
+  "dataset": "zind_public_sample_000",
+  "purpose": "engineering_overfit_only",
+  "batch_size": 1,
+  "height": 360,
+  "width": 640,
+  "freeze_backbones": true,
+  "freeze_backbone_batchnorm": true,
+  "steps": 20,
+  "learning_rate": 0.0001,
+  "precision": "cuda fp16 autocast + GradScaler",
+  "gradient_clip_norm": 1,
+  "gradient_accumulation": 1,
+  "room_loss": false,
+  "depth_loss": "L1 + 20*(1-cosine_similarity)",
+  "semantic_loss": "cross_entropy",
+  "official_baseline_weights": "zind",
+  "validation_available": false,
+  "amp_initial_scale": 128,
+  "optimizer_updates": 20
+}
