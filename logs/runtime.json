@@ -1,0 +1,12 @@
+{
+  "torch": "2.5.1+cu121",
+  "cuda_runtime": "12.1",
+  "cuda_available": true,
+  "gpu": "NVIDIA GeForce GTX 1660 SUPER",
+  "capability": [
+    7,
+    5
+  ],
+  "allocated_after_cuda_init_mib": 0.0,
+  "note": "Driver CUDA 13.0 is supported maximum API, installed torch runtime is CUDA12.1. Native BF16 not assumed for compute7.5."
+}

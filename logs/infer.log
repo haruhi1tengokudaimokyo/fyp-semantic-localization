@@ -1,0 +1,3 @@
+${FYP_ROOT}/envs/semrayloc/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+{"position_error_m": 6.982948303206254, "angle_error_deg": 80.24631308460509, "network_ms": 192.45069503085688, "matching_ms": 118.87136800214648, "gpu_peak_allocated_mib": 263.80322265625}

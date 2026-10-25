@@ -1,0 +1,97 @@
+${FYP_ROOT}/envs/semrayloc/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+completed 1/32
+completed 2/32
+completed 3/32
+completed 4/32
+completed 5/32
+completed 6/32
+completed 7/32
+completed 8/32
+completed 9/32
+completed 10/32
+completed 11/32
+completed 12/32
+completed 13/32
+completed 14/32
+completed 15/32
+completed 16/32
+completed 17/32
+completed 18/32
+completed 19/32
+completed 20/32
+completed 21/32
+completed 22/32
+completed 23/32
+completed 24/32
+completed 25/32
+completed 26/32
+completed 27/32
+completed 28/32
+completed 29/32
+completed 30/32
+completed 31/32
+completed 32/32
+{
+  "scope": "single public building, overlapping views; not held-out benchmark; pretrained membership unknown",
+  "count_images": 32,
+  "building_count": 1,
+  "grid_m": 0.1,
+  "refinement": false,
+  "room_prior": false,
+  "occlusion": "25% central gray rectangle, oracle mask; not real people",
+  "conditions": {
+    "0.25_mask_only": {
+      "n": 32,
+      "median_error_m": 4.844499548424598,
+      "median_error_deg": 93.53980181815913,
+      "mean_network_ms": 48.29431609323365,
+      "mean_matching_ms": 76.78896466131846,
+      "recall": {
+        "1m": 0.09375,
+        "0.5m": 0.0,
+        "0.1m": 0.0,
+        "1m 30 deg": 0.0
+      }
+    },
+    "0.25_official": {
+      "n": 32,
+      "median_error_m": 7.0370195566298435,
+      "median_error_deg": 86.47835028958109,
+      "mean_network_ms": 48.2868212802714,
+      "mean_matching_ms": 114.66074012605532,
+      "recall": {
+        "1m": 0.0,
+        "0.5m": 0.0,
+        "0.1m": 0.0,
+        "1m 30 deg": 0.0
+      }
+    },
+    "0.25_weighted_jsd": {
+      "n": 32,
+      "median_error_m": 5.309371593691827,
+      "median_error_deg": 82.8308719439818,
+      "mean_network_ms": 47.92662294130423,
+      "mean_matching_ms": 250.91341869301687,
+      "recall": {
+        "1m": 0.0625,
+        "0.5m": 0.0,
+        "0.1m": 0.0,
+        "1m 30 deg": 0.0
+      }
+    },
+    "0_official": {
+      "n": 32,
+      "median_error_m": 6.0166999021365015,
+      "median_error_deg": 97.42528111583027,
+      "mean_network_ms": 52.65248750038154,
+      "mean_matching_ms": 116.4417131258233,
+      "recall": {
+        "1m": 0.0625,
+        "0.5m": 0.03125,
+        "0.1m": 0.0,
+        "1m 30 deg": 0.0625
+      }
+    }
+  }
+}

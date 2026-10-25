@@ -1,0 +1,1 @@
+PASS: latest final checkpoint loaded with weights_only=True and strict=True for both official networks.
