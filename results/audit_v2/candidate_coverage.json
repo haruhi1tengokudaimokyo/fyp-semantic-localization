@@ -1,0 +1,42 @@
+{
+  "official_reproduction/A_gt_gt": {
+    "candidate_joint_coverage_at_k": [
+      0.6875,
+      0.75,
+      0.84375,
+      0.84375,
+      0.84375
+    ],
+    "fine_lost_despite_correct_candidate": 7
+  },
+  "official_reproduction/D_pred_pred": {
+    "candidate_joint_coverage_at_k": [
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.1875
+    ],
+    "fine_lost_despite_correct_candidate": 2
+  },
+  "our_integration/A_gt_gt": {
+    "candidate_joint_coverage_at_k": [
+      0.6875,
+      0.78125,
+      0.84375,
+      0.84375,
+      0.84375
+    ],
+    "fine_lost_despite_correct_candidate": 7
+  },
+  "our_integration/D_pred_pred": {
+    "candidate_joint_coverage_at_k": [
+      0.0625,
+      0.0625,
+      0.09375,
+      0.09375,
+      0.09375
+    ],
+    "fine_lost_despite_correct_candidate": 1
+  }
+}

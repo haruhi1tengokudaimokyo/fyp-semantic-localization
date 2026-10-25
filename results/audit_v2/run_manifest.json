@@ -1,0 +1,84 @@
+{
+  "code_checkpoint_v1": "268ff7f",
+  "pipeline_commit": "b8ba450",
+  "data_scope": "one public ZInD building; related views; no independent test",
+  "source_manifest_sha256": "bb7a9b454b49b673e3f06fce8fe078c3b59f5178b9ac85c924f8521fb231a8d9",
+  "data_manifest_sha256": "68c665317e4182f24d801fd4c229d8a5aaa0a912aa445a8525f92c88f60326cc",
+  "weights": {
+    "final_semantic.ckpt": {
+      "bytes": 312106740,
+      "sha256": "f1ee439e60c7cbaa9e07db29239e8274699086f7d381d0e974bdf50fa6e8a593",
+      "zip_crc_ok": true
+    },
+    "final_depth.ckpt": {
+      "bytes": 311667384,
+      "sha256": "9dd1611aca820dc0aa6d341579dae4e75a74c2870332dade1e23ad7390a95cb9",
+      "zip_crc_ok": true
+    },
+    "smoke_finetuned.pt": {
+      "bytes": 208265694,
+      "sha256": "ff72397596da5719431528d6f42e1b553cd4d27cdcde0327117ef6bbec88f1fd",
+      "purpose": "single-image engineering overfit only, no independent validation"
+    },
+    "lraspp": {
+      "sha256": "d234d4eae9d55d5f76de18b77cf0dc62c66fe5c5482758209d00f950c92bb280",
+      "url": "https://download.pytorch.org/models/lraspp_mobilenet_v3_large-d234d4ea.pth",
+      "smoke_test": "no person on empty room sample; not accuracy evaluation"
+    }
+  },
+  "training_performed_this_audit": false,
+  "commands": [
+    "python src/audit.py --out /data/fyp-semrayloc/runs/audit_v2/diagnostic_controlled --cached-perception /data/fyp-semrayloc/runs/audit_v2/perception_v1.json",
+    "python -m unittest discover -s tests -v",
+    "python src/audit_hypotheses.py --out /data/fyp-semrayloc/runs/audit_v2/hypotheses",
+    "python src/perception_sensitivity.py --out /data/fyp-semrayloc/runs/audit_v2/perception_sensitivity",
+    "python src/benchmark_online.py --out /data/fyp-semrayloc/runs/audit_v2/online_benchmark",
+    "python src/localize.py --rgb /data/fyp-semrayloc/data/zind_public_sample/samples/000_000/rgb.png --map /data/fyp-semrayloc/data/zind_public_sample/floorplan_semantic.png --free-mask /data/fyp-semrayloc/data/zind_public_sample/free_mask.npy --profile configs/integration/zind.json --out /data/fyp-semrayloc/runs/audit_v2/no_gt_query",
+    "source /opt/ros/jazzy/setup.bash && /usr/bin/python3 src/rosbag_preflight.py --bag /data/FYP_Indoor_Localization/results/indoor_bag_20261014_171719 --out /data/fyp-semrayloc/runs/audit_v2/rosbag_preflight",
+    "python src/visualize_audit.py --run /data/fyp-semrayloc/runs/audit_v2/diagnostic_controlled --out results/audit_v2",
+    "python src/audit_exact_gt.py --out /data/fyp-semrayloc/runs/audit_v2/exact_gt_recheck.json"
+  ],
+  "source_sha256": {
+    "src/audit.py": "68c33043d3c6148672615f5251ea5924a700aa95b080938a7bb55f211311aaa3",
+    "src/audit_exact_gt.py": "8ded943fdf95ec97971b4192a5f8975ee418215b6ababa8202aea4e03d07f56f",
+    "src/audit_hypotheses.py": "0ad1ee8c33a9dcfd82c8a86a3f46024c3eaf1c8cf008734baa6e9dbb621f4778",
+    "src/benchmark_online.py": "82dc4be0dadf1fe4cc1fe62e852d9c4c491fd3837a6ef03c9a125e612a6c505f",
+    "src/check_contracts.py": "daafe6595a318780e8971a84e0d2019fd87e657b47644f99ca186912224295b9",
+    "src/common.py": "05905c932bfb58d3ce6b06351fdd548ff26ec74d30d4b96eb5c8de4b9b9d4dd5",
+    "src/dashboard.py": "4f032561067ad35b92bf2e311c0253d2c5a1f8643484bc2645699b56b86463a2",
+    "src/evaluate.py": "2ffedf9e8113ddc156ff369068c4c4f2f018d921aac40ea7451e35c4536b1fed",
+    "src/infer.py": "b73d49773de4c54782e1255e8dbc375c991be3f15f2ee22df19f68f4729691e4",
+    "src/localization/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/localization/datasets/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/localization/datasets/zind_audit.py": "e54d6ec6bda62ed7c707aef9b07c700fd0050ab3de6faf6c23eb0aaa17afeef2",
+    "src/localization/evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/localization/evaluation/metrics.py": "c988135fc4bd62b2285c922576e8b0b1d5196ab64019894b7a875b2cc00cafaf",
+    "src/localization/floorplan/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/localization/floorplan/rays.py": "30cfeb1fd1304e70fc84510f8fba63369f85051530d9f269ec0eb5a8af6f91f5",
+    "src/localization/floorplan/representation.py": "eb3896fb56e92281b940ac5605168d486804bce3bb0d645babe9095452de5804",
+    "src/localization/geometry.py": "f72e00d97c93f78387ec3e4123e13590fac465316c6cb4823f577164b0e79edd",
+    "src/localization/matching/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/localization/matching/engine.py": "89672f90e0011e3af9ecc7098c8dde7b2a6cf30d3844e1edcd3cc7e7f72a6d3f",
+    "src/localization/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/localization/models/observation.py": "fc7e361cfe85cd98b0e44f29883b2eb419d8caf086ad7364df8c19585c2b1051",
+    "src/localize.py": "8da8b89b5a75e270cbb4fac85e042096fec38c5c945e4c22fa968b6380deecd6",
+    "src/matching.py": "35479a3ff933b5160c7f0c7891ebead91c9712144ce6ff251892e37b56abf43a",
+    "src/perception_sensitivity.py": "5d1d297788a7f1df8b61367c36de6acffcb087d16b22745fae6f79f8fec11ad3",
+    "src/person_mask.py": "50bce0ac8c7b52df07b3f94a8536a389b5600aa41e896e4b15aa1870be8adf5c",
+    "src/prepare_sample.py": "6b7e76dba5eed48b7955312c0da68924d758b7d8b5cc1b5c4774040110034e53",
+    "src/rosbag_preflight.py": "34d1294566d3c1737c3177e8978fb873b5482aecf667d8a039db850a3f108656",
+    "src/train.py": "352400419a1aa83157f404e32b31308d2cddd8fdf1b940e1c7d400cf0504cb01",
+    "src/upstream_config_compat.py": "03db9482f0902b386272f18f30624b576cfa32179deb027e219e586ea1ecb379",
+    "src/validate_manifest.py": "975d7a034d5b8db000ac9d45de87e88bf58ae847d693bd148263f3d4f8af62c3",
+    "src/visualize_audit.py": "43928423cab8855486fe8619d41fb47ecbfc4fc61912e23abed9b0c5595ad64a",
+    "configs/experimental/README.md": "03f9e69b32f02dd2e5199fb0840b7aa787fc7417b6dcb458d3d428a71ff2e195",
+    "configs/integration/zind.json": "f3c738a2b2f683abf36493d37d0d97f2364e979c0badbf06c2ad53c6c71b3ba7",
+    "configs/official_reproduction/zind.json": "72387e06a02d4d947b49b0e162473e4352c93e0a2eb5ccadbcb885ec35c4e3ab",
+    "configs/smoke.json": "949b24055c9730be7d753d59b8713f1520af4fb216e668cc58e375a3e45192a8",
+    "patches/01_runtime_compat.patch": "d615eae88e39c7d739b04827e79648ccadd0e9898fb0e1bda6383afc08d461a9",
+    "patches/02_semantic_dispatch.patch": "236eae4d9c7d0d11162f15734991c62d98e3d45155643b610c2c243be43f701b",
+    "patches/03_dataset_storage.patch": "d6573c40e1a4840f50b446bee08e5ff47d39300fbd1ed9e45eb617f5fdb50af9",
+    "patches/README.md": "cc83599c6e416cd3e7bd54040a72827028e4e541aeb38166ca0d6618aff28751",
+    "tests/test_audit.py": "e8e1863ffc3749cf61a9b2e770b3f987c9ffc98a70dd6ae739aee944626632b7"
+  }
+}

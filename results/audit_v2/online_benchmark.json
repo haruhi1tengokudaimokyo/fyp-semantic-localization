@@ -1,0 +1,10 @@
+{
+  "scope": "one-building engineering benchmark; two warmup network calls; no ROS, no model loading or atlas precomputation in processing timing; fine-ray cache cleared per image",
+  "n": 32,
+  "network_mean_ms": 54.43309612383018,
+  "processing_mean_ms": 313.3772471846896,
+  "processing_p95_ms": 420.23444191727316,
+  "processing_fps": 3.1910421352659584,
+  "peak_allocated_mib": 263.80322265625,
+  "peak_reserved_mib": 294.0
+}

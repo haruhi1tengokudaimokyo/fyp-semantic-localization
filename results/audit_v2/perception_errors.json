@@ -1,0 +1,258 @@
+[
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_000",
+    "all_wall": true,
+    "gt_door_or_window_count": 8,
+    "mean_wall_probability": 0.8558809131383895,
+    "depth_mae_if_axial_m": 0.26027531133093074,
+    "depth_mae_if_radial_m": 0.4222090565882352
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_090",
+    "all_wall": false,
+    "gt_door_or_window_count": 10,
+    "mean_wall_probability": 0.6635411191731692,
+    "depth_mae_if_axial_m": 1.1121424786000313,
+    "depth_mae_if_radial_m": 1.1633708102566422
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_180",
+    "all_wall": false,
+    "gt_door_or_window_count": 22,
+    "mean_wall_probability": 0.4554810281842947,
+    "depth_mae_if_axial_m": 0.35263781941524164,
+    "depth_mae_if_radial_m": 0.15293515202438168
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_270",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.9814538404345512,
+    "depth_mae_if_axial_m": 0.3668493912982088,
+    "depth_mae_if_radial_m": 0.14881104426340971
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_000",
+    "all_wall": false,
+    "gt_door_or_window_count": 17,
+    "mean_wall_probability": 0.44403109773993493,
+    "depth_mae_if_axial_m": 0.8413327965793025,
+    "depth_mae_if_radial_m": 1.0286106840651004
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_090",
+    "all_wall": true,
+    "gt_door_or_window_count": 23,
+    "mean_wall_probability": 0.8921240627765655,
+    "depth_mae_if_axial_m": 0.5914760464236891,
+    "depth_mae_if_radial_m": 0.8364809841701174
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_180",
+    "all_wall": false,
+    "gt_door_or_window_count": 14,
+    "mean_wall_probability": 0.6028057004325091,
+    "depth_mae_if_axial_m": 0.35139488725235746,
+    "depth_mae_if_radial_m": 0.20901676305197622
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_270",
+    "all_wall": true,
+    "gt_door_or_window_count": 9,
+    "mean_wall_probability": 0.8733443528413772,
+    "depth_mae_if_axial_m": 0.30759893035281594,
+    "depth_mae_if_radial_m": 0.5074656297988686
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_000",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.8893611237406731,
+    "depth_mae_if_axial_m": 0.4367840202221257,
+    "depth_mae_if_radial_m": 0.44800106396938444
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_090",
+    "all_wall": false,
+    "gt_door_or_window_count": 18,
+    "mean_wall_probability": 0.6834632305428385,
+    "depth_mae_if_axial_m": 0.3251892027226757,
+    "depth_mae_if_radial_m": 0.3275233802154877
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_180",
+    "all_wall": true,
+    "gt_door_or_window_count": 4,
+    "mean_wall_probability": 0.8079288572072982,
+    "depth_mae_if_axial_m": 0.46706022162209476,
+    "depth_mae_if_radial_m": 0.38295495846601957
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_270",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.9052773147821427,
+    "depth_mae_if_axial_m": 0.7240271691401896,
+    "depth_mae_if_radial_m": 0.6923050164810733
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_000",
+    "all_wall": true,
+    "gt_door_or_window_count": 5,
+    "mean_wall_probability": 0.8643960133194923,
+    "depth_mae_if_axial_m": 2.77987511518275,
+    "depth_mae_if_radial_m": 2.7959819388889198
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_090",
+    "all_wall": false,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.7270495384931565,
+    "depth_mae_if_axial_m": 0.43217476898800405,
+    "depth_mae_if_radial_m": 0.48253574215828576
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_180",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.9681589648127555,
+    "depth_mae_if_axial_m": 1.2939827171539924,
+    "depth_mae_if_radial_m": 1.2529974114602909
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_270",
+    "all_wall": true,
+    "gt_door_or_window_count": 7,
+    "mean_wall_probability": 0.7639962308108806,
+    "depth_mae_if_axial_m": 0.7299559667917779,
+    "depth_mae_if_radial_m": 0.7578513474502627
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_000",
+    "all_wall": true,
+    "gt_door_or_window_count": 7,
+    "mean_wall_probability": 0.901499891281128,
+    "depth_mae_if_axial_m": 0.3580608522186379,
+    "depth_mae_if_radial_m": 0.5140269311520079
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_090",
+    "all_wall": false,
+    "gt_door_or_window_count": 15,
+    "mean_wall_probability": 0.5108943603932857,
+    "depth_mae_if_axial_m": 2.003382492273256,
+    "depth_mae_if_radial_m": 2.2276314635167838
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_180",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.9297149121761322,
+    "depth_mae_if_axial_m": 0.5058333808007112,
+    "depth_mae_if_radial_m": 0.39163957976978847
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_270",
+    "all_wall": false,
+    "gt_door_or_window_count": 12,
+    "mean_wall_probability": 0.7160580843687058,
+    "depth_mae_if_axial_m": 1.1734435317669152,
+    "depth_mae_if_radial_m": 1.3931654580814719
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_000",
+    "all_wall": false,
+    "gt_door_or_window_count": 5,
+    "mean_wall_probability": 0.729963193833828,
+    "depth_mae_if_axial_m": 0.5423546016349878,
+    "depth_mae_if_radial_m": 0.6036669466636321
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_090",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.9695520341396332,
+    "depth_mae_if_axial_m": 0.10110240203832906,
+    "depth_mae_if_radial_m": 0.10961014322626499
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_180",
+    "all_wall": false,
+    "gt_door_or_window_count": 8,
+    "mean_wall_probability": 0.7918785609304905,
+    "depth_mae_if_axial_m": 0.6326370214532508,
+    "depth_mae_if_radial_m": 0.6276095603057908
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_270",
+    "all_wall": false,
+    "gt_door_or_window_count": 9,
+    "mean_wall_probability": 0.7555293230339885,
+    "depth_mae_if_axial_m": 0.575247126704903,
+    "depth_mae_if_radial_m": 0.37097863761999167
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_000",
+    "all_wall": true,
+    "gt_door_or_window_count": 0,
+    "mean_wall_probability": 0.9879409179091454,
+    "depth_mae_if_axial_m": 0.37395141471529214,
+    "depth_mae_if_radial_m": 0.32810650211868
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_090",
+    "all_wall": false,
+    "gt_door_or_window_count": 4,
+    "mean_wall_probability": 0.908613083511591,
+    "depth_mae_if_axial_m": 0.45769428830095993,
+    "depth_mae_if_radial_m": 0.36077005919419075
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_180",
+    "all_wall": true,
+    "gt_door_or_window_count": 5,
+    "mean_wall_probability": 0.9224744752049446,
+    "depth_mae_if_axial_m": 1.9479393198163044,
+    "depth_mae_if_radial_m": 2.2210846878665014
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_270",
+    "all_wall": false,
+    "gt_door_or_window_count": 15,
+    "mean_wall_probability": 0.7983516156673431,
+    "depth_mae_if_axial_m": 1.8500339773769603,
+    "depth_mae_if_radial_m": 2.07352792537514
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_000",
+    "all_wall": false,
+    "gt_door_or_window_count": 10,
+    "mean_wall_probability": 0.7679090373218059,
+    "depth_mae_if_axial_m": 2.5206706859858614,
+    "depth_mae_if_radial_m": 2.9521435480746323
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_090",
+    "all_wall": true,
+    "gt_door_or_window_count": 9,
+    "mean_wall_probability": 0.9269002556800843,
+    "depth_mae_if_axial_m": 0.1732265480570377,
+    "depth_mae_if_radial_m": 0.14187007921764372
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_180",
+    "all_wall": false,
+    "gt_door_or_window_count": 17,
+    "mean_wall_probability": 0.5225500231608748,
+    "depth_mae_if_axial_m": 0.3192669683193773,
+    "depth_mae_if_radial_m": 0.2002473349567342
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_270",
+    "all_wall": true,
+    "gt_door_or_window_count": 4,
+    "mean_wall_probability": 0.8997565045952797,
+    "depth_mae_if_axial_m": 1.5443709818633007,
+    "depth_mae_if_radial_m": 1.7163675914760852
+  }
+]

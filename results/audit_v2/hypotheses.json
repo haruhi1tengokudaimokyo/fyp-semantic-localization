@@ -1,0 +1,85 @@
+{
+  "scope": "P0 hypothesis probe on existing one-building observations; no learning and no choice of best seed or convention as validated protocol",
+  "groups": {
+    "assume_axial/argmax/0": {
+      "median_xy_m": 6.032276502113958,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/multinomial/0": {
+      "median_xy_m": 5.523846249366817,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/argmax/1": {
+      "median_xy_m": 6.032276502113958,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/multinomial/1": {
+      "median_xy_m": 5.694362405199243,
+      "joint_recall": 0.03125
+    },
+    "assume_axial/argmax/2": {
+      "median_xy_m": 6.032276502113958,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/multinomial/2": {
+      "median_xy_m": 4.526764234005878,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/argmax/42": {
+      "median_xy_m": 6.032276502113958,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/multinomial/42": {
+      "median_xy_m": 5.087397572015616,
+      "joint_recall": 0.125
+    },
+    "assume_axial/argmax/123": {
+      "median_xy_m": 6.032276502113958,
+      "joint_recall": 0.0625
+    },
+    "assume_axial/multinomial/123": {
+      "median_xy_m": 4.950211758668097,
+      "joint_recall": 0.03125
+    },
+    "assume_radial/argmax/0": {
+      "median_xy_m": 7.15875821040482,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/multinomial/0": {
+      "median_xy_m": 6.534032795221713,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/argmax/1": {
+      "median_xy_m": 7.15875821040482,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/multinomial/1": {
+      "median_xy_m": 7.337054475319049,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/argmax/2": {
+      "median_xy_m": 7.15875821040482,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/multinomial/2": {
+      "median_xy_m": 6.620981536010241,
+      "joint_recall": 0.09375
+    },
+    "assume_radial/argmax/42": {
+      "median_xy_m": 7.15875821040482,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/multinomial/42": {
+      "median_xy_m": 7.233314347089246,
+      "joint_recall": 0.125
+    },
+    "assume_radial/argmax/123": {
+      "median_xy_m": 7.15875821040482,
+      "joint_recall": 0.0625
+    },
+    "assume_radial/multinomial/123": {
+      "median_xy_m": 8.908778286008495,
+      "joint_recall": 0.03125
+    }
+  }
+}

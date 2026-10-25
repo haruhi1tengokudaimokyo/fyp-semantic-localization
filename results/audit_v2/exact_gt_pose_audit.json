@@ -1,0 +1,233 @@
+{
+  "n_rays": 1280,
+  "records": [
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_000",
+      "depth_max_radial_difference_m": 8.502854162983908e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.0650735899372193,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 7.281530678415749e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_090",
+      "depth_max_radial_difference_m": 6.505048881777498e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.0687200621528569,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 7.735311668866096e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_180",
+      "depth_max_radial_difference_m": 6.090869741903759e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.062334230697809453,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 6.995012521215926e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_270",
+      "depth_max_radial_difference_m": 7.041045417821579e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.07037463357350655,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 7.90069255152126e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_000",
+      "depth_max_radial_difference_m": 2.3364576335893616e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.07159130648090853,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 7.892558006483697e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_090",
+      "depth_max_radial_difference_m": 1.9393329253603042e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.12403348097867054,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.388642259272932e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_180",
+      "depth_max_radial_difference_m": 9.501756794705329e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.08153802130097916,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 9.165575823311123e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_270",
+      "depth_max_radial_difference_m": 9.233758531124181e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.09287497030327617,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.0409224845908671e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_000",
+      "depth_max_radial_difference_m": 7.601405433987907e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.04668088088737678,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 5.2506269731245056e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_090",
+      "depth_max_radial_difference_m": 7.333407170406758e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.06046372099289802,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 6.804254643222318e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_180",
+      "depth_max_radial_difference_m": 3.083950206317354e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.025231550559313663,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 2.8387508882732333e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_270",
+      "depth_max_radial_difference_m": 1.2669009064047998e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.009516635093691854,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.0704043001547036e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_000",
+      "depth_max_radial_difference_m": 1.4848649145804416e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.1519760905637334,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.7211950698703404e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_090",
+      "depth_max_radial_difference_m": 3.7519757611903515e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.02424994351873042,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 2.722533420290718e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_180",
+      "depth_max_radial_difference_m": 1.14508351134468e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.012295577823390367,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.3884720019979868e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_270",
+      "depth_max_radial_difference_m": 7.284680210162264e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.04048950456297642,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 4.542497934467704e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_000",
+      "depth_max_radial_difference_m": 1.2133012523563025e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.056861867230605274,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 6.348959940949417e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_090",
+      "depth_max_radial_difference_m": 1.5728001594439434e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.09413024891478461,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.0651397151700825e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_180",
+      "depth_max_radial_difference_m": 3.0941618289759276e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.034258101648756,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 3.866052082218685e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_270",
+      "depth_max_radial_difference_m": 1.3692275171450774e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.0723694052329008,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 8.086809756044365e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_000",
+      "depth_max_radial_difference_m": 1.0549386395553029e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.05229114042513833,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 5.851192395475713e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_090",
+      "depth_max_radial_difference_m": 1.5592626534388643e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.013702402485398654,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.5422720126001543e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_180",
+      "depth_max_radial_difference_m": 3.922520113164296e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.031575938468036864,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 3.553293221575382e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_270",
+      "depth_max_radial_difference_m": 9.964662899264454e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.08060046372268279,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 9.070551081402644e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_000",
+      "depth_max_radial_difference_m": 1.3643548224528956e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.01375345834822716,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.54307564721734e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_090",
+      "depth_max_radial_difference_m": 3.459614013046064e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.029077235998954985,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 3.273307578238738e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_180",
+      "depth_max_radial_difference_m": 1.6956981365723323e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.11779858547123276,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.3255353819074944e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_270",
+      "depth_max_radial_difference_m": 1.6420984820797457e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.10549066055601623,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.1843979096065604e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_000",
+      "depth_max_radial_difference_m": 1.966132751718419e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.13010492001426896,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.4596678886258373e-07
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_090",
+      "depth_max_radial_difference_m": 4.99451318969335e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.05125653813649964,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 5.7552080995892923e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_180",
+      "depth_max_radial_difference_m": 3.7276122810681045e-07,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.03570584995435508,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 4.005443786314622e-08
+    },
+    {
+      "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_270",
+      "depth_max_radial_difference_m": 1.471554130105801e-06,
+      "semantic_disagreements": 0,
+      "fine_cost_gt_at_exact_pose_upstream_axial_literal": 0.10435834787823044,
+      "fine_cost_gt_at_exact_pose_consistent_radial": 1.1740219962530496e-07
+    }
+  ],
+  "max_depth_difference_m": 2.3364576335893616e-06,
+  "total_semantic_disagreements": 0,
+  "mean_upstream_literal_fine_cost": 0.06346185512229457,
+  "mean_consistent_fine_cost": 7.127487939560718e-08
+}

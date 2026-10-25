@@ -1,0 +1,30 @@
+[
+  {
+    "name": "official_reproduction",
+    "seed": 42,
+    "top_k": 5,
+    "nms_m": 0.1,
+    "nms_deg": 0,
+    "candidate_policy": "upstream_xy",
+    "semantic_resampling": "upstream_vote",
+    "semantic_prediction": "multinomial",
+    "fine_depth": "upstream_literal",
+    "room_aware": true,
+    "grid_m": 0.1,
+    "note": "Pinned upstream coarse/fine formula and configuration; fixes semantic branch runtime bug. Public sample only, not independent reproduction. Preserve documented radial/axial inconsistency rather than silently fixing it."
+  },
+  {
+    "name": "our_integration",
+    "seed": 42,
+    "top_k": 5,
+    "nms_m": 0.5,
+    "nms_deg": 20,
+    "candidate_policy": "se2_nms",
+    "semantic_resampling": "pinhole_nearest",
+    "semantic_prediction": "argmax",
+    "fine_depth": "consistent_axial",
+    "room_aware": false,
+    "grid_m": 0.1,
+    "note": "Predeclared consistency and distinct-hypothesis integration, no parameter optimization on this building. Uses axial network interpretation inherited from prior pipeline; checkpoint training convention unverified."
+  }
+]

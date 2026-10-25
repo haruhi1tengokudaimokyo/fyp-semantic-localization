@@ -1,0 +1,32 @@
+[
+  {
+    "command": "git apply --check /home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/01_runtime_compat.patch",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": "git apply /home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/01_runtime_compat.patch",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": "git apply --check /home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/02_semantic_dispatch.patch",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": "git apply /home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/02_semantic_dispatch.patch",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": "git apply --check /home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/03_dataset_storage.patch",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "command": "git apply /home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/03_dataset_storage.patch",
+    "returncode": 0,
+    "stderr": "/home/csy/Documents/Codex/2026-10-25/fyp-known-map-indoor-geometric-semantic/outputs/github_semantic_model/patches/03_dataset_storage.patch:10: trailing whitespace.\n        ref_pose = self.gt_pose[scene_idx][idx_within_scene].copy()            \nwarning: 1 line adds whitespace errors.\n"
+  }
+]

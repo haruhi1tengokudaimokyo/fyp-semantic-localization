@@ -1,0 +1,322 @@
+[
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_000",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_15.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 8.881784197001252e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_090",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_15.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_180",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_15.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/000_270",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_15.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_000",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_14.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_090",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_14.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_180",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_14.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/001_270",
+    "annotation_image": "panos/floor_01_partial_room_01_pano_14.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "undefined"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_000",
+    "annotation_image": "panos/floor_01_partial_room_02_pano_29.jpg",
+    "independent_bearing_error_rad": 8.881784197001252e-16,
+    "formula_error_rad": 8.881784197001252e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_090",
+    "annotation_image": "panos/floor_01_partial_room_02_pano_29.jpg",
+    "independent_bearing_error_rad": 4.440892098500626e-16,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_180",
+    "annotation_image": "panos/floor_01_partial_room_02_pano_29.jpg",
+    "independent_bearing_error_rad": 4.440892098500626e-16,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/002_270",
+    "annotation_image": "panos/floor_01_partial_room_02_pano_29.jpg",
+    "independent_bearing_error_rad": 8.881784197001252e-16,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_000",
+    "annotation_image": "panos/floor_01_partial_room_03_pano_13.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 1.3322676295501878e-15,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_090",
+    "annotation_image": "panos/floor_01_partial_room_03_pano_13.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_180",
+    "annotation_image": "panos/floor_01_partial_room_03_pano_13.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 8.881784197001252e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/003_270",
+    "annotation_image": "panos/floor_01_partial_room_03_pano_13.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_000",
+    "annotation_image": "panos/floor_01_partial_room_04_pano_32.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "bathroom"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_090",
+    "annotation_image": "panos/floor_01_partial_room_04_pano_32.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "bathroom"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_180",
+    "annotation_image": "panos/floor_01_partial_room_04_pano_32.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "bathroom"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/004_270",
+    "annotation_image": "panos/floor_01_partial_room_04_pano_32.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "bathroom"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_000",
+    "annotation_image": "panos/floor_01_partial_room_05_pano_26.jpg",
+    "independent_bearing_error_rad": 4.440892098500626e-16,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_090",
+    "annotation_image": "panos/floor_01_partial_room_05_pano_26.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_180",
+    "annotation_image": "panos/floor_01_partial_room_05_pano_26.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/005_270",
+    "annotation_image": "panos/floor_01_partial_room_05_pano_26.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "closet"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_000",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_12.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_090",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_12.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_180",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_12.jpg",
+    "independent_bearing_error_rad": 4.440892098500626e-16,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/006_270",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_12.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 0.0,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_000",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_11.jpg",
+    "independent_bearing_error_rad": 8.881784197001252e-16,
+    "formula_error_rad": 8.881784197001252e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_090",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_11.jpg",
+    "independent_bearing_error_rad": 4.440892098500626e-16,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_180",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_11.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 1.7763568394002505e-15,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  },
+  {
+    "sample": "/data/fyp-semrayloc/data/zind_public_sample/samples/007_270",
+    "annotation_image": "panos/floor_01_partial_room_06_pano_11.jpg",
+    "independent_bearing_error_rad": 0.0,
+    "formula_error_rad": 4.440892098500626e-16,
+    "crop_max_uint8_diff": 0,
+    "camera_height_m": 1.4350379120502679,
+    "roll_pitch": "not supplied per query; official upright panorama assumption, not independently measured",
+    "room_label_from_annotation": "kitchen"
+  }
+]
