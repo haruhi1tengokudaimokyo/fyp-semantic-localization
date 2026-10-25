@@ -1,0 +1,1 @@
+P2 gate remains closed until an independent-building baseline is available. Legacy mask/JSD experiments remain in src/matching.py and results/evaluation as v1 engineering records; they are not official reproduction or evidence for real pedestrian robustness.
