@@ -1,0 +1,144 @@
+diff --git a/Train_models/Train.py b/Train_models/Train.py
+index 5118c0b..2963ef2 100644
+--- a/Train_models/Train.py
++++ b/Train_models/Train.py
+@@ -6,7 +6,7 @@ from lightning.pytorch import Trainer
+ from lightning.pytorch.callbacks import ModelCheckpoint
+ from torch.utils.data import DataLoader
+ import torch
+-from attrdict import AttrDict
++from utils.config import AttrDict
+ from modules.depth.depth_net_pl import depth_net_pl
+ from modules.semantic.semantic_net_pl import semantic_net_pl
+ 
+@@ -28,8 +28,8 @@ def setup_dataset_and_loader(config, dataset_dir, split):
+         train_set = LocalizationDatasetZind(dataset_dir, split.train)
+         val_set = LocalizationDatasetZind(dataset_dir, split.val)
+     else:
+-        train_set = LocalizationDataset(dataset_dir, split.train)
+-        val_set = LocalizationDataset(dataset_dir, split.val)
++        train_set = LocalizationDataset(os.path.join(dataset_dir, "processed"), split.train)
++        val_set = LocalizationDataset(os.path.join(dataset_dir, "processed"), split.val)
+ 
+     train_loader = DataLoader(train_set, batch_size=config.batch_size, shuffle=True, num_workers=4)
+     val_loader = DataLoader(val_set, batch_size=config.batch_size, shuffle=False, num_workers=4)
+@@ -60,7 +60,7 @@ def main():
+         # default= r".\Train_models\configurations\S3D\depth_net_config.yaml", #S3D depth
+         # default= r".\Train_models\configurations\S3D\semantic_net_config.yaml", #S3D semantic
+         # default= r".\Train_models\configurations\zind\depth_net_config.yaml", #Zind depth
+-        default= r".\Train_models\configurations\zind\semantic_net_config.yaml", #Zind semantic
++        default="Train_models/configurations/zind/semantic_net_config.yaml", #Zind semantic
+         help="Path to the config file",
+     )
+     args = parser.parse_args()
+@@ -104,7 +104,7 @@ def main():
+         max_epochs=config.epochs,
+         callbacks=[checkpoint_callback],
+         accelerator="gpu" if torch.cuda.is_available() else "cpu",
+-        devices= 0 if torch.cuda.is_available() else 1,
++        devices=1,
+         log_every_n_steps=500,
+     )
+ 
+diff --git a/data_utils/data_utils_zind.py b/data_utils/data_utils_zind.py
+index 501de00..645cc11 100644
+--- a/data_utils/data_utils_zind.py
++++ b/data_utils/data_utils_zind.py
+@@ -183,7 +183,7 @@ class LocalizationDataset(Dataset):
+         # Index within the scene
+         idx_within_scene = idx - self.scene_start_idx[scene_idx]
+     
+-        ref_pose = self.gt_pose[scene_idx][idx_within_scene]            
++        ref_pose = self.gt_pose[scene_idx][idx_within_scene].copy()            
+         x, y, th = ref_pose
+     
+         pano_image_name= self.gt_original_path[scene_idx][idx_within_scene]
+@@ -237,7 +237,7 @@ class LocalizationDataset(Dataset):
+         data_dict = {
+             "scene_name": scene_name,
+             "idx_within_scene": idx_within_scene,
+-            "ref_depth": torch.tensor(depth_ref, dtype=torch.long),
++            "ref_depth": torch.tensor(depth_ref, dtype=torch.float32),
+             "ref_semantics": torch.tensor(semantic_ref, dtype=torch.int),
+             "ref_pose": ref_pose,
+             "ref_noise": 0,
+@@ -247,7 +247,7 @@ class LocalizationDataset(Dataset):
+         
+         data_dict["ref_img"] = ref_img
+         data_dict["original_pano"] = query_image
+-        mask = np.ones(list(ref_img.shape[:2]), dtype=np.uint8)
++        mask = np.ones(list(ref_img.shape[1:]), dtype=np.uint8)
+         data_dict["ref_mask"] = mask
+ 
+         room_label_str = self.gt_room_label[scene_idx][idx_within_scene]
+diff --git a/data_utils/zind/create_casting_files_zind.py b/data_utils/zind/create_casting_files_zind.py
+index 42d4b16..78a1fd6 100644
+--- a/data_utils/zind/create_casting_files_zind.py
++++ b/data_utils/zind/create_casting_files_zind.py
+@@ -147,13 +147,12 @@ def create_raycast_file(
+         }
+ 
+         for j, ang in enumerate(angs):
+-            dist, pred_class, hit_coords_walls, normal = ray_cast(
++            dist, pred_class, hit_coords_walls = ray_cast(
+                 img_semantic, 
+                 np.array([x*100, y*100]), 
+                 ang, 
+                 dist_max=15 * 100, 
+                 min_dist=5, 
+-                cast_type=2
+             )
+ 
+             end_x, end_y = hit_coords_walls
+@@ -164,7 +163,7 @@ def create_raycast_file(
+                 'start_position_semantic': {'x': x, 'y': y},
+                 'start_position_walls': {'x': x, 'y': y},
+                 'end_position': {'x': end_x, 'y': end_y},
+-                'normal': normal
++                'normal': None
+             }
+             cam_data['rays'].append(ray_data)
+ 
+diff --git a/evaluation/eval_localization.py b/evaluation/eval_localization.py
+index 0a2b34a..5b71a67 100644
+--- a/evaluation/eval_localization.py
++++ b/evaluation/eval_localization.py
+@@ -4,7 +4,7 @@ import yaml
+ import numpy as np
+ import torch
+ import torch.nn.functional as F
+-from attrdict import AttrDict
++from utils.config import AttrDict
+ import math
+ import tqdm
+ 
+@@ -164,7 +164,7 @@ def evaluate_localization_pipeline(config):
+         test_set = LocalizationDataset(os.path.join(config.dataset_dir, "processed"), split.test[:config.num_of_scenes])
+     
+     depth_net = None if config.use_ground_truth_depth else depth_net_pl.load_from_checkpoint(config.depth_weights).to(device).eval()
+-    semantic_net = None if config.use_ground_truth_semantic else semantic_net_pl.load_from_checkpoint(config.semantic_weights, num_classes=config.num_classes, num_room_types=config.num_room_types).to(device).eval()
++    semantic_net = None if config.use_ground_truth_semantic else semantic_net_pl.load_from_checkpoint(config.semantic_weights, num_ray_classes=config.num_classes, num_room_types=config.num_room_types).to(device).eval()
+ 
+     depth_df, semantic_df, maps, gt_poses, valid_scene_names, walls = load_scene_data(test_set, os.path.join(config.dataset_dir, "processed"), os.path.join(config.dataset_dir, "df"))
+ 
+@@ -190,7 +190,7 @@ def evaluate_localization_pipeline(config):
+             pred_rays_semantic, pred_semantics_np, room_logits = get_predicted_rays(semantic_net, img_torch, mask_torch, config, config.use_ground_truth_semantic, {"semantics": data["ref_semantics"]})
+             
+             prob_vol_depth, _, _, _ = localize(torch.tensor(depth_df[scene_name]), torch.tensor(pred_rays_depth), return_np=False)
+-            prob_vol_semantic, _, _, _ = localize(torch.tensor(semantic_df[scene_name]), torch.tensor(pred_rays_semantic), return_np=False)
++            prob_vol_semantic, _, _, _ = localize(torch.tensor(semantic_df[scene_name]), torch.tensor(pred_rays_semantic), return_np=False, localize_type="semantic")
+             
+             combined_prob_vol = combine_prob_volumes(prob_vol_depth, prob_vol_semantic, depth_weight, semantic_weight)
+ 
+diff --git a/utils/config.py b/utils/config.py
+new file mode 100644
+index 0000000..05c93e9
+--- /dev/null
++++ b/utils/config.py
+@@ -0,0 +1,6 @@
++class AttrDict(dict):
++    def __init__(self, value):
++        super().__init__({k: AttrDict(v) if isinstance(v, dict) else v for k,v in value.items()})
++    def __getattr__(self, key):
++        try: return self[key]
++        except KeyError as e: raise AttributeError(key) from e

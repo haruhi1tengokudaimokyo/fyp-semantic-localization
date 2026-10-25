@@ -1,0 +1,60 @@
+{
+  "SemRayLoc": {
+    "commit": "072b7a3d6056c44ad95d08b269bdd296fc3eadab",
+    "remote": "https://github.com/TAU-VAILab/SemRayLoc.git",
+    "license_files": []
+  },
+  "f3loc": {
+    "commit": "9e8027d9219ca505078283ebfd925580f476ab97",
+    "remote": "https://github.com/felix-ch/f3loc.git",
+    "license_files": []
+  },
+  "UnLoc": {
+    "commit": "3c7a301aa08049f6b1bb86f110e8e6e675e2300b",
+    "remote": "https://github.com/matthias-wueest/UnLoc.git",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "zind": {
+    "commit": "06cfdbf295fa21500a857efe81f80f2243b8fb40",
+    "remote": "https://github.com/zillow/zind.git",
+    "license_files": [
+      "LICENSE"
+    ]
+  },
+  "weights": {
+    "final_semantic.ckpt": {
+      "bytes": 312106740,
+      "sha256": "f1ee439e60c7cbaa9e07db29239e8274699086f7d381d0e974bdf50fa6e8a593",
+      "zip_crc_ok": true
+    },
+    "final_depth.ckpt": {
+      "bytes": 311667384,
+      "sha256": "9dd1611aca820dc0aa6d341579dae4e75a74c2870332dade1e23ad7390a95cb9",
+      "zip_crc_ok": true
+    },
+    "smoke_finetuned.pt": {
+      "bytes": 208265694,
+      "sha256": "ff72397596da5719431528d6f42e1b553cd4d27cdcde0327117ef6bbec88f1fd",
+      "purpose": "single-image engineering overfit only, no independent validation"
+    },
+    "lraspp": {
+      "sha256": "d234d4eae9d55d5f76de18b77cf0dc62c66fe5c5482758209d00f950c92bb280",
+      "url": "https://download.pytorch.org/models/lraspp_mobilenet_v3_large-d234d4ea.pth",
+      "smoke_test": "no person on empty room sample; not accuracy evaluation"
+    }
+  },
+  "runtime": {
+    "torch": "2.5.1+cu121",
+    "cuda_runtime": "12.1",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce GTX 1660 SUPER",
+    "capability": [
+      7,
+      5
+    ],
+    "allocated_after_cuda_init_mib": 0.0,
+    "note": "Driver CUDA 13.0 is supported maximum API, installed torch runtime is CUDA12.1. Native BF16 not assumed for compute7.5."
+  }
+}
