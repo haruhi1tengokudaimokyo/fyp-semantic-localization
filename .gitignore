@@ -11,3 +11,7 @@ __pycache__/
 *.db3
 *.mcap
 .DS_Store
+# Regenerated local audit media and large likelihood arrays
+results/audit_v2/cases/
+results/audit_v2/raw_per_image
+*.npz

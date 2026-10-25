@@ -6,6 +6,17 @@
 
 **目前是可运行的研究原型，尚未完成论文标准 Baseline 复现。预训练 coarse 定位仍然较差，不能作为可靠机器人定位系统。** 本仓库明确区分官方实现、自主集成与工程检查，不把论文数字当作复现结果。
 
+## 最新工程审计（2026-10-25）
+
+完整 coarse-to-fine 已接入，32图 A/B/C/D×Depth/Semantic/Combined 已实跑，16项测试通过。**定位问题仍未解决，P1独立建筑验收未通过，本轮没有新训练。** 官方配置双预测 fine Recall@1m,30°=12.5%，集成配置=6.25%；仅一栋公开住宅，不能作为泛化成绩。
+
+- [本轮严谨中文报告](REPORT_AUDIT_zh.md)：诊断表、证据/假设、失败与未完成项。
+- [运行命令与接口](docs/AUDIT_V2.md)：新在线入口 `src/localize.py`，离线诊断 `src/audit.py`。
+- [逐图图册（本机生成）](results/audit_v2/gallery.html)、[完整指标](results/audit_v2/summary.json)、[逐图CSV](results/audit_v2/per_image_metrics.csv)、[真实运行及权重哈希](results/audit_v2/run_manifest.json)。本机服务 http://127.0.0.1:18766/gallery.html。
+- 配置明确分为 `configs/official_reproduction`、`configs/integration`、`configs/experimental`；[行为补丁说明](patches/README.md)。原始匹配分数不作为成功概率，正式训练已门控。
+
+以下为 **v1历史工程记录**，保留原始数字；旧 `infer.py`/`evaluate.py`/`matching.py` 不代表本轮完整Baseline。旧mask/JSD只属工程实验，不作为研究改进证据。
+
 ## 我具体做了什么
 
 ```mermaid
@@ -28,7 +39,7 @@ flowchart LR
 | `src/matching.py` | 官方 coarse 匹配与实验性置信度/JSD扩展 |
 | `src/infer.py` | RGB → 射线 → 地图匹配 → 位姿、候选得分及可视化 |
 | `src/evaluate.py` | 位置/角度误差、Recall、计时和遮挡消融 |
-| `src/train.py` | 冻结主干微调、AMP、梯度裁剪、建筑分区检查 |
+| `src/train.py` | 历史冻结主干smoke；正式训练现已门控 |
 | `src/person_mask.py` | 可选 torchvision LR-ASPP 预训练人物分割接口 |
 | `src/check_contracts.py` | 真实地图射线与官方函数的一致性检查、全遮挡拒绝定位 |
 | `src/validate_manifest.py` | 检查样本字段、尺度与建筑泄漏 |
@@ -101,7 +112,7 @@ export FYP_PY="$FYP_ROOT/envs/semrayloc/bin/python"
 - `depth_axial_m` / `semantic`：40个建筑结构轴向深度和40个类别（0墙/1窗/2门/3未知）。深度监督由固定地图与GT相机位姿生成，不能拿家具表面RGB-D深度直接替代。
 - `building_id`：训练分区必须按建筑互斥。
 
-实际机器人查询可省略GT pose及深度/语义标签，误差输出为null；须提供图像、地图、free mask和正确的尺度/内参。正式训练不加`--smoke`，manifest为`train`/`val`/`test`三个样本路径列表，程序拒绝空分区和建筑泄漏。当前验证环节只检查前8个验证样本ray loss；完整定位评价应另行运行，不代表已经实现完整标准验证。
+实际机器人查询可省略GT pose及深度/语义标签，误差输出为null；须提供图像、地图、free mask和正确的尺度/内参。正式训练当前被明确拒绝，必须先完成独立建筑Baseline与完整验证/最佳checkpoint协议。历史单图smoke不满足正式训练要求。
 
 ## 复用与边界
 
