@@ -1,0 +1,19 @@
+{
+  "atlas_random_rays_checked": 100,
+  "atlas_max_error_m": 2.2888183615066282e-07,
+  "all_masked_abstention": true,
+  "oracle_gt_rays_pose": {
+    "pose": [
+      15.9,
+      2.0,
+      4.71238898038469
+    ],
+    "score": 0.9964416027069092
+  },
+  "gt_pose": [
+    15.88283220015841,
+    1.9748282073421457,
+    4.716687954701792
+  ],
+  "note": "Map-only oracle check; not RGB accuracy and not held-out evaluation."
+}
