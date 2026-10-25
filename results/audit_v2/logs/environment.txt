@@ -1,0 +1,31 @@
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p4  317G  283G   18G  95% /data
+/dev/nvme0n1p9   86G   52G   29G  65% /
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       7.3Gi       3.1Gi        58Mi       5.3Gi       8.1Gi
+Swap:           15Gi        67Mi        15Gi
+Sun Oct 25 16:26:23 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.178.04             Driver Version: 580.178.04     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce GTX 1660 ...    Off |   00000000:01:00.0  On |                  N/A |
+| 35%   32C    P8             12W /  125W |     506MiB /   6144MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            2609      G   /usr/lib/xorg/Xorg                      240MiB |
+|    0   N/A  N/A            2853      G   /usr/bin/gnome-shell                     55MiB |
+|    0   N/A  N/A            3395      G   ...exec/xdg-desktop-portal-gnome          2MiB |
+|    0   N/A  N/A            6672      G   ...rack-uuid=3190708988185955192         60MiB |
+|    0   N/A  N/A            8073      G   /opt/QQ/qq                               44MiB |
+|    0   N/A  N/A           99464      G   ...rack-uuid=3190708988185955192         82MiB |
++-----------------------------------------------------------------------------------------+

@@ -1,0 +1,32 @@
+{
+  "camera": {
+    "width": 320,
+    "height": 240,
+    "K": [
+      277.19135641132203,
+      0.0,
+      160.0,
+      0.0,
+      277.19135641132203,
+      120.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "horizontal_fov_deg": 59.98868115019719,
+    "frame_id": "camera_optical_frame",
+    "time_ns": 12100000000
+  },
+  "counts": {
+    "/clock": 30002,
+    "/tf": 882,
+    "/ground_truth": 882,
+    "/imu": 2999,
+    "/odom": 882,
+    "/rgbd/camera_info": 300,
+    "/scan": 300,
+    "/rgbd/depth_image": 300,
+    "/rgbd/image": 300,
+    "/tf_static": 1
+  }
+}

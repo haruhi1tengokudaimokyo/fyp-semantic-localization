@@ -1,0 +1,10 @@
+/data/fyp-semrayloc/envs/semrayloc/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+A xy median 0.18996309565719338 R@joint 0.6875
+B xy median 4.0849994003104 R@joint 0.09375
+C xy median 2.783240925720484 R@joint 0.375
+D xy median 6.0166999021365015 R@joint 0.0625
+cm [[970   4  49   0]
+ [ 27  22  17   0]
+ [111  17  63   0]
+ [  0   0   0   0]] allwall 17

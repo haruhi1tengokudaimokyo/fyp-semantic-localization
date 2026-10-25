@@ -1,0 +1,49 @@
+2026-10-25 16:17:28,280 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:28,280 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:28,285 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:28,285 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:28,311 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:28,311 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+test_all_masked_matching_rejects (test_audit.Contracts) ... ok
+test_axial_radial_roundtrip (test_audit.Contracts) ... ok
+test_candidates_are_distinct_in_se2 (test_audit.Contracts) ... ok
+test_fast_backend_matches_upstream_real_map (test_audit.Contracts) ... ok
+test_full_coarse_fine_gt_first_real_query (test_audit.Contracts) ... ok
+test_independent_annotation_projection_and_crop (test_audit.Contracts) ... ok
+test_previous_training_changed_heads_not_backbone (test_audit.Contracts) ... ok
+test_semantic_dispatch_is_not_class_id_depth_l1 (test_audit.Contracts) ... ok
+test_semantic_palette_and_door_through (test_audit.Contracts) ... ok
+test_upstream_fine_backend_reuses_algorithm (test_audit.Contracts) ... ok
+test_world_image_round_trip_and_scale (test_audit.Contracts) ... 2026-10-25 16:17:32,373 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:32,373 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+ok
+test_formal_training_is_gated_without_baseline (test_audit.NetworkInterface) ... ok
+test_full_occlusion_rejected (test_audit.NetworkInterface) ... 2026-10-25 16:17:34,611 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:34,611 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+ok
+test_no_gt_api_matches_official_weights (test_audit.NetworkInterface) ... 2026-10-25 16:17:34,615 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:34,615 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+/data/fyp-semrayloc/envs/semrayloc/lib/python3.10/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+ok
+test_online_full_pipeline_cannot_read_gt_loader (test_audit.NetworkInterface) ... 2026-10-25 16:17:34,851 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:34,851 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:34,911 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:34,911 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:34,932 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:34,932 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+ok
+test_partial_support_finite_and_not_silently_ignored (test_audit.NetworkInterface) ... 2026-10-25 16:17:35,246 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:35,246 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:35,303 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:35,303 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:35,307 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:35,307 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+2026-10-25 16:17:35,328 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2026-10-25 16:17:35,328 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 41 8192
+ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 7.131s
+
+OK
