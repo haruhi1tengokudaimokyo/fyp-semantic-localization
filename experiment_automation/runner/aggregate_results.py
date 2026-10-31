@@ -90,4 +90,7 @@ def aggregate(snapshot, root):
     from ace_statistics import collect
 
     collect(snapshot["tasks"], out)
+    from plot_formal import plot
+
+    plot(snapshot, root)
     return str(out / "index.json")

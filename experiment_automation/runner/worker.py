@@ -92,6 +92,18 @@ def run(tid, root=ROOT):
                     samples.append(resources())
                 else:
                     samples.append({"time_utc": utc()})
+                if time.time() - started > s.get("max_wall_seconds", 172800):
+                    p.terminate()
+                    raise RuntimeError(
+                        "Payload wall-time watchdog exceeded; partial artifacts and checkpoint retained"
+                    )
+                if time.time() - log.stat().st_mtime > s.get(
+                    "max_no_log_seconds", 7200
+                ):
+                    p.terminate()
+                    raise RuntimeError(
+                        "Payload produced no new log for watchdog interval; inspect failure evidence before retry"
+                    )
                 time.sleep(5)
             if p.returncode:
                 raise RuntimeError(f"Payload exit code {p.returncode}; evidence: {log}")

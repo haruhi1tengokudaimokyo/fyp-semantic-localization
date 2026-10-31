@@ -74,3 +74,5 @@ H、I 的物理恢复、J 的其余跨数据集、OMCL、多轨迹及 Wheel 仍�
 运行时间必须区分缓存：完整 Paper 前端 1271 misses / 3 hits，Fast 为 1274 hits。Fast 暖缓存的逐帧时间不能与 Paper 大多实时推理的时间直接当作速度提升；Dashboard/CSV 已附缓存上下文及独立 worker 总耗时。
 
 2026-11-01 初次四小时后的实际验收：HSSD 24 合成房屋组已完成 11,446 张有效渲染图像（train 7,494 / val 1,995 / test 1,957，房屋组 16/4/4），正式首个 full seed1305 训练在 GPU 继续。七条 office 的来源审查结果包含实际 /odom 帧名、消息计数、连接元数据及原论文 SHA256；没有 raw encoder topic。已验收的全量正式结果、配对统计与失败查询会在每次报告自动重建到 artifacts/aggregate。首版恢复计数的错误已标无效并保留，v2 通过，不能把旧 FAILED 清零隐藏。
+
+正式轨迹图由每次报告从已验收的真实数组自动更新到 artifacts/aggregate/formal_trajectories.png，保留原始丢帧标记和全局位姿缺口。新 worker 另有 48 小时单任务时长与 2 小时日志静默 watchdog；触发后保留证据和检查点，按原有限尝试策略处理。
