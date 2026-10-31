@@ -1,0 +1,182 @@
+[
+  {
+    "dataset_id": "7scenes_chess",
+    "baseline": "ace.chess.official",
+    "candidate": "ace.chess.train.2089.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.035,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.045,
+      -0.025
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "baseline": "ace.chess.official",
+    "candidate": "ace.chess.train.2090.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.0305,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.031,
+      -0.03
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "baseline": "ace.chess.official",
+    "candidate": "ace.chess.train.2091.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.021,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.039,
+      -0.003
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "baseline": "ace.fire.official",
+    "candidate": "ace.fire.train.2089.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.0235,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.042,
+      -0.005
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "baseline": "ace.fire.official",
+    "candidate": "ace.fire.train.2090.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": 0.0005,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.032,
+      0.033
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "baseline": "ace.fire.official",
+    "candidate": "ace.fire.train.2091.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.019,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.03,
+      -0.008
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "baseline": "ace.office.official",
+    "candidate": "ace.office.train.2089.eval",
+    "n_queries": 4000,
+    "test_sequence_clusters": 4,
+    "delta_recall_5cm_5deg": -0.186,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.23825,
+      -0.12575
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "baseline": "ace.office.official",
+    "candidate": "ace.office.train.2090.eval",
+    "n_queries": 4000,
+    "test_sequence_clusters": 4,
+    "delta_recall_5cm_5deg": -0.12225,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.16325,
+      -0.09
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "baseline": "ace.office.official",
+    "candidate": "ace.office.train.2091.eval",
+    "n_queries": 4000,
+    "test_sequence_clusters": 4,
+    "delta_recall_5cm_5deg": -0.15875,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.1755,
+      -0.12925
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "baseline": "ace.pumpkin.official",
+    "candidate": "ace.pumpkin.train.2089.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.05,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.104,
+      0.004
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "baseline": "ace.pumpkin.official",
+    "candidate": "ace.pumpkin.train.2090.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.082,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.114,
+      -0.05
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "baseline": "ace.pumpkin.official",
+    "candidate": "ace.pumpkin.train.2091.eval",
+    "n_queries": 2000,
+    "test_sequence_clusters": 2,
+    "delta_recall_5cm_5deg": -0.058,
+    "sequence_cluster_bootstrap_95CI": [
+      -0.121,
+      0.005
+    ],
+    "limitation": "Few official sequence clusters; interval describes this fixed room, not unseen-building generalization",
+    "replicates": 10000,
+    "seed": 1305
+  }
+]

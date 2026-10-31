@@ -999,13 +999,115 @@ for sequence in ["sitting_xyz", "sitting_static", "walking_xyz", "walking_static
         inputs=[ds / "acceptance.json"],
         coverage={"full_sequence": True},
     )
+# Published source resolves the wheel ambiguity: /odom includes a chassis IMU.
+provenance = B / "runs/formal/openloris/odometry_provenance"
+add(
+    "C.odometry.source.audit",
+    "C",
+    "openloris",
+    [
+        SENSOR,
+        str(SCRIPT / "audit_openloris_odometry.py"),
+        str(B / "datasets/openloris"),
+        str(provenance),
+    ],
+    [
+        J(
+            provenance / "summary.json",
+            equals={
+                "status": "completed",
+                "pure_wheel_eligible": False,
+                "online_pose_fields_used": False,
+            },
+        )
+    ],
+    deps=["openloris.data.office1-" + str(n) + ".prepare" for n in [2, 4, 5, 6, 7]],
+    priority=85,
+    ram=300,
+)
+for number in range(1, 8):
+    name = f"office1-{number}"
+    for dimension in [2, 3]:
+        target = (
+            B
+            / "runs/formal/openloris"
+            / (name + "_vendor_baseodom_" + str(dimension) + "d")
+        )
+        add(
+            "C." + name + ".vendor_baseodom." + str(dimension) + "d",
+            "C",
+            "openloris_vendor_baseodom_" + name,
+            [
+                SENSOR,
+                str(SCRIPT / "run_conditional_base_odometry.py"),
+                str(B / "runs/formal/openloris" / name),
+                str(target),
+                "--provenance",
+                str(provenance / "summary.json"),
+                "--binary",
+                str(B / "build/mins/mins_bag"),
+                "--dimension",
+                str(dimension),
+            ],
+            [
+                J(
+                    target / "summary.json",
+                    equals={
+                        "status": "completed",
+                        "pure_wheel": False,
+                        "GT_online": False,
+                        "constraint_dimension": dimension,
+                    },
+                )
+            ],
+            deps=["C.odometry.source.audit", "mins." + name + ".stereo_imu.eval"],
+            priority=54,
+            ram=2500,
+            inputs=[provenance / "summary.json"],
+            coverage={"full_sequence": True},
+        )
+# Same fixed outage protocol on every complete office sequence; not pedestrian dynamics.
+for number in range(1, 8):
+    name = f"office1-{number}"
+    parent = B / "runs/formal/openloris" / (name + "_vendor_baseodom_3d")
+    target = parent.with_name(parent.name + "_outage")
+    add(
+        "C." + name + ".vendor_baseodom.3d.outage",
+        "C",
+        "openloris_vendor_baseodom_" + name,
+        [
+            SENSOR,
+            str(SCRIPT / "run_conditional_outage.py"),
+            str(parent),
+            "--binary",
+            str(B / "build/mins/mins_bag"),
+        ],
+        [
+            J(
+                target / "summary.json",
+                equals={
+                    "status": "completed",
+                    "GT_online": False,
+                    "pure_wheel": False,
+                    "controlled_camera_packet_outage": True,
+                    "real_people_benchmark": False,
+                },
+            )
+        ],
+        deps=["C." + name + ".vendor_baseodom.3d"],
+        priority=53,
+        ram=2500,
+        disk=2,
+        inputs=[parent / "summary.json"],
+        coverage={"full_sequence": True},
+    )
 # Requirements that are not yet executable stay visibly BLOCKED, never fake COMPLETED.
 for tid, group, ds, reason in [
     (
         "C.wheel.provenance.audit",
         "C",
         "openloris",
-        "Need source-level /odom publisher/driver provenance audit and encoder-vs-upstream-fusion determination; current preliminary /odom results cannot establish this",
+        "Original OpenLORIS paper III.A establishes Segway /odom as encoder+chassis-IMU proprietary fusion; raw encoder-only wheel input unavailable. Separate vendor-base-odometry conditional experiments are queued without a pure-Wheel claim.",
     ),
     (
         "B.multitrajectory.acquire",

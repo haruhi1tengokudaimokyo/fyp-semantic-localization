@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "actual_utc": "2026-10-31T19:24:50.878924+00:00",
+  "test_root": "/data/fyp_3d/automation/selftests/1793474624372123740",
+  "scientific_data_used": false,
+  "checkpoint_worker_was_killed": true,
+  "dependency_block_automatically_cleared": true,
+  "resumed_steps": 12,
+  "tasks": [
+    {
+      "task_id": "infra.resume.1793474624372123740",
+      "status": "COMPLETED",
+      "attempt": 2
+    },
+    {
+      "task_id": "infra.retry.1793474624372123740",
+      "status": "COMPLETED",
+      "attempt": 2
+    }
+  ],
+  "four_hour_boundary_tests": "14399s not due, 14400s due, next interval anchored correctly",
+  "actual_report_file": "/data/fyp_3d/automation/selftests/1793474624372123740/reports/progress_20261031_192450.md"
+}

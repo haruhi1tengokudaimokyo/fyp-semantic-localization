@@ -6083,6 +6083,1107 @@
     }
   },
   {
+    "task_id": "C.odometry.source.audit",
+    "experiment_id": "C",
+    "dataset_id": "openloris",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/audit_openloris_odometry.py",
+      "/data/fyp_3d/datasets/openloris",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel_eligible": false,
+          "online_pose_fields_used": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-2.prepare",
+      "openloris.data.office1-4.prepare",
+      "openloris.data.office1-5.prepare",
+      "openloris.data.office1-6.prepare",
+      "openloris.data.office1-7.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 85,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.office1-1.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-1",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-1",
+      "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-1.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-1.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-1",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-1",
+      "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-1.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-2.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-2",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-2",
+      "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-2.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-2.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-2",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-2",
+      "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-2.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-3.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-3",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-3",
+      "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-3.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-3.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-3",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-3",
+      "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-3.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-4.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-4",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-4",
+      "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-4.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-4.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-4",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-4",
+      "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-4.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-5.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-5",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-5",
+      "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-5.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-5.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-5",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-5",
+      "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-5.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-6.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-6",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-6",
+      "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-6.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-6.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-6",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-6",
+      "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-6.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-7.vendor_baseodom.2d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-7",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-7",
+      "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_2d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_2d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-7.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-7.vendor_baseodom.3d",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-7",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_base_odometry.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-7",
+      "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_3d",
+      "--provenance",
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--dimension",
+      "3"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_3d/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "pure_wheel": false,
+          "GT_online": false,
+          "constraint_dimension": 3
+        }
+      }
+    ],
+    "depends_on": [
+      "C.odometry.source.audit",
+      "mins.office1-7.stereo_imu.eval"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 54,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-1.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-1",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-1.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-2.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-2",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-2.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-3.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-3",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-3.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-4.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-4",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-4.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-5.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-5",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-5.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-5_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-6.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-6",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-6.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-6_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "C.office1-7.vendor_baseodom.3d.outage",
+    "experiment_id": "C",
+    "dataset_id": "openloris_vendor_baseodom_office1-7",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_conditional_outage.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_3d",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_3d_outage/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "pure_wheel": false,
+          "controlled_camera_packet_outage": true,
+          "real_people_benchmark": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.office1-7.vendor_baseodom.3d"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/openloris/office1-7_vendor_baseodom_3d/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 53,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
     "task_id": "C.wheel.provenance.audit",
     "experiment_id": "C",
     "dataset_id": "openloris",
@@ -6104,7 +7205,7 @@
       "min_gpu_free_mib": 4500
     },
     "coverage": {},
-    "blocked_reason": "Need source-level /odom publisher/driver provenance audit and encoder-vs-upstream-fusion determination; current preliminary /odom results cannot establish this"
+    "blocked_reason": "Original OpenLORIS paper III.A establishes Segway /odom as encoder+chassis-IMU proprietary fusion; raw encoder-only wheel input unavailable. Separate vendor-base-odometry conditional experiments are queued without a pure-Wheel claim."
   },
   {
     "task_id": "B.multitrajectory.acquire",

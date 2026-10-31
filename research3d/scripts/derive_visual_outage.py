@@ -11,7 +11,16 @@ from rosbags.typesys import Stores, get_typestore
 def main(a):
     src = Path(a.root)
     dst = src.with_name(src.name + "_outage")
-    dst.mkdir()
+    dst.mkdir(exist_ok=True)
+    if (dst / "audit.json").exists():
+        saved = json.loads((dst / "audit.json").read_text())
+        outage = saved["controlled_visual_outage"]
+        assert (
+            outage["start_relative_s"] == a.start and outage["end_relative_s"] == a.end
+        )
+        assert (dst / "online_sensors_camera_outage.bag").is_file()
+        print("RESUME_DERIVED_OUTAGE", dst, flush=True)
+        return
     audit = json.loads((src / "audit.json").read_text())
     bag = Path(src / "imu_wheel/config_system.yaml").read_text()
     import yaml
@@ -22,7 +31,12 @@ def main(a):
     store = get_typestore(Stores.ROS1_NOETIC)
     kept = {}
     removed = {}
-    with Reader(inputbag) as reader, Writer(outputbag) as writer:
+    import os
+
+    temporary = dst / (
+        "online_sensors_camera_outage.attempt_" + str(os.getpid()) + ".tmp.bag"
+    )
+    with Reader(inputbag) as reader, Writer(temporary) as writer:
         start = reader.start_time
         connections = {
             c.id: writer.add_connection(c.topic, c.msgtype, typestore=store)
@@ -34,11 +48,13 @@ def main(a):
                 continue
             writer.write(connections[c.id], t, raw)
             kept[c.topic] = kept.get(c.topic, 0) + 1
+    temporary.replace(outputbag)
     for name in ["ground_truth_eval_only.npz", "imu_calibrated.npz"]:
-        (dst / name).symlink_to(src / name)
+        if not (dst / name).exists():
+            (dst / name).symlink_to(src / name)
     for mode in ["imu_wheel", "stereo_imu", "stereo_imu_wheel"]:
         d = dst / mode
-        d.mkdir()
+        d.mkdir(exist_ok=True)
         for p in (src / mode).glob("config*.yaml"):
             if p.name == "config_init.imu_only_original.yaml":
                 continue
@@ -48,7 +64,13 @@ def main(a):
                 .replace(str(inputbag), str(outputbag))
             )
             (d / p.name).write_text(text)
+    digest = hashlib.sha256()
+    with outputbag.open("rb") as f:
+        for block in iter(lambda: f.read(8 * 1024**2), b""):
+            digest.update(block)
     audit.update(
+        parent_derived_bag_sha256=audit["derived_bag_sha256"],
+        derived_bag_sha256=digest.hexdigest(),
         online_topics=kept,
         controlled_visual_outage=dict(
             start_relative_s=a.start,

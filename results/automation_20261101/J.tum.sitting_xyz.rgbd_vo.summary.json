@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "sequence": "sitting_xyz",
+  "metrics": {
+    "n": 1257,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.07242417227519873,
+    "ate_first_pose_anchored_rmse_m": 0.12962629273517876,
+    "path_length_m": 5.9435884286028955,
+    "endpoint_first_pose_anchored_error_m": 0.2145735493320483,
+    "endpoint_drift_per_meter": 0.03610168367302077,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.006968428505963433,
+        "rotation_rmse_deg": 0.2789893216474096,
+        "pairs": 1256
+      },
+      "5": {
+        "translation_rmse_m": 0.01173483959787374,
+        "rotation_rmse_deg": 0.4247290249442776,
+        "pairs": 1252
+      },
+      "10": {
+        "translation_rmse_m": 0.016215883546154795,
+        "rotation_rmse_deg": 0.5348530055716594,
+        "pairs": 1247
+      }
+    },
+    "tracking_availability": 0.9665605095541401,
+    "lost_frames": 42,
+    "max_failure_run_frames": 2,
+    "failure_duration_seconds": 1.3490405082702637,
+    "timestamp_note": "Actual RGB timestamps; all original RGB frames preserved; GT only interpolated offline inside bracketing intervals<0.1s",
+    "tracking_availability_all_rgb_frames": 0.9666666666666667,
+    "raw_rgb_frames": 1261,
+    "gt_evaluable_frames": 1257,
+    "runtime_mean_ms": 14.3036896284752,
+    "rgb_depth_associated_frames": 1219
+  },
+  "GT_online": false,
+  "real_people": true,
+  "full_sequence": true,
+  "prior_map_available": false,
+  "task": "RGB-D visual odometry robustness; not full prior-map localization",
+  "K": [
+    [
+      535.4,
+      0.0,
+      320.1
+    ],
+    [
+      0.0,
+      539.2,
+      247.6
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "depth_scale": 5000,
+  "association": "Official-style greedy minimum timestamp difference, unique pairs <=0.02s; unmatched RGB frames retained",
+  "calibration_source": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset/file_formats",
+  "dynamics": "low: sitting gesturing people"
+}

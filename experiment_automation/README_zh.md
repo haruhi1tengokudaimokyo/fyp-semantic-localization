@@ -45,7 +45,7 @@ A：完整 7-Scenes 官方划分，官方场景权重及场景专用本机训练
 
 B：下载的 1,274 帧连续双目全序列，Paper/Fast/普通 Stereo VO 与固定匹配的单位协方差消融；原始 lost mask 单独保存。SE(3) 对齐 ATE 与地图绝对误差分开。其他完整轨迹尚待合法输入和标定获取。
 
-C：七条完整 OpenLORIS office 序列的 Stereo+IMU 可独立运行；Wheel 来源审查未完成的正式 wheel 组合保持阻塞。已有平地非完整约束结果属于条件实验，不能声称通用 AI 增益。初始化失败作为实际实验结局记录，不填造零误差。
+C：七条完整 OpenLORIS office 序列的 Stereo+IMU 可独立运行；原论文 III.A 已明确 office 的 Segway 底盘 odometry 使用编码器+底盘 IMU 的厂商融合，不能称为纯 Wheel。原始编码器不可用，纯 Wheel 组合保持阻塞；另排队七条序列的 vendor-base-odometry+T265-IMU（含/不含 stereo）、2D/3D 有条件约束及固定 8–12s 相机断流实验，名称和输出均明确不是纯 Wheel。已有平地非完整约束结果属于条件实验，不能声称通用 AI 增益。初始化失败作为实际实验结局记录，不填造零误差。
 
 D：扩展到 24 个 HSSD 合成房屋组，同房屋前缀或字节相同建筑网格归到同一组，再冻结 train/val/test。这些不是经验证的真实物理建筑身份。每场景目标 150 个空间位置、4 朝向；低纹理/无效深度/重复视图拒收，正式 train 少于 3,000 帧则失败。只训练原生可验证的七类物体语义，未知为 IGNORE255，不虚构墙/窗/柱。三种策略 full/frozen/scratch、三个 seed、40 epochs，选择仅用 val。decomposed 子目录遗漏曾导致渲染失败，已保留日志并增加显式闭包审查。
 
@@ -70,3 +70,7 @@ H、I 的物理恢复、J 的其余跨数据集、OMCL、多轨迹及 Wheel 仍�
 - OMCL：https://github.com/AIS-Bonn/omcl
 
 各实际源码 checkout、权重哈希、兼容修改和已有结果见 `/data/fyp_3d/sources`、`/data/fyp_3d/models` 与验收产物。本文件仅解释实际协议，不替代状态数据库和原始日志。
+
+运行时间必须区分缓存：完整 Paper 前端 1271 misses / 3 hits，Fast 为 1274 hits。Fast 暖缓存的逐帧时间不能与 Paper 大多实时推理的时间直接当作速度提升；Dashboard/CSV 已附缓存上下文及独立 worker 总耗时。
+
+2026-11-01 初次四小时后的实际验收：HSSD 24 合成房屋组已完成 11,446 张有效渲染图像（train 7,494 / val 1,995 / test 1,957，房屋组 16/4/4），正式首个 full seed1305 训练在 GPU 继续。七条 office 的来源审查结果包含实际 /odom 帧名、消息计数、连接元数据及原论文 SHA256；没有 raw encoder topic。已验收的全量正式结果、配对统计与失败查询会在每次报告自动重建到 artifacts/aggregate。首版恢复计数的错误已标无效并保留，v2 通过，不能把旧 FAILED 清零隐藏。

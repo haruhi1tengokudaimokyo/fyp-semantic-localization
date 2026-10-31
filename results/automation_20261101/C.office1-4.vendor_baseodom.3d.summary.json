@@ -1,0 +1,94 @@
+{
+  "status": "completed",
+  "constraint_dimension": 3,
+  "pure_wheel": false,
+  "GT_online": false,
+  "online_sensor_combination": "vendor-fused wheel+chassis-IMU base odometry twist, plus separate T265 IMU",
+  "conditional_planar_assumption": true,
+  "comparison": {
+    "imu_wheel": {
+      "status": "completed",
+      "initialized": true,
+      "metrics": {
+        "n": 484,
+        "alignment": "SE3, no scale correction",
+        "ate_se3_aligned_rmse_m": 0.13032912569596775,
+        "ate_first_pose_anchored_rmse_m": 0.34840072400150995,
+        "path_length_m": 6.324919131789503,
+        "endpoint_first_pose_anchored_error_m": 0.23010379191779362,
+        "endpoint_drift_per_meter": 0.03638051129559511,
+        "rotation_first_pose_anchored_rmse_deg": 4.673752932463051,
+        "rpe_1s_translation_rmse_m": 0.053667461169937244,
+        "rpe_1s_rotation_rmse_deg": 0.6817894318551739,
+        "estimated_first_last_s": [
+          1560051890.871232,
+          1560051914.979154
+        ],
+        "initialization_delay_s": 4.875718832015991,
+        "max_output_gap_s": 0.050357818603515625,
+        "trajectory_time_coverage": 0.8296879870917956,
+        "coverage_definition": "(last-first - sum(max(0, gap-0.05s)))/raw IMU duration; includes initialization loss; not visual feature availability",
+        "raw_duration_s": 28.99366331100464
+      },
+      "protocol": {
+        "online_topics": {
+          "/imu_calibrated": 5780,
+          "/t265/fisheye1/image_raw": 870,
+          "/t265/fisheye2/image_raw": 870,
+          "/odom": 580
+        },
+        "GT_online": false,
+        "no_LiDAR_GPS": true,
+        "max_slam": 0,
+        "raw_duration_s": 28.99366331100464,
+        "ground_truth_frame": "gt_map -> base_link -> t265_imu",
+        "pose_convention": "MINS JPL q_GtoI; Hamilton xyzw gives R_ItoG; p_IinG",
+        "timing": "real header timestamps, seconds",
+        "sequence": "office1-4_vendor_baseodom_3d"
+      }
+    },
+    "stereo_imu_wheel": {
+      "status": "completed",
+      "initialized": true,
+      "metrics": {
+        "n": 484,
+        "alignment": "SE3, no scale correction",
+        "ate_se3_aligned_rmse_m": 0.06655637736766061,
+        "ate_first_pose_anchored_rmse_m": 0.3393240471107879,
+        "path_length_m": 6.324919131789503,
+        "endpoint_first_pose_anchored_error_m": 0.4142393858051089,
+        "endpoint_drift_per_meter": 0.06549323037556506,
+        "rotation_first_pose_anchored_rmse_deg": 3.153866300195826,
+        "rpe_1s_translation_rmse_m": 0.06787294482504443,
+        "rpe_1s_rotation_rmse_deg": 0.8147361917194214,
+        "estimated_first_last_s": [
+          1560051890.871232,
+          1560051914.979154
+        ],
+        "initialization_delay_s": 4.875718832015991,
+        "max_output_gap_s": 0.050357818603515625,
+        "trajectory_time_coverage": 0.8296879870917956,
+        "coverage_definition": "(last-first - sum(max(0, gap-0.05s)))/raw IMU duration; includes initialization loss; not visual feature availability",
+        "raw_duration_s": 28.99366331100464
+      },
+      "protocol": {
+        "online_topics": {
+          "/imu_calibrated": 5780,
+          "/t265/fisheye1/image_raw": 870,
+          "/t265/fisheye2/image_raw": 870,
+          "/odom": 580
+        },
+        "GT_online": false,
+        "no_LiDAR_GPS": true,
+        "max_slam": 0,
+        "raw_duration_s": 28.99366331100464,
+        "ground_truth_frame": "gt_map -> base_link -> t265_imu",
+        "pose_convention": "MINS JPL q_GtoI; Hamilton xyzw gives R_ItoG; p_IinG",
+        "timing": "real header timestamps, seconds",
+        "sequence": "office1-4_vendor_baseodom_3d"
+      }
+    }
+  },
+  "prior_map_available": false,
+  "claim": "Vendor base-odometry twist + T265 IMU, with/without stereo, conditional kinematic constraints. Not independent raw wheel measurements, not AI improvement."
+}

@@ -1,0 +1,29 @@
+{
+  "method": "official ACE + DSAC*, GT-free adapter",
+  "scene": "7scenes_pumpkin",
+  "n": 2000,
+  "seed": 1305,
+  "stride": 1,
+  "median_translation_m": 0.046961910591055256,
+  "median_rotation_deg": 1.2445748053530297,
+  "recall": {
+    "0.01m_1deg": 0.025,
+    "0.02m_2deg": 0.119,
+    "0.05m_5deg": 0.5315,
+    "0.1m_5deg": 0.8365,
+    "0.25m_10deg": 0.9605,
+    "1m_30deg": 1.0
+  },
+  "failure_rate_5cm_5deg": 0.4685,
+  "invalid_or_low_inlier_rate": 0.0,
+  "runtime_mean_ms": 135.27974960890424,
+  "runtime_p95_ms": 156.24896454246482,
+  "warmup_frames": 1,
+  "torch_peak_allocated_MiB": 87.63623046875,
+  "torch_peak_reserved_MiB": 102.0,
+  "process_maxrss_MiB": 898.83203125,
+  "wall_seconds": 272.43377680299454,
+  "head_sha256": "0b464a24b2348a7bbc5684a3ac6ea2e603b58a5c768c33d19dd8f4e8ea9f3153",
+  "timing_scope": "RGB read + grayscale/normalize + CUDA forward synchronized + CPU DSAC* + diagnostic reprojection, excludes model loading; no robot transport latency",
+  "covariance": "unavailable; never inferred from inlier score"
+}

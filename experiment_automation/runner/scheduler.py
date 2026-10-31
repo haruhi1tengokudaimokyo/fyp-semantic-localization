@@ -87,6 +87,18 @@ def tick(root=ROOT):
                     (tid,),
                 )
                 continue
+            if row["status"] == "BLOCKED":
+                c.execute(
+                    "UPDATE tasks SET status='PENDING',failure=NULL WHERE task_id=?",
+                    (tid,),
+                )
+                states[tid] = "PENDING"
+                event(
+                    c,
+                    tid,
+                    "PREREQUISITES_RECOVERED",
+                    "Inputs and dependencies accepted; awaiting resource slot",
+                )
             need = s.get("resources", {})
             isgpu = need.get("gpu", False)
             if isgpu and (

@@ -1,0 +1,44 @@
+{
+  "n": 1274,
+  "alignment": "SE3, no scale correction",
+  "ate_se3_aligned_rmse_m": 16.47240993739176,
+  "ate_first_pose_anchored_rmse_m": 33.16587644371894,
+  "path_length_m": 188.01351203064493,
+  "endpoint_first_pose_anchored_error_m": 28.916299208885505,
+  "endpoint_drift_per_meter": 0.15379904825229979,
+  "rpe_frame_delta": {
+    "1": {
+      "translation_rmse_m": 0.04172117621076595,
+      "rotation_rmse_deg": 0.7720390221025786,
+      "pairs": 1273
+    },
+    "5": {
+      "translation_rmse_m": 0.18478131667660672,
+      "rotation_rmse_deg": 2.893685287930529,
+      "pairs": 1269
+    },
+    "10": {
+      "translation_rmse_m": 0.3421210205512733,
+      "rotation_rmse_deg": 5.013538104669528,
+      "pairs": 1264
+    }
+  },
+  "tracking_availability": 0.9787902592301649,
+  "lost_frames": 27,
+  "max_failure_run_frames": 12,
+  "failure_duration_seconds": null,
+  "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent",
+  "method": "SGBM + LK + EPNP-RANSAC + LM refinement",
+  "wall_seconds": 49.09416309601511,
+  "runtime_mean_ms": 38.519477107637236,
+  "runtime_p95_ms": 50.04666910972446,
+  "maxrss_MiB": 105.2890625,
+  "parameters": {
+    "num_disparities": 96,
+    "block_size": 5,
+    "min_inliers": 20,
+    "ransac_px": 2,
+    "max_depth_m": 50
+  },
+  "pose_covariance": null
+}

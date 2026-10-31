@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "actual_utc": "2026-10-31T15:11:14.716069+00:00",
+  "controller_stopped_seconds": 12,
+  "note": "Independent GPU/download workers stayed active; CPU baseline completed validly during pause. All PIDs/attempts preserved. Original complete test log retained.",
+  "checks": [
+    {
+      "task_id": "macvo.demo.paper",
+      "pid": 287788,
+      "attempt": 1,
+      "after": {
+        "task_id": "macvo.demo.paper",
+        "pid": 287788,
+        "status": "RUNNING",
+        "attempt": 1
+      },
+      "not_duplicated": true
+    },
+    {
+      "task_id": "macvo.demo.geometric",
+      "pid": 287793,
+      "attempt": 1,
+      "after": {
+        "task_id": "macvo.demo.geometric",
+        "pid": 287793,
+        "status": "COMPLETED",
+        "attempt": 1
+      },
+      "not_duplicated": true
+    },
+    {
+      "task_id": "ace.models.all7",
+      "pid": 287795,
+      "attempt": 1,
+      "after": {
+        "task_id": "ace.models.all7",
+        "pid": 287795,
+        "status": "COMPLETED",
+        "attempt": 1
+      },
+      "not_duplicated": true
+    }
+  ]
+}

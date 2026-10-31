@@ -1,0 +1,66 @@
+{
+  "status": "completed",
+  "sequence": "walking_static",
+  "metrics": {
+    "n": 738,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 1.2947926202640834,
+    "ate_first_pose_anchored_rmse_m": 1.6329204804956743,
+    "path_length_m": 0.48081811842368294,
+    "endpoint_first_pose_anchored_error_m": 2.686783897391588,
+    "endpoint_drift_per_meter": 5.58794228927969,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.016868699084966254,
+        "rotation_rmse_deg": 0.3183182085820235,
+        "pairs": 737
+      },
+      "5": {
+        "translation_rmse_m": 0.0737972199369072,
+        "rotation_rmse_deg": 1.2695637325869025,
+        "pairs": 733
+      },
+      "10": {
+        "translation_rmse_m": 0.13896292029646298,
+        "rotation_rmse_deg": 2.344017248458732,
+        "pairs": 728
+      }
+    },
+    "tracking_availability": 0.9647218453188603,
+    "lost_frames": 26,
+    "max_failure_run_frames": 1,
+    "failure_duration_seconds": 0.8508718013763428,
+    "timestamp_note": "Actual RGB timestamps; all original RGB frames preserved; GT only interpolated offline inside bracketing intervals<0.1s",
+    "tracking_availability_all_rgb_frames": 0.9649595687331536,
+    "raw_rgb_frames": 743,
+    "gt_evaluable_frames": 738,
+    "runtime_mean_ms": 14.127172607882136,
+    "rgb_depth_associated_frames": 717
+  },
+  "GT_online": false,
+  "real_people": true,
+  "full_sequence": true,
+  "prior_map_available": false,
+  "task": "RGB-D visual odometry robustness; not full prior-map localization",
+  "K": [
+    [
+      535.4,
+      0.0,
+      320.1
+    ],
+    [
+      0.0,
+      539.2,
+      247.6
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "depth_scale": 5000,
+  "association": "Official-style greedy minimum timestamp difference, unique pairs <=0.02s; unmatched RGB frames retained",
+  "calibration_source": "https://cvg.cit.tum.de/data/datasets/rgbd-dataset/file_formats",
+  "dynamics": "high: walking people"
+}

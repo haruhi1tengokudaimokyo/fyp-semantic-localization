@@ -25,6 +25,9 @@ def aggregate(snapshot, root):
                     seed=task["seed"],
                     metric=metric,
                     value=value,
+                    context=json.dumps(
+                        task.get("metric_context", {}), ensure_ascii=False
+                    ),
                 )
             )
             tid = task["task_id"]
@@ -51,6 +54,7 @@ def aggregate(snapshot, root):
                 "seed",
                 "metric",
                 "value",
+                "context",
             ],
         )
         w.writeheader()
@@ -83,4 +87,7 @@ def aggregate(snapshot, root):
             policy="Only validated completed outputs; formal and pilot separated; no cross-sensor/map/dataset leaderboard; absent metrics omitted, never filled",
         ),
     )
+    from ace_statistics import collect
+
+    collect(snapshot["tasks"], out)
     return str(out / "index.json")

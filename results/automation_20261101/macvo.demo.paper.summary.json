@@ -1,0 +1,78 @@
+{
+  "raw": {
+    "n": 1274,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.22657327869480348,
+    "ate_first_pose_anchored_rmse_m": 1.8007535239699215,
+    "path_length_m": 188.01351203064493,
+    "endpoint_first_pose_anchored_error_m": 3.3015946770542492,
+    "endpoint_drift_per_meter": 0.017560411703367956,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.0047571575586982775,
+        "rotation_rmse_deg": 0.07843197471254201,
+        "pairs": 1273
+      },
+      "5": {
+        "translation_rmse_m": 0.017058142538512993,
+        "rotation_rmse_deg": 0.2826475091041399,
+        "pairs": 1269
+      },
+      "10": {
+        "translation_rmse_m": 0.0301276211070297,
+        "rotation_rmse_deg": 0.45792933045967554,
+        "pairs": 1264
+      }
+    },
+    "tracking_availability": 1.0,
+    "lost_frames": 0,
+    "max_failure_run_frames": 0,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "interpolated": {
+    "n": 1274,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.2265830582739496,
+    "ate_first_pose_anchored_rmse_m": 1.8007705071704105,
+    "path_length_m": 188.01351203064493,
+    "endpoint_first_pose_anchored_error_m": 3.3016538185366757,
+    "endpoint_drift_per_meter": 0.017560726263113093,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.004757183601339293,
+        "rotation_rmse_deg": 0.07843191073906451,
+        "pairs": 1273
+      },
+      "5": {
+        "translation_rmse_m": 0.01705827751714503,
+        "rotation_rmse_deg": 0.2826470592727509,
+        "pairs": 1269
+      },
+      "10": {
+        "translation_rmse_m": 0.03012791625194435,
+        "rotation_rmse_deg": 0.45792838847385686,
+        "pairs": 1264
+      }
+    },
+    "tracking_availability": 1.0,
+    "lost_frames": 0,
+    "max_failure_run_frames": 0,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "runtime_mean_ms": 1343.8805952458067,
+  "runtime_median_ms": 1344.2068729927996,
+  "runtime_p95_ms": 1369.616500606935,
+  "wall_seconds": 1741.847845702985,
+  "torch_peak_allocated_MiB": 2850.171875,
+  "torch_peak_reserved_MiB": 4338.0,
+  "maxrss_parent_MiB": 1872.03125,
+  "frontend_cache": {
+    "hits": 3,
+    "misses": 1271,
+    "corrupt": 0
+  },
+  "initialization_included": true,
+  "finished_frames": 1274
+}

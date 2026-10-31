@@ -1,0 +1,665 @@
+{
+  "generated_utc": "2026-10-31T19:24:24.770696+00:00",
+  "counts": {
+    "PENDING": 31,
+    "RUNNING": 3,
+    "COMPLETED": 111,
+    "FAILED": 1,
+    "BLOCKED": 7,
+    "RETRYING": 0
+  },
+  "artifacts": [
+    {
+      "task_id": "ace.chess.official",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/official/summary.json",
+      "saved": "ace.chess.official.summary.json",
+      "sha256": "3b1d18e0e1125c8ce49aff049c8b3a7cc38fea59d4af15affcb2f75f2173619e",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "745d872581128718709af05990c84447247b355bc451f1f5062ddf73ae83dfab",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.chess.train.2089",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/seed2089/training_resources.json",
+      "saved": "ace.chess.train.2089.training_resources.json",
+      "sha256": "4f0d562f87736086007c33de51288128b50355228d9437e9c30e3d68fe76d2a0",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "3919e33d4750cb36b79d82b758f84a31c1cdca4b75bff8e29aae01be46e9509f",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.chess.train.2089.eval",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/seed2089/evaluation/summary.json",
+      "saved": "ace.chess.train.2089.eval.summary.json",
+      "sha256": "3f6f41414d8c8948a53fb03729d90ad1d229da9213a3fa7b6b7ffa48ad31c6eb",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "007c57e477da60e6d85a08a0b1b41682c203434fa718a6079f00ca1a39aa3798",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.chess.train.2090",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/seed2090/training_resources.json",
+      "saved": "ace.chess.train.2090.training_resources.json",
+      "sha256": "672123902c47de6de8f39073ee9af252fd82de57494a400d46696d958fa35c19",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "73368b0157fb926a2591d1f1961586c7ae08dcfd83245cec46a0aac4751c2615",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.chess.train.2090.eval",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/seed2090/evaluation/summary.json",
+      "saved": "ace.chess.train.2090.eval.summary.json",
+      "sha256": "531309375e8bf1bbfd58350ba645b3dd8197781b53f2d169023a887915567f6f",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "2959b900a5d12e97828ff033cbac06b82c3c1389e7b9ab5b4cfced0ba5cb0cec",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.chess.train.2091",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/seed2091/training_resources.json",
+      "saved": "ace.chess.train.2091.training_resources.json",
+      "sha256": "f11ce55c7adf2f234d877015d6e0f11e88e3b214a354926fe67967b1c754bf07",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "278ceb17ad9f3ff56f046df499782e1331505aa1b37b24ca8f69f24d3fad42af",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.chess.train.2091.eval",
+      "dataset_id": "7scenes_chess",
+      "source": "/data/fyp_3d/runs/formal/ace/chess/seed2091/evaluation/summary.json",
+      "saved": "ace.chess.train.2091.eval.summary.json",
+      "sha256": "8bca86309d2bbdf3e3c7632f0bed1144758062698c7f67601781a3f912f463f8",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "e650492be09acef555eb7c297c297037edde9fdea88be638a818e9ec894cb09c",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.official",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/official/summary.json",
+      "saved": "ace.fire.official.summary.json",
+      "sha256": "01cbee7676e7e1d6ed79a23d9cfb6bc8ec442450f5b765ed296188efcabf266b",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "6d27273845bd685d9fdbd503a9e5f8f98bd841db0eefaad4aec52e5912c4ff70",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.train.2089",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/seed2089/training_resources.json",
+      "saved": "ace.fire.train.2089.training_resources.json",
+      "sha256": "4d2dc37c926a9992ba1cd39df201019478131e3c04ab2617ff83b4d7ec9b15e4",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "cd8caa9e2bc5c764808b4d468be2ee3ad50b12ded6017b4915dbc1ba9a592542",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.train.2089.eval",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/seed2089/evaluation/summary.json",
+      "saved": "ace.fire.train.2089.eval.summary.json",
+      "sha256": "2b003a1ab75c49fc13cf84b4785f86a2fb3a13e1004cde750467e3125804cebe",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "3356edcaf0daa977126fb9063d316217d4f7032eedb98ee1f33d5e6c0fe9b5c3",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.train.2090",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/seed2090/training_resources.json",
+      "saved": "ace.fire.train.2090.training_resources.json",
+      "sha256": "f37ff8029796b7f5fd7f9e3b8beac86c99da6de3b172d9d54637c4808257dfe2",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "a3893511af6a140aba03f98be08c2bfefb770d10c22ddf2d814964f906ea9891",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.train.2090.eval",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/seed2090/evaluation/summary.json",
+      "saved": "ace.fire.train.2090.eval.summary.json",
+      "sha256": "e929b72cbae30badffeec030f6bc94ca751f9647943bd23310df81b71159a0c1",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "a197f3bca03425d52d651d101eb61c4bc8e1a60047af81e7283442d7db888bc1",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.train.2091",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/seed2091/training_resources.json",
+      "saved": "ace.fire.train.2091.training_resources.json",
+      "sha256": "46d29ab9bcb018c27b9a36c966991294a8f5cca8a824c63e5426503d815c673d",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "5258d5782060aeecf8848fd19a00a44d50d6036148df0b343bc7ddd801ff2a81",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.fire.train.2091.eval",
+      "dataset_id": "7scenes_fire",
+      "source": "/data/fyp_3d/runs/formal/ace/fire/seed2091/evaluation/summary.json",
+      "saved": "ace.fire.train.2091.eval.summary.json",
+      "sha256": "0692982f4802008fd318283ff77cc55c8499d8658c1c5a513a00eec28f17fef5",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "3a4598597d14c0d9f610b436fe2d1088e4e5fce1d9adee8ead17096fce52a437",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.official",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/official/summary.json",
+      "saved": "ace.office.official.summary.json",
+      "sha256": "abe03ddf52180b76a43da4043a64f32687bb7b50b8f205da12acb2641c754c44",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "ecf11fc457a6e5b7b4064cb5cfa53bfa39f7e9a378c37492860335d96c6d3b4c",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.train.2089",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/seed2089/training_resources.json",
+      "saved": "ace.office.train.2089.training_resources.json",
+      "sha256": "cc0fd1bd43600be215a34c0c12426b633d4ba6164cfd9e404872339da8dc865b",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "a95ddba80c41e9ee2ce1a6a1b36ae46a7182a18b692e26b541512024d44a4faf",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.train.2089.eval",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/seed2089/evaluation/summary.json",
+      "saved": "ace.office.train.2089.eval.summary.json",
+      "sha256": "5eb05cb6c363f6d68f693d05bb028958e9a3114487e1b84022beace0cae2939b",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "8cb70339ae3eeb0c860c6b12a9e77848827fcff1381ed11fe32012032155ff8d",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.train.2090",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/seed2090/training_resources.json",
+      "saved": "ace.office.train.2090.training_resources.json",
+      "sha256": "f12d422b0035d68e0adae6dfb5682166a07c5ca66821cd3c97da9dbd6a101611",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "1dbccebeba88710d94428bb2d78a7747d86e55d2032613e41883603635d07dfa",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.train.2090.eval",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/seed2090/evaluation/summary.json",
+      "saved": "ace.office.train.2090.eval.summary.json",
+      "sha256": "dcc8945817d2b4c72e6d8218900b5bc2c5d10a3b9ab23cafa71095260b3126e5",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "8634561ebaab0f6a5ac6a3a1f8584ca0a0724389f6c4492c184f03a1da23a9b9",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.train.2091",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/seed2091/training_resources.json",
+      "saved": "ace.office.train.2091.training_resources.json",
+      "sha256": "4e05cc1c25d47568d737e2df6eb9031c4492345d4f7eee7e47428244a9e755d4",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "796d97563913f27ffc3d06dcd979285bc1d9bfed03dce68cc6c0ad08b369ddda",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.office.train.2091.eval",
+      "dataset_id": "7scenes_office",
+      "source": "/data/fyp_3d/runs/formal/ace/office/seed2091/evaluation/summary.json",
+      "saved": "ace.office.train.2091.eval.summary.json",
+      "sha256": "380a8ee867312f92fb51e4321714d2c949432a917817da7e4d1eb1ba8b2c3bf0",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "d682d7ba8df5d7873eea9fae52561914bfcd2360078ff6d4f09e671af5517934",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.official",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/official/summary.json",
+      "saved": "ace.pumpkin.official.summary.json",
+      "sha256": "b980cc9972f6d65f474b5784e72be9c1d7b4fb6da2b6c67760ba1f733ed084c0",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "e0bd132f5340ca480e7765f0feee3dd581cc6a324fde4597e6b2ec9b39606f25",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.train.2089",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/training_resources.json",
+      "saved": "ace.pumpkin.train.2089.training_resources.json",
+      "sha256": "d0b268d551f5d8cd394fca0fc73d73b13d966febbd373d662c6bd298488998d3",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "97989e8496c9bd06ad11902a99cb3a7a9991ba0ab0d826f8f8cdbca70e57031f",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.train.2089.eval",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/evaluation/summary.json",
+      "saved": "ace.pumpkin.train.2089.eval.summary.json",
+      "sha256": "759c61836728ed2261c99904c420c86f52de0c60fbd6b04768a3508dd7aea594",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "7faef7b0c935266dc066c73e867f6b7c71bfa3a965daef18562a582b2b178cf6",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.train.2090",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/training_resources.json",
+      "saved": "ace.pumpkin.train.2090.training_resources.json",
+      "sha256": "054d53000dfa0e43dc7c038716a33ec40dac2ef3f08526de5efafdaefcca391d",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "f1d972d2e19bc324c8ce85979922a3c8640b1481adccd2f3607fa9203d2634e3",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.train.2090.eval",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/evaluation/summary.json",
+      "saved": "ace.pumpkin.train.2090.eval.summary.json",
+      "sha256": "95f15c3c65d3f03d7151f9c6bc367446c522af8c2ba03e029fe5068f42e55945",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "b61c0f5c01d50059aeb3500f9bf1dea8b38a35ecf50e8b063a86e32649fa0ff6",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.train.2091",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/training_resources.json",
+      "saved": "ace.pumpkin.train.2091.training_resources.json",
+      "sha256": "0f88d58310deb296b9fb83fc399fc7faa134988d3f292320b2103626b94fca84",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "a636060feb091ec0b6f56682822a2f92df1f6110d95826ab22111611d25245e5",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.pumpkin.train.2091.eval",
+      "dataset_id": "7scenes_pumpkin",
+      "source": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/evaluation/summary.json",
+      "saved": "ace.pumpkin.train.2091.eval.summary.json",
+      "sha256": "bccab23cde4019422136d3b4f6cb58a06f83450381d6eb9ac24b68484383d7ea",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "df7dc8bb504870134a98dc7ca2ccad1797b8c710570c5698a66999038f5041ba",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.redkitchen.official",
+      "dataset_id": "7scenes_redkitchen",
+      "source": "/data/fyp_3d/runs/formal/ace/redkitchen/official/summary.json",
+      "saved": "ace.redkitchen.official.summary.json",
+      "sha256": "2cd32ccde76ef8ab210ff2f85b78a96a93c8dc918d96fcee2cca43af3cca6be1",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "e4b13af20a7eb5614ddae7135f551fe764e5868de61a162a112003fed1eea394",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.redkitchen.train.2089",
+      "dataset_id": "7scenes_redkitchen",
+      "source": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/training_resources.json",
+      "saved": "ace.redkitchen.train.2089.training_resources.json",
+      "sha256": "aa318b91fc946ddf4e544078c2b3aebf426460584a8a2ddbc4292ed330e4ed55",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "5bf4407e1a839273ccdddad49040c59af1c526704590b5c006c24a9ccb1d8230",
+      "metric_context": {}
+    },
+    {
+      "task_id": "ace.stairs.official",
+      "dataset_id": "7scenes_stairs",
+      "source": "/data/fyp_3d/runs/formal/ace/stairs/official/summary.json",
+      "saved": "ace.stairs.official.summary.json",
+      "sha256": "3f54c95c9ff2a83d69d6bd311dd6e9d7935a351a1251fef4c942204aa8dee940",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "7922dc3c177ee663968df46449d5a4f1056bb4464aff7b41e271e47d8c740180",
+      "metric_context": {}
+    },
+    {
+      "task_id": "reuse.ace.heads.local",
+      "dataset_id": "7scenes_heads",
+      "source": "/data/fyp_3d/runs/ace_adapter_local/summary.json",
+      "saved": "reuse.ace.heads.local.summary.json",
+      "sha256": "9696acadb7c02c6e43d19ed99dbef3f2dde2de42306bab44e0acf7bb5690a856",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "b8fcb1704878e945af183b758c8690ed6d95b0109344d3480a467850c3db080a",
+      "metric_context": {}
+    },
+    {
+      "task_id": "reuse.ace.heads.official",
+      "dataset_id": "7scenes_heads",
+      "source": "/data/fyp_3d/runs/ace_adapter_official/summary.json",
+      "saved": "reuse.ace.heads.official.summary.json",
+      "sha256": "6aac65a0c8e20c3127c6cd6d20efaf6276401ee3c0dd084a172b021d77a3d1b0",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "0154bcf7c36cb2844f50fd45f0a1ac40f05816153dd37a45364625653a7cd407",
+      "metric_context": {}
+    },
+    {
+      "task_id": "macvo.demo.fast",
+      "dataset_id": "macvo_demo",
+      "source": "/data/fyp_3d/runs/formal/macvo/demo_fast_1274/summary.json",
+      "saved": "macvo.demo.fast.summary.json",
+      "sha256": "eddf0c91d1ad7b2badfd9281c1f3af80098368b06f678a510e03654b6b878695",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "7e500324e76070b4f4423ed104b762bd67b8af27bef8f510c0f0352cc19abd4d",
+      "metric_context": {
+        "frontend_cache": {
+          "hits": 1274,
+          "misses": 0,
+          "corrupt": 0
+        },
+        "runtime_scope": "Cached frontend hits are excluded from neural inference cost. Warm-cache Fast timing is not comparable to mostly-live Paper end-to-end timing."
+      }
+    },
+    {
+      "task_id": "macvo.demo.geometric",
+      "dataset_id": "macvo_demo",
+      "source": "/data/fyp_3d/runs/formal/macvo/demo_stereo_1274/summary.json",
+      "saved": "macvo.demo.geometric.summary.json",
+      "sha256": "3a350c1e02e1df6e2c89fd9ec7081925822cd0ecfe364c47cc2e285d8bb2fbb0",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "589112cc61a4d7bf1e29f9f12faff33a6455f7fe6fb26beda191277b6c5a6aa1",
+      "metric_context": {}
+    },
+    {
+      "task_id": "macvo.demo.paper",
+      "dataset_id": "macvo_demo",
+      "source": "/data/fyp_3d/runs/formal/macvo/demo_paper_1274/summary.json",
+      "saved": "macvo.demo.paper.summary.json",
+      "sha256": "d029d7d4ecbdcc14d49cc88d9b504d017d4c690dffe7290d26f5df7aaef6b58c",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "99906a0ed7966584dabc8c67d31ab03e6037389c8faa1741a1e50699b381f164",
+      "metric_context": {
+        "frontend_cache": {
+          "hits": 3,
+          "misses": 1271,
+          "corrupt": 0
+        },
+        "runtime_scope": "Cached frontend hits are excluded from neural inference cost. Warm-cache Fast timing is not comparable to mostly-live Paper end-to-end timing."
+      }
+    },
+    {
+      "task_id": "macvo.demo.weight_replay",
+      "dataset_id": "macvo_demo",
+      "source": "/data/fyp_3d/runs/formal/macvo/demo_weight_replay_1274/summary.json",
+      "saved": "macvo.demo.weight_replay.summary.json",
+      "sha256": "e039937db6cad24181dd92c37d70d025e53ad09e961b9659908c173a5249d6db",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "78f7c89a7635ee1f0f0c4e09374279441f19e9715931381904859a27ff5bb89d",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.odometry.source.audit",
+      "dataset_id": "openloris",
+      "source": "/data/fyp_3d/runs/formal/openloris/odometry_provenance/summary.json",
+      "saved": "C.odometry.source.audit.summary.json",
+      "sha256": "be28a24eaf32f8b293141c73f9cfbd186a9dceac3cdf5933851ad9414269328f",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "fe61a4330675b5bb48affa416709201f0c1bd68d12a4105a684412b309fbf6f8",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-1.vendor_baseodom.2d",
+      "dataset_id": "openloris_vendor_baseodom_office1-1",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_2d/summary.json",
+      "saved": "C.office1-1.vendor_baseodom.2d.summary.json",
+      "sha256": "ea3758bc6d1b5a24a812737abc120cb5c97a05dba99e04f3a63f15f5a5e6c761",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "79711d4c0a3b7e2863e4cdc9937672c5a9ff20388d4101d1c74487cee003da8d",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-1.vendor_baseodom.3d",
+      "dataset_id": "openloris_vendor_baseodom_office1-1",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-1_vendor_baseodom_3d/summary.json",
+      "saved": "C.office1-1.vendor_baseodom.3d.summary.json",
+      "sha256": "2eafbfe259940915f4b297876c8429636154c44421f9d6cbbff30e7632234d5d",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "a6fbdc66313965cf4ff01e8697dfe20163f41585178c13754d026b4df1df1239",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-2.vendor_baseodom.2d",
+      "dataset_id": "openloris_vendor_baseodom_office1-2",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_2d/summary.json",
+      "saved": "C.office1-2.vendor_baseodom.2d.summary.json",
+      "sha256": "9d70faa8ac960ea76fce74de978ba0d9934cfc826693fbc3b51cf3e5ae8e64f3",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "eaed9fd2d90f93b1923affba75dc344227f7a62e678ceef97cfc703d2709bfa4",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-2.vendor_baseodom.3d",
+      "dataset_id": "openloris_vendor_baseodom_office1-2",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-2_vendor_baseodom_3d/summary.json",
+      "saved": "C.office1-2.vendor_baseodom.3d.summary.json",
+      "sha256": "f02f90109700f7e9de856b48759ccda51f6c97467a46f7a8202cc56a29726901",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "80d00fbc3bec92b64688103c21d83a6fcd6f7f76630e022e53ec7fb34efaeb60",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-3.vendor_baseodom.2d",
+      "dataset_id": "openloris_vendor_baseodom_office1-3",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_2d/summary.json",
+      "saved": "C.office1-3.vendor_baseodom.2d.summary.json",
+      "sha256": "d6862def190d5e5ed7f47ecf5b5e7c0ccbc373412ab08d9afec031749222ee54",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "ba86d963d05ed402729f564090594ffac2dfaa315dc8964aed608e5c7d6c8fb3",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-3.vendor_baseodom.3d",
+      "dataset_id": "openloris_vendor_baseodom_office1-3",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-3_vendor_baseodom_3d/summary.json",
+      "saved": "C.office1-3.vendor_baseodom.3d.summary.json",
+      "sha256": "6bd1efad8b386927ddb503754827fb2d35aa8a4aa897276310ad866c375d9f8f",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "091feef51600386c10bffa22e2bba61129a3ba5572c5785bdd34e72857ca5352",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-4.vendor_baseodom.2d",
+      "dataset_id": "openloris_vendor_baseodom_office1-4",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_2d/summary.json",
+      "saved": "C.office1-4.vendor_baseodom.2d.summary.json",
+      "sha256": "db54b12812e8979bb694b917be3402da5b16c0cccf2f00d7caf01574134065b1",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "8c4f3d73d9d690830f77b4427bd065efa36838b6653b92ad2bc30aca4a37d660",
+      "metric_context": {}
+    },
+    {
+      "task_id": "C.office1-4.vendor_baseodom.3d",
+      "dataset_id": "openloris_vendor_baseodom_office1-4",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-4_vendor_baseodom_3d/summary.json",
+      "saved": "C.office1-4.vendor_baseodom.3d.summary.json",
+      "sha256": "f1b53b519ad0fecd67d2cc80916ea389df6d8ab960ddd4b5fa9d809b0a4e5eeb",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "574881a8d24d906c4e96e22a7f10f299f945b3bbfec02bd7acdc1153a639f7ad",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-1.stereo_imu.eval",
+      "dataset_id": "office1-1",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-1/comparison.json",
+      "saved": "mins.office1-1.stereo_imu.eval.comparison.json",
+      "sha256": "994c2a737c878b879266acd211095374a3fa2702ed2dbc48b7c4e79fa3de22a3",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "6aaa7a7031aa130e9354a22f6b4fba7a6dd5888e55797fae437f610ded40bf66",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-2.stereo_imu.eval",
+      "dataset_id": "office1-2",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-2/comparison.json",
+      "saved": "mins.office1-2.stereo_imu.eval.comparison.json",
+      "sha256": "0ff74a7d0801fd564818aa89d1e9fa11200ee03bab7831089816c717bd7e21c0",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "28c3e95cc399718e39c257899dd062cccaf4e0841434c71108ef20b8553892a7",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-3.stereo_imu.eval",
+      "dataset_id": "office1-3",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-3/comparison.json",
+      "saved": "mins.office1-3.stereo_imu.eval.comparison.json",
+      "sha256": "4702ff4a3b615e9240c4ca2093a096f4ac39738ad7ae3ad995e541a2dd029036",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "02117a621bd7d7f02c51bb65f501b639cf5b7f4d5b5bad4d9c425a3211ce044f",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-4.stereo_imu.eval",
+      "dataset_id": "office1-4",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-4/comparison.json",
+      "saved": "mins.office1-4.stereo_imu.eval.comparison.json",
+      "sha256": "190fdb8b5a48420132385abbf277a88b416e08dc6966cc77c75afcb19a73efec",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "1e9518bc0f56e10291fb99b09d762b6c9fc315855fcf447cceaf3c9a50855306",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-5.stereo_imu.eval",
+      "dataset_id": "office1-5",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-5/comparison.json",
+      "saved": "mins.office1-5.stereo_imu.eval.comparison.json",
+      "sha256": "aff135b33d99ce78c9918af7e71448db87f490fa13ed64f3d57a21ca59a550c1",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "985ee58e7a60c64487d9bf1ff371d9a805987a9c69e1c1bde32c282e2e67f278",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-6.stereo_imu.eval",
+      "dataset_id": "office1-6",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-6/comparison.json",
+      "saved": "mins.office1-6.stereo_imu.eval.comparison.json",
+      "sha256": "87f592aeed52da8a2c4969f824ed9c1a74dfdb5efaf4b9e7d82a325025e1142b",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "ed5c18039e5b3f8ba70aeaab2411222e81a06fb2f47a5e17d64709140ecb2cd3",
+      "metric_context": {}
+    },
+    {
+      "task_id": "mins.office1-7.stereo_imu.eval",
+      "dataset_id": "office1-7",
+      "source": "/data/fyp_3d/runs/formal/openloris/office1-7/comparison.json",
+      "saved": "mins.office1-7.stereo_imu.eval.comparison.json",
+      "sha256": "36f95421d772da90432eaac1835bcd068b1dbbdb290668d5626d3b04cc271eb1",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "9731b7ef1fd93565b05c225fdcb8735025df66c26c625a6930d15d8ac69306ce",
+      "metric_context": {}
+    },
+    {
+      "task_id": "D.building_split.audit",
+      "dataset_id": "hssd",
+      "source": "/data/fyp_3d/datasets/hssd_expanded/building_split.json",
+      "saved": "D.building_split.audit.building_split.json",
+      "sha256": "92fb2386c5d59dc2cb22b9452790f8c13ff72e576aa70d4f3a2144f319c889d3",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "53daa72de6eed05c29cc831eb3177e33d5e3cf040c87445c8bb28224d614d280",
+      "metric_context": {}
+    },
+    {
+      "task_id": "G.ace_macvo.integration",
+      "dataset_id": "habitat_common",
+      "source": "/data/fyp_3d/runs/formal/common/continuous_joint/summary.json",
+      "saved": "G.ace_macvo.integration.summary.json",
+      "sha256": "45ad40e8806cf7330a3be39f660e6fc183c2a18e01c2359aacb49b81b50e02f5",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "78b777ae210d2e975df6a1378a58bfe1438a2f4d459dccefd2966368f0b89a00",
+      "metric_context": {}
+    },
+    {
+      "task_id": "G.common.ace.eval",
+      "dataset_id": "habitat_common",
+      "source": "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation/summary.json",
+      "saved": "G.common.ace.eval.summary.json",
+      "sha256": "192adaba01439dda0a00e70e7fb5701690ffc92424495a0fa520740ecbaba670",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "45c2c6020856c75ae5f28b0dc8f6190f5cdacfa6b1c8ec7b4c37185dcd1a87e7",
+      "metric_context": {}
+    },
+    {
+      "task_id": "G.common.ace.train",
+      "dataset_id": "habitat_common",
+      "source": "/data/fyp_3d/runs/formal/common/ace_seed2089/training_resources.json",
+      "saved": "G.common.ace.train.training_resources.json",
+      "sha256": "702c9f2d294d692fc13ca22776f35db99e740d95fe9e411969420b9c5109a688",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "d5c809183f00be043ed8006c520bd7468840b2ea34f54f2a3302ce6536a7f255",
+      "metric_context": {}
+    },
+    {
+      "task_id": "G.common.macvo",
+      "dataset_id": "habitat_common",
+      "source": "/data/fyp_3d/runs/formal/common/macvo_paper600/summary.json",
+      "saved": "G.common.macvo.summary.json",
+      "sha256": "58476c3b7bf7d4f0b7e0f5e3d58fa5c6be89f7b9a0e5d08d41b06e81a41bbb2a",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "8850f030c78d22363098b3036280f49019fde35b1481c0d1f030284ca5c2061f",
+      "metric_context": {
+        "frontend_cache": {
+          "hits": 0,
+          "misses": 600,
+          "corrupt": 0
+        },
+        "runtime_scope": "Cached frontend hits are excluded from neural inference cost. Warm-cache Fast timing is not comparable to mostly-live Paper end-to-end timing."
+      }
+    },
+    {
+      "task_id": "I.common.controlled_recovery.v2",
+      "dataset_id": "habitat_common",
+      "source": "/data/fyp_3d/runs/formal/common/controlled_recovery_v2/summary.json",
+      "saved": "I.common.controlled_recovery.v2.summary.json",
+      "sha256": "2ed61aa457067bc16f0a90ddfb224dd1986b98b318bd04902e89cc9d611c1687",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "b4170d7cadacc8abb69548af33d663a38284c60fc15b4d2ba5ce9fddb1d11c52",
+      "metric_context": {}
+    },
+    {
+      "task_id": "J.tum.sitting_static.rgbd_vo",
+      "dataset_id": "tum_sitting_static",
+      "source": "/data/fyp_3d/runs/formal/tum/sitting_static/summary.json",
+      "saved": "J.tum.sitting_static.rgbd_vo.summary.json",
+      "sha256": "27843e47fa02feb654a682bce85a1141ec43f094d115ceee7741d680b400c693",
+      "code_commit": "501a98e58910baf6fd3802f22c276aa090bf3280",
+      "input_hash": "fd7d5ef12491ea55671cc1f55481ab8897540f7a3d4421756c6a3256c181bb23",
+      "metric_context": {}
+    },
+    {
+      "task_id": "J.tum.sitting_xyz.rgbd_vo",
+      "dataset_id": "tum_sitting_xyz",
+      "source": "/data/fyp_3d/runs/formal/tum/sitting_xyz/summary.json",
+      "saved": "J.tum.sitting_xyz.rgbd_vo.summary.json",
+      "sha256": "914554219b7dbe253da433ca41138df02a913b09504f57a705fd0e2bf81f9832",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "ddad7b6ba29e8e00fc133446df73e8e8921b06724cdb16c9955d9132d9485abf",
+      "metric_context": {}
+    },
+    {
+      "task_id": "J.tum.walking_static.rgbd_vo",
+      "dataset_id": "tum_walking_static",
+      "source": "/data/fyp_3d/runs/formal/tum/walking_static/summary.json",
+      "saved": "J.tum.walking_static.rgbd_vo.summary.json",
+      "sha256": "baec1d5fab99636c54879dc4555522f554000af6f5afb2790afcde95709a082f",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "fecf36dccd3062560d737d17c59377618a3f6a76fc0d7f5862b41a1838c253bf",
+      "metric_context": {}
+    },
+    {
+      "task_id": "J.tum.walking_xyz.rgbd_vo",
+      "dataset_id": "tum_walking_xyz",
+      "source": "/data/fyp_3d/runs/formal/tum/walking_xyz/summary.json",
+      "saved": "J.tum.walking_xyz.rgbd_vo.summary.json",
+      "sha256": "357f49a9613d753e6212838a43aa0eb16021e88c593fe4b020209a0d90bcb37b",
+      "code_commit": "f2d27ea5aad6c683f39c5eb4b836a791b5ef92c3",
+      "input_hash": "1989da76395cac0b5461fe411b45121bd714eb417a04f99032535b8c758e30c8",
+      "metric_context": {}
+    }
+  ],
+  "warning": "Snapshot of actually validated outputs; invalid first recovery result excluded. No all-research-complete claim. Full raw arrays/logs/weights persist under /data/fyp_3d."
+}

@@ -46,7 +46,13 @@ def main():
             priority=1,
         )
         specs.append(s)
+    specs[1]["depends_on"] = [specs[0]["task_id"]]
     register(specs, root)
+    with db(root) as c:
+        c.execute(
+            "UPDATE tasks SET status='BLOCKED',failure='Injected dependency wait for infrastructure recovery test' WHERE task_id=?",
+            (specs[1]["task_id"],),
+        )
     killed = False
     deadline = time.time() + 120
     while time.time() < deadline:
@@ -75,6 +81,14 @@ def main():
         (r["task_id"], r["status"], r["failure"]) for r in rows
     ]
     assert all(r["attempt"] >= 2 for r in rows)
+    with db(root) as c:
+        assert (
+            c.execute(
+                "SELECT COUNT(*) FROM events WHERE task_id=? AND event='PREREQUISITES_RECOVERED'",
+                (specs[1]["task_id"],),
+            ).fetchone()[0]
+            >= 1
+        )
     assert not due(1000, 1000, 15399) and due(1000, 1000, 15400)
     assert not due(1000, 15400, 29799) and due(1000, 15400, 29800)
     path = report(root, True)
@@ -85,6 +99,7 @@ def main():
         "test_root": str(root),
         "scientific_data_used": False,
         "checkpoint_worker_was_killed": True,
+        "dependency_block_automatically_cleared": True,
         "resumed_steps": json.loads(cp.read_text())["step"],
         "tasks": [
             {"task_id": r["task_id"], "status": r["status"], "attempt": r["attempt"]}

@@ -1,0 +1,13 @@
+{
+  "wall_seconds": 308.84935658000177,
+  "torch_peak_allocated_MiB": 3443.36474609375,
+  "torch_peak_reserved_MiB": 3474.0,
+  "process_maxrss_MiB": 1642.4375,
+  "buffer_features": 1000000,
+  "epochs": 16,
+  "batch_size": 5120,
+  "base_seed": 2091,
+  "workers": 2,
+  "scene": "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+  "scope": "Official ACE trainer and pretrained encoder; new scene head fit only to official train split; reduced buffer protocol, not semantic training"
+}

@@ -1,0 +1,76 @@
+{
+  "ACE_only": {
+    "n": 600,
+    "absolute_map_translation_rmse_m": 8.26198857543859,
+    "recall_5cm_5deg": 0.006666666666666667,
+    "recall_25cm_10deg": 0.10666666666666667,
+    "recall_1m_30deg": 0.2733333333333333,
+    "valid_pose_fraction": 1.0,
+    "median_translation_m": 3.468402199379496,
+    "median_rotation_deg": 23.449874304800396
+  },
+  "MACVO_ACE": {
+    "n": 600,
+    "absolute_map_translation_rmse_m": 9.875616087937287,
+    "recall_5cm_5deg": 0.006666666666666667,
+    "recall_25cm_10deg": 0.11,
+    "recall_1m_30deg": 0.30833333333333335,
+    "valid_pose_fraction": 1.0,
+    "median_translation_m": 1.9432320907059575,
+    "median_rotation_deg": 19.09591497363199
+  },
+  "MACVO_ACE_gate": {
+    "n": 600,
+    "absolute_map_translation_rmse_m": 0.1841190596375892,
+    "recall_5cm_5deg": 0.0,
+    "recall_25cm_10deg": 0.49,
+    "recall_1m_30deg": 0.5583333333333333,
+    "valid_pose_fraction": 0.5583333333333333,
+    "median_translation_m": 0.16323949786739186,
+    "median_rotation_deg": 2.8613014072875984
+  },
+  "MACVO_only_local_odometry": {
+    "n": 600,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.09123027623164161,
+    "ate_first_pose_anchored_rmse_m": 0.09881506347702516,
+    "path_length_m": 23.583706259066744,
+    "endpoint_first_pose_anchored_error_m": 0.2482485547752192,
+    "endpoint_drift_per_meter": 0.01052627403208858,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.0069406802010660235,
+        "rotation_rmse_deg": 0.12930704181686087,
+        "pairs": 599
+      },
+      "5": {
+        "translation_rmse_m": 0.016328099649095696,
+        "rotation_rmse_deg": 0.3664679029312403,
+        "pairs": 595
+      },
+      "10": {
+        "translation_rmse_m": 0.023734986102535792,
+        "rotation_rmse_deg": 0.5906550236558439,
+        "pairs": 590
+      }
+    },
+    "tracking_availability": 0.991652754590985,
+    "lost_frames": 5,
+    "max_failure_run_frames": 3,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "audit": {
+    "simulated": true,
+    "same_dataset_and_map": true,
+    "readonly_map_sha256": "1c2af6f3e9f110e4165a02ae0da5b706e0c61450e8b5c784b9390225d6aa2775",
+    "map_unchanged": true,
+    "GT_online": false,
+    "frames": 600,
+    "continuous_state_propagation": true,
+    "absolute_correction": true,
+    "gate_enabled_comparison": true,
+    "pose_covariance_available": false,
+    "warning": "MACVO-only is local odometry: aligned/anchored errors are not map-coordinate absolute errors. Fusion uses map-coordinate ACE hypotheses without GT initialization."
+  }
+}

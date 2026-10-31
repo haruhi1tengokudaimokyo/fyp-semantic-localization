@@ -1,0 +1,145 @@
+{
+  "status": "completed",
+  "paper_url": "https://qi-she.net/pdf/ICRA2020_Scene.pdf",
+  "paper_sha256": "363bddebe8b7a3fd9750d55346ad65e2dfc89f1a8bddd5a283d3c65c9e0301c7",
+  "paper_section": "III.A, Robots and Sensors, page2",
+  "finding": "Office sequences use Segway Deliverybot S1. Its base odometry combines wheel encoders with a chassis IMU through a proprietary filter. /odom is NOT established as raw encoder-only data.",
+  "pure_wheel_eligible": false,
+  "GT_or_LiDAR_fusion_reported_by_authors": false,
+  "conditional_input_name": "vendor-fused wheel+chassis-IMU base odometry twist, plus separate T265 IMU",
+  "online_pose_fields_used": false,
+  "online_twist_fields_used": [
+    "linear.x",
+    "angular.z"
+  ],
+  "raw_encoder_topics_available": false,
+  "bags": [
+    {
+      "bag": "office1-1.bag",
+      "odom_messages": 540,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    },
+    {
+      "bag": "office1-2.bag",
+      "odom_messages": 600,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    },
+    {
+      "bag": "office1-3.bag",
+      "odom_messages": 240,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    },
+    {
+      "bag": "office1-4.bag",
+      "odom_messages": 580,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    },
+    {
+      "bag": "office1-5.bag",
+      "odom_messages": 1060,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    },
+    {
+      "bag": "office1-6.bag",
+      "odom_messages": 720,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    },
+    {
+      "bag": "office1-7.bag",
+      "odom_messages": 760,
+      "frame_pairs": [
+        [
+          "base_odom",
+          "base_link"
+        ]
+      ],
+      "maximum_abs_twist_y": 0.0,
+      "connection_metadata": [
+        {
+          "callerid": null,
+          "latching": null
+        }
+      ],
+      "raw_encoder_topics": []
+    }
+  ],
+  "caveat": "Vendor source is proprietary; no raw-encoder-only decomposition or internal covariance independence claim. Separate base-odometry experiments cannot be presented as pure Wheel+IMU."
+}

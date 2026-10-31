@@ -1,0 +1,213 @@
+{
+  "seed": 1305,
+  "independent_layout_groups": 24,
+  "simulated": true,
+  "real_physical_building_identity_claim": false,
+  "grouping": "shared original house prefix OR identical architectural GLB SHA256; splits frozen before rendering/model fitting",
+  "scenes": [
+    {
+      "scene": "102344049",
+      "house_prefix": "102344049",
+      "stage_sha256": "7aa559c6a99cff9c1678faffb4093d56f085986ca3338d5ee3bcfadb2c433bcf",
+      "building_group": "102344049",
+      "split": "val"
+    },
+    {
+      "scene": "102344094",
+      "house_prefix": "102344094",
+      "stage_sha256": "19018c2e091ea324cffff1d34a4f23c37c890eb0d4a2e63988f79354f8e8d906",
+      "building_group": "102344094",
+      "split": "train"
+    },
+    {
+      "scene": "102344115",
+      "house_prefix": "102344115",
+      "stage_sha256": "9f45dad969eae74b8c984d3e0de8a8d86d6240fdc6e3606bfeaed819a0d77b61",
+      "building_group": "102344115",
+      "split": "train"
+    },
+    {
+      "scene": "102344193",
+      "house_prefix": "102344193",
+      "stage_sha256": "1a07473dc53459ad1311536a76d0f77bcbe3754ab5ed8ad37ce21be319a15764",
+      "building_group": "102344193",
+      "split": "train"
+    },
+    {
+      "scene": "102344280",
+      "house_prefix": "102344280",
+      "stage_sha256": "2166c311371149b2aad2c56e7bb69fd90819fd3bbb0190e174fe60c7e77463b5",
+      "building_group": "102344280",
+      "split": "train"
+    },
+    {
+      "scene": "102815859",
+      "house_prefix": "102815859",
+      "stage_sha256": "d6a1c97a3119ac204aebf21e39c14432c1ef51958a744be2abcb51f0df9e515d",
+      "building_group": "102815859",
+      "split": "train"
+    },
+    {
+      "scene": "102816852",
+      "house_prefix": "102816852",
+      "stage_sha256": "5624fea2b413ccd3f425c8526e0a30bfbae093198c4e30d41ac33e1f8de35c33",
+      "building_group": "102816852",
+      "split": "val"
+    },
+    {
+      "scene": "103997403_171030405",
+      "house_prefix": "103997403",
+      "stage_sha256": "afff0897977f65dd7eb11ff1c8a52cb3960c59a160557565da58fbf96df6c149",
+      "building_group": "103997403",
+      "split": "test"
+    },
+    {
+      "scene": "103997460_171030507",
+      "house_prefix": "103997460",
+      "stage_sha256": "799a25b62010a531fc0d6cfe069248e96dc2eb7473d51c7134e8d21d57565a13",
+      "building_group": "103997460",
+      "split": "train"
+    },
+    {
+      "scene": "103997919_171031233",
+      "house_prefix": "103997919",
+      "stage_sha256": "9b288ec59ce2da82386d91bf6b97e9da01ab714d03abc20f5111941b6786b037",
+      "building_group": "103997919",
+      "split": "test"
+    },
+    {
+      "scene": "103997970_171031287",
+      "house_prefix": "103997970",
+      "stage_sha256": "c8a05bfa718c7f8f3cec67a22fd52c8b6c55a7908b0aab27ffe15608e54c8b13",
+      "building_group": "103997970",
+      "split": "train"
+    },
+    {
+      "scene": "103997994_171031320",
+      "house_prefix": "103997994",
+      "stage_sha256": "a1338089069d4336da67abd2feaf2e828e9c3e6a955f134bccc11ec4b85bef6b",
+      "building_group": "103997994",
+      "split": "train"
+    },
+    {
+      "scene": "104348160_171513093",
+      "house_prefix": "104348160",
+      "stage_sha256": "319ea7e09d9f3b15d3ca5adec0d514f1807ef4291d35dcf3d27f298dec259e78",
+      "building_group": "104348160",
+      "split": "train"
+    },
+    {
+      "scene": "104348394_171513453",
+      "house_prefix": "104348394",
+      "stage_sha256": "934a3fbb5cdfe2d6f147e8adee73dc88d0da5539f8d54e532adc2bcd3bd2fc81",
+      "building_group": "104348394",
+      "split": "train"
+    },
+    {
+      "scene": "104348511_171513654",
+      "house_prefix": "104348511",
+      "stage_sha256": "6c41bd8f7886532aa17790bf3b593be9606925db024f1f8a86c6ab1a3420bd02",
+      "building_group": "104348511",
+      "split": "test"
+    },
+    {
+      "scene": "104862621_172226772",
+      "house_prefix": "104862621",
+      "stage_sha256": "c0b0b4d29b5b0b0161efa9894b67ead501c6691a6b16e9225751e7dbb450a5ba",
+      "building_group": "104862621",
+      "split": "train"
+    },
+    {
+      "scene": "104862639_172226823",
+      "house_prefix": "104862639",
+      "stage_sha256": "6368b84a80c41b8e75f05f217adb931f41c0a145b3a08f6dd606617647a611bf",
+      "building_group": "104862639",
+      "split": "train"
+    },
+    {
+      "scene": "105515211_173104185",
+      "house_prefix": "105515211",
+      "stage_sha256": "d9998d3415f055aaa191f576f45355d01bb2bef13c78811c4d00edab966edc51",
+      "building_group": "105515211",
+      "split": "train"
+    },
+    {
+      "scene": "106365897_174225972",
+      "house_prefix": "106365897",
+      "stage_sha256": "626f18e21beff7b0a84960b167427969c5b7bde5803e0a957d6233bea6ab7b93",
+      "building_group": "106365897",
+      "split": "val"
+    },
+    {
+      "scene": "106879005_174887124",
+      "house_prefix": "106879005",
+      "stage_sha256": "4dffc583ceece3d1906a0a2e75ccf01d8597b1529ebb09d4abf3d2645355fcd5",
+      "building_group": "106879005",
+      "split": "test"
+    },
+    {
+      "scene": "107734110_175999914",
+      "house_prefix": "107734110",
+      "stage_sha256": "400d02bda426c1addc427e68cc040c40f2c16102930bca39072bc9cf2efc6438",
+      "building_group": "107734110",
+      "split": "train"
+    },
+    {
+      "scene": "107734119_175999932",
+      "house_prefix": "107734119",
+      "stage_sha256": "ebcd4b3fc0607e382851da2cd872481cd6e46d48cfbf127d3257bcf271b4aa0f",
+      "building_group": "107734119",
+      "split": "train"
+    },
+    {
+      "scene": "108294417_176709879",
+      "house_prefix": "108294417",
+      "stage_sha256": "c6d53e3619f183b198f550b4bd59b7becbfee67e01c2a32ea64dffbe45ddc447",
+      "building_group": "108294417",
+      "split": "train"
+    },
+    {
+      "scene": "108294765_176710386",
+      "house_prefix": "108294765",
+      "stage_sha256": "82df649ffc74ef13692b77210ff17f366d82bcf518d4ddec8e2f1d180049d5c5",
+      "building_group": "108294765",
+      "split": "val"
+    }
+  ],
+  "split_groups": {
+    "train": [
+      "102344094",
+      "102344115",
+      "102344193",
+      "102344280",
+      "102815859",
+      "103997460",
+      "103997970",
+      "103997994",
+      "104348160",
+      "104348394",
+      "104862621",
+      "104862639",
+      "105515211",
+      "107734110",
+      "107734119",
+      "108294417"
+    ],
+    "val": [
+      "102344049",
+      "102816852",
+      "106365897",
+      "108294765"
+    ],
+    "test": [
+      "103997403",
+      "103997919",
+      "104348511",
+      "106879005"
+    ]
+  },
+  "limitations": [
+    "Synthetic house groups; near-duplicate nonidentical layouts remain possible; no real-building claim",
+    "Native object lexicon lacks wall/window/column coverage; ignore unknown labels"
+  ]
+}

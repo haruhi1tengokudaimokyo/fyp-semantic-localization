@@ -1,0 +1,83 @@
+{
+  "covariance": {
+    "backend_wall_seconds": 75.54000810341677,
+    "weight_matrix_evaluations": 9129,
+    "metrics": {
+      "n": 1274,
+      "alignment": "SE3, no scale correction",
+      "ate_se3_aligned_rmse_m": 1.845607975697765,
+      "ate_first_pose_anchored_rmse_m": 2.875716110384749,
+      "path_length_m": 188.01351203064493,
+      "endpoint_first_pose_anchored_error_m": 8.830581328755203,
+      "endpoint_drift_per_meter": 0.04696780158713209,
+      "rpe_frame_delta": {
+        "1": {
+          "translation_rmse_m": 0.010245430600150533,
+          "rotation_rmse_deg": 0.07325077644768237,
+          "pairs": 1273
+        },
+        "5": {
+          "translation_rmse_m": 0.048713907266666405,
+          "rotation_rmse_deg": 0.26827837928526527,
+          "pairs": 1269
+        },
+        "10": {
+          "translation_rmse_m": 0.09499228682507535,
+          "rotation_rmse_deg": 0.45420234151531536,
+          "pairs": 1264
+        }
+      },
+      "tracking_availability": 1.0,
+      "lost_frames": 0,
+      "max_failure_run_frames": 0,
+      "failure_duration_seconds": null,
+      "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+    }
+  },
+  "identity": {
+    "backend_wall_seconds": 55.93290318743675,
+    "weight_matrix_evaluations": 12128,
+    "metrics": {
+      "n": 1274,
+      "alignment": "SE3, no scale correction",
+      "ate_se3_aligned_rmse_m": 4.753942812082172,
+      "ate_first_pose_anchored_rmse_m": 6.319491669823782,
+      "path_length_m": 188.01351203064493,
+      "endpoint_first_pose_anchored_error_m": 20.252428182286067,
+      "endpoint_drift_per_meter": 0.10771793986266827,
+      "rpe_frame_delta": {
+        "1": {
+          "translation_rmse_m": 0.019680610119716085,
+          "rotation_rmse_deg": 0.08849316285254127,
+          "pairs": 1273
+        },
+        "5": {
+          "translation_rmse_m": 0.09400771035999858,
+          "rotation_rmse_deg": 0.38473911550234535,
+          "pairs": 1269
+        },
+        "10": {
+          "translation_rmse_m": 0.1841396990168769,
+          "rotation_rmse_deg": 0.7229424976268748,
+          "pairs": 1264
+        }
+      },
+      "tracking_availability": 1.0,
+      "lost_frames": 0,
+      "max_failure_run_frames": 0,
+      "failure_duration_seconds": null,
+      "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+    }
+  },
+  "audit": {
+    "fixed_correspondences": 246889,
+    "frames": 1274,
+    "original_weighted_replay_max_matrix_difference": 0.0010519027709960938,
+    "identity_vs_covariance_max_matrix_difference": 11.454610824584961,
+    "identity_applied_inside_actual_solver": true,
+    "frontend_keypoint_filter_same": true,
+    "GT_used_during_solve": false,
+    "scope": "backend covariance weighting only; frontend covariance-based selection remains on",
+    "runtime_caveat": "backend replay only, GPU training may coexist; not an end-to-end timing benchmark"
+  }
+}
