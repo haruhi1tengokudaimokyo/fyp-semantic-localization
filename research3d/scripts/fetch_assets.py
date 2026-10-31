@@ -37,7 +37,9 @@ class Fetcher:
                     r = requests.get(url, timeout=120)
                     r.raise_for_status()
                     p.parent.mkdir(parents=True, exist_ok=True)
-                    p.write_bytes(r.content)
+                    temporary = p.with_suffix(p.suffix + ".download.tmp")
+                    temporary.write_bytes(r.content)
+                    temporary.replace(p)
                     break
                 except Exception:
                     if n == 4:

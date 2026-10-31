@@ -23,6 +23,22 @@ def main(a):
 
     torch.set_num_threads(4)
     sys.path[:0] = [str(Path(a.ace)), str(Path(a.ace) / "dsacstar")]
+    import types
+
+    trainer_path = Path(a.ace) / "ace_trainer.py"
+    trainer_module = types.ModuleType("ace_trainer")
+    trainer_module.__file__ = str(trainer_path)
+    text = trainer_path.read_text()
+    assert text.count("self.base_seed = 2089") == 1
+    exec(
+        compile(
+            text.replace("self.base_seed = 2089", "self.base_seed = " + str(a.seed)),
+            str(trainer_path),
+            "exec",
+        ),
+        trainer_module.__dict__,
+    )
+    sys.modules["ace_trainer"] = trainer_module
     from ace_trainer import TrainerACE
 
     original = TrainerACE.__init__
@@ -57,7 +73,7 @@ def main(a):
         buffer_features=1000000,
         epochs=16,
         batch_size=5120,
-        base_seed=2089,
+        base_seed=a.seed,
         workers=2,
         scene=a.scene,
         scope="Official ACE trainer and pretrained encoder; new scene head fit only to official train split; reduced buffer protocol, not semantic training",
@@ -71,4 +87,5 @@ if __name__ == "__main__":
     p.add_argument("scene")
     p.add_argument("output")
     p.add_argument("--ace", required=True)
+    p.add_argument("--seed", type=int, default=2089)
     main(p.parse_args())

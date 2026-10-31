@@ -134,6 +134,20 @@ def main(a):
     captures = {}
     try:
         model = MACVO.from_config(asNamespace({"Odometry": cfg_dict["Odometry"]}))
+        cache_counts = None
+        if a.frontend_cache:
+            from motion.frontend_cache import install_cache
+
+            namespace = dict(
+                frontend=cfg_dict["Odometry"]["frontend"],
+                source_commit=metadata["source_commit"],
+                weight_sha256=hashlib.sha256(Path(a.weights).read_bytes()).hexdigest(),
+                compat_patch_sha256=hashlib.sha256(
+                    (source / "Module/Network/FlowFormerCov/covhead.py").read_bytes()
+                ).hexdigest(),
+            )
+            cache_counts = install_cache(model.Frontend, a.frontend_cache, namespace)
+
         diagnostics = []
 
         def tensor_stats(x):
@@ -247,6 +261,7 @@ def main(a):
             torch_peak_allocated_MiB=torch.cuda.max_memory_allocated() / 1024**2,
             torch_peak_reserved_MiB=torch.cuda.max_memory_reserved() / 1024**2,
             maxrss_parent_MiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024,
+            frontend_cache=cache_counts,
             initialization_included=True,
             finished_frames=len(rows),
         )
@@ -281,5 +296,6 @@ if __name__ == "__main__":
     p.add_argument("--encoder", choices=["bf16", "fp16", "fp32"], default="fp32")
     p.add_argument("--config", choices=["fast", "paper"], default="fast")
     p.add_argument("--motion-weights")
+    p.add_argument("--frontend-cache")
     p.add_argument("--seed", type=int, default=1305)
     main(p.parse_args())

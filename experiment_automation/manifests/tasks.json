@@ -1,0 +1,4207 @@
+[
+  {
+    "task_id": "reuse.ace.heads.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_heads",
+    "command": [],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/ace_adapter_official/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 1000
+        },
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/runs/ace_adapter_official/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true,
+      "images": 1000,
+      "scene_ids": [
+        "heads"
+      ]
+    },
+    "reuse_existing": true
+  },
+  {
+    "task_id": "reuse.ace.heads.local",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_heads",
+    "command": [],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/ace_adapter_local/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 1000
+        },
+        "finite": [
+          "median_translation_m"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/runs/ace_adapter_local/summary.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true,
+      "images": 1000,
+      "scene_ids": [
+        "heads"
+      ]
+    },
+    "reuse_existing": true
+  },
+  {
+    "task_id": "reuse.macvo.paper200",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/macvo/paper_cov_200/summary.json",
+        "kind": "json",
+        "equals": {
+          "finished_frames": 200
+        },
+        "finite": [
+          "raw.ate_se3_aligned_rmse_m"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/runs/macvo/paper_cov_200/summary.json"
+    ],
+    "formal": false,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "images": 200
+    },
+    "reuse_existing": true
+  },
+  {
+    "task_id": "reuse.semantic.pilot",
+    "experiment_id": "D",
+    "dataset_id": "hssd_pilot",
+    "command": [],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/semantic/segformer_b0_40epochs/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed"
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/runs/semantic/segformer_b0_40epochs/summary.json"
+    ],
+    "formal": false,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "images": 585,
+      "epochs": 40,
+      "scene_ids": [
+        "105515211",
+        "107734110",
+        "107734119"
+      ]
+    },
+    "reuse_existing": true
+  },
+  {
+    "task_id": "reuse.clip.pilot",
+    "experiment_id": "F",
+    "dataset_id": "hssd_pilot",
+    "command": [],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/semantic/clip_hloc_relocalization/summary.json",
+        "kind": "json",
+        "equals": {
+          "geometry.queries": 76
+        },
+        "finite": [
+          "geometry.recall_25cm_10deg"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/runs/semantic/clip_hloc_relocalization/summary.json"
+    ],
+    "formal": false,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "images": 76
+    },
+    "reuse_existing": true
+  },
+  {
+    "task_id": "reuse.recovery.pilot",
+    "experiment_id": "I",
+    "dataset_id": "7scenes_heads",
+    "command": [],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/recovery/temporal_gate/summary.json",
+        "kind": "json",
+        "finite": [
+          "clean.temporal_gate.recall_5cm_5deg"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/runs/recovery/temporal_gate/summary.json"
+    ],
+    "formal": false,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "images": 1000
+    },
+    "reuse_existing": true
+  },
+  {
+    "task_id": "macvo.demo.paper",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_macvo.py",
+      "/data/fyp_3d/datasets/macvo_demo/P001_select",
+      "/data/fyp_3d/runs/formal/macvo/demo_paper_1274",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--frames",
+      "1274",
+      "--config",
+      "paper",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--frontend-cache",
+      "/data/fyp_3d/automation/checkpoints/macvo_dense",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_paper_1274/summary.json",
+        "kind": "json",
+        "equals": {
+          "finished_frames": 1274
+        },
+        "finite": [
+          "raw.ate_se3_aligned_rmse_m",
+          "raw.tracking_availability"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_paper_1274/trajectory.npz",
+        "kind": "npz",
+        "lengths": {
+          "T_world_camera_raw": 1274,
+          "lost_before_interpolation": 1274
+        },
+        "finite": [
+          "T_world_camera_raw"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/datasets/macvo_demo/P001_select/pose_left.txt",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 100,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2400,
+      "disk_gib": 20,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true,
+      "images": 1274,
+      "scene_ids": [
+        "official_demo"
+      ]
+    }
+  },
+  {
+    "task_id": "macvo.demo.paper.residuals",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/audit_macvo_residuals.py",
+      "/data/fyp_3d/runs/formal/macvo/demo_paper_1274"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_paper_1274/residual_audit.json",
+        "kind": "json",
+        "finite": [
+          "optimized_pixel_residual_median_px"
+        ]
+      }
+    ],
+    "depends_on": [
+      "macvo.demo.paper"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/macvo/demo_paper_1274/observations.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 40,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "macvo.demo.fast",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_macvo.py",
+      "/data/fyp_3d/datasets/macvo_demo/P001_select",
+      "/data/fyp_3d/runs/formal/macvo/demo_fast_1274",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--frames",
+      "1274",
+      "--config",
+      "fast",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--frontend-cache",
+      "/data/fyp_3d/automation/checkpoints/macvo_dense"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_fast_1274/summary.json",
+        "kind": "json",
+        "equals": {
+          "finished_frames": 1274
+        },
+        "finite": [
+          "raw.ate_se3_aligned_rmse_m",
+          "raw.tracking_availability"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_fast_1274/trajectory.npz",
+        "kind": "npz",
+        "lengths": {
+          "T_world_camera_raw": 1274,
+          "lost_before_interpolation": 1274
+        },
+        "finite": [
+          "T_world_camera_raw"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/datasets/macvo_demo/P001_select/pose_left.txt",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 70,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2400,
+      "disk_gib": 20,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true,
+      "images": 1274,
+      "scene_ids": [
+        "official_demo"
+      ]
+    }
+  },
+  {
+    "task_id": "macvo.demo.fast.residuals",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/audit_macvo_residuals.py",
+      "/data/fyp_3d/runs/formal/macvo/demo_fast_1274"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_fast_1274/residual_audit.json",
+        "kind": "json",
+        "finite": [
+          "optimized_pixel_residual_median_px"
+        ]
+      }
+    ],
+    "depends_on": [
+      "macvo.demo.fast"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/macvo/demo_fast_1274/observations.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 40,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "macvo.demo.geometric",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_stereo_geometric.py",
+      "/data/fyp_3d/datasets/macvo_demo/P001_select",
+      "/data/fyp_3d/runs/formal/macvo/demo_stereo_1274",
+      "--frames",
+      "1274"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_stereo_1274/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 1274
+        },
+        "finite": [
+          "ate_se3_aligned_rmse_m"
+        ]
+      }
+    ],
+    "depends_on": [],
+    "inputs": [
+      "/data/fyp_3d/datasets/macvo_demo/P001_select/pose_left.txt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 95,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true,
+      "images": 1274
+    }
+  },
+  {
+    "task_id": "macvo.demo.weight_replay",
+    "experiment_id": "B",
+    "dataset_id": "macvo_demo",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/replay_macvo_weights.py",
+      "/data/fyp_3d/runs/formal/macvo/demo_fast_1274",
+      "/data/fyp_3d/runs/formal/macvo/demo_weight_replay_1274",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/macvo/demo_weight_replay_1274/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.frames": 1274,
+          "audit.identity_applied_inside_actual_solver": true
+        },
+        "finite": [
+          "identity.metrics.ate_se3_aligned_rmse_m"
+        ]
+      }
+    ],
+    "depends_on": [
+      "macvo.demo.fast"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 60,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 1500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.models.all7",
+    "experiment_id": "A",
+    "dataset_id": "7scenes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/runner/jobs.py",
+      "ace-models"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/models/ace_official/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "complete_7scenes_heads": true
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 85,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 400,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.chess",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_range.py",
+      "https://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/chess.zip",
+      "/data/fyp_3d/downloads/chess.zip",
+      "--workers",
+      "6"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/downloads/chess.zip.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.chess.prepare",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_heads.py",
+      "/data/fyp_3d/downloads/chess.zip",
+      "/data/fyp_3d/datasets/7scenes",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--scene",
+      "chess"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/7scenes/7scenes_chess/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "scene": "chess",
+          "outer_zip_crc_verified": true
+        },
+        "minimum": {
+          "counts.train.frames": 1000,
+          "counts.test.frames": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.chess"
+    ],
+    "inputs": [
+      "/data/fyp_3d/downloads/chess.zip"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1200,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.chess.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/models/ace_official/7scenes_chess.pt",
+      "/data/fyp_3d/runs/formal/ace/chess/official",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/official/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.chess.prepare",
+      "ace.models.all7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess/acceptance.json",
+      "/data/fyp_3d/models/ace_official/7scenes_chess.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.chess.train.2089",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.chess.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.chess.train.2089.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2089/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.chess.train.2089"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/chess/seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.chess.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.chess.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.chess.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.chess.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/chess/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.chess.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.chess.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.chess.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_chess",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_chess",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/chess/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/chess/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.chess.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/chess/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "chess"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_chess"
+  },
+  {
+    "task_id": "ace.data.fire",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_range.py",
+      "https://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/fire.zip",
+      "/data/fyp_3d/downloads/fire.zip",
+      "--workers",
+      "6"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/downloads/fire.zip.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.fire.prepare",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_heads.py",
+      "/data/fyp_3d/downloads/fire.zip",
+      "/data/fyp_3d/datasets/7scenes",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--scene",
+      "fire"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/7scenes/7scenes_fire/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "scene": "fire",
+          "outer_zip_crc_verified": true
+        },
+        "minimum": {
+          "counts.train.frames": 1000,
+          "counts.test.frames": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.fire"
+    ],
+    "inputs": [
+      "/data/fyp_3d/downloads/fire.zip"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1200,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.fire.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/models/ace_official/7scenes_fire.pt",
+      "/data/fyp_3d/runs/formal/ace/fire/official",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/official/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.fire.prepare",
+      "ace.models.all7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire/acceptance.json",
+      "/data/fyp_3d/models/ace_official/7scenes_fire.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.fire.train.2089",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.fire.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.fire.train.2089.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2089/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.fire.train.2089"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/fire/seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.fire.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.fire.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.fire.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.fire.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/fire/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.fire.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.fire.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.fire.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_fire",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_fire",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/fire/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/fire/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.fire.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/fire/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "fire"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_fire"
+  },
+  {
+    "task_id": "ace.data.office",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_range.py",
+      "https://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/office.zip",
+      "/data/fyp_3d/downloads/office.zip",
+      "--workers",
+      "6"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/downloads/office.zip.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.office.prepare",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_heads.py",
+      "/data/fyp_3d/downloads/office.zip",
+      "/data/fyp_3d/datasets/7scenes",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--scene",
+      "office"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/7scenes/7scenes_office/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "scene": "office",
+          "outer_zip_crc_verified": true
+        },
+        "minimum": {
+          "counts.train.frames": 1000,
+          "counts.test.frames": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.office"
+    ],
+    "inputs": [
+      "/data/fyp_3d/downloads/office.zip"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1200,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.office.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/models/ace_official/7scenes_office.pt",
+      "/data/fyp_3d/runs/formal/ace/office/official",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/official/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.office.prepare",
+      "ace.models.all7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_office/acceptance.json",
+      "/data/fyp_3d/models/ace_official/7scenes_office.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.office.train.2089",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/runs/formal/ace/office/seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.office.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_office/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.office.train.2089.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/runs/formal/ace/office/seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/office/seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2089/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.office.train.2089"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/office/seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.office.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/runs/formal/ace/office/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.office.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_office/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.office.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/runs/formal/ace/office/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/office/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.office.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/office/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.office.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/runs/formal/ace/office/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.office.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_office/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.office.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_office",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_office",
+      "/data/fyp_3d/runs/formal/ace/office/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/office/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/office/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.office.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/office/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "office"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_office"
+  },
+  {
+    "task_id": "ace.data.pumpkin",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_range.py",
+      "https://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/pumpkin.zip",
+      "/data/fyp_3d/downloads/pumpkin.zip",
+      "--workers",
+      "6"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/downloads/pumpkin.zip.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.pumpkin.prepare",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_heads.py",
+      "/data/fyp_3d/downloads/pumpkin.zip",
+      "/data/fyp_3d/datasets/7scenes",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--scene",
+      "pumpkin"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "scene": "pumpkin",
+          "outer_zip_crc_verified": true
+        },
+        "minimum": {
+          "counts.train.frames": 1000,
+          "counts.test.frames": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.pumpkin"
+    ],
+    "inputs": [
+      "/data/fyp_3d/downloads/pumpkin.zip"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1200,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.pumpkin.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/models/ace_official/7scenes_pumpkin.pt",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/official",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/official/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.pumpkin.prepare",
+      "ace.models.all7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin/acceptance.json",
+      "/data/fyp_3d/models/ace_official/7scenes_pumpkin.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.pumpkin.train.2089",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.pumpkin.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.pumpkin.train.2089.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.pumpkin.train.2089"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.pumpkin.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.pumpkin.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.pumpkin.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.pumpkin.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.pumpkin.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.pumpkin.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.pumpkin.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_pumpkin",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_pumpkin",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.pumpkin.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/pumpkin/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "pumpkin"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_pumpkin"
+  },
+  {
+    "task_id": "ace.data.redkitchen",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_range.py",
+      "https://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/redkitchen.zip",
+      "/data/fyp_3d/downloads/redkitchen.zip",
+      "--workers",
+      "6"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/downloads/redkitchen.zip.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.redkitchen.prepare",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_heads.py",
+      "/data/fyp_3d/downloads/redkitchen.zip",
+      "/data/fyp_3d/datasets/7scenes",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--scene",
+      "redkitchen"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "scene": "redkitchen",
+          "outer_zip_crc_verified": true
+        },
+        "minimum": {
+          "counts.train.frames": 1000,
+          "counts.test.frames": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.redkitchen"
+    ],
+    "inputs": [
+      "/data/fyp_3d/downloads/redkitchen.zip"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1200,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.redkitchen.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/models/ace_official/7scenes_redkitchen.pt",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/official",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/official/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.redkitchen.prepare",
+      "ace.models.all7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen/acceptance.json",
+      "/data/fyp_3d/models/ace_official/7scenes_redkitchen.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.redkitchen.train.2089",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.redkitchen.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.redkitchen.train.2089.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.redkitchen.train.2089"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.redkitchen.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.redkitchen.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.redkitchen.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.redkitchen.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.redkitchen.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.redkitchen.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.redkitchen.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_redkitchen",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_redkitchen",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.redkitchen.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/redkitchen/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "redkitchen"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_redkitchen"
+  },
+  {
+    "task_id": "ace.data.stairs",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_range.py",
+      "https://download.microsoft.com/download/2/8/5/28564B23-0828-408F-8631-23B1EFF1DAC8/stairs.zip",
+      "/data/fyp_3d/downloads/stairs.zip",
+      "--workers",
+      "6"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/downloads/stairs.zip.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 300,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.data.stairs.prepare",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_heads.py",
+      "/data/fyp_3d/downloads/stairs.zip",
+      "/data/fyp_3d/datasets/7scenes",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--scene",
+      "stairs"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/7scenes/7scenes_stairs/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "scene": "stairs",
+          "outer_zip_crc_verified": true
+        },
+        "minimum": {
+          "counts.train.frames": 1000,
+          "counts.test.frames": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.stairs"
+    ],
+    "inputs": [
+      "/data/fyp_3d/downloads/stairs.zip"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1200,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "ace.stairs.official",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/models/ace_official/7scenes_stairs.pt",
+      "/data/fyp_3d/runs/formal/ace/stairs/official",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/official/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.data.stairs.prepare",
+      "ace.models.all7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs/acceptance.json",
+      "/data/fyp_3d/models/ace_official/7scenes_stairs.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "ace.stairs.train.2089",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.stairs.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "ace.stairs.train.2089.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2089/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.stairs.train.2089"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "ace.stairs.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.stairs.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "ace.stairs.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.stairs.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "ace.stairs.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "ace.data.stairs.prepare"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "ace.stairs.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_stairs",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_stairs",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/stairs/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ],
+        "minimum": {
+          "n": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "ace.stairs.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/stairs/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "stairs"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_stairs"
+  },
+  {
+    "task_id": "hssd.expand24",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/fetch_assets.py",
+      "/data/fyp_3d/datasets/hssd_expanded",
+      "--dataset",
+      "hssd",
+      "--scenes",
+      "24"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/hssd_expanded/acquisition.json",
+        "kind": "json",
+        "minimum": {
+          "files.0.bytes": 1
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 75,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 800,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "hssd.expand24.integrity",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/audit_assets.py",
+      "/data/fyp_3d/datasets/hssd_expanded"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/hssd_expanded/integrity.json",
+        "kind": "json",
+        "equals": {
+          "bad": []
+        },
+        "minimum": {
+          "files": 100
+        }
+      }
+    ],
+    "depends_on": [
+      "hssd.expand24"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 75,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-2",
+    "experiment_id": "C",
+    "dataset_id": "office1-2",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_tar_member.py",
+      "/data/fyp_3d/runs/openloris_office_tar_members.json",
+      "office1-2.bag",
+      "/data/fyp_3d/datasets/openloris/office1-2.bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris/office1-2.acquisition.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 400,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-2.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-2",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-2.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-2",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-2/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-2"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/openloris/office1-2.bag"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-4",
+    "experiment_id": "C",
+    "dataset_id": "office1-4",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_tar_member.py",
+      "/data/fyp_3d/runs/openloris_office_tar_members.json",
+      "office1-4.bag",
+      "/data/fyp_3d/datasets/openloris/office1-4.bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris/office1-4.acquisition.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 400,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-4.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-4",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-4.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-4",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-4/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-4"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/openloris/office1-4.bag"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-5",
+    "experiment_id": "C",
+    "dataset_id": "office1-5",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_tar_member.py",
+      "/data/fyp_3d/runs/openloris_office_tar_members.json",
+      "office1-5.bag",
+      "/data/fyp_3d/datasets/openloris/office1-5.bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris/office1-5.acquisition.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 400,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-5.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-5",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-5.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-5",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-5/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-5"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/openloris/office1-5.bag"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-6",
+    "experiment_id": "C",
+    "dataset_id": "office1-6",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_tar_member.py",
+      "/data/fyp_3d/runs/openloris_office_tar_members.json",
+      "office1-6.bag",
+      "/data/fyp_3d/datasets/openloris/office1-6.bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris/office1-6.acquisition.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 400,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-6.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-6",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-6.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-6",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-6/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-6"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/openloris/office1-6.bag"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-7",
+    "experiment_id": "C",
+    "dataset_id": "office1-7",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/download_tar_member.py",
+      "/data/fyp_3d/runs/openloris_office_tar_members.json",
+      "office1-7.bag",
+      "/data/fyp_3d/datasets/openloris/office1-7.bag"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris/office1-7.acquisition.json",
+        "kind": "json",
+        "finite": [
+          "bytes"
+        ],
+        "minimum": {
+          "bytes": 1000000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 400,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-7.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-7",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-7.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-7",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-7/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-7"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/openloris/office1-7.bag"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 12,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.wheel.provenance.audit",
+    "experiment_id": "C",
+    "dataset_id": "openloris",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Need source-level /odom publisher/driver provenance audit and encoder-vs-upstream-fusion determination; current preliminary /odom results cannot establish this"
+  },
+  {
+    "task_id": "B.multitrajectory.acquire",
+    "experiment_id": "B",
+    "dataset_id": "tartanair",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Additional official compatible full trajectories must be selected and acquired with calibration/pose validation; single demo is insufficient"
+  },
+  {
+    "task_id": "D.building_split.audit",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Expanded scene closure and geometry/layout duplicate audit required before independent-building train/val/test split"
+  },
+  {
+    "task_id": "D.formal.multiseed",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Requires audited multi-building manifest and resumable full training implementation; pilot weights are not formal completion"
+  },
+  {
+    "task_id": "E.multiscene.geometry",
+    "experiment_id": "E",
+    "dataset_id": "hssd",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Requires expanded immutable reference/query maps; 76-query pilot not formal completion"
+  },
+  {
+    "task_id": "F.formal.clip.ablation",
+    "experiment_id": "F",
+    "dataset_id": "hssd",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Requires common expanded query maps and Top-K protocol; CLIP pilot is available but not multi-building benchmark"
+  },
+  {
+    "task_id": "F.omcl.official",
+    "experiment_id": "F",
+    "dataset_id": "omcl",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Dense LSeg/OpenScene feature map + OMCL dependencies/checkpoints not yet validated; pooled CLIP baseline is not OMCL"
+  },
+  {
+    "task_id": "G.common.stereo.render",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Implementation in progress: must generate continuous true rendered stereo, immutable map, disjoint ACE references and test GT"
+  },
+  {
+    "task_id": "G.ace_macvo.integration",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Requires common-scene ACE adaptation and real MACVO motion; separate-dataset trajectories cannot be fused"
+  },
+  {
+    "task_id": "H.full.system.ablation",
+    "experiment_id": "H",
+    "dataset_id": "habitat_common",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Depends on validated joint system and same-scene geometry/semantic/VLM constraints; no forced unreliable semantic updates"
+  },
+  {
+    "task_id": "I.formal.recovery",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Requires continuous common system and physical/simulated motion-controlled kidnapping protocol; current injected-fault replay is preliminary"
+  },
+  {
+    "task_id": "J.dynamic.multidataset",
+    "experiment_id": "J",
+    "dataset_id": "dynamic_benchmark",
+    "command": [],
+    "validation": [],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 10,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "TUM/VIODE/InCrowd accessibility, actual dynamic-person labels and lawful sensor/map availability must be audited separately; packet outage is not people"
+  }
+]

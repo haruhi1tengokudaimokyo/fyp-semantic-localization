@@ -7,13 +7,13 @@ from pathlib import Path
 import numpy as np
 
 
-def prepare(archive, root, ace):
+def prepare(archive, root, ace, scene="heads"):
     root = Path(root)
     root.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(archive) as z:
         assert z.testzip() is None
         z.extractall(root / "7scenes_source")
-    src = root / "7scenes_source" / "heads"
+    src = root / "7scenes_source" / scene
     excluded = []
     verified = 0
     for p in sorted(src.glob("*.zip")):
@@ -40,7 +40,7 @@ def prepare(archive, root, ace):
     sys.path.insert(0, str(Path(ace) / "datasets"))
     from setup_7scenes import d_to_rgb, focal_length
 
-    out = root / "7scenes_heads"
+    out = root / ("7scenes_" + scene)
     counts = {}
     for split, name in [("TrainSplit.txt", "train"), ("TestSplit.txt", "test")]:
         seqs = [
@@ -73,6 +73,7 @@ def prepare(archive, root, ace):
         while data := stream.read(1024**2):
             h.update(data)
     report = {
+        "scene": scene,
         "archive_sha256": h.hexdigest(),
         "outer_zip_crc_verified": True,
         "scientific_members_crc_verified": verified,
@@ -93,5 +94,6 @@ if __name__ == "__main__":
     p.add_argument("archive")
     p.add_argument("root")
     p.add_argument("--ace", required=True)
+    p.add_argument("--scene", default="heads")
     a = p.parse_args()
-    prepare(a.archive, a.root, a.ace)
+    prepare(a.archive, a.root, a.ace, a.scene)
