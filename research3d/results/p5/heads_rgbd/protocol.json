@@ -1,0 +1,9 @@
+{
+  "sensor": "real RGB and Kinect depth; no IMU/wheel or GT poses",
+  "depth_registration": "raw depth K585, official ACE d_to_rgb extrinsic, RGB K525, nearest projected pixel and nearest-Z buffer",
+  "calibration_caveat": "ACE default calibration, approximate device calibration",
+  "frames": 1000,
+  "available_motion_pairs": 999,
+  "timestamp_scope": "frame index only, physical timestamps unavailable",
+  "runtime_mean_ms": 64.4800728057744
+}

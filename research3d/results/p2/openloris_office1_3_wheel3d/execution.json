@@ -1,0 +1,26 @@
+{
+  "imu_wheel": {
+    "returncode": 0,
+    "wall_seconds": 1.212329246016452,
+    "trajectory_created": true,
+    "use_gt": false,
+    "wheel_initialization": true,
+    "threads": 4
+  },
+  "stereo_imu": {
+    "returncode": 0,
+    "wall_seconds": 4.2049025500018615,
+    "trajectory_created": false,
+    "use_gt": false,
+    "wheel_initialization": false,
+    "threads": 4
+  },
+  "stereo_imu_wheel": {
+    "returncode": 0,
+    "wall_seconds": 8.117686405021232,
+    "trajectory_created": true,
+    "use_gt": false,
+    "wheel_initialization": true,
+    "threads": 4
+  }
+}

@@ -1,0 +1,520 @@
+{
+  "source_commit": "8683b532d6f6e8981f6b1a646fb5f52f02c1ea61",
+  "config": {
+    "Common": {
+      "device": "cuda",
+      "max_depth": "auto"
+    },
+    "Odometry": {
+      "name": "MACVO_paper_fp32_cov_weights",
+      "args": {
+        "device": "cuda",
+        "edgewidth": 32,
+        "num_point": 200,
+        "match_cov_default": 0.25,
+        "profile": false,
+        "mapping": false
+      },
+      "cov": {
+        "obs": {
+          "type": "MatchCovariance",
+          "args": {
+            "device": "cuda",
+            "kernel_size": 31,
+            "match_cov_default": 0.25,
+            "min_depth_cov": 0.05,
+            "min_flow_cov": 0.25
+          }
+        }
+      },
+      "keypoint": {
+        "type": "CovAwareSelector",
+        "args": {
+          "device": "cuda",
+          "kernel_size": 7,
+          "mask_width": 32,
+          "max_depth": "auto",
+          "max_depth_cov": 250.0,
+          "max_match_cov": 100.0
+        }
+      },
+      "mappoint": {
+        "type": "MappingPointSelector",
+        "args": {
+          "device": "cuda",
+          "max_depth": 5.0,
+          "max_depth_cov": 0.005,
+          "mask_width": 32
+        }
+      },
+      "frontend": {
+        "type": "CUDAGraph_FlowFormerCovFrontend",
+        "args": {
+          "device": "cuda",
+          "weight": "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+          "enc_dtype": "fp32",
+          "dec_dtype": "fp32",
+          "decoder_depth": 12,
+          "enforce_positive_disparity": false
+        }
+      },
+      "motion": {
+        "type": "TartanMotionNet",
+        "args": {
+          "weight": "/data/fyp_3d/models/MACVO_posenet.pkl",
+          "device": "cuda"
+        }
+      },
+      "outlier": {
+        "type": "FilterCompose",
+        "args": {
+          "filter_args": [
+            {
+              "type": "CovarianceSanityFilter",
+              "args": null
+            },
+            {
+              "type": "SimpleDepthFilter",
+              "args": {
+                "min_depth": 0.05,
+                "max_depth": "auto"
+              }
+            },
+            {
+              "type": "LikelyFrontOfCamFilter",
+              "args": null
+            }
+          ]
+        }
+      },
+      "postprocess": {
+        "type": "MotionInterpolate",
+        "args": null
+      },
+      "keyframe": {
+        "type": "AllKeyframe",
+        "args": null
+      },
+      "optimizer": {
+        "type": "TwoFrame_PGO",
+        "args": {
+          "device": "cpu",
+          "vectorize": true,
+          "parallel": true,
+          "graph_type": "icp",
+          "autodiff": true
+        }
+      }
+    },
+    "Data": [
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "MH01",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/MH_01_easy/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "MH02",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/MH_02_easy/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "MH03",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/MH_03_medium/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "MH04",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/MH_04_difficult/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "MH05",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/MH_05_difficult/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "V101",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/V1_01_easy/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "V102",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/V1_02_medium/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "V103",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/V1_03_difficult/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "V201",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/V2_01_easy/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "V202",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/V2_02_medium/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "EuRoC_NoIMU",
+        "name": "V203",
+        "args": {
+          "root": "/data2/datasets/yuhengq/Euroc/V2_03_difficult/mav0",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K00",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/00",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K01",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/01",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K02",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/02",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K03",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/03",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K04",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/04",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K05",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/05",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K06",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/06",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K07",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/07",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K08",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/08",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K09",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/09",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "KITTI",
+        "name": "K10",
+        "args": {
+          "root": "/data2/datasets/yutianch/KITTI_odometry/dataset/sequences/10",
+          "gt_pose": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H000",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P000",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H001",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P001",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H002",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P002",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H003",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P003",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H004",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P004",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H005",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P005",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H006",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P006",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_H007",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_hard/P007",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E000",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P000",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E001",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P001",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E002",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P002",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E003",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P003",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E004",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P004",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E005",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P005",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E006",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P006",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      },
+      {
+        "type": "TartanAirv2_NoIMU",
+        "name": "v2_E007",
+        "args": {
+          "root": "/data2/datasets/yuhengq/tartanair_new/Data_easy/P007",
+          "compressed": true,
+          "gtDepth": false,
+          "gtPose": true,
+          "gtFlow": true
+        }
+      }
+    ],
+    "Preprocess": {
+      "KITTI": [
+        {
+          "type": "SmartResizeFrame",
+          "args": {
+            "height": 376,
+            "width": 780,
+            "interp": "nearest"
+          }
+        }
+      ],
+      "Zed": [
+        {
+          "type": "SmartResizeFrame",
+          "args": {
+            "height": 640,
+            "width": 640,
+            "interp": "nearest"
+          }
+        }
+      ],
+      "VBR_Stereo": [
+        {
+          "type": "SmartResizeFrame",
+          "args": {
+            "height": 640,
+            "width": 640,
+            "interp": "nearest"
+          }
+        }
+      ]
+    }
+  },
+  "data": {
+    "type": "TartanAir_NoIMU",
+    "name": "official_abf001_demo",
+    "args": {
+      "root": "/data/fyp_3d/datasets/macvo_demo/P001_select",
+      "gtDepth": false,
+      "gtFlow": false,
+      "gtPose": false,
+      "compressed": true
+    }
+  },
+  "frame_limit": 200,
+  "seed": 1305,
+  "online_inputs": "left/right RGB only, fixed intrinsics/baseline",
+  "gt_online": false,
+  "dense_mapping": false,
+  "decoder": "fp32",
+  "optimizer_weighting": "official 3D matching covariance",
+  "experiment_config": "Paper_Reproduce.yaml",
+  "encoder": "fp32",
+  "physical_timestamps": false,
+  "timestamp_caveat": "upstream assumes 10Hz if file absent; not used as physical sensor time or for IMU/wheel fusion",
+  "checkpoint_loading": "strict state_dict; no redundant ImageNet download",
+  "covariance_scope": "3D point observation covariance and pixel/disparity residual covariance; NOT a calibrated pose covariance"
+}

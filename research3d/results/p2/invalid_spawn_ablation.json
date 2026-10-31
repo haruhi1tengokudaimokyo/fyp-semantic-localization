@@ -1,0 +1,5 @@
+{
+  "valid_ablation": false,
+  "reason": "Parent-process monkeypatch does not survive official spawned optimizer worker; this run is a weighted repeat, not an identity-weight ablation",
+  "replacement": "/data/fyp_3d/runs/macvo/weight_replay_200"
+}

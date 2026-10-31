@@ -1,0 +1,298 @@
+[
+  {
+    "input_count": 200,
+    "accepted": 200,
+    "fields": {
+      "pixel1_uv": {
+        "shape": [
+          200,
+          2
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 35.0,
+        "maximum": 607.0,
+        "median": 299.0
+      },
+      "pixel2_uv": {
+        "shape": [
+          200,
+          2
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 33.835845947265625,
+        "maximum": 596.8697509765625,
+        "median": 288.1258850097656
+      },
+      "pixel1_d": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.2804299592971802,
+        "maximum": 2.296595811843872,
+        "median": 1.8367713689804077
+      },
+      "pixel2_d": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.3027011156082153,
+        "maximum": 2.2956886291503906,
+        "median": 1.8534647226333618
+      },
+      "pixel1_disp": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 34.83416748046875,
+        "maximum": 62.4790153503418,
+        "median": 43.42914581298828
+      },
+      "pixel2_disp": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 34.847930908203125,
+        "maximum": 61.41086196899414,
+        "median": 43.01408767700195
+      },
+      "pixel1_disp_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.016740692779421806,
+        "maximum": 2.662428379058838,
+        "median": 0.08195702731609344
+      },
+      "pixel2_disp_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.015316166914999485,
+        "maximum": 6.3537211418151855,
+        "median": 0.07850848883390427
+      },
+      "pixel1_d_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.6566878912271932e-05,
+        "maximum": 0.005995051469653845,
+        "median": 0.00014236505376175046
+      },
+      "pixel2_d_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.9563209207262844e-05,
+        "maximum": 0.014091314747929573,
+        "median": 0.00012817844981327653
+      },
+      "pixel1_uv_cov": {
+        "shape": [
+          200,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.0,
+        "maximum": 0.25,
+        "median": 0.25
+      },
+      "pixel2_uv_cov": {
+        "shape": [
+          200,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.0,
+        "maximum": 0.23107057809829712,
+        "median": 0.0625
+      },
+      "obs1_covTc": {
+        "shape": [
+          200,
+          3,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -0.04265625402331352,
+        "maximum": 0.05000000074505806,
+        "median": 0.003750000149011612
+      },
+      "obs2_covTc": {
+        "shape": [
+          200,
+          3,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -0.04464410990476608,
+        "maximum": 0.05000000074505806,
+        "median": 0.0032249127980321646
+      }
+    }
+  },
+  {
+    "input_count": 200,
+    "accepted": 200,
+    "fields": {
+      "pixel1_uv": {
+        "shape": [
+          200,
+          2
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 43.0,
+        "maximum": 607.0,
+        "median": 284.0
+      },
+      "pixel2_uv": {
+        "shape": [
+          200,
+          2
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 44.198638916015625,
+        "maximum": 593.5521850585938,
+        "median": 272.5545349121094
+      },
+      "pixel1_d": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.3016880750656128,
+        "maximum": 2.2863597869873047,
+        "median": 1.8716752529144287
+      },
+      "pixel2_d": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.3220164775848389,
+        "maximum": 2.303264617919922,
+        "median": 1.8861232995986938
+      },
+      "pixel1_disp": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 34.99011993408203,
+        "maximum": 61.45865249633789,
+        "median": 42.67865753173828
+      },
+      "pixel2_disp": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 34.733306884765625,
+        "maximum": 60.51362228393555,
+        "median": 42.393714904785156
+      },
+      "pixel1_disp_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.015363939106464386,
+        "maximum": 8.687836647033691,
+        "median": 0.0901339128613472
+      },
+      "pixel2_disp_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.018569786101579666,
+        "maximum": 4.579370498657227,
+        "median": 0.10447144508361816
+      },
+      "pixel1_d_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 1.6440260878880508e-05,
+        "maximum": 0.013441010378301144,
+        "median": 0.00012959394371137023
+      },
+      "pixel2_d_cov": {
+        "shape": [
+          200,
+          1
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 2.2481883206637576e-05,
+        "maximum": 0.012894637882709503,
+        "median": 0.00015544414054602385
+      },
+      "pixel1_uv_cov": {
+        "shape": [
+          200,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.0,
+        "maximum": 0.25,
+        "median": 0.25
+      },
+      "pixel2_uv_cov": {
+        "shape": [
+          200,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": 0.0,
+        "maximum": 0.3680751323699951,
+        "median": 0.0625
+      },
+      "obs1_covTc": {
+        "shape": [
+          200,
+          3,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -0.0390625,
+        "maximum": 0.05000000074505806,
+        "median": 0.003437500214204192
+      },
+      "obs2_covTc": {
+        "shape": [
+          200,
+          3,
+          3
+        ],
+        "finite_fraction": 1.0,
+        "minimum": -0.04162028431892395,
+        "maximum": 0.05000000074505806,
+        "median": 0.0029906907584518194
+      }
+    }
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "raw": {
+    "n": 3,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.10998316333032615,
+    "ate_first_pose_anchored_rmse_m": 0.17310413824984155,
+    "path_length_m": 0.2693803088794858,
+    "endpoint_first_pose_anchored_error_m": 0.2693793264029025,
+    "endpoint_drift_per_meter": 0.9999963528270224,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.13472461611192033,
+        "rotation_rmse_deg": 1.266854323550282,
+        "pairs": 2
+      }
+    },
+    "tracking_availability": 0.0,
+    "lost_frames": 2,
+    "max_failure_run_frames": 2,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "interpolated": {
+    "n": 3,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.10998316333032615,
+    "ate_first_pose_anchored_rmse_m": 0.17310413824984155,
+    "path_length_m": 0.2693803088794858,
+    "endpoint_first_pose_anchored_error_m": 0.2693793264029025,
+    "endpoint_drift_per_meter": 0.9999963528270224,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.13472461611192033,
+        "rotation_rmse_deg": 1.266854323550282,
+        "pairs": 2
+      }
+    },
+    "tracking_availability": 0.0,
+    "lost_frames": 2,
+    "max_failure_run_frames": 2,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "runtime_mean_ms": 6430.091570674752,
+  "runtime_median_ms": 4656.086622009752,
+  "runtime_p95_ms": 10858.049296200625,
+  "wall_seconds": 20.825789990019985,
+  "torch_peak_allocated_MiB": 1442.912109375,
+  "torch_peak_reserved_MiB": 3056.0,
+  "maxrss_parent_MiB": 1497.62109375,
+  "initialization_included": true,
+  "finished_frames": 3
+}

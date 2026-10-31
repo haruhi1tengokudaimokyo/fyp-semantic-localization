@@ -1,0 +1,42 @@
+{
+  "seed": 1305,
+  "epochs": 40,
+  "batch_size": 4,
+  "learning_rate": 6e-05,
+  "weight_decay": 0.01,
+  "optimizer": "AdamW",
+  "scheduler": "polynomial power0.9",
+  "image_size": [
+    240,
+    320
+  ],
+  "pretrained": "official NVIDIA mit-b0 ImageNet-1K backbone, random SegFormer segmentation decoder",
+  "pretrained_revision": "80983a413c30d36a39c20203974ae7807835e2b4",
+  "trainable_parameters": 3715943,
+  "class_weights": [
+    0.5635247230529785,
+    0.47013720870018005,
+    1.2252858877182007,
+    1.1218924522399902,
+    1.038992166519165,
+    0.47586652636528015,
+    2.1043009757995605
+  ],
+  "augmentation": "random horizontal flip and brightness[0.8,1.2] on training only",
+  "selection": "best validation mIoU, test accessed only after selection",
+  "splits": {
+    "train": 319,
+    "val": 78,
+    "test": 188
+  },
+  "limitations": [
+    "three scene IDs only; independent physical building identities unverified",
+    "partial-label furniture/object semantic pilot, no wall/window/column labels",
+    "known-pixel conditional metrics cannot establish complete-scene segmentation",
+    "not yet evidence for localization improvements"
+  ],
+  "GT_pose_used_in_training": false,
+  "semantic_unknown_index": 255,
+  "precision": "FP32 all modules; no AMP on GTX1660",
+  "manifest_sha256": "15848d8bf13658910efb470acab1b0e63de2dd1e451a19ca86fd85a2b2bb247d"
+}

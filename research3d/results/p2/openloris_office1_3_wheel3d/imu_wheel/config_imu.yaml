@@ -1,0 +1,4 @@
+%YAML:1.0
+---
+imu: {accel_noise: 0.008182447828798794, accel_bias: 0.009999999873689375, gyro_noise: 0.002268927090244338,
+  gyro_bias: 0.0007071067802939111, topic: /imu_calibrated}

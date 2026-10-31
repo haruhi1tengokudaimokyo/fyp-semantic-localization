@@ -1,0 +1,5 @@
+%YAML:1.0
+---
+init: {window_time: 1.0, imu_thresh: 0.5, imu_wheel_thresh: 0.05, imu_only_init: true,
+  imu_gravity_aligned: false, use_gt: false, use_gt_gnss: false, use_gt_lidar: false,
+  cov_size: 0.001}

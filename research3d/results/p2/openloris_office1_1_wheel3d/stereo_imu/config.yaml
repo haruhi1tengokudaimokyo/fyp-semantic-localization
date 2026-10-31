@@ -1,0 +1,5 @@
+%YAML:1.0
+---
+{config_system: config_system.yaml, config_estimator: config_estimator.yaml, config_camera: config_camera.yaml,
+  config_imu: config_imu.yaml, config_init: config_init.yaml, config_wheel: config_wheel.yaml,
+  config_gps: config_gps.yaml, config_lidar: config_lidar.yaml, config_vicon: config_vicon.yaml}

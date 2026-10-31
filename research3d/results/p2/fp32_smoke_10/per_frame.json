@@ -1,0 +1,52 @@
+[
+  {
+    "frame": 0,
+    "runtime_ms": 4355.048761994112,
+    "matches_total": 0
+  },
+  {
+    "frame": 1,
+    "runtime_ms": 8717.118676984683,
+    "matches_total": 0
+  },
+  {
+    "frame": 2,
+    "runtime_ms": 2611.9924660015386,
+    "matches_total": 0
+  },
+  {
+    "frame": 3,
+    "runtime_ms": 2611.0077000048477,
+    "matches_total": 0
+  },
+  {
+    "frame": 4,
+    "runtime_ms": 2583.521683991421,
+    "matches_total": 0
+  },
+  {
+    "frame": 5,
+    "runtime_ms": 2587.9290910088457,
+    "matches_total": 0
+  },
+  {
+    "frame": 6,
+    "runtime_ms": 2591.2336859910283,
+    "matches_total": 0
+  },
+  {
+    "frame": 7,
+    "runtime_ms": 2627.7212100103498,
+    "matches_total": 0
+  },
+  {
+    "frame": 8,
+    "runtime_ms": 2637.876435997896,
+    "matches_total": 0
+  },
+  {
+    "frame": 9,
+    "runtime_ms": 2645.8539750019554,
+    "matches_total": 0
+  }
+]

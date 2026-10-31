@@ -1,0 +1,1300 @@
+[
+  {
+    "frame_id": "0",
+    "rgb": "test/105515211_173104185/030_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 8,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 177.13640999863856
+  },
+  {
+    "frame_id": "1",
+    "rgb": "test/105515211_173104185/030_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 28,
+      "semantic_rejected": 5
+    },
+    "runtime_ms": 32.417342998087406
+  },
+  {
+    "frame_id": "2",
+    "rgb": "test/105515211_173104185/030_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 18,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.960044011706486
+  },
+  {
+    "frame_id": "3",
+    "rgb": "test/105515211_173104185/030_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 13,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.090301999123767
+  },
+  {
+    "frame_id": "4",
+    "rgb": "test/105515211_173104185/031_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 2,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 27.831120998598635
+  },
+  {
+    "frame_id": "5",
+    "rgb": "test/105515211_173104185/031_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 5,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.74501599580981
+  },
+  {
+    "frame_id": "6",
+    "rgb": "test/105515211_173104185/031_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 26.69371201773174
+  },
+  {
+    "frame_id": "7",
+    "rgb": "test/105515211_173104185/031_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 15,
+      "semantic_rejected": 2
+    },
+    "runtime_ms": 28.07533400482498
+  },
+  {
+    "frame_id": "8",
+    "rgb": "test/105515211_173104185/032_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 12,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 26.805433008121327
+  },
+  {
+    "frame_id": "9",
+    "rgb": "test/105515211_173104185/032_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 20,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 30.56688400101848
+  },
+  {
+    "frame_id": "10",
+    "rgb": "test/105515211_173104185/032_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 2,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.384790991665795
+  },
+  {
+    "frame_id": "11",
+    "rgb": "test/105515211_173104185/032_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 33,
+      "semantic_rejected": 3
+    },
+    "runtime_ms": 27.022432012017816
+  },
+  {
+    "frame_id": "12",
+    "rgb": "test/105515211_173104185/033_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 15,
+      "semantic_rejected": 5
+    },
+    "runtime_ms": 29.020297981332988
+  },
+  {
+    "frame_id": "13",
+    "rgb": "test/105515211_173104185/033_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.285406009061262
+  },
+  {
+    "frame_id": "14",
+    "rgb": "test/105515211_173104185/034_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 17,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.696787990862504
+  },
+  {
+    "frame_id": "15",
+    "rgb": "test/105515211_173104185/034_1.rgb.png",
+    "hypotheses": {
+      "geometry": {
+        "T_world_camera": [
+          [
+            -0.00830846812144459,
+            0.013419057049797189,
+            -0.9998754413752593,
+            -4.456025151477624
+          ],
+          [
+            -0.01005585968382448,
+            -0.9998605150348777,
+            -0.013335297529796668,
+            1.3305009067065914
+          ],
+          [
+            -0.9999149209025209,
+            0.009943811245355379,
+            0.008442249369840948,
+            -10.649639786045531
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 13,
+        "matched": 21,
+        "median_reprojection_px": 0.8254733920471373,
+        "reference_index": 1
+      },
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 42,
+      "semantic_rejected": 16
+    },
+    "runtime_ms": 43.785952002508566
+  },
+  {
+    "frame_id": "16",
+    "rgb": "test/105515211_173104185/034_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 32,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 51.85134499333799
+  },
+  {
+    "frame_id": "17",
+    "rgb": "test/105515211_173104185/034_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 5,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.140263002365828
+  },
+  {
+    "frame_id": "18",
+    "rgb": "test/105515211_173104185/035_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 9,
+      "semantic_rejected": 2
+    },
+    "runtime_ms": 27.632068988168612
+  },
+  {
+    "frame_id": "19",
+    "rgb": "test/105515211_173104185/035_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 1,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.12176599702798
+  },
+  {
+    "frame_id": "20",
+    "rgb": "test/105515211_173104185/035_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 20,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.278195997700095
+  },
+  {
+    "frame_id": "21",
+    "rgb": "test/105515211_173104185/035_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 43,
+      "semantic_rejected": 8
+    },
+    "runtime_ms": 33.2356299913954
+  },
+  {
+    "frame_id": "22",
+    "rgb": "test/105515211_173104185/036_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 83,
+      "semantic_rejected": 2
+    },
+    "runtime_ms": 88.76396602136083
+  },
+  {
+    "frame_id": "23",
+    "rgb": "test/105515211_173104185/036_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 2,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.70030599599704
+  },
+  {
+    "frame_id": "24",
+    "rgb": "test/105515211_173104185/036_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 2,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.775863992748782
+  },
+  {
+    "frame_id": "25",
+    "rgb": "test/105515211_173104185/036_3.rgb.png",
+    "hypotheses": {
+      "geometry": {
+        "T_world_camera": [
+          [
+            -0.019529491399149612,
+            0.026109952543455123,
+            0.9994682933159357,
+            -7.751903374398495
+          ],
+          [
+            0.011544355400619283,
+            -0.9995864171174332,
+            0.02633861372048781,
+            1.8538941126202964
+          ],
+          [
+            0.9997426302924542,
+            0.012052596919809349,
+            0.019219991764146682,
+            -9.26565646270071
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 12,
+        "matched": 12,
+        "median_reprojection_px": 1.1416092481249804,
+        "reference_index": 70
+      },
+      "semantic": {
+        "T_world_camera": [
+          [
+            -0.019529491399149612,
+            0.026109952543455123,
+            0.9994682933159357,
+            -7.751903374398495
+          ],
+          [
+            0.011544355400619283,
+            -0.9995864171174332,
+            0.02633861372048781,
+            1.8538941126202964
+          ],
+          [
+            0.9997426302924542,
+            0.012052596919809349,
+            0.019219991764146682,
+            -9.26565646270071
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 12,
+        "matched": 12,
+        "median_reprojection_px": 1.1416092481249804,
+        "reference_index": 70
+      }
+    },
+    "diagnostics": {
+      "matched": 53,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 48.21368199191056
+  },
+  {
+    "frame_id": "26",
+    "rgb": "test/105515211_173104185/037_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 23,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.358117007883266
+  },
+  {
+    "frame_id": "27",
+    "rgb": "test/105515211_173104185/037_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 18,
+      "semantic_rejected": 6
+    },
+    "runtime_ms": 29.076753999106586
+  },
+  {
+    "frame_id": "28",
+    "rgb": "test/105515211_173104185/037_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 8,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.16690200031735
+  },
+  {
+    "frame_id": "29",
+    "rgb": "test/105515211_173104185/037_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 26.63907199166715
+  },
+  {
+    "frame_id": "30",
+    "rgb": "test/105515211_173104185/038_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 26.71988299698569
+  },
+  {
+    "frame_id": "31",
+    "rgb": "test/105515211_173104185/038_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 11,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 30.037443997571245
+  },
+  {
+    "frame_id": "32",
+    "rgb": "test/105515211_173104185/038_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 15,
+      "semantic_rejected": 5
+    },
+    "runtime_ms": 28.47262899740599
+  },
+  {
+    "frame_id": "33",
+    "rgb": "test/105515211_173104185/038_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 6,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.665127989370376
+  },
+  {
+    "frame_id": "34",
+    "rgb": "test/105515211_173104185/039_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 16,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 32.27730299113318
+  },
+  {
+    "frame_id": "35",
+    "rgb": "test/105515211_173104185/039_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 23,
+      "semantic_rejected": 10
+    },
+    "runtime_ms": 33.36782898986712
+  },
+  {
+    "frame_id": "36",
+    "rgb": "test/105515211_173104185/039_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 19,
+      "semantic_rejected": 2
+    },
+    "runtime_ms": 29.964251996716484
+  },
+  {
+    "frame_id": "37",
+    "rgb": "test/105515211_173104185/039_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 10,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 30.59505799319595
+  },
+  {
+    "frame_id": "38",
+    "rgb": "test/105515211_173104185/040_0.rgb.png",
+    "hypotheses": {
+      "geometry": {
+        "T_world_camera": [
+          [
+            0.9989353460132965,
+            -0.022154664109885418,
+            -0.04046412415305287,
+            -5.687807453782399
+          ],
+          [
+            -0.018627962550082693,
+            -0.9961602350827006,
+            0.08554405327789577,
+            1.0504213698345204
+          ],
+          [
+            -0.042203951195690655,
+            -0.08469921427118973,
+            -0.9955123653703729,
+            -9.452737070612546
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 18,
+        "matched": 24,
+        "median_reprojection_px": 1.6608064368199251,
+        "reference_index": 87
+      },
+      "semantic": {
+        "T_world_camera": [
+          [
+            0.9986776935103605,
+            -0.02008533526807419,
+            -0.047322761880474976,
+            -5.674144612074437
+          ],
+          [
+            -0.017767184052561537,
+            -0.9986452774317026,
+            0.04890743332255554,
+            1.145124067356922
+          ],
+          [
+            -0.04824097486234584,
+            -0.04800197048587555,
+            -0.9976816221489717,
+            -9.475541081293118
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 18,
+        "matched": 23,
+        "median_reprojection_px": 1.3658718221359234,
+        "reference_index": 87
+      }
+    },
+    "diagnostics": {
+      "matched": 33,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 35.59490299085155
+  },
+  {
+    "frame_id": "39",
+    "rgb": "test/105515211_173104185/040_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 35,
+      "semantic_rejected": 21
+    },
+    "runtime_ms": 40.92484200373292
+  },
+  {
+    "frame_id": "40",
+    "rgb": "test/105515211_173104185/040_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 1,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.92655598022975
+  },
+  {
+    "frame_id": "41",
+    "rgb": "test/105515211_173104185/040_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 20,
+      "semantic_rejected": 2
+    },
+    "runtime_ms": 30.26827800204046
+  },
+  {
+    "frame_id": "42",
+    "rgb": "test/105515211_173104185/041_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 44,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 81.77997102029622
+  },
+  {
+    "frame_id": "43",
+    "rgb": "test/105515211_173104185/041_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 19,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 30.162721988745034
+  },
+  {
+    "frame_id": "44",
+    "rgb": "test/105515211_173104185/041_2.rgb.png",
+    "hypotheses": {
+      "geometry": {
+        "T_world_camera": [
+          [
+            -0.0145157302864094,
+            -0.0024153442429954166,
+            0.9998917239813719,
+            -1.3653158011569655
+          ],
+          [
+            -0.0016348297095397383,
+            -0.9999956884943695,
+            -0.0024393286971524535,
+            1.2848859334895537
+          ],
+          [
+            0.9998933047610995,
+            -0.0016700613341354173,
+            0.014511719025229408,
+            -6.090033890362842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 17,
+        "matched": 38,
+        "median_reprojection_px": 0.8840816453797079,
+        "reference_index": 19
+      },
+      "semantic": {
+        "T_world_camera": [
+          [
+            -0.0145157302864094,
+            -0.0024153442429954166,
+            0.9998917239813719,
+            -1.3653158011569655
+          ],
+          [
+            -0.0016348297095397383,
+            -0.9999956884943695,
+            -0.0024393286971524535,
+            1.2848859334895537
+          ],
+          [
+            0.9998933047610995,
+            -0.0016700613341354173,
+            0.014511719025229408,
+            -6.090033890362842
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 17,
+        "matched": 38,
+        "median_reprojection_px": 0.8840816453797079,
+        "reference_index": 19
+      }
+    },
+    "diagnostics": {
+      "matched": 151,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 678.5816100018565
+  },
+  {
+    "frame_id": "45",
+    "rgb": "test/105515211_173104185/041_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 59,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 31.323186005465686
+  },
+  {
+    "frame_id": "46",
+    "rgb": "test/105515211_173104185/042_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 40,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 32.627742999466136
+  },
+  {
+    "frame_id": "47",
+    "rgb": "test/105515211_173104185/042_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.844974006759003
+  },
+  {
+    "frame_id": "48",
+    "rgb": "test/105515211_173104185/042_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 4,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.713538001989946
+  },
+  {
+    "frame_id": "49",
+    "rgb": "test/105515211_173104185/042_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 24,
+      "semantic_rejected": 2
+    },
+    "runtime_ms": 29.94577700155787
+  },
+  {
+    "frame_id": "50",
+    "rgb": "test/105515211_173104185/043_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.509994979482144
+  },
+  {
+    "frame_id": "51",
+    "rgb": "test/105515211_173104185/043_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.926381000317633
+  },
+  {
+    "frame_id": "52",
+    "rgb": "test/105515211_173104185/043_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 32,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 32.88264898583293
+  },
+  {
+    "frame_id": "53",
+    "rgb": "test/105515211_173104185/043_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 25,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.445375006413087
+  },
+  {
+    "frame_id": "54",
+    "rgb": "test/105515211_173104185/044_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 26,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.324819984845817
+  },
+  {
+    "frame_id": "55",
+    "rgb": "test/105515211_173104185/044_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 16,
+      "semantic_rejected": 12
+    },
+    "runtime_ms": 31.051223981194198
+  },
+  {
+    "frame_id": "56",
+    "rgb": "test/105515211_173104185/044_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 2,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 27.741507976315916
+  },
+  {
+    "frame_id": "57",
+    "rgb": "test/105515211_173104185/044_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.953929987736046
+  },
+  {
+    "frame_id": "58",
+    "rgb": "test/105515211_173104185/045_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 21,
+      "semantic_rejected": 6
+    },
+    "runtime_ms": 34.06645401264541
+  },
+  {
+    "frame_id": "59",
+    "rgb": "test/105515211_173104185/045_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 14,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 29.148567002266645
+  },
+  {
+    "frame_id": "60",
+    "rgb": "test/105515211_173104185/045_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 48,
+      "semantic_rejected": 8
+    },
+    "runtime_ms": 37.77228298713453
+  },
+  {
+    "frame_id": "61",
+    "rgb": "test/105515211_173104185/045_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 16,
+      "semantic_rejected": 3
+    },
+    "runtime_ms": 28.562577004777268
+  },
+  {
+    "frame_id": "62",
+    "rgb": "test/105515211_173104185/046_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 13,
+      "semantic_rejected": 3
+    },
+    "runtime_ms": 29.869572987081483
+  },
+  {
+    "frame_id": "63",
+    "rgb": "test/105515211_173104185/046_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 8,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 26.385413017123938
+  },
+  {
+    "frame_id": "64",
+    "rgb": "test/105515211_173104185/046_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 26.831280993064865
+  },
+  {
+    "frame_id": "65",
+    "rgb": "test/105515211_173104185/046_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 21,
+      "semantic_rejected": 6
+    },
+    "runtime_ms": 31.410984985996038
+  },
+  {
+    "frame_id": "66",
+    "rgb": "test/105515211_173104185/047_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 25,
+      "semantic_rejected": 6
+    },
+    "runtime_ms": 29.189966997364536
+  },
+  {
+    "frame_id": "67",
+    "rgb": "test/105515211_173104185/047_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 25.73275499162264
+  },
+  {
+    "frame_id": "68",
+    "rgb": "test/105515211_173104185/048_0.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.013962011551484
+  },
+  {
+    "frame_id": "69",
+    "rgb": "test/105515211_173104185/048_1.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 12,
+      "semantic_rejected": 1
+    },
+    "runtime_ms": 32.12817999883555
+  },
+  {
+    "frame_id": "70",
+    "rgb": "test/105515211_173104185/048_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 23,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.966016980120912
+  },
+  {
+    "frame_id": "71",
+    "rgb": "test/105515211_173104185/048_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 3,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 28.541574982227758
+  },
+  {
+    "frame_id": "72",
+    "rgb": "test/105515211_173104185/049_0.rgb.png",
+    "hypotheses": {
+      "geometry": {
+        "T_world_camera": [
+          [
+            0.9989753866016766,
+            -0.014883166986991533,
+            -0.042739540293137306,
+            -6.209472336944639
+          ],
+          [
+            -0.011991286341787154,
+            -0.9976715361728798,
+            0.06713951863333144,
+            1.0547242758168154
+          ],
+          [
+            -0.043639271486823096,
+            -0.06655822451721137,
+            -0.9968277768668046,
+            -8.80564810654321
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 17,
+        "matched": 25,
+        "median_reprojection_px": 0.9818629755947845,
+        "reference_index": 87
+      },
+      "semantic": {
+        "T_world_camera": [
+          [
+            0.9989753866016766,
+            -0.014883166986991533,
+            -0.042739540293137306,
+            -6.209472336944639
+          ],
+          [
+            -0.011991286341787154,
+            -0.9976715361728798,
+            0.06713951863333144,
+            1.0547242758168154
+          ],
+          [
+            -0.043639271486823096,
+            -0.06655822451721137,
+            -0.9968277768668046,
+            -8.80564810654321
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 17,
+        "matched": 25,
+        "median_reprojection_px": 0.9818629755947845,
+        "reference_index": 87
+      }
+    },
+    "diagnostics": {
+      "matched": 64,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 41.01487700245343
+  },
+  {
+    "frame_id": "73",
+    "rgb": "test/105515211_173104185/049_1.rgb.png",
+    "hypotheses": {
+      "geometry": {
+        "T_world_camera": [
+          [
+            -0.007511009149653303,
+            -0.03189068291286667,
+            -0.9994631404333553,
+            -6.3242005072890795
+          ],
+          [
+            -0.0029793787726044626,
+            -0.9994861840660729,
+            0.031913808346382355,
+            1.200471129625362
+          ],
+          [
+            -0.9999673534889443,
+            0.0032174841710976877,
+            0.007412135449757717,
+            -8.759510392909293
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "inliers": 20,
+        "matched": 26,
+        "median_reprojection_px": 0.5367077378619483,
+        "reference_index": 88
+      },
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 48,
+      "semantic_rejected": 31
+    },
+    "runtime_ms": 32.616607000818476
+  },
+  {
+    "frame_id": "74",
+    "rgb": "test/105515211_173104185/049_2.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 0,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 27.081196021754295
+  },
+  {
+    "frame_id": "75",
+    "rgb": "test/105515211_173104185/049_3.rgb.png",
+    "hypotheses": {
+      "geometry": null,
+      "semantic": null
+    },
+    "diagnostics": {
+      "matched": 29,
+      "semantic_rejected": 0
+    },
+    "runtime_ms": 30.78544102027081
+  }
+]

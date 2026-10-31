@@ -1,0 +1,8 @@
+test_independent_mesh_checks (test_real_data.RealData) ... ok
+test_official_preprocessing (test_real_data.RealData) ... ok
+test_train_test_disjoint_map (test_real_data.RealData) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 3.310s
+
+OK

@@ -1,0 +1,7 @@
+%YAML:1.0
+---
+sys: {verbosity: 2, save_timing: true, path_timing: /data/fyp_3d/runs/openloris_office1_1_wheel3d/stereo_imu/timing.txt,
+  save_state: false, path_state: /data/fyp_3d/runs/openloris_office1_1_wheel3d/stereo_imu/state/,
+  save_trajectory: true, path_trajectory: /data/fyp_3d/runs/openloris_office1_1_wheel3d/stereo_imu/trajectory.txt,
+  save_prints: false, exp_id: 0, path_bag: /data/fyp_3d/runs/openloris_office1_1/online_sensors.bag,
+  bag_start: 0, bag_durr: -1}

@@ -1,0 +1,643 @@
+{
+  "geometry": {
+    "queries": 76,
+    "geometrically_verified": 6,
+    "failure_rate": 0.9210526315789473,
+    "recall_5cm_5deg": 0.0,
+    "recall_25cm_10deg": 0.039473684210526314,
+    "recall_1m_20deg": 0.06578947368421052,
+    "median_translation_m_success_only": 0.2054226141218487,
+    "median_rotation_deg_success_only": 3.3083287790942926,
+    "errors_all_queries": [
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.0656054992067043,
+        "rotation_deg": 1.0705787213028557
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.147198483439572,
+        "rotation_deg": 1.9870834994954927
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.26364674480412537,
+        "rotation_deg": 5.554858665201375
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.4871506092093632,
+        "rotation_deg": 89.16851916301691
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.27631681931782714,
+        "rotation_deg": 4.629574058693092
+      },
+      {
+        "translation_m": 0.08863231876396964,
+        "rotation_deg": 1.885911026694861
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      }
+    ]
+  },
+  "semantic": {
+    "queries": 76,
+    "geometrically_verified": 4,
+    "failure_rate": 0.9473684210526316,
+    "recall_5cm_5deg": 0.0,
+    "recall_25cm_10deg": 0.02631578947368421,
+    "recall_1m_20deg": 0.039473684210526314,
+    "median_translation_m_success_only": 0.23909832496745348,
+    "median_rotation_deg_success_only": 4.339989778003735,
+    "errors_all_queries": [
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.147198483439572,
+        "rotation_deg": 1.9870834994954927
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.20187983061707981,
+        "rotation_deg": 4.050405497314379
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.4871506092093632,
+        "rotation_deg": 89.16851916301691
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.27631681931782714,
+        "rotation_deg": 4.629574058693092
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      }
+    ]
+  },
+  "audit": {
+    "readonly_map_verified": true,
+    "no_query_GT_online": true,
+    "semantic_rejected_matches": 173,
+    "tested_matches": 1505,
+    "combined_modes_plus_semantic_runtime_mean_ms": 42.00287389271819,
+    "semantic_checkpoint_sha256": "2e8be9dc3d12a76bed66928f891f60ab75d64b1cf8a0baf362df57d0a6ab3e0c",
+    "torch_peak_allocated_MiB": 66.5380859375
+  }
+}

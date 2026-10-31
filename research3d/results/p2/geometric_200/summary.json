@@ -1,0 +1,44 @@
+{
+  "n": 200,
+  "alignment": "SE3, no scale correction",
+  "ate_se3_aligned_rmse_m": 1.9565622108596477,
+  "ate_first_pose_anchored_rmse_m": 7.704692463311112,
+  "path_length_m": 34.02308501072498,
+  "endpoint_first_pose_anchored_error_m": 12.688635707878866,
+  "endpoint_drift_per_meter": 0.3729419511452025,
+  "rpe_frame_delta": {
+    "1": {
+      "translation_rmse_m": 0.0870255529775847,
+      "rotation_rmse_deg": 1.046249229290032,
+      "pairs": 199
+    },
+    "5": {
+      "translation_rmse_m": 0.40366128176313887,
+      "rotation_rmse_deg": 3.180315240264357,
+      "pairs": 195
+    },
+    "10": {
+      "translation_rmse_m": 0.7755643492342479,
+      "rotation_rmse_deg": 5.407941840571948,
+      "pairs": 190
+    }
+  },
+  "tracking_availability": 0.8994974874371859,
+  "lost_frames": 20,
+  "max_failure_run_frames": 12,
+  "failure_duration_seconds": null,
+  "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent",
+  "method": "SGBM + LK + EPNP-RANSAC + LM refinement",
+  "wall_seconds": 6.89836436000769,
+  "runtime_mean_ms": 34.44414899015101,
+  "runtime_p95_ms": 36.89745714946184,
+  "maxrss_MiB": 103.06640625,
+  "parameters": {
+    "num_disparities": 96,
+    "block_size": 5,
+    "min_inliers": 20,
+    "ransac_px": 2,
+    "max_depth_m": 50
+  },
+  "pose_covariance": null
+}

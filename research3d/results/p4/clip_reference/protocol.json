@@ -1,0 +1,41 @@
+{
+  "model": "official OpenAI CLIP ViT-B/32",
+  "weight_sha256": "40d365715913c9da98579312b702a82c18be219cc2a73407c4526f58eba950af",
+  "model_parameters": 151277313,
+  "precision": "FP32 all layers on GTX1660; no half precision",
+  "independent_of_trained_semantic_network": true,
+  "query_GT_online": false,
+  "readonly_geometry_map_sha256": "08177b3928783f14d5b32e356b35b7042f3409442ecfdfa8d157459d3e5a88d0",
+  "features_dimension": 512,
+  "timings": {
+    "reference": {
+      "images": 112,
+      "seconds": 0.8108705180056859,
+      "batch_size": 8
+    },
+    "query": {
+      "images": 76,
+      "seconds": 0.5234005380189046,
+      "batch_size": 8
+    }
+  },
+  "torch_peak_allocated_MiB": 624.943359375,
+  "prompts": [
+    "a photo of a sofa",
+    "a photo of a chair",
+    "a photo of a bed",
+    "a photo of a table",
+    "a photo of a cabinet",
+    "a photo of a shower",
+    "a photo of a television",
+    "a photo of a door",
+    "a photo of a lamp",
+    "a photo of a mirror",
+    "a photo of a plant",
+    "a photo of a painting",
+    "a photo of a wall",
+    "a photo of a window"
+  ],
+  "language_class_accuracy": "not reported: no verified full architecture labels or region-level prediction evaluation",
+  "scope": "posed 3D-reference image CLIP retrieval followed by learned local features and geometric PnP; NOT official OMCL reproduction"
+}

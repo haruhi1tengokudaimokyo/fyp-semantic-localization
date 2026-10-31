@@ -1,0 +1,175 @@
+{
+  "seed": 1305,
+  "replicates": 10000,
+  "position_clusters": 20,
+  "queries": 76,
+  "unit": "spatial position, all available yaw views resampled together",
+  "caveat": "one held-out synthetic scene; CIs describe within-scene sampling only, not cross-building population generalization",
+  "results": {
+    "5cm5deg": {
+      "methods": {
+        "geometry": {
+          "recall": 0.2631578947368421,
+          "position_cluster_bootstrap_ci95": [
+            0.15789473684210525,
+            0.3684210526315789
+          ]
+        },
+        "geometry_semantic": {
+          "recall": 0.25,
+          "position_cluster_bootstrap_ci95": [
+            0.14473684210526316,
+            0.35
+          ]
+        },
+        "geometry_clip": {
+          "recall": 0.2631578947368421,
+          "position_cluster_bootstrap_ci95": [
+            0.16666666666666666,
+            0.3625
+          ]
+        },
+        "geometry_clip_semantic": {
+          "recall": 0.2631578947368421,
+          "position_cluster_bootstrap_ci95": [
+            0.15381944444444448,
+            0.3717948717948718
+          ]
+        }
+      },
+      "paired_differences": {
+        "geometry_semantic": {
+          "paired_delta_vs_geometry": -0.01315789473684209,
+          "cluster_bootstrap_delta_ci95": [
+            -0.06944444444444446,
+            0.04054054054054054
+          ]
+        },
+        "geometry_clip": {
+          "paired_delta_vs_geometry": 0.0,
+          "cluster_bootstrap_delta_ci95": [
+            -0.05263157894736842,
+            0.05263157894736842
+          ]
+        },
+        "geometry_clip_semantic": {
+          "paired_delta_vs_geometry": 0.0,
+          "cluster_bootstrap_delta_ci95": [
+            -0.07500000000000001,
+            0.06944444444444445
+          ]
+        }
+      }
+    },
+    "25cm10deg": {
+      "methods": {
+        "geometry": {
+          "recall": 0.40789473684210525,
+          "position_cluster_bootstrap_ci95": [
+            0.2714285714285714,
+            0.5394736842105263
+          ]
+        },
+        "geometry_semantic": {
+          "recall": 0.40789473684210525,
+          "position_cluster_bootstrap_ci95": [
+            0.28378378378378377,
+            0.5277976190476188
+          ]
+        },
+        "geometry_clip": {
+          "recall": 0.4605263157894737,
+          "position_cluster_bootstrap_ci95": [
+            0.32432432432432434,
+            0.5897435897435898
+          ]
+        },
+        "geometry_clip_semantic": {
+          "recall": 0.47368421052631576,
+          "position_cluster_bootstrap_ci95": [
+            0.35135135135135137,
+            0.581081081081081
+          ]
+        }
+      },
+      "paired_differences": {
+        "geometry_semantic": {
+          "paired_delta_vs_geometry": 0.0,
+          "cluster_bootstrap_delta_ci95": [
+            -0.03947368421052627,
+            0.03947368421052627
+          ]
+        },
+        "geometry_clip": {
+          "paired_delta_vs_geometry": 0.05263157894736842,
+          "cluster_bootstrap_delta_ci95": [
+            0.01282051282051283,
+            0.10256410256410253
+          ]
+        },
+        "geometry_clip_semantic": {
+          "paired_delta_vs_geometry": 0.06578947368421051,
+          "cluster_bootstrap_delta_ci95": [
+            0.0,
+            0.14102564102564102
+          ]
+        }
+      }
+    },
+    "1m20deg": {
+      "methods": {
+        "geometry": {
+          "recall": 0.5,
+          "position_cluster_bootstrap_ci95": [
+            0.36486486486486486,
+            0.6282051282051282
+          ]
+        },
+        "geometry_semantic": {
+          "recall": 0.4868421052631579,
+          "position_cluster_bootstrap_ci95": [
+            0.35526315789473684,
+            0.6153846153846154
+          ]
+        },
+        "geometry_clip": {
+          "recall": 0.5657894736842105,
+          "position_cluster_bootstrap_ci95": [
+            0.44594594594594594,
+            0.675
+          ]
+        },
+        "geometry_clip_semantic": {
+          "recall": 0.5526315789473685,
+          "position_cluster_bootstrap_ci95": [
+            0.4444444444444444,
+            0.6538461538461539
+          ]
+        }
+      },
+      "paired_differences": {
+        "geometry_semantic": {
+          "paired_delta_vs_geometry": -0.01315789473684209,
+          "cluster_bootstrap_delta_ci95": [
+            -0.04054054054054057,
+            0.0
+          ]
+        },
+        "geometry_clip": {
+          "paired_delta_vs_geometry": 0.06578947368421051,
+          "cluster_bootstrap_delta_ci95": [
+            0.0,
+            0.125
+          ]
+        },
+        "geometry_clip_semantic": {
+          "paired_delta_vs_geometry": 0.052631578947368474,
+          "cluster_bootstrap_delta_ci95": [
+            -0.013513513513513598,
+            0.11842105263157893
+          ]
+        }
+      }
+    }
+  }
+}

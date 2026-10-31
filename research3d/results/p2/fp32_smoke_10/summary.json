@@ -1,0 +1,63 @@
+{
+  "raw": {
+    "n": 10,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.4481040645960553,
+    "ate_first_pose_anchored_rmse_m": 0.8018344573110896,
+    "path_length_m": 1.4025532797248195,
+    "endpoint_first_pose_anchored_error_m": 1.4020849698926208,
+    "endpoint_drift_per_meter": 0.9996661019306942,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.15661581995704607,
+        "rotation_rmse_deg": 0.7573402060665013,
+        "pairs": 9
+      },
+      "5": {
+        "translation_rmse_m": 0.7803463534588676,
+        "rotation_rmse_deg": 2.913232848929895,
+        "pairs": 5
+      }
+    },
+    "tracking_availability": 0.0,
+    "lost_frames": 9,
+    "max_failure_run_frames": 9,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "interpolated": {
+    "n": 10,
+    "alignment": "SE3, no scale correction",
+    "ate_se3_aligned_rmse_m": 0.4481040645960553,
+    "ate_first_pose_anchored_rmse_m": 0.8018344573110896,
+    "path_length_m": 1.4025532797248195,
+    "endpoint_first_pose_anchored_error_m": 1.4020849698926208,
+    "endpoint_drift_per_meter": 0.9996661019306942,
+    "rpe_frame_delta": {
+      "1": {
+        "translation_rmse_m": 0.15661581995704607,
+        "rotation_rmse_deg": 0.7573402060665013,
+        "pairs": 9
+      },
+      "5": {
+        "translation_rmse_m": 0.7803463534588676,
+        "rotation_rmse_deg": 2.913232848929895,
+        "pairs": 5
+      }
+    },
+    "tracking_availability": 0.0,
+    "lost_frames": 9,
+    "max_failure_run_frames": 9,
+    "failure_duration_seconds": null,
+    "timestamp_note": "Frame deltas only; no physical seconds assigned when original timestamps are absent"
+  },
+  "runtime_mean_ms": 3396.9303686986677,
+  "runtime_median_ms": 2619.856838005944,
+  "runtime_p95_ms": 6754.187215238921,
+  "wall_seconds": 35.526907704013865,
+  "torch_peak_allocated_MiB": 1456.9443359375,
+  "torch_peak_reserved_MiB": 3050.0,
+  "maxrss_parent_MiB": 1533.57421875,
+  "initialization_included": true,
+  "finished_frames": 10
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://huggingface.co/datasets/shixuesong/openloris-scene/resolve/main/rosbag/office1-1_7-rosbag.tar",
+  "member": "office1-1.bag",
+  "offset": 512,
+  "bytes": 1245178774,
+  "sha256": "d18e335a34dc25b6f26df911886bdefbeeeacd41620c0ea525fe0314ea9f7a65",
+  "seconds": 256.8905658990261,
+  "validation": "tar header name/size/checksum and all exact HTTP ranges; local member SHA256 recorded, full parent tar SHA not claimed"
+}

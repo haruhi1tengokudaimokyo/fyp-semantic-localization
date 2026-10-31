@@ -1,0 +1,643 @@
+{
+  "geometry": {
+    "queries": 76,
+    "geometrically_verified": 46,
+    "failure_rate": 0.39473684210526316,
+    "recall_5cm_5deg": 0.2631578947368421,
+    "recall_25cm_10deg": 0.40789473684210525,
+    "recall_1m_20deg": 0.5,
+    "median_translation_m_success_only": 0.06400855771736419,
+    "median_rotation_deg_success_only": 0.8974030471122357,
+    "errors_all_queries": [
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.8721070445636282,
+        "rotation_deg": 7.915423011606867
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 1.6179298214958593,
+        "rotation_deg": 26.62220904663726
+      },
+      {
+        "translation_m": 0.0204198179920683,
+        "rotation_deg": 0.5288702104966023
+      },
+      {
+        "translation_m": 0.04815077008813118,
+        "rotation_deg": 1.331119810505182
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.7648068415185917,
+        "rotation_deg": 89.75788890011367
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.02916811810213505,
+        "rotation_deg": 0.9477301284121734
+      },
+      {
+        "translation_m": 0.6254516536028026,
+        "rotation_deg": 0.5907248807207767
+      },
+      {
+        "translation_m": 0.010392722825611942,
+        "rotation_deg": 0.3016717740500242
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.41197061057381745,
+        "rotation_deg": 12.803358219667972
+      },
+      {
+        "translation_m": 0.07883569628492247,
+        "rotation_deg": 0.6231024222692224
+      },
+      {
+        "translation_m": 0.018789502112778834,
+        "rotation_deg": 0.2497429512320711
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.045535635107790906,
+        "rotation_deg": 0.5811699231252219
+      },
+      {
+        "translation_m": 0.08771586382315452,
+        "rotation_deg": 1.8992522720570773
+      },
+      {
+        "translation_m": 0.01382471846459984,
+        "rotation_deg": 0.2949364366833426
+      },
+      {
+        "translation_m": 0.01378047570795367,
+        "rotation_deg": 0.2780757816646687
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.21957677027244285,
+        "rotation_deg": 7.240905760555286
+      },
+      {
+        "translation_m": 0.012587907243997944,
+        "rotation_deg": 0.12074350138496763
+      },
+      {
+        "translation_m": 0.0675095121047976,
+        "rotation_deg": 0.9910044371132247
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 2.164581100705103,
+        "rotation_deg": 179.92131741089065
+      },
+      {
+        "translation_m": 2.1701309115897667,
+        "rotation_deg": 179.6786767830899
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.29295735936403555,
+        "rotation_deg": 3.148315199549471
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.07254132810733044,
+        "rotation_deg": 1.5284105034642703
+      },
+      {
+        "translation_m": 0.020745488624094605,
+        "rotation_deg": 0.48017496181135955
+      },
+      {
+        "translation_m": 0.14006897267338525,
+        "rotation_deg": 4.179523185007491
+      },
+      {
+        "translation_m": 0.051190428272818576,
+        "rotation_deg": 1.3928729214438729
+      },
+      {
+        "translation_m": 0.06043680206836629,
+        "rotation_deg": 1.1695924588471007
+      },
+      {
+        "translation_m": 0.9257473307962276,
+        "rotation_deg": 1.3379027370094865
+      },
+      {
+        "translation_m": 1.0481057835393475,
+        "rotation_deg": 0.5362198211449597
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.06752466673488422,
+        "rotation_deg": 0.8889385858099339
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.0169171308245326,
+        "rotation_deg": 0.32331519755716076
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.01485291828862169,
+        "rotation_deg": 0.34089613088152176
+      },
+      {
+        "translation_m": 0.06050760332993077,
+        "rotation_deg": 0.8802278374476061
+      },
+      {
+        "translation_m": 0.6455839416538187,
+        "rotation_deg": 8.506417384423818
+      },
+      {
+        "translation_m": 0.02308138786502767,
+        "rotation_deg": 0.31341473721055874
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.025893508790021558,
+        "rotation_deg": 0.3590540401638587
+      },
+      {
+        "translation_m": 0.03958420706762107,
+        "rotation_deg": 0.9058675084145376
+      },
+      {
+        "translation_m": 0.21172045731451683,
+        "rotation_deg": 8.50710081463056
+      },
+      {
+        "translation_m": 0.282526275254303,
+        "rotation_deg": 3.258289387474726
+      },
+      {
+        "translation_m": 0.007448774321093667,
+        "rotation_deg": 0.12987656521621166
+      },
+      {
+        "translation_m": 5.603486345059223,
+        "rotation_deg": 89.33484783271285
+      },
+      {
+        "translation_m": 9.627587025903237,
+        "rotation_deg": 0.7270894507368874
+      },
+      {
+        "translation_m": 0.043790590350551946,
+        "rotation_deg": 0.5226934732018061
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 1.145789552975329,
+        "rotation_deg": 9.649338850356418
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.0057435809242084085,
+        "rotation_deg": 0.11870262528393008
+      },
+      {
+        "translation_m": 0.04048564722422715,
+        "rotation_deg": 0.7900836422612469
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.023501229314799005,
+        "rotation_deg": 0.43846628193747605
+      }
+    ]
+  },
+  "semantic": {
+    "queries": 76,
+    "geometrically_verified": 45,
+    "failure_rate": 0.4078947368421053,
+    "recall_5cm_5deg": 0.25,
+    "recall_25cm_10deg": 0.40789473684210525,
+    "recall_1m_20deg": 0.4868421052631579,
+    "median_translation_m_success_only": 0.06050760332993077,
+    "median_rotation_deg_success_only": 0.9910044371132247,
+    "errors_all_queries": [
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.8690025571820919,
+        "rotation_deg": 8.422071557246081
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 1.6179298214958593,
+        "rotation_deg": 26.62220904663726
+      },
+      {
+        "translation_m": 0.020287499855471125,
+        "rotation_deg": 0.5230365062502446
+      },
+      {
+        "translation_m": 0.033280645137651915,
+        "rotation_deg": 1.006781301610938
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.7648068415185917,
+        "rotation_deg": 89.75788890011367
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.02916811810213505,
+        "rotation_deg": 0.9477301284121734
+      },
+      {
+        "translation_m": 0.6200982739919657,
+        "rotation_deg": 2.6586024189485946
+      },
+      {
+        "translation_m": 0.009266516549254785,
+        "rotation_deg": 0.12031940400798032
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.41197061057381745,
+        "rotation_deg": 12.803358219667972
+      },
+      {
+        "translation_m": 0.03915550291539538,
+        "rotation_deg": 0.49994018166037435
+      },
+      {
+        "translation_m": 0.018789502112778834,
+        "rotation_deg": 0.2497429512320711
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.045535635107790906,
+        "rotation_deg": 0.5811699231252219
+      },
+      {
+        "translation_m": 0.08771586382315452,
+        "rotation_deg": 1.8992522720570773
+      },
+      {
+        "translation_m": 0.009507270133061657,
+        "rotation_deg": 0.24033252875494818
+      },
+      {
+        "translation_m": 0.01378047570795367,
+        "rotation_deg": 0.2780757816646687
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.21957677027244285,
+        "rotation_deg": 7.240905760555286
+      },
+      {
+        "translation_m": 0.012587907243997944,
+        "rotation_deg": 0.12074350138496763
+      },
+      {
+        "translation_m": 0.0675095121047976,
+        "rotation_deg": 0.9910044371132247
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 2.164581100705103,
+        "rotation_deg": 179.92131741089065
+      },
+      {
+        "translation_m": 2.1701309115897667,
+        "rotation_deg": 179.6786767830899
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.07247288082701345,
+        "rotation_deg": 0.9645649400970545
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.044921213803887305,
+        "rotation_deg": 1.0031009106278634
+      },
+      {
+        "translation_m": 0.02352187368667797,
+        "rotation_deg": 0.5384572058754866
+      },
+      {
+        "translation_m": 0.14006897267338525,
+        "rotation_deg": 4.179523185007491
+      },
+      {
+        "translation_m": 0.051190428272818576,
+        "rotation_deg": 1.3928729214438729
+      },
+      {
+        "translation_m": 0.06043680206836629,
+        "rotation_deg": 1.1695924588471007
+      },
+      {
+        "translation_m": 0.9257473307962276,
+        "rotation_deg": 1.3379027370094865
+      },
+      {
+        "translation_m": 1.0481057835393475,
+        "rotation_deg": 0.5362198211449597
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.06752466673488422,
+        "rotation_deg": 0.8889385858099339
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.050250869366213494,
+        "rotation_deg": 0.7091598669229132
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.01485291828862169,
+        "rotation_deg": 0.34089613088152176
+      },
+      {
+        "translation_m": 0.06050760332993077,
+        "rotation_deg": 0.8802278374476061
+      },
+      {
+        "translation_m": 0.6455839416538187,
+        "rotation_deg": 8.506417384423818
+      },
+      {
+        "translation_m": 0.02839565391025197,
+        "rotation_deg": 0.4290442493494153
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.026688263183840034,
+        "rotation_deg": 0.3458770640413471
+      },
+      {
+        "translation_m": 0.03958420706762107,
+        "rotation_deg": 0.9058675084145376
+      },
+      {
+        "translation_m": 0.21172045731451683,
+        "rotation_deg": 8.50710081463056
+      },
+      {
+        "translation_m": 0.282526275254303,
+        "rotation_deg": 3.258289387474726
+      },
+      {
+        "translation_m": 0.02124565229506827,
+        "rotation_deg": 0.3766836711273935
+      },
+      {
+        "translation_m": 5.603486345059223,
+        "rotation_deg": 89.33484783271285
+      },
+      {
+        "translation_m": 9.672627673158772,
+        "rotation_deg": 3.870112671993654
+      },
+      {
+        "translation_m": 0.11737292495101696,
+        "rotation_deg": 1.4539738483044535
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.003886906063603375,
+        "rotation_deg": 0.13691128267067143
+      },
+      {
+        "translation_m": 4.8956198421542405,
+        "rotation_deg": 81.69383818168338
+      },
+      {
+        "translation_m": null,
+        "rotation_deg": null
+      },
+      {
+        "translation_m": 0.023501229314799005,
+        "rotation_deg": 0.43846628193747605
+      }
+    ]
+  },
+  "audit": {
+    "readonly_map_verified": true,
+    "no_query_GT_online": true,
+    "semantic_rejected_matches": 807,
+    "tested_matches": 11249,
+    "combined_modes_plus_semantic_runtime_mean_ms": 576.1351249338508,
+    "semantic_checkpoint_sha256": "2e8be9dc3d12a76bed66928f891f60ab75d64b1cf8a0baf362df57d0a6ab3e0c",
+    "torch_peak_allocated_MiB": 116.72119140625
+  }
+}

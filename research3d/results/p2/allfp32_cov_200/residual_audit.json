@@ -1,0 +1,24 @@
+{
+  "matches": 38404,
+  "optimized_pixel_residual_median_px": 0.15695249649658538,
+  "optimized_pixel_residual_p95_px": 1.0535396651004647,
+  "optimized_disparity_abs_median_px": 0.11585698340169515,
+  "GT_motion_match_error_median_m": 0.03080191432811564,
+  "GT_motion_match_error_p95_m": 3.2200133086017906,
+  "positive_definite_fraction": 1.0,
+  "observation_mahalanobis_median": 0.09967987414611162,
+  "empirical_chi2_3_coverage": {
+    "0.5": 0.8505884803666285,
+    "0.9": 0.8946203520466618,
+    "0.95": 0.9031350900947818,
+    "0.99": 0.9181074888032497
+  },
+  "spearman_predicted_trace_vs_squared_error": 0.21516715034094455,
+  "scope": "3D matching observation consistency with offline GT motion; NOT pose covariance or a full independent Gaussian calibration test",
+  "pose_covariance_available": false,
+  "unified_interface": {
+    "indexed_constraints": 199,
+    "valid_constraints": 199,
+    "fake_physical_timestamp_fusion_rejected": true
+  }
+}

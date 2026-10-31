@@ -1,0 +1,151 @@
+{
+  "source_commit": "8683b532d6f6e8981f6b1a646fb5f52f02c1ea61",
+  "config": {
+    "Common": {
+      "device": "cuda"
+    },
+    "Odometry": {
+      "name": "MACVO_Fast_bf16_cov_weights",
+      "args": {
+        "device": "cuda",
+        "edgewidth": 32,
+        "num_point": 200,
+        "match_cov_default": 0.25,
+        "profile": false,
+        "mapping": false
+      },
+      "cov": {
+        "obs": {
+          "type": "MatchCovariance",
+          "args": {
+            "device": "cuda",
+            "kernel_size": 31,
+            "match_cov_default": 0.25,
+            "min_depth_cov": 0.05,
+            "min_flow_cov": 0.25
+          }
+        }
+      },
+      "keypoint": {
+        "type": "CovAwareSelector_NoDepth",
+        "args": {
+          "device": "cuda",
+          "kernel_size": 7,
+          "mask_width": 32,
+          "max_match_cov": 100.0
+        }
+      },
+      "mappoint": {
+        "type": "MappingPointSelector",
+        "args": {
+          "device": "cuda",
+          "max_depth": 5.0,
+          "max_depth_cov": 0.005,
+          "mask_width": 32
+        }
+      },
+      "frontend": {
+        "type": "CUDAGraph_FlowFormerCovFrontend",
+        "args": {
+          "device": "cuda",
+          "weight": "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+          "enc_dtype": "fp16",
+          "dec_dtype": "bf16",
+          "decoder_depth": 12,
+          "enforce_positive_disparity": false
+        }
+      },
+      "motion": {
+        "type": "StaticMotionModel",
+        "args": null
+      },
+      "outlier": {
+        "type": "CovarianceSanityFilter",
+        "args": null
+      },
+      "postprocess": {
+        "type": "MotionInterpolate",
+        "args": null
+      },
+      "keyframe": {
+        "type": "AllKeyframe",
+        "args": null
+      },
+      "optimizer": {
+        "type": "TwoFrame_PGO",
+        "args": {
+          "device": "cpu",
+          "vectorize": true,
+          "parallel": true,
+          "graph_type": "disp",
+          "autodiff": false
+        }
+      }
+    },
+    "Data": {
+      "type": "TartanAir_NoIMU",
+      "name": "abf001",
+      "args": {
+        "root": "/data/abf001_select/P001_select",
+        "gtDepth": false,
+        "gtFlow": false,
+        "gtPose": true,
+        "compressed": true
+      }
+    },
+    "Preprocess": {
+      "KITTI": [
+        {
+          "type": "SmartResizeFrame",
+          "args": {
+            "height": 376,
+            "width": 780,
+            "interp": "nearest"
+          }
+        }
+      ],
+      "Zed": [
+        {
+          "type": "SmartResizeFrame",
+          "args": {
+            "height": 640,
+            "width": 640,
+            "interp": "nearest"
+          }
+        }
+      ],
+      "VBR_Stereo": [
+        {
+          "type": "SmartResizeFrame",
+          "args": {
+            "height": 640,
+            "width": 640,
+            "interp": "nearest"
+          }
+        }
+      ]
+    }
+  },
+  "data": {
+    "type": "TartanAir_NoIMU",
+    "name": "official_abf001_demo",
+    "args": {
+      "root": "/data/fyp_3d/datasets/macvo_demo/P001_select",
+      "gtDepth": false,
+      "gtFlow": false,
+      "gtPose": false,
+      "compressed": true
+    }
+  },
+  "frame_limit": 3,
+  "seed": 1305,
+  "online_inputs": "left/right RGB only, fixed intrinsics/baseline",
+  "gt_online": false,
+  "dense_mapping": false,
+  "decoder": "bf16",
+  "optimizer_weighting": "official pixel/disparity covariance",
+  "physical_timestamps": false,
+  "timestamp_caveat": "upstream assumes 10Hz if file absent; not used as physical sensor time or for IMU/wheel fusion",
+  "checkpoint_loading": "strict state_dict; no redundant ImageNet download",
+  "covariance_scope": "3D point observation covariance and pixel/disparity residual covariance; NOT a calibrated pose covariance"
+}

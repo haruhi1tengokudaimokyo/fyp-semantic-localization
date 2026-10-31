@@ -1,0 +1,38 @@
+{
+  "source_sha256": "f79bca297d7c249cc761bd44e3ba2152154057637c223310b022933f11a49208",
+  "method": "actual upstream AST build_jacobian; independent scipy.linalg.expm left SE3 perturbation, central difference step1e-6",
+  "tangent_order": "tx ty tz rx ry rz; left perturbation in world frame",
+  "cases": [
+    {
+      "frame": 10,
+      "points": 100,
+      "max_absolute_error": 6.014414566379855e-08,
+      "relative_frobenius_error": 8.683828274095864e-11
+    },
+    {
+      "frame": 50,
+      "points": 100,
+      "max_absolute_error": 9.278039669879945e-08,
+      "relative_frobenius_error": 5.1647664430802855e-11
+    },
+    {
+      "frame": 100,
+      "points": 100,
+      "max_absolute_error": 1.0991897170242737e-07,
+      "relative_frobenius_error": 9.196341422918685e-11
+    },
+    {
+      "frame": 150,
+      "points": 100,
+      "max_absolute_error": 9.510478093943675e-08,
+      "relative_frobenius_error": 6.398715695296886e-11
+    },
+    {
+      "frame": 199,
+      "points": 100,
+      "max_absolute_error": 3.890054358635098e-07,
+      "relative_frobenius_error": 8.562538774266113e-11
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,108 @@
+{
+  "original_bag": "/data/fyp_3d/datasets/openloris/office1-1.bag",
+  "input_sha256": "d18e335a34dc25b6f26df911886bdefbeeeacd41620c0ea525fe0314ea9f7a65",
+  "derived_bag_sha256": "a825db02f088cba90b42fa0dcdff8ee3e5b9a09ad0a0f3bc932b8ce80650918d",
+  "online_topics": {
+    "/imu_calibrated": 5386,
+    "/t265/fisheye1/image_raw": 690,
+    "/t265/fisheye2/image_raw": 690,
+    "/odom": 540
+  },
+  "excluded": [
+    "/gt",
+    "/scan",
+    "/tf_static",
+    "all depth images",
+    "all other topics"
+  ],
+  "GT_online": false,
+  "gt_parent": "gt_map",
+  "gt_child": "base_link",
+  "T_base_imu": [
+    [
+      -0.0004670725554630869,
+      -0.008417667543917418,
+      0.9999644617266897,
+      0.23769333650938815
+    ],
+    [
+      0.99977722885856,
+      -0.021104713837870194,
+      0.00028932632263796654,
+      -0.04942265635384921
+    ],
+    [
+      0.021101528359986056,
+      0.9997418336385361,
+      0.008425649763134944,
+      0.894903580913328
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "imu_merge": "gyro timestamps; bracketed linear interpolation of factory-affine-calibrated accelerometer; no extrapolation",
+  "gyro_intrinsic": [
+    [
+      0.995679497718811,
+      0.0,
+      0.0,
+      0.0019203490810468793
+    ],
+    [
+      0.0,
+      0.9980374574661255,
+      0.0,
+      0.0021561817266047
+    ],
+    [
+      0.0,
+      0.0,
+      0.9926954507827759,
+      0.001199744758196175
+    ]
+  ],
+  "accel_intrinsic": [
+    [
+      1.013892650604248,
+      0.0,
+      0.0,
+      -0.05109533295035362
+    ],
+    [
+      0.0,
+      1.0174480676651,
+      0.0,
+      0.2732152044773102
+    ],
+    [
+      0.0,
+      0.0,
+      1.0285693407058716,
+      0.09496001899242401
+    ]
+  ],
+  "imu_count": 5386,
+  "imu_first_last_ns": [
+    1560000083922423363,
+    1560000110907695770
+  ],
+  "noise_caveat": "sqrt manufacturer IMUInfo variances treated as assumed spectral densities; not Allan-calibrated",
+  "wheel_noise_caveat": "upstream fixed noise_w/v/p=0.01 assumed, no GT tuning",
+  "raw_license": "OpenLORIS CC BY-ND 4.0; derived bag local only, not redistributed",
+  "mins_mapping": "max_slam=0; MSCKF transient feature constraints only",
+  "controlled_visual_outage": {
+    "start_relative_s": 8.0,
+    "end_relative_s": 12.0,
+    "removed_camera_messages": {
+      "/t265/fisheye1/image_raw": 120,
+      "/t265/fisheye2/image_raw": 120
+    },
+    "IMU_wheel_unchanged": true,
+    "source": "original real sensor measurements; camera packet omission only",
+    "caveat": "controlled visual availability stress test, not real dynamic pedestrian dataset"
+  }
+}

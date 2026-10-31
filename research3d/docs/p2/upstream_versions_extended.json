@@ -1,0 +1,31 @@
+{
+  "MAC-VO": {
+    "commit": "8683b532d6f6e8981f6b1a646fb5f52f02c1ea61",
+    "remote": "https://github.com/MAC-VO/MAC-VO.git",
+    "submodules": [
+      " 3fbda228bf364f0b1dd83156e54a1d660dcd2e03 Baseline/DPVO (3fbda22)",
+      " 44886338a97268d2f2a5e940879fcac59765f139 Module/Network/FlowFormer (4488633)"
+    ]
+  },
+  "MINS": {
+    "commit": "a724a01a1e60c3e56f0b6621a22a2d2b3616fb27",
+    "remote": "https://github.com/rpng/MINS.git"
+  },
+  "hloc": {
+    "commit": "c13273bd0ecc2917a35910fd843712a1c6243193",
+    "remote": "https://github.com/cvg/Hierarchical-Localization.git"
+  },
+  "LightGlue": {
+    "commit": "5a650c444718caffc2669dc0094cde908f42dd73",
+    "remote": "https://github.com/cvg/LightGlue.git"
+  },
+  "omcl": {
+    "commit": "97fa34482013d393275113e3ab313eb8d20ba9fc",
+    "remote": "https://github.com/AIS-Bonn/omcl.git"
+  },
+  "CLIP": {
+    "commit": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+    "remote": "https://github.com/openai/CLIP.git"
+  },
+  "notes": "MAC-VO one-line reshape compatibility patch is stored separately. hloc frontend modules used on known RGB-D reference geometry; no claim of full hloc SfM or OMCL reproduction."
+}

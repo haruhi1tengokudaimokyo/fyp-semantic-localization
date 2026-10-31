@@ -1,0 +1,8 @@
+{
+  "returncode": 0,
+  "wall_seconds": 4.2049025500018615,
+  "trajectory_created": false,
+  "use_gt": false,
+  "wheel_initialization": false,
+  "threads": 4
+}

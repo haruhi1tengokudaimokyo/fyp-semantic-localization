@@ -1,0 +1,19 @@
+{
+  "lightglue_missing_learned_parameters": [],
+  "deterministic_missing_buffers": [
+    "confidence_thresholds"
+  ],
+  "obsolete_unused_checkpoint_keys": [
+    "log_assignment.0.r",
+    "log_assignment.1.r",
+    "log_assignment.2.r",
+    "log_assignment.3.r",
+    "log_assignment.4.r",
+    "log_assignment.5.r",
+    "log_assignment.6.r",
+    "log_assignment.7.r",
+    "log_assignment.8.r"
+  ],
+  "weights_sha256": "6ff7040d0a497fc6639337946d7538dae07428c18f77a067a0b5a960e7cc551a",
+  "features": "official hloc SuperPoint + LightGlue frontend, max600, FP32, flash/early-stop/pruning disabled; no SfM reconstruction claim"
+}

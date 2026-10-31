@@ -1,0 +1,380 @@
+{
+  "status": "completed",
+  "best_epoch": 37,
+  "test": {
+    "mean_iou": 0.2126301566767827,
+    "known_pixel_accuracy": 0.479077134952108,
+    "classes": {
+      "seating": {
+        "iou": 0.39790237494526576,
+        "precision": 0.44270623898048195,
+        "recall": 0.7972287982175185,
+        "labeled_pixels": 287240,
+        "predicted_on_labeled_pixels": 517264
+      },
+      "work_surface": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 68666
+      },
+      "bed": {
+        "iou": 0.5164840518983242,
+        "precision": 0.8279601016296582,
+        "recall": 0.5785762903412228,
+        "labeled_pixels": 311468,
+        "predicted_on_labeled_pixels": 217653
+      },
+      "storage": {
+        "iou": 0.33090360590481077,
+        "precision": 0.8356106257565391,
+        "recall": 0.3539449045331431,
+        "labeled_pixels": 717736,
+        "predicted_on_labeled_pixels": 304016
+      },
+      "plumbing": {
+        "iou": 0.24312106398907826,
+        "precision": 0.4149058099815491,
+        "recall": 0.3699604610642005,
+        "labeled_pixels": 298440,
+        "predicted_on_labeled_pixels": 266111
+      },
+      "display": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 67210
+      },
+      "door": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 173964
+      }
+    },
+    "confusion_matrix": [
+      [
+        228996,
+        13547,
+        33750,
+        10167,
+        778,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        120968,
+        172,
+        180208,
+        150,
+        9970,
+        0,
+        0
+      ],
+      [
+        128183,
+        27261,
+        0,
+        254039,
+        144952,
+        23691,
+        139610
+      ],
+      [
+        39117,
+        27686,
+        3695,
+        39660,
+        110411,
+        43517,
+        34354
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluation_scope": "only verified labeled pixels; unknown is IGNORE, not background; no full-scene accuracy claim",
+    "known_pixel_ece_10_bins": 0.11875366332377087,
+    "inference_mean_ms_per_image_batch4": 4.508083766113293,
+    "inference_p95_ms_per_image_batch4": 4.675631753343623
+  },
+  "initial_random_decoder_test": {
+    "mean_iou": 0.0387650279726211,
+    "known_pixel_accuracy": 0.13442141974284222,
+    "classes": {
+      "seating": {
+        "iou": 0.019358959395141942,
+        "precision": 0.21978871424890492,
+        "recall": 0.02078749477788609,
+        "labeled_pixels": 287240,
+        "predicted_on_labeled_pixels": 27167
+      },
+      "work_surface": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 42516
+      },
+      "bed": {
+        "iou": 0.21737186692766605,
+        "precision": 0.25459114131541855,
+        "recall": 0.597891276150359,
+        "labeled_pixels": 311468,
+        "predicted_on_labeled_pixels": 731463
+      },
+      "storage": {
+        "iou": 0.03304088058412839,
+        "precision": 0.5487349180623087,
+        "recall": 0.03396374154285141,
+        "labeled_pixels": 717736,
+        "predicted_on_labeled_pixels": 44424
+      },
+      "plumbing": {
+        "iou": 0.0015834889014112884,
+        "precision": 0.02551227429498884,
+        "recall": 0.0016854309073850691,
+        "labeled_pixels": 298440,
+        "predicted_on_labeled_pixels": 19716
+      },
+      "display": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 373084
+      },
+      "door": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 376514
+      }
+    },
+    "confusion_matrix": [
+      [
+        5971,
+        12339,
+        154751,
+        2227,
+        9690,
+        58143,
+        44119
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        8183,
+        11602,
+        186224,
+        2530,
+        4542,
+        66404,
+        31983
+      ],
+      [
+        10063,
+        12627,
+        287515,
+        24377,
+        4981,
+        169145,
+        209028
+      ],
+      [
+        2950,
+        5948,
+        102973,
+        15290,
+        503,
+        79392,
+        91384
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluation_scope": "only verified labeled pixels; unknown is IGNORE, not background; no full-scene accuracy claim",
+    "known_pixel_ece_10_bins": 0.017385499264962023,
+    "inference_mean_ms_per_image_batch4": 4.554314377217335,
+    "inference_p95_ms_per_image_batch4": 4.76557375077391
+  },
+  "train_majority_class_baseline_test": {
+    "mean_iou": 0.0,
+    "known_pixel_accuracy": 0.0,
+    "classes": {
+      "seating": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 287240,
+        "predicted_on_labeled_pixels": 0
+      },
+      "work_surface": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 1614884
+      },
+      "bed": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 311468,
+        "predicted_on_labeled_pixels": 0
+      },
+      "storage": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 717736,
+        "predicted_on_labeled_pixels": 0
+      },
+      "plumbing": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 298440,
+        "predicted_on_labeled_pixels": 0
+      },
+      "display": {
+        "iou": null,
+        "precision": null,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 0
+      },
+      "door": {
+        "iou": null,
+        "precision": null,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 0
+      }
+    },
+    "confusion_matrix": [
+      [
+        0,
+        287240,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        311468,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        717736,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        298440,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluation_scope": "only verified labeled pixels; unknown is IGNORE, not background; no full-scene accuracy claim"
+  },
+  "training_seconds": 267.993200241006,
+  "optimizer_steps": 3179,
+  "skipped_all_ignore_batches": 21,
+  "torch_peak_allocated_MiB": 498.58642578125,
+  "torch_peak_reserved_MiB": 552.0,
+  "host_maxrss_MiB": 1296.3828125,
+  "claim": "partial-label cross-scene pilot only; no independent-building or localization claim"
+}

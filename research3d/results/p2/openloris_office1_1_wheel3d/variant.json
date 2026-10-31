@@ -1,0 +1,6 @@
+{
+  "parent": "/data/fyp_3d/runs/openloris_office1_1",
+  "change": "Wheel2DCen -> Wheel3DCen only",
+  "reason": "diagnose unobserved vertical drift via upstream full 3D nonholonomic wheel constraints",
+  "caveat": "assumes wheel-frame lateral and vertical velocity approximately zero; diagnostic added after first baseline result, not a preregistered main benchmark"
+}

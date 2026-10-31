@@ -1,0 +1,74 @@
+{
+  "absolute_source": "actual locally trained ACE predictions; no GT field in cache",
+  "motion_source": "actual registered Kinect RGB-D GFTT/LK/PnP, no synthetic motion or test poses",
+  "frames": 1000,
+  "gate": {
+    "min_inliers": 50,
+    "translation_gate_m": 0.1,
+    "rotation_gate_deg": 10,
+    "required_consistent": 3
+  },
+  "faults": {
+    "clean": {},
+    "camera_outage_30frames": {
+      "drop": [
+        300,
+        301,
+        302,
+        303,
+        304,
+        305,
+        306,
+        307,
+        308,
+        309,
+        310,
+        311,
+        312,
+        313,
+        314,
+        315,
+        316,
+        317,
+        318,
+        319,
+        320,
+        321,
+        322,
+        323,
+        324,
+        325,
+        326,
+        327,
+        328,
+        329
+      ]
+    },
+    "injected_state_drift": {
+      "state_fault": 400
+    },
+    "isolated_wrong_absolute": {
+      "corrupt": [
+        200,
+        500,
+        800
+      ]
+    },
+    "coherent_wrong_absolute_burst": {
+      "corrupt": [
+        600,
+        601,
+        602,
+        603,
+        604
+      ]
+    }
+  },
+  "GT_online": false,
+  "physical_timestamps": false,
+  "latency_units": "frames only",
+  "control_scope": "controlled packet loss / injected state and absolute-constraint faults, not genuine physical kidnapping or pedestrian dynamics",
+  "no_online_mapping": true,
+  "covariance": "unavailable; no score converted to covariance",
+  "replay_wall_seconds": 5.256336938007735
+}

@@ -1,0 +1,13 @@
+diff --git a/Module/Network/FlowFormerCov/covhead.py b/Module/Network/FlowFormerCov/covhead.py
+index 290a5b1..c16ea1a 100644
+--- a/Module/Network/FlowFormerCov/covhead.py
++++ b/Module/Network/FlowFormerCov/covhead.py
+@@ -94,7 +94,7 @@ class MemoryCovDecoder(MemoryDecoder):
+             
+             with torch.cuda.nvtx.range("CNN Encoder"):
+                 query = self.flow_token_encoder(cost_forward)
+-                query = query.permute(0, 2, 3, 1).view(size[0] * size[2] * size[3], 1, self.dim)
++                query = query.permute(0, 2, 3, 1).reshape(size[0] * size[2] * size[3], 1, self.dim)
+             
+             with torch.cuda.nvtx.range("Cross Attention"):
+                 cost_global, key, value = self.decoder_layer(

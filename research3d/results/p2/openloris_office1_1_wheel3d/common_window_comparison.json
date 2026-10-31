@@ -1,0 +1,49 @@
+{
+  "common_first_last_s": [
+    1560000090.2365,
+    1560000110.8865001
+  ],
+  "sample_period_s": 0.05,
+  "grid_count": 414,
+  "modes": {
+    "stereo_imu_wheel": {
+      "n": 414,
+      "alignment": "SE3, no scale correction",
+      "ate_se3_aligned_rmse_m": 0.03482783361060236,
+      "ate_first_pose_anchored_rmse_m": 0.18806897329649916,
+      "path_length_m": 4.402842109146465,
+      "endpoint_first_pose_anchored_error_m": 0.21970527548219876,
+      "endpoint_drift_per_meter": 0.049900784546823285,
+      "rpe_1s": {
+        "translation_rmse_m": 0.022075269754082735,
+        "rotation_rmse_deg": 0.5063871271099809
+      }
+    },
+    "stereo_imu": {
+      "n": 414,
+      "alignment": "SE3, no scale correction",
+      "ate_se3_aligned_rmse_m": 54.734678285759415,
+      "ate_first_pose_anchored_rmse_m": 66.4851416976319,
+      "path_length_m": 4.402842109146465,
+      "endpoint_first_pose_anchored_error_m": 122.32744780945895,
+      "endpoint_drift_per_meter": 27.783746220500593,
+      "rpe_1s": {
+        "translation_rmse_m": 30.42461365861416,
+        "rotation_rmse_deg": 5.228135761125697
+      }
+    },
+    "imu_wheel": {
+      "n": 414,
+      "alignment": "SE3, no scale correction",
+      "ate_se3_aligned_rmse_m": 0.04060520354476558,
+      "ate_first_pose_anchored_rmse_m": 0.1695991406824327,
+      "path_length_m": 4.402842109146465,
+      "endpoint_first_pose_anchored_error_m": 0.2455811892820848,
+      "endpoint_drift_per_meter": 0.05577787783302844,
+      "rpe_1s": {
+        "translation_rmse_m": 0.020413963197153377,
+        "rotation_rmse_deg": 0.36390142479620036
+      }
+    }
+  }
+}

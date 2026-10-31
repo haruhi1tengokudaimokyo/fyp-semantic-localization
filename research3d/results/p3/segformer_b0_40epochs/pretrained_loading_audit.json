@@ -1,0 +1,26 @@
+{
+  "missing_keys": [
+    "decode_head.batch_norm.bias",
+    "decode_head.batch_norm.num_batches_tracked",
+    "decode_head.batch_norm.running_mean",
+    "decode_head.batch_norm.running_var",
+    "decode_head.batch_norm.weight",
+    "decode_head.classifier.bias",
+    "decode_head.classifier.weight",
+    "decode_head.linear_c.0.proj.bias",
+    "decode_head.linear_c.0.proj.weight",
+    "decode_head.linear_c.1.proj.bias",
+    "decode_head.linear_c.1.proj.weight",
+    "decode_head.linear_c.2.proj.bias",
+    "decode_head.linear_c.2.proj.weight",
+    "decode_head.linear_c.3.proj.bias",
+    "decode_head.linear_c.3.proj.weight",
+    "decode_head.linear_fuse.weight"
+  ],
+  "unexpected_keys": [
+    "classifier.bias",
+    "classifier.weight"
+  ],
+  "mismatched_keys": [],
+  "error_msgs": []
+}
