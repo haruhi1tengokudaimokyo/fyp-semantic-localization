@@ -1,0 +1,1041 @@
+{
+  "scenes": [
+    {
+      "scene": "105515211_173104185",
+      "views": 24,
+      "pixel_counts": {
+        "unknown": 1524142,
+        "art_frame": 16483,
+        "bed": 59675,
+        "couch": 39944,
+        "barrel": 58537,
+        "carpet": 7430,
+        "lamp": 4932,
+        "seat": 22071,
+        "mirror": 20687,
+        "picture": 3978,
+        "shelf": 1114,
+        "plant": 2915,
+        "shower": 68930,
+        "toilet": 3783,
+        "stairs": 6836,
+        "bathrobe": 1743
+      },
+      "unknown_pixel_fraction": 0.8268999565972223,
+      "unknown_fraction_among_valid_depth": 0.8220149268301935,
+      "valid_depth_pixels": 1792611,
+      "missing_object_configs": [],
+      "object_instances": [
+        {
+          "template": "08863baa27dc6436f877fdf0dcdb0a5343bf4730",
+          "semantic_id": 223,
+          "category": "painting"
+        },
+        {
+          "template": "429de8a53ddf94a47ec553147dc8603b803be056",
+          "semantic_id": 21,
+          "category": "bathrobe"
+        },
+        {
+          "template": "ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "28e0ff5e3f1d1b2918986d871c0f66631c918060",
+          "semantic_id": 319,
+          "category": "stairs"
+        },
+        {
+          "template": "14d3159664ea16859019f306ef64b59c18a65f6e",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "14d3159664ea16859019f306ef64b59c18a65f6e",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "5a8e29db883b2ace2e369b8032b8e276ae9339ac",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "40336eb96234276636358281389c15b6a8ccc9b2",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "86e2f11ddd34c888494ef6c0c506d7528c8fc23a",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "b19a38b2b4b21abff5e0c41d247c79779bf02333",
+          "semantic_id": 77,
+          "category": "clock"
+        },
+        {
+          "template": "9512738c384a61d36c30e53cfafc54372fbbc270",
+          "semantic_id": 288,
+          "category": "shower"
+        },
+        {
+          "template": "9512738c384a61d36c30e53cfafc54372fbbc270",
+          "semantic_id": 288,
+          "category": "shower"
+        },
+        {
+          "template": "b510bed6efb14de310a6ff2851ccfc6d6702c3e0",
+          "semantic_id": 208,
+          "category": "mirror"
+        },
+        {
+          "template": "3033be75f2ac15885e8f4813dc55e168af09e91f",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "634c57d83a2dfe5478877d2a13bbb3090a15aa11",
+          "semantic_id": 27,
+          "category": "bed"
+        },
+        {
+          "template": "8311bbeeac9fe911fe8dff338964c023eb63bdab",
+          "semantic_id": 64,
+          "category": "carpet"
+        },
+        {
+          "template": "8311bbeeac9fe911fe8dff338964c023eb63bdab",
+          "semantic_id": 64,
+          "category": "carpet"
+        },
+        {
+          "template": "005b673d5ded782d54be17969159917dfc9ae0f2",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f",
+          "semantic_id": 208,
+          "category": "mirror"
+        },
+        {
+          "template": "36a3c75bced5d1b7785f94ab35406664bdef9f80",
+          "semantic_id": 27,
+          "category": "bed"
+        },
+        {
+          "template": "d9d97893c7448d727a5c586f18f57698ce81cf64",
+          "semantic_id": 282,
+          "category": "shelf"
+        },
+        {
+          "template": "d9d97893c7448d727a5c586f18f57698ce81cf64",
+          "semantic_id": 282,
+          "category": "shelf"
+        },
+        {
+          "template": "d9d97893c7448d727a5c586f18f57698ce81cf64",
+          "semantic_id": 282,
+          "category": "shelf"
+        },
+        {
+          "template": "d9d97893c7448d727a5c586f18f57698ce81cf64",
+          "semantic_id": 282,
+          "category": "shelf"
+        },
+        {
+          "template": "d9d97893c7448d727a5c586f18f57698ce81cf64",
+          "semantic_id": 282,
+          "category": "shelf"
+        },
+        {
+          "template": "d9d97893c7448d727a5c586f18f57698ce81cf64",
+          "semantic_id": 282,
+          "category": "shelf"
+        },
+        {
+          "template": "3959f46fe4a088891d360bfedee7c63587a51cb1",
+          "semantic_id": 236,
+          "category": "picture"
+        },
+        {
+          "template": "f4bc230471d6dd823233c7305235aa2ed2a4f98b",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "f4bc230471d6dd823233c7305235aa2ed2a4f98b",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "f4bc230471d6dd823233c7305235aa2ed2a4f98b",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "f4bc230471d6dd823233c7305235aa2ed2a4f98b",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "e26bd35821a4e268590e2bd6c3bc2954b6b8b039",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "e26bd35821a4e268590e2bd6c3bc2954b6b8b039",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "e26bd35821a4e268590e2bd6c3bc2954b6b8b039",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "e26bd35821a4e268590e2bd6c3bc2954b6b8b039",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "73c44bfa31182cd9d69d6c233e86ae57be29a804",
+          "semantic_id": 349,
+          "category": "toilet"
+        },
+        {
+          "template": "73c44bfa31182cd9d69d6c233e86ae57be29a804",
+          "semantic_id": 349,
+          "category": "toilet"
+        },
+        {
+          "template": "17a8f7c040254439fe8771f66f1c526c71d24904",
+          "semantic_id": 17,
+          "category": "barrel"
+        },
+        {
+          "template": "17a8f7c040254439fe8771f66f1c526c71d24904",
+          "semantic_id": 17,
+          "category": "barrel"
+        },
+        {
+          "template": "17a8f7c040254439fe8771f66f1c526c71d24904",
+          "semantic_id": 17,
+          "category": "barrel"
+        },
+        {
+          "template": "cc34d2bd7d33c5dd311fae8268857ee35dcbab47",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "cc34d2bd7d33c5dd311fae8268857ee35dcbab47",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "cc34d2bd7d33c5dd311fae8268857ee35dcbab47",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "757c3b2e6018679a04ef04fc6f21b6434c379ebd",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "757c3b2e6018679a04ef04fc6f21b6434c379ebd",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "757c3b2e6018679a04ef04fc6f21b6434c379ebd",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "757c3b2e6018679a04ef04fc6f21b6434c379ebd",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "76eb8317661751dd4897b39db29df5db517e2d5c",
+          "semantic_id": 243,
+          "category": "plant"
+        },
+        {
+          "template": "8d480153ed7d87e2c81c8e1a24a9e15b4d50959b",
+          "semantic_id": 94,
+          "category": "couch"
+        },
+        {
+          "template": "224-91",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-92",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "209-2",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-93",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-94",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-95",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-89",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-90",
+          "semantic_id": 0,
+          "category": "unknown"
+        }
+      ],
+      "requested_landmark_pixels": {
+        "wall": 0,
+        "door": 0,
+        "window": 0,
+        "column": 0
+      },
+      "interpretation": "native semantic sensor gives configured class IDs for these rigid objects; IDs do not distinguish repeated instances. No architectural labels inferred for stage pixels."
+    },
+    {
+      "scene": "107734110_175999914",
+      "views": 24,
+      "pixel_counts": {
+        "unknown": 1502506,
+        "bathrobe": 21792,
+        "bench": 135,
+        "couch": 129823,
+        "lamp": 3643,
+        "piano": 1828,
+        "tv": 42847,
+        "boiler": 20118,
+        "computer": 2979,
+        "bag": 2220,
+        "desk": 19823,
+        "seat": 7421,
+        "stairs": 594,
+        "table": 28199,
+        "baby_changing_station": 1801,
+        "bathtub": 984,
+        "toilet": 207,
+        "chest": 9178,
+        "door": 43161,
+        "bed": 280,
+        "washbasin": 3661
+      },
+      "unknown_pixel_fraction": 0.8151616753472222,
+      "unknown_fraction_among_valid_depth": 0.8151607728119332,
+      "valid_depth_pixels": 1843191,
+      "missing_object_configs": [],
+      "object_instances": [
+        {
+          "template": "f51e066d210a34e439921cec1d7b52a339fc298c",
+          "semantic_id": 235,
+          "category": "piano"
+        },
+        {
+          "template": "827ab09e2f5097436bc0304266036bb62e4326a9",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "7e4ad8ed943b48e6f5af221467312a79056008d1",
+          "semantic_id": 319,
+          "category": "stairs"
+        },
+        {
+          "template": "cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68",
+          "semantic_id": 255,
+          "category": "printer"
+        },
+        {
+          "template": "a0572493a81702f6c6ed5debb127b2e3a0b06df9",
+          "semantic_id": 336,
+          "category": "table"
+        },
+        {
+          "template": "3fe10518eb7c00d7a58b15a513980e9606373a27",
+          "semantic_id": 21,
+          "category": "bathrobe"
+        },
+        {
+          "template": "e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9",
+          "semantic_id": 336,
+          "category": "table"
+        },
+        {
+          "template": "4e2258e475ad86158a5cfb7edf908f655630c51a",
+          "semantic_id": 25,
+          "category": "bathtub"
+        },
+        {
+          "template": "2056e0db6d0d28703bb100d63a2d864ffe295b10",
+          "semantic_id": 10,
+          "category": "baby_changing_station"
+        },
+        {
+          "template": "2db9ab8f4ff2dc2315a41244168e7d21a36d2216",
+          "semantic_id": 94,
+          "category": "couch"
+        },
+        {
+          "template": "ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9",
+          "semantic_id": 369,
+          "category": "tv"
+        },
+        {
+          "template": "ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9",
+          "semantic_id": 369,
+          "category": "tv"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "a312bac46b28ef8b1e4c71c0e9702529a27de8a7",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "0af9732417cdf12a734bd3133f493b18cfe03e91",
+          "semantic_id": 74,
+          "category": "chest"
+        },
+        {
+          "template": "0af9732417cdf12a734bd3133f493b18cfe03e91",
+          "semantic_id": 74,
+          "category": "chest"
+        },
+        {
+          "template": "50650be5620fefc2598653fbf9719096f457f9cb",
+          "semantic_id": 120,
+          "category": "door"
+        },
+        {
+          "template": "c5eac1bf1396fb363596d90f7f871f6386054930",
+          "semantic_id": 80,
+          "category": "clothes_hanger"
+        },
+        {
+          "template": "825bce5ff93725dbd0ab11b82e6a2b13f96475cf",
+          "semantic_id": 319,
+          "category": "stairs"
+        },
+        {
+          "template": "10444a1165c1745f960eb6183d24dd05b60e781f",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa",
+          "semantic_id": 336,
+          "category": "table"
+        },
+        {
+          "template": "0d6acbc9f35c8834a605e284167f44c84582a975",
+          "semantic_id": 369,
+          "category": "tv"
+        },
+        {
+          "template": "2555d0416b8d7e2d59442bc387f37e7751996b67",
+          "semantic_id": 32,
+          "category": "bench"
+        },
+        {
+          "template": "0394a9d79148ddbc8709ad1d2aa0e26199e53bac",
+          "semantic_id": 10,
+          "category": "baby_changing_station"
+        },
+        {
+          "template": "7ad9c27fb63d911b0301edbd9446905a97f2d94e",
+          "semantic_id": 10,
+          "category": "baby_changing_station"
+        },
+        {
+          "template": "3750c1d708079a103ee2c64a9215d8ba8b10e86f",
+          "semantic_id": 216,
+          "category": "nightstand"
+        },
+        {
+          "template": "2ef61d99fd000eb3fbda85d82e022a9fafda98d8",
+          "semantic_id": 10,
+          "category": "baby_changing_station"
+        },
+        {
+          "template": "1309f128b7bb4f88a82e7f837d1f70a5c02ccaad",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "9fe0adbde0ac85b01668517398d8eac2460582f3",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "9fe0adbde0ac85b01668517398d8eac2460582f3",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "9fe0adbde0ac85b01668517398d8eac2460582f3",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "96aa481c97443d17b9946bc68e188bfd877c2ebf",
+          "semantic_id": 109,
+          "category": "desk"
+        },
+        {
+          "template": "098786c84741c4f692a5c745ae27d167215e4af4",
+          "semantic_id": 27,
+          "category": "bed"
+        },
+        {
+          "template": "3efb80a75720ef1848a6ddf5011959653e53b172",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "3efb80a75720ef1848a6ddf5011959653e53b172",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "3efb80a75720ef1848a6ddf5011959653e53b172",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "3efb80a75720ef1848a6ddf5011959653e53b172",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "3efb80a75720ef1848a6ddf5011959653e53b172",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "35230dedd6b3f035a602f7226fae2dcb61bf1e4a",
+          "semantic_id": 11,
+          "category": "bag"
+        },
+        {
+          "template": "5990bd240667b753ec647ca7ed0697e58464b7cf",
+          "semantic_id": 21,
+          "category": "bathrobe"
+        },
+        {
+          "template": "3e3e11715d4597064167a3408085e9917974e7b8",
+          "semantic_id": 387,
+          "category": "washbasin"
+        },
+        {
+          "template": "88c69eb16145fa25df00eb158f7490af690c9442",
+          "semantic_id": 94,
+          "category": "couch"
+        },
+        {
+          "template": "61ad95ab5d6553cb5849188e5782ee6cb8979dc5",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "2efebdcc1ba9514b0deb0dfb05951341432bd26a",
+          "semantic_id": 87,
+          "category": "computer"
+        },
+        {
+          "template": "68a6193e3b67cedefb14ab590fc748bcc7955c5d",
+          "semantic_id": 349,
+          "category": "toilet"
+        },
+        {
+          "template": "0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8",
+          "semantic_id": 40,
+          "category": "boiler"
+        },
+        {
+          "template": "0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8",
+          "semantic_id": 40,
+          "category": "boiler"
+        },
+        {
+          "template": "979c49104318fdfe2e09758ae7a3f53825a7eb94",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "979c49104318fdfe2e09758ae7a3f53825a7eb94",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "ab69e2f34692335d3b782d82bc5ab0c77b411d3c",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "93951e48e6f29a5592dd6e8e2c426427707d6496",
+          "semantic_id": 13,
+          "category": "balcony_railing"
+        },
+        {
+          "template": "8ade057f6f57ec16e1a8e17932d92518ddb27c84",
+          "semantic_id": 192,
+          "category": "lamp"
+        },
+        {
+          "template": "63c2ea5b388948f5c2625defb37dfd03f9dcecf5",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "12f2b36812411b47a61f2a949e82e5127ce04557",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "12f2b36812411b47a61f2a949e82e5127ce04557",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "12f2b36812411b47a61f2a949e82e5127ce04557",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380",
+          "semantic_id": 7,
+          "category": "art_frame"
+        }
+      ],
+      "requested_landmark_pixels": {
+        "wall": 0,
+        "door": 43161,
+        "window": 0,
+        "column": 0
+      },
+      "interpretation": "native semantic sensor gives configured class IDs for these rigid objects; IDs do not distinguish repeated instances. No architectural labels inferred for stage pixels."
+    },
+    {
+      "scene": "107734119_175999932",
+      "views": 24,
+      "pixel_counts": {
+        "unknown": 1383629,
+        "bag": 40486,
+        "balcony_railing": 499,
+        "cabinet": 8283,
+        "ceiling_fan": 13164,
+        "couch": 60221,
+        "counter": 32821,
+        "desk": 25598,
+        "kitchen_counter": 15080,
+        "speaker": 4651,
+        "stool": 20040,
+        "tv": 110369,
+        "ventilation_hood": 2391,
+        "window_shade": 17348,
+        "picture": 33023,
+        "air_duct": 38292,
+        "statue": 4362,
+        "bin": 22,
+        "shower": 3966,
+        "toilet": 267,
+        "laptop": 1925,
+        "seat": 2421,
+        "boiler": 4586,
+        "heater": 7004,
+        "stairs": 2220,
+        "rack": 10532
+      },
+      "unknown_pixel_fraction": 0.7506667751736111,
+      "unknown_fraction_among_valid_depth": 0.7506652871734804,
+      "valid_depth_pixels": 1843189,
+      "missing_object_configs": [],
+      "object_instances": [
+        {
+          "template": "03ba174d13db7f909a79cb64d4319383c6fa99ee",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "2cdb28938dff1f9ab13aee7630cea51f44f60952",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "76298b7fdef47ffd2b099ccff1d5c66b50a789cb",
+          "semantic_id": 319,
+          "category": "stairs"
+        },
+        {
+          "template": "e0e445de0c80e1d1092bede074e36a46c4e4fa61",
+          "semantic_id": 2,
+          "category": "air_duct"
+        },
+        {
+          "template": "94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49",
+          "semantic_id": 258,
+          "category": "rack"
+        },
+        {
+          "template": "94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49",
+          "semantic_id": 258,
+          "category": "rack"
+        },
+        {
+          "template": "61caf268af6aea6f3b38858bc4ed01788a1ae7c6",
+          "semantic_id": 94,
+          "category": "couch"
+        },
+        {
+          "template": "ba2cd83aaa1e042613df1bc3669b36a05aa63437",
+          "semantic_id": 95,
+          "category": "counter"
+        },
+        {
+          "template": "1d438cf2a0be5706ffdbd1489fbfb27f712589a0",
+          "semantic_id": 369,
+          "category": "tv"
+        },
+        {
+          "template": "a59e34f65be7226af0d42d41d8da31674415eeee",
+          "semantic_id": 378,
+          "category": "ventilation_hood"
+        },
+        {
+          "template": "a59e34f65be7226af0d42d41d8da31674415eeee",
+          "semantic_id": 378,
+          "category": "ventilation_hood"
+        },
+        {
+          "template": "a59e34f65be7226af0d42d41d8da31674415eeee",
+          "semantic_id": 378,
+          "category": "ventilation_hood"
+        },
+        {
+          "template": "a59e34f65be7226af0d42d41d8da31674415eeee",
+          "semantic_id": 378,
+          "category": "ventilation_hood"
+        },
+        {
+          "template": "a59e34f65be7226af0d42d41d8da31674415eeee",
+          "semantic_id": 378,
+          "category": "ventilation_hood"
+        },
+        {
+          "template": "a59e34f65be7226af0d42d41d8da31674415eeee",
+          "semantic_id": 378,
+          "category": "ventilation_hood"
+        },
+        {
+          "template": "094a90223e00de79554efad92667fd50e3a61d25",
+          "semantic_id": 321,
+          "category": "statue"
+        },
+        {
+          "template": "6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "da41d51ec38f1faf445441b6b286f301c16c5d97",
+          "semantic_id": 314,
+          "category": "speaker"
+        },
+        {
+          "template": "da41d51ec38f1faf445441b6b286f301c16c5d97",
+          "semantic_id": 314,
+          "category": "speaker"
+        },
+        {
+          "template": "da41d51ec38f1faf445441b6b286f301c16c5d97",
+          "semantic_id": 314,
+          "category": "speaker"
+        },
+        {
+          "template": "da41d51ec38f1faf445441b6b286f301c16c5d97",
+          "semantic_id": 314,
+          "category": "speaker"
+        },
+        {
+          "template": "33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d",
+          "semantic_id": 172,
+          "category": "heater"
+        },
+        {
+          "template": "33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d",
+          "semantic_id": 172,
+          "category": "heater"
+        },
+        {
+          "template": "ca8c1111a38843f3d2d1818f2e04217a11e97884",
+          "semantic_id": 182,
+          "category": "kitchen_counter"
+        },
+        {
+          "template": "0d29db65c42d5ca9021037c0b73914e9d63e0096",
+          "semantic_id": 275,
+          "category": "seat"
+        },
+        {
+          "template": "b9f7f100ebccf261a60939c7884646503ff46c1a",
+          "semantic_id": 324,
+          "category": "stool"
+        },
+        {
+          "template": "b9f7f100ebccf261a60939c7884646503ff46c1a",
+          "semantic_id": 324,
+          "category": "stool"
+        },
+        {
+          "template": "b9f7f100ebccf261a60939c7884646503ff46c1a",
+          "semantic_id": 324,
+          "category": "stool"
+        },
+        {
+          "template": "b9f7f100ebccf261a60939c7884646503ff46c1a",
+          "semantic_id": 324,
+          "category": "stool"
+        },
+        {
+          "template": "b9f7f100ebccf261a60939c7884646503ff46c1a",
+          "semantic_id": 324,
+          "category": "stool"
+        },
+        {
+          "template": "f1f48b2a0b525fee2a739b2bad7a216a12bb8e05",
+          "semantic_id": 35,
+          "category": "bin"
+        },
+        {
+          "template": "5bc304ca5557edc8a25e7dc579b128100e9c284c",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "9b64cef587a9b4069ee8e6504715e3ce1a9b1d67",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29",
+          "semantic_id": 236,
+          "category": "picture"
+        },
+        {
+          "template": "1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29",
+          "semantic_id": 236,
+          "category": "picture"
+        },
+        {
+          "template": "568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "08fe7db083cae9619ffe3791dd8f2e67643a1678",
+          "semantic_id": 396,
+          "category": "window_shade"
+        },
+        {
+          "template": "08fe7db083cae9619ffe3791dd8f2e67643a1678",
+          "semantic_id": 396,
+          "category": "window_shade"
+        },
+        {
+          "template": "08fe7db083cae9619ffe3791dd8f2e67643a1678",
+          "semantic_id": 396,
+          "category": "window_shade"
+        },
+        {
+          "template": "57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70",
+          "semantic_id": 195,
+          "category": "laptop"
+        },
+        {
+          "template": "d5e647fdb3fe99a18906a67e83344081f1852446",
+          "semantic_id": 70,
+          "category": "ceiling_fan"
+        },
+        {
+          "template": "d5e647fdb3fe99a18906a67e83344081f1852446",
+          "semantic_id": 70,
+          "category": "ceiling_fan"
+        },
+        {
+          "template": "d5e647fdb3fe99a18906a67e83344081f1852446",
+          "semantic_id": 70,
+          "category": "ceiling_fan"
+        },
+        {
+          "template": "1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff",
+          "semantic_id": 57,
+          "category": "cabinet"
+        },
+        {
+          "template": "f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5",
+          "semantic_id": 236,
+          "category": "picture"
+        },
+        {
+          "template": "d1bb1e76ecd549767fd650aa211e3ce29be75ad6",
+          "semantic_id": 11,
+          "category": "bag"
+        },
+        {
+          "template": "eaf49472219845b70e3354e80d499319ae5cdd0e",
+          "semantic_id": 7,
+          "category": "art_frame"
+        },
+        {
+          "template": "4794fc54b3a1d01f83a8656004e60a2df41b64d7",
+          "semantic_id": 236,
+          "category": "picture"
+        },
+        {
+          "template": "0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8",
+          "semantic_id": 40,
+          "category": "boiler"
+        },
+        {
+          "template": "0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8",
+          "semantic_id": 40,
+          "category": "boiler"
+        },
+        {
+          "template": "0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8",
+          "semantic_id": 40,
+          "category": "boiler"
+        },
+        {
+          "template": "d0d1e39f55d3c03661b9716a6db1532568711f52",
+          "semantic_id": 288,
+          "category": "shower"
+        },
+        {
+          "template": "d3064870d4e8d00b37a7acd77add1b45afda7e28",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "10e851b8c7ef80a87aeb5d0821e8164fd57b9e91",
+          "semantic_id": 109,
+          "category": "desk"
+        },
+        {
+          "template": "e7315a170b0ec5278e79d31226a09beef4c356ee",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "93951e48e6f29a5592dd6e8e2c426427707d6496",
+          "semantic_id": 13,
+          "category": "balcony_railing"
+        },
+        {
+          "template": "42026ccb6057538e11416e8d630fc1b7eab2085f",
+          "semantic_id": 349,
+          "category": "toilet"
+        },
+        {
+          "template": "224-132",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-132",
+          "semantic_id": 0,
+          "category": "unknown"
+        },
+        {
+          "template": "224-132",
+          "semantic_id": 0,
+          "category": "unknown"
+        }
+      ],
+      "requested_landmark_pixels": {
+        "wall": 0,
+        "door": 0,
+        "window": 0,
+        "column": 0
+      },
+      "interpretation": "native semantic sensor gives configured class IDs for these rigid objects; IDs do not distinguish repeated instances. No architectural labels inferred for stage pixels."
+    }
+  ],
+  "training_decision": "Do not start wall/door/window segmentation training from these native outputs: verify missing architectural labels first. Object classes with verified pixels can support a revised taxonomy; 3 scenes alone are insufficient for a robust multi-building benchmark.",
+  "split_warning": "Distinct scene IDs verified. Physical building identity / duplicated layouts require further metadata audit before claiming independent buildings."
+}

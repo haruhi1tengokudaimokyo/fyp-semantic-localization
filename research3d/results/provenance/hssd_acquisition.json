@@ -1,0 +1,2736 @@
+{
+  "repo": "hssd/hssd-hab",
+  "revision": "4369cb9876214c7fbebcf552eb532380e4d287e4",
+  "files": [
+    {
+      "path": "README.md",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/README.md",
+      "bytes": 8856,
+      "sha256": "4509914d584031173390bf5f41722ec25e19de3f1e0ea54a423eadf63073d49c"
+    },
+    {
+      "path": "hssd-hab.scene_dataset_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/hssd-hab.scene_dataset_config.json",
+      "bytes": 634,
+      "sha256": "186cbbd5fe8b53ddd1cc0dfb3c9084e75db8ec6cd05ba178a5b43890f36b25e2"
+    },
+    {
+      "path": "scene_splits.yaml",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/scene_splits.yaml",
+      "bytes": 3714,
+      "sha256": "24568612f36ca3d6cd29b4adf2fa8b54e0f87f2175de6f52d964a22a332b6c2a"
+    },
+    {
+      "path": "semantics/hssd-hab_semantic_lexicon.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/semantics/hssd-hab_semantic_lexicon.json",
+      "bytes": 30659,
+      "sha256": "60764fd3a50f816a7dfa4ac885fe357a8ce406c008b5d8ad5a22f64bb52cfc5d"
+    },
+    {
+      "path": "metadata/hssd_obj_semantics_condensed.csv",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/metadata/hssd_obj_semantics_condensed.csv",
+      "bytes": 1174818,
+      "sha256": "6f2e16be9d0bf6c37f22b9e53e34d7d24b5764948502c66b0e2d4860e5260922"
+    },
+    {
+      "path": "metadata/objects.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/metadata/objects.json",
+      "bytes": 4450064,
+      "sha256": "ff20ab9b07a56d7df42c39acd333d5b897de7407036ba0dc3b66e0186e222fb4"
+    },
+    {
+      "path": "scenes/105515211_173104185.scene_instance.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/scenes/105515211_173104185.scene_instance.json",
+      "bytes": 19242,
+      "sha256": "e970f4b1d1afda12a85b37e4ad84213e02d7465f30ffeb6404d24047a799c440"
+    },
+    {
+      "path": "semantics/scenes/105515211_173104185.semantic_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/semantics/scenes/105515211_173104185.semantic_config.json",
+      "bytes": 5272,
+      "sha256": "4d6a07d3502b05be99b3d474fdd0bd5b982dfc2d0dba7651385b57f7bf5e55cf"
+    },
+    {
+      "path": "stages/105515211_173104185.stage_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/stages/105515211_173104185.stage_config.json",
+      "bytes": 244,
+      "sha256": "be7c127318480f3f727fd1258c7112785d461284278764462724f2a871101f6a"
+    },
+    {
+      "path": "stages/105515211_173104185.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/stages/105515211_173104185.glb",
+      "bytes": 2676500,
+      "sha256": "d9998d3415f055aaa191f576f45355d01bb2bef13c78811c4d00edab966edc51"
+    },
+    {
+      "path": "scenes/107734119_175999932.scene_instance.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/scenes/107734119_175999932.scene_instance.json",
+      "bytes": 20723,
+      "sha256": "c8dcb7fc9d2382e49c75572fbf6e58a4eadc787550fc22db99e46e173fb4591c"
+    },
+    {
+      "path": "semantics/scenes/107734119_175999932.semantic_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/semantics/scenes/107734119_175999932.semantic_config.json",
+      "bytes": 4589,
+      "sha256": "37227f1d94aa5806cc361ee4d85adb646e6a254a2c3c3609def415cf70af2990"
+    },
+    {
+      "path": "stages/107734119_175999932.stage_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/stages/107734119_175999932.stage_config.json",
+      "bytes": 244,
+      "sha256": "4d31af41dc3611c9dde53a6f4c40593f69342f5d4ee2754d2263b0b06614f6ad"
+    },
+    {
+      "path": "stages/107734119_175999932.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/stages/107734119_175999932.glb",
+      "bytes": 1922104,
+      "sha256": "ebcd4b3fc0607e382851da2cd872481cd6e46d48cfbf127d3257bcf271b4aa0f"
+    },
+    {
+      "path": "scenes/107734110_175999914.scene_instance.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/scenes/107734110_175999914.scene_instance.json",
+      "bytes": 22098,
+      "sha256": "fb75dfd21b852bc0ddb9751d8b721a36a4774da7187cea769754b1249cb8da0e"
+    },
+    {
+      "path": "semantics/scenes/107734110_175999914.semantic_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/semantics/scenes/107734110_175999914.semantic_config.json",
+      "bytes": 5762,
+      "sha256": "7616e232e8b63b35ba44dc37dcb68c35403201bd8a89ca0ca2f72fdeccee75d4"
+    },
+    {
+      "path": "stages/107734110_175999914.stage_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/stages/107734110_175999914.stage_config.json",
+      "bytes": 244,
+      "sha256": "3b7c0c4355d9d03344ba31d69582fee1e7f9eae3fea2fe66f796c1908b2a959b"
+    },
+    {
+      "path": "stages/107734110_175999914.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/stages/107734110_175999914.glb",
+      "bytes": 1777764,
+      "sha256": "400d02bda426c1addc427e68cc040c40f2c16102930bca39072bc9cf2efc6438"
+    },
+    {
+      "path": "objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.collider.glb",
+      "bytes": 116544,
+      "sha256": "510d4ef72686983080cc01b32b6c2d081bad0c34402c8cb67c9e018ef1ebf5f7"
+    },
+    {
+      "path": "objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.filteredSupportSurface.glb",
+      "bytes": 13400,
+      "sha256": "1cbc10fc2daf043e324f0dc21fa13aef363d806c27e299a43bc8bd526d5f4ade"
+    },
+    {
+      "path": "objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.filteredSupportSurface.ply",
+      "bytes": 12595,
+      "sha256": "ab095239152b07958c9fa35b85895d6fdb4e3e4b31043d318a2defb1519665c5"
+    },
+    {
+      "path": "objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.object_config.json",
+      "bytes": 1004,
+      "sha256": "5b74cd64edeca0c4171dc2028a0ed62c45fa64979c62e1e984448e9f5f0791ae"
+    },
+    {
+      "path": "objects/0/0394a9d79148ddbc8709ad1d2aa0e26199e53bac.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0394a9d79148ddbc8709ad1d2aa0e26199e53bac.object_config.json",
+      "bytes": 198,
+      "sha256": "c0cd3956d1f33c00ae1f81868c24a3d9a98d9a484c4f6335b3b9aab5361aacc5"
+    },
+    {
+      "path": "objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.collider.glb",
+      "bytes": 3376,
+      "sha256": "c23b1b10e1be240b0b436270e8dcde94000e8e305359f707cbf44523eb4103a1"
+    },
+    {
+      "path": "objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.filteredSupportSurface.glb",
+      "bytes": 1853,
+      "sha256": "b019335bebf8ab7590d5fd06b6c22e50111c119208024e831d081b98ce0dfe37"
+    },
+    {
+      "path": "objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.object_config.json",
+      "bytes": 500,
+      "sha256": "6961afb311311e7fd88e62c1ae36f382e3acb6d31eda3bda9520d91ab4d32b59"
+    },
+    {
+      "path": "objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.filteredSupportSurface.ply",
+      "bytes": 423,
+      "sha256": "f051d2c023be95772c732f68021705f6f825a1cd9249b69280ca493ecd545e8d"
+    },
+    {
+      "path": "objects/0/08863baa27dc6436f877fdf0dcdb0a5343bf4730.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/08863baa27dc6436f877fdf0dcdb0a5343bf4730.collider.glb",
+      "bytes": 3268,
+      "sha256": "f2a738965bbb0f1fba5d2887947ddead08bf0f561a60e5c7d420c6a6a0f3337a"
+    },
+    {
+      "path": "objects/0/08863baa27dc6436f877fdf0dcdb0a5343bf4730.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/08863baa27dc6436f877fdf0dcdb0a5343bf4730.glb",
+      "bytes": 16776,
+      "sha256": "d88c742770b01dbaf6e63419b9d8c99e9d19b1b29fabad18d8c0c7adc29f869b"
+    },
+    {
+      "path": "objects/0/08863baa27dc6436f877fdf0dcdb0a5343bf4730.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/08863baa27dc6436f877fdf0dcdb0a5343bf4730.object_config.json",
+      "bytes": 292,
+      "sha256": "663c8a5632147557d7603cabb258843ce9032c61fddce9ca7a0c059c1719fc10"
+    },
+    {
+      "path": "objects/0/0394a9d79148ddbc8709ad1d2aa0e26199e53bac.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0394a9d79148ddbc8709ad1d2aa0e26199e53bac.collider.glb",
+      "bytes": 80788,
+      "sha256": "6aff3d39bb58ea6d749eba4da3cfa5a96ce0ad230778e96a983b4aa2ea27ccde"
+    },
+    {
+      "path": "objects/0/08fe7db083cae9619ffe3791dd8f2e67643a1678.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/08fe7db083cae9619ffe3791dd8f2e67643a1678.collider.glb",
+      "bytes": 4384,
+      "sha256": "7b66193174b8b99c5399e4e565abf8cd2b7c0236406435c99b4fce106d7c7866"
+    },
+    {
+      "path": "objects/0/08fe7db083cae9619ffe3791dd8f2e67643a1678.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/08fe7db083cae9619ffe3791dd8f2e67643a1678.glb",
+      "bytes": 14768,
+      "sha256": "0095e64c82b19e10edc78d99928c0cc6fe117bd82a280db8d6c63a5efa2bb5ce"
+    },
+    {
+      "path": "objects/0/094a90223e00de79554efad92667fd50e3a61d25.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/094a90223e00de79554efad92667fd50e3a61d25.collider.glb",
+      "bytes": 27716,
+      "sha256": "b22ebe558e79200926757145c5fe0dd289cc49b67592eaed8adeda01c2539c2a"
+    },
+    {
+      "path": "objects/0/08fe7db083cae9619ffe3791dd8f2e67643a1678.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/08fe7db083cae9619ffe3791dd8f2e67643a1678.object_config.json",
+      "bytes": 292,
+      "sha256": "dfcdf9773c05a342358b90f1f02e124175f9488c185c88f55908cadda0075bce"
+    },
+    {
+      "path": "objects/0/094a90223e00de79554efad92667fd50e3a61d25.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/094a90223e00de79554efad92667fd50e3a61d25.object_config.json",
+      "bytes": 292,
+      "sha256": "4d12b74e37259e912ff114d8309b3b3a1e58b05b65fc06150114aa599b77305c"
+    },
+    {
+      "path": "objects/0/098786c84741c4f692a5c745ae27d167215e4af4.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/098786c84741c4f692a5c745ae27d167215e4af4.filteredSupportSurface.glb",
+      "bytes": 24398,
+      "sha256": "3550d5f1aee8fba48e22f9813235224a22629139dff443fbfe80a750c7c5246e"
+    },
+    {
+      "path": "objects/0/098786c84741c4f692a5c745ae27d167215e4af4.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/098786c84741c4f692a5c745ae27d167215e4af4.collider.glb",
+      "bytes": 24348,
+      "sha256": "4eccf5bfd3a844e3f676a475a1f80d32cf5a7102068a3ec24177c210990e3a3e"
+    },
+    {
+      "path": "objects/0/098786c84741c4f692a5c745ae27d167215e4af4.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/098786c84741c4f692a5c745ae27d167215e4af4.object_config.json",
+      "bytes": 1003,
+      "sha256": "88bf9d7ea632c78b095be85f8f63ebb400b2ba19659f2e21d32ddadfb9c0312f"
+    },
+    {
+      "path": "objects/0/0af9732417cdf12a734bd3133f493b18cfe03e91.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0af9732417cdf12a734bd3133f493b18cfe03e91.collider.glb",
+      "bytes": 5540,
+      "sha256": "a9b43a72ea4aa2eb327defaaca14c219c736508c0cf015ae4f00bb6f6dd60868"
+    },
+    {
+      "path": "objects/0/0af9732417cdf12a734bd3133f493b18cfe03e91.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0af9732417cdf12a734bd3133f493b18cfe03e91.glb",
+      "bytes": 56600,
+      "sha256": "304f6785fa4bb2819ed16a46b1bf636e0d51fe6de6c91bc5dcc8a7add91325eb"
+    },
+    {
+      "path": "objects/0/0af9732417cdf12a734bd3133f493b18cfe03e91.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0af9732417cdf12a734bd3133f493b18cfe03e91.object_config.json",
+      "bytes": 291,
+      "sha256": "3b38f41d1d1bd79fd7bae9b52407d6f3ef2050ec3e07d49dfe156a8eed272919"
+    },
+    {
+      "path": "objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/005b673d5ded782d54be17969159917dfc9ae0f2.glb",
+      "bytes": 439964,
+      "sha256": "49576e3a2b18618868221d82ee80c76e92641474bc62b535accc1f5bdddf2519"
+    },
+    {
+      "path": "objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.filteredSupportSurface.glb",
+      "bytes": 4443,
+      "sha256": "55f4ef195af9f3e7647f2818e286eebcf50cbe94fcb1eef72928fe921e965ae7"
+    },
+    {
+      "path": "objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.filteredSupportSurface.ply",
+      "bytes": 17575,
+      "sha256": "b85cda79c1c0e628423f76380f208ef5214a40e6ff5fe97aa7555cb0f9e4f541"
+    },
+    {
+      "path": "objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/03ba174d13db7f909a79cb64d4319383c6fa99ee.glb",
+      "bytes": 827000,
+      "sha256": "0ebcc2ec3eaa58920d2df2f561adf2b8885bdfcae0b122cbe7c7fbbe4a2ae711"
+    },
+    {
+      "path": "objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.collider.glb",
+      "bytes": 218444,
+      "sha256": "865f85c8e21f96d8e9531120c3041109f83cb91f29c10e971a1f13a50cd74db9"
+    },
+    {
+      "path": "objects/0/0394a9d79148ddbc8709ad1d2aa0e26199e53bac.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0394a9d79148ddbc8709ad1d2aa0e26199e53bac.glb",
+      "bytes": 1180828,
+      "sha256": "f537a7c67d8e32b3d5c79dfca608e131d167e4b8b0ad4dff23035160cecd5aa7"
+    },
+    {
+      "path": "objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.object_config.json",
+      "bytes": 1004,
+      "sha256": "ca265bd3ea20de07e447a10a2cd39a05c493b38703b298263d9ebcde12ba6862"
+    },
+    {
+      "path": "objects/0/098786c84741c4f692a5c745ae27d167215e4af4.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/098786c84741c4f692a5c745ae27d167215e4af4.glb",
+      "bytes": 643308,
+      "sha256": "e402b7fc84136483cd222909a8a158fd90b6b7476d16b5962ed619ce9370215c"
+    },
+    {
+      "path": "objects/0/0d6acbc9f35c8834a605e284167f44c84582a975.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d6acbc9f35c8834a605e284167f44c84582a975.collider.glb",
+      "bytes": 4136,
+      "sha256": "942c08fe968f0fa51284676d69c63d4e9420172df4ae034d3ff9682a372e99dd"
+    },
+    {
+      "path": "objects/0/0d6acbc9f35c8834a605e284167f44c84582a975.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d6acbc9f35c8834a605e284167f44c84582a975.object_config.json",
+      "bytes": 292,
+      "sha256": "c96fd3d289d6172d6ecd83b4ef416ed978f8e94e886c4255a2bbdb59fba653ea"
+    },
+    {
+      "path": "objects/0/0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8.collider.glb",
+      "bytes": 23180,
+      "sha256": "98aa86ccb76a0997556ddc2c8af77f30dd1bc9b3639a713efd8b7350c6670c05"
+    },
+    {
+      "path": "objects/0/0d6acbc9f35c8834a605e284167f44c84582a975.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d6acbc9f35c8834a605e284167f44c84582a975.glb",
+      "bytes": 119344,
+      "sha256": "29ffcf2f0e2c5f0363b269474336194213e41152bb51bf770e848a0b965c3c78"
+    },
+    {
+      "path": "objects/0/0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8.object_config.json",
+      "bytes": 291,
+      "sha256": "44f3ffd03d24dae5beb03ac2efce0c9e4dc261811c330ae0d03462334c896f78"
+    },
+    {
+      "path": "objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.collider.glb",
+      "bytes": 33332,
+      "sha256": "b3058c1afa6f3dc1217dc3cf7ab00b374bc0895f4b5a381ebc1e55151b04b5a1"
+    },
+    {
+      "path": "objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.filteredSupportSurface.ply",
+      "bytes": 475,
+      "sha256": "58d1f1466429c50927c698e8c080b443f03df9cb76b78413202319a772f59d5f"
+    },
+    {
+      "path": "objects/0/0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0e469ac0e119d1b2307a76fa0ac9611ecf13e6d8.glb",
+      "bytes": 95440,
+      "sha256": "db92fedef05c476f31a281bf71507eb8366c20476ada8586eab6181b2a816b0d"
+    },
+    {
+      "path": "objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.object_config.json",
+      "bytes": 500,
+      "sha256": "3e20e18dc401160de3f9eba36d8c59f1ab1b989086d741eb3869068a42c3fc3b"
+    },
+    {
+      "path": "objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.filteredSupportSurface.glb",
+      "bytes": 3871,
+      "sha256": "bd16275f2efdcdd4ba56f058bfd3cec0758f60e8f5daacaba3c72ae75f9967fe"
+    },
+    {
+      "path": "objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.filteredSupportSurface.glb",
+      "bytes": 2957,
+      "sha256": "6b7404395f01b0873d774d6c4fc66089a5dd0d3cdbb124a83973eac338e7a9a1"
+    },
+    {
+      "path": "objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/0d29db65c42d5ca9021037c0b73914e9d63e0096.glb",
+      "bytes": 530596,
+      "sha256": "2d889b0521a6f4b11bfcae824846d104400dbb7eef2fef9d59b21ffeb239c790"
+    },
+    {
+      "path": "objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.glb",
+      "bytes": 17172,
+      "sha256": "eb068356d20195bae1e8347d7627349b5c522756e70dfc8d5cdaf5591aa32eb3"
+    },
+    {
+      "path": "objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.filteredSupportSurface.ply",
+      "bytes": 623,
+      "sha256": "754d680e9c770d7f619e656039f1bcb4307451baec1faff182ab13d5a7271972"
+    },
+    {
+      "path": "objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.object_config.json",
+      "bytes": 1004,
+      "sha256": "71d3cc6d7c9bb11e5b80a6cc22d8b02347a5580cb6a6964c90bd430ed080103c"
+    },
+    {
+      "path": "objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.collider.glb",
+      "bytes": 3268,
+      "sha256": "cab3f5448885becdc10580a5e27285a6eb59a3c5c863f8883e227524d7fe4542"
+    },
+    {
+      "path": "objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.filteredSupportSurface.glb",
+      "bytes": 1857,
+      "sha256": "dfb30dcdbfb96107e4b07a0a315843ed5717e298e8c38b714602093d80008315"
+    },
+    {
+      "path": "objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.object_config.json",
+      "bytes": 500,
+      "sha256": "e366166e642a67657d70c426c040a78adcf6e7b04befc3b6adadab2bae3113ba"
+    },
+    {
+      "path": "objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/12f2b36812411b47a61f2a949e82e5127ce04557.glb",
+      "bytes": 16612,
+      "sha256": "c332e95d62d780638f69ca8f5fd600a1c870d699cfe3e8f4976d5e5e31ecb37c"
+    },
+    {
+      "path": "objects/1/1309f128b7bb4f88a82e7f837d1f70a5c02ccaad.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1309f128b7bb4f88a82e7f837d1f70a5c02ccaad.object_config.json",
+      "bytes": 292,
+      "sha256": "37cdebbd4a5cd1c5d4c062683467f54971e7fb748115a3110cbb570aae01c5db"
+    },
+    {
+      "path": "objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10e851b8c7ef80a87aeb5d0821e8164fd57b9e91.collider.glb",
+      "bytes": 118680,
+      "sha256": "23ae12ad68d14e0e9f8629c94844ed2e5fa5952df1e1fa01b7fceec8998ba6da"
+    },
+    {
+      "path": "objects/1/1309f128b7bb4f88a82e7f837d1f70a5c02ccaad.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1309f128b7bb4f88a82e7f837d1f70a5c02ccaad.collider.glb",
+      "bytes": 30016,
+      "sha256": "0ceb48bad427795f14dc8f3076670298a3fddd1d6ea959c6ea890fea67595a67"
+    },
+    {
+      "path": "objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.filteredSupportSurface.glb",
+      "bytes": 4509,
+      "sha256": "8a913701a54d9208e39fe7c7499b99d2cce3f028ffa8b5a10c2e85fe3e000da2"
+    },
+    {
+      "path": "objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.filteredSupportSurface.ply",
+      "bytes": 6241,
+      "sha256": "c57a78d1c412e5b1b53da2e4309b358bd52a3bc6386936bc15a32c611b976f17"
+    },
+    {
+      "path": "objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.object_config.json",
+      "bytes": 500,
+      "sha256": "3e4f6af93dd937c12c7be817c2e85f91eda94d367595998c10e49dc9d2b99842"
+    },
+    {
+      "path": "objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.collider.glb",
+      "bytes": 3844,
+      "sha256": "8789cddd8288205d9f6b9684eb5f964a820516b1c196ed0e3a95965cf097cdee"
+    },
+    {
+      "path": "objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.filteredSupportSurface.glb",
+      "bytes": 3188,
+      "sha256": "f1b387cc514a97e6760900b29ed1ba7f520576fc45f7bda9f7a65b312abf7aa7"
+    },
+    {
+      "path": "objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.filteredSupportSurface.ply",
+      "bytes": 510,
+      "sha256": "8c5887cf6d5b8d70e5e65735ababef25e0b7c3bfd01a67cde4aecae142626df8"
+    },
+    {
+      "path": "objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.collider.glb",
+      "bytes": 217004,
+      "sha256": "5e0a55cf2b25ec47726532c85cfada7f181e003125bfe2ed0d331aeeadb92ef5"
+    },
+    {
+      "path": "objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.object_config.json",
+      "bytes": 519,
+      "sha256": "4095f84a62181adce2e595c8703d64268ca169ceeb6a17b7a92e438cd2ac3d14"
+    },
+    {
+      "path": "objects/1/1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29.collider.glb",
+      "bytes": 3488,
+      "sha256": "d89b6b0788e6e3d8982d4cea9cb21fb839fa86f1ed3065aeceb389ee53e0e38d"
+    },
+    {
+      "path": "objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/14d3159664ea16859019f306ef64b59c18a65f6e.glb",
+      "bytes": 205252,
+      "sha256": "4ffa1c168370128109e062f192c478df7c9472b7fcecb1d29050ff9f9273e3c0"
+    },
+    {
+      "path": "objects/1/1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29.glb",
+      "bytes": 39048,
+      "sha256": "33f1875db9a2fea3c43e421ff2b83fde14eb77080d06588c4cf234ac1fee4a97"
+    },
+    {
+      "path": "objects/1/1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b52e8cc672a1273dc0e0ebf73c38235a5cb6a29.object_config.json",
+      "bytes": 292,
+      "sha256": "5959d98879add6f9c00acf7e1d9b406d671ed58ce030d6cec4f0df77ef3060d8"
+    },
+    {
+      "path": "objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.collider.glb",
+      "bytes": 3412,
+      "sha256": "04fddcb77f6235b361df642ad9f42878fc79123a99356c75872d1c841da357bf"
+    },
+    {
+      "path": "objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.filteredSupportSurface.glb",
+      "bytes": 9214,
+      "sha256": "41e869e7c0607b92b50b9cbdbe130c86d426f6855e13ca3ea543c51f8d09e27a"
+    },
+    {
+      "path": "objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.filteredSupportSurface.ply",
+      "bytes": 5423,
+      "sha256": "572adda3699b780f9de649ae98c2c382edd4006cad368e8dd7769b8deb61227b"
+    },
+    {
+      "path": "objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.object_config.json",
+      "bytes": 1003,
+      "sha256": "4a2cc03c90e4c935976332c556298fa91919c6e77cbcb05c5bdfee2640e620c6"
+    },
+    {
+      "path": "objects/1/1d438cf2a0be5706ffdbd1489fbfb27f712589a0.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1d438cf2a0be5706ffdbd1489fbfb27f712589a0.collider.glb",
+      "bytes": 4096,
+      "sha256": "d19c7fc8d15e4ea96590e81d0939af0513077b21ba9cd9aa64a2c36565394b38"
+    },
+    {
+      "path": "objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/10444a1165c1745f960eb6183d24dd05b60e781f.glb",
+      "bytes": 557288,
+      "sha256": "124f9964d096dd21b4e246ff0481a965de432381d2aa65eac85854ca74f00caa"
+    },
+    {
+      "path": "objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/17a8f7c040254439fe8771f66f1c526c71d24904.glb",
+      "bytes": 265980,
+      "sha256": "9bddfe25ff00deb7648e6614b700a9395f8a724b93662592cc867672c5908391"
+    },
+    {
+      "path": "objects/1/1d438cf2a0be5706ffdbd1489fbfb27f712589a0.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1d438cf2a0be5706ffdbd1489fbfb27f712589a0.object_config.json",
+      "bytes": 292,
+      "sha256": "51c671d1d1b545d2f130cbc06e5f24f81c7c2cbbb43a6accafbc998bd1ebb6b1"
+    },
+    {
+      "path": "objects/2/2056e0db6d0d28703bb100d63a2d864ffe295b10.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2056e0db6d0d28703bb100d63a2d864ffe295b10.collider.glb",
+      "bytes": 27752,
+      "sha256": "600aeb2ca126a0ee3e2d95085a57689055cc18bb3d666c578670b7b78f19a26b"
+    },
+    {
+      "path": "objects/1/1d438cf2a0be5706ffdbd1489fbfb27f712589a0.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1d438cf2a0be5706ffdbd1489fbfb27f712589a0.glb",
+      "bytes": 90644,
+      "sha256": "28ecce7359830569c20788834ca4020afbd08c53538523b699e172cd26a330f6"
+    },
+    {
+      "path": "objects/2/2056e0db6d0d28703bb100d63a2d864ffe295b10.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2056e0db6d0d28703bb100d63a2d864ffe295b10.object_config.json",
+      "bytes": 198,
+      "sha256": "6c6e8438e2dc8786a47c8121e932812016d7fcadea0bc44bf0f2d05b05dab0c2"
+    },
+    {
+      "path": "objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1b914fb6bcc81386bfa1ff7a3eb8412b7ac581ff.glb",
+      "bytes": 165664,
+      "sha256": "71b361190ead4d4684ccb248a6254c3a06e03d19fe148deb57c6ed2eacd6bdaf"
+    },
+    {
+      "path": "objects/2/2056e0db6d0d28703bb100d63a2d864ffe295b10.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2056e0db6d0d28703bb100d63a2d864ffe295b10.glb",
+      "bytes": 55756,
+      "sha256": "648d72fa2e5cfcac82e2b670faeb4ebf68346251e774f4e5f292905ed041942e"
+    },
+    {
+      "path": "objects/2/2555d0416b8d7e2d59442bc387f37e7751996b67.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2555d0416b8d7e2d59442bc387f37e7751996b67.object_config.json",
+      "bytes": 291,
+      "sha256": "4af857a6ea662194acefabc640c42f525b543c3e11dabb7453ea65d28c91496b"
+    },
+    {
+      "path": "objects/2/2555d0416b8d7e2d59442bc387f37e7751996b67.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2555d0416b8d7e2d59442bc387f37e7751996b67.collider.glb",
+      "bytes": 19584,
+      "sha256": "5efe4b4619e88daa510c433bd2beb59b3eccc361d00689604931ad086badffc7"
+    },
+    {
+      "path": "objects/0/094a90223e00de79554efad92667fd50e3a61d25.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/0/094a90223e00de79554efad92667fd50e3a61d25.glb",
+      "bytes": 1814444,
+      "sha256": "35d68969d5855d47a259f73361b0fbc16ec5be27da22143d7898651b39a7bc69"
+    },
+    {
+      "path": "objects/2/28e0ff5e3f1d1b2918986d871c0f66631c918060.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/28e0ff5e3f1d1b2918986d871c0f66631c918060.object_config.json",
+      "bytes": 292,
+      "sha256": "73aecfbd93971a02f84e3bd259a63f0d98a3ac805e283c05c4d921c5b2b36aab"
+    },
+    {
+      "path": "objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.collider.glb",
+      "bytes": 3840,
+      "sha256": "6d5038af2dbfd0828acb025fc72efbfbdcf724b4bf6e8fad48891f863e8bc75f"
+    },
+    {
+      "path": "objects/1/1309f128b7bb4f88a82e7f837d1f70a5c02ccaad.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/1/1309f128b7bb4f88a82e7f837d1f70a5c02ccaad.glb",
+      "bytes": 1194028,
+      "sha256": "27a2843b55853ee058fed27829315de7a2f79bf66d7f4a7bfd1f9be15b260d96"
+    },
+    {
+      "path": "objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.object_config.json",
+      "bytes": 500,
+      "sha256": "97f141aca9714fb26ea94d6d9f0c0129a5993701e25884061130573db129aed5"
+    },
+    {
+      "path": "objects/2/28e0ff5e3f1d1b2918986d871c0f66631c918060.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/28e0ff5e3f1d1b2918986d871c0f66631c918060.glb",
+      "bytes": 69800,
+      "sha256": "1d07a00539e5a9b6ffa98988d0d18f8a73f3eacc22de395fe2964c88d488f94f"
+    },
+    {
+      "path": "objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.filteredSupportSurface.glb",
+      "bytes": 4629,
+      "sha256": "b709254e206417b407efefc24d6b150cd806ecfbbbeed16d27a083573af757d6"
+    },
+    {
+      "path": "objects/2/28e0ff5e3f1d1b2918986d871c0f66631c918060.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/28e0ff5e3f1d1b2918986d871c0f66631c918060.collider.glb",
+      "bytes": 34188,
+      "sha256": "340edbd56dbeff2ebed7169fe2dd311d2d5953998fb8fb3bbccd7d59d7468bdd"
+    },
+    {
+      "path": "objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.collider.glb",
+      "bytes": 3304,
+      "sha256": "a1423494f477f1caacc66dcc7993bf22065e8d73e3cc8a6c4794abf450556b8c"
+    },
+    {
+      "path": "objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.filteredSupportSurface.ply",
+      "bytes": 393,
+      "sha256": "2db2d77782ff5278f1eb75b7729b932f1493a09bdf0ccde7f473918170967a0e"
+    },
+    {
+      "path": "objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.filteredSupportSurface.glb",
+      "bytes": 1117,
+      "sha256": "43fe025ee6efd8dae77b1bbcd601c0173e53271cd81b95887856e8a029dea1db"
+    },
+    {
+      "path": "objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.object_config.json",
+      "bytes": 500,
+      "sha256": "f4f4317c15f6f600fff26eeded369f384de6c9847cdcd3a62404d22fd9265d68"
+    },
+    {
+      "path": "objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cdb28938dff1f9ab13aee7630cea51f44f60952.glb",
+      "bytes": 187304,
+      "sha256": "99841756fdc9ee7139278da4f4e44592e0b27076ee5d415a83ef790447442743"
+    },
+    {
+      "path": "objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2cf4b67bb56ea55fae5db024212ebfe8a3a4b6eb.glb",
+      "bytes": 21408,
+      "sha256": "718cd2cc24db809b17948f9f37970ebc9f28cc02e9f9f82890d8b76cfeaa47dd"
+    },
+    {
+      "path": "objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.filteredSupportSurface.ply",
+      "bytes": 48377,
+      "sha256": "8f8d9cef8bc90a78c17970daf4f2bb65adc9eed10b676fb721ac08c6e87636b8"
+    },
+    {
+      "path": "objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.filteredSupportSurface.glb",
+      "bytes": 29533,
+      "sha256": "07ff2519d4d48d57310d56b930e13c75d37c5ffa5cf79f4b630a53ba24dd72b0"
+    },
+    {
+      "path": "objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.collider.glb",
+      "bytes": 90296,
+      "sha256": "5fbc3caad8e3ff7b6aac29de769d26aa5d67a01e7745e562b5bd126d027de237"
+    },
+    {
+      "path": "objects/2/2ef61d99fd000eb3fbda85d82e022a9fafda98d8.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2ef61d99fd000eb3fbda85d82e022a9fafda98d8.collider.glb",
+      "bytes": 41052,
+      "sha256": "9b4affc2e3b64f1cb7e8ee91212871893e80fdafb30f8938cfffa5a25e852fc9"
+    },
+    {
+      "path": "objects/2/2ef61d99fd000eb3fbda85d82e022a9fafda98d8.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2ef61d99fd000eb3fbda85d82e022a9fafda98d8.object_config.json",
+      "bytes": 198,
+      "sha256": "4470cdadf133543f5d107cd3a190e3fc2a983cae59dcc7b8d1d07de0ba8f3be6"
+    },
+    {
+      "path": "objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.object_config.json",
+      "bytes": 1003,
+      "sha256": "24b6de0b9e6b4085ff55d1aed15a79aee9cf86fb84fcc59a4be70851535204db"
+    },
+    {
+      "path": "objects/2/2efebdcc1ba9514b0deb0dfb05951341432bd26a.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2efebdcc1ba9514b0deb0dfb05951341432bd26a.collider.glb",
+      "bytes": 23652,
+      "sha256": "acf56bb7183064f821d86c1121d64fc3213d6c2a005b4f28afffc711b8976368"
+    },
+    {
+      "path": "objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.collider.glb",
+      "bytes": 4200,
+      "sha256": "850c90675536349c2f53207fa9a33eb29a15ba8a931cbf052c8bc7483e9e6eb8"
+    },
+    {
+      "path": "objects/2/2efebdcc1ba9514b0deb0dfb05951341432bd26a.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2efebdcc1ba9514b0deb0dfb05951341432bd26a.object_config.json",
+      "bytes": 291,
+      "sha256": "05e0353050d31680ab20b1944072090d2f1a1945e6569f4abc09d43287206ea1"
+    },
+    {
+      "path": "objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.filteredSupportSurface.glb",
+      "bytes": 1231,
+      "sha256": "6632353cef07c48d66e04ca301d6f3387c0c428cd774544294261b43c7edcf3e"
+    },
+    {
+      "path": "objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.filteredSupportSurface.ply",
+      "bytes": 337,
+      "sha256": "9625ae3391f255905ed885c38462e15cea597c4f2e069fecb14f3974bef5126e"
+    },
+    {
+      "path": "objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.object_config.json",
+      "bytes": 500,
+      "sha256": "11a0511f5726b7de748c382ca8e49a01d807d5151882126a8b842f09cd206d0c"
+    },
+    {
+      "path": "objects/3/33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d.collider.glb",
+      "bytes": 5540,
+      "sha256": "729c6341ab938dceb559d74f7cd39a841e540c9cdfd0bbdb38f932d006453593"
+    },
+    {
+      "path": "objects/2/2ef61d99fd000eb3fbda85d82e022a9fafda98d8.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2ef61d99fd000eb3fbda85d82e022a9fafda98d8.glb",
+      "bytes": 197516,
+      "sha256": "1d79cb54a5003cb2f806e74dc1515cef60225f4f79570fc9480da2156699e141"
+    },
+    {
+      "path": "objects/3/33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d.object_config.json",
+      "bytes": 292,
+      "sha256": "86addd70994ac237d0e5a86f2977c75ad24b8ab4ed35003cdd03b38378e6038b"
+    },
+    {
+      "path": "objects/3/33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/33e2521c0692e52b4fb6a3f1bdc0cb3e7b37a88d.glb",
+      "bytes": 56512,
+      "sha256": "84cdb8ae13b9f9935b22c5decdfa2f654faf54d49061c14f7283b8b5dd70f2a9"
+    },
+    {
+      "path": "objects/3/35230dedd6b3f035a602f7226fae2dcb61bf1e4a.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/35230dedd6b3f035a602f7226fae2dcb61bf1e4a.collider.glb",
+      "bytes": 3880,
+      "sha256": "2536d72a50ec0ff3a3b170c9c119f3d283e08c4538b7b291fe33a9bf23110037"
+    },
+    {
+      "path": "objects/3/35230dedd6b3f035a602f7226fae2dcb61bf1e4a.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/35230dedd6b3f035a602f7226fae2dcb61bf1e4a.object_config.json",
+      "bytes": 198,
+      "sha256": "197b7cd7fafa748fb2110f9ad1626f209dc5c9409858da9fdf672c7589c783a2"
+    },
+    {
+      "path": "objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3033be75f2ac15885e8f4813dc55e168af09e91f.glb",
+      "bytes": 265396,
+      "sha256": "575de10435fb93518251156f7fcdea5135d48440deb3841970f7b5b04ff7c65f"
+    },
+    {
+      "path": "objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.filteredSupportSurface.glb",
+      "bytes": 18629,
+      "sha256": "691b47ceb3ea5d18a123f715ddef9c7c2de09c2185de333d33f4178c335aeec8"
+    },
+    {
+      "path": "objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2db9ab8f4ff2dc2315a41244168e7d21a36d2216.glb",
+      "bytes": 483660,
+      "sha256": "27aa59c2737d4dfa5ac3b37a0f578db08b2016c3a478bdad48bf08949da9fab9"
+    },
+    {
+      "path": "objects/3/35230dedd6b3f035a602f7226fae2dcb61bf1e4a.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/35230dedd6b3f035a602f7226fae2dcb61bf1e4a.glb",
+      "bytes": 51640,
+      "sha256": "ea661481df30c48299bc539ed444d88dafe71a4adf9c3189046bfe50c6973fd0"
+    },
+    {
+      "path": "objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.object_config.json",
+      "bytes": 1003,
+      "sha256": "1b7cf966e1cfedfd92d8ef1cb797b2a421bfed170da4cfc921d7f9ad0904e1ed"
+    },
+    {
+      "path": "objects/3/3750c1d708079a103ee2c64a9215d8ba8b10e86f.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3750c1d708079a103ee2c64a9215d8ba8b10e86f.collider.glb",
+      "bytes": 19528,
+      "sha256": "05f6db4268ff7eb5f2af0feedcd94e89e9ab6c1c144d367b2032ce7fb3820159"
+    },
+    {
+      "path": "objects/3/3750c1d708079a103ee2c64a9215d8ba8b10e86f.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3750c1d708079a103ee2c64a9215d8ba8b10e86f.object_config.json",
+      "bytes": 292,
+      "sha256": "523dde637306d23c2eabf06da35ab46ea203921b54c45f9c35ad1901ebe64fe2"
+    },
+    {
+      "path": "objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.collider.glb",
+      "bytes": 139128,
+      "sha256": "4e4de2a83d81b382d5b853eec403c8a071233475f99a92b6ac812d948d24724a"
+    },
+    {
+      "path": "objects/3/3959f46fe4a088891d360bfedee7c63587a51cb1.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3959f46fe4a088891d360bfedee7c63587a51cb1.collider.glb",
+      "bytes": 3268,
+      "sha256": "f5f823b03e8c78e3f640349f898a707143ddd49c4ea49bcaaf74346ec67db0eb"
+    },
+    {
+      "path": "objects/3/3959f46fe4a088891d360bfedee7c63587a51cb1.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3959f46fe4a088891d360bfedee7c63587a51cb1.object_config.json",
+      "bytes": 292,
+      "sha256": "313e8f0c3b82dcbd2cd17d7a20fb3ca36e2f1c3c7517e610523b33dc2cfdf32d"
+    },
+    {
+      "path": "objects/3/3e3e11715d4597064167a3408085e9917974e7b8.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3e3e11715d4597064167a3408085e9917974e7b8.collider.glb",
+      "bytes": 9872,
+      "sha256": "28a65c19b6a2e5371c0779d25935747f8fa766fe43a9948160bd075209b8bce5"
+    },
+    {
+      "path": "objects/3/3750c1d708079a103ee2c64a9215d8ba8b10e86f.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3750c1d708079a103ee2c64a9215d8ba8b10e86f.glb",
+      "bytes": 308968,
+      "sha256": "07364a65cd970269b81cb6dba5b7b18a1d956b0a6a555af3e5ddf2db691e7e41"
+    },
+    {
+      "path": "objects/3/3959f46fe4a088891d360bfedee7c63587a51cb1.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3959f46fe4a088891d360bfedee7c63587a51cb1.glb",
+      "bytes": 14292,
+      "sha256": "b95a657f7c2d302d432fc444fb096bd94fe32cc407546fa4b5b77d347544ae48"
+    },
+    {
+      "path": "objects/3/3e3e11715d4597064167a3408085e9917974e7b8.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3e3e11715d4597064167a3408085e9917974e7b8.object_config.json",
+      "bytes": 292,
+      "sha256": "440cd27a0c5a030ea48b431d8d2f38bdc5b0b2f7a20aae60a1512c5c248a5a28"
+    },
+    {
+      "path": "objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.filteredSupportSurface.glb",
+      "bytes": 1901,
+      "sha256": "7da6e5ba7ac92663d843341968275a71d772aa0fb381f96d060bb61ac8db6641"
+    },
+    {
+      "path": "objects/3/3e3e11715d4597064167a3408085e9917974e7b8.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3e3e11715d4597064167a3408085e9917974e7b8.glb",
+      "bytes": 82716,
+      "sha256": "987c419532d931776f3adbbcd85664a8349fea87f6ec214cb1640c3cdca53395"
+    },
+    {
+      "path": "objects/2/2555d0416b8d7e2d59442bc387f37e7751996b67.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2555d0416b8d7e2d59442bc387f37e7751996b67.glb",
+      "bytes": 897788,
+      "sha256": "c181123b72eeb3284e6a717bca3e54f187a290f9efebe92a0871f8c05e8f5247"
+    },
+    {
+      "path": "objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.filteredSupportSurface.ply",
+      "bytes": 423,
+      "sha256": "23f291a325cb47dae93b07c048a94282a5f115498e354c372a345daa22122ac1"
+    },
+    {
+      "path": "objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.collider.glb",
+      "bytes": 3848,
+      "sha256": "4658608a5f0741a9accce6882e07ca2c583c6fd43d6887fb8f0f3e850c8185a8"
+    },
+    {
+      "path": "objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.object_config.json",
+      "bytes": 500,
+      "sha256": "0b93d27495a4bc86182c50ff6b65f5e7a1475f5d6995623828ff7f2f6ddc6dfc"
+    },
+    {
+      "path": "objects/2/2efebdcc1ba9514b0deb0dfb05951341432bd26a.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/2/2efebdcc1ba9514b0deb0dfb05951341432bd26a.glb",
+      "bytes": 771852,
+      "sha256": "13bbac72c2df74ac22241d6f2d09d2883ffcf3c0f354bfc5068f7bf0e35f9702"
+    },
+    {
+      "path": "objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3efb80a75720ef1848a6ddf5011959653e53b172.glb",
+      "bytes": 31356,
+      "sha256": "3d0e7fadca3a7842ebcf3b6ba4f16da719530b345328a5691dfd08ffaa378f89"
+    },
+    {
+      "path": "objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.filteredSupportSurface.ply",
+      "bytes": 536,
+      "sha256": "98ee41052db6a37f0405dba6d1f52b46bbe2a812e59fdb16a73ab2f723119fb2"
+    },
+    {
+      "path": "objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.collider.glb",
+      "bytes": 4496,
+      "sha256": "9073b6ef03820621218e1a9a13fa5a565db66b3b62a3908cbe21ff32e15a427c"
+    },
+    {
+      "path": "objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.filteredSupportSurface.glb",
+      "bytes": 2360,
+      "sha256": "1eb036e957b68ae34d9dfcfa0f22c4248f94bbf2ba6935a1e9bd64fa989bfc4a"
+    },
+    {
+      "path": "objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.object_config.json",
+      "bytes": 519,
+      "sha256": "a933b194b552c31ec6cc58bee68c0754eea5382ea14c4f6e38814b05906f5589"
+    },
+    {
+      "path": "objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/3fe10518eb7c00d7a58b15a513980e9606373a27.glb",
+      "bytes": 53532,
+      "sha256": "016a1433ef7f3a952b73c55aded586db0d6313104458ceca97318f7577d8b22d"
+    },
+    {
+      "path": "objects/4/40336eb96234276636358281389c15b6a8ccc9b2.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/40336eb96234276636358281389c15b6a8ccc9b2.object_config.json",
+      "bytes": 1004,
+      "sha256": "3597871f066434dacaf65b42c96d24b3eb3ebca7ac281bccac933b0746036a08"
+    },
+    {
+      "path": "objects/4/40336eb96234276636358281389c15b6a8ccc9b2.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/40336eb96234276636358281389c15b6a8ccc9b2.filteredSupportSurface.glb",
+      "bytes": 18875,
+      "sha256": "6c54eb65c6e4d435e08bc90ae687edcc27efef83a154f5781848f990230f8293"
+    },
+    {
+      "path": "objects/4/40336eb96234276636358281389c15b6a8ccc9b2.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/40336eb96234276636358281389c15b6a8ccc9b2.filteredSupportSurface.ply",
+      "bytes": 29904,
+      "sha256": "d1f83912a42cf608a10a3a67d9efc676ef4e31e3bb8cdf28747708e2506d6457"
+    },
+    {
+      "path": "objects/4/42026ccb6057538e11416e8d630fc1b7eab2085f.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/42026ccb6057538e11416e8d630fc1b7eab2085f.collider.glb",
+      "bytes": 26852,
+      "sha256": "2184c92fbcb1fb2454d19b48a5943aab8428bebc187bf9eaf9862d847d67b3f9"
+    },
+    {
+      "path": "objects/4/42026ccb6057538e11416e8d630fc1b7eab2085f.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/42026ccb6057538e11416e8d630fc1b7eab2085f.object_config.json",
+      "bytes": 292,
+      "sha256": "75679be2dc77341b720be4de2e254ed6ba1c756bf2d2899d5f77b09183f5446a"
+    },
+    {
+      "path": "objects/4/429de8a53ddf94a47ec553147dc8603b803be056.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/429de8a53ddf94a47ec553147dc8603b803be056.filteredSupportSurface.glb",
+      "bytes": 2206,
+      "sha256": "19b835a1cd73bf49c9019118411de1d7e06fcae46cafea0fcf5bf82c5f64bb97"
+    },
+    {
+      "path": "objects/4/429de8a53ddf94a47ec553147dc8603b803be056.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/429de8a53ddf94a47ec553147dc8603b803be056.collider.glb",
+      "bytes": 11548,
+      "sha256": "610d67d9d57d11319f70f2d3f94d1efcf1dc54debf3727b35269fc277d0be3f4"
+    },
+    {
+      "path": "objects/4/40336eb96234276636358281389c15b6a8ccc9b2.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/40336eb96234276636358281389c15b6a8ccc9b2.collider.glb",
+      "bytes": 91608,
+      "sha256": "6de138e544330c5c20c57ad9572f32e5f70e4a09d78594d638b03f8f8ca16478"
+    },
+    {
+      "path": "objects/4/429de8a53ddf94a47ec553147dc8603b803be056.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/429de8a53ddf94a47ec553147dc8603b803be056.filteredSupportSurface.ply",
+      "bytes": 423,
+      "sha256": "82ab7957b7140e8e9b667992964605e45ed0fa1290189e155b10713fc380aeed"
+    },
+    {
+      "path": "objects/4/42026ccb6057538e11416e8d630fc1b7eab2085f.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/42026ccb6057538e11416e8d630fc1b7eab2085f.glb",
+      "bytes": 194032,
+      "sha256": "547d35a0fbd4748746e682a599f7666445cf8cb3a16c9cd6eebae419a62b0baa"
+    },
+    {
+      "path": "objects/4/429de8a53ddf94a47ec553147dc8603b803be056.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/429de8a53ddf94a47ec553147dc8603b803be056.object_config.json",
+      "bytes": 519,
+      "sha256": "268ff76764a1e56cc20fcbc65dda17a86938a6d3f41abe215f6251f8d4f15902"
+    },
+    {
+      "path": "objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.collider.glb",
+      "bytes": 4356,
+      "sha256": "846cb08f0e63b21f153b68283c97410c435a22b8e4f5acfbe94bdcfdf8d89ab9"
+    },
+    {
+      "path": "objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.filteredSupportSurface.glb",
+      "bytes": 2664,
+      "sha256": "eefc632a44fc48b4fe75e963d3943b4b44a61e589dd6ab6411c6435306f007c4"
+    },
+    {
+      "path": "objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.filteredSupportSurface.ply",
+      "bytes": 1951,
+      "sha256": "2395e63d6adec38fa00403a5b7a7901cf17589176c0a36a0032f6cd9ea99f8cb"
+    },
+    {
+      "path": "objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.object_config.json",
+      "bytes": 500,
+      "sha256": "9030fff3c5d122344d01a25b2fe8ba07a275d174727945b0964ff66418f355f4"
+    },
+    {
+      "path": "objects/4/4794fc54b3a1d01f83a8656004e60a2df41b64d7.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4794fc54b3a1d01f83a8656004e60a2df41b64d7.collider.glb",
+      "bytes": 1536,
+      "sha256": "d4e75b5b866945decb89730ac82728a6555f38a430de02e994f38a2a92138800"
+    },
+    {
+      "path": "objects/4/4794fc54b3a1d01f83a8656004e60a2df41b64d7.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4794fc54b3a1d01f83a8656004e60a2df41b64d7.object_config.json",
+      "bytes": 292,
+      "sha256": "d0ae83309ba6c859f0a616e08fe981201849e6dc673ab9e26c84f26b840623b1"
+    },
+    {
+      "path": "objects/4/4794fc54b3a1d01f83a8656004e60a2df41b64d7.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4794fc54b3a1d01f83a8656004e60a2df41b64d7.glb",
+      "bytes": 14532,
+      "sha256": "50b6848110dda3a6e572434a9fa24ca66ebb74f951558dfb18ca6546b0ecf7e5"
+    },
+    {
+      "path": "objects/4/429de8a53ddf94a47ec553147dc8603b803be056.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/429de8a53ddf94a47ec553147dc8603b803be056.glb",
+      "bytes": 178972,
+      "sha256": "9d8e14b4fd55539ff1eabd8bf0647e555a5c96a5c1f3279a69b6826dec4ad2e8"
+    },
+    {
+      "path": "objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/454ed03a4af5b3a58d23ebf1aaadbe9a4968e15d.glb",
+      "bytes": 76064,
+      "sha256": "d2aa92c4f84c29c7ae62913e7b31ae8e8a0152d032d8e8f423b077ff8a5b7fc9"
+    },
+    {
+      "path": "objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.filteredSupportSurface.glb",
+      "bytes": 19360,
+      "sha256": "92abb9863776d8c577fb7604f05b7adfaaab66e1d33365d97dd56b664405a005"
+    },
+    {
+      "path": "objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.object_config.json",
+      "bytes": 1003,
+      "sha256": "d4dd81b68a664c57c4e05bccab0ee98abf2c2c23343da7ee593924763a48717a"
+    },
+    {
+      "path": "objects/5/50650be5620fefc2598653fbf9719096f457f9cb.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/50650be5620fefc2598653fbf9719096f457f9cb.collider.glb",
+      "bytes": 3412,
+      "sha256": "c288d88183e04786a5c024ba2d06adde4ac177e183eea7da4fde7e5752ffed57"
+    },
+    {
+      "path": "objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.filteredSupportSurface.ply",
+      "bytes": 91870,
+      "sha256": "ca832384010468cf44e41f9f4a3a5cdd72e5410b0ff274e3b5fab61d5593a90b"
+    },
+    {
+      "path": "objects/5/50650be5620fefc2598653fbf9719096f457f9cb.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/50650be5620fefc2598653fbf9719096f457f9cb.object_config.json",
+      "bytes": 292,
+      "sha256": "be1ef22dd8812ae2c29110912d02490a931a85ec521dc688b5a45dd0a9cf670e"
+    },
+    {
+      "path": "objects/5/50650be5620fefc2598653fbf9719096f457f9cb.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/50650be5620fefc2598653fbf9719096f457f9cb.glb",
+      "bytes": 125504,
+      "sha256": "99b8187344f31b6512981ff6d587d764c61349938b86379b958574baeee47740"
+    },
+    {
+      "path": "objects/4/40336eb96234276636358281389c15b6a8ccc9b2.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/40336eb96234276636358281389c15b6a8ccc9b2.glb",
+      "bytes": 698056,
+      "sha256": "5da5e52fb2dc301fc665ab2d52dd9bb9a56addf1574d8d0966d3d5c296bd7d14"
+    },
+    {
+      "path": "objects/5/568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5.collider.glb",
+      "bytes": 19156,
+      "sha256": "6efb449d4758157f0fc8f55963157d35e5f6b95c9aaab6ca5b0887cf7e677336"
+    },
+    {
+      "path": "objects/5/568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5.object_config.json",
+      "bytes": 179,
+      "sha256": "065e21c600d76f628418eb3e268167b95c85c21ca0ca028480d320e52e4b2bf3"
+    },
+    {
+      "path": "objects/5/57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70.collider.glb",
+      "bytes": 6144,
+      "sha256": "a69d52f8e1a8947b65e3845851a8babd5d9d673c0230ca25bbfe484eb020cb49"
+    },
+    {
+      "path": "objects/5/57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70.object_config.json",
+      "bytes": 292,
+      "sha256": "dc333f6e2269f0e5cf599a30a4e6c894c01ceb5cd37578821b738cd3b37f8e6c"
+    },
+    {
+      "path": "objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.glb",
+      "bytes": 241520,
+      "sha256": "e6029e2710f729d8b7d1fa77a95e721e9cd81ad8348dd5308c817a563fc86875"
+    },
+    {
+      "path": "objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.filteredSupportSurface.glb",
+      "bytes": 13976,
+      "sha256": "08e4a4e6f78b5cb2999b21159ffa3a10866314fa364efd3733e2aa2e91c795d8"
+    },
+    {
+      "path": "objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.filteredSupportSurface.ply",
+      "bytes": 4837,
+      "sha256": "b0a3717da76739a31de5e29ba59e3c6990044b4dccfaf351392deb867f115cd4"
+    },
+    {
+      "path": "objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/4/4e2258e475ad86158a5cfb7edf908f655630c51a.collider.glb",
+      "bytes": 374496,
+      "sha256": "a79768a8db485b562e79b4fa2c7bc6fc27bdc938ac1b2dd481955a340af62046"
+    },
+    {
+      "path": "objects/5/568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/568a7d49f3f327c9c8ce5f4b47291a44edbb7aa5.glb",
+      "bytes": 309992,
+      "sha256": "1f9ae99c890d6379fe49fb2cf0a5ede54d923119cd82fcb769a8c1625e620487"
+    },
+    {
+      "path": "objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.object_config.json",
+      "bytes": 519,
+      "sha256": "f6980227cddd14302c679fa0e9c122401e2473da6cc6a5fa309483d915f6927e"
+    },
+    {
+      "path": "objects/5/5a8e29db883b2ace2e369b8032b8e276ae9339ac.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5a8e29db883b2ace2e369b8032b8e276ae9339ac.collider.glb",
+      "bytes": 24720,
+      "sha256": "5805ba1e5fcd94e3567b72ce8461d3c34571e2283c579aa73d2f89ce701ad935"
+    },
+    {
+      "path": "objects/5/5a8e29db883b2ace2e369b8032b8e276ae9339ac.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5a8e29db883b2ace2e369b8032b8e276ae9339ac.object_config.json",
+      "bytes": 292,
+      "sha256": "517927b7567a3094e394b55d18f92e9a539b7d33aac27896a4eda2277c63384b"
+    },
+    {
+      "path": "objects/5/5bc304ca5557edc8a25e7dc579b128100e9c284c.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5bc304ca5557edc8a25e7dc579b128100e9c284c.collider.glb",
+      "bytes": 3412,
+      "sha256": "c74709da535e46e8776697ae40c8ede704601d1740040d78d51408e8456a6b8b"
+    },
+    {
+      "path": "objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.collider.glb",
+      "bytes": 438004,
+      "sha256": "5931b624a6d57246957ddab89aa95f36c32225c6f0cb214e0495bf19b5715035"
+    },
+    {
+      "path": "objects/5/5bc304ca5557edc8a25e7dc579b128100e9c284c.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5bc304ca5557edc8a25e7dc579b128100e9c284c.object_config.json",
+      "bytes": 179,
+      "sha256": "c8f36f5ea33485df0b47300c056ad2ddf2a9b104f88de65a5bebf1ed77723c16"
+    },
+    {
+      "path": "objects/5/5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa.collider.glb",
+      "bytes": 25900,
+      "sha256": "ac94c21acd3287e5f499f71efbf8550d64862e176adb49066a2aca3477d150fd"
+    },
+    {
+      "path": "objects/5/5bc304ca5557edc8a25e7dc579b128100e9c284c.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5bc304ca5557edc8a25e7dc579b128100e9c284c.glb",
+      "bytes": 125692,
+      "sha256": "425731f37262fe3a6bc83ad2cbf2c095c099d3d1f34fd9e471e01745c5c89286"
+    },
+    {
+      "path": "objects/5/5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa.object_config.json",
+      "bytes": 292,
+      "sha256": "fdc515856858cc12018c05880c3cc0b349cdfaace420d4409d131d0943f5d84e"
+    },
+    {
+      "path": "objects/5/5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f.collider.glb",
+      "bytes": 3268,
+      "sha256": "37f0d3bbd87504e675026f8fc4632dec39f04c594d152964e8341d79f7227429"
+    },
+    {
+      "path": "objects/5/5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f.glb",
+      "bytes": 21936,
+      "sha256": "c0fb2009f685249faa35c0c57adcbe0d2411e83ab98ccac99b5b1ff824661116"
+    },
+    {
+      "path": "objects/5/5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5ece3ffd87ad47ae85dd04c925cc63f9760e6b7f.object_config.json",
+      "bytes": 292,
+      "sha256": "bcadda54a698eb8bc06cc9a1539e702a8adf73ee795cb6cd30be2c61c96b0cc8"
+    },
+    {
+      "path": "objects/5/57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/57d2b6c1b3bb6903c7683cff9ba9016a8c50ff70.glb",
+      "bytes": 699016,
+      "sha256": "afaeb5dd3a10ec6fc4d661f320cdf1c0777790537d6e3ab4f1bd5bec05064d1b"
+    },
+    {
+      "path": "objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.filteredSupportSurface.glb",
+      "bytes": 3552,
+      "sha256": "dfa2ba9dc8f1bb1334f4092dd5ff22fa30552cb463aedde4d79530cc868c7bd8"
+    },
+    {
+      "path": "objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/3/36a3c75bced5d1b7785f94ab35406664bdef9f80.glb",
+      "bytes": 3062496,
+      "sha256": "35cbf232dff61ce6cf964ad3b86aa91db84086970eddd9e8a5430f17a6a7867b"
+    },
+    {
+      "path": "objects/5/5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5d05a4dc9951f8e15c8efb9f4cead8b8d9f87cfa.glb",
+      "bytes": 298448,
+      "sha256": "9b0e8c94a944eb621ef33573da23a951e2dedabfea7bcbcb2c04c7c4269a98c6"
+    },
+    {
+      "path": "objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.collider.glb",
+      "bytes": 192128,
+      "sha256": "4c70b5a999420cfc44bcf2ecfa2f9c5088da3ffd35316a8866ae10319e94327e"
+    },
+    {
+      "path": "objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.object_config.json",
+      "bytes": 1004,
+      "sha256": "47bf312ae8e0c532d9f6f5f3812d8921471238c647b1f4b1ce5abbb667af3790"
+    },
+    {
+      "path": "objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.filteredSupportSurface.ply",
+      "bytes": 67204,
+      "sha256": "d13b4894c95050756d87675f89e65afabef764c0b1e02130d3cf5d4f85822264"
+    },
+    {
+      "path": "objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.filteredSupportSurface.glb",
+      "bytes": 79335,
+      "sha256": "9976228c392da9adc52e91a02de1b84c90ac15ce61a82d9936152a37d002a450"
+    },
+    {
+      "path": "objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.collider.glb",
+      "bytes": 272132,
+      "sha256": "f622e110be4d12ede68fa0916907fbacc5536b9a12f07dfe83d2326f87245323"
+    },
+    {
+      "path": "objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.filteredSupportSurface.ply",
+      "bytes": 163983,
+      "sha256": "c69a7d260fc12ed3b729250e745a2048d51dd12c4682d7b81616637b6596281d"
+    },
+    {
+      "path": "objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.object_config.json",
+      "bytes": 1003,
+      "sha256": "e738c8abd8bb3843196a5ce7fd0e22c144d1b3f02a324dfa92385dd2f0446687"
+    },
+    {
+      "path": "objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.filteredSupportSurface.glb",
+      "bytes": 20761,
+      "sha256": "9aa9f560a7be0466ebda354e6c2114bbf115126c16ceb0cafeb1c92e042f4f98"
+    },
+    {
+      "path": "objects/5/5a8e29db883b2ace2e369b8032b8e276ae9339ac.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5a8e29db883b2ace2e369b8032b8e276ae9339ac.glb",
+      "bytes": 952372,
+      "sha256": "146ac5aca647b4669fbc28891c2908850e1da6fe2e9eaa443f3c74f8d1d8bd54"
+    },
+    {
+      "path": "objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.object_config.json",
+      "bytes": 1003,
+      "sha256": "734a8be7d85e395385c9871869be8dd261ea6cb06c303852af65acc84a87d7e9"
+    },
+    {
+      "path": "objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.collider.glb",
+      "bytes": 4748,
+      "sha256": "4e3fda61bf306950295363ae5cfbd8d448006818b14c0658d4d4e0ce9a26a65e"
+    },
+    {
+      "path": "objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.filteredSupportSurface.glb",
+      "bytes": 3281,
+      "sha256": "5d1d085df23d8bab24d549a6a5d066af3563b84e4ce1a3ca17f95a831c8d2151"
+    },
+    {
+      "path": "objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.filteredSupportSurface.ply",
+      "bytes": 1209,
+      "sha256": "b692c7ac6f03183240d9e134d0b5a123cc47734471553baa3dd9c26d213b7e3e"
+    },
+    {
+      "path": "objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.glb",
+      "bytes": 121532,
+      "sha256": "08b71fee0555ae1abf913328b3f3ec0236cbc736c92580fb0643b5ed285ed31d"
+    },
+    {
+      "path": "objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/63c2ea5b388948f5c2625defb37dfd03f9dcecf5.object_config.json",
+      "bytes": 518,
+      "sha256": "dd788f05aa604a1c040c60c0fa596487c5d907b874112bc746283d1cc7a2792d"
+    },
+    {
+      "path": "objects/6/68a6193e3b67cedefb14ab590fc748bcc7955c5d.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/68a6193e3b67cedefb14ab590fc748bcc7955c5d.collider.glb",
+      "bytes": 34968,
+      "sha256": "284bbd7d17385f12dbdc5533d70e0cc79ba37b53cb5aeb9b602c1e80c713ed94"
+    },
+    {
+      "path": "objects/6/68a6193e3b67cedefb14ab590fc748bcc7955c5d.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/68a6193e3b67cedefb14ab590fc748bcc7955c5d.glb",
+      "bytes": 94900,
+      "sha256": "bf79bbecc4c98a8a207c48b84348b7d804548e34440da459d21c6b1867ded258"
+    },
+    {
+      "path": "objects/6/68a6193e3b67cedefb14ab590fc748bcc7955c5d.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/68a6193e3b67cedefb14ab590fc748bcc7955c5d.object_config.json",
+      "bytes": 292,
+      "sha256": "821eecb9f96459b97a8526db32c5511aa24b804738f3d89d0b7ec988f8de7930"
+    },
+    {
+      "path": "objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.glb",
+      "bytes": 539788,
+      "sha256": "b005922a39e24b424240ac484695dbf2b1fa77466d26a6737ee54b402a5a71b3"
+    },
+    {
+      "path": "objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.filteredSupportSurface.glb",
+      "bytes": 6410,
+      "sha256": "43b2739be62b69c2b8bd2cd506b942c6107b09d9028197080d9b06031bf5fcd7"
+    },
+    {
+      "path": "objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.filteredSupportSurface.ply",
+      "bytes": 1709,
+      "sha256": "4f27534c28fae236923006e9cea7f62cd8c9dce069020b9fb0c3bec3da1f782f"
+    },
+    {
+      "path": "objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.collider.glb",
+      "bytes": 132084,
+      "sha256": "a7379d5af230a382125d36fbb0fc8150d5666047881406e71186f8fc9176ec86"
+    },
+    {
+      "path": "objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.object_config.json",
+      "bytes": 500,
+      "sha256": "866913cc32c13b50a7a1a0854ffc0ff26c9fd0ba3745dbc6e0f1eeced5fa0d3f"
+    },
+    {
+      "path": "objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.collider.glb",
+      "bytes": 17796,
+      "sha256": "4023907c6aedf0db463382f8bf922df7a82e9beb602b04cc31da84ca426ded21"
+    },
+    {
+      "path": "objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.filteredSupportSurface.glb",
+      "bytes": 6566,
+      "sha256": "b72e0ccf4652fed2b0a6cf540f599eb9e097815fb6597c9e40dd45c11d7b149e"
+    },
+    {
+      "path": "objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.filteredSupportSurface.ply",
+      "bytes": 29906,
+      "sha256": "83b4b2f92a9f702d9cf125178cf77ade8e1f726d4e91a4c25636dabb4f5e90c7"
+    },
+    {
+      "path": "objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.glb",
+      "bytes": 180608,
+      "sha256": "1ae438668ff1e99231742308cec451b6094ac4803372e8642754f4fe462dd2f1"
+    },
+    {
+      "path": "objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/73c44bfa31182cd9d69d6c233e86ae57be29a804.object_config.json",
+      "bytes": 1004,
+      "sha256": "19f343f630361f3502625f9da888dbc1dd84d3c8d8e8dc9d3d21a77a205dbee8"
+    },
+    {
+      "path": "objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.collider.glb",
+      "bytes": 3992,
+      "sha256": "90e765b57bc906689b94a22f070070014f77f5275e04ef711bbf3971cf4b4ade"
+    },
+    {
+      "path": "objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/6e96a82e4a2e30fbc4bdeaee52bf04f66b20a09b.glb",
+      "bytes": 466268,
+      "sha256": "e25676d3ff607521996579d4eafa17f891078fc48d9bf4bd9d0b475a2bd8c75a"
+    },
+    {
+      "path": "objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/634c57d83a2dfe5478877d2a13bbb3090a15aa11.collider.glb",
+      "bytes": 1008252,
+      "sha256": "80f62b9f3c6b789251d0386b5abc679395027c98c9b3821d9d2cd0f869e6f16f"
+    },
+    {
+      "path": "objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.filteredSupportSurface.ply",
+      "bytes": 423,
+      "sha256": "5f3cf591f6cc4513e9e38da6a0ab97318b5e3c918b27f383e1fcacb4815d375e"
+    },
+    {
+      "path": "objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.filteredSupportSurface.glb",
+      "bytes": 2206,
+      "sha256": "4718e50f03ce98d09cbfad1df1dd0f6f78143516d649820c70148e1e472e21e5"
+    },
+    {
+      "path": "objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.object_config.json",
+      "bytes": 518,
+      "sha256": "3a56477c6ee669ad0b9b0f3ae592919d41d0ed84c6a6db9e347631b8f9467fc9"
+    },
+    {
+      "path": "objects/7/76298b7fdef47ffd2b099ccff1d5c66b50a789cb.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/76298b7fdef47ffd2b099ccff1d5c66b50a789cb.collider.glb",
+      "bytes": 7640,
+      "sha256": "5a2f6f3564ad7bf19e109325cb762dd9c483490b34a313a6944771ff6cca154d"
+    },
+    {
+      "path": "objects/7/76298b7fdef47ffd2b099ccff1d5c66b50a789cb.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/76298b7fdef47ffd2b099ccff1d5c66b50a789cb.glb",
+      "bytes": 8328,
+      "sha256": "73f5f36cea4cc89a76c7fc147b42c8ee84d36bf7326a185c3dfeab3ec7c180ff"
+    },
+    {
+      "path": "objects/7/76298b7fdef47ffd2b099ccff1d5c66b50a789cb.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/76298b7fdef47ffd2b099ccff1d5c66b50a789cb.object_config.json",
+      "bytes": 292,
+      "sha256": "5566e6d281e612c4eec5062b2353a945802065eb71aa8d8d1c718170bbff5522"
+    },
+    {
+      "path": "objects/7/76eb8317661751dd4897b39db29df5db517e2d5c.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/76eb8317661751dd4897b39db29df5db517e2d5c.collider.glb",
+      "bytes": 52548,
+      "sha256": "c03c5e7f7a92ce892f2d4371fdfa72717fbbd0d886b22fa810850da267d29f35"
+    },
+    {
+      "path": "objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/757c3b2e6018679a04ef04fc6f21b6434c379ebd.glb",
+      "bytes": 111552,
+      "sha256": "d6b5e6cdd3d88a09dd5e0910861da25e9e1906d6079cfdc7ad7431123399420e"
+    },
+    {
+      "path": "objects/7/76eb8317661751dd4897b39db29df5db517e2d5c.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/76eb8317661751dd4897b39db29df5db517e2d5c.object_config.json",
+      "bytes": 292,
+      "sha256": "f56e55a1fb259bd75da15871797c055ee42f4a7a0adbd4f844e28574bf36c35f"
+    },
+    {
+      "path": "objects/7/7ad9c27fb63d911b0301edbd9446905a97f2d94e.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/7ad9c27fb63d911b0301edbd9446905a97f2d94e.collider.glb",
+      "bytes": 84800,
+      "sha256": "13dabb17ff893f285a74bd1814f9914d447d24b468f5daeabea9fe70beca3a0f"
+    },
+    {
+      "path": "objects/7/7ad9c27fb63d911b0301edbd9446905a97f2d94e.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/7ad9c27fb63d911b0301edbd9446905a97f2d94e.object_config.json",
+      "bytes": 198,
+      "sha256": "a95b7411d2e2327f33213aef1d75360eecaff721e0679246aa34bcdb8f779757"
+    },
+    {
+      "path": "objects/7/7e4ad8ed943b48e6f5af221467312a79056008d1.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/7e4ad8ed943b48e6f5af221467312a79056008d1.collider.glb",
+      "bytes": 51916,
+      "sha256": "8a9054f7f7b6df38b63546e0ce44877cd2c1444e84cac663ab7dac05296e064f"
+    },
+    {
+      "path": "objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61ad95ab5d6553cb5849188e5782ee6cb8979dc5.glb",
+      "bytes": 2074996,
+      "sha256": "4dd76974b0c0dc19bf7eb2d0029f250f6eaf244b9b00797d4beb6f49f70e50b0"
+    },
+    {
+      "path": "objects/7/7e4ad8ed943b48e6f5af221467312a79056008d1.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/7e4ad8ed943b48e6f5af221467312a79056008d1.object_config.json",
+      "bytes": 292,
+      "sha256": "d6c96b2e3ff9dda342ccff0ceb8ef1d602239460359f09bba3b7f02ae69bcce4"
+    },
+    {
+      "path": "objects/8/825bce5ff93725dbd0ab11b82e6a2b13f96475cf.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/825bce5ff93725dbd0ab11b82e6a2b13f96475cf.collider.glb",
+      "bytes": 12816,
+      "sha256": "791784fb6813ee375429a64a30531e3c51e4a932c8e084aa9eaafa4682f1b33a"
+    },
+    {
+      "path": "objects/8/825bce5ff93725dbd0ab11b82e6a2b13f96475cf.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/825bce5ff93725dbd0ab11b82e6a2b13f96475cf.glb",
+      "bytes": 13836,
+      "sha256": "61c42e10f2c3fa7d83bd51db048897f6464eb4bddb0d813cb9ebf8760cfa0a02"
+    },
+    {
+      "path": "objects/8/825bce5ff93725dbd0ab11b82e6a2b13f96475cf.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/825bce5ff93725dbd0ab11b82e6a2b13f96475cf.object_config.json",
+      "bytes": 292,
+      "sha256": "9a4de7a08ef96e5c2eb960d23b4038fa0050b34533b26c6199bb2cee5e19bdd5"
+    },
+    {
+      "path": "objects/8/827ab09e2f5097436bc0304266036bb62e4326a9.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/827ab09e2f5097436bc0304266036bb62e4326a9.collider.glb",
+      "bytes": 40876,
+      "sha256": "9777ae1ec6f6e9783242ccbd512305a7c2dee170a71cffbbfde3d8cc41f8b83b"
+    },
+    {
+      "path": "objects/7/76eb8317661751dd4897b39db29df5db517e2d5c.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/76eb8317661751dd4897b39db29df5db517e2d5c.glb",
+      "bytes": 463264,
+      "sha256": "068659c708bf614b114dcaab15db2662e6c8cff3397db9e4eb844b59d30e9ff4"
+    },
+    {
+      "path": "objects/8/827ab09e2f5097436bc0304266036bb62e4326a9.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/827ab09e2f5097436bc0304266036bb62e4326a9.object_config.json",
+      "bytes": 179,
+      "sha256": "1e620656606b052bed19f1304e0b56b5e791263cbd151e465b992f80aa3ccfc0"
+    },
+    {
+      "path": "objects/8/8311bbeeac9fe911fe8dff338964c023eb63bdab.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8311bbeeac9fe911fe8dff338964c023eb63bdab.collider.glb",
+      "bytes": 2836,
+      "sha256": "5c812ce779011aed1eb79b3f72c6427107ee117d763785f4cde47b314d7455c7"
+    },
+    {
+      "path": "objects/8/827ab09e2f5097436bc0304266036bb62e4326a9.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/827ab09e2f5097436bc0304266036bb62e4326a9.glb",
+      "bytes": 114568,
+      "sha256": "ad25f5486189896406bc84dbcce957c01a0bc5c84ca2c86045ad6255631d64c1"
+    },
+    {
+      "path": "objects/8/8311bbeeac9fe911fe8dff338964c023eb63bdab.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8311bbeeac9fe911fe8dff338964c023eb63bdab.glb",
+      "bytes": 29928,
+      "sha256": "c95c7f40e241c92c31d774fb9d5541b76d0d9196913d25a187f39e3fab2c514f"
+    },
+    {
+      "path": "objects/8/8311bbeeac9fe911fe8dff338964c023eb63bdab.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8311bbeeac9fe911fe8dff338964c023eb63bdab.object_config.json",
+      "bytes": 291,
+      "sha256": "6450896ff8038bbf971f9e13cf5bfafbd7b99b99f7eebe4638070770ed1fbd3b"
+    },
+    {
+      "path": "objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.filteredSupportSurface.glb",
+      "bytes": 12252,
+      "sha256": "eb2ce2a578b80937649ba29ad8fc51f34cd3182fc9730e452a557a998497781f"
+    },
+    {
+      "path": "objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.filteredSupportSurface.ply",
+      "bytes": 64984,
+      "sha256": "842e243815ba261807434259353906c664da0acd754b1f5a928cdc37527b5307"
+    },
+    {
+      "path": "objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.collider.glb",
+      "bytes": 143524,
+      "sha256": "32d4817f9725cc71b37c626517d8178ea82e869e8520020e9b4ade2474102249"
+    },
+    {
+      "path": "objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.object_config.json",
+      "bytes": 1004,
+      "sha256": "d5463df3dcf3daaf751eb3f54c0e196d95cb388d1997fa1342dd2d807549c711"
+    },
+    {
+      "path": "objects/7/7ad9c27fb63d911b0301edbd9446905a97f2d94e.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/7ad9c27fb63d911b0301edbd9446905a97f2d94e.glb",
+      "bytes": 1126748,
+      "sha256": "f93e1d233da46c86bc87f4974f36622115c03fbcefea2a8db0c98d3c9f884163"
+    },
+    {
+      "path": "objects/8/88c69eb16145fa25df00eb158f7490af690c9442.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/88c69eb16145fa25df00eb158f7490af690c9442.filteredSupportSurface.glb",
+      "bytes": 59299,
+      "sha256": "bbd7ede13740780b2e17d388aab57e23a70a8e6a4264ced384867ac72521c289"
+    },
+    {
+      "path": "objects/7/7e4ad8ed943b48e6f5af221467312a79056008d1.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/7/7e4ad8ed943b48e6f5af221467312a79056008d1.glb",
+      "bytes": 1032028,
+      "sha256": "e3a12643591eba7b4bd9481f55e1743eedd46a477b855ccd367b74f29bbbb67d"
+    },
+    {
+      "path": "objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/5/5990bd240667b753ec647ca7ed0697e58464b7cf.glb",
+      "bytes": 2402212,
+      "sha256": "8e934632357e9023ee097ffd70d4ddcddb23760dbe164229c1e8118dd0f88254"
+    },
+    {
+      "path": "objects/8/88c69eb16145fa25df00eb158f7490af690c9442.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/88c69eb16145fa25df00eb158f7490af690c9442.collider.glb",
+      "bytes": 618296,
+      "sha256": "83ecd85c5592969de805cc9812ac6c98c2806b4700b7cb8b6773bbfa00ad51bd"
+    },
+    {
+      "path": "objects/8/88c69eb16145fa25df00eb158f7490af690c9442.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/88c69eb16145fa25df00eb158f7490af690c9442.filteredSupportSurface.ply",
+      "bytes": 241824,
+      "sha256": "1fbf0e54731dd9058061ddea72ef2396d10acc710dae201630fe30c57f0aafa3"
+    },
+    {
+      "path": "objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/6/61caf268af6aea6f3b38858bc4ed01788a1ae7c6.glb",
+      "bytes": 1816800,
+      "sha256": "a99eb94366383c85058ae3a1374851a566c9fa5fea538e04ddb5d3f28c217c6c"
+    },
+    {
+      "path": "objects/8/8ade057f6f57ec16e1a8e17932d92518ddb27c84.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8ade057f6f57ec16e1a8e17932d92518ddb27c84.object_config.json",
+      "bytes": 292,
+      "sha256": "250969189dbbaa661acfa6539bf7e0d9586a3b1b5339d196467d6499b068004d"
+    },
+    {
+      "path": "objects/8/8ade057f6f57ec16e1a8e17932d92518ddb27c84.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8ade057f6f57ec16e1a8e17932d92518ddb27c84.collider.glb",
+      "bytes": 32916,
+      "sha256": "2b8f4e3831ab11238428b184fed4f911e0c56be8d85a8c23de68bdabe04804ac"
+    },
+    {
+      "path": "objects/8/88c69eb16145fa25df00eb158f7490af690c9442.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/88c69eb16145fa25df00eb158f7490af690c9442.object_config.json",
+      "bytes": 1003,
+      "sha256": "a4bc94d5fd3014bf388815ec25c85e43d431229205f686060e10c7be628928b8"
+    },
+    {
+      "path": "objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.filteredSupportSurface.glb",
+      "bytes": 21235,
+      "sha256": "48070b1df677f850d7133a626b015d605aea35e03e787cc5946ee41dede57326"
+    },
+    {
+      "path": "objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.filteredSupportSurface.ply",
+      "bytes": 208143,
+      "sha256": "e7b97fbec861fc96d1eaa94a02ad08e8ef4b77bb16cb3568192df384ed062192"
+    },
+    {
+      "path": "objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.object_config.json",
+      "bytes": 1003,
+      "sha256": "d48b99cae194991222e2c0a3e62846e96238e17f4da19d8deb74b2c73b7d6371"
+    },
+    {
+      "path": "objects/8/8ade057f6f57ec16e1a8e17932d92518ddb27c84.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8ade057f6f57ec16e1a8e17932d92518ddb27c84.glb",
+      "bytes": 298828,
+      "sha256": "421e230a5f5826b0e4e9f20443216732c5c3b4e000ca9a8f83a24cd9a300cd3b"
+    },
+    {
+      "path": "objects/9/93951e48e6f29a5592dd6e8e2c426427707d6496.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/93951e48e6f29a5592dd6e8e2c426427707d6496.collider.glb",
+      "bytes": 4208,
+      "sha256": "6c16a56ee30bbfc368026d299b4daafab1ce07d4758e83b538fa535e00dcb576"
+    },
+    {
+      "path": "objects/9/93951e48e6f29a5592dd6e8e2c426427707d6496.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/93951e48e6f29a5592dd6e8e2c426427707d6496.object_config.json",
+      "bytes": 198,
+      "sha256": "9f392f8e40d19a5b2a2526469f1cd2918a678863d81b1c0916f0e1b8b91b8758"
+    },
+    {
+      "path": "objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/86e2f11ddd34c888494ef6c0c506d7528c8fc23a.glb",
+      "bytes": 1569968,
+      "sha256": "9fa6b2332283540d3f97bc00fa7331705563bc5e1b68831a12b2a00f2d1e87e0"
+    },
+    {
+      "path": "objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.filteredSupportSurface.glb",
+      "bytes": 4170,
+      "sha256": "1bd85061b1f26ace5ccabd0860516de65f0ba7e922e497add4f31854510429f2"
+    },
+    {
+      "path": "objects/9/93951e48e6f29a5592dd6e8e2c426427707d6496.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/93951e48e6f29a5592dd6e8e2c426427707d6496.glb",
+      "bytes": 53684,
+      "sha256": "96f0ba73c357a163721b74066620ac0bb1e5a3dcd2b1ebe21bbd2310a2d50b90"
+    },
+    {
+      "path": "objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.filteredSupportSurface.ply",
+      "bytes": 596,
+      "sha256": "de94310e62bf77660663fccaa484a9882aee1502a5ae0618ecaa992ef8d29702"
+    },
+    {
+      "path": "objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.object_config.json",
+      "bytes": 1004,
+      "sha256": "d7df4cc72f0f5158d7fc1c4c410f4355c0f2b9738d5dad3ba972aec01d8a0715"
+    },
+    {
+      "path": "objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.collider.glb",
+      "bytes": 12652,
+      "sha256": "31f8b2937b52e91fbbbfa04a034a13b8240cd396f19881b860f115387626052e"
+    },
+    {
+      "path": "objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.filteredSupportSurface.glb",
+      "bytes": 24922,
+      "sha256": "fec7963e3a12330081ca851eb8f10395323ff2b85d2a7ff65857af25a8d4e099"
+    },
+    {
+      "path": "objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.filteredSupportSurface.ply",
+      "bytes": 53724,
+      "sha256": "0b6b74118f6f903c834baeacc03d04fc2ab9678fd3eb87186fb21c13ec342ab4"
+    },
+    {
+      "path": "objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.collider.glb",
+      "bytes": 565852,
+      "sha256": "58d521c0a1238f86ccd1408ff84db0346d1f0b14f60a200e228106ddf80d3952"
+    },
+    {
+      "path": "objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.object_config.json",
+      "bytes": 1004,
+      "sha256": "b97ee4cfba0279cf6d8d0758bb71d56551de3fe6d928c7167d384b8dbc07db75"
+    },
+    {
+      "path": "objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.glb",
+      "bytes": 197972,
+      "sha256": "005ae4aff1b4a84ad94c20af3805c282f2febea147eb2466f60949d5d86288bc"
+    },
+    {
+      "path": "objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.filteredSupportSurface.glb",
+      "bytes": 7580,
+      "sha256": "f6f52b1b83c84e5c31d6fa0cb0960eac424b896dbe2a7e43c9f9ab3003819332"
+    },
+    {
+      "path": "objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.filteredSupportSurface.ply",
+      "bytes": 2025,
+      "sha256": "a8d3694454fb9378a1435ad051e544339f56d460526920c61e74a3fa2447e50b"
+    },
+    {
+      "path": "objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/94d86c2ff8f8a55e9b2cd3b39b5aadca7816fd49.collider.glb",
+      "bytes": 341240,
+      "sha256": "681d7559f3bed1be090f9f93b19328f87afd22ceb2c3a6f808c68a44f3d45b79"
+    },
+    {
+      "path": "objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.collider.glb",
+      "bytes": 102612,
+      "sha256": "ed1b5ca29060f0cc42eb138d4e6f4bb9b0561c611aca854f11f57e9230fd33ef"
+    },
+    {
+      "path": "objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.object_config.json",
+      "bytes": 1004,
+      "sha256": "585da498626ef27809b0c707425bac5a66c583b7221d0f946d7827045980e954"
+    },
+    {
+      "path": "objects/9/979c49104318fdfe2e09758ae7a3f53825a7eb94.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/979c49104318fdfe2e09758ae7a3f53825a7eb94.collider.glb",
+      "bytes": 19544,
+      "sha256": "fbb0c411b279e10d72eceda1ad79b8fa5f7a4659a570bb4f6fce1eaf8af896b1"
+    },
+    {
+      "path": "objects/9/979c49104318fdfe2e09758ae7a3f53825a7eb94.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/979c49104318fdfe2e09758ae7a3f53825a7eb94.object_config.json",
+      "bytes": 292,
+      "sha256": "ed0c1b9e19f226720b445d4e20ef71f289a371ff67b1b323616083c7137efdac"
+    },
+    {
+      "path": "objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9512738c384a61d36c30e53cfafc54372fbbc270.glb",
+      "bytes": 457548,
+      "sha256": "96bcfe31cd17dd07a9668f2809fc209a110c8127b9418082b2e47427e15c3bc4"
+    },
+    {
+      "path": "objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.filteredSupportSurface.glb",
+      "bytes": 5023,
+      "sha256": "6d088b934813ad16c9daab9f7bdbdc2c0bffad6721a896d9a9878d38fcffd503"
+    },
+    {
+      "path": "objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.collider.glb",
+      "bytes": 10836,
+      "sha256": "6c056796c63d78ed53ddc4c53a18b9722ea6484a837318dc76fe724b3182865e"
+    },
+    {
+      "path": "objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/96aa481c97443d17b9946bc68e188bfd877c2ebf.glb",
+      "bytes": 151932,
+      "sha256": "dd7fbf235b95a2f038663b49053884fd8780f008285b55013144904c4331f203"
+    },
+    {
+      "path": "objects/9/979c49104318fdfe2e09758ae7a3f53825a7eb94.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/979c49104318fdfe2e09758ae7a3f53825a7eb94.glb",
+      "bytes": 102556,
+      "sha256": "2882a309d4f9830206e746f8d0903e826decf0ba5b11a9ecde5296181a80af51"
+    },
+    {
+      "path": "objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.filteredSupportSurface.ply",
+      "bytes": 46087,
+      "sha256": "227a24153794b206ed7e1de8bfc7bbbf9e0e88c49b3948ac915a2722f6d67e82"
+    },
+    {
+      "path": "objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.object_config.json",
+      "bytes": 500,
+      "sha256": "092d21ea7a62dbb43759d3b2ea2d80986f668829b7ae261ebaf8592ca1e94b70"
+    },
+    {
+      "path": "objects/9/9fe0adbde0ac85b01668517398d8eac2460582f3.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9fe0adbde0ac85b01668517398d8eac2460582f3.object_config.json",
+      "bytes": 179,
+      "sha256": "2e119496f46f8d5d470855e383ce57bf14f453370d109779d73b3993397c05dc"
+    },
+    {
+      "path": "objects/9/9fe0adbde0ac85b01668517398d8eac2460582f3.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9fe0adbde0ac85b01668517398d8eac2460582f3.collider.glb",
+      "bytes": 3520,
+      "sha256": "e1062c9864230657fdb5160adf67e5035470cb4f0044f911d3bce222461e9e86"
+    },
+    {
+      "path": "objects/9/9fe0adbde0ac85b01668517398d8eac2460582f3.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9fe0adbde0ac85b01668517398d8eac2460582f3.glb",
+      "bytes": 8632,
+      "sha256": "ec5090e97b380521a7e38664550f792283a9b4fe9195c801ed1adcb2c9eb9b9b"
+    },
+    {
+      "path": "objects/a/a0572493a81702f6c6ed5debb127b2e3a0b06df9.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a0572493a81702f6c6ed5debb127b2e3a0b06df9.object_config.json",
+      "bytes": 292,
+      "sha256": "af2010f394e7e4878aa478d8a4b2547e58b6df1e8ec9e8be4b981d7f95179aff"
+    },
+    {
+      "path": "objects/a/a312bac46b28ef8b1e4c71c0e9702529a27de8a7.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a312bac46b28ef8b1e4c71c0e9702529a27de8a7.collider.glb",
+      "bytes": 23000,
+      "sha256": "d438e4505e0b5fc5fd5b990fe1030a636b30ea83850d32917022b2fb6cdb0505"
+    },
+    {
+      "path": "objects/a/a0572493a81702f6c6ed5debb127b2e3a0b06df9.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a0572493a81702f6c6ed5debb127b2e3a0b06df9.collider.glb",
+      "bytes": 40236,
+      "sha256": "0c020c7d09652acbf67cd8a5e471d414f94f89a288fe641db0347d695466cbd8"
+    },
+    {
+      "path": "objects/a/a312bac46b28ef8b1e4c71c0e9702529a27de8a7.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a312bac46b28ef8b1e4c71c0e9702529a27de8a7.object_config.json",
+      "bytes": 292,
+      "sha256": "ca4a2afd538db55aec98dd7d7ebb632d09ee206bd867bfb410d4fc0b85fbc1f0"
+    },
+    {
+      "path": "objects/a/a59e34f65be7226af0d42d41d8da31674415eeee.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a59e34f65be7226af0d42d41d8da31674415eeee.collider.glb",
+      "bytes": 4928,
+      "sha256": "d330f8138b283ca99193efc11f0259a5cbe41c7ed46ea1c3b8540354ead2f63c"
+    },
+    {
+      "path": "objects/a/a59e34f65be7226af0d42d41d8da31674415eeee.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a59e34f65be7226af0d42d41d8da31674415eeee.glb",
+      "bytes": 280512,
+      "sha256": "9e2bec71e1662a1c6af3fce0694701ebf69bc7eef70dc3fb730d7ebf67c3b3ce"
+    },
+    {
+      "path": "objects/a/a59e34f65be7226af0d42d41d8da31674415eeee.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a59e34f65be7226af0d42d41d8da31674415eeee.object_config.json",
+      "bytes": 292,
+      "sha256": "db62f0f5f85c6a61384aed3a81a43221c387f06d9c67cca94fe33c94d6d51eb0"
+    },
+    {
+      "path": "objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.collider.glb",
+      "bytes": 11656,
+      "sha256": "bc760b278741f4f3827eb126574bfbc9d766ed405979128ac26246263cf5f37c"
+    },
+    {
+      "path": "objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.filteredSupportSurface.glb",
+      "bytes": 1313,
+      "sha256": "b069e7069a939e51e499f8e8aab32e0a4f9f73af923609ce1adcd96dab9e7c1e"
+    },
+    {
+      "path": "objects/a/a0572493a81702f6c6ed5debb127b2e3a0b06df9.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a0572493a81702f6c6ed5debb127b2e3a0b06df9.glb",
+      "bytes": 239432,
+      "sha256": "d502fdc66ae90be4220c3ffd5206ef6d128226e0faae75c93c8b472802999cc4"
+    },
+    {
+      "path": "objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.filteredSupportSurface.ply",
+      "bytes": 589,
+      "sha256": "46fdd7248e31dfc546387fcb0d7a7836b546207ea5174c710b8771b6b2a4dc56"
+    },
+    {
+      "path": "objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/9/9b64cef587a9b4069ee8e6504715e3ce1a9b1d67.glb",
+      "bytes": 267016,
+      "sha256": "1eefc22c6684f3803f806c01f991473566566cc2a3970ee423b57ff1e4f0ed29"
+    },
+    {
+      "path": "objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.object_config.json",
+      "bytes": 500,
+      "sha256": "0d0e905852a8f92cb1d8eee4248d77e011aa761dc60884efce507bc92e309fbd"
+    },
+    {
+      "path": "objects/a/ab69e2f34692335d3b782d82bc5ab0c77b411d3c.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab69e2f34692335d3b782d82bc5ab0c77b411d3c.collider.glb",
+      "bytes": 34816,
+      "sha256": "8b9c13a26320286fd10aa19e4997f9e491cbed4faf8e181a2029345de2b46f9e"
+    },
+    {
+      "path": "objects/a/a312bac46b28ef8b1e4c71c0e9702529a27de8a7.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/a312bac46b28ef8b1e4c71c0e9702529a27de8a7.glb",
+      "bytes": 495152,
+      "sha256": "7639bd0db30ffeca85c924a25c783e7150c00100c13ffae3a085026dbc14eb22"
+    },
+    {
+      "path": "objects/a/ab69e2f34692335d3b782d82bc5ab0c77b411d3c.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab69e2f34692335d3b782d82bc5ab0c77b411d3c.object_config.json",
+      "bytes": 179,
+      "sha256": "1369e685651eb3f78220e10af7faeee6c3fc45b983d976e076513f2e1b0dd725"
+    },
+    {
+      "path": "objects/b/b19a38b2b4b21abff5e0c41d247c79779bf02333.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b19a38b2b4b21abff5e0c41d247c79779bf02333.collider.glb",
+      "bytes": 29556,
+      "sha256": "9be035199093dea9c2c41391a7d3e89d01f49f89bb2ec825e8222a530bf3cb60"
+    },
+    {
+      "path": "objects/b/b19a38b2b4b21abff5e0c41d247c79779bf02333.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b19a38b2b4b21abff5e0c41d247c79779bf02333.object_config.json",
+      "bytes": 291,
+      "sha256": "6a50134076d0f583f180ef35a05f26ab579930db5607e70f11a6f7a8dc32fa15"
+    },
+    {
+      "path": "objects/b/b510bed6efb14de310a6ff2851ccfc6d6702c3e0.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b510bed6efb14de310a6ff2851ccfc6d6702c3e0.collider.glb",
+      "bytes": 3268,
+      "sha256": "c3de7ddc0dfd948a77173b6ec32cdcdf178cf0a636ffe96da0b2545a1f961509"
+    },
+    {
+      "path": "objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab2c0b0f83e55076e8f5e511b34a5bd8c1f1be54.glb",
+      "bytes": 114520,
+      "sha256": "a7c9ffa5ab723ef855031c54d00c7f338db7810b530385216fda72166c16be33"
+    },
+    {
+      "path": "objects/b/b19a38b2b4b21abff5e0c41d247c79779bf02333.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b19a38b2b4b21abff5e0c41d247c79779bf02333.glb",
+      "bytes": 46584,
+      "sha256": "10b49636c07fb09fa63400f099f85bf706c68d211bf57950bfd8e1e1bb7d6929"
+    },
+    {
+      "path": "objects/b/b510bed6efb14de310a6ff2851ccfc6d6702c3e0.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b510bed6efb14de310a6ff2851ccfc6d6702c3e0.object_config.json",
+      "bytes": 292,
+      "sha256": "4c741e35b70e87c9f1bd625bfb50e32202a78b7eac7dbf0f3d7d3680d24d1db7"
+    },
+    {
+      "path": "objects/a/ab69e2f34692335d3b782d82bc5ab0c77b411d3c.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/a/ab69e2f34692335d3b782d82bc5ab0c77b411d3c.glb",
+      "bytes": 263896,
+      "sha256": "9577e67458a6fbd95d882e27d4bc0d0ddc871fa851b144ded75ca0c494f2f100"
+    },
+    {
+      "path": "objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.filteredSupportSurface.glb",
+      "bytes": 3533,
+      "sha256": "a59e2fd92007e87468c730565355424c9c47147f9b5f10af9fc23d8a3a77e8d8"
+    },
+    {
+      "path": "objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.collider.glb",
+      "bytes": 30736,
+      "sha256": "008ad8c4a36ce0b052563921fb3019d62b429d805a7f95b46515e81ceb4f6e06"
+    },
+    {
+      "path": "objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.filteredSupportSurface.ply",
+      "bytes": 11773,
+      "sha256": "1c0ac878e70c252f711e00179a0f9dba77f4ba234b6c68f8495c0b6f13d7d4e3"
+    },
+    {
+      "path": "objects/b/b510bed6efb14de310a6ff2851ccfc6d6702c3e0.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b510bed6efb14de310a6ff2851ccfc6d6702c3e0.glb",
+      "bytes": 133336,
+      "sha256": "a114282c22e51c125ad7cb63fb9aa108a880f97f3e328c0e814f0058913bbc63"
+    },
+    {
+      "path": "objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.object_config.json",
+      "bytes": 1004,
+      "sha256": "ffac0e07e81b1d180d77d52302379a2468e663e2753cc629ca823562c413c9d2"
+    },
+    {
+      "path": "objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.filteredSupportSurface.glb",
+      "bytes": 3667,
+      "sha256": "dfa55d6f26fbcaad1544a8014ee22fa435c6cd96e481fd5591f01c6040b058dd"
+    },
+    {
+      "path": "objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.collider.glb",
+      "bytes": 28960,
+      "sha256": "434bc1111674b62b77e3067daa21cd5d307781041aa429a2e073100b0b94418c"
+    },
+    {
+      "path": "objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.object_config.json",
+      "bytes": 1003,
+      "sha256": "a7e6dfdb3ed8c44a998feba6ea2cc0bd234b516ad82c7dce19d536ce97b1cbf2"
+    },
+    {
+      "path": "objects/c/c5eac1bf1396fb363596d90f7f871f6386054930.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/c5eac1bf1396fb363596d90f7f871f6386054930.collider.glb",
+      "bytes": 21480,
+      "sha256": "8d2980b9b636724df8b300b4401d319430512611d0aa1d71068b573592c569ca"
+    },
+    {
+      "path": "objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/ba2cd83aaa1e042613df1bc3669b36a05aa63437.glb",
+      "bytes": 26872,
+      "sha256": "40367188f6642aee4368e854dfb6190f9d57a8beda7f87513d5ecbf67bef8bbb"
+    },
+    {
+      "path": "objects/c/c5eac1bf1396fb363596d90f7f871f6386054930.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/c5eac1bf1396fb363596d90f7f871f6386054930.object_config.json",
+      "bytes": 291,
+      "sha256": "0daaf1f424c8dd9a91cf32da49504133f68473876f3f420c5534a27b955f2325"
+    },
+    {
+      "path": "objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.filteredSupportSurface.glb",
+      "bytes": 6529,
+      "sha256": "968cd2feabfc314b9e9f231512778778eba5fdf0701e7e010d9a1d5f492924f1"
+    },
+    {
+      "path": "objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.glb",
+      "bytes": 95188,
+      "sha256": "5160e26ce65a0c6f8abdd575400df3d1c61434bc6d83075e75cb7120e9093e32"
+    },
+    {
+      "path": "objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.object_config.json",
+      "bytes": 1004,
+      "sha256": "e8c24b95880595db26402bbf3a58d4d75e5f0fc45ab206fbe874ab389a6ed958"
+    },
+    {
+      "path": "objects/c/cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68.collider.glb",
+      "bytes": 9144,
+      "sha256": "70bb069ab94bb3f1a0c785af97c2ac6600f32cb0002732c38f1d750ce3576636"
+    },
+    {
+      "path": "objects/c/cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68.glb",
+      "bytes": 118820,
+      "sha256": "fe09759a705a671137f82a48e7d5e22b2a44c9e1d170729c7a37ad50f6bdf652"
+    },
+    {
+      "path": "objects/c/cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cbc8b75de1f3f1ec1d4ad261e8e27842aeb33b68.object_config.json",
+      "bytes": 292,
+      "sha256": "c3a1a43c2b25ddce7cc1b61bf3617b9ab6da57b2a27cf15b536256573ca3f875"
+    },
+    {
+      "path": "objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.collider.glb",
+      "bytes": 4064,
+      "sha256": "d61189452c7bc4b55ba4665280c7633002e8ef63b6a6637981bd1a2afbe8b7b5"
+    },
+    {
+      "path": "objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.filteredSupportSurface.glb",
+      "bytes": 2360,
+      "sha256": "dad360c5cb95b498559307030c46fbab4c08d95d35a8c63b8824e0933e653837"
+    },
+    {
+      "path": "objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.filteredSupportSurface.ply",
+      "bytes": 536,
+      "sha256": "d585c637bc8fa727a5ba18167da2141ce28a0b0a5b275c3cfebb5d9c18f1ef17"
+    },
+    {
+      "path": "objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.glb",
+      "bytes": 212032,
+      "sha256": "4be3d84c07f58611d819002eef1d0a0aaf7a116d5a426f75334edb78b41d44ee"
+    },
+    {
+      "path": "objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/cc34d2bd7d33c5dd311fae8268857ee35dcbab47.object_config.json",
+      "bytes": 518,
+      "sha256": "09b6d444c8fc7dbd007fff8de8ad821883ef7495214f774bc5dadea04cb72b87"
+    },
+    {
+      "path": "objects/c/ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9.collider.glb",
+      "bytes": 4312,
+      "sha256": "d05c3f156a8b414b3f7c6f0e398755a67c221849e01b19121cb5fca1eac9db12"
+    },
+    {
+      "path": "objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/8d480153ed7d87e2c81c8e1a24a9e15b4d50959b.glb",
+      "bytes": 3046736,
+      "sha256": "613a954dd8d2017732b50a87b1e0094c1d0711d290fce40dc653ca6481d5ba98"
+    },
+    {
+      "path": "objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ca8c1111a38843f3d2d1818f2e04217a11e97884.collider.glb",
+      "bytes": 362212,
+      "sha256": "5495561dc96d54777f339ec16d8d4f67d9eed0960fe74ecf3058611c532c05d1"
+    },
+    {
+      "path": "objects/c/ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9.object_config.json",
+      "bytes": 292,
+      "sha256": "433c1989cc5623e4f14da9f96234a1c66a345e72126025d3ca34185b0f2a53b9"
+    },
+    {
+      "path": "objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/b/b9f7f100ebccf261a60939c7884646503ff46c1a.glb",
+      "bytes": 544912,
+      "sha256": "490d3983672d2090a7f57e06d1794a09341f034b3a526aa7257de5229717e42b"
+    },
+    {
+      "path": "objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.collider.glb",
+      "bytes": 18052,
+      "sha256": "aa4734666692e95ab5d31ef701b62135307bc705dd9bddc812e0c3dbad27c0af"
+    },
+    {
+      "path": "objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.filteredSupportSurface.glb",
+      "bytes": 19056,
+      "sha256": "7765e458f44e34d67c3c6eac4720b0247956196cbc46d17aa6093d7cb8b1d724"
+    },
+    {
+      "path": "objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.object_config.json",
+      "bytes": 1556,
+      "sha256": "06d63de1353677385424ce9a899b409390c618629f59c029cb38d69919533c14"
+    },
+    {
+      "path": "objects/c/ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/ce32a87a585cb4308eeeb1e7a1e0428c0fbbedc9.glb",
+      "bytes": 154260,
+      "sha256": "f9d2c338544e7fb9a08e00188d23ef56701e089f0e170ffbe92c645f6f7658fd"
+    },
+    {
+      "path": "objects/d/d1bb1e76ecd549767fd650aa211e3ce29be75ad6.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d1bb1e76ecd549767fd650aa211e3ce29be75ad6.collider.glb",
+      "bytes": 4532,
+      "sha256": "4cb39b5c60b07a3c997a99161181ab93dd311b74a3de9ef7ede48122492d1a2e"
+    },
+    {
+      "path": "objects/d/d1bb1e76ecd549767fd650aa211e3ce29be75ad6.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d1bb1e76ecd549767fd650aa211e3ce29be75ad6.object_config.json",
+      "bytes": 198,
+      "sha256": "5697273629014abf7ea941b5a69ef4771e88eb5c28fbd6b282390ddc16071121"
+    },
+    {
+      "path": "objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.filteredSupportSurface.ply",
+      "bytes": 53608,
+      "sha256": "20367c2759f55d4ba490ea507b3c775e84a3a4827a85dea721ad621937496236"
+    },
+    {
+      "path": "objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.collider.glb",
+      "bytes": 4132,
+      "sha256": "d3f87424a83db3262e029802b3e84446c59b638d96f41940b9c4a7d75aa95d89"
+    },
+    {
+      "path": "objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.filteredSupportSurface.glb",
+      "bytes": 5872,
+      "sha256": "4d455a56945a9ce4cd486f34f27fb9f26dfa80f51ef6938eefc10d1964f88420"
+    },
+    {
+      "path": "objects/d/d1bb1e76ecd549767fd650aa211e3ce29be75ad6.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d1bb1e76ecd549767fd650aa211e3ce29be75ad6.glb",
+      "bytes": 111148,
+      "sha256": "6a06f03114c44a5052beb2b1cd5ade8e270d6091a494f5260d41dcc2a228037d"
+    },
+    {
+      "path": "objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.filteredSupportSurface.ply",
+      "bytes": 4756,
+      "sha256": "a45e90dabfe35abd702f2c3bf65a08b574defbb94847e04a1c2cbe79e1637212"
+    },
+    {
+      "path": "objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.object_config.json",
+      "bytes": 500,
+      "sha256": "899f8749e14feb100e1d9985c75a69b0bac2a06065083e7814281a4cccfefe0c"
+    },
+    {
+      "path": "objects/c/c5eac1bf1396fb363596d90f7f871f6386054930.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/c/c5eac1bf1396fb363596d90f7f871f6386054930.glb",
+      "bytes": 1119080,
+      "sha256": "a98a6553685ece656f8503bad6a1de160508aa049d63b857de4308b9aff4a746"
+    },
+    {
+      "path": "objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.filteredSupportSurface.glb",
+      "bytes": 4611,
+      "sha256": "c62ee7f1fe7747af133234da3d0faa807c260edfa9dadef725da26952bf1e90e"
+    },
+    {
+      "path": "objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.filteredSupportSurface.ply",
+      "bytes": 22243,
+      "sha256": "283b30197971da87e52cb70025a9d433f9cda62af0e3f6af64f16011638f53e9"
+    },
+    {
+      "path": "objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.object_config.json",
+      "bytes": 1004,
+      "sha256": "43f01ca7faf1597b9f7e65c211d994e9ab3f4be6bdc6c22812ed3ff8baa891d1"
+    },
+    {
+      "path": "objects/d/d5e647fdb3fe99a18906a67e83344081f1852446.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d5e647fdb3fe99a18906a67e83344081f1852446.collider.glb",
+      "bytes": 36320,
+      "sha256": "301336bd85700099101961e1122de13ddf2912f296f1e7b55e3c510e405765fa"
+    },
+    {
+      "path": "objects/d/d5e647fdb3fe99a18906a67e83344081f1852446.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d5e647fdb3fe99a18906a67e83344081f1852446.glb",
+      "bytes": 138772,
+      "sha256": "e38fe4936f8236d3d4cc68d122b30f04fc227e9855c2df4b28e9b95438015adb"
+    },
+    {
+      "path": "objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.collider.glb",
+      "bytes": 267228,
+      "sha256": "13f57a16de350e2e56d876d3dade6423f7922ff2a56aa4c1dd2662da83d4f7ae"
+    },
+    {
+      "path": "objects/d/d5e647fdb3fe99a18906a67e83344081f1852446.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d5e647fdb3fe99a18906a67e83344081f1852446.object_config.json",
+      "bytes": 291,
+      "sha256": "fb53235096a65760f5a854c17a434b736b3d06df14bce9874049db6c959bfe4f"
+    },
+    {
+      "path": "objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.filteredSupportSurface.glb",
+      "bytes": 7518,
+      "sha256": "eff73c8a8d615d73f6e7758e88bf17bc1e91cf973c24bc6a17057d60c8dd4fdd"
+    },
+    {
+      "path": "objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d3064870d4e8d00b37a7acd77add1b45afda7e28.glb",
+      "bytes": 175260,
+      "sha256": "e7ac14ff427a6286151f90a664a0edaf3a5790b6520ee37467936b11fba96c5b"
+    },
+    {
+      "path": "objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.filteredSupportSurface.ply",
+      "bytes": 1113,
+      "sha256": "52a6a04eb9226682f2c6667017ccab0ce0d1de77f80da78d9655eded538fc641"
+    },
+    {
+      "path": "objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.object_config.json",
+      "bytes": 1004,
+      "sha256": "ef6c8b9a161ab607194d60933a4656b20269d91d83e6b906ba0b9b189367e64d"
+    },
+    {
+      "path": "objects/d/da41d51ec38f1faf445441b6b286f301c16c5d97.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/da41d51ec38f1faf445441b6b286f301c16c5d97.collider.glb",
+      "bytes": 20908,
+      "sha256": "6ca8e36813a3f25d06aa9b737b04e723f0a7a78c0ba42745c9e57056d544a7ed"
+    },
+    {
+      "path": "objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d4c936c5a9a20fcfe79fb3fcdd4e6d11ac191a84.glb",
+      "bytes": 497952,
+      "sha256": "fae01ddd0bee5c95aaa0f39aeace7a20c600543b3745ef322a62d51d98dd6911"
+    },
+    {
+      "path": "objects/d/da41d51ec38f1faf445441b6b286f301c16c5d97.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/da41d51ec38f1faf445441b6b286f301c16c5d97.object_config.json",
+      "bytes": 292,
+      "sha256": "15c4e2719f1e5c3ae8c91e238eafef1fc7d3fdf5b48fb3fddf8955b8065cd67d"
+    },
+    {
+      "path": "objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d0d1e39f55d3c03661b9716a6db1532568711f52.glb",
+      "bytes": 562348,
+      "sha256": "2b44ceb22b980c32520081abd102eef95d349383543f52eb54f08160d78eb661"
+    },
+    {
+      "path": "objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.glb",
+      "bytes": 72272,
+      "sha256": "29cc02a4d14f3e49011c3767516c69728b59a2eebdc7ef855330dfe28ffffdd0"
+    },
+    {
+      "path": "objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/d9d97893c7448d727a5c586f18f57698ce81cf64.collider.glb",
+      "bytes": 311900,
+      "sha256": "c3d4b7d51d4d7c3240add30a1417f9d7c784e5013e74b71f4f21608ba43d526c"
+    },
+    {
+      "path": "objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.filteredSupportSurface.glb",
+      "bytes": 39161,
+      "sha256": "49b4fa16ebefe60e08be9a2d5c4761b7ea50305dbb84b4114f892f4a6d9071e1"
+    },
+    {
+      "path": "objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.object_config.json",
+      "bytes": 518,
+      "sha256": "284ef3d54d606c6942fde571199686fa01554e7374d8caa230518ca3e9cba017"
+    },
+    {
+      "path": "objects/d/da41d51ec38f1faf445441b6b286f301c16c5d97.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/d/da41d51ec38f1faf445441b6b286f301c16c5d97.glb",
+      "bytes": 201552,
+      "sha256": "6ab4024b17a58642202c071332e2f0bd64e0ce57777475d4db61e9865a9ea147"
+    },
+    {
+      "path": "objects/e/e26bd35821a4e268590e2bd6c3bc2954b6b8b039.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e26bd35821a4e268590e2bd6c3bc2954b6b8b039.object_config.json",
+      "bytes": 292,
+      "sha256": "a0d7833ad4a469d8a261cd6274137f1671f6b1ab72740c7dbcc0532c49d360b7"
+    },
+    {
+      "path": "objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.collider.glb",
+      "bytes": 138696,
+      "sha256": "8366f47a4aee7f378d05080971c1e6c8e2e8f307eafa87610d14c4e2851f50e1"
+    },
+    {
+      "path": "objects/e/e26bd35821a4e268590e2bd6c3bc2954b6b8b039.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e26bd35821a4e268590e2bd6c3bc2954b6b8b039.collider.glb",
+      "bytes": 75244,
+      "sha256": "bb30f12451650895f57f9e9184917c178084fa0ccf34e42d00d1fc77a86b948a"
+    },
+    {
+      "path": "objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.filteredSupportSurface.ply",
+      "bytes": 16627,
+      "sha256": "2dcb4e851282545441e380fbd172c834a7d66f731e127315f633a90cc7787efb"
+    },
+    {
+      "path": "objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.filteredSupportSurface.glb",
+      "bytes": 28817,
+      "sha256": "caa5e669919cbf9285ca9d227feca928f5cc180a86d68f8a6e05edfcb4038552"
+    },
+    {
+      "path": "objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.object_config.json",
+      "bytes": 1004,
+      "sha256": "98cbf729e282f59cb777322c90b4dc5beee94a81ff67216fb30aa4b0d4c79973"
+    },
+    {
+      "path": "objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.collider.glb",
+      "bytes": 3268,
+      "sha256": "8d5e85e0114fc5ce165b9499fbcc8569b230046465a0db595c9678a1ac073e1a"
+    },
+    {
+      "path": "objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.filteredSupportSurface.glb",
+      "bytes": 2787,
+      "sha256": "8cb655a3f205f0bb5f84e7d0948178324c5210540587d748b2273f3516a9cd6b"
+    },
+    {
+      "path": "objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.filteredSupportSurface.ply",
+      "bytes": 623,
+      "sha256": "8a7f461be08f6e423ea5a7f4f1e11e23ef21a033efb76c159b61470ad2f1ca65"
+    },
+    {
+      "path": "objects/e/e26bd35821a4e268590e2bd6c3bc2954b6b8b039.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e26bd35821a4e268590e2bd6c3bc2954b6b8b039.glb",
+      "bytes": 363776,
+      "sha256": "12d1b5800820b1e5aaa7b8665cfdd7447ef9e85bc775c1862aab4441b4cc8478"
+    },
+    {
+      "path": "objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e0e445de0c80e1d1092bede074e36a46c4e4fa61.glb",
+      "bytes": 332208,
+      "sha256": "27117cd13ad85daf554b831ec2e563c1bbfe26ac4cf6f5f8770b8d298c79ebf4"
+    },
+    {
+      "path": "objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.object_config.json",
+      "bytes": 500,
+      "sha256": "a7373a704b85966624280ba6c83df9bcd5d597a75dce9ef0b4188581fd5f9f5f"
+    },
+    {
+      "path": "objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.collider.glb",
+      "bytes": 163852,
+      "sha256": "8a8e06271da04e040140e46f85169fa5a7e301cb9e86de7aba67ba2a37786961"
+    },
+    {
+      "path": "objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.filteredSupportSurface.glb",
+      "bytes": 2032,
+      "sha256": "8435b5ad62c5495dfc73c70e4734342befaa781b3c0b6fc6d85c17d65767b49d"
+    },
+    {
+      "path": "objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e47ded5e48492aa11fde1cb6df59f7b80ad2cbf9.glb",
+      "bytes": 216356,
+      "sha256": "f1583d0f0e1e4647c5184625d4981e095c44de673426a870be786dd731372968"
+    },
+    {
+      "path": "objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.collider.glb",
+      "bytes": 3704,
+      "sha256": "e584bd315fca2e1b1225735c2a1d0385dd2161fed467c8345608deabdcb6b51e"
+    },
+    {
+      "path": "objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.filteredSupportSurface.ply",
+      "bytes": 423,
+      "sha256": "079e00bca4e373af51c50b37856690bedcb9f21197523acceb2c75a1233baca4"
+    },
+    {
+      "path": "objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/e7315a170b0ec5278e79d31226a09beef4c356ee.glb",
+      "bytes": 23264,
+      "sha256": "d99d0300b2eed275e33009f4805f07df2fb88136b24084646fa389ef697329c3"
+    },
+    {
+      "path": "objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.filteredSupportSurface.glb",
+      "bytes": 1230,
+      "sha256": "436635c542d561001ed47bd7fdf2c5ee3f3d0ec12f0c57df04f9a77f53b2a6a1"
+    },
+    {
+      "path": "objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.object_config.json",
+      "bytes": 518,
+      "sha256": "76d39288cd3a57c4b360d255ae793af76f1f6b659089e916e6e834f53bf49d78"
+    },
+    {
+      "path": "objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eaf49472219845b70e3354e80d499319ae5cdd0e.glb",
+      "bytes": 60644,
+      "sha256": "809536e84196c191352a56aebbc53a6e8bbdc7897558153304d34973d38f7e94"
+    },
+    {
+      "path": "objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.filteredSupportSurface.ply",
+      "bytes": 337,
+      "sha256": "881269470d2f56825d93ebcb029d29e157abdbfc32f4a2bf9e8cb2a0553ac0ac"
+    },
+    {
+      "path": "objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.object_config.json",
+      "bytes": 518,
+      "sha256": "89724467fc1889fcc2c0a10f4facaaa6d8faa748af1177c769556ff498919875"
+    },
+    {
+      "path": "objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.collider.glb",
+      "bytes": 3916,
+      "sha256": "d1c49e145da069b2beb932f19f19b86b913a1925dc91de421cec654778896dc5"
+    },
+    {
+      "path": "objects/f/f1f48b2a0b525fee2a739b2bad7a216a12bb8e05.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f1f48b2a0b525fee2a739b2bad7a216a12bb8e05.collider.glb",
+      "bytes": 26636,
+      "sha256": "a9ef254df1bb3d4bf8b2dfdda3f6d4ffe5e3059ce738269f5f7247511be9ba86"
+    },
+    {
+      "path": "objects/f/f1f48b2a0b525fee2a739b2bad7a216a12bb8e05.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f1f48b2a0b525fee2a739b2bad7a216a12bb8e05.object_config.json",
+      "bytes": 291,
+      "sha256": "afeb5b8ac62384bf899a16288e19b153da4f7b3b2edc4971663b7646021b23c9"
+    },
+    {
+      "path": "objects/f/f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5.collider.glb",
+      "bytes": 2840,
+      "sha256": "6e630c990650974a992f4e70467f0fa0e33ca3381b0f564c15e498eb8dd1e3b9"
+    },
+    {
+      "path": "objects/f/f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5.object_config.json",
+      "bytes": 292,
+      "sha256": "7d195249a7e28e1148c38d7a161dae03d72dc8beee5a05f4c04235e6a2f5b35d"
+    },
+    {
+      "path": "objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.collider.glb",
+      "bytes": 3516,
+      "sha256": "344c1ce1f531d92f8e04b61c12771bb162135967b03bd0dca1012ccd855211f6"
+    },
+    {
+      "path": "objects/f/f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f3e01d91881ec4bbafc3481ce19d85eaaff6d2f5.glb",
+      "bytes": 31240,
+      "sha256": "cbaf79a4253471b5405b98d722e8a902e61b63bc7cdf830c4534deed87bd9f19"
+    },
+    {
+      "path": "objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.filteredSupportSurface.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.filteredSupportSurface.glb",
+      "bytes": 2206,
+      "sha256": "7039a245e237b03fa0e34e36bb0dea0749872b64027240b648235edba4f08f6e"
+    },
+    {
+      "path": "objects/f/f1f48b2a0b525fee2a739b2bad7a216a12bb8e05.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f1f48b2a0b525fee2a739b2bad7a216a12bb8e05.glb",
+      "bytes": 183908,
+      "sha256": "8abb157ee2631bd588509f980033c3e64f507a793bc0cc59ce8bec8993ccd20f"
+    },
+    {
+      "path": "objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.object_config.json",
+      "bytes": 500,
+      "sha256": "df489112b7302d4126b1d956f3e5aa63e33fd5edbb0a3eb665e18c768aab7547"
+    },
+    {
+      "path": "objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.filteredSupportSurface.ply",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.filteredSupportSurface.ply",
+      "bytes": 510,
+      "sha256": "69d9a0e6404ad20b7938775238e12b2a156a036608adb3611c7662ede6c31fd6"
+    },
+    {
+      "path": "objects/f/f51e066d210a34e439921cec1d7b52a339fc298c.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f51e066d210a34e439921cec1d7b52a339fc298c.object_config.json",
+      "bytes": 292,
+      "sha256": "21fe3f7b6c4bddf6d1f08d3f67e017f5e9b1b247add1684520e8172b510603ed"
+    },
+    {
+      "path": "objects/f/f51e066d210a34e439921cec1d7b52a339fc298c.collider.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f51e066d210a34e439921cec1d7b52a339fc298c.collider.glb",
+      "bytes": 12920,
+      "sha256": "aed01ddc17dfa0333ca581f12368233e2c6f869bf0048683decb56951ebec0ca"
+    },
+    {
+      "path": "objects/openings/209-2.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/209-2.object_config.json",
+      "bytes": 189,
+      "sha256": "ae95ebfb7d80b090ac2d51d9935c8b0e34383f86d4be70f395ebfdbf3300d93d"
+    },
+    {
+      "path": "objects/openings/209-2.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/209-2.glb",
+      "bytes": 145720,
+      "sha256": "ae992538aeee4c1d6b10c7205551e6de7edbfcf60dd325f68262f2bf7d01dfd2"
+    },
+    {
+      "path": "objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f4bc230471d6dd823233c7305235aa2ed2a4f98b.glb",
+      "bytes": 309780,
+      "sha256": "f3c9114879949bd5ee6711837a0f3c2dc99fc0603f610e633897919197658921"
+    },
+    {
+      "path": "objects/openings/224-132.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-132.object_config.json",
+      "bytes": 193,
+      "sha256": "417a63aefcfd1faac7be252a30302bcf676641adc63160499e72e3aee020a0c6"
+    },
+    {
+      "path": "objects/openings/224-132.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-132.glb",
+      "bytes": 14400,
+      "sha256": "e1a5d8f12c42692f0c8d6749a9f3a266bfe55f783c25122f4a63435c9b6f24e3"
+    },
+    {
+      "path": "objects/openings/224-89.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-89.glb",
+      "bytes": 14040,
+      "sha256": "92e5b1f1cb0497eb94e0fecfef34ca5697547e037398baa2c97124c3d0993d90"
+    },
+    {
+      "path": "objects/openings/224-89.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-89.object_config.json",
+      "bytes": 191,
+      "sha256": "60840ead6da350280faa346db1be72e932618bf430c1b26619a1f148f2855392"
+    },
+    {
+      "path": "objects/openings/224-90.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-90.object_config.json",
+      "bytes": 191,
+      "sha256": "ca5d048783e50a3b48a7d2bbfdf6ddd493dfd54591016dde318e1703e0620e72"
+    },
+    {
+      "path": "objects/openings/224-91.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-91.glb",
+      "bytes": 14328,
+      "sha256": "d0561ea566fb9f58bc6da340b9e89f9215bae7b15ce4ea95c8b34ae5f7343537"
+    },
+    {
+      "path": "objects/f/f51e066d210a34e439921cec1d7b52a339fc298c.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/f/f51e066d210a34e439921cec1d7b52a339fc298c.glb",
+      "bytes": 366992,
+      "sha256": "a0ed8d798be487d8aaa4b66ea07a2f0a4da31187c5a536eabe30ec04ebae777c"
+    },
+    {
+      "path": "objects/openings/224-91.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-91.object_config.json",
+      "bytes": 191,
+      "sha256": "119ca72e29d876d0b805c0707a40a0aa84904a5751d663e9f13236d289e20117"
+    },
+    {
+      "path": "objects/openings/224-92.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-92.glb",
+      "bytes": 14328,
+      "sha256": "964ab4d364d69f139f6f4acfb0c9cb8f1a5fdfd7012aab71ae7c66daa90d11fe"
+    },
+    {
+      "path": "objects/openings/224-93.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-93.object_config.json",
+      "bytes": 191,
+      "sha256": "f68c4e80051247b1f478efd354e69f79241e53dc5dfeb8efda2dbd4759986cca"
+    },
+    {
+      "path": "objects/openings/224-90.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-90.glb",
+      "bytes": 14400,
+      "sha256": "ea5ed7b39ecbdc0d4ea0c1991cd72fa25bd69587ea9280f9c597270f9390d55d"
+    },
+    {
+      "path": "objects/openings/224-92.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-92.object_config.json",
+      "bytes": 191,
+      "sha256": "585a0836e3ca5eabcd56f93593a36b6dc8cad1f06039772cbb297f392e498fbc"
+    },
+    {
+      "path": "objects/openings/224-93.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-93.glb",
+      "bytes": 14176,
+      "sha256": "16a3ac2fdcedd9a0605b0243a7b6133d27dbcda7361c282bb9478bcbe05e73d8"
+    },
+    {
+      "path": "objects/openings/224-94.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-94.glb",
+      "bytes": 14176,
+      "sha256": "0b46956f3fb19169161849c10546ad4d956d355f851d7986327afef1f0377e2a"
+    },
+    {
+      "path": "objects/openings/224-94.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-94.object_config.json",
+      "bytes": 191,
+      "sha256": "52eff2ec813fa37590b93194fecaef1bbce9e1e43911961234286ef8c1ff57b8"
+    },
+    {
+      "path": "objects/openings/224-95.object_config.json",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-95.object_config.json",
+      "bytes": 191,
+      "sha256": "89e0e309c448e9da09a4b32d67c59ed8d57396139cf0a0160657fb8b63ed8da5"
+    },
+    {
+      "path": "objects/openings/224-95.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/openings/224-95.glb",
+      "bytes": 14176,
+      "sha256": "12a91529e5f82035b3d0dfd76b93099cf0b76ac55d05da74cee996f9e76bc4ec"
+    },
+    {
+      "path": "objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/e/eb9f9ecf8e2aeac2f0e5a82c08ea90935e547380.glb",
+      "bytes": 1012060,
+      "sha256": "7232f8a7cff362bf02613019cdf350555eb8fc050119be45aa270bbc5f83d7e2"
+    },
+    {
+      "path": "objects/8/88c69eb16145fa25df00eb158f7490af690c9442.glb",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/objects/8/88c69eb16145fa25df00eb158f7490af690c9442.glb",
+      "bytes": 7753844,
+      "sha256": "681271d23aabdd8d763e6a7ab747e9584bdeddb1af9e5f58a0a9c92f041be590"
+    },
+    {
+      "path": "metadata/fpmodels-with-decomposed.csv",
+      "url": "https://huggingface.co/datasets/hssd/hssd-hab/resolve/4369cb9876214c7fbebcf552eb532380e4d287e4/metadata/fpmodels-with-decomposed.csv",
+      "bytes": 5149465,
+      "sha256": "a5489ab4a5e29ee6699616a7c8da58660b0262aeaca38706981864567a1ab137"
+    }
+  ]
+}

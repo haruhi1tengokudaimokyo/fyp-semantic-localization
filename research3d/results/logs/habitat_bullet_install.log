@@ -1,0 +1,64 @@
+⚠ Shard Index for aihabitat/linux-64 not available, falling back to flat repodata
+Using Flat Repodata for aihabitat/linux-64                                                      ✔ Starting
+Using Flat Repodata for aihabitat/linux-64                                                ✔ Done (0.0 sec)
+⚠ Shard Index for aihabitat/noarch not available, falling back to flat repodata
+Using Flat Repodata for aihabitat/noarch                                                        ✔ Starting
+Using Flat Repodata for aihabitat/noarch                                                  ✔ Done (0.0 sec)
+Using Cached Shard Index for conda-forge/linux-64                                                   ✔ Done
+Using Cached Shard Index for conda-forge/noarch                                                     ✔ Done
+Fetching and Parsing Packages' Shards                                                           ⧖ Starting
+Fetching and Parsing Packages' Shards                                                     ✔ Done (0.3 sec)
+Parsing Packages' Records                                                                 ✔ Done (0.5 sec)
+
+Pinned packages:
+
+  - python=3.9
+
+Resolving Environment                                                                           ⧖ Starting
+Resolving Environment                                                                     ✔ Done (0.5 sec)
+
+Transaction
+
+  Prefix: /data/fyp_3d/envs/habitat
+
+  Updating specs:
+
+   - withbullet
+
+
+  Package              Version  Build                                                                 Channel         Size
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  Install:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  + withbullet             2.0  0                                                                     aihabitat        3kB
+
+  Change:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+  - habitat-sim          0.3.3  py3.9_headless_linux_acbe6f4922e68145e401e55c30f9dfea460a3f24         aihabitat     Cached
+  + habitat-sim          0.3.3  py3.9_headless_bullet_linux_acbe6f4922e68145e401e55c30f9dfea460a3f24  aihabitat      203MB
+  - habitat-sim-mutex      1.0  headless_nobullet                                                     aihabitat     Cached
+  + habitat-sim-mutex      1.0  headless_bullet                                                       aihabitat        4kB
+
+  Summary:
+
+  Install: 1 packages
+  Change: 2 packages
+
+  Total download: 203MB
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+warning  libmamba Security Warning: This transaction includes executing package scripts (pre/post-link/unlink) if present. These scripts can contain arbitrary code. Please ensure you trust the package sources.
+
+Transaction starting
+Unlinking habitat-sim-mutex-1.0-headless_nobullet
+Unlinking habitat-sim-0.3.3-py3.9_headless_linux_acbe6f4922e68145e401e55c30f9dfea460a3f24
+Linking habitat-sim-mutex-1.0-headless_bullet
+Linking withbullet-2.0-0
+Linking habitat-sim-0.3.3-py3.9_headless_bullet_linux_acbe6f4922e68145e401e55c30f9dfea460a3f24
+
+Transaction finished
+

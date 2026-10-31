@@ -1,0 +1,10 @@
+{
+  "frames_compared": 1000,
+  "max_translation_error_difference_m": 3.8774916690225564e-08,
+  "max_rotation_error_difference_deg": 2.278927581755852e-06,
+  "gt_pose_text_reads_denied": true,
+  "inference_succeeded": true,
+  "accepted_tracking_correction": false,
+  "covariance_is_unavailable": true,
+  "inliers": 3687
+}

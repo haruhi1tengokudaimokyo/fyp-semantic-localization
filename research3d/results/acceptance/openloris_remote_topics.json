@@ -1,0 +1,116 @@
+{
+  "url": "https://huggingface.co/datasets/shixuesong/openloris-scene/resolve/main/rosbag/market1-1.bag",
+  "total_remote_bytes": 9710986510,
+  "index_pos": 9707531511,
+  "declared_connection_count": 21,
+  "connections": [
+    {
+      "topic": "/tf_static",
+      "type": "tf2_msgs/TFMessage",
+      "connection_id": 0
+    },
+    {
+      "topic": "/d400/depth/camera_info",
+      "type": "sensor_msgs/CameraInfo",
+      "connection_id": 1
+    },
+    {
+      "topic": "/d400/color/camera_info",
+      "type": "sensor_msgs/CameraInfo",
+      "connection_id": 2
+    },
+    {
+      "topic": "/d400/aligned_depth_to_color/camera_info",
+      "type": "sensor_msgs/CameraInfo",
+      "connection_id": 3
+    },
+    {
+      "topic": "/d400/gyro/imu_info",
+      "type": "realsense2_camera/IMUInfo",
+      "connection_id": 4
+    },
+    {
+      "topic": "/d400/accel/imu_info",
+      "type": "realsense2_camera/IMUInfo",
+      "connection_id": 5
+    },
+    {
+      "topic": "/t265/fisheye1/camera_info",
+      "type": "sensor_msgs/CameraInfo",
+      "connection_id": 6
+    },
+    {
+      "topic": "/t265/fisheye2/camera_info",
+      "type": "sensor_msgs/CameraInfo",
+      "connection_id": 7
+    },
+    {
+      "topic": "/t265/gyro/imu_info",
+      "type": "realsense2_camera/IMUInfo",
+      "connection_id": 8
+    },
+    {
+      "topic": "/t265/accel/imu_info",
+      "type": "realsense2_camera/IMUInfo",
+      "connection_id": 9
+    },
+    {
+      "topic": "/d400/aligned_depth_to_color/image_raw",
+      "type": "sensor_msgs/Image",
+      "connection_id": 10
+    },
+    {
+      "topic": "/d400/depth/image_raw",
+      "type": "sensor_msgs/Image",
+      "connection_id": 11
+    },
+    {
+      "topic": "/d400/color/image_raw",
+      "type": "sensor_msgs/Image",
+      "connection_id": 12
+    },
+    {
+      "topic": "/d400/gyro/sample",
+      "type": "sensor_msgs/Imu",
+      "connection_id": 13
+    },
+    {
+      "topic": "/t265/gyro/sample",
+      "type": "sensor_msgs/Imu",
+      "connection_id": 14
+    },
+    {
+      "topic": "/d400/accel/sample",
+      "type": "sensor_msgs/Imu",
+      "connection_id": 15
+    },
+    {
+      "topic": "/t265/accel/sample",
+      "type": "sensor_msgs/Imu",
+      "connection_id": 16
+    },
+    {
+      "topic": "/odom",
+      "type": "nav_msgs/Odometry",
+      "connection_id": 17
+    },
+    {
+      "topic": "/gt",
+      "type": "tf2_msgs/TFMessage",
+      "connection_id": 18
+    },
+    {
+      "topic": "/t265/fisheye1/image_raw",
+      "type": "sensor_msgs/Image",
+      "connection_id": 19
+    },
+    {
+      "topic": "/t265/fisheye2/image_raw",
+      "type": "sensor_msgs/Image",
+      "connection_id": 20
+    }
+  ],
+  "bytes_fetched": 1052672,
+  "scope": "Header/index topic inventory only; no full-file CRC/SHA validation and no sensor-stream decoding",
+  "online_policy": "No topics are enabled by this inspector. Future estimator must explicitly allowlist camera/IMU/wheel; all LiDAR and ground-truth topics excluded."
+}

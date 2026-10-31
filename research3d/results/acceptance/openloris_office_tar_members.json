@@ -1,0 +1,45 @@
+{
+  "url": "https://huggingface.co/datasets/shixuesong/openloris-scene/resolve/main/rosbag/office1-1_7-rosbag.tar",
+  "members": [
+    {
+      "name": "office1-1.bag",
+      "bytes": 1245178774,
+      "offset_data": 512
+    },
+    {
+      "name": "office1-2.bag",
+      "bytes": 1170409568,
+      "offset_data": 1245179904
+    },
+    {
+      "name": "office1-3.bag",
+      "bytes": 517491443,
+      "offset_data": 2415590400
+    },
+    {
+      "name": "office1-4.bag",
+      "bytes": 942921114,
+      "offset_data": 2933082624
+    },
+    {
+      "name": "office1-5.bag",
+      "bytes": 2415236651,
+      "offset_data": 3876004352
+    },
+    {
+      "name": "office1-6.bag",
+      "bytes": 1547314181,
+      "offset_data": 6291241984
+    },
+    {
+      "name": "office1-7.bag",
+      "bytes": 1428666703,
+      "offset_data": 7838557184
+    },
+    {
+      "name": "decompress.sh",
+      "bytes": 87,
+      "offset_data": 9267224576
+    }
+  ]
+}

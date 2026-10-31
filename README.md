@@ -1,3 +1,5 @@
+> **2026-10-31 三维升级：** 新增 [P0/P1 实测中文报告](research3d/REPORT_P0_P1_zh.md) 和 [复跑命令](research3d/docs/RUNBOOK_zh.md)。已实际取得 ReplicaCAD、HSSD 和完整 7-Scenes Heads，完成独立 Mesh/Depth 坐标检验、官方 ACE 1000 帧重定位（99.8% @5cm/5°）与本机完整场景头训练（98.4%）。本轮三维结果在 `research3d/`；下面内容和 `src/` 是保留的原二维研究，不混用指标。
+
 # FYP — Known-Map Geometric-Semantic Localization
 
 本科 FYP：**Exploring Localization Techniques for Indoor Robotics**。

@@ -1,0 +1,20 @@
+{
+  "official_head": {
+    "path": "/data/fyp_3d/runs/ace_official/heads.pt",
+    "bytes": 4213625,
+    "sha256": "eddd08cd9678709dc55c158a2b51e36735586b64dc2ebeefa9a31639851265f2",
+    "source": "https://storage.googleapis.com/niantic-lon-static/research/ace/ace_models.tar.gz :: ace_models/7Scenes/7scenes_heads.pt",
+    "validation": "PyTorch member ZIP CRC passed; required member extracted from stream, whole archive gzip CRC not claimed"
+  },
+  "local_head": {
+    "path": "/data/fyp_3d/runs/ace_local/heads_local.pt",
+    "bytes": 4214526,
+    "sha256": "82cff35907a5e29be234304067b958d9dbedcc93afc70cfe167ce284d78791c8"
+  },
+  "encoder": {
+    "path": "/data/fyp_3d/sources/ace/ace_encoder_pretrained.pt",
+    "bytes": 22278371,
+    "sha256": "c69ca934d82056c9f2e9be9582d85841bd53355ac04a007c11618b1760c00a8c",
+    "source": "https://github.com/nianticlabs/ace/blob/e9e90f2d02ee92c348bf411a5a60e230af6c315e/ace_encoder_pretrained.pt"
+  }
+}

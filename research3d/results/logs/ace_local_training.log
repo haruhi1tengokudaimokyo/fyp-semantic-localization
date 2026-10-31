@@ -1,0 +1,72 @@
+INFO:ace_trainer:Loaded training scan from: /data/fyp_3d/datasets/7scenes/7scenes_heads -- 1000 images, mean: 0.00 -0.14 0.09
+/data/fyp_3d/sources/ace/ace_trainer.py:92: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  encoder_state_dict = torch.load(self.options.encoder_path, map_location="cpu")
+INFO:ace_network:Creating Regressor using pretrained encoder with 512 feature size.
+INFO:ace_trainer:Loaded pretrained encoder from: /data/fyp_3d/sources/ace/ace_encoder_pretrained.pt
+/data/fyp_3d/sources/ace/ace_trainer.py:116: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = GradScaler(enabled=self.options.use_half)
+INFO:ace_trainer:Starting creation of the training buffer.
+/data/fyp_3d/sources/ace/ace_trainer.py:279: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.options.use_half):
+INFO:ace_trainer:Created buffer of 1.07GB with 1 passes over the training data.
+INFO:ace_trainer:Filled training buffer in 89.4s.
+/data/fyp_3d/sources/ace/ace_trainer.py:391: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.options.use_half):
+INFO:ace_trainer:Iteration:      0 / Epoch 000|016, Loss: 16.2, Valid: 3.0%, Time: 90.04s
+INFO:ace_trainer:Iteration:    100 / Epoch 000|016, Loss: 48.7, Valid: 97.1%, Time: 97.58s
+INFO:ace_trainer:Iteration:    200 / Epoch 001|016, Loss: 44.5, Valid: 92.9%, Time: 105.13s
+INFO:ace_trainer:Iteration:    300 / Epoch 001|016, Loss: 39.2, Valid: 89.6%, Time: 112.66s
+INFO:ace_trainer:Iteration:    400 / Epoch 002|016, Loss: 34.6, Valid: 90.1%, Time: 120.20s
+INFO:ace_trainer:Iteration:    500 / Epoch 002|016, Loss: 31.0, Valid: 91.5%, Time: 127.73s
+INFO:ace_trainer:Iteration:    600 / Epoch 003|016, Loss: 29.2, Valid: 91.2%, Time: 135.32s
+INFO:ace_trainer:Iteration:    700 / Epoch 003|016, Loss: 27.0, Valid: 92.9%, Time: 142.90s
+INFO:ace_trainer:Iteration:    800 / Epoch 004|016, Loss: 25.6, Valid: 92.8%, Time: 150.50s
+INFO:ace_trainer:Iteration:    900 / Epoch 004|016, Loss: 22.8, Valid: 94.3%, Time: 158.07s
+INFO:ace_trainer:Iteration:   1000 / Epoch 005|016, Loss: 23.6, Valid: 94.6%, Time: 165.66s
+INFO:ace_trainer:Iteration:   1100 / Epoch 005|016, Loss: 20.8, Valid: 95.2%, Time: 173.23s
+INFO:ace_trainer:Iteration:   1200 / Epoch 006|016, Loss: 19.8, Valid: 96.0%, Time: 180.81s
+INFO:ace_trainer:Iteration:   1300 / Epoch 006|016, Loss: 18.9, Valid: 96.5%, Time: 188.38s
+INFO:ace_trainer:Iteration:   1400 / Epoch 007|016, Loss: 17.8, Valid: 96.3%, Time: 195.97s
+INFO:ace_trainer:Iteration:   1500 / Epoch 007|016, Loss: 17.2, Valid: 96.3%, Time: 203.54s
+INFO:ace_trainer:Iteration:   1600 / Epoch 008|016, Loss: 16.2, Valid: 96.8%, Time: 211.13s
+INFO:ace_trainer:Iteration:   1700 / Epoch 008|016, Loss: 15.3, Valid: 96.3%, Time: 218.70s
+INFO:ace_trainer:Iteration:   1800 / Epoch 009|016, Loss: 14.6, Valid: 97.1%, Time: 226.28s
+INFO:ace_trainer:Iteration:   1900 / Epoch 009|016, Loss: 14.2, Valid: 97.2%, Time: 233.85s
+INFO:ace_trainer:Iteration:   2000 / Epoch 010|016, Loss: 13.4, Valid: 97.1%, Time: 241.43s
+INFO:ace_trainer:Iteration:   2100 / Epoch 010|016, Loss: 12.8, Valid: 97.7%, Time: 248.99s
+INFO:ace_trainer:Iteration:   2200 / Epoch 011|016, Loss: 12.0, Valid: 97.6%, Time: 256.57s
+INFO:ace_trainer:Iteration:   2300 / Epoch 011|016, Loss: 11.3, Valid: 97.8%, Time: 264.14s
+INFO:ace_trainer:Iteration:   2400 / Epoch 012|016, Loss: 10.7, Valid: 97.8%, Time: 271.72s
+INFO:ace_trainer:Iteration:   2500 / Epoch 012|016, Loss: 10.1, Valid: 98.3%, Time: 279.29s
+INFO:ace_trainer:Iteration:   2600 / Epoch 013|016, Loss: 9.4, Valid: 97.9%, Time: 286.87s
+INFO:ace_trainer:Iteration:   2700 / Epoch 013|016, Loss: 9.1, Valid: 98.0%, Time: 294.51s
+INFO:ace_trainer:Iteration:   2800 / Epoch 014|016, Loss: 8.2, Valid: 98.2%, Time: 302.11s
+INFO:ace_trainer:Iteration:   2900 / Epoch 014|016, Loss: 7.8, Valid: 97.9%, Time: 309.70s
+INFO:ace_trainer:Iteration:   3000 / Epoch 015|016, Loss: 6.6, Valid: 98.0%, Time: 317.29s
+INFO:ace_trainer:Iteration:   3100 / Epoch 015|016, Loss: 4.7, Valid: 97.9%, Time: 324.87s
+INFO:ace_trainer:Saved trained head weights to: /data/fyp_3d/runs/ace_local/heads_local.pt
+INFO:ace_trainer:Done without errors. Creating buffer time: 89.4 seconds. Training time: 236.9 seconds. Total time: 326.3 seconds.
+{'wall_seconds': 326.6475849589915, 'torch_peak_allocated_MiB': 3443.361328125, 'torch_peak_reserved_MiB': 3462.0, 'process_maxrss_MiB': 1625.66015625, 'buffer_features': 1000000, 'epochs': 16, 'batch_size': 5120, 'base_seed': 2089, 'workers': 2, 'scene': '/data/fyp_3d/datasets/7scenes/7scenes_heads', 'scope': 'Official ACE trainer and pretrained encoder; new scene head fit only to official train split; reduced buffer protocol, not semantic training'}
+	Command being timed: "/data/fyp_3d/envs/ace/bin/python work/fyp/research3d/scripts/train_ace_local.py /data/fyp_3d/datasets/7scenes/7scenes_heads /data/fyp_3d/runs/ace_local --ace /data/fyp_3d/sources/ace"
+	User time (seconds): 360.17
+	System time (seconds): 2.65
+	Percent of CPU this job got: 109%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:29.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1664804
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 196
+	Minor (reclaiming a frame) page faults: 729246
+	Voluntary context switches: 113739
+	Involuntary context switches: 1600
+	Swaps: 0
+	File system inputs: 75016
+	File system outputs: 8536
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,30 @@
+{
+  "method": "unmodified official test_ace.py + pretrained Heads head",
+  "n": 1000,
+  "median_translation_m": 0.009289472363889217,
+  "median_rotation_deg": 0.621283718579586,
+  "mean_processing_ms": 126.3155632019043,
+  "recall": {
+    "0.01m_1deg": 0.529,
+    "0.02m_2deg": 0.92,
+    "0.05m_5deg": 0.998,
+    "0.1m_5deg": 1.0
+  },
+  "failures_5cm_5deg": [
+    {
+      "frame": "seq-01-frame-000632.color.png",
+      "translation_m": 0.059328798204660416,
+      "rotation_deg": 2.2478438572683457,
+      "inliers": 1581
+    },
+    {
+      "frame": "seq-01-frame-000633.color.png",
+      "translation_m": 0.053688544780015945,
+      "rotation_deg": 1.9870983974953471,
+      "inliers": 1629
+    }
+  ],
+  "timing_scope": "official loop excludes RGB DataLoader loading, includes network and DSAC*, first frame included; not directly identical scope to GT-free adapter",
+  "official_reported_median_rotation_deg": 0.6217423017493289,
+  "official_reported_median_translation_cm": 0.9308710694313049
+}

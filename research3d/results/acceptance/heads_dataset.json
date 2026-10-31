@@ -1,0 +1,68 @@
+{
+  "archive_sha256": "402f8760ba150100bda5360241b605383dc5f949c055863301bde1b45f6a7a5d",
+  "outer_zip_crc_verified": true,
+  "scientific_members_crc_verified": 6000,
+  "excluded_unused_crc_failures": [
+    {
+      "archive": "seq-01.zip",
+      "member": "seq-01/Thumbs.db",
+      "reason": "CRC mismatch in unused non-scientific file"
+    },
+    {
+      "archive": "seq-02.zip",
+      "member": "seq-02/Thumbs.db",
+      "reason": "CRC mismatch in unused non-scientific file"
+    }
+  ],
+  "counts": {
+    "train": {
+      "sequences": [
+        "seq-02"
+      ],
+      "frames": 1000
+    },
+    "test": {
+      "sequences": [
+        "seq-01"
+      ],
+      "frames": 1000
+    }
+  },
+  "pose": "T_world_rgb = T_world_depth @ inv(T_rgb_depth)",
+  "rgb_K": [
+    [
+      525,
+      0,
+      320
+    ],
+    [
+      0,
+      525,
+      240
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "depth_K": [
+    [
+      585,
+      0,
+      320
+    ],
+    [
+      0,
+      585,
+      240
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "depth_unit": "mm, 65535 invalid",
+  "calibration_caveat": "default intrinsics and external Kinect extrinsic per official ACE; not exact per-device calibration"
+}

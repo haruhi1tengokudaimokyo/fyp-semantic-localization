@@ -1,0 +1,110 @@
+{
+  "source_mesh": "/data/fyp_3d/datasets/replicacad/stages/frl_apartment_stage.glb",
+  "frames": [
+    {
+      "frame": "0000.depth.npy",
+      "rays": 106,
+      "hits": 106,
+      "median_abs_depth_m": 8.6225348365776e-06
+    },
+    {
+      "frame": "0001.depth.npy",
+      "rays": 106,
+      "hits": 106,
+      "median_abs_depth_m": 8.816835788461042e-06
+    },
+    {
+      "frame": "0002.depth.npy",
+      "rays": 85,
+      "hits": 85,
+      "median_abs_depth_m": 3.601862145208301e-05
+    },
+    {
+      "frame": "0003.depth.npy",
+      "rays": 106,
+      "hits": 106,
+      "median_abs_depth_m": 1.0407130283329735e-05
+    },
+    {
+      "frame": "0004.depth.npy",
+      "rays": 92,
+      "hits": 92,
+      "median_abs_depth_m": 3.1279725556387916e-05
+    },
+    {
+      "frame": "0005.depth.npy",
+      "rays": 84,
+      "hits": 84,
+      "median_abs_depth_m": 2.6039931655175153e-05
+    },
+    {
+      "frame": "0006.depth.npy",
+      "rays": 78,
+      "hits": 78,
+      "median_abs_depth_m": 6.855115830717295e-05
+    },
+    {
+      "frame": "0007.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 1.1843336925831949e-05
+    },
+    {
+      "frame": "0008.depth.npy",
+      "rays": 101,
+      "hits": 101,
+      "median_abs_depth_m": 4.872395536148488e-06
+    },
+    {
+      "frame": "0009.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 2.5752890092101133e-06
+    },
+    {
+      "frame": "0010.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 1.3041368637667361e-05
+    },
+    {
+      "frame": "0011.depth.npy",
+      "rays": 84,
+      "hits": 84,
+      "median_abs_depth_m": 3.189878439968652e-05
+    },
+    {
+      "frame": "0012.depth.npy",
+      "rays": 84,
+      "hits": 84,
+      "median_abs_depth_m": 4.6654625500019975e-05
+    },
+    {
+      "frame": "0013.depth.npy",
+      "rays": 92,
+      "hits": 92,
+      "median_abs_depth_m": 6.232661759009162e-05
+    },
+    {
+      "frame": "0014.depth.npy",
+      "rays": 96,
+      "hits": 96,
+      "median_abs_depth_m": 5.4608864075156305e-06
+    },
+    {
+      "frame": "0015.depth.npy",
+      "rays": 18,
+      "hits": 18,
+      "median_abs_depth_m": 1.695706325144375e-05
+    }
+  ],
+  "n": 1456,
+  "median_abs_depth_m": 1.308644258424252e-05,
+  "p95_abs_depth_m": 0.00011242779388864754,
+  "max_abs_depth_m": 0.0007217930254661553,
+  "fraction_under_1cm": 1.0,
+  "pixel_convention": "integer centers, cx=(W-1)/2, cy=(H-1)/2",
+  "method": "independent trimesh ray-triangle intersections in original mesh; actual saved sensor T_world_camera",
+  "pass_criterion": "p95 < 0.01 m",
+  "passed": true
+}

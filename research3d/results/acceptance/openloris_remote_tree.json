@@ -1,0 +1,218 @@
+[
+  {
+    "type": "directory",
+    "oid": "c7949886a239979091474f2297643f733b91c241",
+    "size": 0,
+    "path": "package"
+  },
+  {
+    "type": "directory",
+    "oid": "a94ae24b6aea11c22c4aab726f7ae90b6bc311f0",
+    "size": 0,
+    "path": "rosbag"
+  },
+  {
+    "type": "file",
+    "oid": "485211f5852910f6d1ee02e874f90ad36a1bcab5",
+    "size": 2632,
+    "path": ".gitattributes"
+  },
+  {
+    "type": "file",
+    "oid": "59ccb014c07eb22d450ff5ca7df0fc1f1fd56eb4",
+    "size": 4411,
+    "path": "README.md"
+  },
+  {
+    "type": "file",
+    "oid": "9d8f770a879f4f3927db12d31c8d34f3bce2c43b",
+    "size": 7466711040,
+    "lfs": {
+      "oid": "6f42810f87f21b3c720f517f0c514c6ba37ccf789c596f96e75df60226f43899",
+      "size": 7466711040,
+      "pointerSize": 135
+    },
+    "xetHash": "eeedbfcbcdf17e3a9e0366bcfdc0e79c4ec230660cab96e869f17502453b0cfb",
+    "path": "package/cafe1-1_2-package.tar"
+  },
+  {
+    "type": "file",
+    "oid": "c5356debb77b1cff9c1bd592cd34b8eda08f2cf5",
+    "size": 13853763765,
+    "lfs": {
+      "oid": "c7ff1a472ca54da82198521eda8c18f2065691075a05e706880f7fb58fda8415",
+      "size": 13853763765,
+      "pointerSize": 136
+    },
+    "xetHash": "57b1c407bfead654bd09bb402d982a51a8585eff37ec4c6dcc2a2be38090bfa3",
+    "path": "package/corridor1-1.7z"
+  },
+  {
+    "type": "file",
+    "oid": "bee1e40ec14438d9b484fcba9b1de3d9b5d9387b",
+    "size": 19695083520,
+    "lfs": {
+      "oid": "a2de290b85bdefc5388aad27858125206a19b007d9b735de5faff954cc473413",
+      "size": 19695083520,
+      "pointerSize": 136
+    },
+    "xetHash": "0c6d572f2eb2a7de862eade96fc95d3a6b391a3201311247d1a8c9be22f3c740",
+    "path": "package/corridor1-2_5-package.tar"
+  },
+  {
+    "type": "file",
+    "oid": "a7de307cf5d8623efbdfd98d8e619c161e3de7be",
+    "size": 11076559,
+    "lfs": {
+      "oid": "07564d7ed3d6739585002afa12bcf481cc0e9e358fc64efd5e658e2c994bdc3b",
+      "size": 11076559,
+      "pointerSize": 133
+    },
+    "xetHash": "52427912be655389b52f442eed0204b1de21842a8651bb8cbcf51cb5af8dae7e",
+    "path": "package/groundtruth.zip"
+  },
+  {
+    "type": "file",
+    "oid": "dd47dfb69f238ceae4c2d2a10ddf83fd0539b241",
+    "size": 18974105600,
+    "lfs": {
+      "oid": "5a6b14cc01843669a9d77d077355fd5ca6e7ff88297718a8a7d6d5947a584e75",
+      "size": 18974105600,
+      "pointerSize": 136
+    },
+    "xetHash": "b22e4262ce0bbc88fa221bb91255f6243245b9847415732d8ca490c722a4e70b",
+    "path": "package/home1-1_5-package.tar"
+  },
+  {
+    "type": "file",
+    "oid": "f0e9ade99b1ed5000c5057612c9eec3c23168e58",
+    "size": 41526149120,
+    "lfs": {
+      "oid": "f7e4e01fac0b0c426507d74fa6ee19eb4ee95dc63b77a8a57d6bc7209416487f",
+      "size": 41526149120,
+      "pointerSize": 136
+    },
+    "xetHash": "c77efc7f7bbeeff8652e4cad12c76e8a8f8c4858efbf2c85510ffebbf3d3cfac",
+    "path": "package/market1-1_3-package.tar"
+  },
+  {
+    "type": "file",
+    "oid": "02b3e439fe2d353a4b346319626c37c0ae60dddc",
+    "size": 10618337280,
+    "lfs": {
+      "oid": "2a610f040aaf4939b7104fe8fe8c60de82bcf641c6d04d7263de751147f6ff22",
+      "size": 10618337280,
+      "pointerSize": 136
+    },
+    "xetHash": "a283bf2e493ac0a8e55d641c4f2bdcef7cd7f0b2691808e9ae384de0c2c78267",
+    "path": "package/office1-1_7-package.tar"
+  },
+  {
+    "type": "file",
+    "oid": "c50e3fd0fef42559766769a64e180c88e5c82081",
+    "size": 4096,
+    "path": "rosbag/._decompress.sh"
+  },
+  {
+    "type": "file",
+    "oid": "a49d9f7cfbd05910c0be4c454baa9d81fa1be458",
+    "size": 6739138560,
+    "lfs": {
+      "oid": "3b6022f88c35b2d672e8231735d9192c6207cfdaf85a2dfe461dbe76f7d90eb9",
+      "size": 6739138560,
+      "pointerSize": 135
+    },
+    "xetHash": "c422fad3bececc54df9abcef1c2c5ad1a5e8faba0aa8742623bef2fd7614f5ff",
+    "path": "rosbag/cafe1-1_2-rosbag.tar"
+  },
+  {
+    "type": "file",
+    "oid": "38b995fa2b43fdc3536dcea4a98d8f0b3ff4049a",
+    "size": 16237660160,
+    "lfs": {
+      "oid": "10fce93b8b9dc9efea52c918b7c1b62fce67686e6d0d0bfdc772a2d073a92e66",
+      "size": 16237660160,
+      "pointerSize": 136
+    },
+    "xetHash": "7bc2ebf81b63abd789f37f111ec951a811a5dda08580f63a3513f0a56667dbda",
+    "path": "rosbag/corridor1-1_2-rosbag.tar"
+  },
+  {
+    "type": "file",
+    "oid": "4e64aec4b0811cd9262e1c7ea2bfb9fba6304ee4",
+    "size": 11077519360,
+    "lfs": {
+      "oid": "68d87f688f5d2b76fe0fddac379a134a4f92b82d60506655c661e3175e880cf1",
+      "size": 11077519360,
+      "pointerSize": 136
+    },
+    "xetHash": "fd0ca4c4063e28aaf5700812b6d71e5277912cb7460cf4050465c2b4e7051ba3",
+    "path": "rosbag/corridor1-3_5-rosbag.tar"
+  },
+  {
+    "type": "file",
+    "oid": "98c770bcb2d0b5fcd7d3dceacdb0cbb43e25ffcc",
+    "size": 87,
+    "path": "rosbag/decompress.sh"
+  },
+  {
+    "type": "file",
+    "oid": "9e890dc330f647fe0c2183207f54ed80424d1357",
+    "size": 16424550400,
+    "lfs": {
+      "oid": "218d11b19303e056d8e197b6fd485d639a9053ef73be454a8fc53e6e45e2544f",
+      "size": 16424550400,
+      "pointerSize": 136
+    },
+    "xetHash": "de75c7d8e66b13e88c15f17180cea9cbbdcaccb6e345ec6c09e27b3323463ccc",
+    "path": "rosbag/home1-1_5-rosbag.tar"
+  },
+  {
+    "type": "file",
+    "oid": "4bfb14042d3ce6acd45079c203e589f97757b962",
+    "size": 9710986510,
+    "lfs": {
+      "oid": "e0a21fecf65b2ced33f006404d82d17b40c3e3a9b417f0d50730b870a784a98c",
+      "size": 9710986510,
+      "pointerSize": 135
+    },
+    "xetHash": "3c5699266c7b5af114c330628eb1511ce92239cf511865bae4e1eaba646cb3e7",
+    "path": "rosbag/market1-1.bag"
+  },
+  {
+    "type": "file",
+    "oid": "7eeeff0619805845e4e6eed17f6ca8620e818ba5",
+    "size": 12251493312,
+    "lfs": {
+      "oid": "87e4a446ba3ae3f85e6d96bd8029a032d3f226e4c1203012e529b5639ec9e338",
+      "size": 12251493312,
+      "pointerSize": 136
+    },
+    "xetHash": "37483b1c32bce949b5cca9e0a46c98babf56b68dac9071d5859e5528b04ef488",
+    "path": "rosbag/market1-2.bag"
+  },
+  {
+    "type": "file",
+    "oid": "cd36026ef97865b419244de87b6ca1193a73320a",
+    "size": 13936979145,
+    "lfs": {
+      "oid": "725d29251a261c94873e3851e3674824b57f1efa15d98d9ce3cbea54d68d35b7",
+      "size": 13936979145,
+      "pointerSize": 136
+    },
+    "xetHash": "e94b2a77c5e16c8981c58c025be2e8895b26574dd854311aef3ed3954a08cdb0",
+    "path": "rosbag/market1-3.bag"
+  },
+  {
+    "type": "file",
+    "oid": "12a6e14f95e835acdcda094fb43ef2a409cb6585",
+    "size": 9267230720,
+    "lfs": {
+      "oid": "f43ae38cd560e150d8a06bbac527235dc53a536a07bdea77db7e672c13875912",
+      "size": 9267230720,
+      "pointerSize": 135
+    },
+    "xetHash": "b1282e03fa757daa302b562c054bd7749cb8ffdf846e0ef04bc2554a074c9987",
+    "path": "rosbag/office1-1_7-rosbag.tar"
+  }
+]

@@ -1,0 +1,86 @@
+{
+  "source_mesh": "/data/fyp_3d/datasets/hssd/stages/105515211_173104185.glb",
+  "frames": [
+    {
+      "frame": "0000.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 1.3470649719238281e-05
+    },
+    {
+      "frame": "0001.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 7.503852063606153e-06
+    },
+    {
+      "frame": "0002.depth.npy",
+      "rays": 81,
+      "hits": 81,
+      "median_abs_depth_m": 1.0167118080772752e-06
+    },
+    {
+      "frame": "0003.depth.npy",
+      "rays": 106,
+      "hits": 106,
+      "median_abs_depth_m": 2.222839421417433e-05
+    },
+    {
+      "frame": "0004.depth.npy",
+      "rays": 80,
+      "hits": 80,
+      "median_abs_depth_m": 1.5497207641601562e-05
+    },
+    {
+      "frame": "0005.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 1.3646765240071801e-05
+    },
+    {
+      "frame": "0006.depth.npy",
+      "rays": 93,
+      "hits": 93,
+      "median_abs_depth_m": 1.194184546560173e-05
+    },
+    {
+      "frame": "0007.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 4.058223519759485e-06
+    },
+    {
+      "frame": "0008.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 8.940696716308594e-07
+    },
+    {
+      "frame": "0009.depth.npy",
+      "rays": 76,
+      "hits": 76,
+      "median_abs_depth_m": 4.219424340612399e-05
+    },
+    {
+      "frame": "0010.depth.npy",
+      "rays": 96,
+      "hits": 96,
+      "median_abs_depth_m": 1.4077750468022288e-05
+    },
+    {
+      "frame": "0011.depth.npy",
+      "rays": 108,
+      "hits": 108,
+      "median_abs_depth_m": 5.208360079667074e-06
+    }
+  ],
+  "n": 1180,
+  "median_abs_depth_m": 1.0058549786862159e-05,
+  "p95_abs_depth_m": 6.124837027243757e-05,
+  "max_abs_depth_m": 0.00020787864450877436,
+  "fraction_under_1cm": 1.0,
+  "pixel_convention": "integer centers, cx=(W-1)/2, cy=(H-1)/2",
+  "method": "independent trimesh ray-triangle intersections in original mesh; actual saved sensor T_world_camera",
+  "pass_criterion": "p95 < 0.01 m",
+  "passed": true
+}

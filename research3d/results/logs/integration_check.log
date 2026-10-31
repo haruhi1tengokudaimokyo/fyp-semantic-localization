@@ -1,0 +1,11 @@
+[34;1mSampling 64 hypotheses.[0m
+Done in 0.00111651s.
+[34;1mCalculating scores.[0m
+Done in 0.00363566s.
+[34;1mDrawing final hypothesis.[0m
+Soft inlier count: 71.403 (Selection Probability: 65%)
+Entropy of hypothesis distribution: 1.71836
+Done in 1.3513e-05s.
+[34;1mRefining winning pose:[0m
+Done in 0.0165334s.
+{'frames_compared': 1000, 'max_translation_error_difference_m': 3.8774916690225564e-08, 'max_rotation_error_difference_deg': 2.278927581755852e-06, 'gt_pose_text_reads_denied': True, 'inference_succeeded': True, 'accepted_tracking_correction': False, 'covariance_is_unavailable': True, 'inliers': 3687}

@@ -1,0 +1,58 @@
+INFO:ace_trainer:Loaded training scan from: /data/fyp_3d/datasets/7scenes/7scenes_heads -- 1000 images, mean: 0.00 -0.14 0.09
+/data/fyp_3d/sources/ace/ace_trainer.py:92: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  encoder_state_dict = torch.load(self.options.encoder_path, map_location="cpu")
+INFO:ace_network:Creating Regressor using pretrained encoder with 512 feature size.
+INFO:ace_trainer:Loaded pretrained encoder from: /data/fyp_3d/sources/ace/ace_encoder_pretrained.pt
+/data/fyp_3d/sources/ace/ace_trainer.py:116: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = GradScaler(enabled=self.options.use_half)
+INFO:ace_trainer:Starting creation of the training buffer.
+/data/fyp_3d/sources/ace/ace_trainer.py:279: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.options.use_half):
+INFO:ace_trainer:Created buffer of 1.07GB with 1 passes over the training data.
+INFO:ace_trainer:Filled training buffer in 89.5s.
+/data/fyp_3d/sources/ace/ace_trainer.py:391: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(enabled=self.options.use_half):
+Traceback (most recent call last):
+  File "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py", line 62, in <module>
+    main(p.parse_args())
+  File "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py", line 39, in main
+    runpy.run_path(str(Path(a.ace) / "train_ace.py"), run_name="__main__")
+  File "/data/FYP_Indoor_Localization/tools/python/cpython-3.10.22-linux-x86_64-gnu/lib/python3.10/runpy.py", line 289, in run_path
+    return _run_module_code(code, init_globals, run_name,
+  File "/data/FYP_Indoor_Localization/tools/python/cpython-3.10.22-linux-x86_64-gnu/lib/python3.10/runpy.py", line 96, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/data/FYP_Indoor_Localization/tools/python/cpython-3.10.22-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/data/fyp_3d/sources/ace/train_ace.py", line 127, in <module>
+    trainer.train()
+  File "/data/fyp_3d/sources/ace/ace_trainer.py", line 184, in train
+    self.run_epoch()
+  File "/data/fyp_3d/sources/ace/ace_trainer.py", line 373, in run_epoch
+    self.training_step(
+  File "/data/fyp_3d/sources/ace/ace_trainer.py", line 450, in training_step
+    old_optimizer_step = self.optimizer._step_count
+AttributeError: 'AdamW' object has no attribute '_step_count'
+Command exited with non-zero status 1
+	Command being timed: "/data/fyp_3d/envs/ace/bin/python work/fyp/research3d/scripts/train_ace_local.py /data/fyp_3d/datasets/7scenes/7scenes_heads /data/fyp_3d/runs/ace_local --ace /data/fyp_3d/sources/ace"
+	User time (seconds): 123.28
+	System time (seconds): 2.42
+	Percent of CPU this job got: 134%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:33.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1370024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 192
+	Minor (reclaiming a frame) page faults: 662429
+	Voluntary context switches: 95915
+	Involuntary context switches: 551
+	Swaps: 0
+	File system inputs: 71208
+	File system outputs: 40
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 1
