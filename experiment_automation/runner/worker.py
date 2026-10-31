@@ -2,7 +2,18 @@
 
 import argparse, json, os, resource, subprocess, time, traceback
 from pathlib import Path
-from core import ROOT, REPO, db, event, fingerprint, validate, atomic, utc, resources
+from core import (
+    ROOT,
+    REPO,
+    db,
+    event,
+    fingerprint,
+    validate,
+    atomic,
+    utc,
+    resources,
+    source_snapshot,
+)
 
 
 def run(tid, root=ROOT):
@@ -11,7 +22,12 @@ def run(tid, root=ROOT):
         s = json.loads(row["spec"])
         attempt = row["attempt"]
         started = time.time()
+        source = source_snapshot(root)
         h = fingerprint(s)
+        atomic(
+            Path(root) / "artifacts" / f"{tid}.attempt{attempt}.provenance.json",
+            {"source": source, "task_spec": s, "input_hash": h, "started": started},
+        )
         c.execute(
             "UPDATE tasks SET pid=?,start=?,heartbeat=?,input_hash=?,code_commit=? WHERE task_id=?",
             (
@@ -43,6 +59,9 @@ def run(tid, root=ROOT):
             "OPENBLAS_NUM_THREADS": "1",
             "PYTHONPATH": str(REPO / "research3d"),
         }
+        network_file = Path(root) / "state/network_environment.json"
+        if network_file.exists():
+            env.update(json.loads(network_file.read_text()))
         with log.open("a") as f:
             f.write(f"\nSTART {utc()} task={tid} attempt={attempt}\n")
             f.flush()
@@ -80,6 +99,7 @@ def run(tid, root=ROOT):
         receipt = {
             **accepted,
             "task_id": tid,
+            "source": source,
             "input_hash": h,
             "attempt": attempt,
             "wall_seconds": time.time() - started,

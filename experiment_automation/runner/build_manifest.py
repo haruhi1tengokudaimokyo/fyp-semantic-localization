@@ -41,13 +41,13 @@ def add(
         inputs=[str(x) for x in inputs],
         formal=formal,
         seed=seed,
-        max_attempts=2,
+        max_attempts=3 if kind == "download" or tid == "D.expanded.render" else 2,
         retry_delay_s=30,
         priority=priority,
         kind=kind,
         resources=dict(
             gpu=gpu,
-            cpu_slots=2 if gpu else 1,
+            cpu_slots=0 if kind == "download" else (2 if gpu else 1),
             ram_mib=ram,
             disk_gib=disk,
             min_gpu_free_mib=4500,
@@ -414,6 +414,7 @@ add(
         "hssd",
         "--scenes",
         "24",
+        "--unique-buildings",
     ],
     [J(B / "datasets/hssd_expanded/acquisition.json", minimum={"files.0.bytes": 1})],
     kind="download",
@@ -491,6 +492,513 @@ for number in [2, 4, 5, 6, 7]:
         ram=3000,
         disk=12,
     )
+# Repair formally observed decomposed-object closure gap; preserve initial file-hash audit.
+add(
+    "hssd.expand24.closure_repair",
+    "D",
+    "hssd",
+    [
+        MAC,
+        str(SCRIPT / "fetch_assets.py"),
+        str(B / "datasets/hssd_expanded"),
+        "--dataset",
+        "hssd",
+        "--scenes",
+        "24",
+        "--unique-buildings",
+    ],
+    [J(B / "datasets/hssd_expanded/acquisition.json", minimum={"files.0.bytes": 1})],
+    deps=["hssd.expand24"],
+    kind="download",
+    priority=90,
+    disk=2,
+    ram=800,
+)
+add(
+    "hssd.expand24.closure_audit",
+    "D",
+    "hssd",
+    [MAC, str(SCRIPT / "audit_hssd_closure.py"), str(B / "datasets/hssd_expanded")],
+    [
+        J(
+            B / "datasets/hssd_expanded/closure_integrity.json",
+            equals={"complete": True, "missing": []},
+            minimum={"scenes": 24},
+        )
+    ],
+    deps=["hssd.expand24.closure_repair"],
+    priority=90,
+)
+# Expanded semantic data: conservative whole-house groups, no architecture label invention.
+SEM = str(B / "envs/semantic310/bin/python")
+expanded = B / "datasets/hssd_semantic_formal"
+plan = B / "datasets/hssd_expanded/building_split.json"
+add(
+    "D.building_split.audit",
+    "D",
+    "hssd",
+    [
+        MAC,
+        str(SCRIPT / "prepare_building_split.py"),
+        str(B / "datasets/hssd_expanded"),
+        str(plan),
+    ],
+    [
+        J(
+            plan,
+            minimum={"independent_layout_groups": 12},
+            equals={"real_physical_building_identity_claim": False},
+        )
+    ],
+    deps=["hssd.expand24.integrity"],
+    priority=80,
+    ram=500,
+)
+add(
+    "D.expanded.render",
+    "D",
+    "hssd",
+    [
+        HAB,
+        str(SCRIPT / "render_semantic_pilot.py"),
+        str(B / "datasets/hssd_expanded"),
+        str(expanded),
+        "--building-plan",
+        str(plan),
+        "--positions",
+        "150",
+    ],
+    [J(expanded / "manifest.json", minimum={"independent_layout_groups": 12})],
+    deps=["D.building_split.audit", "hssd.expand24.closure_audit"],
+    gpu=True,
+    priority=65,
+    ram=2500,
+    disk=18,
+    inputs=[plan],
+)
+for strategy in ["full", "frozen", "scratch"]:
+    for seed in [1305, 1306, 1307]:
+        model = B / "runs/formal/semantic" / (strategy + "_seed" + str(seed))
+        add(
+            "D.train." + strategy + "." + str(seed),
+            "D",
+            "hssd",
+            [
+                SEM,
+                str(SCRIPT / "train_semantic_pilot.py"),
+                str(expanded),
+                str(model),
+                "--weights",
+                str(B / "models/mit-b0"),
+                "--epochs",
+                "40",
+                "--seed",
+                str(seed),
+                "--strategy",
+                strategy,
+            ],
+            [
+                J(
+                    model / "summary.json",
+                    equals={
+                        "status": "completed",
+                        "epochs": 40,
+                        "seed": seed,
+                        "strategy": strategy,
+                    },
+                    minimum={"independent_layout_groups": 12},
+                    finite=["test.mean_iou"],
+                ),
+                dict(path=str(model / "best.pt"), min_bytes=1000000),
+            ],
+            deps=["D.expanded.render"],
+            gpu=True,
+            priority=45 if strategy == "full" and seed == 1305 else 22,
+            seed=seed,
+            ram=2500,
+            inputs=[expanded / "manifest.json"],
+            coverage={"epochs": 40},
+        )
+localization = B / "runs/formal/relocalization_hssd"
+add(
+    "E.multiscene.geometry",
+    "E",
+    "hssd",
+    [
+        SEM,
+        str(SCRIPT / "formal_relocalization_suite.py"),
+        str(expanded),
+        str(localization),
+        "--geometry-only",
+    ],
+    [
+        J(
+            localization / "geometry_summary.json",
+            equals={"status": "completed", "GT_online": False},
+            minimum={"held_out_scenes": 2, "unique_queries": 100},
+        )
+    ],
+    deps=["D.expanded.render"],
+    gpu=True,
+    priority=44,
+    ram=2200,
+    disk=2,
+    inputs=[expanded / "manifest.json"],
+)
+add(
+    "F.formal.clip.ablation",
+    "F",
+    "hssd",
+    [
+        SEM,
+        str(SCRIPT / "formal_relocalization_suite.py"),
+        str(expanded),
+        str(localization),
+        "--checkpoint",
+        str(B / "runs/formal/semantic/full_seed1305/best.pt"),
+    ],
+    [
+        J(
+            localization / "summary.json",
+            equals={"status": "completed", "GT_online": False},
+            minimum={"held_out_scenes": 2, "unique_queries": 100},
+        )
+    ],
+    deps=["E.multiscene.geometry", "D.train.full.1305"],
+    gpu=True,
+    priority=44,
+    ram=2400,
+    disk=2,
+    inputs=[
+        expanded / "manifest.json",
+        B / "runs/formal/semantic/full_seed1305/best.pt",
+    ],
+)
+# Common-scene integration is an executable branch, independent of semantic training.
+common = B / "datasets/common_hssd105"
+ace_model = B / "runs/formal/common/ace_seed2089"
+ace_eval = ace_model / "evaluation"
+mac_run = B / "runs/formal/common/macvo_paper600"
+joint = B / "runs/formal/common/continuous_joint"
+add(
+    "G.common.stereo.render",
+    "G",
+    "habitat_common",
+    [
+        HAB,
+        str(SCRIPT / "render_common_stereo.py"),
+        str(B / "datasets/hssd"),
+        str(common),
+        "--frames",
+        "600",
+        "--references",
+        "384",
+    ],
+    [
+        J(
+            common / "acceptance.json",
+            equals={
+                "simulated": True,
+                "GT_online": False,
+                "continuous_stereo_frames": 600,
+                "is_smoke": False,
+            },
+            minimum={"references": 256},
+        ),
+        dict(path=str(common / "readonly_prior_map.npz"), min_bytes=10000),
+    ],
+    gpu=True,
+    priority=99,
+    disk=4,
+    ram=1800,
+    coverage={
+        "images": 600,
+        "full_sequence": True,
+        "scene_ids": ["105515211_173104185"],
+    },
+)
+s = add(
+    "G.common.ace.train",
+    "G",
+    "habitat_common",
+    [
+        ACE,
+        str(SCRIPT / "train_ace_local.py"),
+        str(common / "ace_scene"),
+        str(ace_model),
+        "--ace",
+        str(B / "sources/ace"),
+        "--seed",
+        "2089",
+    ],
+    [
+        J(
+            ace_model / "training_resources.json",
+            equals={"epochs": 16, "base_seed": 2089},
+        ),
+        dict(path=str(ace_model / "heads_local.pt"), min_bytes=1000000),
+    ],
+    deps=["G.common.stereo.render"],
+    gpu=True,
+    priority=99,
+    seed=2089,
+    ram=5500,
+    inputs=[common / "acceptance.json"],
+)
+s["model_dataset_id"] = "habitat_common"
+s = add(
+    "G.common.ace.eval",
+    "G",
+    "habitat_common",
+    [
+        ACE,
+        str(SCRIPT / "evaluate_ace.py"),
+        str(common / "ace_scene"),
+        str(ace_model / "heads_local.pt"),
+        str(ace_eval),
+        "--ace",
+        str(B / "sources/ace"),
+    ],
+    [
+        J(
+            ace_eval / "summary.json",
+            equals={"n": 600},
+            finite=["median_translation_m", "median_rotation_deg"],
+        )
+    ],
+    deps=["G.common.ace.train"],
+    gpu=True,
+    priority=99,
+    ram=2500,
+    inputs=[ace_model / "heads_local.pt"],
+)
+s["model_dataset_id"] = "habitat_common"
+add(
+    "G.common.macvo",
+    "G",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "run_macvo.py"),
+        str(common / "stereo"),
+        str(mac_run),
+        "--source",
+        str(B / "sources/MAC-VO"),
+        "--weights",
+        str(B / "models/MACVO_FrontendCov.pth"),
+        "--motion-weights",
+        str(B / "models/MACVO_posenet.pkl"),
+        "--frames",
+        "600",
+        "--config",
+        "paper",
+        "--encoder",
+        "fp32",
+        "--decoder",
+        "fp32",
+        "--frontend-cache",
+        str(B / "automation/checkpoints/macvo_dense"),
+    ],
+    [
+        J(
+            mac_run / "summary.json",
+            equals={"finished_frames": 600},
+            finite=["raw.ate_se3_aligned_rmse_m"],
+        )
+    ],
+    deps=["G.common.stereo.render"],
+    gpu=True,
+    priority=98,
+    disk=10,
+    ram=2500,
+    inputs=[common / "stereo/calibration.json"],
+)
+add(
+    "G.ace_macvo.integration",
+    "G",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "integrate_common_system.py"),
+        str(common),
+        str(ace_eval),
+        str(mac_run),
+        str(joint),
+    ],
+    [
+        J(
+            joint / "summary.json",
+            equals={
+                "audit.frames": 600,
+                "audit.GT_online": False,
+                "audit.map_unchanged": True,
+                "audit.continuous_state_propagation": True,
+            },
+            finite=["MACVO_ACE.recall_5cm_5deg", "MACVO_ACE_gate.valid_pose_fraction"],
+        )
+    ],
+    deps=["G.common.ace.eval", "G.common.macvo"],
+    priority=99,
+    inputs=[
+        common / "readonly_prior_map.npz",
+        ace_eval / "predictions.npz",
+        mac_run / "trajectory.npz",
+    ],
+)
+# Stereo+IMU requires no wheel provenance assumption. All official office bags.
+for number in range(1, 8):
+    name = f"office1-{number}"
+    out = B / "runs/formal/openloris" / name
+    prep = "openloris.data." + name + ".prepare"
+    if number in [1, 3]:
+        add(
+            prep,
+            "C",
+            name,
+            [
+                SENSOR,
+                str(SCRIPT / "prepare_openloris_mins.py"),
+                str(B / "datasets/openloris" / (name + ".bag")),
+                str(out),
+                "--source",
+                str(B / "sources/MINS"),
+            ],
+            [
+                J(
+                    out / "audit.json",
+                    equals={"GT_online": False},
+                    minimum={"imu_count": 1000},
+                )
+            ],
+            priority=55,
+            ram=3000,
+            disk=8,
+        )
+    run = "mins." + name + ".stereo_imu"
+    add(
+        run,
+        "C",
+        name,
+        [
+            SENSOR,
+            str(SCRIPT / "run_mins_suite.py"),
+            str(out),
+            "--binary",
+            str(B / "build/mins/mins_bag"),
+            "--modes",
+            "stereo_imu",
+        ],
+        [
+            J(
+                out / "execution.json",
+                equals={"stereo_imu.returncode": 0, "stereo_imu.use_gt": False},
+            )
+        ],
+        deps=[prep],
+        priority=58,
+        ram=2400,
+        coverage={"full_sequence": True},
+    )
+    add(
+        run + ".eval",
+        "C",
+        name,
+        [SENSOR, str(SCRIPT / "evaluate_mins.py"), str(out), "--modes", "stereo_imu"],
+        [J(out / "comparison.json", equals={"stereo_imu.protocol.GT_online": False})],
+        deps=[run],
+        priority=58,
+        ram=500,
+    )
+# Controlled recovery faults are reported separately from physical kidnapping.
+recovery = B / "runs/formal/common/controlled_recovery_v2"
+add(
+    "I.common.controlled_recovery.v2",
+    "I",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "evaluate_common_recovery.py"),
+        str(common),
+        str(ace_eval),
+        str(mac_run),
+        str(recovery),
+    ],
+    [
+        J(
+            recovery / "summary.json",
+            equals={
+                "scope.frames": 600,
+                "scope.GT_online": False,
+                "scope.controlled_faults_only": True,
+                "scope.physical_kidnapping": False,
+            },
+        )
+    ],
+    deps=["G.ace_macvo.integration"],
+    priority=80,
+    inputs=[ace_eval / "predictions.npz", mac_run / "trajectory.npz"],
+)
+# Actual walking/sitting people, distinct from simulated dynamics and packet loss.
+for sequence in ["sitting_xyz", "sitting_static", "walking_xyz", "walking_static"]:
+    ds = B / "datasets/tum_rgbd" / sequence
+    tid = "J.tum." + sequence
+    add(
+        tid + ".data",
+        "J",
+        "tum_" + sequence,
+        [
+            MAC,
+            str(SCRIPT / "acquire_tum_rgbd.py"),
+            sequence,
+            str(B / "downloads/tum" / (sequence + ".tgz")),
+            str(ds),
+        ],
+        [
+            J(
+                ds / "acceptance.json",
+                equals={
+                    "all_png_verified": True,
+                    "full_sequence": True,
+                    "real_people": True,
+                },
+            )
+        ],
+        kind="download",
+        priority=50,
+        disk=2,
+        ram=400,
+    )
+    add(
+        tid + ".rgbd_vo",
+        "J",
+        "tum_" + sequence,
+        [
+            MAC,
+            str(SCRIPT / "run_tum_rgbd_vo.py"),
+            str(ds),
+            str(B / "runs/formal/tum" / sequence),
+        ],
+        [
+            J(
+                B / "runs/formal/tum" / sequence / "summary.json",
+                equals={
+                    "status": "completed",
+                    "GT_online": False,
+                    "prior_map_available": False,
+                },
+                minimum={"metrics.raw_rgb_frames": 100},
+                finite=[
+                    "metrics.ate_se3_aligned_rmse_m",
+                    "metrics.tracking_availability_all_rgb_frames",
+                ],
+            )
+        ],
+        deps=[tid + ".data"],
+        priority=50,
+        ram=900,
+        inputs=[ds / "acceptance.json"],
+        coverage={"full_sequence": True},
+    )
 # Requirements that are not yet executable stay visibly BLOCKED, never fake COMPLETED.
 for tid, group, ds, reason in [
     (
@@ -506,46 +1014,10 @@ for tid, group, ds, reason in [
         "Additional official compatible full trajectories must be selected and acquired with calibration/pose validation; single demo is insufficient",
     ),
     (
-        "D.building_split.audit",
-        "D",
-        "hssd",
-        "Expanded scene closure and geometry/layout duplicate audit required before independent-building train/val/test split",
-    ),
-    (
-        "D.formal.multiseed",
-        "D",
-        "hssd",
-        "Requires audited multi-building manifest and resumable full training implementation; pilot weights are not formal completion",
-    ),
-    (
-        "E.multiscene.geometry",
-        "E",
-        "hssd",
-        "Requires expanded immutable reference/query maps; 76-query pilot not formal completion",
-    ),
-    (
-        "F.formal.clip.ablation",
-        "F",
-        "hssd",
-        "Requires common expanded query maps and Top-K protocol; CLIP pilot is available but not multi-building benchmark",
-    ),
-    (
         "F.omcl.official",
         "F",
         "omcl",
         "Dense LSeg/OpenScene feature map + OMCL dependencies/checkpoints not yet validated; pooled CLIP baseline is not OMCL",
-    ),
-    (
-        "G.common.stereo.render",
-        "G",
-        "habitat_common",
-        "Implementation in progress: must generate continuous true rendered stereo, immutable map, disjoint ACE references and test GT",
-    ),
-    (
-        "G.ace_macvo.integration",
-        "G",
-        "habitat_common",
-        "Requires common-scene ACE adaptation and real MACVO motion; separate-dataset trajectories cannot be fused",
     ),
     (
         "H.full.system.ablation",

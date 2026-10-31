@@ -9,7 +9,7 @@ def main(a):
     audit = json.loads((root / "audit.json").read_text())
     assert not any(t in audit["online_topics"] for t in ["/gt", "/scan"])
     results = {}
-    for mode in ["imu_wheel", "stereo_imu", "stereo_imu_wheel"]:
+    for mode in a.modes:
         d = root / mode
         p = d / "config_init.yaml"
         text = p.read_text()
@@ -47,5 +47,11 @@ def main(a):
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("root")
+    p.add_argument(
+        "--modes",
+        nargs="+",
+        choices=["imu_wheel", "stereo_imu", "stereo_imu_wheel"],
+        default=["imu_wheel", "stereo_imu", "stereo_imu_wheel"],
+    )
     p.add_argument("--binary", required=True)
     main(p.parse_args())

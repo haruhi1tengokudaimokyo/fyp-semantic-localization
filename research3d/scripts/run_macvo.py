@@ -124,10 +124,17 @@ def main(a):
         covariance_scope="3D point observation covariance and pixel/disparity residual covariance; NOT a calibrated pose covariance",
     )
     (out / "protocol.json").write_text(json.dumps(metadata, indent=2))
-    seq = smart_transform(
-        SequenceBase.instantiate(datacfg["type"], datacfg["args"]).clip(0, a.frames),
-        cfg.Preprocess,
-    )
+    base_sequence = SequenceBase.instantiate(datacfg["type"], datacfg["args"])
+    if (root / "calibration.json").exists():
+        calibration = json.loads((root / "calibration.json").read_text())
+        assert (calibration["width"], calibration["height"]) == (640, 480)
+        base_sequence.lcam_K = torch.tensor(
+            calibration["K"], dtype=torch.float32
+        ).unsqueeze(0)
+        base_sequence.baseline = float(calibration["baseline"])
+        metadata["explicit_camera_calibration"] = calibration
+        (out / "protocol.json").write_text(json.dumps(metadata, indent=2))
+    seq = smart_transform(base_sequence.clip(0, a.frames), cfg.Preprocess)
     model = None
     rows = []
     start = time.perf_counter()

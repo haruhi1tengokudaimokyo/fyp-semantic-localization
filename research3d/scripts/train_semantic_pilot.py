@@ -125,7 +125,7 @@ def main(a):
     root = Path(a.dataset)
     manifest = json.loads((root / "manifest.json").read_text())
     names = manifest["classes"]
-    seed = 1305
+    seed = a.seed
     random.seed(seed)
     np.random.seed(seed)
     torch.manual_seed(seed)
@@ -163,6 +163,11 @@ def main(a):
     assert all(k.startswith("classifier.") for k in info["unexpected_keys"]), info
     assert not info.get("mismatched_keys"), info
     (out / "pretrained_loading_audit.json").write_text(json.dumps(info, indent=2))
+    if a.strategy == "scratch":
+        model = SegformerForSemanticSegmentation(model.config)
+    elif a.strategy == "frozen":
+        for parameter in model.segformer.parameters():
+            parameter.requires_grad_(False)
     initial = copy.deepcopy(model.state_dict())
     model = model.to(device)
     counts = (
@@ -181,6 +186,7 @@ def main(a):
     w = torch.tensor(w, dtype=torch.float32, device=device)
     protocol = dict(
         seed=seed,
+        strategy=a.strategy,
         epochs=a.epochs,
         batch_size=4,
         learning_rate=6e-5,
@@ -188,7 +194,11 @@ def main(a):
         optimizer="AdamW",
         scheduler="polynomial power0.9",
         image_size=[240, 320],
-        pretrained="official NVIDIA mit-b0 ImageNet-1K backbone, random SegFormer segmentation decoder",
+        pretrained=(
+            "random initialization"
+            if a.strategy == "scratch"
+            else "official NVIDIA mit-b0 ImageNet-1K backbone, random segmentation decoder"
+        ),
         pretrained_revision="80983a413c30d36a39c20203974ae7807835e2b4",
         trainable_parameters=sum(
             p.numel() for p in model.parameters() if p.requires_grad
@@ -205,7 +215,12 @@ def main(a):
             (root / "manifest.json").read_bytes()
         ).hexdigest(),
     )
-    (out / "protocol.json").write_text(json.dumps(protocol, indent=2))
+    protocol_path = out / "protocol.json"
+    if protocol_path.exists():
+        assert (
+            json.loads(protocol_path.read_text()) == protocol
+        ), "Resume protocol mismatch"
+    protocol_path.write_text(json.dumps(protocol, indent=2))
     optimizer = torch.optim.AdamW(model.parameters(), lr=6e-5, weight_decay=0.01)
     total = a.epochs * len(loaders["train"])
     step = 0
@@ -214,7 +229,24 @@ def main(a):
     start = time.perf_counter()
     torch.cuda.reset_peak_memory_stats()
     skipped = 0
-    for epoch in range(a.epochs):
+    first_epoch = 0
+    resume_path = out / "resume.pt"
+    if resume_path.exists():
+        resume = torch.load(resume_path, map_location="cpu", weights_only=False)
+        assert resume["protocol"] == protocol
+        model.load_state_dict(resume["model"], strict=True)
+        optimizer.load_state_dict(resume["optimizer"])
+        first_epoch = resume["next_epoch"]
+        step = resume["step"]
+        history = resume["history"]
+        best = resume["best"]
+        skipped = resume["skipped"]
+        random.setstate(resume["python_rng"])
+        np.random.set_state(resume["numpy_rng"])
+        torch.set_rng_state(resume["torch_rng"])
+        torch.cuda.set_rng_state_all(resume["cuda_rng"])
+        print("RESUME_EPOCH", first_epoch, flush=True)
+    for epoch in range(first_epoch, a.epochs):
         model.train()
         losses = []
         for x, y in loaders["train"]:
@@ -257,8 +289,28 @@ def main(a):
                     classes=names,
                     config=model.config.to_dict(),
                 ),
-                out / "best.pt",
+                out / "best.pt.tmp",
             )
+            (out / "best.pt.tmp").replace(out / "best.pt")
+        temporary = out / "resume.pt.tmp"
+        torch.save(
+            dict(
+                protocol=protocol,
+                model=model.state_dict(),
+                optimizer=optimizer.state_dict(),
+                next_epoch=epoch + 1,
+                step=step,
+                history=history,
+                best=best,
+                skipped=skipped,
+                python_rng=random.getstate(),
+                numpy_rng=np.random.get_state(),
+                torch_rng=torch.get_rng_state(),
+                cuda_rng=torch.cuda.get_rng_state_all(),
+            ),
+            temporary,
+        )
+        temporary.replace(resume_path)
         print(
             "EPOCH",
             epoch + 1,
@@ -295,7 +347,15 @@ def main(a):
         torch_peak_allocated_MiB=peak_alloc,
         torch_peak_reserved_MiB=peak_reserved,
         host_maxrss_MiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024,
-        claim="partial-label cross-scene pilot only; no independent-building or localization claim",
+        claim=(
+            "partial-label synthetic-house-group held-out evaluation; no real-building or localization gain claim"
+            if manifest.get("building_plan")
+            else "partial-label cross-scene pilot only; no independent-building or localization claim"
+        ),
+        seed=seed,
+        strategy=a.strategy,
+        epochs=a.epochs,
+        independent_layout_groups=manifest.get("independent_layout_groups"),
     )
     (out / "summary.json").write_text(json.dumps(result, indent=2))
     print("RESULT", json.dumps(result), flush=True)
@@ -307,4 +367,6 @@ if __name__ == "__main__":
     p.add_argument("output")
     p.add_argument("--weights", required=True)
     p.add_argument("--epochs", type=int, default=40)
+    p.add_argument("--seed", type=int, default=1305)
+    p.add_argument("--strategy", choices=["full", "frozen", "scratch"], default="full")
     main(p.parse_args())

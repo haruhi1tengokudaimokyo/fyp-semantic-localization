@@ -17,6 +17,9 @@ def main(a):
     out = Path(a.output)
     out.mkdir(parents=True, exist_ok=True)
     cam = Camera(640, 480, np.array([[525, 0, 320], [0, 525, 240], [0, 0, 1]]))
+    if (root / "camera.json").exists():
+        calibration = json.loads((root / "camera.json").read_text())
+        cam = Camera(calibration["width"], calibration["height"], calibration["K"])
     model = ACE(a.ace, a.head)
     images = sorted((root / "test" / "rgb").glob("*.png"))[:: a.stride]
     if a.limit:

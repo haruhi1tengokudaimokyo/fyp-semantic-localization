@@ -44,12 +44,22 @@ def main(a):
     statefault = np.eye(4)
     statefault[:3, :3] = Rotation.from_euler("y", 90, degrees=True).as_matrix()
     statefault[:3, 3] = [2, 0, 0]
+    outage_start = int(n * 0.30) if a.scaled_cases else 300
+    outage_end = min(n, outage_start + 30)
+    fault_frame = int(n * 0.45) if a.scaled_cases else 400
+    burst_start = int(n * 0.65) if a.scaled_cases else 600
+    burst_end = min(n, burst_start + 5)
+    corrupt_frames = (
+        [int(n * f) for f in [0.2, 0.5, 0.8]] if a.scaled_cases else [200, 500, 800]
+    )
     cases = {
         "clean": {},
-        "camera_outage_30frames": {"drop": list(range(300, 330))},
-        "injected_state_drift": {"state_fault": 400},
-        "isolated_wrong_absolute": {"corrupt": [200, 500, 800]},
-        "coherent_wrong_absolute_burst": {"corrupt": list(range(600, 605))},
+        "camera_outage_30frames": {"drop": list(range(outage_start, outage_end))},
+        "injected_state_drift": {"state_fault": fault_frame},
+        "isolated_wrong_absolute": {"corrupt": corrupt_frames},
+        "coherent_wrong_absolute_burst": {
+            "corrupt": list(range(burst_start, burst_end))
+        },
     }
     saved = {}
     start = time.perf_counter()
@@ -124,6 +134,18 @@ def main(a):
                 median_translation_m=float(np.median(te[np.isfinite(te)])),
                 median_rotation_deg=float(np.median(re[np.isfinite(re)])),
                 valid_pose_fraction=float(np.isfinite(te).mean()),
+                false_absolute_accepts_over25cm=sum(
+                    (
+                        bool(row["accepted_absolute"])
+                        if method == "temporal_gate"
+                        else bool(row["absolute_available"] and quality[j] >= 50)
+                    )
+                    and bool(te[j] > 0.25)
+                    for j, row in enumerate(rows)
+                ),
+                trajectory_jumps_over50cm=int(
+                    np.sum(np.linalg.norm(np.diff(T[:, :3, 3], axis=0), axis=1) > 0.5)
+                ),
                 wrong_over_25cm_frames=int(((te > 0.25) & np.isfinite(te)).sum()),
                 translation_errors_m=[float(v) if np.isfinite(v) else None for v in te],
                 rotation_errors_deg=[float(v) if np.isfinite(v) else None for v in re],
@@ -133,12 +155,15 @@ def main(a):
                 ("startup", 0),
                 (
                     "post_camera_outage",
-                    330 if name == "camera_outage_30frames" else None,
+                    outage_end if name == "camera_outage_30frames" else None,
                 ),
-                ("post_state_drift", 400 if name == "injected_state_drift" else None),
+                (
+                    "post_state_drift",
+                    fault_frame if name == "injected_state_drift" else None,
+                ),
                 (
                     "post_wrong_burst",
-                    605 if name == "coherent_wrong_absolute_burst" else None,
+                    burst_end if name == "coherent_wrong_absolute_burst" else None,
                 ),
             ]:
                 if origin is None:
@@ -162,7 +187,7 @@ def main(a):
         summary[name] = methods
     protocol = dict(
         absolute_source="actual locally trained ACE predictions; no GT field in cache",
-        motion_source="actual registered Kinect RGB-D GFTT/LK/PnP, no synthetic motion or test poses",
+        motion_source=a.motion_source,
         frames=n,
         gate=dict(
             min_inliers=50,
@@ -198,4 +223,9 @@ if __name__ == "__main__":
     p.add_argument("ace_run")
     p.add_argument("motion")
     p.add_argument("output")
+    p.add_argument("--scaled-cases", action="store_true")
+    p.add_argument(
+        "--motion-source",
+        default="actual registered Kinect RGB-D GFTT/LK/PnP, no synthetic motion or test poses",
+    )
     main(p.parse_args())

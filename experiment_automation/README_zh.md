@@ -1,0 +1,72 @@
+# FYP 持久科研实验系统
+
+本系统已经实际启动。主控制器读取 `manifests/tasks.json`，以 SQLite WAL 保存任务 DAG；每个实验运行在独立 systemd user worker 中。所有结果经文件存在性、SHA256、长度及指定指标验收后才能 COMPLETED。复用的初步结果带 `formal=false`，不会成为扩大实验的完成证据。
+
+## 查看与运行
+
+在本仓库运行：
+
+```bash
+./experiment_automation/fypctl status
+./experiment_automation/fypctl report
+./experiment_automation/fypctl logs macvo.demo.paper
+systemctl --user status fyp-experiments.service
+systemctl --user list-timers fyp-experiment-report.timer
+```
+
+Dashboard：http://127.0.0.1:8766 ，读取真实数据库，每十秒刷新。静态副本 `dashboards/index.html` 在每次报告时更新。报告目录 `reports/`，始终维护 `LATEST.md` 与 `LATEST.json`。
+
+## 持久运行与四小时报告
+
+- `fyp-experiments.service`：控制器，异常自动重启；退出控制器不会停止独立 worker。
+- `fyp-exp-<task ID 哈希>-a<attempt>.service`：真实实验进程；每次尝试各自保存日志。
+- `fyp-experiment-dashboard.service`：本地只读 Dashboard。
+- `fyp-experiment-report.timer`：独立于 Codex 的 systemd 日历 timer，Persistent=true。
+- 启动基准：2026-10-31 23:04:26.668（Asia/Shanghai）。首次周期报告已于 2026-11-01 03:04:26.804 实际生成；随后每日 03:04、07:04、11:04、15:04、19:04、23:04。
+- 已执行 `loginctl enable-linger csy` 并验证 Linger=yes；登出后 user manager 保持运行。未使用 sudo 或修改系统级服务。
+- 关机、断电、休眠期间不能计算；开机后 enabled user service 与 Persistent timer 恢复，未正常结束的 worker 由数据库状态和 unit 状态识别，有限重试。
+- Codex 四小时 heartbeat 是补充的代码开发和诊断机制，计算任务和本地报告均不依赖 Codex 界面。
+
+真实控制器退出/重启测试、SIGKILL worker 检查点恢复、失败后重试、四小时边界测试和实际报告证据保存在 `artifacts/controller_restart_test.json`、`artifacts/infrastructure_selftest.json`；测试使用隔离状态库，未制造科学数据。
+
+## 数据、协议和恢复
+
+`state/ logs/ checkpoints/ reports/ dashboards/ artifacts/` 是指向 `/data/fyp_3d/automation/` 的 Git 忽略链接。大型数据、模型、原始日志都在 `/data/fyp_3d`，原始数据不删除、不提交到 Git。SQLite 为 `state/experiments.sqlite`。每个任务保存数据集、模型场景、seed、command、config、input_hash、code_commit、输出、失败证据、attempt、时间和资源采样。新 worker 保存内容寻址的源代码归档，包括尚未提交但实际执行的代码；`artifacts/*.provenance.json` 记录归档哈希。该归档与本机持久数据在同一磁盘，尚不能视为异地备份。每次报告还通过 SQLite backup API 原子保存一致状态副本到 checkpoints/state_progress_*.sqlite；按任务/数据集/指标拆分的 CSV 和多种子描述统计见 artifacts/aggregate/，不混合不同任务排行榜。
+
+每个 GPU 同时只调度一个大型任务。下载最多并发两个，CPU 任务与 GPU 按槽位及可用内存调度，保留 2 GiB 内存及 30 GiB 磁盘安全余量。不静默降低精度、改变输入规模或重调测试参数。失败通常最多两次，网络下载三次；诊断后增补一次修复尝试必须有事件记录。上游问题导致的失败结果保留，其他任务继续。
+
+MACVO 的密集前端以图像、配置、权重及标定为键原子缓存；恢复重放优化器前缀，而不是伪造中间状态。SegFormer 保存 epoch 边界模型、优化器及 Python/NumPy/Torch/CUDA RNG 状态，严格检查协议后恢复；渲染保存每个已完成场景的 manifest，恢复不重采已完成场景。下载采用临时文件和哈希验收。
+
+systemd 不继承交互式 shell 的代理。必要的网络变量保存到 `state/network_environment.json`（0600），只供 worker 注入，不展示或提交该文件；更换代理后仅更新该受保护文件。
+
+## 研究分支和当前限制
+
+A：完整 7-Scenes 官方划分，官方场景权重及场景专用本机训练，三个固定 seed；不得跨房间直接混用 head。1M feature buffer 为公开记录的本机配置，不称为论文 8M buffer 的完全等同复现。
+
+B：下载的 1,274 帧连续双目全序列，Paper/Fast/普通 Stereo VO 与固定匹配的单位协方差消融；原始 lost mask 单独保存。SE(3) 对齐 ATE 与地图绝对误差分开。其他完整轨迹尚待合法输入和标定获取。
+
+C：七条完整 OpenLORIS office 序列的 Stereo+IMU 可独立运行；Wheel 来源审查未完成的正式 wheel 组合保持阻塞。已有平地非完整约束结果属于条件实验，不能声称通用 AI 增益。初始化失败作为实际实验结局记录，不填造零误差。
+
+D：扩展到 24 个 HSSD 合成房屋组，同房屋前缀或字节相同建筑网格归到同一组，再冻结 train/val/test。这些不是经验证的真实物理建筑身份。每场景目标 150 个空间位置、4 朝向；低纹理/无效深度/重复视图拒收，正式 train 少于 3,000 帧则失败。只训练原生可验证的七类物体语义，未知为 IGNORE255，不虚构墙/窗/柱。三种策略 full/frozen/scratch、三个 seed、40 epochs，选择仅用 val。decomposed 子目录遗漏曾导致渲染失败，已保留日志并增加显式闭包审查。
+
+E/F：独立测试房屋各自构图，参考/查询位置分离；SIFT 与实际官方 hloc SuperPoint/LightGlue、CLIP Top-K=4/8/16、语义硬过滤及概率软加权，固定共同查询，逐空间位置配对 bootstrap。CLIP 检索+PnP 不称为 OMCL 完整复现。
+
+G：真实 Habitat 渲染的 600 帧连续双目、384 个离线参考视图、标定、只读三维先验地图、独立评估 GT；实际场景 ACE 训练和 MACVO 已完成联合端到端执行。状态传播、绝对校正与 Reliability Gate 真实运行。低初始化覆盖和错误绝对观测必须照实报告，不能仅报成功帧误差。
+
+I 的共同场景控制器故障重放已增加，明确不是物理绑架；错误接受计数的首版已失效并保留，由 v2 替代。J 已加入 TUM Freiburg3 sitting_xyz/sitting_static/walking_xyz/walking_static 四条完整序列，真实坐姿小幅运动与行走人员分别标记，只评估 RGB-D VO，未声称具备可靠三维先验地图。相机内参、深度注册和 1/5000 深度比例来自官方格式说明：https://cvg.cit.tum.de/data/datasets/rgbd-dataset/file_formats 。
+
+H、I 的物理恢复、J 的其余跨数据集、OMCL、多轨迹及 Wheel 仍有真实依赖/实现/数据合法性阻塞，数据库逐项保存原因；不能把队列启动或初步扰动实验当成整项研究完成。健康后台任务保持运行。后续 heartbeat 应优先解除真实阻塞、完成测试，并对稳定实现提交 Git。
+
+## 原始参考
+
+- ACE：https://github.com/nianticlabs/ace
+- MAC-VO：https://github.com/MAC-VO/MAC-VO ；https://mac-vo.github.io/
+- MINS：https://github.com/rpng/MINS
+- HSSD：https://huggingface.co/datasets/hssd/hssd-hab
+- SegFormer：https://github.com/NVlabs/SegFormer
+- hloc：https://github.com/cvg/Hierarchical-Localization
+- LightGlue：https://github.com/cvg/LightGlue
+- CLIP：https://github.com/openai/CLIP
+- OMCL：https://github.com/AIS-Bonn/omcl
+
+各实际源码 checkout、权重哈希、兼容修改和已有结果见 `/data/fyp_3d/sources`、`/data/fyp_3d/models` 与验收产物。本文件仅解释实际协议，不替代状态数据库和原始日志。

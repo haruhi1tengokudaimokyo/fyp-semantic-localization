@@ -76,6 +76,51 @@ def code_version():
     ).strip()
 
 
+def source_snapshot(root=ROOT):
+    """Content-addressed source archive, including uncommitted code, excluding runtime data."""
+    import tarfile, io
+
+    paths = subprocess.check_output(
+        [
+            "git",
+            "-C",
+            str(REPO),
+            "ls-files",
+            "--cached",
+            "--others",
+            "--exclude-standard",
+            "research3d",
+            "experiment_automation",
+        ],
+        text=True,
+    ).splitlines()
+    contents = []
+    for name in sorted(set(paths)):
+        p = REPO / name
+        if p.is_file() and not p.is_symlink():
+            contents.append((name, p.read_bytes()))
+    digest = hashlib.sha256()
+    for name, data in contents:
+        digest.update(name.encode() + b"\0" + hashlib.sha256(data).digest())
+    h = digest.hexdigest()
+    target = Path(root) / "artifacts/source_snapshots" / (h + ".tar.gz")
+    if not target.exists():
+        target.parent.mkdir(parents=True, exist_ok=True)
+        temporary = target.with_suffix(".tmp." + str(os.getpid()))
+        with tarfile.open(temporary, "w:gz") as archive:
+            for name, data in contents:
+                entry = tarfile.TarInfo(name)
+                entry.size = len(data)
+                archive.addfile(entry, io.BytesIO(data))
+        os.replace(temporary, target)
+    return {
+        "source_sha256": h,
+        "archive": str(target),
+        "archive_sha256": sha(target),
+        "git_commit": code_version(),
+    }
+
+
 def fingerprint(s):
     files = []
     for entry in s.get("inputs", []):
@@ -102,6 +147,23 @@ def fingerprint(s):
 def register(specs, root=ROOT):
     init(root)
     with db(root) as c:
+        current_ids = {s["task_id"] for s in specs}
+        for previous in c.execute(
+            "SELECT task_id,spec,status,attempt FROM tasks"
+        ).fetchall():
+            if (
+                previous["task_id"] not in current_ids
+                and previous["status"] == "BLOCKED"
+                and previous["attempt"] == 0
+                and not json.loads(previous["spec"]).get("command")
+            ):
+                event(
+                    c,
+                    previous["task_id"],
+                    "RETIRED_UNEXECUTED_PLACEHOLDER",
+                    "Replaced by concrete executable experiment tasks",
+                )
+                c.execute("DELETE FROM tasks WHERE task_id=?", (previous["task_id"],))
         for s in specs:
             if s.get("model_dataset_id") and s["model_dataset_id"] != s["dataset_id"]:
                 raise ValueError(
@@ -112,6 +174,18 @@ def register(specs, root=ROOT):
             if old and old["status"] == "RUNNING":
                 continue
             if old:
+                if json.loads(old["spec"]) != s:
+                    event(
+                        c,
+                        tid,
+                        "SPEC_UPDATED",
+                        {
+                            "old_spec_sha256": hashlib.sha256(
+                                old["spec"].encode()
+                            ).hexdigest(),
+                            "new_spec": s,
+                        },
+                    )
                 c.execute(
                     "UPDATE tasks SET spec=?,experiment_id=?,dataset_id=? WHERE task_id=?",
                     (json.dumps(s), s["experiment_id"], s["dataset_id"], tid),
@@ -217,10 +291,22 @@ def resources():
         k, v = line.split(":", 1)
         info[k] = int(v.strip().split()[0]) * 1024
     disk = shutil.disk_usage("/data")
+    cpu_values = [
+        int(v) for v in Path("/proc/stat").read_text().splitlines()[0].split()[1:]
+    ]
+    current_cpu = (sum(cpu_values), cpu_values[3] + cpu_values[4])
+    previous = getattr(resources, "previous_cpu", None)
+    resources.previous_cpu = current_cpu
+    cpu_percent = (
+        (100 * (1 - (current_cpu[1] - previous[1]) / (current_cpu[0] - previous[0])))
+        if previous and current_cpu[0] > previous[0]
+        else None
+    )
     r = {
         "time_utc": utc(),
         "load1": os.getloadavg()[0],
         "cpu_count": os.cpu_count(),
+        "cpu_util_percent_since_previous_sample": cpu_percent,
         "memory_available_bytes": info["MemAvailable"],
         "memory_total_bytes": info["MemTotal"],
         "disk_free_bytes": disk.free,

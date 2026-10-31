@@ -24,6 +24,13 @@ def install_cache(frontend, directory, namespace):
         for f in frames:
             for x in [f.imageL, f.imageR]:
                 h.update(x.detach().cpu().contiguous().numpy().tobytes())
+        default_K = torch.tensor([[[320.0, 0, 320.0], [0, 320.0, 240.0], [0, 0, 1.0]]])
+        for f in frames:
+            if not torch.equal(f.K.cpu(), default_K) or not torch.all(
+                f.baseline.cpu() == 0.25
+            ):
+                h.update(f.K.cpu().contiguous().numpy().tobytes())
+                h.update(f.baseline.cpu().contiguous().numpy().tobytes())
         return root / (h.hexdigest() + ".pt")
 
     def pack(x):

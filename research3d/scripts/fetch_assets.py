@@ -13,9 +13,17 @@ class Fetcher:
         self.repo = repo
         self.root = Path(root)
         self.root.mkdir(parents=True, exist_ok=True)
-        self.sha = requests.get(f"https://huggingface.co/api/datasets/{repo}").json()[
-            "sha"
-        ]
+        previous = self.root / "acquisition.json"
+        if previous.exists():
+            metadata = json.loads(previous.read_text())
+            assert metadata["repo"] == repo
+            self.sha = metadata["revision"]
+        else:
+            response = requests.get(
+                f"https://huggingface.co/api/datasets/{repo}", timeout=60
+            )
+            response.raise_for_status()
+            self.sha = response.json()["sha"]
         self.records = {}
 
     def tree(self, folder=""):
@@ -66,7 +74,7 @@ class Fetcher:
         )
 
 
-def hssd(root, n):
+def hssd(root, n, unique_buildings=False):
     f = Fetcher("hssd/hssd-hab", root)
     f.many(
         [
@@ -78,7 +86,20 @@ def hssd(root, n):
             "metadata/objects.json",
         ]
     )
-    scenes = sorted(f.tree("scenes"), key=lambda x: x["size"])[:n]
+    all_scenes = sorted(f.tree("scenes"), key=lambda x: x["size"])
+    if unique_buildings:
+        seen = set()
+        scenes = []
+        for item in all_scenes:
+            group = Path(item["path"]).name.split("_")[0].split(".")[0]
+            if group not in seen:
+                seen.add(group)
+                scenes.append(item)
+            if len(scenes) >= n:
+                break
+    else:
+        scenes = all_scenes[:n]
+
     templates = set()
     for s in scenes:
         p = f.get(s["path"])
@@ -99,6 +120,14 @@ def hssd(root, n):
             if (
                 item["type"] == "file"
                 and item["path"].split("/")[-1].split(".")[0] in templates
+            ):
+                paths.append(item["path"])
+    # Articulated/decomposed instances live below objects/decomposed/<base>, not objects/<firstchar>.
+    for base in sorted({t.split("_part_")[0] for t in templates if "_part_" in t}):
+        for item in f.tree("objects/decomposed/" + base):
+            if (
+                item["type"] == "file"
+                and Path(item["path"]).name.split(".")[0] in templates
             ):
                 paths.append(item["path"])
     f.many(paths)
@@ -147,5 +176,10 @@ if __name__ == "__main__":
     p.add_argument("root")
     p.add_argument("--dataset", choices=["hssd", "replica"], default="hssd")
     p.add_argument("--scenes", type=int, default=3)
+    p.add_argument("--unique-buildings", action="store_true")
     a = p.parse_args()
-    hssd(a.root, a.scenes) if a.dataset == "hssd" else replica(a.root)
+    (
+        hssd(a.root, a.scenes, a.unique_buildings)
+        if a.dataset == "hssd"
+        else replica(a.root)
+    )

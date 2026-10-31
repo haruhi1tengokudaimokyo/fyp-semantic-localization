@@ -36,11 +36,35 @@ def main(a):
     for i, names in enumerate(GROUPS.values()):
         for n in names:
             lut[ids[n]] = i
+    plan = json.loads(Path(a.building_plan).read_text()) if a.building_plan else None
+    scenes = [r["scene"] for r in plan["scenes"]] if plan else SCENES
+    scene_plan = {r["scene"]: r for r in plan["scenes"]} if plan else {}
     rows = []
     hist = {}
     hashes = set()
     rejected = []
-    for sn, scene in enumerate(SCENES):
+    for sn, scene in enumerate(scenes):
+        checkpoint = root / "scene_checkpoints" / (scene + ".json")
+        if checkpoint.exists():
+            cached = json.loads(checkpoint.read_text())
+            assert cached["positions"] == a.positions and cached["plan_sha256"] == (
+                hashlib.sha256(Path(a.building_plan).read_bytes()).hexdigest()
+                if plan
+                else None
+            )
+            assert all(
+                (root / r["rgb"]).exists()
+                and (root / r["depth"]).exists()
+                and (root / r["label"]).exists()
+                for r in cached["rows"]
+            )
+            rows.extend(cached["rows"])
+            hashes.update(r["rgb_sha256"] for r in cached["rows"])
+            hist.update({k: np.array(v) for k, v in cached["hist"].items()})
+            rejected.extend(cached["rejected"])
+            continue
+        scene_start = len(rows)
+        rejected_start = len(rejected)
         cfg = habitat_sim.SimulatorConfiguration()
         cfg.scene_dataset_config_file = str(data / "hssd-hab.scene_dataset_config.json")
         cfg.scene_id = scene
@@ -77,11 +101,15 @@ def main(a):
             p = sim.pathfinder.get_random_navigable_point()
             if all(np.linalg.norm(p - q) > 0.5 for q in points):
                 points.append(np.array(p))
-            if len(points) == 50:
+            if len(points) == a.positions:
                 break
-        assert len(points) == 50, (scene, len(points))
+        assert len(points) >= min(30, a.positions), (scene, len(points))
         for pi, p in enumerate(points):
-            split = "test" if sn == 2 else ("val" if pi >= 40 else "train")
+            split = (
+                scene_plan[scene]["split"]
+                if plan
+                else ("test" if sn == 2 else ("val" if pi >= 40 else "train"))
+            )
             d = root / split / scene
             d.mkdir(parents=True, exist_ok=True)
             for angle in range(4):
@@ -132,6 +160,11 @@ def main(a):
                     dict(
                         split=split,
                         scene=scene,
+                        building_group=(
+                            scene_plan[scene]["building_group"]
+                            if plan
+                            else scene.split("_")[0]
+                        ),
                         position_id=pi,
                         position=p.tolist(),
                         rgb=str((d / (name + ".rgb.png")).relative_to(root)),
@@ -143,6 +176,21 @@ def main(a):
                     )
                 )
         sim.close()
+        checkpoint.parent.mkdir(exist_ok=True)
+        payload = dict(
+            rows=rows[scene_start:],
+            hist={k: v.tolist() for k, v in hist.items() if k.endswith("/" + scene)},
+            rejected=rejected[rejected_start:],
+            positions=a.positions,
+            plan_sha256=(
+                hashlib.sha256(Path(a.building_plan).read_bytes()).hexdigest()
+                if plan
+                else None
+            ),
+        )
+        temporary = checkpoint.with_suffix(".tmp")
+        temporary.write_text(json.dumps(payload))
+        temporary.replace(checkpoint)
         print(scene, "finished", len(rows), flush=True)
     protocol = dict(
         rejected_views=rejected,
@@ -151,18 +199,37 @@ def main(a):
         class_sources=GROUPS,
         ignore_index=255,
         unlabelled="ID0 and unselected native classes ignored, NEVER converted into wall/background",
-        split="first two official train scene IDs: 40 train and 10 validation positions each, four yaws; official validation scene ID entirely held out as test",
+        split=(
+            "frozen whole synthetic-house groups, disjoint train/val/test"
+            if plan
+            else "first two official train scene IDs: spatial train/val; third held out"
+        ),
         position_min_distance_m=0.5,
         seed=1305,
-        limitations=[
-            "three scene IDs only; independent physical building identities unverified",
-            "partial-label furniture/object semantic pilot, no wall/window/column labels",
-            "known-pixel conditional metrics cannot establish complete-scene segmentation",
-            "not yet evidence for localization improvements",
-        ],
+        independent_layout_groups=plan["independent_layout_groups"] if plan else None,
+        building_plan=plan,
+        limitations=(
+            plan["limitations"]
+            if plan
+            else [
+                "three scene IDs only; independent physical building identities unverified",
+                "partial-label furniture/object semantic pilot, no wall/window/column labels",
+                "known-pixel conditional metrics cannot establish complete-scene segmentation",
+                "not yet evidence for localization improvements",
+            ]
+        ),
         pixel_histogram={k: v.tolist() for k, v in hist.items()},
         frames=rows,
     )
+    if plan:
+        assert (
+            len([r for r in rows if r["split"] == "train"]) >= 3000
+        ), "Formal training set below preregistered minimum"
+        for left, right in [("train", "val"), ("train", "test"), ("val", "test")]:
+            assert not (
+                {r["building_group"] for r in rows if r["split"] == left}
+                & {r["building_group"] for r in rows if r["split"] == right}
+            )
     (root / "manifest.json").write_text(json.dumps(protocol, indent=2))
     print("DONE", len(rows), flush=True)
 
@@ -171,4 +238,6 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("dataset")
     p.add_argument("output")
+    p.add_argument("--building-plan")
+    p.add_argument("--positions", type=int, default=50)
     main(p.parse_args())

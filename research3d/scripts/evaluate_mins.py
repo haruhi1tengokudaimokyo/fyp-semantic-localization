@@ -27,7 +27,7 @@ def main(a):
     gt = z["T_world_base"] @ np.array(audit["T_base_imu"])
     imu = np.load(root / "imu_calibrated.npz")["timestamp_ns"] / 1e9
     results = {}
-    for mode in ["imu_wheel", "stereo_imu", "stereo_imu_wheel"]:
+    for mode in a.modes:
         d = root / mode
         p = d / "trajectory.txt"
         log = (d / "run.log").read_text(errors="replace")
@@ -129,4 +129,10 @@ def main(a):
 if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("root")
+    p.add_argument(
+        "--modes",
+        nargs="+",
+        choices=["imu_wheel", "stereo_imu", "stereo_imu_wheel"],
+        default=["imu_wheel", "stereo_imu", "stereo_imu_wheel"],
+    )
     main(p.parse_args())

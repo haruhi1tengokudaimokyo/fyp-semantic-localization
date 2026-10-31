@@ -39,8 +39,8 @@ def make_map(a, out):
     root = Path(a.dataset)
     m = json.loads((root / "manifest.json").read_text())
     frames = [r for r in m["frames"] if r["split"] == "test"]
-    refs = [r for r in frames if r["position_id"] < 30]
-    queries = [r for r in frames if r["position_id"] >= 30]
+    refs = [r for r in frames if r["position_id"] < a.reference_positions]
+    queries = [r for r in frames if r["position_id"] >= a.reference_positions]
     sift = (
         a.feature_engine
         if hasattr(a, "feature_engine")
@@ -123,8 +123,8 @@ def make_map(a, out):
         map_sha256=digest(out / "readonly_map.npz"),
         map_reference_images=len(refs),
         query_images=len(queries),
-        reference_positions=list(range(30)),
-        query_positions=list(range(30, 50)),
+        reference_positions=sorted({r["position_id"] for r in refs}),
+        query_positions=sorted({r["position_id"] for r in queries}),
         source_scene=frames[0]["scene"],
         references=[dict(rgb=r["rgb"], position_id=r["position_id"]) for r in refs],
         classes=m["classes"],
@@ -156,7 +156,7 @@ def semantic_prediction(model, image):
         align_corners=False,
     ).softmax(1)[0]
     conf, pred = probs.max(0)
-    return conf.cpu().numpy(), pred.cpu().numpy()
+    return conf.cpu().numpy(), pred.cpu().numpy(), probs.cpu().numpy()
 
 
 def localize(
@@ -167,13 +167,16 @@ def localize(
     sift,
     clip_features=None,
     modes=("geometry", "semantic"),
+    topk=8,
 ):
     assert "T_world_camera" not in query
     start = time.perf_counter()
     uv, desc = features(sift, root / query["rgb"])
     image = cv2.imread(str(root / query["rgb"]))
-    conf, pred = (
-        semantic_prediction(model, image) if "semantic" in modes else (None, None)
+    conf, pred, probabilities = (
+        semantic_prediction(model, image)
+        if any(m in modes for m in ["semantic", "soft"])
+        else (None, None, None)
     )
     vocab = mapdata["vocabulary"]
     bf = cv2.BFMatcher(cv2.NORM_L2)
@@ -186,7 +189,7 @@ def localize(
         else clip_features["reference_features"]
         @ clip_features["query_features"][int(query["frame_id"])]
     )
-    candidates = np.argsort(retrieval_scores)[-8:][::-1]
+    candidates = np.argsort(retrieval_scores)[-topk:][::-1]
     K = np.array(query["K"], float)
     best = {}
     diag = {"matched": 0, "semantic_rejected": 0}
@@ -246,14 +249,51 @@ def localize(
             error = np.linalg.norm(proj - pixels[ix], axis=1)
             if np.median(error) > 3 or np.mean(pc[:, 2] > 0) < 0.95:
                 continue
-            score = len(ix)
-            if winner is None or score > winner["inliers"]:
+            score = float(len(ix))
+            if mode == "soft":
+                from scipy.optimize import least_squares
+
+                xy = np.rint(pixels[ix]).astype(int)
+                labels = mapdata[f"ref_{r}/semantic"][ridx[ix]]
+                weight = np.ones(len(ix))
+                known = labels != 255
+                weight[known] = (
+                    0.25
+                    + 0.75 * probabilities[labels[known], xy[known, 1], xy[known, 0]]
+                )
+
+                def weighted_residual(v):
+                    projected = cv2.projectPoints(points[ix], v[:3], v[3:], K, None)[0][
+                        :, 0
+                    ]
+                    return ((projected - pixels[ix]) * np.sqrt(weight[:, None])).ravel()
+
+                fit = least_squares(
+                    weighted_residual,
+                    np.r_[rv.ravel(), tv.ravel()],
+                    loss="huber",
+                    f_scale=3,
+                    max_nfev=30,
+                )
+                if not fit.success or not np.isfinite(fit.x).all():
+                    continue
+                rv = fit.x[:3, None]
+                tv = fit.x[3:, None]
+                R = cv2.Rodrigues(rv)[0]
+                proj = cv2.projectPoints(points[ix], rv, tv, K, None)[0][:, 0]
+                error = np.linalg.norm(proj - pixels[ix], axis=1)
+                pc = points[ix] @ R.T + tv[:, 0]
+                if np.median(error) > 3 or np.mean(pc[:, 2] > 0) < 0.95:
+                    continue
+                score = float(weight.sum())
+            if winner is None or score > winner["selection_score"]:
                 T = np.eye(4)
                 T[:3, :3] = R.T
                 T[:3, 3] = -R.T @ tv[:, 0]
                 winner = dict(
                     T_world_camera=T.tolist(),
-                    inliers=score,
+                    inliers=len(ix),
+                    selection_score=score,
                     matched=len(qidx),
                     median_reprojection_px=float(np.median(error)),
                     reference_index=int(r),
@@ -300,14 +340,23 @@ def main(a):
         protocol["retrieval"] = (
             "frozen official CLIP ViT-B/32 image cosine top8, same read-only 3D reference map"
         )
+    protocol["topk"] = a.topk
+    protocol["reference_positions_threshold"] = a.reference_positions
+    protocol["semantic_soft_weight"] = (
+        "0.25+0.75*predicted probability of known reference class, weighted Huber PnP refinement on unchanged RANSAC inliers; unknown class weight1; no pose covariance claim"
+    )
     (out / "map_protocol.json").write_text(json.dumps(protocol, indent=2))
     clip_features = (
         np.load(a.clip_features, allow_pickle=False) if a.clip_features else None
     )
     root = Path(a.dataset)
-    modes = ["geometry", "semantic"] if a.mode == "both" else [a.mode]
+    modes = (
+        ["geometry", "semantic", "soft"]
+        if a.mode == "all"
+        else (["geometry", "semantic"] if a.mode == "both" else [a.mode])
+    )
     model = None
-    if "semantic" in modes:
+    if any(m in modes for m in ["semantic", "soft"]):
         if not a.checkpoint:
             raise ValueError("Semantic route requires a trained --checkpoint")
         checkpoint = torch.load(a.checkpoint, map_location="cpu", weights_only=False)
@@ -325,7 +374,7 @@ def main(a):
     )
     rows = []
     for q in queries:
-        rows.append(localize(q, root, z, model, sift, clip_features, modes))
+        rows.append(localize(q, root, z, model, sift, clip_features, modes, a.topk))
         if len(rows) % 10 == 0:
             print("QUERY", len(rows), "/", len(queries), flush=True)
     (out / "online_results.json").write_text(json.dumps(rows, indent=2))
@@ -360,6 +409,7 @@ def main(a):
             failure_rate=float(1 - valid.mean()),
             recall_5cm_5deg=float(np.mean((e[:, 0] <= 0.05) & (e[:, 1] <= 5))),
             recall_25cm_10deg=float(np.mean((e[:, 0] <= 0.25) & (e[:, 1] <= 10))),
+            recall_1m_30deg=float(np.mean((e[:, 0] <= 1) & (e[:, 1] <= 30))),
             recall_1m_20deg=float(np.mean((e[:, 0] <= 1) & (e[:, 1] <= 20))),
             median_translation_m_success_only=(
                 float(np.median(e[valid, 0])) if valid.any() else None
@@ -407,7 +457,13 @@ if __name__ == "__main__":
     p.add_argument("dataset")
     p.add_argument("output")
     p.add_argument("--checkpoint")
-    p.add_argument("--mode", choices=["geometry", "semantic", "both"], default="both")
+    p.add_argument("--reference-positions", type=int, default=30)
+    p.add_argument("--topk", type=int, default=8)
+    p.add_argument(
+        "--mode",
+        choices=["geometry", "semantic", "soft", "both", "all"],
+        default="both",
+    )
     p.add_argument("--hloc-source")
     p.add_argument("--lightglue-source")
     p.add_argument("--reference-map")

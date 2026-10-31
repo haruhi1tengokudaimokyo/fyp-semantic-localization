@@ -31,13 +31,15 @@ WantedBy=default.target
 
     service("fyp-experiments", "scheduler.py")
     service("fyp-experiment-dashboard", "dashboard.py")
-    (units / "fyp-experiment-report.service").write_text(f"""[Unit]
+    (units / "fyp-experiment-report.service").write_text(
+        f"""[Unit]
 Description=FYP actual four-hour experiment snapshot
 [Service]
 Type=oneshot
 WorkingDirectory={REPO}
 ExecStart={PYTHON} {ROOT}/runner/reporting.py --force
-""")
+"""
+    )
     with db() as c:
         start = float(
             c.execute("SELECT value FROM meta WHERE key='service_started'").fetchone()[
@@ -47,7 +49,8 @@ ExecStart={PYTHON} {ROOT}/runner/reporting.py --force
     t = datetime.datetime.fromtimestamp(start, datetime.timezone.utc)
     hours = ",".join(str((t.hour + i * 4) % 24).zfill(2) for i in range(6))
     calendar = f"*-*-* {hours}:{t.minute:02d}:{t.second:02d} UTC"
-    (units / "fyp-experiment-report.timer").write_text(f"""[Unit]
+    (units / "fyp-experiment-report.timer").write_text(
+        f"""[Unit]
 Description=FYP exact four-hour report timer, anchored to service creation UTC
 [Timer]
 OnCalendar={calendar}
@@ -57,7 +60,8 @@ RandomizedDelaySec=0
 Unit=fyp-experiment-report.service
 [Install]
 WantedBy=timers.target
-""")
+"""
+    )
     subprocess.run(["systemctl", "--user", "daemon-reload"], check=True)
     subprocess.run(
         [

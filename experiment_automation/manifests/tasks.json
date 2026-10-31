@@ -585,13 +585,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 85,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 400,
       "disk_gib": 2,
       "min_gpu_free_mib": 4500
@@ -626,13 +626,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 65,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 300,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -1095,13 +1095,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 65,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 300,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -1564,13 +1564,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 65,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 300,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -2033,13 +2033,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 65,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 300,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -2502,13 +2502,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 65,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 300,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -2971,13 +2971,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 65,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 300,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -3423,7 +3423,8 @@
       "--dataset",
       "hssd",
       "--scenes",
-      "24"
+      "24",
+      "--unique-buildings"
     ],
     "validation": [
       {
@@ -3438,13 +3439,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 75,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 800,
       "disk_gib": 12,
       "min_gpu_free_mib": 4500
@@ -3518,13 +3519,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 55,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 400,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -3603,13 +3604,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 55,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 400,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -3688,13 +3689,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 55,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 400,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -3773,13 +3774,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 55,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 400,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -3858,13 +3859,13 @@
     "inputs": [],
     "formal": true,
     "seed": 1305,
-    "max_attempts": 2,
+    "max_attempts": 3,
     "retry_delay_s": 30,
     "priority": 55,
     "kind": "download",
     "resources": {
       "gpu": false,
-      "cpu_slots": 1,
+      "cpu_slots": 0,
       "ram_mib": 400,
       "disk_gib": 8,
       "min_gpu_free_mib": 4500
@@ -3917,6 +3918,2171 @@
     "coverage": {}
   },
   {
+    "task_id": "hssd.expand24.closure_repair",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/fetch_assets.py",
+      "/data/fyp_3d/datasets/hssd_expanded",
+      "--dataset",
+      "hssd",
+      "--scenes",
+      "24",
+      "--unique-buildings"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/hssd_expanded/acquisition.json",
+        "kind": "json",
+        "minimum": {
+          "files.0.bytes": 1
+        }
+      }
+    ],
+    "depends_on": [
+      "hssd.expand24"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 3,
+    "retry_delay_s": 30,
+    "priority": 90,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 800,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "hssd.expand24.closure_audit",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/audit_hssd_closure.py",
+      "/data/fyp_3d/datasets/hssd_expanded"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/hssd_expanded/closure_integrity.json",
+        "kind": "json",
+        "equals": {
+          "complete": true,
+          "missing": []
+        },
+        "minimum": {
+          "scenes": 24
+        }
+      }
+    ],
+    "depends_on": [
+      "hssd.expand24.closure_repair"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 90,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "D.building_split.audit",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_building_split.py",
+      "/data/fyp_3d/datasets/hssd_expanded",
+      "/data/fyp_3d/datasets/hssd_expanded/building_split.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/hssd_expanded/building_split.json",
+        "kind": "json",
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "equals": {
+          "real_physical_building_identity_claim": false
+        }
+      }
+    ],
+    "depends_on": [
+      "hssd.expand24.integrity"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "D.expanded.render",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/render_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_expanded",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "--building-plan",
+      "/data/fyp_3d/datasets/hssd_expanded/building_split.json",
+      "--positions",
+      "150"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json",
+        "kind": "json",
+        "minimum": {
+          "independent_layout_groups": 12
+        }
+      }
+    ],
+    "depends_on": [
+      "D.building_split.audit",
+      "hssd.expand24.closure_audit"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_expanded/building_split.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 3,
+    "retry_delay_s": 30,
+    "priority": 65,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 18,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "D.train.full.1305",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1305",
+      "--strategy",
+      "full"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/full_seed1305/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1305,
+          "strategy": "full"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 45,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.full.1306",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1306",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1306",
+      "--strategy",
+      "full"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/full_seed1306/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1306,
+          "strategy": "full"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/full_seed1306/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1306,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.full.1307",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1307",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1307",
+      "--strategy",
+      "full"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/full_seed1307/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1307,
+          "strategy": "full"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/full_seed1307/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1307,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.frozen.1305",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/frozen_seed1305",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1305",
+      "--strategy",
+      "frozen"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/frozen_seed1305/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1305,
+          "strategy": "frozen"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/frozen_seed1305/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.frozen.1306",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/frozen_seed1306",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1306",
+      "--strategy",
+      "frozen"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/frozen_seed1306/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1306,
+          "strategy": "frozen"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/frozen_seed1306/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1306,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.frozen.1307",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/frozen_seed1307",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1307",
+      "--strategy",
+      "frozen"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/frozen_seed1307/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1307,
+          "strategy": "frozen"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/frozen_seed1307/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1307,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.scratch.1305",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/scratch_seed1305",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1305",
+      "--strategy",
+      "scratch"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/scratch_seed1305/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1305,
+          "strategy": "scratch"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/scratch_seed1305/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.scratch.1306",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/scratch_seed1306",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1306",
+      "--strategy",
+      "scratch"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/scratch_seed1306/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1306,
+          "strategy": "scratch"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/scratch_seed1306/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1306,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "D.train.scratch.1307",
+    "experiment_id": "D",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_semantic_pilot.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/semantic/scratch_seed1307",
+      "--weights",
+      "/data/fyp_3d/models/mit-b0",
+      "--epochs",
+      "40",
+      "--seed",
+      "1307",
+      "--strategy",
+      "scratch"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/scratch_seed1307/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "epochs": 40,
+          "seed": 1307,
+          "strategy": "scratch"
+        },
+        "minimum": {
+          "independent_layout_groups": 12
+        },
+        "finite": [
+          "test.mean_iou"
+        ]
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/semantic/scratch_seed1307/best.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1307,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 22,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "epochs": 40
+    }
+  },
+  {
+    "task_id": "E.multiscene.geometry",
+    "experiment_id": "E",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/formal_relocalization_suite.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/relocalization_hssd",
+      "--geometry-only"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/relocalization_hssd/geometry_summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false
+        },
+        "minimum": {
+          "held_out_scenes": 2,
+          "unique_queries": 100
+        }
+      }
+    ],
+    "depends_on": [
+      "D.expanded.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 44,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "F.formal.clip.ablation",
+    "experiment_id": "F",
+    "dataset_id": "hssd",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/formal_relocalization_suite.py",
+      "/data/fyp_3d/datasets/hssd_semantic_formal",
+      "/data/fyp_3d/runs/formal/relocalization_hssd",
+      "--checkpoint",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/relocalization_hssd/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false
+        },
+        "minimum": {
+          "held_out_scenes": 2,
+          "unique_queries": 100
+        }
+      }
+    ],
+    "depends_on": [
+      "E.multiscene.geometry",
+      "D.train.full.1305"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/hssd_semantic_formal/manifest.json",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 44,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2400,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "G.common.stereo.render",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/render_common_stereo.py",
+      "/data/fyp_3d/datasets/hssd",
+      "/data/fyp_3d/datasets/common_hssd105",
+      "--frames",
+      "600",
+      "--references",
+      "384"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/common_hssd105/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "simulated": true,
+          "GT_online": false,
+          "continuous_stereo_frames": 600,
+          "is_smoke": false
+        },
+        "minimum": {
+          "references": 256
+        }
+      },
+      {
+        "path": "/data/fyp_3d/datasets/common_hssd105/readonly_prior_map.npz",
+        "min_bytes": 10000
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 99,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 1800,
+      "disk_gib": 4,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "images": 600,
+      "full_sequence": true,
+      "scene_ids": [
+        "105515211_173104185"
+      ]
+    }
+  },
+  {
+    "task_id": "G.common.ace.train",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/common_hssd105/ace_scene",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2089"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/ace_seed2089/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2089
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/common/ace_seed2089/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "G.common.stereo.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 99,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "model_dataset_id": "habitat_common"
+  },
+  {
+    "task_id": "G.common.ace.eval",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/common_hssd105/ace_scene",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 600
+        },
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ]
+      }
+    ],
+    "depends_on": [
+      "G.common.ace.train"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 99,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "model_dataset_id": "habitat_common"
+  },
+  {
+    "task_id": "G.common.macvo",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_macvo.py",
+      "/data/fyp_3d/datasets/common_hssd105/stereo",
+      "/data/fyp_3d/runs/formal/common/macvo_paper600",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--frames",
+      "600",
+      "--config",
+      "paper",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--frontend-cache",
+      "/data/fyp_3d/automation/checkpoints/macvo_dense"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/macvo_paper600/summary.json",
+        "kind": "json",
+        "equals": {
+          "finished_frames": 600
+        },
+        "finite": [
+          "raw.ate_se3_aligned_rmse_m"
+        ]
+      }
+    ],
+    "depends_on": [
+      "G.common.stereo.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105/stereo/calibration.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 98,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 10,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "G.ace_macvo.integration",
+    "experiment_id": "G",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/integrate_common_system.py",
+      "/data/fyp_3d/datasets/common_hssd105",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation",
+      "/data/fyp_3d/runs/formal/common/macvo_paper600",
+      "/data/fyp_3d/runs/formal/common/continuous_joint"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/continuous_joint/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.frames": 600,
+          "audit.GT_online": false,
+          "audit.map_unchanged": true,
+          "audit.continuous_state_propagation": true
+        },
+        "finite": [
+          "MACVO_ACE.recall_5cm_5deg",
+          "MACVO_ACE_gate.valid_pose_fraction"
+        ]
+      }
+    ],
+    "depends_on": [
+      "G.common.ace.eval",
+      "G.common.macvo"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105/readonly_prior_map.npz",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation/predictions.npz",
+      "/data/fyp_3d/runs/formal/common/macvo_paper600/trajectory.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 99,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-1.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-1",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-1.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-1",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-1/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-1.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-1",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-1",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-1/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-1.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-1.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-1",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-1",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-1/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-1.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-2.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-2",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-2",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-2/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-2.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-2.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-2",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-2",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-2/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-2.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "openloris.data.office1-3.prepare",
+    "experiment_id": "C",
+    "dataset_id": "office1-3",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris/office1-3.bag",
+      "/data/fyp_3d/runs/formal/openloris/office1-3",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-3/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        },
+        "minimum": {
+          "imu_count": 1000
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 55,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 8,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-3.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-3",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-3",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-3/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-3.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-3.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-3",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-3",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-3/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-3.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-4.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-4",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-4",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-4/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-4.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-4.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-4",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-4",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-4/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-4.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-5.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-5",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-5",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-5/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-5.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-5.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-5",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-5",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-5/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-5.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-6.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-6",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-6",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-6/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-6.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-6.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-6",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-6",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-6/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-6.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "mins.office1-7.stereo_imu",
+    "experiment_id": "C",
+    "dataset_id": "office1-7",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-7",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-7/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "openloris.data.office1-7.prepare"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2400,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "mins.office1-7.stereo_imu.eval",
+    "experiment_id": "C",
+    "dataset_id": "office1-7",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/formal/openloris/office1-7",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/openloris/office1-7/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "mins.office1-7.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 58,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "I.common.controlled_recovery.v2",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_common_recovery.py",
+      "/data/fyp_3d/datasets/common_hssd105",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation",
+      "/data/fyp_3d/runs/formal/common/macvo_paper600",
+      "/data/fyp_3d/runs/formal/common/controlled_recovery_v2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/controlled_recovery_v2/summary.json",
+        "kind": "json",
+        "equals": {
+          "scope.frames": 600,
+          "scope.GT_online": false,
+          "scope.controlled_faults_only": true,
+          "scope.physical_kidnapping": false
+        }
+      }
+    ],
+    "depends_on": [
+      "G.ace_macvo.integration"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation/predictions.npz",
+      "/data/fyp_3d/runs/formal/common/macvo_paper600/trajectory.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "J.tum.sitting_xyz.data",
+    "experiment_id": "J",
+    "dataset_id": "tum_sitting_xyz",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/acquire_tum_rgbd.py",
+      "sitting_xyz",
+      "/data/fyp_3d/downloads/tum/sitting_xyz.tgz",
+      "/data/fyp_3d/datasets/tum_rgbd/sitting_xyz"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/tum_rgbd/sitting_xyz/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "all_png_verified": true,
+          "full_sequence": true,
+          "real_people": true
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 3,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "J.tum.sitting_xyz.rgbd_vo",
+    "experiment_id": "J",
+    "dataset_id": "tum_sitting_xyz",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_tum_rgbd_vo.py",
+      "/data/fyp_3d/datasets/tum_rgbd/sitting_xyz",
+      "/data/fyp_3d/runs/formal/tum/sitting_xyz"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/tum/sitting_xyz/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "prior_map_available": false
+        },
+        "minimum": {
+          "metrics.raw_rgb_frames": 100
+        },
+        "finite": [
+          "metrics.ate_se3_aligned_rmse_m",
+          "metrics.tracking_availability_all_rgb_frames"
+        ]
+      }
+    ],
+    "depends_on": [
+      "J.tum.sitting_xyz.data"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/tum_rgbd/sitting_xyz/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "J.tum.sitting_static.data",
+    "experiment_id": "J",
+    "dataset_id": "tum_sitting_static",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/acquire_tum_rgbd.py",
+      "sitting_static",
+      "/data/fyp_3d/downloads/tum/sitting_static.tgz",
+      "/data/fyp_3d/datasets/tum_rgbd/sitting_static"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/tum_rgbd/sitting_static/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "all_png_verified": true,
+          "full_sequence": true,
+          "real_people": true
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 3,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "J.tum.sitting_static.rgbd_vo",
+    "experiment_id": "J",
+    "dataset_id": "tum_sitting_static",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_tum_rgbd_vo.py",
+      "/data/fyp_3d/datasets/tum_rgbd/sitting_static",
+      "/data/fyp_3d/runs/formal/tum/sitting_static"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/tum/sitting_static/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "prior_map_available": false
+        },
+        "minimum": {
+          "metrics.raw_rgb_frames": 100
+        },
+        "finite": [
+          "metrics.ate_se3_aligned_rmse_m",
+          "metrics.tracking_availability_all_rgb_frames"
+        ]
+      }
+    ],
+    "depends_on": [
+      "J.tum.sitting_static.data"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/tum_rgbd/sitting_static/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "J.tum.walking_xyz.data",
+    "experiment_id": "J",
+    "dataset_id": "tum_walking_xyz",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/acquire_tum_rgbd.py",
+      "walking_xyz",
+      "/data/fyp_3d/downloads/tum/walking_xyz.tgz",
+      "/data/fyp_3d/datasets/tum_rgbd/walking_xyz"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/tum_rgbd/walking_xyz/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "all_png_verified": true,
+          "full_sequence": true,
+          "real_people": true
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 3,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "J.tum.walking_xyz.rgbd_vo",
+    "experiment_id": "J",
+    "dataset_id": "tum_walking_xyz",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_tum_rgbd_vo.py",
+      "/data/fyp_3d/datasets/tum_rgbd/walking_xyz",
+      "/data/fyp_3d/runs/formal/tum/walking_xyz"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/tum/walking_xyz/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "prior_map_available": false
+        },
+        "minimum": {
+          "metrics.raw_rgb_frames": 100
+        },
+        "finite": [
+          "metrics.ate_se3_aligned_rmse_m",
+          "metrics.tracking_availability_all_rgb_frames"
+        ]
+      }
+    ],
+    "depends_on": [
+      "J.tum.walking_xyz.data"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/tum_rgbd/walking_xyz/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
+    "task_id": "J.tum.walking_static.data",
+    "experiment_id": "J",
+    "dataset_id": "tum_walking_static",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/acquire_tum_rgbd.py",
+      "walking_static",
+      "/data/fyp_3d/downloads/tum/walking_static.tgz",
+      "/data/fyp_3d/datasets/tum_rgbd/walking_static"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/tum_rgbd/walking_static/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "all_png_verified": true,
+          "full_sequence": true,
+          "real_people": true
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 3,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "J.tum.walking_static.rgbd_vo",
+    "experiment_id": "J",
+    "dataset_id": "tum_walking_static",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_tum_rgbd_vo.py",
+      "/data/fyp_3d/datasets/tum_rgbd/walking_static",
+      "/data/fyp_3d/runs/formal/tum/walking_static"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/tum/walking_static/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "GT_online": false,
+          "prior_map_available": false
+        },
+        "minimum": {
+          "metrics.raw_rgb_frames": 100
+        },
+        "finite": [
+          "metrics.ate_se3_aligned_rmse_m",
+          "metrics.tracking_availability_all_rgb_frames"
+        ]
+      }
+    ],
+    "depends_on": [
+      "J.tum.walking_static.data"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/tum_rgbd/walking_static/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 50,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "full_sequence": true
+    }
+  },
+  {
     "task_id": "C.wheel.provenance.audit",
     "experiment_id": "C",
     "dataset_id": "openloris",
@@ -3965,102 +6131,6 @@
     "blocked_reason": "Additional official compatible full trajectories must be selected and acquired with calibration/pose validation; single demo is insufficient"
   },
   {
-    "task_id": "D.building_split.audit",
-    "experiment_id": "D",
-    "dataset_id": "hssd",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Expanded scene closure and geometry/layout duplicate audit required before independent-building train/val/test split"
-  },
-  {
-    "task_id": "D.formal.multiseed",
-    "experiment_id": "D",
-    "dataset_id": "hssd",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Requires audited multi-building manifest and resumable full training implementation; pilot weights are not formal completion"
-  },
-  {
-    "task_id": "E.multiscene.geometry",
-    "experiment_id": "E",
-    "dataset_id": "hssd",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Requires expanded immutable reference/query maps; 76-query pilot not formal completion"
-  },
-  {
-    "task_id": "F.formal.clip.ablation",
-    "experiment_id": "F",
-    "dataset_id": "hssd",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Requires common expanded query maps and Top-K protocol; CLIP pilot is available but not multi-building benchmark"
-  },
-  {
     "task_id": "F.omcl.official",
     "experiment_id": "F",
     "dataset_id": "omcl",
@@ -4083,54 +6153,6 @@
     },
     "coverage": {},
     "blocked_reason": "Dense LSeg/OpenScene feature map + OMCL dependencies/checkpoints not yet validated; pooled CLIP baseline is not OMCL"
-  },
-  {
-    "task_id": "G.common.stereo.render",
-    "experiment_id": "G",
-    "dataset_id": "habitat_common",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Implementation in progress: must generate continuous true rendered stereo, immutable map, disjoint ACE references and test GT"
-  },
-  {
-    "task_id": "G.ace_macvo.integration",
-    "experiment_id": "G",
-    "dataset_id": "habitat_common",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Requires common-scene ACE adaptation and real MACVO motion; separate-dataset trajectories cannot be fused"
   },
   {
     "task_id": "H.full.system.ablation",
