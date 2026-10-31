@@ -1,0 +1,62 @@
+{
+  "ACE": {
+    "official": "https://github.com/nianticlabs/ace",
+    "http_status": 403,
+    "commit": "e9e90f2d02ee92c348bf411a5a60e230af6c315e",
+    "git_ls_remote_exit": 0
+  },
+  "hloc": {
+    "official": "https://github.com/cvg/Hierarchical-Localization",
+    "http_status": 403,
+    "commit": "c13273bd0ecc2917a35910fd843712a1c6243193",
+    "git_ls_remote_exit": 0
+  },
+  "MAC-VO": {
+    "official": "https://github.com/MAC-VO/MAC-VO",
+    "http_status": 403,
+    "commit": "8683b532d6f6e8981f6b1a646fb5f52f02c1ea61",
+    "git_ls_remote_exit": 0
+  },
+  "MINS": {
+    "official": "https://github.com/rpng/MINS",
+    "http_status": 403,
+    "commit": "a724a01a1e60c3e56f0b6621a22a2d2b3616fb27",
+    "git_ls_remote_exit": 0
+  },
+  "OpenVINS": {
+    "official": "https://github.com/rpng/open_vins",
+    "http_status": 403,
+    "commit": "69488123ed9362dd44b6f28e7f4680abbff1442b",
+    "git_ls_remote_exit": 0
+  },
+  "SemRayLoc": {
+    "official": "https://github.com/TAU-VAILab/SemRayLoc",
+    "http_status": 403,
+    "commit": "072b7a3d6056c44ad95d08b269bdd296fc3eadab",
+    "git_ls_remote_exit": 0
+  },
+  "SegFormer": {
+    "official": "https://github.com/NVlabs/SegFormer",
+    "http_status": 403,
+    "commit": "65fa8cfa9b52b6ee7e8897a98705abf8570f9e32",
+    "git_ls_remote_exit": 0
+  },
+  "OMCL": {
+    "official": "https://github.com/AIS-Bonn/omcl",
+    "http_status": 403,
+    "commit": "97fa34482013d393275113e3ab313eb8d20ba9fc",
+    "git_ls_remote_exit": 0
+  },
+  "VLG-Loc": {
+    "official": "https://github.com/CyberAgentAILab/VLG-Loc",
+    "http_status": 403,
+    "commit": "77c0d5ce7e95fb746c163b76e948ceacd81de0b0",
+    "git_ls_remote_exit": 0
+  },
+  "DynaVINS": {
+    "official": "https://github.com/HKUST-Aerial-Robotics/DynaVINS",
+    "http_status": 403,
+    "commit": null,
+    "git_ls_remote_exit": 128
+  }
+}
