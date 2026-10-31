@@ -1,0 +1,384 @@
+{
+  "status": "completed",
+  "best_epoch": 1,
+  "test": {
+    "mean_iou": 0.6321618933725023,
+    "known_pixel_accuracy": 0.7770095655114985,
+    "classes": {
+      "seating": {
+        "iou": 0.7578900899171475,
+        "precision": 0.8410635025836568,
+        "recall": 0.8845786949041748,
+        "labeled_pixels": 2651131,
+        "predicted_on_labeled_pixels": 2788296
+      },
+      "work_surface": {
+        "iou": 0.5541591188250238,
+        "precision": 0.6521620648703569,
+        "recall": 0.7866739533902203,
+        "labeled_pixels": 739244,
+        "predicted_on_labeled_pixels": 891717
+      },
+      "bed": {
+        "iou": 0.5216922764653568,
+        "precision": 0.9033120650668723,
+        "recall": 0.5525467326295294,
+        "labeled_pixels": 1865292,
+        "predicted_on_labeled_pixels": 1140980
+      },
+      "storage": {
+        "iou": 0.30233934339190455,
+        "precision": 0.3904863768031362,
+        "recall": 0.5725301379285378,
+        "labeled_pixels": 607706,
+        "predicted_on_labeled_pixels": 891017
+      },
+      "plumbing": {
+        "iou": 0.7373228220122706,
+        "precision": 0.7758570507798246,
+        "recall": 0.936890312208993,
+        "labeled_pixels": 941773,
+        "predicted_on_labeled_pixels": 1137243
+      },
+      "display": {
+        "iou": 0.9195677096233106,
+        "precision": 0.9919004829634985,
+        "recall": 0.9265248667824257,
+        "labeled_pixels": 669206,
+        "predicted_on_labeled_pixels": 625099
+      },
+      "door": {
+        "iou": null,
+        "precision": null,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 0
+      }
+    },
+    "confusion_matrix": [
+      [
+        2345134,
+        218308,
+        45201,
+        21818,
+        20471,
+        199,
+        0
+      ],
+      [
+        137615,
+        581544,
+        15607,
+        3885,
+        504,
+        89,
+        0
+      ],
+      [
+        267361,
+        83284,
+        1030661,
+        462840,
+        20405,
+        741,
+        0
+      ],
+      [
+        21061,
+        1264,
+        37983,
+        347930,
+        197455,
+        2013,
+        0
+      ],
+      [
+        7203,
+        1406,
+        5310,
+        43495,
+        882338,
+        2021,
+        0
+      ],
+      [
+        9922,
+        5911,
+        6218,
+        11049,
+        16070,
+        620036,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluation_scope": "only verified labeled pixels; unknown is IGNORE, not background; no full-scene accuracy claim",
+    "known_pixel_ece_10_bins": 0.06995962407487215,
+    "inference_mean_ms_per_image_batch4": 4.316357835486849,
+    "inference_p95_ms_per_image_batch4": 4.346171255747322
+  },
+  "initial_random_decoder_test": {
+    "mean_iou": 0.05500724334321868,
+    "known_pixel_accuracy": 0.15508742430113004,
+    "classes": {
+      "seating": {
+        "iou": 0.033541789860401044,
+        "precision": 0.4833048618170766,
+        "recall": 0.03478930313138053,
+        "labeled_pixels": 2651131,
+        "predicted_on_labeled_pixels": 190834
+      },
+      "work_surface": {
+        "iou": 0.014730887087533314,
+        "precision": 0.04442307960261394,
+        "recall": 0.02156392206091629,
+        "labeled_pixels": 739244,
+        "predicted_on_labeled_pixels": 358845
+      },
+      "bed": {
+        "iou": 0.16611357561566314,
+        "precision": 0.23802624489141125,
+        "recall": 0.3547659026039891,
+        "labeled_pixels": 1865292,
+        "predicted_on_labeled_pixels": 2780122
+      },
+      "storage": {
+        "iou": 0.037365056379296074,
+        "precision": 0.113636202458034,
+        "recall": 0.0527343814278615,
+        "labeled_pixels": 607706,
+        "predicted_on_labeled_pixels": 282014
+      },
+      "plumbing": {
+        "iou": 0.0018537390481191136,
+        "precision": 0.016027466358592188,
+        "recall": 0.0020917991915249214,
+        "labeled_pixels": 941773,
+        "predicted_on_labeled_pixels": 122914
+      },
+      "display": {
+        "iou": 0.1314456554115181,
+        "precision": 0.14872254523045594,
+        "recall": 0.5308484980708481,
+        "labeled_pixels": 669206,
+        "predicted_on_labeled_pixels": 2388656
+      },
+      "door": {
+        "iou": 0.0,
+        "precision": 0.0,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 1350967
+      }
+    },
+    "confusion_matrix": [
+      [
+        92231,
+        142135,
+        1147821,
+        110175,
+        84357,
+        888757,
+        185655
+      ],
+      [
+        25393,
+        15941,
+        283219,
+        47947,
+        9407,
+        250991,
+        106346
+      ],
+      [
+        41151,
+        93890,
+        661742,
+        59693,
+        20831,
+        650753,
+        337232
+      ],
+      [
+        17508,
+        48283,
+        278909,
+        32047,
+        5530,
+        107834,
+        117595
+      ],
+      [
+        6351,
+        43583,
+        238690,
+        17457,
+        1970,
+        135074,
+        498648
+      ],
+      [
+        8200,
+        15013,
+        169741,
+        14695,
+        819,
+        355247,
+        105491
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluation_scope": "only verified labeled pixels; unknown is IGNORE, not background; no full-scene accuracy claim",
+    "known_pixel_ece_10_bins": 0.0007476106388031312,
+    "inference_mean_ms_per_image_batch4": 4.311423646236161,
+    "inference_p95_ms_per_image_batch4": 4.348194255726412
+  },
+  "train_majority_class_baseline_test": {
+    "mean_iou": 0.05911618380652486,
+    "known_pixel_accuracy": 0.3546971028391491,
+    "classes": {
+      "seating": {
+        "iou": 0.3546971028391491,
+        "precision": 0.3546971028391491,
+        "recall": 1.0,
+        "labeled_pixels": 2651131,
+        "predicted_on_labeled_pixels": 7474352
+      },
+      "work_surface": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 739244,
+        "predicted_on_labeled_pixels": 0
+      },
+      "bed": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 1865292,
+        "predicted_on_labeled_pixels": 0
+      },
+      "storage": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 607706,
+        "predicted_on_labeled_pixels": 0
+      },
+      "plumbing": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 941773,
+        "predicted_on_labeled_pixels": 0
+      },
+      "display": {
+        "iou": 0.0,
+        "precision": null,
+        "recall": 0.0,
+        "labeled_pixels": 669206,
+        "predicted_on_labeled_pixels": 0
+      },
+      "door": {
+        "iou": null,
+        "precision": null,
+        "recall": null,
+        "labeled_pixels": 0,
+        "predicted_on_labeled_pixels": 0
+      }
+    },
+    "confusion_matrix": [
+      [
+        2651131,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        739244,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1865292,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        607706,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        941773,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        669206,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "evaluation_scope": "only verified labeled pixels; unknown is IGNORE, not background; no full-scene accuracy claim"
+  },
+  "training_seconds": 5799.142443780991,
+  "optimizer_steps": 74120,
+  "skipped_all_ignore_batches": 840,
+  "torch_peak_allocated_MiB": 498.56201171875,
+  "torch_peak_reserved_MiB": 540.0,
+  "host_maxrss_MiB": 1341.98046875,
+  "claim": "partial-label synthetic-house-group held-out evaluation; no real-building or localization gain claim",
+  "seed": 1305,
+  "strategy": "full",
+  "epochs": 40,
+  "independent_layout_groups": 24
+}

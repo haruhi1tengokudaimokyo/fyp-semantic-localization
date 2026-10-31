@@ -34,10 +34,11 @@ def aggregate(snapshot, root):
             if task["formal"] and (
                 (".train." in tid and tid.endswith(".eval"))
                 or tid.startswith("D.train.")
+                or tid == "reuse.ace.heads.local"
             ):
                 family = (
                     "ACE_local"
-                    if tid.startswith("ace.")
+                    if task["experiment_id"] == "A"
                     else ".".join(tid.split(".")[:3])
                 )
                 key = (task["dataset_id"], family, metric)
@@ -90,7 +91,13 @@ def aggregate(snapshot, root):
     from ace_statistics import collect
 
     collect(snapshot["tasks"], out)
+    from relocalization_statistics import collect as collect_relocalization
+
+    collect_relocalization(snapshot, out)
     from plot_formal import plot
 
     plot(snapshot, root)
+    from plot_semantic_localization import plot as plot_semantic
+
+    plot_semantic(snapshot, root)
     return str(out / "index.json")

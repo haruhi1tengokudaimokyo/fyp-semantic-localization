@@ -48,9 +48,7 @@ def main(a):
                     odom_messages=len(x),
                     frame_pairs=sorted(frames),
                     maximum_abs_twist_y=float(np.abs(x[:, 1]).max()),
-                    connection_metadata=[
-                        dict(c.ext._asdict()) for c in connections
-                    ],
+                    connection_metadata=[dict(c.ext._asdict()) for c in connections],
                     raw_encoder_topics=[
                         c.topic
                         for c in reader.connections

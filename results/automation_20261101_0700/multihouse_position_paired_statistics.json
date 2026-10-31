@@ -1,0 +1,890 @@
+{
+  "103997403_171030405": {
+    "bow_k16:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        -0.021645021645021644,
+        0.022525070319187927
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:semantic": {
+      "delta_recall": 0.004424778761061947,
+      "position_cluster_bootstrap_95CI": [
+        -0.01762114537444934,
+        0.02727272727272727
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:soft": {
+      "delta_recall": 0.008849557522123894,
+      "position_cluster_bootstrap_95CI": [
+        -0.012875536480686695,
+        0.03139013452914798
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:geometry": {
+      "delta_recall": -0.02654867256637168,
+      "position_cluster_bootstrap_95CI": [
+        -0.04824561403508772,
+        -0.008771929824561403
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:semantic": {
+      "delta_recall": -0.022123893805309734,
+      "position_cluster_bootstrap_95CI": [
+        -0.044642857142857144,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:soft": {
+      "delta_recall": -0.022123893805309734,
+      "position_cluster_bootstrap_95CI": [
+        -0.04824561403508772,
+        0.004291845493562232
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:semantic": {
+      "delta_recall": 0.004424778761061947,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.013636363636363636
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:soft": {
+      "delta_recall": 0.008849557522123894,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.022321428571428572
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:geometry": {
+      "delta_recall": 0.02654867256637168,
+      "position_cluster_bootstrap_95CI": [
+        -0.008695652173913044,
+        0.06018518518518518
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:semantic": {
+      "delta_recall": 0.02654867256637168,
+      "position_cluster_bootstrap_95CI": [
+        -0.00904977375565611,
+        0.06222222222222222
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:soft": {
+      "delta_recall": 0.030973451327433628,
+      "position_cluster_bootstrap_95CI": [
+        -0.004424778761061947,
+        0.06607929515418502
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:geometry": {
+      "delta_recall": -0.004424778761061947,
+      "position_cluster_bootstrap_95CI": [
+        -0.04721030042918455,
+        0.036203208556149676
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:semantic": {
+      "delta_recall": -0.004424778761061947,
+      "position_cluster_bootstrap_95CI": [
+        -0.04824561403508772,
+        0.03896527385657814
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:soft": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        -0.04329004329004329,
+        0.043859649122807015
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:geometry": {
+      "delta_recall": 0.022123893805309734,
+      "position_cluster_bootstrap_95CI": [
+        -0.013157894736842105,
+        0.05829596412556054
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:semantic": {
+      "delta_recall": 0.022123893805309734,
+      "position_cluster_bootstrap_95CI": [
+        -0.012987012987012988,
+        0.05829596412556054
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:soft": {
+      "delta_recall": 0.02654867256637168,
+      "position_cluster_bootstrap_95CI": [
+        -0.008849557522123894,
+        0.0639269406392694
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "sift_bow_k8:geometry": {
+      "delta_recall": -0.27876106194690264,
+      "position_cluster_bootstrap_95CI": [
+        -0.33620783767504897,
+        -0.22522522522522523
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "superpoint_bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 226,
+      "replicates": 10000,
+      "seed": 1305
+    }
+  },
+  "103997919_171031233": {
+    "bow_k16:geometry": {
+      "delta_recall": 0.008771929824561403,
+      "position_cluster_bootstrap_95CI": [
+        -0.008658008658008658,
+        0.02654867256637168
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:semantic": {
+      "delta_recall": 0.013157894736842105,
+      "position_cluster_bootstrap_95CI": [
+        -0.00881057268722467,
+        0.035398230088495575
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:soft": {
+      "delta_recall": 0.013157894736842105,
+      "position_cluster_bootstrap_95CI": [
+        -0.004405773654048575,
+        0.031818181818181815
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:geometry": {
+      "delta_recall": -0.017543859649122806,
+      "position_cluster_bootstrap_95CI": [
+        -0.0425531914893617,
+        0.004424778761061947
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:semantic": {
+      "delta_recall": -0.021929824561403508,
+      "position_cluster_bootstrap_95CI": [
+        -0.05045871559633028,
+        0.004424778761061947
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:soft": {
+      "delta_recall": -0.017543859649122806,
+      "position_cluster_bootstrap_95CI": [
+        -0.04128440366972477,
+        0.0044444444444444444
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:semantic": {
+      "delta_recall": 0.0043859649122807015,
+      "position_cluster_bootstrap_95CI": [
+        -0.009009009009009009,
+        0.018018018018018018
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:soft": {
+      "delta_recall": 0.0043859649122807015,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.013392857142857142
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:geometry": {
+      "delta_recall": 0.021929824561403508,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.048672566371681415
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:semantic": {
+      "delta_recall": 0.021929824561403508,
+      "position_cluster_bootstrap_95CI": [
+        -0.008583690987124463,
+        0.05309734513274336
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:soft": {
+      "delta_recall": 0.02631578947368421,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.05505221324990479
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:geometry": {
+      "delta_recall": -0.008771929824561403,
+      "position_cluster_bootstrap_95CI": [
+        -0.04424778761061947,
+        0.026785714285714284
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:semantic": {
+      "delta_recall": -0.0043859649122807015,
+      "position_cluster_bootstrap_95CI": [
+        -0.040545126574538334,
+        0.032407407407407406
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:soft": {
+      "delta_recall": -0.008771929824561403,
+      "position_cluster_bootstrap_95CI": [
+        -0.04405286343612335,
+        0.026905829596412557
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:geometry": {
+      "delta_recall": 0.008771929824561403,
+      "position_cluster_bootstrap_95CI": [
+        -0.022123893805309734,
+        0.04035874439461883
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:semantic": {
+      "delta_recall": 0.008771929824561403,
+      "position_cluster_bootstrap_95CI": [
+        -0.02666666666666667,
+        0.045454545454545456
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:soft": {
+      "delta_recall": 0.008771929824561403,
+      "position_cluster_bootstrap_95CI": [
+        -0.02553191489361702,
+        0.04128915993742859
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "sift_bow_k8:geometry": {
+      "delta_recall": -0.4166666666666667,
+      "position_cluster_bootstrap_95CI": [
+        -0.47186147186147187,
+        -0.3593073593073593
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "superpoint_bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 228,
+      "replicates": 10000,
+      "seed": 1305
+    }
+  },
+  "104348511_171513654": {
+    "bow_k16:geometry": {
+      "delta_recall": 0.021551724137931036,
+      "position_cluster_bootstrap_95CI": [
+        0.004329004329004329,
+        0.03982300884955752
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:semantic": {
+      "delta_recall": 0.017241379310344827,
+      "position_cluster_bootstrap_95CI": [
+        0.00425531914893617,
+        0.034782608695652174
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:soft": {
+      "delta_recall": 0.021551724137931036,
+      "position_cluster_bootstrap_95CI": [
+        0.004328537841468877,
+        0.0425531914893617
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:geometry": {
+      "delta_recall": -0.03879310344827586,
+      "position_cluster_bootstrap_95CI": [
+        -0.06956521739130435,
+        -0.01282051282051282
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:semantic": {
+      "delta_recall": -0.034482758620689655,
+      "position_cluster_bootstrap_95CI": [
+        -0.06438461965369245,
+        -0.008583690987124463
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:soft": {
+      "delta_recall": -0.03879310344827586,
+      "position_cluster_bootstrap_95CI": [
+        -0.06926406926406926,
+        -0.01276595744680851
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:semantic": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:soft": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:geometry": {
+      "delta_recall": 0.008620689655172414,
+      "position_cluster_bootstrap_95CI": [
+        -0.026200873362445413,
+        0.043859649122807015
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:semantic": {
+      "delta_recall": 0.008620689655172414,
+      "position_cluster_bootstrap_95CI": [
+        -0.02564102564102564,
+        0.042735042735042736
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:soft": {
+      "delta_recall": 0.008620689655172414,
+      "position_cluster_bootstrap_95CI": [
+        -0.026200873362445413,
+        0.043478260869565216
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:geometry": {
+      "delta_recall": -0.05172413793103448,
+      "position_cluster_bootstrap_95CI": [
+        -0.09606986899563319,
+        -0.00851063829787234
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:semantic": {
+      "delta_recall": -0.0603448275862069,
+      "position_cluster_bootstrap_95CI": [
+        -0.10683760683760683,
+        -0.013100436681222707
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:soft": {
+      "delta_recall": -0.05172413793103448,
+      "position_cluster_bootstrap_95CI": [
+        -0.09606986899563319,
+        -0.008620689655172414
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:geometry": {
+      "delta_recall": -0.03017241379310345,
+      "position_cluster_bootstrap_95CI": [
+        -0.06956521739130435,
+        0.008733624454148471
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:semantic": {
+      "delta_recall": -0.03017241379310345,
+      "position_cluster_bootstrap_95CI": [
+        -0.0717375563183866,
+        0.008733624454148471
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:soft": {
+      "delta_recall": -0.03017241379310345,
+      "position_cluster_bootstrap_95CI": [
+        -0.06956521739130435,
+        0.008771929824561403
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "sift_bow_k8:geometry": {
+      "delta_recall": -0.34913793103448276,
+      "position_cluster_bootstrap_95CI": [
+        -0.41304347826086957,
+        -0.2857142857142857
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "superpoint_bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 60,
+      "queries": 232,
+      "replicates": 10000,
+      "seed": 1305
+    }
+  },
+  "106879005_174887124": {
+    "bow_k16:geometry": {
+      "delta_recall": 0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        0.011363636363636364,
+        0.11827956989247312
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:semantic": {
+      "delta_recall": 0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        0.011494252873563218,
+        0.12
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k16:soft": {
+      "delta_recall": 0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        0.011627906976744186,
+        0.11764705882352941
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:geometry": {
+      "delta_recall": -0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        -0.11827956989247312,
+        -0.011494252873563218
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:semantic": {
+      "delta_recall": -0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        -0.11764705882352941,
+        -0.011494252873563218
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k4:soft": {
+      "delta_recall": -0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        -0.11904761904761904,
+        -0.011624565624164711
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:semantic": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "bow_k8:soft": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:geometry": {
+      "delta_recall": 0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.12643678160919541
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:semantic": {
+      "delta_recall": 0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.12643678160919541
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k16:soft": {
+      "delta_recall": 0.058823529411764705,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.125
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:geometry": {
+      "delta_recall": -0.047058823529411764,
+      "position_cluster_bootstrap_95CI": [
+        -0.09876543209876543,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:semantic": {
+      "delta_recall": -0.047058823529411764,
+      "position_cluster_bootstrap_95CI": [
+        -0.1,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k4:soft": {
+      "delta_recall": -0.047058823529411764,
+      "position_cluster_bootstrap_95CI": [
+        -0.0989010989010989,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:geometry": {
+      "delta_recall": -0.011764705882352941,
+      "position_cluster_bootstrap_95CI": [
+        -0.0759493670886076,
+        0.06097560975609756
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:semantic": {
+      "delta_recall": -0.011764705882352941,
+      "position_cluster_bootstrap_95CI": [
+        -0.07595280682443588,
+        0.06329113924050633
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "clip_k8:soft": {
+      "delta_recall": -0.011764705882352941,
+      "position_cluster_bootstrap_95CI": [
+        -0.07692307692307693,
+        0.06172839506172839
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "sift_bow_k8:geometry": {
+      "delta_recall": -0.27058823529411763,
+      "position_cluster_bootstrap_95CI": [
+        -0.39080459770114945,
+        -0.14942528735632185
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    },
+    "superpoint_bow_k8:geometry": {
+      "delta_recall": 0.0,
+      "position_cluster_bootstrap_95CI": [
+        0.0,
+        0.0
+      ],
+      "positions": 30,
+      "queries": 85,
+      "replicates": 10000,
+      "seed": 1305
+    }
+  }
+}

@@ -20,6 +20,7 @@ class RecoveryGate:
     translation_gate_m: float = 0.10
     rotation_gate_deg: float = 10.0
     required_consistent: int = 3
+    min_absolute_inliers: int = 50
 
     def __post_init__(self):
         self.T = None
@@ -37,7 +38,9 @@ class RecoveryGate:
         )
         candidate = (
             se3(absolute)
-            if absolute is not None and np.isfinite(absolute).all() and inliers >= 50
+            if absolute is not None
+            and np.isfinite(absolute).all()
+            and inliers >= self.min_absolute_inliers
             else None
         )
         accepted = False

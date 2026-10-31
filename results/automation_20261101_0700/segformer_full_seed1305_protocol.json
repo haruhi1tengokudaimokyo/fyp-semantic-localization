@@ -1,0 +1,41 @@
+{
+  "seed": 1305,
+  "strategy": "full",
+  "epochs": 40,
+  "batch_size": 4,
+  "learning_rate": 6e-05,
+  "weight_decay": 0.01,
+  "optimizer": "AdamW",
+  "scheduler": "polynomial power0.9",
+  "image_size": [
+    240,
+    320
+  ],
+  "pretrained": "official NVIDIA mit-b0 ImageNet-1K backbone, random segmentation decoder",
+  "pretrained_revision": "80983a413c30d36a39c20203974ae7807835e2b4",
+  "trainable_parameters": 3715943,
+  "class_weights": [
+    0.4433521032333374,
+    0.5640884637832642,
+    0.6271636486053467,
+    0.5959979891777039,
+    0.7452921271324158,
+    0.7449125647544861,
+    3.0
+  ],
+  "augmentation": "random horizontal flip and brightness[0.8,1.2] on training only",
+  "selection": "best validation mIoU, test accessed only after selection",
+  "splits": {
+    "train": 7494,
+    "val": 1995,
+    "test": 1957
+  },
+  "limitations": [
+    "Synthetic house groups; near-duplicate nonidentical layouts remain possible; no real-building claim",
+    "Native object lexicon lacks wall/window/column coverage; ignore unknown labels"
+  ],
+  "GT_pose_used_in_training": false,
+  "semantic_unknown_index": 255,
+  "precision": "FP32 all modules; no AMP on GTX1660",
+  "manifest_sha256": "15f911c25a3df4d723fa18fbb2bbe777f46eea09ca635852cf53e735791ee5c6"
+}

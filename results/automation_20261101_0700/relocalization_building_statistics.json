@@ -1,0 +1,2042 @@
+[
+  {
+    "method": "bow_k16:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.018306345111643745,
+    "paired_house_bootstrap_95CI": [
+      0.006522232304900181,
+      0.0375065070275898
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.01293103448275862
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.022286795843564286,
+    "paired_house_bootstrap_95CI": [
+      0.0043859649122807015,
+      0.04631062951496388
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.021551724137931036
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.020442612504263224,
+    "paired_house_bootstrap_95CI": [
+      0.004424778761061947,
+      0.0375065070275898
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.02586206896551724
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.011679382335463135,
+    "paired_house_bootstrap_95CI": [
+      -0.008791336748952026,
+      0.034187922956793335
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.013157894736842105
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.023411895555003396,
+    "paired_house_bootstrap_95CI": [
+      0.007628928898382667,
+      0.04740712074303406
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.013157894736842105
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.020442612504263224,
+    "paired_house_bootstrap_95CI": [
+      0.004424778761061947,
+      0.0375065070275898
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.02586206896551724
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.022607488380251638,
+    "paired_house_bootstrap_95CI": [
+      0.0044441856854525695,
+      0.040770791075050716
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.01327433628318584
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.034482758620689655
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.025595676452165435,
+    "paired_house_bootstrap_95CI": [
+      0.011003726129482999,
+      0.04740712074303406
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.013157894736842105
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.021551724137931036
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k16:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.022645298422598888,
+    "paired_house_bootstrap_95CI": [
+      0.008830150597733271,
+      0.03861270171785528
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.01327433628318584
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.02586206896551724
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.046044408239180226,
+    "paired_house_bootstrap_95CI": [
+      -0.06179073399271213,
+      -0.03524297469337059
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.035398230088495575
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.03508771929824561
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.04310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.03542729126888376,
+    "paired_house_bootstrap_95CI": [
+      -0.050754815200416456,
+      -0.022046266107747244
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.017543859649122806
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03879310344827586
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.03617498338011465,
+    "paired_house_bootstrap_95CI": [
+      -0.058423632610939115,
+      -0.019814469802825647
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.017699115044247787
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.034482758620689655
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.046101123302701094,
+    "paired_house_bootstrap_95CI": [
+      -0.06179073399271213,
+      -0.032785321940799514
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.035398230088495575
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.04824561403508772
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03017241379310345
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.034340001599791906,
+    "paired_house_bootstrap_95CI": [
+      -0.04964862051015097,
+      -0.02202685918335662
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.022123893805309734
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.034482758620689655
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.03617498338011465,
+    "paired_house_bootstrap_95CI": [
+      -0.058423632610939115,
+      -0.019814469802825647
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.017699115044247787
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.034482758620689655
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.040656477204697464,
+    "paired_house_bootstrap_95CI": [
+      -0.06171310629514964,
+      -0.02501335062557217
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.035398230088495575
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.03508771929824561
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.021551724137931036
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.034321096578618274,
+    "paired_house_bootstrap_95CI": [
+      -0.04964862051015097,
+      -0.01983387672721627
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.022123893805309734
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.017543859649122806
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03879310344827586
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k4:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.03506878868984916,
+    "paired_house_bootstrap_95CI": [
+      -0.058423632610939115,
+      -0.017602080422294674
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.01327433628318584
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.034482758620689655
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.0
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.0
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.0
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.004424276857844947,
+    "paired_house_bootstrap_95CI": [
+      -0.011003726129482999,
+      0.0021551724137931034
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.013157894736842105
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.004310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.002202685918335662,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.004405371836671324
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0010775862068965517,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.003232758620689655
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.004310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.005426242980047005,
+    "paired_house_bootstrap_95CI": [
+      -0.0021929824561403508,
+      0.01304546841623436
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.003308880608601149,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.00663716814159292
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.008849557522123894
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "bow_k8:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 2.8608483368935e-05,
+    "paired_house_bootstrap_95CI": [
+      -0.003232758620689655,
+      0.00331858407079646
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.004310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.006364491012665124,
+    "paired_house_bootstrap_95CI": [
+      -0.009989858012170385,
+      0.021007995652848936
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.011764705882352941
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.028980679048678078,
+    "paired_house_bootstrap_95CI": [
+      0.01310268538297223,
+      0.049600103199174406
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.008620689655172414
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.03298053670498924,
+    "paired_house_bootstrap_95CI": [
+      0.017392619479733817,
+      0.057327141382868936
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.017543859649122806
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.0013783699159762835,
+    "paired_house_bootstrap_95CI": [
+      -0.010851482153660011,
+      0.008094742321707444
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.01293103448275862
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.011764705882352941
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.028980679048678078,
+    "paired_house_bootstrap_95CI": [
+      0.01310268538297223,
+      0.049600103199174406
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.008620689655172414
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.031884045476919066,
+    "paired_house_bootstrap_95CI": [
+      0.015199637023593466,
+      0.05725152129817444
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.013157894736842105
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.013964811427678856,
+    "paired_house_bootstrap_95CI": [
+      0.004348154869933454,
+      0.027645163794441856
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.035398230088495575
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.004310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.011764705882352941
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.031183364967013738,
+    "paired_house_bootstrap_95CI": [
+      0.014208880073237718,
+      0.050696594427244585
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.030973451327433628
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.02631578947368421
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.008620689655172414
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.058823529411764705
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k16:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.03408673139525473,
+    "paired_house_bootstrap_95CI": [
+      0.017392619479733817,
+      0.057327141382868936
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.030973451327433628
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.017543859649122806
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.017241379310344827
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.07058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.036614603360255814,
+    "paired_house_bootstrap_95CI": [
+      -0.0669615849969752,
+      -0.0018089536699635606
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.01327433628318584
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.03508771929824561
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.07758620689655173
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.0279949175115174,
+    "paired_house_bootstrap_95CI": [
+      -0.04939148073022312,
+      -0.006598354292811675
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.05172413793103448
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.02362735571719332,
+    "paired_house_bootstrap_95CI": [
+      -0.04508113590263692,
+      -0.002173575531749728
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.04310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.041058287142491386,
+    "paired_house_bootstrap_95CI": [
+      -0.06482531760435571,
+      -0.015083289953149401
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.039473684210526314
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.07327586206896551
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.029053598697240328,
+    "paired_house_bootstrap_95CI": [
+      -0.053701825557809335,
+      -0.004405371836671324
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.0603448275862069
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.0247238469452635,
+    "paired_house_bootstrap_95CI": [
+      -0.04508113590263692,
+      -0.004366557987890079
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.013157894736842105
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.04310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.03116945535903519,
+    "paired_house_bootstrap_95CI": [
+      -0.05726330913490624,
+      0.00482821447162936
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.022123893805309734
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.03508771929824561
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.06465517241379311
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.02688872282125191,
+    "paired_house_bootstrap_95CI": [
+      -0.04939148073022312,
+      -0.0043859649122807015
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.05172413793103448
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k4:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.02362735571719332,
+    "paired_house_bootstrap_95CI": [
+      -0.04508113590263692,
+      -0.002173575531749728
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.004424778761061947
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.04310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.022463944060189964,
+    "paired_house_bootstrap_95CI": [
+      -0.04939148073022312,
+      0.004463592609843192
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.017699115044247787
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.05172413793103448
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.0027603240113963133,
+    "paired_house_bootstrap_95CI": [
+      -0.020968559837728197,
+      0.015447911814935569
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.022123893805309734
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03017241379310345
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.011764705882352941
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.004462588803409194,
+    "paired_house_bootstrap_95CI": [
+      -0.004310344827586207,
+      0.01327433628318584
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.017699115044247787
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.008620689655172414
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.028023024091669336,
+    "paired_house_bootstrap_95CI": [
+      -0.04508113590263692,
+      -0.010775862068965518
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.021929824561403508
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.04310344827586207
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.0027603240113963133,
+    "paired_house_bootstrap_95CI": [
+      -0.020968559837728197,
+      0.015447911814935569
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.022123893805309734
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03017241379310345
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.011764705882352941
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:semantic",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.003366097575339019,
+    "paired_house_bootstrap_95CI": [
+      -0.005369026013309135,
+      0.01327433628318584
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.017699115044247787
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0043859649122807015
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.008620689655172414
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.01591260136870385,
+    "paired_house_bootstrap_95CI": [
+      -0.04292596348884381,
+      0.013531812633506255
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.030973451327433628
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03879310344827586
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.047058823529411764
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.0016541293211308266,
+    "paired_house_bootstrap_95CI": [
+      -0.020968559837728197,
+      0.017660301195466542
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.02654867256637168
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.03017241379310345
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.011764705882352941
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "clip_k8:soft",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.004462588803409194,
+    "paired_house_bootstrap_95CI": [
+      -0.004310344827586207,
+      0.01327433628318584
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.017699115044247787
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.008771929824561403
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.008620689655172414
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "sift_bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.30826957391054327,
+    "paired_house_bootstrap_95CI": [
+      -0.4109951603145796,
+      -0.20502028397565925
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.26991150442477874
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.42543859649122806
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.39655172413793105
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.1411764705882353
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "sift_bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.32878847373554243,
+    "paired_house_bootstrap_95CI": [
+      -0.38290229885057475,
+      -0.27467464862051016
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.27876106194690264
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.4166666666666667
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.34913793103448276
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.27058823529411763
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "sift_bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": -0.34322779824230737,
+    "paired_house_bootstrap_95CI": [
+      -0.4087074303405573,
+      -0.3011712649661635
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": -0.29646017699115046
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": -0.44298245614035087
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": -0.3275862068965517
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": -0.3058823529411765
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "superpoint_bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.05,
+    "rotation_threshold_deg": 5,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.0
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "superpoint_bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 0.25,
+    "rotation_threshold_deg": 10,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.0
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  },
+  {
+    "method": "superpoint_bow_k8:geometry",
+    "baseline": "superpoint_bow_k8:geometry",
+    "translation_threshold_m": 1.0,
+    "rotation_threshold_deg": 30,
+    "house_groups": 4,
+    "queries": 771,
+    "macro_house_delta_recall": 0.0,
+    "paired_house_bootstrap_95CI": [
+      0.0,
+      0.0
+    ],
+    "per_house": {
+      "103997403": {
+        "queries": 226,
+        "delta_recall": 0.0
+      },
+      "103997919": {
+        "queries": 228,
+        "delta_recall": 0.0
+      },
+      "104348511": {
+        "queries": 232,
+        "delta_recall": 0.0
+      },
+      "106879005": {
+        "queries": 85,
+        "delta_recall": 0.0
+      }
+    },
+    "replicates": 10000,
+    "seed": 1305,
+    "limitation": "Four synthetic held-out house groups; descriptive macro-house uncertainty only, not a real-building/general population guarantee. All variants reported; no test-selected winner."
+  }
+]

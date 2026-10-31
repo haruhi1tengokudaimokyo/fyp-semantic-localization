@@ -65,7 +65,7 @@
       "/data/fyp_3d/runs/ace_adapter_local/summary.json"
     ],
     "formal": true,
-    "seed": 1305,
+    "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 30,
     "priority": 10,
@@ -84,6 +84,7 @@
         "heads"
       ]
     },
+    "seed_metadata_source": "/data/fyp_3d/runs/ace_local/training_resources.json",
     "reuse_existing": true
   },
   {
@@ -7184,6 +7185,768 @@
     }
   },
   {
+    "task_id": "ace.heads.train.2090",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_heads",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_heads",
+      "/data/fyp_3d/runs/formal/ace/heads/seed2090",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2090"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/heads/seed2090/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2090
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/heads/seed2090/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "reuse.ace.heads.local"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_heads/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "heads"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_heads"
+  },
+  {
+    "task_id": "ace.heads.train.2090.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_heads",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_heads",
+      "/data/fyp_3d/runs/formal/ace/heads/seed2090/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/heads/seed2090/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/heads/seed2090/evaluation/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 1000
+        },
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ]
+      }
+    ],
+    "depends_on": [
+      "ace.heads.train.2090"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/heads/seed2090/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2090,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "heads"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_heads"
+  },
+  {
+    "task_id": "ace.heads.train.2091",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_heads",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/train_ace_local.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_heads",
+      "/data/fyp_3d/runs/formal/ace/heads/seed2091",
+      "--ace",
+      "/data/fyp_3d/sources/ace",
+      "--seed",
+      "2091"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/heads/seed2091/training_resources.json",
+        "kind": "json",
+        "equals": {
+          "epochs": 16,
+          "base_seed": 2091
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/heads/seed2091/heads_local.pt",
+        "min_bytes": 1000000
+      }
+    ],
+    "depends_on": [
+      "reuse.ace.heads.local"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/7scenes/7scenes_heads/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 35,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 5500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "heads"
+      ],
+      "epochs": 16
+    },
+    "model_dataset_id": "7scenes_heads"
+  },
+  {
+    "task_id": "ace.heads.train.2091.eval",
+    "experiment_id": "A",
+    "dataset_id": "7scenes_heads",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/7scenes/7scenes_heads",
+      "/data/fyp_3d/runs/formal/ace/heads/seed2091/heads_local.pt",
+      "/data/fyp_3d/runs/formal/ace/heads/seed2091/evaluation",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/ace/heads/seed2091/evaluation/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 1000
+        },
+        "finite": [
+          "median_translation_m",
+          "median_rotation_deg"
+        ]
+      }
+    ],
+    "depends_on": [
+      "ace.heads.train.2091"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/ace/heads/seed2091/heads_local.pt"
+    ],
+    "formal": true,
+    "seed": 2091,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 36,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {
+      "scene_ids": [
+        "heads"
+      ],
+      "full_sequence": true
+    },
+    "model_dataset_id": "7scenes_heads"
+  },
+  {
+    "task_id": "H.common.reference_constraints",
+    "experiment_id": "H",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_common_constraints.py",
+      "/data/fyp_3d/datasets/common_hssd105",
+      "/data/fyp_3d/datasets/hssd",
+      "/data/fyp_3d/datasets/common_hssd105_constraints",
+      "--building-plan",
+      "/data/fyp_3d/datasets/hssd_expanded/building_split.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/common_hssd105_constraints/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "query_frames": 600,
+          "GT_online": false,
+          "map_unchanged": true
+        },
+        "minimum": {
+          "reference_positions": 256
+        }
+      }
+    ],
+    "depends_on": [
+      "G.ace_macvo.integration",
+      "D.building_split.audit"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105/references.json",
+      "/data/fyp_3d/datasets/common_hssd105/readonly_prior_map.npz",
+      "/data/fyp_3d/datasets/hssd_expanded/building_split.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 1800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "H.common.bow_constraints",
+    "experiment_id": "H",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/localize_semantic_pilot.py",
+      "/data/fyp_3d/datasets/common_hssd105_constraints",
+      "/data/fyp_3d/runs/formal/common/observations/bow",
+      "--mode",
+      "all",
+      "--checkpoint",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt",
+      "--reference-positions",
+      "384",
+      "--topk",
+      "8",
+      "--hloc-source",
+      "/data/fyp_3d/sources/hloc",
+      "--lightglue-source",
+      "/data/fyp_3d/sources/LightGlue"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/observations/bow/summary.json",
+        "kind": "json",
+        "equals": {
+          "geometry.queries": 600,
+          "semantic.queries": 600,
+          "soft.queries": 600,
+          "audit.no_query_GT_online": true
+        },
+        "finite": [
+          "geometry.recall_25cm_10deg",
+          "soft.recall_25cm_10deg"
+        ]
+      }
+    ],
+    "depends_on": [
+      "H.common.reference_constraints",
+      "D.train.full.1305"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105_constraints/acceptance.json",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "H.common.clip_features",
+    "experiment_id": "H",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/extract_clip_reference_features.py",
+      "/data/fyp_3d/datasets/common_hssd105_constraints",
+      "/data/fyp_3d/runs/formal/common/observations/bow",
+      "/data/fyp_3d/runs/formal/common/observations/clip_features",
+      "--source",
+      "/data/fyp_3d/sources/CLIP",
+      "--weights",
+      "/data/fyp_3d/models/clip"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/observations/clip_features/protocol.json",
+        "kind": "json",
+        "equals": {
+          "query_GT_online": false,
+          "independent_of_trained_semantic_network": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/formal/common/observations/clip_features/features.npz",
+        "min_bytes": 10000
+      }
+    ],
+    "depends_on": [
+      "H.common.bow_constraints"
+    ],
+    "inputs": [
+      "/data/fyp_3d/models/clip/ViT-B-32.pt",
+      "/data/fyp_3d/runs/formal/common/observations/bow/readonly_map.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "H.common.clip_constraints",
+    "experiment_id": "H",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/semantic310/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/localize_semantic_pilot.py",
+      "/data/fyp_3d/datasets/common_hssd105_constraints",
+      "/data/fyp_3d/runs/formal/common/observations/clip",
+      "--mode",
+      "all",
+      "--checkpoint",
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt",
+      "--reference-map",
+      "/data/fyp_3d/runs/formal/common/observations/bow",
+      "--clip-features",
+      "/data/fyp_3d/runs/formal/common/observations/clip_features/features.npz",
+      "--reference-positions",
+      "384",
+      "--topk",
+      "8",
+      "--hloc-source",
+      "/data/fyp_3d/sources/hloc",
+      "--lightglue-source",
+      "/data/fyp_3d/sources/LightGlue"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/observations/clip/summary.json",
+        "kind": "json",
+        "equals": {
+          "geometry.queries": 600,
+          "soft.queries": 600,
+          "audit.no_query_GT_online": true
+        },
+        "finite": [
+          "geometry.recall_25cm_10deg",
+          "soft.recall_25cm_10deg"
+        ]
+      }
+    ],
+    "depends_on": [
+      "H.common.clip_features"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/semantic/full_seed1305/best.pt",
+      "/data/fyp_3d/runs/formal/common/observations/clip_features/features.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "H.full.system.ablation",
+    "experiment_id": "H",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/integrate_common_observations.py",
+      "/data/fyp_3d/datasets/common_hssd105",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/evaluation",
+      "/data/fyp_3d/runs/formal/common/macvo_paper600",
+      "/data/fyp_3d/runs/formal/common/observations/bow",
+      "/data/fyp_3d/runs/formal/common/observations/clip",
+      "/data/fyp_3d/runs/formal/common/full_system_ablation",
+      "--dataset-acceptance",
+      "/data/fyp_3d/datasets/common_hssd105_constraints/acceptance.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/full_system_ablation/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "audit.frames": 600,
+          "audit.GT_online": false,
+          "audit.parent_map_unchanged": true,
+          "audit.exact_shared_geometry_map": true,
+          "audit.all_variants_same_queries": true
+        },
+        "finite": [
+          "results.geometry_gate.valid_pose_fraction",
+          "results.ACE_clip_soft_multicandidate_weighted.recall_25cm_10deg"
+        ]
+      }
+    ],
+    "depends_on": [
+      "H.common.bow_constraints",
+      "H.common.clip_constraints",
+      "G.ace_macvo.integration"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/common/observations/bow/online_results.json",
+      "/data/fyp_3d/runs/formal/common/observations/clip/online_results.json",
+      "/data/fyp_3d/datasets/common_hssd105/readonly_prior_map.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 80,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "I.kidnap.render",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/render_common_kidnap.py",
+      "/data/fyp_3d/datasets/common_hssd105",
+      "/data/fyp_3d/datasets/hssd",
+      "/data/fyp_3d/datasets/common_hssd105_kidnap",
+      "--frames",
+      "600",
+      "--kidnap-frame",
+      "300",
+      "--seed",
+      "1315"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/common_hssd105_kidnap/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "actual_camera_teleport": true,
+          "image_postprocessing_fault": false,
+          "continuous_stereo_frames": 600,
+          "GT_online": false
+        },
+        "minimum": {
+          "measured_rendered_camera_jump_m": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "G.ace_macvo.integration"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105/acceptance.json",
+      "/data/fyp_3d/datasets/common_hssd105/readonly_prior_map.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 79,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 1800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "I.kidnap.ace",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/ace/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_ace.py",
+      "/data/fyp_3d/datasets/common_hssd105_kidnap/ace_scene",
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/heads_local.pt",
+      "/data/fyp_3d/runs/formal/common/kidnap/ace",
+      "--ace",
+      "/data/fyp_3d/sources/ace"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/kidnap/ace/summary.json",
+        "kind": "json",
+        "equals": {
+          "n": 600
+        },
+        "finite": [
+          "median_translation_m"
+        ]
+      }
+    ],
+    "depends_on": [
+      "I.kidnap.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/runs/formal/common/ace_seed2089/heads_local.pt",
+      "/data/fyp_3d/datasets/common_hssd105_kidnap/acceptance.json"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 79,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "model_dataset_id": "habitat_common"
+  },
+  {
+    "task_id": "I.kidnap.macvo",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_macvo.py",
+      "/data/fyp_3d/datasets/common_hssd105_kidnap/stereo",
+      "/data/fyp_3d/runs/formal/common/kidnap/macvo",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--frames",
+      "600",
+      "--config",
+      "paper",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/kidnap/macvo/summary.json",
+        "kind": "json",
+        "equals": {
+          "finished_frames": 600
+        },
+        "finite": [
+          "raw.tracking_availability",
+          "raw.ate_se3_aligned_rmse_m"
+        ]
+      }
+    ],
+    "depends_on": [
+      "I.kidnap.render"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105_kidnap/stereo/calibration.json",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "/data/fyp_3d/models/MACVO_posenet.pkl"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 79,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 2,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "I.kidnap.joint",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/integrate_common_system.py",
+      "/data/fyp_3d/datasets/common_hssd105_kidnap",
+      "/data/fyp_3d/runs/formal/common/kidnap/ace",
+      "/data/fyp_3d/runs/formal/common/kidnap/macvo",
+      "/data/fyp_3d/runs/formal/common/kidnap/joint"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/kidnap/joint/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.frames": 600,
+          "audit.GT_online": false,
+          "audit.map_unchanged": true
+        },
+        "finite": [
+          "MACVO_ACE_gate.valid_pose_fraction"
+        ]
+      }
+    ],
+    "depends_on": [
+      "I.kidnap.ace",
+      "I.kidnap.macvo"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105_kidnap/readonly_prior_map.npz",
+      "/data/fyp_3d/runs/formal/common/kidnap/ace/predictions.npz",
+      "/data/fyp_3d/runs/formal/common/kidnap/macvo/trajectory.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 79,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "I.formal.recovery",
+    "experiment_id": "I",
+    "dataset_id": "habitat_common",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_rendered_kidnap.py",
+      "/data/fyp_3d/datasets/common_hssd105_kidnap",
+      "/data/fyp_3d/runs/formal/common/kidnap/joint",
+      "/data/fyp_3d/runs/formal/common/kidnap/recovery"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/formal/common/kidnap/recovery/summary.json",
+        "kind": "json",
+        "equals": {
+          "status": "completed",
+          "actual_simulated_camera_teleport": true,
+          "real_world_kidnapping": false,
+          "GT_online": false,
+          "frames": 600
+        },
+        "minimum": {
+          "jump_m": 2
+        }
+      }
+    ],
+    "depends_on": [
+      "I.kidnap.joint"
+    ],
+    "inputs": [
+      "/data/fyp_3d/datasets/common_hssd105_kidnap/acceptance.json",
+      "/data/fyp_3d/runs/formal/common/kidnap/joint/global_predictions.npz"
+    ],
+    "formal": true,
+    "seed": 1305,
+    "max_attempts": 2,
+    "retry_delay_s": 30,
+    "priority": 79,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
     "task_id": "C.wheel.provenance.audit",
     "experiment_id": "C",
     "dataset_id": "openloris",
@@ -7256,54 +8019,6 @@
     "blocked_reason": "Dense LSeg/OpenScene feature map + OMCL dependencies/checkpoints not yet validated; pooled CLIP baseline is not OMCL"
   },
   {
-    "task_id": "H.full.system.ablation",
-    "experiment_id": "H",
-    "dataset_id": "habitat_common",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Depends on validated joint system and same-scene geometry/semantic/VLM constraints; no forced unreliable semantic updates"
-  },
-  {
-    "task_id": "I.formal.recovery",
-    "experiment_id": "I",
-    "dataset_id": "habitat_common",
-    "command": [],
-    "validation": [],
-    "depends_on": [],
-    "inputs": [],
-    "formal": true,
-    "seed": 1305,
-    "max_attempts": 2,
-    "retry_delay_s": 30,
-    "priority": 10,
-    "kind": "cpu",
-    "resources": {
-      "gpu": false,
-      "cpu_slots": 1,
-      "ram_mib": 1000,
-      "disk_gib": 1,
-      "min_gpu_free_mib": 4500
-    },
-    "coverage": {},
-    "blocked_reason": "Requires continuous common system and physical/simulated motion-controlled kidnapping protocol; current injected-fault replay is preliminary"
-  },
-  {
     "task_id": "J.dynamic.multidataset",
     "experiment_id": "J",
     "dataset_id": "dynamic_benchmark",
@@ -7325,6 +8040,6 @@
       "min_gpu_free_mib": 4500
     },
     "coverage": {},
-    "blocked_reason": "TUM/VIODE/InCrowd accessibility, actual dynamic-person labels and lawful sensor/map availability must be audited separately; packet outage is not people"
+    "blocked_reason": "Four full TUM sitting/walking RGB-D VO runs are complete; VIODE/InCrowd inputs and calibration/GT/map eligibility still require independent audit. TUM VO is not prior-map localization; packet loss is not people."
   }
 ]

@@ -129,6 +129,9 @@ for tid, group, ds, p, criteria, coverage in [
         formal=tid.startswith("reuse.ace"),
         coverage=coverage,
     )
+    if tid == "reuse.ace.heads.local":
+        s["seed"] = 2089
+        s["seed_metadata_source"] = str(B / "runs/ace_local/training_resources.json")
     s["reuse_existing"] = True
 # All downloaded stereo frames are formal, unlike the 200-frame pilot.
 root = B / "datasets/macvo_demo/P001_select"
@@ -1101,6 +1104,427 @@ for number in range(1, 8):
         inputs=[parent / "summary.json"],
         coverage={"full_sequence": True},
     )
+# Complete the missing Heads seeds without repeating the already verified seed2089.
+for seed in [2090, 2091]:
+    ds = B / "datasets/7scenes/7scenes_heads"
+    model = B / "runs/formal/ace/heads" / ("seed" + str(seed))
+    tid = "ace.heads.train." + str(seed)
+    s = add(
+        tid,
+        "A",
+        "7scenes_heads",
+        [
+            ACE,
+            str(SCRIPT / "train_ace_local.py"),
+            str(ds),
+            str(model),
+            "--ace",
+            str(B / "sources/ace"),
+            "--seed",
+            str(seed),
+        ],
+        [
+            J(
+                model / "training_resources.json",
+                equals={"epochs": 16, "base_seed": seed},
+            ),
+            dict(path=str(model / "heads_local.pt"), min_bytes=1000000),
+        ],
+        deps=["reuse.ace.heads.local"],
+        gpu=True,
+        priority=35,
+        seed=seed,
+        ram=5500,
+        inputs=[ds / "acceptance.json"],
+        coverage={"scene_ids": ["heads"], "epochs": 16},
+    )
+    s["model_dataset_id"] = "7scenes_heads"
+    out = model / "evaluation"
+    s = add(
+        tid + ".eval",
+        "A",
+        "7scenes_heads",
+        [
+            ACE,
+            str(SCRIPT / "evaluate_ace.py"),
+            str(ds),
+            str(model / "heads_local.pt"),
+            str(out),
+            "--ace",
+            str(B / "sources/ace"),
+        ],
+        [
+            J(
+                out / "summary.json",
+                equals={"n": 1000},
+                finite=["median_translation_m", "median_rotation_deg"],
+            )
+        ],
+        deps=[tid],
+        gpu=True,
+        priority=36,
+        seed=seed,
+        ram=2500,
+        inputs=[model / "heads_local.pt"],
+        coverage={"scene_ids": ["heads"], "full_sequence": True},
+    )
+    s["model_dataset_id"] = "7scenes_heads"
+# H: actual same-scene geometry/semantic/CLIP observations, followed by continuous fusion.
+hdata = B / "datasets/common_hssd105_constraints"
+hroot = B / "runs/formal/common/observations"
+hbow = hroot / "bow"
+hclip_features = hroot / "clip_features"
+hclip = hroot / "clip"
+add(
+    "H.common.reference_constraints",
+    "H",
+    "habitat_common",
+    [
+        HAB,
+        str(SCRIPT / "prepare_common_constraints.py"),
+        str(common),
+        str(B / "datasets/hssd"),
+        str(hdata),
+        "--building-plan",
+        str(plan),
+    ],
+    [
+        J(
+            hdata / "acceptance.json",
+            equals={"query_frames": 600, "GT_online": False, "map_unchanged": True},
+            minimum={"reference_positions": 256},
+        )
+    ],
+    deps=["G.ace_macvo.integration", "D.building_split.audit"],
+    gpu=True,
+    priority=80,
+    ram=1800,
+    disk=1,
+    inputs=[common / "references.json", common / "readonly_prior_map.npz", plan],
+)
+# Existing full_seed1305 is immutable: no retraining/selection on these H query results.
+base = [SEM, str(SCRIPT / "localize_semantic_pilot.py"), str(hdata)]
+features = [
+    "--hloc-source",
+    str(B / "sources/hloc"),
+    "--lightglue-source",
+    str(B / "sources/LightGlue"),
+]
+model = B / "runs/formal/semantic/full_seed1305/best.pt"
+add(
+    "H.common.bow_constraints",
+    "H",
+    "habitat_common",
+    base
+    + [
+        str(hbow),
+        "--mode",
+        "all",
+        "--checkpoint",
+        str(model),
+        "--reference-positions",
+        "384",
+        "--topk",
+        "8",
+    ]
+    + features,
+    [
+        J(
+            hbow / "summary.json",
+            equals={
+                "geometry.queries": 600,
+                "semantic.queries": 600,
+                "soft.queries": 600,
+                "audit.no_query_GT_online": True,
+            },
+            finite=["geometry.recall_25cm_10deg", "soft.recall_25cm_10deg"],
+        )
+    ],
+    deps=["H.common.reference_constraints", "D.train.full.1305"],
+    gpu=True,
+    priority=80,
+    ram=2500,
+    disk=1,
+    inputs=[hdata / "acceptance.json", model],
+)
+add(
+    "H.common.clip_features",
+    "H",
+    "habitat_common",
+    [
+        SEM,
+        str(SCRIPT / "extract_clip_reference_features.py"),
+        str(hdata),
+        str(hbow),
+        str(hclip_features),
+        "--source",
+        str(B / "sources/CLIP"),
+        "--weights",
+        str(B / "models/clip"),
+    ],
+    [
+        J(
+            hclip_features / "protocol.json",
+            equals={
+                "query_GT_online": False,
+                "independent_of_trained_semantic_network": True,
+            },
+        ),
+        dict(path=str(hclip_features / "features.npz"), min_bytes=10000),
+    ],
+    deps=["H.common.bow_constraints"],
+    gpu=True,
+    priority=80,
+    ram=1600,
+    inputs=[B / "models/clip/ViT-B-32.pt", hbow / "readonly_map.npz"],
+)
+add(
+    "H.common.clip_constraints",
+    "H",
+    "habitat_common",
+    base
+    + [
+        str(hclip),
+        "--mode",
+        "all",
+        "--checkpoint",
+        str(model),
+        "--reference-map",
+        str(hbow),
+        "--clip-features",
+        str(hclip_features / "features.npz"),
+        "--reference-positions",
+        "384",
+        "--topk",
+        "8",
+    ]
+    + features,
+    [
+        J(
+            hclip / "summary.json",
+            equals={
+                "geometry.queries": 600,
+                "soft.queries": 600,
+                "audit.no_query_GT_online": True,
+            },
+            finite=["geometry.recall_25cm_10deg", "soft.recall_25cm_10deg"],
+        )
+    ],
+    deps=["H.common.clip_features"],
+    gpu=True,
+    priority=80,
+    ram=2500,
+    inputs=[model, hclip_features / "features.npz"],
+)
+add(
+    "H.full.system.ablation",
+    "H",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "integrate_common_observations.py"),
+        str(common),
+        str(ace_eval),
+        str(mac_run),
+        str(hbow),
+        str(hclip),
+        str(B / "runs/formal/common/full_system_ablation"),
+        "--dataset-acceptance",
+        str(hdata / "acceptance.json"),
+    ],
+    [
+        J(
+            B / "runs/formal/common/full_system_ablation/summary.json",
+            equals={
+                "status": "completed",
+                "audit.frames": 600,
+                "audit.GT_online": False,
+                "audit.parent_map_unchanged": True,
+                "audit.exact_shared_geometry_map": True,
+                "audit.all_variants_same_queries": True,
+            },
+            finite=[
+                "results.geometry_gate.valid_pose_fraction",
+                "results.ACE_clip_soft_multicandidate_weighted.recall_25cm_10deg",
+            ],
+        )
+    ],
+    deps=[
+        "H.common.bow_constraints",
+        "H.common.clip_constraints",
+        "G.ace_macvo.integration",
+    ],
+    priority=80,
+    inputs=[
+        hbow / "online_results.json",
+        hclip / "online_results.json",
+        common / "readonly_prior_map.npz",
+    ],
+)
+# I: actual simulated camera teleport, new rendered stereo, fixed shared map/model.
+kidnap = B / "datasets/common_hssd105_kidnap"
+kiace = B / "runs/formal/common/kidnap/ace"
+kimac = B / "runs/formal/common/kidnap/macvo"
+kijoint = B / "runs/formal/common/kidnap/joint"
+add(
+    "I.kidnap.render",
+    "I",
+    "habitat_common",
+    [
+        HAB,
+        str(SCRIPT / "render_common_kidnap.py"),
+        str(common),
+        str(B / "datasets/hssd"),
+        str(kidnap),
+        "--frames",
+        "600",
+        "--kidnap-frame",
+        "300",
+        "--seed",
+        "1315",
+    ],
+    [
+        J(
+            kidnap / "acceptance.json",
+            equals={
+                "actual_camera_teleport": True,
+                "image_postprocessing_fault": False,
+                "continuous_stereo_frames": 600,
+                "GT_online": False,
+            },
+            minimum={"measured_rendered_camera_jump_m": 2},
+        )
+    ],
+    deps=["G.ace_macvo.integration"],
+    gpu=True,
+    priority=79,
+    disk=1,
+    ram=1800,
+    inputs=[common / "acceptance.json", common / "readonly_prior_map.npz"],
+)
+s = add(
+    "I.kidnap.ace",
+    "I",
+    "habitat_common",
+    [
+        ACE,
+        str(SCRIPT / "evaluate_ace.py"),
+        str(kidnap / "ace_scene"),
+        str(ace_model / "heads_local.pt"),
+        str(kiace),
+        "--ace",
+        str(B / "sources/ace"),
+    ],
+    [J(kiace / "summary.json", equals={"n": 600}, finite=["median_translation_m"])],
+    deps=["I.kidnap.render"],
+    gpu=True,
+    priority=79,
+    ram=2500,
+    inputs=[ace_model / "heads_local.pt", kidnap / "acceptance.json"],
+)
+s["model_dataset_id"] = "habitat_common"
+# No dense cache for this one-off trajectory: preserve the 30GiB disk reserve.
+add(
+    "I.kidnap.macvo",
+    "I",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "run_macvo.py"),
+        str(kidnap / "stereo"),
+        str(kimac),
+        "--source",
+        str(B / "sources/MAC-VO"),
+        "--weights",
+        str(B / "models/MACVO_FrontendCov.pth"),
+        "--motion-weights",
+        str(B / "models/MACVO_posenet.pkl"),
+        "--frames",
+        "600",
+        "--config",
+        "paper",
+        "--encoder",
+        "fp32",
+        "--decoder",
+        "fp32",
+    ],
+    [
+        J(
+            kimac / "summary.json",
+            equals={"finished_frames": 600},
+            finite=["raw.tracking_availability", "raw.ate_se3_aligned_rmse_m"],
+        )
+    ],
+    deps=["I.kidnap.render"],
+    gpu=True,
+    priority=79,
+    disk=1,
+    ram=2500,
+    inputs=[
+        kidnap / "stereo/calibration.json",
+        B / "models/MACVO_FrontendCov.pth",
+        B / "models/MACVO_posenet.pkl",
+    ],
+)
+add(
+    "I.kidnap.joint",
+    "I",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "integrate_common_system.py"),
+        str(kidnap),
+        str(kiace),
+        str(kimac),
+        str(kijoint),
+    ],
+    [
+        J(
+            kijoint / "summary.json",
+            equals={
+                "audit.frames": 600,
+                "audit.GT_online": False,
+                "audit.map_unchanged": True,
+            },
+            finite=["MACVO_ACE_gate.valid_pose_fraction"],
+        )
+    ],
+    deps=["I.kidnap.ace", "I.kidnap.macvo"],
+    priority=79,
+    inputs=[
+        kidnap / "readonly_prior_map.npz",
+        kiace / "predictions.npz",
+        kimac / "trajectory.npz",
+    ],
+)
+add(
+    "I.formal.recovery",
+    "I",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "evaluate_rendered_kidnap.py"),
+        str(kidnap),
+        str(kijoint),
+        str(B / "runs/formal/common/kidnap/recovery"),
+    ],
+    [
+        J(
+            B / "runs/formal/common/kidnap/recovery/summary.json",
+            equals={
+                "status": "completed",
+                "actual_simulated_camera_teleport": True,
+                "real_world_kidnapping": False,
+                "GT_online": False,
+                "frames": 600,
+            },
+            minimum={"jump_m": 2},
+        )
+    ],
+    deps=["I.kidnap.joint"],
+    priority=79,
+    inputs=[kidnap / "acceptance.json", kijoint / "global_predictions.npz"],
+)
 # Requirements that are not yet executable stay visibly BLOCKED, never fake COMPLETED.
 for tid, group, ds, reason in [
     (
@@ -1122,22 +1546,10 @@ for tid, group, ds, reason in [
         "Dense LSeg/OpenScene feature map + OMCL dependencies/checkpoints not yet validated; pooled CLIP baseline is not OMCL",
     ),
     (
-        "H.full.system.ablation",
-        "H",
-        "habitat_common",
-        "Depends on validated joint system and same-scene geometry/semantic/VLM constraints; no forced unreliable semantic updates",
-    ),
-    (
-        "I.formal.recovery",
-        "I",
-        "habitat_common",
-        "Requires continuous common system and physical/simulated motion-controlled kidnapping protocol; current injected-fault replay is preliminary",
-    ),
-    (
         "J.dynamic.multidataset",
         "J",
         "dynamic_benchmark",
-        "TUM/VIODE/InCrowd accessibility, actual dynamic-person labels and lawful sensor/map availability must be audited separately; packet outage is not people",
+        "Four full TUM sitting/walking RGB-D VO runs are complete; VIODE/InCrowd inputs and calibration/GT/map eligibility still require independent audit. TUM VO is not prior-map localization; packet loss is not people.",
     ),
 ]:
     add(tid, group, ds, [], [], formal=True, blocked=reason)

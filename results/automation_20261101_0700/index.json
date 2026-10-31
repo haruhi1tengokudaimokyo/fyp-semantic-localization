@@ -1,0 +1,82 @@
+{
+  "snapshot_utc": "2026-10-31T23:24:36.120708+00:00",
+  "code_commit_base": "3cc03310af46ed9f1e8b15fe72efc9c2dedd8c03",
+  "counts": {
+    "PENDING": 19,
+    "RUNNING": 1,
+    "COMPLETED": 138,
+    "FAILED": 1,
+    "BLOCKED": 6,
+    "RETRYING": 0
+  },
+  "sources": [
+    {
+      "saved": "segformer_full_seed1305_summary.json",
+      "source": "/data/fyp_3d/runs/formal/semantic/full_seed1305/summary.json",
+      "sha256": "a4d27a9af53525bcb9b771755ab8684a63930d93273402d03001027700a4eba7"
+    },
+    {
+      "saved": "segformer_full_seed1305_protocol.json",
+      "source": "/data/fyp_3d/runs/formal/semantic/full_seed1305/protocol.json",
+      "sha256": "0b8671eaa666c53ddd2915a3cce568154d5e40d55d608303eabd003138f9d471"
+    },
+    {
+      "saved": "segformer_full_seed1305_history.json",
+      "source": "/data/fyp_3d/runs/formal/semantic/full_seed1305/history.json",
+      "sha256": "4051b0bcf8e6006d68bb1fb01e337ad063e911b3c3f3c98ab5035810b35ac677"
+    },
+    {
+      "saved": "multihouse_localization_summary.json",
+      "source": "/data/fyp_3d/runs/formal/relocalization_hssd/summary.json",
+      "sha256": "6770ebdc2b20e6ca3d6b0f26c33e4839c6cf497045355a5ecc97b80d7ea48dc2"
+    },
+    {
+      "saved": "multihouse_grouped_queries.csv",
+      "source": "/data/fyp_3d/runs/formal/relocalization_hssd/grouped_queries.csv",
+      "sha256": "0901e1942f86e4419f68b2fc0f2a3fbc77a3e4641c7ec5a78612c934ec9442f6"
+    },
+    {
+      "saved": "multihouse_position_paired_statistics.json",
+      "source": "/data/fyp_3d/runs/formal/relocalization_hssd/paired_statistics.json",
+      "sha256": "baf831dd7ae8b1e4a526e81f98c6efcec0d36e3d456b87f40a96df667cced4de"
+    },
+    {
+      "saved": "relocalization_building_statistics.json",
+      "source": "experiment_automation/artifacts/aggregate/relocalization_building_statistics.json",
+      "sha256": "508346e2a26e4f4979c5c99b746207575ae5ce77a3bad1aa9dd41dd01f689654"
+    },
+    {
+      "saved": "relocalization_building_statistics.csv",
+      "source": "experiment_automation/artifacts/aggregate/relocalization_building_statistics.csv",
+      "sha256": "ccb31e7007b85452960a7c2fc4e64fce8b139f015c223bf4fc359a41b5a4c1ce"
+    },
+    {
+      "saved": "seed_statistics.json",
+      "source": "experiment_automation/artifacts/aggregate/seed_statistics.json",
+      "sha256": "b864b145170d1606ff3f935085eecbb03ab1eefd1f7b9a22aae0321d6803e8b6"
+    },
+    {
+      "saved": "ace_paired_statistics.json",
+      "source": "experiment_automation/artifacts/aggregate/ace_paired_statistics.json",
+      "sha256": "f00950a3ca8077e834e8cd259eba358f8e81249f54954810c1013eb50ffd4c4f"
+    },
+    {
+      "saved": "formal_semantic_localization.json",
+      "source": "experiment_automation/artifacts/aggregate/formal_semantic_localization.json",
+      "sha256": "55e87c65d102dd0a2ab286b2a5847da3d7b7aebe93e4b1b33270274c21e1c8be"
+    },
+    {
+      "saved": "H_I_preflight_20261101_0700.json",
+      "source": "experiment_automation/artifacts/H_I_preflight_20261101_0700.json",
+      "sha256": "afa747dc3a5f06b1d5b21b62b30c993f2009e1a8e00139498a11263fd7447462"
+    },
+    {
+      "saved": "F_map_query_audit_20261101_0700.json",
+      "source": "experiment_automation/artifacts/F_map_query_audit_20261101_0700.json",
+      "sha256": "7d9bf79290448d05e1caf21b41ad2b1b7d1ad9bd157707a8b42d45c0d620f610"
+    }
+  ],
+  "H_full_end_to_end_completed": false,
+  "I_true_rendered_kidnap_completed": false,
+  "note": "New formal D/E/F results and CPU preflight evidence only; H/I actual GPU stages remain pending healthy current training"
+}

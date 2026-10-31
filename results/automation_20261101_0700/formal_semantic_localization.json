@@ -1,0 +1,10 @@
+{
+  "input_sha256": "b6db2d60675aeb74fb2edeaf7db5afb1bf514b88ec681e8bbf871278b08602d8",
+  "sources": [
+    "/data/fyp_3d/runs/formal/semantic/full_seed1305/history.json",
+    "/data/fyp_3d/runs/formal/semantic/full_seed1305/summary.json",
+    "/data/fyp_3d/runs/formal/relocalization_hssd/grouped_queries.csv"
+  ],
+  "generated_utc": "2026-10-31T23:18:52.075148+00:00",
+  "note": "All fixed TopK8 methods shown; no test-selected winner. Other predeclared TopK4/16 variants and paired-house intervals remain in CSV/JSON."
+}

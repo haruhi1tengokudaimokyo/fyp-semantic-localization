@@ -192,10 +192,12 @@ def localize(
     candidates = np.argsort(retrieval_scores)[-topk:][::-1]
     K = np.array(query["K"], float)
     best = {}
+    candidate_pools = {}
     diag = {"matched": 0, "semantic_rejected": 0}
     match_cache = {}
     for mode in modes:
         winner = None
+        candidate_pools[mode] = []
         for rank, r in enumerate(candidates):
             rd = mapdata[f"ref_{r}/descriptors"]
             if int(r) not in match_cache:
@@ -286,23 +288,26 @@ def localize(
                 if np.median(error) > 3 or np.mean(pc[:, 2] > 0) < 0.95:
                     continue
                 score = float(weight.sum())
+            T = np.eye(4)
+            T[:3, :3] = R.T
+            T[:3, 3] = -R.T @ tv[:, 0]
+            hypothesis = dict(
+                T_world_camera=T.tolist(),
+                inliers=len(ix),
+                selection_score=score,
+                matched=len(qidx),
+                median_reprojection_px=float(np.median(error)),
+                reference_index=int(r),
+            )
+            candidate_pools[mode].append(hypothesis)
             if winner is None or score > winner["selection_score"]:
-                T = np.eye(4)
-                T[:3, :3] = R.T
-                T[:3, 3] = -R.T @ tv[:, 0]
-                winner = dict(
-                    T_world_camera=T.tolist(),
-                    inliers=len(ix),
-                    selection_score=score,
-                    matched=len(qidx),
-                    median_reprojection_px=float(np.median(error)),
-                    reference_index=int(r),
-                )
+                winner = hypothesis
         best[mode] = winner
     return dict(
         frame_id=query["frame_id"],
         rgb=query["rgb"],
         hypotheses=best,
+        candidate_pools=candidate_pools,
         diagnostics=diag,
         runtime_ms=(time.perf_counter() - start) * 1000,
     )

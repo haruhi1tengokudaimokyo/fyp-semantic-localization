@@ -1,0 +1,24 @@
+{
+  "status": "passed_cpu_preflight_only",
+  "generated_utc": "2026-10-31T23:20:59.525158+00:00",
+  "source": {
+    "source_sha256": "1b289d70609e5ea15cf8dba3abaad72c6203e43b22d4c8113338a6afd359ed7d",
+    "archive": "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/artifacts/source_snapshots/1b289d70609e5ea15cf8dba3abaad72c6203e43b22d4c8113338a6afd359ed7d.tar.gz",
+    "archive_sha256": "1d3d963f23a01e30eb1a3f9718a3cdd6f1b9866bc877bc01722858a7b907664c",
+    "git_commit": "3cc03310af46ed9f1e8b15fe72efc9c2dedd8c03"
+  },
+  "pytest_passed": 16,
+  "real_ace_unittest_passed": 3,
+  "actual_sift_verified_queries_regression": 3,
+  "query_GT_supplied_to_online_estimator": false,
+  "real_600_frame_cache_parity_atol": 1e-06,
+  "parity_note": "Original cached propagation float32, new interface float64; finite-pose masks identical",
+  "renderer_cli_imports_verified": [
+    "Habitat reference depth/semantic renderer",
+    "Habitat true stereo camera-teleport renderer"
+  ],
+  "manifest_task_specs_checked": 164,
+  "H_full_end_to_end_passed": false,
+  "I_rendered_teleport_end_to_end_passed": false,
+  "note": "Do not count CPU preflight or queued commands as completed H/I scientific experiments; GPU end-to-end acceptance remains pending"
+}

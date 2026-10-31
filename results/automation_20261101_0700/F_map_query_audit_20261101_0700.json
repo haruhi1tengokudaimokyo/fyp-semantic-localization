@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "generated_utc": "2026-10-31T23:21:00.440944+00:00",
+  "verified_map_query_pairs": 8,
+  "held_out_scenes": 4,
+  "strict_query_fields": [
+    "rgb",
+    "K",
+    "frame_id"
+  ],
+  "pose_depth_label_excluded_from_online_queries": true
+}

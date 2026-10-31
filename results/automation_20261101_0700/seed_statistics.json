@@ -1,0 +1,1430 @@
+[
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.020658435468091412,
+    "std_ddof1": 0.0004239641148358806,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.7592876253138928,
+    "std_ddof1": 0.021247972392006452,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.11383333333333333,
+    "std_ddof1": 0.005204164998665331,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.4805,
+    "std_ddof1": 0.0119478031453485,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9351666666666667,
+    "std_ddof1": 0.007147260547463808,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9991666666666666,
+    "std_ddof1": 0.0002886751345948452,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.0,
+    "std_ddof1": 0.0,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.0,
+    "std_ddof1": 0.0,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.06483333333333333,
+    "std_ddof1": 0.007147260547463852,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 138.61103886105897,
+    "std_ddof1": 13.579469717437993,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 168.396257898227,
+    "std_ddof1": 52.297731130925335,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_chess",
+    "family": "ACE_local",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 295.1676814556122,
+    "std_ddof1": 41.3098435513041,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.022211402052691696,
+    "std_ddof1": 0.0003190875953962829,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9407386949977232,
+    "std_ddof1": 0.013934133943829554,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.08716666666666667,
+    "std_ddof1": 0.00775134396948899,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.4271666666666667,
+    "std_ddof1": 0.021096998206695968,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.913,
+    "std_ddof1": 0.012757350822173073,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9863333333333333,
+    "std_ddof1": 0.001527525231651948,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9958333333333333,
+    "std_ddof1": 0.0010408329997330585,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.0,
+    "std_ddof1": 0.0,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.087,
+    "std_ddof1": 0.012757350822173077,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 132.40141351213484,
+    "std_ddof1": 0.22388162972687553,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 147.29031467916988,
+    "std_ddof1": 1.8135067149936839,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_fire",
+    "family": "ACE_local",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 272.47916706403095,
+    "std_ddof1": 2.899146203967557,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.03717662070922419,
+    "std_ddof1": 0.0018776190245998717,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.0470258152154757,
+    "std_ddof1": 0.04856577628331129,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.030583333333333334,
+    "std_ddof1": 0.006625393070100318,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.16016666666666668,
+    "std_ddof1": 0.014979847573768357,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.7025833333333333,
+    "std_ddof1": 0.03198665086146614,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9381666666666667,
+    "std_ddof1": 0.010583989480972342,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9722500000000001,
+    "std_ddof1": 0.006722164829874375,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9779166666666667,
+    "std_ddof1": 0.006022527155051563,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.29741666666666666,
+    "std_ddof1": 0.03198665086146614,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 137.62640992320908,
+    "std_ddof1": 0.7986439958520921,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 166.65104917192363,
+    "std_ddof1": 3.90764875019856,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_office",
+    "family": "ACE_local",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 561.4791564146677,
+    "std_ddof1": 4.915724923044785,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.04759161204627371,
+    "std_ddof1": 0.0014637360750616435,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.24955130317246,
+    "std_ddof1": 0.011087762207114368,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.018333333333333333,
+    "std_ddof1": 0.006110100926607787,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.11583333333333333,
+    "std_ddof1": 0.0030138568866708497,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.5261666666666667,
+    "std_ddof1": 0.016653327995729075,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.8315,
+    "std_ddof1": 0.006244997998398403,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9601666666666667,
+    "std_ddof1": 0.0005773502691896263,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.0,
+    "std_ddof1": 0.0,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.47383333333333333,
+    "std_ddof1": 0.016653327995729043,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 135.7070619344789,
+    "std_ddof1": 0.42750453616615336,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 158.714315504767,
+    "std_ddof1": 3.2116753501053807,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_pumpkin",
+    "family": "ACE_local",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 279.18293929100037,
+    "std_ddof1": 2.867198262105856,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.05110173063193995,
+    "std_ddof1": 0.0015488145688705788,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.5013820331691723,
+    "std_ddof1": 0.0529552378085005,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.005666666666666667,
+    "std_ddof1": 0.0026633312473917574,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.06066666666666667,
+    "std_ddof1": 0.008600775158864074,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.48573333333333335,
+    "std_ddof1": 0.017814974974255063,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.8515333333333334,
+    "std_ddof1": 0.0081543444453453,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9744666666666667,
+    "std_ddof1": 0.00582866479850518,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9942,
+    "std_ddof1": 0.0015999999999999903,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.5142666666666666,
+    "std_ddof1": 0.017814974974255056,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 137.62348642268336,
+    "std_ddof1": 0.642069333370438,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 174.73301934999958,
+    "std_ddof1": 3.1461596183813274,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_redkitchen",
+    "family": "ACE_local",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 700.0264231363932,
+    "std_ddof1": 5.767742341703515,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.06243318922384198,
+    "std_ddof1": 0.001884466549908098,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 1.4469111252762341,
+    "std_ddof1": 0.06891808010980431,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.0026666666666666666,
+    "std_ddof1": 0.0015275252316519468,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.027666666666666666,
+    "std_ddof1": 0.002516611478423582,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.373,
+    "std_ddof1": 0.012767145334803717,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.7106666666666667,
+    "std_ddof1": 0.04041451884327379,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.974,
+    "std_ddof1": 0.008544003745317538,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.9993333333333333,
+    "std_ddof1": 0.0005773502691896263,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 0.627,
+    "std_ddof1": 0.012767145334803717,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 136.48877477942733,
+    "std_ddof1": 0.20194010569147103,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 148.56327994105715,
+    "std_ddof1": 1.1981273616831862,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_stairs",
+    "family": "ACE_local",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      2089,
+      2090,
+      2091
+    ],
+    "n_seeds": 3,
+    "mean": 142.1666703224182,
+    "std_ddof1": 2.896959865062345,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "median_translation_m",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.0106232700067304,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "median_rotation_deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.7206035417355454,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "recall.0.01m_1deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.452,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "recall.0.02m_2deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.885,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "recall.0.05m_5deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.984,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "recall.0.1m_5deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.999,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "recall.0.25m_10deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 1.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "recall.1m_30deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 1.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "failure_rate_5cm_5deg",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 0.016,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "runtime_mean_ms",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 139.11499049150734,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "7scenes_heads",
+    "family": "ACE_local",
+    "metric": "runtime_p95_ms",
+    "seeds": [
+      2089
+    ],
+    "n_seeds": 1,
+    "mean": 151.895500793762,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.mean_iou",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.6321618933725023,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.classes.seating.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.8845786949041748,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.classes.work_surface.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.7866739533902203,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.classes.bed.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.5525467326295294,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.classes.storage.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.5725301379285378,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.classes.plumbing.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.936890312208993,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "test.classes.display.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.9265248667824257,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.mean_iou",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.05500724334321868,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.classes.seating.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.03478930313138053,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.classes.work_surface.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.02156392206091629,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.classes.bed.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.3547659026039891,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.classes.storage.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0527343814278615,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.classes.plumbing.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0020917991915249214,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "initial_random_decoder_test.classes.display.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.5308484980708481,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.mean_iou",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.05911618380652486,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.classes.seating.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 1.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.classes.work_surface.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.classes.bed.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.classes.storage.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.classes.plumbing.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "train_majority_class_baseline_test.classes.display.recall",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 0.0,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "optimizer_steps",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 74120,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "epochs",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 40,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  },
+  {
+    "dataset_id": "hssd",
+    "family": "D.train.full",
+    "metric": "worker_wall_seconds",
+    "seeds": [
+      1305
+    ],
+    "n_seeds": 1,
+    "mean": 5831.7953090667725,
+    "std_ddof1": null,
+    "note": "Descriptive variability across fixed training seeds on identical dataset/protocol; not pooled across datasets"
+  }
+]

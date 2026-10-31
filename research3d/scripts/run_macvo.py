@@ -118,8 +118,9 @@ def main(a):
         ),
         experiment_config=config_name,
         encoder=a.encoder,
-        physical_timestamps=(root / "imu/cam_time.npy").exists(),
-        timestamp_caveat="upstream assumes 10Hz if file absent; not used as physical sensor time or for IMU/wheel fusion",
+        timestamps_available=(root / "imu/cam_time.npy").exists(),
+        physical_timestamps=False,
+        timestamp_caveat="TartanAir/Habitat synthetic sequences: supplied timestamps are simulation time; upstream assumes 10Hz if absent. No physical IMU/wheel or real sensor-time fusion",
         checkpoint_loading="strict state_dict; no redundant ImageNet download",
         covariance_scope="3D point observation covariance and pixel/disparity residual covariance; NOT a calibrated pose covariance",
     )

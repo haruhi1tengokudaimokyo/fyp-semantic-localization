@@ -21,7 +21,11 @@ def collect(tasks, out):
             or task["experiment_id"] != "A"
         ):
             continue
-        if not (tid.endswith(".official") or tid.endswith(".eval")):
+        if not (
+            tid.endswith(".official")
+            or tid.endswith(".eval")
+            or tid == "reuse.ace.heads.local"
+        ):
             continue
         summary = next(
             (Path(p) for p in task["outputs"] if Path(p).name == "summary.json"), None
