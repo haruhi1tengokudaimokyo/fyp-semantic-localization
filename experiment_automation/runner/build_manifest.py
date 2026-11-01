@@ -1002,6 +1002,125 @@ for sequence in ["sitting_xyz", "sitting_static", "walking_xyz", "walking_static
         inputs=[ds / "acceptance.json"],
         coverage={"full_sequence": True},
     )
+# Actual frozen person masking on the same four complete real dynamic sequences.
+person_weights = B / "models/torchvision/deeplabv3_mobilenet_v3_large-fc3c493d.pth"
+add(
+    "J.person_model.acquire",
+    "J",
+    "tum_person_model",
+    [SEM, str(SCRIPT / "tum_person_masks.py"), "acquire", str(person_weights)],
+    [
+        J(
+            person_weights.with_suffix(".json"),
+            equals={"official_hash_prefix_verified": True},
+        ),
+        dict(path=str(person_weights), min_bytes=40000000),
+    ],
+    kind="download",
+    priority=82,
+    ram=300,
+)
+person_deps = []
+for sequence in ["sitting_xyz", "sitting_static", "walking_xyz", "walking_static"]:
+    ds = B / "datasets/tum_rgbd" / sequence
+    maskroot = B / "runs/formal/tum/person_masks" / sequence
+    tid = "J.person." + sequence
+    add(
+        tid + ".mask",
+        "J",
+        "tum_" + sequence,
+        [
+            SEM,
+            str(SCRIPT / "tum_person_masks.py"),
+            "extract",
+            str(person_weights),
+            "--dataset",
+            str(ds),
+            "--output",
+            str(maskroot),
+        ],
+        [
+            J(
+                maskroot / "summary.json",
+                equals={
+                    "status": "completed",
+                    "GT_online": False,
+                    "frozen_official_weights": True,
+                },
+                minimum={"frames": 100},
+                finite=["person_fraction_mean"],
+            )
+        ],
+        deps=["J.person_model.acquire", "J.tum." + sequence + ".data"],
+        priority=82,
+        ram=1600,
+        inputs=[person_weights, ds / "acceptance.json", ds / "rgb.txt"],
+    )
+    target = B / "runs/formal/tum" / (sequence + "_person")
+    add(
+        tid + ".vo",
+        "J",
+        "tum_" + sequence,
+        [
+            MAC,
+            str(SCRIPT / "run_tum_rgbd_vo.py"),
+            str(ds),
+            str(target),
+            "--person-masks",
+            str(maskroot),
+        ],
+        [
+            J(
+                target / "summary.json",
+                equals={
+                    "status": "completed",
+                    "GT_online": False,
+                    "prior_map_available": False,
+                    "predicted_person_exclusion": True,
+                },
+                minimum={"metrics.raw_rgb_frames": 100},
+                finite=["metrics.ate_se3_aligned_rmse_m"],
+            )
+        ],
+        deps=[tid + ".mask", "J.tum." + sequence + ".rgbd_vo"],
+        priority=82,
+        ram=900,
+        inputs=[
+            maskroot / "summary.json",
+            maskroot / "masks.json",
+            ds / "acceptance.json",
+        ],
+        coverage={"full_sequence": True},
+    )
+    person_deps.append(tid + ".vo")
+add(
+    "J.person.paired_comparison",
+    "J",
+    "tum_dynamic_four_sequences",
+    [
+        MAC,
+        str(SCRIPT / "compare_tum_person_vo.py"),
+        str(B / "runs/formal/tum"),
+        str(B / "runs/formal/tum/person_comparison"),
+    ],
+    [
+        J(
+            B / "runs/formal/tum/person_comparison/summary.json",
+            equals={
+                "status": "completed",
+                "sequences": 4,
+                "same_original_RGB_frames": True,
+                "GT_online": False,
+            },
+        )
+    ],
+    deps=person_deps,
+    priority=82,
+    inputs=[
+        B / "runs/formal/tum" / (s + "_person/summary.json")
+        for s in ["sitting_xyz", "sitting_static", "walking_xyz", "walking_static"]
+    ],
+)
 # Published source resolves the wheel ambiguity: /odom includes a chassis IMU.
 provenance = B / "runs/formal/openloris/odometry_provenance"
 add(
@@ -1525,6 +1644,228 @@ add(
     priority=79,
     inputs=[kidnap / "acceptance.json", kijoint / "global_predictions.npz"],
 )
+# Preserve initial H outputs; CPU-only diagnostic replay separates raw-observation
+# errors from corrected-state errors without repeating any GPU computation.
+add(
+    "H.full.system.measurement_audit",
+    "H",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "integrate_common_observations.py"),
+        str(common),
+        str(ace_eval),
+        str(mac_run),
+        str(hbow),
+        str(hclip),
+        str(B / "runs/formal/common/full_system_measurement_audit"),
+        "--dataset-acceptance",
+        str(hdata / "acceptance.json"),
+    ],
+    [
+        J(
+            B / "runs/formal/common/full_system_measurement_audit/summary.json",
+            equals={
+                "status": "completed",
+                "audit.frames": 600,
+                "audit.GT_online": False,
+            },
+            finite=[
+                "results.ACE_clip_soft_multicandidate_weighted.incorrect_selected_observation_updates_25cm_10deg"
+            ],
+        )
+    ],
+    deps=["H.full.system.ablation"],
+    priority=82,
+    inputs=[
+        hbow / "online_results.json",
+        hclip / "online_results.json",
+        ace_eval / "predictions.npz",
+        mac_run / "trajectory.npz",
+    ],
+)
+# Extend the actual camera teleport to the unchanged H observation/fusion protocol.
+# Reuse every map/reference feature and existing MACVO/ACE prediction; no retraining.
+kroot = B / "runs/formal/common/kidnap/observations"
+kbow, kclip, kfeatures = kroot / "bow", kroot / "clip", kroot / "clip_features"
+for route, target, source_map, dependencies, extra in [
+    ("bow", kbow, hbow, ["I.kidnap.render", "H.common.bow_constraints"], []),
+    (
+        "clip",
+        kclip,
+        kbow,
+        ["I.kidnap.clip_features"],
+        ["--clip-features", str(kfeatures / "features.npz")],
+    ),
+]:
+    add(
+        "I.kidnap." + route + "_constraints",
+        "I",
+        "habitat_common",
+        [
+            SEM,
+            str(SCRIPT / "localize_semantic_pilot.py"),
+            str(kidnap),
+            str(target),
+            "--mode",
+            "all",
+            "--checkpoint",
+            str(model),
+            "--reference-map",
+            str(source_map),
+            "--continuous-queries",
+            "--reference-positions",
+            "384",
+            "--topk",
+            "8",
+        ]
+        + features
+        + extra,
+        [
+            J(
+                target / "summary.json",
+                equals={
+                    "geometry.queries": 600,
+                    "soft.queries": 600,
+                    "audit.no_query_GT_online": True,
+                },
+                finite=["geometry.recall_25cm_10deg", "soft.recall_25cm_10deg"],
+            )
+        ],
+        deps=dependencies,
+        gpu=True,
+        priority=81,
+        ram=2500,
+        inputs=[source_map / "readonly_map.npz", kidnap / "acceptance.json", model],
+    )
+add(
+    "I.kidnap.clip_features",
+    "I",
+    "habitat_common",
+    [
+        SEM,
+        str(SCRIPT / "extract_clip_reference_features.py"),
+        str(kidnap),
+        str(kbow),
+        str(kfeatures),
+        "--source",
+        str(B / "sources/CLIP"),
+        "--weights",
+        str(B / "models/clip"),
+        "--reference-features",
+        str(hclip_features),
+    ],
+    [
+        J(
+            kfeatures / "protocol.json",
+            equals={"query_GT_online": False, "timings.reference.reused": True},
+        ),
+        dict(path=str(kfeatures / "features.npz"), min_bytes=10000),
+    ],
+    deps=["I.kidnap.bow_constraints", "H.common.clip_features"],
+    gpu=True,
+    priority=81,
+    ram=1600,
+    inputs=[
+        hclip_features / "features.npz",
+        kbow / "queries.json",
+        B / "models/clip/ViT-B-32.pt",
+    ],
+)
+kfull = B / "runs/formal/common/kidnap/full_system_ablation"
+add(
+    "I.kidnap.full_system",
+    "I",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "integrate_common_observations.py"),
+        str(kidnap),
+        str(kiace),
+        str(kimac),
+        str(kbow),
+        str(kclip),
+        str(kfull),
+        "--dataset-acceptance",
+        str(hdata / "acceptance.json"),
+    ],
+    [
+        J(
+            kfull / "summary.json",
+            equals={
+                "status": "completed",
+                "audit.frames": 600,
+                "audit.GT_online": False,
+                "audit.parent_map_unchanged": True,
+                "audit.exact_shared_geometry_map": True,
+            },
+            finite=["results.ACE_clip_soft_multicandidate_weighted.recall_25cm_10deg"],
+        )
+    ],
+    deps=["I.kidnap.bow_constraints", "I.kidnap.clip_constraints", "I.kidnap.joint"],
+    priority=81,
+    inputs=[
+        kbow / "online_results.json",
+        kclip / "online_results.json",
+        kiace / "predictions.npz",
+        kimac / "trajectory.npz",
+    ],
+)
+add(
+    "I.kidnap.full_system_recovery",
+    "I",
+    "habitat_common",
+    [
+        MAC,
+        str(SCRIPT / "evaluate_rendered_kidnap.py"),
+        str(kidnap),
+        str(kfull),
+        str(kfull / "recovery"),
+    ],
+    [
+        J(
+            kfull / "recovery/summary.json",
+            equals={
+                "status": "completed",
+                "frames": 600,
+                "actual_simulated_camera_teleport": True,
+                "GT_online": False,
+            },
+            minimum={"jump_m": 2},
+        )
+    ],
+    deps=["I.kidnap.full_system"],
+    priority=81,
+    inputs=[kidnap / "acceptance.json", kfull / "global_predictions.npz"],
+)
+add(
+    "F.omcl.input_provenance",
+    "F",
+    "omcl",
+    [
+        SEM,
+        str(SCRIPT / "audit_omcl_inputs.py"),
+        str(B / "sources/omcl"),
+        str(B / "runs/formal/omcl/input_provenance"),
+    ],
+    [
+        J(
+            B / "runs/formal/omcl/input_provenance/summary.json",
+            equals={
+                "status": "audit_completed",
+                "official_localization_executed": False,
+                "official_example_derives_odometry_from_dataset_poses": True,
+                "official_example_initializes_particles_around_dataset_pose": True,
+                "direct_example_eligible_for_GT_free_project": False,
+            },
+        )
+    ],
+    priority=82,
+    inputs=[
+        B / "sources/omcl/src/omcl/models/pf.py",
+        B / "sources/omcl/src/omcl/models/odom.py",
+    ],
+)
 # Requirements that are not yet executable stay visibly BLOCKED, never fake COMPLETED.
 for tid, group, ds, reason in [
     (
@@ -1543,7 +1884,7 @@ for tid, group, ds, reason in [
         "F.omcl.official",
         "F",
         "omcl",
-        "Dense LSeg/OpenScene feature map + OMCL dependencies/checkpoints not yet validated; pooled CLIP baseline is not OMCL",
+        "Pinned official pf.run derives odometry from dataset poses44 and initializes particles around poses44[first_pose_id]; requires measured-MACVO/map-only adapter before GT-free execution. Dense LSeg/octree dependencies/checkpoint remain unvalidated; see F.omcl.input_provenance. CLIP baseline is not OMCL.",
     ),
     (
         "J.dynamic.multidataset",
@@ -1553,6 +1894,10 @@ for tid, group, ds, reason in [
     ),
 ]:
     add(tid, group, ds, [], [], formal=True, blocked=reason)
+sys.path.insert(0, str(ROOT / "reproduction"))
+from extend_manifest import extend
+
+tasks = extend(tasks, REPO, B)
 atomic(ROOT / "manifests/tasks.json", tasks)
 print("tasks", len(tasks))
 if __name__ == "__main__":

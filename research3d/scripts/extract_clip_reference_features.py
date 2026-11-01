@@ -29,7 +29,27 @@ def main(a):
     torch.cuda.reset_peak_memory_stats()
     timings = {}
     features = {}
+    reused = None
+    if getattr(a, "reference_features", None):
+        source = Path(a.reference_features)
+        source_meta = json.loads((source / "protocol.json").read_text())
+        assert source_meta["readonly_geometry_map_sha256"] == protocol["map_sha256"]
+        weight_sha = hashlib.sha256(
+            (Path(a.weights) / "ViT-B-32.pt").read_bytes()
+        ).hexdigest()
+        assert source_meta["weight_sha256"] == weight_sha
+        reused = np.load(source / "features.npz", allow_pickle=False)
+        assert reused["reference_features"].shape == (len(protocol["references"]), 512)
     for kind, rows in [("reference", protocol["references"]), ("query", queries)]:
+        if kind == "reference" and reused is not None:
+            features["reference_features"] = reused["reference_features"]
+            timings[kind] = dict(
+                images=len(rows),
+                seconds=0,
+                reused=True,
+                source=str(Path(a.reference_features).resolve()),
+            )
+            continue
         vectors = []
         start = time.perf_counter()
         for begin in range(0, len(rows), 8):
@@ -91,6 +111,9 @@ def main(a):
         independent_of_trained_semantic_network=True,
         query_GT_online=False,
         readonly_geometry_map_sha256=protocol["map_sha256"],
+        query_records_sha256=hashlib.sha256(
+            (maproot / "queries.json").read_bytes()
+        ).hexdigest(),
         features_dimension=512,
         timings=timings,
         torch_peak_allocated_MiB=torch.cuda.max_memory_allocated() / 1024**2,
@@ -109,4 +132,8 @@ if __name__ == "__main__":
     p.add_argument("output")
     p.add_argument("--source", required=True)
     p.add_argument("--weights", required=True)
+    p.add_argument(
+        "--reference-features",
+        help="Reuse exact-map/exact-weight frozen reference features",
+    )
     main(p.parse_args())

@@ -38,6 +38,11 @@ def main(a):
                 first_three_correct_start_frame=hits[0] if hits else None,
                 latency_frames=hits[0] - origin if hits else None,
                 latency_simulated_seconds=(hits[0] - origin) * dt if hits else None,
+                confirmation_frame=hits[0] + 2 if hits else None,
+                confirmation_latency_frames=hits[0] + 2 - origin if hits else None,
+                confirmation_latency_simulated_seconds=(
+                    (hits[0] + 2 - origin) * dt if hits else None
+                ),
                 post_jump_recall=float(good[origin:].mean()),
             )
         results[name] = dict(
@@ -68,7 +73,9 @@ def main(a):
     )
     target = Path(a.output)
     target.mkdir(parents=True, exist_ok=True)
-    (target / "summary.json").write_text(json.dumps(summary, indent=2))
+    temporary = target / "summary.json.tmp"
+    temporary.write_text(json.dumps(summary, indent=2))
+    temporary.replace(target / "summary.json")
     print(json.dumps(summary, indent=2))
 
 

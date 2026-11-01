@@ -3,7 +3,7 @@ No GT or map enters motion estimation. Missing depth/failed steps retain origina
 frame positions with an explicit lost mask; held poses are not claimed tracked.
 """
 
-import argparse, json, time
+import argparse, hashlib, json, time
 from pathlib import Path
 import cv2, numpy as np
 from scipy.spatial.transform import Rotation, Slerp
@@ -35,13 +35,17 @@ def associate(rgb, depth):
     return mapping
 
 
-def estimate(previous, current, depth, K):
+def estimate(previous, current, depth, K, previous_person=None, current_person=None):
+    static_depth = (depth > 0.1) & (depth < 8)
+    if previous_person is not None:
+        assert previous_person.shape == depth.shape
+        static_depth &= ~previous_person
     points = cv2.goodFeaturesToTrack(
         previous,
         600,
         0.01,
         8,
-        mask=((depth > 0.1) & (depth < 8)).astype(np.uint8) * 255,
+        mask=static_depth.astype(np.uint8) * 255,
         blockSize=7,
     )
     if points is None:
@@ -63,6 +67,19 @@ def estimate(previous, current, depth, K):
     )
     u = points[:, 0][keep]
     v = tracked[:, 0][keep]
+    if current_person is not None:
+        assert current_person.shape == current.shape
+        ijv = np.rint(v).astype(int)
+        height, width = current.shape
+        inside = (
+            (ijv[:, 0] >= 0)
+            & (ijv[:, 0] < width)
+            & (ijv[:, 1] >= 0)
+            & (ijv[:, 1] < height)
+        )
+        static = np.zeros(len(v), bool)
+        static[inside] = ~current_person[ijv[inside, 1], ijv[inside, 0]]
+        u, v = u[static], v[static]
     ij = np.rint(u).astype(int)
     z = depth[ij[:, 1], ij[:, 0]]
     P = np.c_[(u[:, 0] - K[0, 2]) * z / K[0, 0], (u[:, 1] - K[1, 2]) * z / K[1, 1], z]
@@ -97,11 +114,23 @@ def main(a):
     rgb = entries(root / "rgb.txt")
     depth = entries(root / "depth.txt")
     mapping = associate(rgb, depth)
+    masks = None
+    if getattr(a, "person_masks", None):
+        maskroot = Path(a.person_masks)
+        maskmeta = json.loads((maskroot / "summary.json").read_text())
+        assert maskmeta["status"] == "completed" and not maskmeta["GT_online"]
+        assert (
+            maskmeta["rgb_list_sha256"]
+            == hashlib.sha256((root / "rgb.txt").read_bytes()).hexdigest()
+        )
+        masks = json.loads((maskroot / "masks.json").read_text())
+        assert len(masks) == len(rgb)
     K = np.array([[535.4, 0, 320.1], [0, 539.2, 247.6], [0, 0, 1]], dtype=float)
     cv2.setNumThreads(4)
     cv2.setRNGSeed(1305)
     previous = None
     previous_depth = None
+    previous_person = None
     T = np.eye(4)
     trajectory = []
     lost = []
@@ -111,11 +140,30 @@ def main(a):
         tick = time.perf_counter()
         gray = cv2.imread(str(root / path), 0)
         assert gray is not None
+        current_person = None
+        if masks is not None:
+            record = masks[i]
+            assert (
+                record["frame"] == i
+                and Path(record["rgb"]).resolve() == (root / path).resolve()
+            )
+            assert (
+                record["rgb_sha256"]
+                == hashlib.sha256((root / path).read_bytes()).hexdigest()
+            )
+            maskpath = Path(record["mask"])
+            assert (
+                record["mask_sha256"]
+                == hashlib.sha256(maskpath.read_bytes()).hexdigest()
+            )
+            current_person = cv2.imread(str(maskpath), 0) > 0
         delta = np.eye(4)
         ok = False
         nin = 0
         if previous is not None and previous_depth is not None:
-            delta, ok, nin = estimate(previous, gray, previous_depth, K)
+            delta, ok, nin = estimate(
+                previous, gray, previous_depth, K, previous_person, current_person
+            )
         if ok:
             T = T @ delta
         trajectory.append(T.copy())
@@ -132,6 +180,7 @@ def main(a):
             )
         )
         previous = gray
+        previous_person = current_person
         previous_depth = (
             cv2.imread(str(root / depth[mapping[i]][1]), cv2.IMREAD_UNCHANGED).astype(
                 float
@@ -193,6 +242,8 @@ def main(a):
         association="Official-style greedy minimum timestamp difference, unique pairs <=0.02s; unmatched RGB frames retained",
         calibration_source=meta["official_formats"],
         dynamics=meta["dynamics"],
+        predicted_person_exclusion=masks is not None,
+        person_mask_protocol=maskmeta["protocol"] if masks is not None else None,
     )
     (out / "summary.json").write_text(json.dumps(result, indent=2))
     print(json.dumps(result, indent=2))
@@ -202,4 +253,5 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("dataset")
     p.add_argument("output")
+    p.add_argument("--person-masks")
     main(p.parse_args())

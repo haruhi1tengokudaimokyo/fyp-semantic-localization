@@ -91,6 +91,8 @@ def estimate(
             T = blend(None if recovered else pred, absolute, alpha)
             row = dict(
                 selected_module=module,
+                selected_absolute_pose=absolute.tolist(),
+                selected_absolute_inliers=int(h["inliers"]),
                 accepted_absolute=True,
                 recovered=bool(recovered),
                 correction_alpha=alpha,

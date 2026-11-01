@@ -15,3 +15,6 @@ __pycache__/
 results/audit_v2/cases/
 results/audit_v2/raw_per_image
 *.npz
+
+# Local reproduction diagnostics and PDF render checks
+work_notes/

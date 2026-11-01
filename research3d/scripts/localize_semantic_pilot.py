@@ -314,6 +314,9 @@ def localize(
 
 
 def main(a):
+    assert (
+        not getattr(a, "continuous_queries", False) or a.reference_map
+    ), "New continuous queries require an explicitly validated reference map"
     out = Path(a.output)
     out.mkdir(parents=True, exist_ok=True)
     torch.set_num_threads(4)
@@ -333,6 +336,11 @@ def main(a):
         for name in ["readonly_map.npz", "queries.json", "ground_truth_eval_only.json"]:
             shutil.copyfile(original / name, out / name)
         protocol = json.loads((original / "map_protocol.json").read_text())
+        assert digest(out / "readonly_map.npz") == protocol["map_sha256"]
+        if getattr(a, "continuous_queries", False):
+            from knownmap.query_binding import bind_continuous_queries
+
+            protocol = bind_continuous_queries(a.dataset, out, protocol)
     else:
         protocol = make_map(a, out)
     if a.hloc_source:
@@ -342,6 +350,16 @@ def main(a):
         protocol["retrieval"] = "reference-only SuperPoint descriptor BoW64 TF-IDF top8"
         (out / "map_protocol.json").write_text(json.dumps(protocol, indent=2))
     if a.clip_features:
+        if getattr(a, "continuous_queries", False):
+            feature_meta = json.loads(
+                (Path(a.clip_features).parent / "protocol.json").read_text()
+            )
+            assert (
+                feature_meta["readonly_geometry_map_sha256"] == protocol["map_sha256"]
+            )
+            assert feature_meta["query_records_sha256"] == digest(
+                out / "queries.json"
+            ), "CLIP features from different query sequence"
         protocol["retrieval"] = (
             "frozen official CLIP ViT-B/32 image cosine top8, same read-only 3D reference map"
         )
@@ -472,5 +490,10 @@ if __name__ == "__main__":
     p.add_argument("--hloc-source")
     p.add_argument("--lightglue-source")
     p.add_argument("--reference-map")
+    p.add_argument(
+        "--continuous-queries",
+        action="store_true",
+        help="Bind new continuous dataset RGB to the exact existing reference map",
+    )
     p.add_argument("--clip-features")
     main(p.parse_args())

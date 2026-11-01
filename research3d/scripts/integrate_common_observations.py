@@ -14,6 +14,12 @@ def sha(p):
     return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 
+def atomic_json(path, value):
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(value, indent=2))
+    temporary.replace(path)
+
+
 def main(a):
     common = Path(a.common)
     out = Path(a.output)
@@ -53,6 +59,11 @@ def main(a):
         assert all(int(row["frame_id"]) == i for i, row in enumerate(online))
         for i, q in enumerate(queries):
             assert Path(q["rgb"]).name == f"{i:06d}_left.png"
+            assert (
+                Path(q["rgb"]).resolve()
+                == (common / "stereo/image_left" / f"{i:06d}_left.png").resolve()
+            ), "Observation belongs to another continuous sequence"
+            assert np.allclose(q["K"], meta["K"]), "Query calibration mismatch"
             assert str(ace["frame"][i]) == f"frame-{i:06d}.color.png"
         assert sha(directory / "readonly_map.npz") == protocol["map_sha256"]
         input_hashes[name] = dict(
@@ -113,7 +124,7 @@ def main(a):
         )["semantic_generalization_claim"],
         interpretation="Explicit heuristic reliability/correction weights, not calibrated uncertainty or independent-sensor fusion; fixed variants, no test-chosen winner",
     )
-    (out / "protocol.json").write_text(json.dumps(protocol, indent=2))
+    atomic_json(out / "protocol.json", protocol)
     trajectories = {}
     diagnostics = {}
     runtimes = {}
@@ -123,8 +134,10 @@ def main(a):
         runtimes[name] = time.perf_counter() - tick
         trajectories[name] = P
         diagnostics[name] = rows
-    np.savez_compressed(out / "global_predictions.npz", **trajectories)
-    (out / "online_diagnostics.json").write_text(json.dumps(diagnostics, indent=2))
+    temporary = out / "global_predictions.tmp.npz"
+    np.savez_compressed(temporary, **trajectories)
+    temporary.replace(out / "global_predictions.npz")
+    atomic_json(out / "online_diagnostics.json", diagnostics)
     assert sha(common / "readonly_prior_map.npz") == digest
     # Offline evaluation boundary.
     truth = np.load(common / "ground_truth_eval_only.npz")["T_world_camera"]
@@ -142,6 +155,18 @@ def main(a):
             ).magnitude()
         )
         rows = diagnostics[name]
+        incorrect_observation_updates = 0
+        for i, row in enumerate(rows):
+            if not row["accepted_absolute"]:
+                continue
+            observation = np.array(row["selected_absolute_pose"])
+            ot = np.linalg.norm(observation[:3, 3] - truth[i, :3, 3])
+            ore = np.degrees(
+                Rotation.from_matrix(
+                    observation[:3, :3].T @ truth[i, :3, :3]
+                ).magnitude()
+            )
+            incorrect_observation_updates += int(ot > 0.25 or ore > 10)
         results[name] = dict(
             frames=n,
             valid_pose_fraction=float(available.mean()),
@@ -164,6 +189,12 @@ def main(a):
                 bool(r["accepted_absolute"] and (te[i] > 0.25 or re[i] > 10))
                 for i, r in enumerate(rows)
             ),
+            incorrect_selected_observation_updates_25cm_10deg=incorrect_observation_updates,
+            false_accepted_updates_scope=(
+                "Legacy false_accepted_updates fields count incorrect corrected STATE at update frames; "
+                "incorrect_selected_observation_updates counts the selected raw absolute observation before blending. "
+                "These differ under weighted correction."
+            ),
             runtime_fusion_only_ms_per_frame=runtimes[name] * 1000 / n,
             translation_errors_m=[float(x) if np.isfinite(x) else None for x in te],
         )
@@ -179,7 +210,7 @@ def main(a):
         ),
         results=results,
     )
-    (out / "summary.json").write_text(json.dumps(result, indent=2))
+    atomic_json(out / "summary.json", result)
     print(
         json.dumps(
             {

@@ -1,5 +1,50 @@
 # FYP 持久科研实验系统
 
+## 2026-11-01 20:30 用户交接指令（覆盖此前巡检要求）
+
+用户要求：清理旧Diffusion项目无用数据，启动能执行的实验后停止Codex及巡检，电脑自己完成队列。已通过应用工具将fyp heartbeat设为PAUSED；`fyp-reproduction-progress.timer`和`fyp-experiment-report.timer`均disable/stop。不重新启用，除非用户随后要求。`fyp-experiments.service`与独立worker不停止，仍有限重试、验收与资源调度，关闭Codex界面不影响它们。
+
+已清理旧v5/v6的native_capture和procthor派生文件，64364883968字节（59.94GiB）。检查当前DAG无引用、当前FYP无指向这些目录的符号链接、无进程打开其文件。保留旧源场景/几何、manifests、生成代码和全部旧模型/实验结果/日志；`/data/fyp_3d`科学数据未删除。删除记录见artifacts/storage_cleanup_20261101.json；磁盘释放后Hypersim原队列已自动恢复。
+
+20:17系统重启后后台自行恢复。chess/fire的8M训练完成；heads正在第二次尝试。旧评测失败是`test_ace.py`导入了dsacstar命名空间而非编译扩展，非模型/数据故障。`.eval.v2`固定子进程PYTHONPATH到真实扩展目录，保持上游脚本和权重不变；真实CPU图像端到端回归与完整GPU评价分别验收。不重训chess/fire。
+
+最终预计时间、当前实际状态和剩余外部阻塞，以outputs/FYP_Automation/无人值守交接_20261101.md为准。不要把ACE可执行队列ETA说成四篇论文全部复现的完成日期。
+
+
+## 当前优先级：2026-11-01 用户四篇原论文续接指令
+
+最新人工任务以 MAC-VO、ACE、SG2Loc、OMCL 的原论文复现和严谨数据处理为主。本节覆盖旧 heartbeat 中新增自研融合、Dashboard、动态工程的优先级；历史成果全部保留，暂停继续扩展无关算法。健康控制器和 worker 不重启，新增任务用 `./experiment_automation/fypctl sync`（登记并验收可复用产物）接入现有 SQLite。不得通过修改已完成任务的科学配置，将旧结果重新标成新实验；`core.register` 对 command/config/inputs/seed/env/validation/scene 变化要求新任务版本。
+
+四条核心方法同时在 DAG 中。`paper_id/reproduction_level/online_input_condition` 进入真实 SQLite；完成支持性审计或环境任务不代表完成论文。当前：
+
+- MAC-VO：保留1274帧作者提供的 P001_select 完整演示，但未证明是完整父基准或论文对应行。官方指标已用独立 evo1.29 CPU环境重算，原GPU轨迹不重算。旧evo1.38兼容失败及SO3数值精度失败保留。
+- ACE：所有7Scenes原始训练/测试划分、外参、逐RGB/pose核查通过；旧官方模型和1M训练结果保留。原8M缓存/16epochs/batch5120仅改变缓存存储位置。chess已真实完成2688.504秒训练（CUDA峰值分配2344.51MiB），其余场景继续；准确率以完整上游测试通过为准。12Scenes四源分组ZIP各3次TLS失败，HTTP502和额外TLS诊断保留，不能解除数据准备阻塞。
+- SG2Loc：固定官方源码，隔离环境及实际Numba CUDA内核/RayCasting导入已通过；3RScan/ScanNet原数据授权与原始Replica空间仍缺，PF/Refinement/5-10-25序列成绩没有产生。原代码GT相对运动/重力条件不等于FYP GT-free。
+- OMCL：固定源码，Kaolin CUDA通过；原始3.095GB LSeg checkpoint严格加载、真实480裁剪Batch1前向通过，0.61743秒、CUDA峰值2930.33MiB。没有实际语言地图/MCL成绩。论文Replica使用NARADIO，不能冒用LSeg称原表复现。论文2048射线与发布配置num_samples1024/每mask采样差异仍待核查。
+
+### 数据清洗版本与现有证据
+
+Hypersim冻结候选51来源族/10493帧，仅从发布有效帧元数据选取。来源族ID不是已证实物理建筑，未声称免费获得原始Mesh。`acquire_hypersim_scene*.py` 的三个版本与独立验收目录均保留，不覆盖已接受版本：
+
+1. v1固定5mm门槛、假设标准相机，真实多场景验收暴露错误，保留失败。
+2. v2使用一般相机RQ、float64换算、解析float16量化界限，避免把远处储存误差误判；但仍假定源相机轴至多均匀缩放。旧成功和失败保留，禁止作为新训练的资格。
+3. v3对每帧完整 `source_orientation @ M_cam_from_uv @ half_pixel_UV` 做RQ，生成逐帧K与SO3相机位姿；不依赖图像、GT世界点或测试成绩拟合。非均匀源基不直接当旋转。每台相机首个计划帧的全部有效像素，必须落在位置/光心距离的IEEE半ULP合成界限内（另加1微米运算余量），零超界才通过；其余帧核查元数据/单位/有效深度/语义/形状/RGB解码。
+
+完整分解已在真实 ai_043_009 两台相机1572864像素通过；原 cam_01 基矩阵非刚体，但其解析针孔表示合法。ai_027_003实际有24254个像素射线不一致、光心距离一致，集中门窗柜体，原因未定，保留隔离，不放松阈值。每次诊断、原始CRC/SHA receipt和版本产物独立保留。
+
+v3使用与候选冻结计划相同的帧身份。51个候选全部得到终态审计后，`qualify_hypersim_cleaned.py` 记录CRC/标定/来源失败导致的整场景隔离，并冻结清洗决策；只在真实保留至少40场景/8000帧、原划分族不交叉、解码RGB跨划分无重叠后接受训练资格。没有读取定位成绩或静默换入测试场景。确定性科学失败exit65不盲目重试；网络失败按有限策略恢复。若空间不足则保留原数据等待资源，不清理历史实验。
+
+Replica17个官方分卷总压缩33859047808字节，还需解压空间；当前 `/data` 仅约31GiB可用且保留30GiB，不满足完整18场景获取。授权脚本和额外存储路径的问题已向用户提出，未获得回复前不伪造授权或数据。
+
+### ETA与独立进度报告
+
+`reports/reproduction_eta.md` 对实际8M队列给出步长、buffer与三个具体日期；四篇总ETA因SG2Loc/OMCL核心尚未实测且数据受阻，明确未知。不得用ACE局部时间冒充四篇总墙钟基准。
+
+新增 `fyp-reproduction-progress.timer` 每5分钟独立运行 `reproduction/progress.py`，实际自动首触发16:23:29 CST成功；原4小时timer不变。引擎已测试25/50/75/100边界、离线补报和不重复触发；全体时间基准尚未知，因此不会伪造百分比报告。未来只有四条核心都有代表性实测且明确scope=four_paper_total时才接受基准。证据：`artifacts/reproduction_timer_test.json`。进度引擎使用互斥文件锁，保护手动报告与timer并发。
+
+实时MD/HTML/JSON与任务CSV持续更新；PDF是明确带时间戳的审计快照，不声称四篇全部完成。真实8M训练曲线与CSV从日志生成。用户交付文件统一在主线程 `outputs/FYP_Automation/`；完整配置和全部失败任务可审计，不用任务总完成率代替论文验收。
+
+
 本系统已经实际启动。主控制器读取 `manifests/tasks.json`，以 SQLite WAL 保存任务 DAG；每个实验运行在独立 systemd user worker 中。所有结果经文件存在性、SHA256、长度及指定指标验收后才能 COMPLETED。复用的初步结果带 `formal=false`，不会成为扩大实验的完成证据。
 
 ## 查看与运行

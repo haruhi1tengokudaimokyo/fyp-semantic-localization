@@ -100,4 +100,7 @@ def aggregate(snapshot, root):
     from plot_semantic_localization import plot as plot_semantic
 
     plot_semantic(snapshot, root)
+    from common_system_statistics import collect as collect_common
+
+    collect_common(snapshot, root)
     return str(out / "index.json")

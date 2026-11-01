@@ -46,6 +46,16 @@ def init(root=ROOT):
         (Path(root) / d).mkdir(parents=True, exist_ok=True)
     with db(root) as c:
         c.executescript(SCHEMA)
+        columns = {r[1] for r in c.execute("PRAGMA table_info(tasks)")}
+        for name in ("paper_id", "reproduction_level", "online_input_condition"):
+            if name not in columns:
+                c.execute(f"ALTER TABLE tasks ADD COLUMN {name} TEXT")
+        c.execute(
+            "UPDATE tasks SET reproduction_level='Independent Baseline' WHERE reproduction_level IS NULL"
+        )
+        c.execute(
+            "UPDATE tasks SET online_input_condition='Historical task; see immutable provenance for actual input condition' WHERE online_input_condition IS NULL"
+        )
         c.execute(
             "INSERT OR IGNORE INTO meta VALUES (?,?)",
             ("service_started", str(time.time())),
@@ -137,6 +147,7 @@ def fingerprint(s):
         "model_dataset_id": s.get("model_dataset_id"),
         "seed": s.get("seed"),
         "command": s.get("command"),
+        "env": s.get("env", {}),
         "config": s.get("config"),
         "inputs": files,
         "code_commit": code_version(),
@@ -171,8 +182,50 @@ def register(specs, root=ROOT):
                 )
             tid = s["task_id"]
             old = c.execute("SELECT * FROM tasks WHERE task_id=?", (tid,)).fetchone()
+            if old:
+                c.execute(
+                    "UPDATE tasks SET paper_id=?,reproduction_level=?,online_input_condition=? WHERE task_id=?",
+                    (
+                        s.get("paper_id"),
+                        s.get("reproduction_level", "Independent Baseline"),
+                        s.get(
+                            "online_input_condition",
+                            "GT-free online; GT offline evaluation only",
+                        ),
+                        tid,
+                    ),
+                )
             if old and old["status"] == "RUNNING":
                 continue
+            if old and old["status"] == "COMPLETED":
+                previous = json.loads(old["spec"])
+                scientific_keys = (
+                    "command",
+                    "config",
+                    "inputs",
+                    "seed",
+                    "env",
+                    "validation",
+                    "dataset_id",
+                    "model_dataset_id",
+                )
+                changed = [k for k in scientific_keys if previous.get(k) != s.get(k)]
+                if changed:
+                    details = dict(
+                        changed_keys=changed,
+                        proposed_spec_sha256=hashlib.sha256(
+                            json.dumps(s, sort_keys=True).encode()
+                        ).hexdigest(),
+                        reason="Completed scientific specifications are immutable; create a versioned task",
+                    )
+                    encoded = json.dumps(details, ensure_ascii=False)
+                    duplicate = c.execute(
+                        "SELECT 1 FROM events WHERE task_id=? AND event=? AND details=? LIMIT 1",
+                        (tid, "COMPLETED_SPEC_CHANGE_REJECTED", encoded),
+                    ).fetchone()
+                    if not duplicate:
+                        event(c, tid, "COMPLETED_SPEC_CHANGE_REJECTED", details)
+                    continue
             if old:
                 if json.loads(old["spec"]) != s:
                     event(
@@ -190,6 +243,15 @@ def register(specs, root=ROOT):
                     "UPDATE tasks SET spec=?,experiment_id=?,dataset_id=? WHERE task_id=?",
                     (json.dumps(s), s["experiment_id"], s["dataset_id"], tid),
                 )
+                if s.get("blocked_reason") and old["status"] in (
+                    "PENDING",
+                    "RETRYING",
+                    "BLOCKED",
+                ):
+                    c.execute(
+                        "UPDATE tasks SET status='BLOCKED',failure=? WHERE task_id=?",
+                        (s["blocked_reason"], tid),
+                    )
                 continue
             status = "BLOCKED" if s.get("blocked_reason") else "PENDING"
             c.execute(
@@ -205,6 +267,18 @@ def register(specs, root=ROOT):
                 ),
             )
             event(c, tid, "REGISTERED", {"status": status})
+            c.execute(
+                "UPDATE tasks SET paper_id=?,reproduction_level=?,online_input_condition=? WHERE task_id=?",
+                (
+                    s.get("paper_id"),
+                    s.get("reproduction_level", "Independent Baseline"),
+                    s.get(
+                        "online_input_condition",
+                        "GT-free online; GT offline evaluation only",
+                    ),
+                    tid,
+                ),
+            )
 
 
 def lookup(data, path):
@@ -255,6 +329,17 @@ def validate(s, started=None):
                 for k in v.get("finite", []):
                     if not np.isfinite(z[k]).all():
                         raise ValueError("Nonfinite array " + k)
+        if v.get("sha256_from_json"):
+            source = v["sha256_from_json"]
+            expected = lookup(
+                json.loads(Path(source["path"]).read_text()),
+                source.get("key", "sha256"),
+            )
+            if sha(p) != expected:
+                raise ValueError(
+                    "Artifact differs from freshly revalidated content-hash receipt: "
+                    + str(p)
+                )
         evidence.append({"path": str(p), "bytes": p.stat().st_size, "sha256": sha(p)})
     return {"accepted": True, "validated_utc": utc(), "artifacts": evidence}
 

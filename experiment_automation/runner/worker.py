@@ -50,6 +50,7 @@ def run(tid, root=ROOT):
     log = Path(root) / "logs" / f"{tid}.attempt{attempt}.log"
     command = s["command"]
     failure = None
+    nonretryable = False
     samples = []
     try:
         env = {
@@ -57,11 +58,14 @@ def run(tid, root=ROOT):
             "PYTHONUNBUFFERED": "1",
             "OMP_NUM_THREADS": str(s.get("threads", 4)),
             "OPENBLAS_NUM_THREADS": "1",
+            "XDG_CACHE_HOME": str(Path(root) / "checkpoints/library_cache"),
+            "CUDA_CACHE_PATH": str(Path(root) / "checkpoints/cuda_cache"),
             "PYTHONPATH": str(REPO / "research3d"),
         }
         network_file = Path(root) / "state/network_environment.json"
         if network_file.exists():
             env.update(json.loads(network_file.read_text()))
+        env.update({str(k): str(v) for k, v in s.get("env", {}).items()})
         with log.open("a") as f:
             f.write(f"\nSTART {utc()} task={tid} attempt={attempt}\n")
             f.flush()
@@ -105,6 +109,7 @@ def run(tid, root=ROOT):
                         "Payload produced no new log for watchdog interval; inspect failure evidence before retry"
                     )
                 time.sleep(5)
+            nonretryable = p.returncode in s.get("nonretryable_exit_codes", [])
             if p.returncode:
                 raise RuntimeError(f"Payload exit code {p.returncode}; evidence: {log}")
         accepted = validate(s, started)
@@ -141,7 +146,11 @@ def run(tid, root=ROOT):
             Path(root) / "artifacts" / f"{tid}.attempt{attempt}.failure.json", failure
         )
         with db(root) as c:
-            status = "RETRYING" if attempt < s.get("max_attempts", 2) else "FAILED"
+            status = (
+                "RETRYING"
+                if not nonretryable and attempt < s.get("max_attempts", 2)
+                else "FAILED"
+            )
             c.execute(
                 "UPDATE tasks SET status=?,end=?,failure=?,retry_at=? WHERE task_id=?",
                 (

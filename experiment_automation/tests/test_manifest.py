@@ -12,6 +12,26 @@ for s in specs:
         assert pathlib.Path(s["command"][0]).is_file(), s["task_id"]
         assert pathlib.Path(s["command"][1]).is_file(), s["task_id"]
         assert s["validation"], s["task_id"]
+for s in specs:
+    cmd = s.get("command", [])
+    if s["task_id"].startswith("R.ACE.") and s["task_id"].endswith(".train8M"):
+        dataset = pathlib.Path(cmd[2])
+        output = pathlib.Path(cmd[3])
+        assert s["dataset_id"] == dataset.name, s["task_id"]
+        assert all(
+            pathlib.Path(v["path"]).is_relative_to(output) for v in s["validation"]
+        ), s["task_id"]
+    if len(cmd) > 1 and pathlib.Path(cmd[1]).name == "official_ace_eval.py":
+        dataset = pathlib.Path(cmd[3])
+        model = pathlib.Path(cmd[4])
+        output = pathlib.Path(cmd[5])
+        assert s["dataset_id"] == dataset.name, s["task_id"]
+        assert all(
+            pathlib.Path(v["path"]).is_relative_to(output) for v in s["validation"]
+        ), s["task_id"]
+        scene_token = dataset.name.removeprefix("7scenes_")
+        assert scene_token in str(model), s["task_id"]
+
 visited = set()
 active = set()
 
