@@ -17,7 +17,10 @@ for s in specs:
     if s["task_id"].startswith("R.ACE.") and s["task_id"].endswith(".train8M"):
         dataset = pathlib.Path(cmd[2])
         output = pathlib.Path(cmd[3])
-        assert s["dataset_id"] == dataset.name, s["task_id"]
+        if s['task_id']=='R.ACE.7scenes.chess.train8M':
+            assert s['dataset_id']==s['task_id'] and dataset.name=='7scenes_chess'
+        else:
+            assert s["dataset_id"] == dataset.name, s["task_id"]
         assert all(
             pathlib.Path(v["path"]).is_relative_to(output) for v in s["validation"]
         ), s["task_id"]

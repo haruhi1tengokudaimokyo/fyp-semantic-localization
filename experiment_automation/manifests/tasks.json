@@ -9714,7 +9714,7 @@
   {
     "task_id": "R.ACE.7scenes.chess.train8M",
     "experiment_id": "R_ACE",
-    "dataset_id": "7scenes_chess",
+    "dataset_id": "R.ACE.7scenes.chess.train8M",
     "paper_id": "ACE",
     "reproduction_level": "Hardware Adapted",
     "online_input_condition": "GT-free online; GT offline evaluation only",
@@ -9759,7 +9759,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -9768,8 +9768,7 @@
       "disk_gib": 0,
       "min_gpu_free_mib": 4500
     },
-    "coverage": {},
-    "model_dataset_id": "7scenes_chess"
+    "coverage": {}
   },
   {
     "task_id": "R.ACE.7scenes.chess.train8M.eval",
@@ -9806,7 +9805,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -9867,7 +9866,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -9914,7 +9913,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -9975,7 +9974,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10022,7 +10021,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10083,7 +10082,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10130,7 +10129,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10191,7 +10190,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10238,7 +10237,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10299,7 +10298,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10346,7 +10345,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10407,7 +10406,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10454,7 +10453,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 112,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -10626,14 +10625,32 @@
   {
     "task_id": "R.SG2Loc.official_benchmark",
     "experiment_id": "R_SG2Loc",
-    "dataset_id": "R.SG2Loc.official_benchmark",
+    "dataset_id": "ReplicaCAD_shared_FRL_layouts",
     "paper_id": "SG2Loc",
-    "reproduction_level": "Official Original",
-    "online_input_condition": "Paper condition: GT-derived relative motion and gravity; not GT-free FYP",
-    "command": [],
-    "validation": [],
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Measured RGB-D motion, level camera mounting; query GT isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/core_result_acceptance.py",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/replicacad_official_benchmark_acceptance.json",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length5/refinement/metrics.json",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length5/refinement/metrics.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/replicacad_official_benchmark_acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independent_metrics": true,
+          "not_original_paper_dataset": true
+        }
+      }
+    ],
     "depends_on": [
-      "R.SG2Loc.source_audit"
+      "R.SG2Loc.v3_sc0_staging_00.length5.refinement.metrics",
+      "R.SG2Loc.v3_sc1_staging_00.length5.refinement.metrics"
     ],
     "inputs": [],
     "formal": true,
@@ -10650,48 +10667,91 @@
       "min_gpu_free_mib": 4500
     },
     "coverage": {},
-    "blocked_reason": "Official 3RScan/ScanNet authorization and associated preprocessing/features/checkpoint required; source audit preserves exact motion/gravity input condition."
+    "config": {
+      "legacy_task_name": true,
+      "actual_scope": "ReplicaCAD layouts, not original ScanNet/3RScan/Replica paper benchmark"
+    }
   },
   {
     "task_id": "R.SG2Loc.replica_core",
     "experiment_id": "R_SG2Loc",
-    "dataset_id": "R.SG2Loc.replica_core",
+    "dataset_id": "ReplicaCAD_v3_sc0_staging_00",
     "paper_id": "SG2Loc",
     "reproduction_level": "Original Method on Alternative Data",
-    "online_input_condition": "GT-free online; GT offline evaluation only",
-    "command": [],
-    "validation": [],
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length5/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
     "depends_on": [
-      "R.SG2Loc.source_audit"
+      "R.SG2Loc.v3_sc0_staging_00.length5",
+      "R.SG2Loc.roma_weights.acquire"
     ],
     "inputs": [],
-    "formal": true,
+    "formal": false,
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 131,
     "kind": "cpu",
     "resources": {
-      "gpu": false,
+      "gpu": true,
       "cpu_slots": 1,
-      "ram_mib": 700,
-      "disk_gib": 0,
+      "ram_mib": 4000,
+      "disk_gib": 2,
       "min_gpu_free_mib": 4500
     },
     "coverage": {},
-    "blocked_reason": "Full original Replica mesh/semantic assets not yet acquired or storage-budget verified; original feature/map adapter must pass before running core method. ReplicaCAD and HSSD are not Replica."
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
   },
   {
     "task_id": "R.OMCL.official_benchmark",
     "experiment_id": "R_OMCL",
-    "dataset_id": "R.OMCL.official_benchmark",
+    "dataset_id": "ReplicaCAD_shared_FRL_layouts",
     "paper_id": "OMCL",
-    "reproduction_level": "Official Original",
-    "online_input_condition": "Paper condition: noisy GT-derived odometry and known-start tracking; not GT-free global localization",
-    "command": [],
-    "validation": [],
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Explicit original-paper GT-derived relative-motion condition; not GT-free online",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/core_result_acceptance.py",
+      "/data/fyp_3d/runs/reproduction/OMCL/replicacad_official_benchmark_acceptance.json",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/global/metrics.json",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/global/metrics.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/replicacad_official_benchmark_acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independent_metrics": true,
+          "not_original_paper_dataset": true
+        }
+      }
+    ],
     "depends_on": [
-      "R.OMCL.source_audit"
+      "R.OMCL.v3_sc0_staging_00.global.metrics",
+      "R.OMCL.v3_sc1_staging_00.global.metrics"
     ],
     "inputs": [],
     "formal": true,
@@ -10708,36 +10768,55 @@
       "min_gpu_free_mib": 4500
     },
     "coverage": {},
-    "blocked_reason": "Matterport3D authorization, LSeg checkpoint and Kaolin compiled kernels not yet validated. Paper-condition pose-derived odometry and GT-free global runs are separate protocols."
+    "config": {
+      "legacy_task_name": true,
+      "actual_scope": "ReplicaCAD layouts, not original ScanNet/3RScan/Replica paper benchmark"
+    }
   },
   {
     "task_id": "R.OMCL.replica_core",
     "experiment_id": "R_OMCL",
-    "dataset_id": "R.OMCL.replica_core",
+    "dataset_id": "ReplicaCAD_v3_sc0_staging_00",
     "paper_id": "OMCL",
     "reproduction_level": "Original Method on Alternative Data",
-    "online_input_condition": "GT-free online; GT offline evaluation only",
-    "command": [],
-    "validation": [],
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "global_accept",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/global/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
     "depends_on": [
-      "R.OMCL.source_audit"
+      "R.OMCL.v3_sc0_staging_00.map"
     ],
     "inputs": [],
-    "formal": true,
+    "formal": false,
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 105,
+    "priority": 128,
     "kind": "cpu",
     "resources": {
-      "gpu": false,
+      "gpu": true,
       "cpu_slots": 1,
-      "ram_mib": 700,
-      "disk_gib": 0,
+      "ram_mib": 2300,
+      "disk_gib": 1,
       "min_gpu_free_mib": 4500
     },
-    "coverage": {},
-    "blocked_reason": "Full original Replica mesh/semantic assets not yet acquired or storage-budget verified; original feature/map adapter must pass before running core method. ReplicaCAD and HSSD are not Replica."
+    "coverage": {}
   },
   {
     "task_id": "R.SG2Loc.environment",
@@ -11257,7 +11336,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 115,
+    "priority": 116,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -11302,7 +11381,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 115,
+    "priority": 128,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -11473,7 +11552,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 114,
+    "priority": 128,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -22710,7 +22789,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -22760,7 +22839,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -22810,7 +22889,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -22860,7 +22939,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -22910,7 +22989,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -22960,7 +23039,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -23010,7 +23089,7 @@
     "seed": 2089,
     "max_attempts": 2,
     "retry_delay_s": 120,
-    "priority": 113,
+    "priority": 127,
     "kind": "cpu",
     "resources": {
       "gpu": true,
@@ -24236,5 +24315,5156 @@
     "config": {
       "runtime_fix": "Expose actual compiled dsacstar extension to unmodified upstream script through subprocess PYTHONPATH; preflight requires forward_rgb"
     }
+  },
+  {
+    "task_id": "R.SG2Loc.original_checkpoint.acquire",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.original_checkpoint.acquire",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/blocked_data.py",
+      "sg_checkpoint",
+      "pretrained",
+      "/data/fyp_3d/models/sg2loc_original"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/models/sg2loc_original/checkpoint.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.scannet_checkpoint.acquire",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.scannet_checkpoint.acquire",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/blocked_data.py",
+      "sg_scannet",
+      "epoch31",
+      "/data/fyp_3d/models/sg2loc_scannet"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/models/sg2loc_scannet/checkpoint.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.dino_weights.acquire",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.dino_weights.acquire",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_public.py",
+      "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_pretrain.pth",
+      "/data/fyp_3d/models/torch_hub/checkpoints/dinov2_vitg14_pretrain.pth"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/models/torch_hub/checkpoints/dinov2_vitg14_pretrain.pth.json",
+        "kind": "json",
+        "equals": {
+          "zip_crc_verified": false
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.dino_weights.resume",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.dino_weights.resume",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/resume_publisher_download.py",
+      "https://dl.fbaipublicfiles.com/dinov2/dinov2_vitg14/dinov2_vitg14_pretrain.pth",
+      "/data/fyp_3d/models/torch_hub/checkpoints/dinov2_vitg14_pretrain.pth"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/models/torch_hub/checkpoints/dinov2_vitg14_pretrain.pth.json",
+        "kind": "json",
+        "equals": {
+          "zip_crc_verified": false
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 130,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.roma_weights.acquire",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.roma_weights.acquire",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/resume_publisher_download.py",
+      "https://github.com/Parskatt/RoMaV2/releases/download/weights/romav2.pt",
+      "/data/fyp_3d/models/torch_hub/checkpoints/romav2.pt"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/models/torch_hub/checkpoints/romav2.pt.json",
+        "kind": "json",
+        "equals": {
+          "zip_crc_verified": false
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 130,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.data.replicacad.v3_sc0_staging_00.render",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.data.replicacad.v3_sc0_staging_00.render",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_sequence.py",
+      "v3_sc0_staging_00",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 125,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 1500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Two failed attempts preserved: missing import then PBR constant material conversion; all 600+128 observations already rendered. Reuse them in mesh_finish CPU repair, no repeated rendering."
+  },
+  {
+    "task_id": "R.data.replicacad.v3_sc0_staging_00.mesh_finish",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.data.replicacad.v3_sc0_staging_00.mesh_finish",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_sequence.py",
+      "v3_sc0_staging_00",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "--mesh-only"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.features",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.features",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.replicacad.v3_sc0_staging_00.mesh_finish"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 5000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.map",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.map",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "map",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/map.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc0_staging_00.features"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.tracking",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.tracking",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "tracking",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/tracking/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc0_staging_00.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.tracking.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.tracking.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/tracking"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/tracking/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc0_staging_00.tracking"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.global",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.global",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "global",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/global/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc0_staging_00.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Unexecuted alias promoted to R.OMCL.replica_core; do not duplicate GPU inference"
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.global.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.global.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/global"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/global/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.replica_core"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.zero_motion_noise",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.zero_motion_noise",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "zero_motion_noise",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/zero_motion_noise/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc0_staging_00.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc0_staging_00.zero_motion_noise.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc0_staging_00.zero_motion_noise.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/zero_motion_noise"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc0_staging_00/zero_motion_noise/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc0_staging_00.zero_motion_noise"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.measured_motion",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.measured_motion",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_rgbd_motion.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/motion.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.replicacad.v3_sc0_staging_00.mesh_finish"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 126,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.geometry",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.geometry",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "geometry",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/geometry.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.replicacad.v3_sc0_staging_00.mesh_finish"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 126,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2200,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.features",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.features",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.geometry",
+      "R.SG2Loc.dino_weights.resume",
+      "R.SG2Loc.scannet_checkpoint.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 7000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length5",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length5",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length5/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.features",
+      "R.SG2Loc.v3_sc0_staging_00.measured_motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 130,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2700,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length5.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length5.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length5/refinement/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "refinement_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.length5",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    },
+    "blocked_reason": "Unexecuted alias promoted to R.SG2Loc.replica_core; do not duplicate GPU inference"
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length5.refinement.metrics",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length5.refinement.metrics",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length5/refinement"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length5/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "localization_executed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.replica_core"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length10",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length10",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length10/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.features",
+      "R.SG2Loc.v3_sc0_staging_00.measured_motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2700,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length10.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length10.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length10/refinement/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "refinement_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.length10",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length10.refinement.metrics",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length10.refinement.metrics",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length10/refinement"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length10/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "localization_executed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.length10.refinement"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length25",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length25",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length25/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.features",
+      "R.SG2Loc.v3_sc0_staging_00.measured_motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2700,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length25.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length25.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length25/refinement/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "refinement_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.length25",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc0_staging_00.length25.refinement.metrics",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc0_staging_00.length25.refinement.metrics",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc0_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length25/refinement"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc0_staging_00/length25/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "localization_executed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc0_staging_00.length25.refinement"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.data.replicacad.v3_sc1_staging_00.render",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.data.replicacad.v3_sc1_staging_00.render",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_sequence.py",
+      "v3_sc1_staging_00",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 125,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 1500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "blocked_reason": "Two failed attempts preserved: missing import then PBR constant material conversion; all 600+128 observations already rendered. Reuse them in mesh_finish CPU repair, no repeated rendering."
+  },
+  {
+    "task_id": "R.data.replicacad.v3_sc1_staging_00.mesh_finish",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.data.replicacad.v3_sc1_staging_00.mesh_finish",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_sequence.py",
+      "v3_sc1_staging_00",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "--mesh-only"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.features",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.features",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.replicacad.v3_sc1_staging_00.mesh_finish"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 5000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.map",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.map",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "map",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/map.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.features"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.tracking",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.tracking",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "tracking",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/tracking/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.tracking.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.tracking.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/tracking"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/tracking/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.tracking"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.global",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.global",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "global",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/global/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.global.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.global.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/global"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/global/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.global"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.zero_motion_noise",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.zero_motion_noise",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Noisy GT-derived relative motion; tracking initialized near GT, global initialized using map-only references. Not GT-free.",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "zero_motion_noise",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/zero_motion_noise/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2300,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.v3_sc1_staging_00.zero_motion_noise.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.v3_sc1_staging_00.zero_motion_noise.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/zero_motion_noise"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/ReplicaCAD/v3_sc1_staging_00/zero_motion_noise/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.v3_sc1_staging_00.zero_motion_noise"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.measured_motion",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.measured_motion",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_rgbd_motion.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/motion.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.replicacad.v3_sc1_staging_00.mesh_finish"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 126,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.geometry",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.geometry",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "geometry",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/geometry.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.replicacad.v3_sc1_staging_00.mesh_finish"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 126,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2200,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.features",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.features",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.geometry",
+      "R.SG2Loc.dino_weights.resume",
+      "R.SG2Loc.scannet_checkpoint.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 7000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length5",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length5",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length5/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.features",
+      "R.SG2Loc.v3_sc1_staging_00.measured_motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2700,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length5.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length5.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length5/refinement/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "refinement_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.length5",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length5.refinement.metrics",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length5.refinement.metrics",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length5/refinement"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length5/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "localization_executed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.length5.refinement"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length10",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length10",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length10/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.features",
+      "R.SG2Loc.v3_sc1_staging_00.measured_motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2700,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length10.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length10.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length10/refinement/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "refinement_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.length10",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length10.refinement.metrics",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length10.refinement.metrics",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length10/refinement"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length10/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "localization_executed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.length10.refinement"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length25",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length25",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length25/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.features",
+      "R.SG2Loc.v3_sc1_staging_00.measured_motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2700,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length25.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length25.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length25/refinement/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "refinement_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.length25",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.v3_sc1_staging_00.length25.refinement.metrics",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.v3_sc1_staging_00.length25.refinement.metrics",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replicacad_localization/v3_sc1_staging_00",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length25/refinement"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/ReplicaCAD/v3_sc1_staging_00/length25/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "localization_executed": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.v3_sc1_staging_00.length25.refinement"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.acquire",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.acquire",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_tartan_full.py",
+      "abandonedfactory",
+      "P000",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 118,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.paper",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.paper",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Real publisher full stereo sequence only; GT loaded after online run, never as motion input",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_full_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/paper",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--decoder",
+      "fp32",
+      "--encoder",
+      "fp32"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/paper/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.acquire"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.paper.official_metrics",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.paper.official_metrics",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/paper"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/paper/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.paper.weight_ablation",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.paper.weight_ablation",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/replay_macvo_weights.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/paper",
+      "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/weight_ablation",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/weight_ablation/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.GT_used_during_solve": false,
+          "audit.identity_applied_inside_actual_solver": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.paper.icp_weight_ablation",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.paper.icp_weight_ablation",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_icp_ablation.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/paper",
+      "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/original_icp_weight_ablation",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/abandonedfactory/P000/original_icp_weight_ablation/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.GT_used_during_solve": false,
+          "audit.identity_applied_inside_actual_solver": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.acquire",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.acquire",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_tartan_full.py",
+      "hospital",
+      "P000",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/tartanair_full/hospital/P000/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 118,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.paper",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.paper",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Real publisher full stereo sequence only; GT loaded after online run, never as motion input",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_full_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--decoder",
+      "fp32",
+      "--encoder",
+      "fp32"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.acquire"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.paper.official_metrics",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.paper.official_metrics",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.paper.weight_ablation",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.paper.weight_ablation",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/replay_macvo_weights.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/weight_ablation",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/weight_ablation/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.GT_used_during_solve": false,
+          "audit.identity_applied_inside_actual_solver": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.paper.icp_weight_ablation",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.paper.icp_weight_ablation",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_icp_ablation.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/original_icp_weight_ablation",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/original_icp_weight_ablation/summary.json",
+        "kind": "json",
+        "equals": {
+          "audit.GT_used_during_solve": false,
+          "audit.identity_applied_inside_actual_solver": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 129,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.EuRoC.MH_01_easy.acquire",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.EuRoC.MH_01_easy.acquire",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_euroc_full.py",
+      "MH_01_easy",
+      "/data/fyp_3d/datasets/euroc_full/MH_01_easy"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/euroc_full/MH_01_easy/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 117,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.EuRoC.MH_01_easy.paper",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.EuRoC.MH_01_easy.paper",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Official EuRoC rectified stereo only, no online IMU/GT. All synchronized RGB frames; GT overlap scored offline.",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_full_sequence.py",
+      "/data/fyp_3d/datasets/euroc_full/MH_01_easy/mav0",
+      "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_01_easy/paper",
+      "--dataset-kind",
+      "euroc",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--decoder",
+      "fp32",
+      "--encoder",
+      "fp32"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_01_easy/paper/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.EuRoC.MH_01_easy.acquire"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 120,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 3200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.EuRoC.MH_01_easy.paper.official_metrics",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.EuRoC.MH_01_easy.paper.official_metrics",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/euroc_full/MH_01_easy",
+      "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_01_easy/paper"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_01_easy/paper/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.EuRoC.MH_01_easy.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.EuRoC.MH_02_easy.acquire",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.EuRoC.MH_02_easy.acquire",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_euroc_full.py",
+      "MH_02_easy",
+      "/data/fyp_3d/datasets/euroc_full/MH_02_easy"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/euroc_full/MH_02_easy/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 117,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 1000,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.EuRoC.MH_02_easy.paper",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.EuRoC.MH_02_easy.paper",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Official EuRoC rectified stereo only, no online IMU/GT. All synchronized RGB frames; GT overlap scored offline.",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_full_sequence.py",
+      "/data/fyp_3d/datasets/euroc_full/MH_02_easy/mav0",
+      "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_02_easy/paper",
+      "--dataset-kind",
+      "euroc",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--decoder",
+      "fp32",
+      "--encoder",
+      "fp32"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_02_easy/paper/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.EuRoC.MH_02_easy.acquire"
+    ],
+    "inputs": [],
+    "formal": true,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 120,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 3200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.EuRoC.MH_02_easy.paper.official_metrics",
+    "experiment_id": "R_MACVO",
+    "dataset_id": "R.MACVO.EuRoC.MH_02_easy.paper.official_metrics",
+    "paper_id": "MACVO",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/euroc_full/MH_02_easy",
+      "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_02_easy/paper"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/EuRoC/MH_02_easy/paper/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "depends_on": [
+      "R.MACVO.EuRoC.MH_02_easy.paper"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-1.acquire",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-1.acquire",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/openloris_full.py",
+      "acquire",
+      "cafe1-1",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-1"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris_full/cafe1-1/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-1.acquire.v2",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-1.acquire.v2",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/openloris_full.py",
+      "acquire",
+      "cafe1-1",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-1"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris_full/cafe1-1/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "config": {
+      "repair": "Actual requests import failure fixed in isolated sensors environment; failed attempts retained, same full source bag"
+    }
+  },
+  {
+    "task_id": "C.full.cafe1-1.prepare",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-1.prepare",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-1/cafe1-1.bag",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-1",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-1/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-1.acquire.v2"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3500,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-1.coverage",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-1.coverage",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/openloris_full.py",
+      "coverage",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-1/cafe1-1.bag",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-1",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-1/full_coverage.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-1/full_coverage.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_bag": true,
+          "all_camera_messages_preserved": true,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-1.prepare"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-1.stereo_imu",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-1.stereo_imu",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-1",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-1/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-1.coverage"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-1.stereo_imu.metrics",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-1.stereo_imu.metrics",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-1",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-1/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-1.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-2.acquire",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-2.acquire",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/openloris_full.py",
+      "acquire",
+      "cafe1-2",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris_full/cafe1-2/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-2.acquire.v2",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-2.acquire.v2",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/openloris_full.py",
+      "acquire",
+      "cafe1-2",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-2"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/openloris_full/cafe1-2/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 400,
+      "disk_gib": 5,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "config": {
+      "repair": "Actual requests import failure fixed in isolated sensors environment; failed attempts retained, same full source bag"
+    }
+  },
+  {
+    "task_id": "C.full.cafe1-2.prepare",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-2.prepare",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/prepare_openloris_mins.py",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-2/cafe1-2.bag",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-2",
+      "--source",
+      "/data/fyp_3d/sources/MINS"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-2/audit.json",
+        "kind": "json",
+        "equals": {
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-2.acquire.v2"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3500,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-2.coverage",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-2.coverage",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/openloris_full.py",
+      "coverage",
+      "/data/fyp_3d/datasets/openloris_full/cafe1-2/cafe1-2.bag",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-2",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-2/full_coverage.json"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-2/full_coverage.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_bag": true,
+          "all_camera_messages_preserved": true,
+          "GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-2.prepare"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-2.stereo_imu",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-2.stereo_imu",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/run_mins_suite.py",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-2",
+      "--binary",
+      "/data/fyp_3d/build/mins/mins_bag",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-2/execution.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.returncode": 0,
+          "stereo_imu.use_gt": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-2.coverage"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "C.full.cafe1-2.stereo_imu.metrics",
+    "experiment_id": "R_MINS",
+    "dataset_id": "C.full.cafe1-2.stereo_imu.metrics",
+    "paper_id": "MINS",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sensors/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/scripts/evaluate_mins.py",
+      "/data/fyp_3d/runs/reproduction/MINS/cafe1-2",
+      "--modes",
+      "stereo_imu"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MINS/cafe1-2/comparison.json",
+        "kind": "json",
+        "equals": {
+          "stereo_imu.protocol.GT_online": false
+        }
+      }
+    ],
+    "depends_on": [
+      "C.full.cafe1-2.stereo_imu"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.data.Replica.office_0.acquire",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.data.Replica.office_0.acquire",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_replica_scene.py",
+      "office_0",
+      "/data/fyp_3d/datasets/replica_independent/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replica_independent/office_0/acquisition.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.replica_core"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 700,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.data.Replica.office_0.render",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.data.Replica.office_0.render",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replica_sequence.py",
+      "office_0",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replica_independent_sequences/office_0/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.office_0.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.geometry",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.geometry",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "geometry",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/geometry.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.office_0.render"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.motion",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.motion",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_rgbd_motion.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/motion.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.office_0.render"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.features",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.features",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.geometry",
+      "R.SG2Loc.dino_weights.resume",
+      "R.SG2Loc.scannet_checkpoint.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 7000,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.length5",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.length5",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/length5/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.features",
+      "R.SG2Loc.Replica.office_0.motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.length5.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.length5.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/length5/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.length5",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.length10",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.length10",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/length10/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.features",
+      "R.SG2Loc.Replica.office_0.motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.length10.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.length10.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/length10/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.length10",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.length25",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.length25",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/length25/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.features",
+      "R.SG2Loc.Replica.office_0.motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.office_0.length25.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.office_0.length25.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/office_0/length25/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.office_0.length25",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.features",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.features",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.office_0.render"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 5000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.map",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.map",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "map",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/map.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.features"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.tracking",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.tracking",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "tracking",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/tracking/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.tracking.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.tracking.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/tracking"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/tracking/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.tracking"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.global",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.global",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "global",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/global/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.global.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.global.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/global"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/global/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.global"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.zero_motion_noise",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.zero_motion_noise",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "zero_motion_noise",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/zero_motion_noise/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.office_0.zero_motion_noise.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.office_0.zero_motion_noise.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/office_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/zero_motion_noise"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/office_0/zero_motion_noise/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.office_0.zero_motion_noise"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.data.Replica.room_0.acquire",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.data.Replica.room_0.acquire",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/acquire_replica_scene.py",
+      "room_0",
+      "/data/fyp_3d/datasets/replica_independent/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replica_independent/room_0/acquisition.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.replica_core"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "download",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 0,
+      "ram_mib": 700,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.data.Replica.room_0.render",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.data.Replica.room_0.render",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/habitat/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replica_sequence.py",
+      "room_0",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/datasets/replica_independent_sequences/room_0/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.room_0.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.geometry",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.geometry",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "geometry",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/geometry.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.room_0.render"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 3500,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.motion",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.motion",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/replicacad_rgbd_motion.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/motion.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.room_0.render"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 127,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 900,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.features",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.features",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.geometry",
+      "R.SG2Loc.dino_weights.resume",
+      "R.SG2Loc.scannet_checkpoint.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 7000,
+      "disk_gib": 3,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.length5",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.length5",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/length5/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.features",
+      "R.SG2Loc.Replica.room_0.motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.length5.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.length5.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0",
+      "--length",
+      "5"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/length5/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.length5",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.length10",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.length10",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/length10/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.features",
+      "R.SG2Loc.Replica.room_0.motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.length10.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.length10.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0",
+      "--length",
+      "10"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/length10/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.length10",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.length25",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.length25",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "localize",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/length25/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "GT_online": false,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.features",
+      "R.SG2Loc.Replica.room_0.motion"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2800,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.SG2Loc.Replica.room_0.length25.refinement",
+    "experiment_id": "R_SG2Loc",
+    "dataset_id": "R.SG2Loc.Replica.room_0.length25.refinement",
+    "paper_id": "SG2Loc",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/sg2loc/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/sg2loc_replicacad.py",
+      "refine_accept",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0",
+      "--length",
+      "25"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/SG2Loc/Replica/room_0/length25/refinement/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "localization_executed": true,
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.SG2Loc.Replica.room_0.length25",
+      "R.SG2Loc.roma_weights.acquire"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 116,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 4200,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {},
+    "env": {
+      "LD_LIBRARY_PATH": "/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvrtc/lib:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/cuda_nvcc/nvvm/lib64:/data/fyp_3d/envs/sg2loc/lib/python3.10/site-packages/nvidia/nvjitlink/lib"
+    }
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.features",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.features",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "features",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/features.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.data.Replica.room_0.render"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 5000,
+      "disk_gib": 2,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.map",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.map",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "map",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/map.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted"
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.features"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.tracking",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.tracking",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "tracking",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/tracking/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.tracking.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.tracking.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/tracking"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/tracking/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.tracking"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.global",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.global",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "global",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/global/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.global.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.global.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/global"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/global/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.global"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.zero_motion_noise",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.zero_motion_noise",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/omcl/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/omcl_replicacad.py",
+      "zero_motion_noise",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/zero_motion_noise/execution.json",
+        "kind": "json",
+        "equals": {
+          "status": "executed",
+          "localization_executed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.map"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 128,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 1,
+      "ram_mib": 2500,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
+  },
+  {
+    "task_id": "R.OMCL.Replica.room_0.zero_motion_noise.metrics",
+    "experiment_id": "R_OMCL",
+    "dataset_id": "R.OMCL.Replica.room_0.zero_motion_noise.metrics",
+    "paper_id": "OMCL",
+    "reproduction_level": "Original Method on Alternative Data",
+    "online_input_condition": "Declared by each scientific protocol; GT-derived motion explicitly isolated",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/localization_metrics.py",
+      "/data/fyp_3d/datasets/replica_independent_sequences/room_0",
+      "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/zero_motion_noise"
+    ],
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/OMCL/Replica/room_0/zero_motion_noise/metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "independently_recomputed": true,
+          "frames": 600
+        }
+      }
+    ],
+    "depends_on": [
+      "R.OMCL.Replica.room_0.zero_motion_noise"
+    ],
+    "inputs": [],
+    "formal": false,
+    "seed": 2089,
+    "max_attempts": 2,
+    "retry_delay_s": 120,
+    "priority": 114,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 4500
+    },
+    "coverage": {}
   }
 ]

@@ -629,6 +629,10 @@ def extend(tasks, repo, base):
         )
     for s in tasks:
         if s["task_id"].startswith("R.ACE.7scenes."):
+            if s['task_id']=='R.ACE.7scenes.chess.train8M':
+                # The first 8M head completed before scene-label normalization.
+                # Preserve its accepted scientific spec and original receipt.
+                continue
             s["dataset_id"] = "7scenes_" + s["task_id"].split(".")[3]
             s["model_dataset_id"] = s["dataset_id"]
     output = base / "runs/reproduction/MACVO/official_metrics_existing_demo.json"
@@ -954,4 +958,5 @@ def extend(tasks, repo, base):
     for s in tasks:
         if s["task_id"] == "macvo.demo.geometric":
             s["reproduction_level"] = "Independent Baseline"
-    return tasks
+    from repair_manifest import extend_repairs
+    return extend_repairs(tasks, repo, base)

@@ -1,5 +1,20 @@
 # FYP 持久科研实验系统
 
+## 2026-11-01 本轮阻塞修复（覆盖下方较早的状态描述）
+
+`reproduction/repair_manifest.py` 将真实数据获取、原方法执行、独立指标验收加入原 SQLite DAG；不是另起调度器。SG2Loc/OMCL 原来空命令的核心 ID 已替换为定位执行入口，只有实际完整轨迹和独立指标通过才接受。已完成任务的 command/config/inputs/seed/env/validation/场景绑定保持不变；失败尝试保留。
+
+- OMCL 已在 ReplicaCAD `v3_sc0_staging_00` 真正完成 600 帧全局初始化定位，独立指标接受；原 LSeg、Kaolin 语言八叉树、原观测似然、预测/重采样/位姿估计均实际运行。使用明确标记的噪声 GT 相对运动条件，不是无 GT 在线实验；两种布局来自共享 FRL 公寓，不能称独立建筑或原论文 Replica/NARADIO 表格复现。
+- SG2Loc 使用官方 ScanNet SceneGraphLoc checkpoint、真实 DINOv2-g 多视图对象/查询特征、实例三角网格及 BVH；语义关系未标注的边按官方 `none` 处理，未制造特征。查询 GT 与在线入口隔离，实际 RGB-D 里程计及声明的水平安装提供运动/重力，是替代数据条件。粒子滤波与 RoMaV2 refinement 的最终完成状态以 SQLite 和独立 metrics.json 为准，特征提取成功不等于定位成功。
+- MAC-VO 新增完整 TartanAir hospital/P000（563 帧）和 abandonedfactory/P000（2176 帧）。原 Paper 配置保留 ICP 优化器；完整源序列执行及原官方指标/独立 SE3 复算另有验收。`original_icp_weight_ablation` 是固定学习对应点、固定静态初值的原 ICP 后端受控消融，不能称完整端到端 Paper 消融；较早 DISP replay 结果保留且不混称。
+- Hypersim 冻结 51 候选已全部终态，39 场景/7901 帧接受、12 场景隔离；不足冻结 40/8000 训练门槛，qualification 保留 FAILED，不放宽阈值，也不额外启动语义训练。
+- MINS 原 office bag 本身只有 12–53 秒，并非读取截断；新 café 源 bag 逐消息覆盖验收后运行原 stereo_imu，保留严重漂移等真实失败。不得称完整长序列或纯轮速成功。
+- EuRoC 新 ETH DOI 元数据可访问，但实际公开内容连接仍有 TLS/429；12Scenes 公开源仍受 TLS/502 阻塞。下载失败不阻止其他任务。
+
+独立原 Replica 场景链有真实获取/转换入口，OMCL 首条完整定位验收后即可获取数据，不依赖 SG2Loc 成功；尚未验证的数据适配不称已就绪。源文件按场景选择性获取，保留 30GiB 磁盘余量，不删除历史接受产物。所有新实验均保留替代数据/运动条件/场景绑定，绝不将不同场景地图或轨迹混用。先尝试首条 SG2Loc 核心定位，再执行备好的 MAC-VO/OMCL/ACE，最后其他 SG2Loc 消融；SG2Loc 按完整窗口保存与来源/配置/代码绑定的原子检查点及精确 NumPy RNG 状态，恢复不重复已完成窗口。
+
+无人值守仍由 enabled 的 `fyp-experiments.service` 和独立 `fyp-exp-*` worker 运行。Codex heartbeat 和本轮前已关闭的两个实验进度/报告 timer 保持关闭；不恢复巡检。最终交接以本轮阻塞修复报告的时间戳和真实 worker 快照为准，旧 ETA 不再代表新增 GPU 队列。
+
 ## 2026-11-01 20:30 用户交接指令（覆盖此前巡检要求）
 
 用户要求：清理旧Diffusion项目无用数据，启动能执行的实验后停止Codex及巡检，电脑自己完成队列。已通过应用工具将fyp heartbeat设为PAUSED；`fyp-reproduction-progress.timer`和`fyp-experiment-report.timer`均disable/stop。不重新启用，除非用户随后要求。`fyp-experiments.service`与独立worker不停止，仍有限重试、验收与资源调度，关闭Codex界面不影响它们。
