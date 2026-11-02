@@ -1,5 +1,10 @@
 # FYP 持久科研实验系统
 
+## 2026-11-02 MAC-VO 消融/速度核查
+
+ACE七场景原D-SLAM宏平均80.5221%，只与论文D-SLAM80.8%比较；97.1%是另一位姿条件。MAC-VO旧静态初值重放保留为受控后端实验。本轮增加真实TartanMotionNet初值的完整端到端w/o CovOpt、逐模块计时、精确输入/输出重放，以及保持12次decoder更新的独立FP16硬件候选。已通过实际198对应点的原ICP spawn验证，最终效果以完整轨迹验收为准。具体源文献、预先固定的精度判据与DAG入口见 [MACVO_FOLLOWUP_zh.md](reproduction/MACVO_FOLLOWUP_zh.md)。所有旧接受结果保持不变，不恢复巡检。
+
+
 ## 2026-11-01 本轮阻塞修复（覆盖下方较早的状态描述）
 
 `reproduction/repair_manifest.py` 将真实数据获取、原方法执行、独立指标验收加入原 SQLite DAG；不是另起调度器。SG2Loc/OMCL 原来空命令的核心 ID 已替换为定位执行入口，只有实际完整轨迹和独立指标通过才接受。已完成任务的 command/config/inputs/seed/env/validation/场景绑定保持不变；失败尝试保留。

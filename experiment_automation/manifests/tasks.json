@@ -29466,5 +29466,878 @@
       "min_gpu_free_mib": 4500
     },
     "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.solver_spawn_contract.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.solver_spawn_contract.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_solver_contract.py",
+      "/data/fyp_3d/sources/MAC-VO",
+      "/data/fyp_3d/runs/reproduction/MACVO/hospital/P000/paper",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/solver_contract"
+    ],
+    "depends_on": [],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 150,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/solver_contract/acceptance.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "spawn_verified": true,
+          "actual_original_ICP": true,
+          "GT_read": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.original_fp32.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.original_fp32.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_instrumented_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--backend-covariance",
+      "original",
+      "--capture-graphs"
+    ],
+    "depends_on": [
+      "R.MACVO.solver_spawn_contract.v1",
+      "R.MACVO.hospital.P000.acquire"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 151,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 4,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32/stage_profile.json",
+        "kind": "json",
+        "equals": {
+          "initialization_and_final_optimizer_drain_included": true,
+          "per_frame_global_sync": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.original_fp32.v1.exact_replay",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.original_fp32.v1.exact_replay",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_exact_solver_replay.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.audit.original_fp32.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32/exact_solver_replay.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_saved_solver_job_coverage": true,
+          "motion_initialization_preserved": true,
+          "GT_read": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.original_fp32.v1.metrics",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.original_fp32.v1.metrics",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32"
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.audit.original_fp32.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp32/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.original_fp16.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.original_fp16.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_instrumented_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp16",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--encoder",
+      "fp16",
+      "--decoder",
+      "fp16",
+      "--backend-covariance",
+      "original",
+      "--capture-graphs"
+    ],
+    "depends_on": [
+      "R.MACVO.solver_spawn_contract.v1",
+      "R.MACVO.hospital.P000.acquire"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 150,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 4,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp16/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp16/stage_profile.json",
+        "kind": "json",
+        "equals": {
+          "initialization_and_final_optimizer_drain_included": true,
+          "per_frame_global_sync": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.original_fp16.v1.metrics",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.original_fp16.v1.metrics",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp16"
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.audit.original_fp16.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/original_fp16/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.identity_fp32.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.identity_fp32.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_instrumented_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/identity_fp32",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--backend-covariance",
+      "identity",
+      "--capture-graphs"
+    ],
+    "depends_on": [
+      "R.MACVO.solver_spawn_contract.v1",
+      "R.MACVO.hospital.P000.acquire"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 149,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 4,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/identity_fp32/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/identity_fp32/stage_profile.json",
+        "kind": "json",
+        "equals": {
+          "initialization_and_final_optimizer_drain_included": true,
+          "per_frame_global_sync": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.identity_fp32.v1.metrics",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.identity_fp32.v1.metrics",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/hospital/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/identity_fp32"
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.audit.identity_fp32.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/identity_fp32/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.comparison.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.comparison.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_followup_acceptance.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital"
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.audit.original_fp32.v1.metrics",
+      "R.MACVO.hospital.P000.audit.original_fp16.v1.metrics",
+      "R.MACVO.hospital.P000.audit.identity_fp32.v1.metrics"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/comparison.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_pipeline_ablation_executed": true,
+          "all_metrics_independent": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_instrumented_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--backend-covariance",
+      "original",
+      "--capture-graphs"
+    ],
+    "depends_on": [
+      "R.MACVO.solver_spawn_contract.v1",
+      "R.MACVO.abandonedfactory.P000.acquire"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 147,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 4,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32/stage_profile.json",
+        "kind": "json",
+        "equals": {
+          "initialization_and_final_optimizer_drain_included": true,
+          "per_frame_global_sync": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.exact_replay",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.exact_replay",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_exact_solver_replay.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32",
+      "/data/fyp_3d/sources/MAC-VO"
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32/exact_solver_replay.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_saved_solver_job_coverage": true,
+          "motion_initialization_preserved": true,
+          "GT_read": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.metrics",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.metrics",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32"
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp32/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_instrumented_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp16",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--encoder",
+      "fp16",
+      "--decoder",
+      "fp16",
+      "--backend-covariance",
+      "original",
+      "--capture-graphs"
+    ],
+    "depends_on": [
+      "R.MACVO.solver_spawn_contract.v1",
+      "R.MACVO.abandonedfactory.P000.acquire"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 146,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 4,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp16/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp16/stage_profile.json",
+        "kind": "json",
+        "equals": {
+          "initialization_and_final_optimizer_drain_included": true,
+          "per_frame_global_sync": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1.metrics",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1.metrics",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp16"
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/original_fp16/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_instrumented_sequence.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000/sequence",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/identity_fp32",
+      "--source",
+      "/data/fyp_3d/sources/MAC-VO",
+      "--weights",
+      "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+      "--config",
+      "paper",
+      "--motion-weights",
+      "/data/fyp_3d/models/MACVO_posenet.pkl",
+      "--encoder",
+      "fp32",
+      "--decoder",
+      "fp32",
+      "--backend-covariance",
+      "identity",
+      "--capture-graphs"
+    ],
+    "depends_on": [
+      "R.MACVO.solver_spawn_contract.v1",
+      "R.MACVO.abandonedfactory.P000.acquire"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 145,
+    "kind": "cpu",
+    "resources": {
+      "gpu": true,
+      "cpu_slots": 4,
+      "ram_mib": 3000,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/identity_fp32/summary.json",
+        "kind": "json",
+        "equals": {
+          "initialization_included": true
+        }
+      },
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/identity_fp32/stage_profile.json",
+        "kind": "json",
+        "equals": {
+          "initialization_and_final_optimizer_drain_included": true,
+          "per_frame_global_sync": false
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1.metrics",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1.metrics",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_new_metrics.py",
+      "/data/fyp_3d/datasets/tartanair_full/abandonedfactory/P000",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/identity_fp32"
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/identity_fp32/official_metrics.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_source_sequence": true,
+          "GT_online": false,
+          "original_metric_functions": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.comparison.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.comparison.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_followup_acceptance.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory"
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.metrics",
+      "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1.metrics",
+      "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1.metrics"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/comparison.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
+          "full_pipeline_ablation_executed": true,
+          "all_metrics_independent": true
+        }
+      }
+    ],
+    "coverage": {}
   }
 ]

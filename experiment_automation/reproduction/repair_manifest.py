@@ -140,4 +140,5 @@ def extend_repairs(tasks, repo, base):
         elif tid.startswith('R.OMCL.') and task.get('resources',{}).get('gpu'):task['priority']=128
         elif tid.startswith('R.ACE.7scenes.') and task.get('resources',{}).get('gpu'):task['priority']=127
         elif tid.startswith('R.SG2Loc.') and task.get('resources',{}).get('gpu'):task['priority']=116
-    return tasks
+    from macvo_followup_manifest import extend
+    return extend(tasks,repo,base)
