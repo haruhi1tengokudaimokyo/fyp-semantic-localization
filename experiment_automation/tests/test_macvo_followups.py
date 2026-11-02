@@ -32,3 +32,14 @@ def test_followups_keep_original_baselines_and_live_motion():
             task=specs[f'R.MACVO.{scene}.P000.audit.{mode}.v1'];cmd=task['command']
             assert '--frames' not in cmd and '--motion-weights' in cmd and '--capture-graphs' in cmd
             assert task['resources']['gpu'] and 'R.MACVO.solver_spawn_contract.v1' in task['depends_on']
+
+def test_precision_failure_does_not_block_real_ablation_report(tmp_path):
+    import shutil
+    trial(tmp_path);shutil.rmtree(tmp_path/'original_fp16')
+    main(tmp_path,'ablation')
+    result=json.loads((tmp_path/'comparison.json').read_text())
+    assert result['full_pipeline_ablation_executed'] and result['precision_gate_passed'] is None
+    specs={t['task_id']:t for t in json.loads((ROOT/'manifests/tasks.json').read_text())}
+    for scene in ['hospital','abandonedfactory']:
+        deps=specs[f'R.MACVO.{scene}.P000.audit.comparison.v1']['depends_on']
+        assert len(deps)==2 and not any('fp16' in dep for dep in deps)

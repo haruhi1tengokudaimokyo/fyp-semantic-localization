@@ -24,3 +24,8 @@ FP16 判据在运行前写入代码与测试：ATE ≤ max(1.05×FP32 ATE, FP32 
 新增真实 DAG 任务使用 `R.MACVO.{hospital,abandonedfactory}.P000.audit.{original_fp32,original_fp16,identity_fp32}.v1`，其后连接官方指标、精确求解重放和全链比较任务。所有旧已接受任务的科学字段保持不变，健康任务不停止，不恢复巡检。
 
 同论文 Benchmark 尚未补齐：2026-11-02 再测原 ETH 公开源读取超时、新 ETH 内容入口429、UZH镜像TLS错误；结果保存在 automation/artifacts/macvo_euroc_source_recheck_20261102.json。官方配置的 TartanAir v2 自采测试序列使用作者本地路径，已取得的 v1 序列与官方 Demo 不能冒充表格同轨迹。见[官方源码](https://github.com/MAC-VO/MAC-VO)。另外已检查TartanVO官方CMU Box样例ZIP：1678个左目PNG、0个右目，不能作为完整双目替代。公开源未取得合法完整双目文件前保持阻塞。
+
+
+本轮实测补充：563帧FP32控制与旧正式原始轨迹逐元素差0，ATE仍0.154737m；562次捕获输入的精确重放均与实际子进程输出差0。完整pipeline 1346.6ms/帧，前端稳态CUDA跨度1302.5ms，后端并行求解平均148.3ms，等待/写回1.49ms。取消额外同步没有实质加速；瓶颈确实是前端。
+
+FP16实际试验失败：初始25个跟踪更新均得到0个候选对应点，约4.5秒/帧，慢于FP32。保留日志和failed_trial_abort.json，将该无效候选停止，未把它算完整定位；没有放松门槛或伪造特征。Factory同精度候选保持BLOCKED，防止重复浪费计算。精度比较与真正w/o CovOpt验收分离，半精度失败不会阻止后者；hospital/factory的FP32完整端到端消融继续。此处没有宣称软件已经消除硬件速度差距，也不会擅自改成4迭代Fast来凑速度。

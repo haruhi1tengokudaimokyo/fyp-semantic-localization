@@ -29891,11 +29891,12 @@
     "command": [
       "/data/fyp_3d/envs/macvo/bin/python",
       "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_followup_acceptance.py",
-      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital"
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital",
+      "--section",
+      "ablation"
     ],
     "depends_on": [
       "R.MACVO.hospital.P000.audit.original_fp32.v1.metrics",
-      "R.MACVO.hospital.P000.audit.original_fp16.v1.metrics",
       "R.MACVO.hospital.P000.audit.identity_fp32.v1.metrics"
     ],
     "inputs": [],
@@ -29919,6 +29920,50 @@
         "equals": {
           "status": "accepted",
           "full_pipeline_ablation_executed": true,
+          "all_metrics_independent": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.hospital.P000.audit.precision_comparison.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.hospital.P000.audit.precision_comparison.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_followup_acceptance.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital",
+      "--section",
+      "precision"
+    ],
+    "depends_on": [
+      "R.MACVO.hospital.P000.audit.original_fp32.v1.metrics",
+      "R.MACVO.hospital.P000.audit.original_fp16.v1.metrics"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/hospital/precision_comparison.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
           "all_metrics_independent": true
         }
       }
@@ -30141,7 +30186,8 @@
         }
       }
     ],
-    "coverage": {}
+    "coverage": {},
+    "blocked_reason": "Hospital FP16 trial produced zero observations for 25 consecutive frames and was slower; compatibility not passed. Preserve command, do not propagate invalid precision to another scene."
   },
   {
     "task_id": "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1.metrics",
@@ -30306,11 +30352,12 @@
     "command": [
       "/data/fyp_3d/envs/macvo/bin/python",
       "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_followup_acceptance.py",
-      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory"
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory",
+      "--section",
+      "ablation"
     ],
     "depends_on": [
       "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.metrics",
-      "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1.metrics",
       "R.MACVO.abandonedfactory.P000.audit.identity_fp32.v1.metrics"
     ],
     "inputs": [],
@@ -30334,6 +30381,50 @@
         "equals": {
           "status": "accepted",
           "full_pipeline_ablation_executed": true,
+          "all_metrics_independent": true
+        }
+      }
+    ],
+    "coverage": {}
+  },
+  {
+    "task_id": "R.MACVO.abandonedfactory.P000.audit.precision_comparison.v1",
+    "experiment_id": "R_MACVO",
+    "paper_id": "MACVO",
+    "dataset_id": "R.MACVO.abandonedfactory.P000.audit.precision_comparison.v1",
+    "reproduction_level": "Hardware Adapted",
+    "online_input_condition": "Stereo RGB + calibration only; actual original TartanMotionNet, GT read only after trajectory completes",
+    "command": [
+      "/data/fyp_3d/envs/macvo/bin/python",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/experiment_automation/reproduction/macvo_followup_acceptance.py",
+      "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory",
+      "--section",
+      "precision"
+    ],
+    "depends_on": [
+      "R.MACVO.abandonedfactory.P000.audit.original_fp32.v1.metrics",
+      "R.MACVO.abandonedfactory.P000.audit.original_fp16.v1.metrics"
+    ],
+    "inputs": [],
+    "seed": 1305,
+    "formal": false,
+    "max_attempts": 1,
+    "retry_delay_s": 120,
+    "priority": 160,
+    "kind": "cpu",
+    "resources": {
+      "gpu": false,
+      "cpu_slots": 1,
+      "ram_mib": 1600,
+      "disk_gib": 1,
+      "min_gpu_free_mib": 5200
+    },
+    "validation": [
+      {
+        "path": "/data/fyp_3d/runs/reproduction/MACVO/diagnostics_20261102/abandonedfactory/precision_comparison.json",
+        "kind": "json",
+        "equals": {
+          "status": "accepted",
           "all_metrics_independent": true
         }
       }
