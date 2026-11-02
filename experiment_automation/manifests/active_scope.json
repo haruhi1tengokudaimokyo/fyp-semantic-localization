@@ -1,0 +1,5 @@
+{
+  "active_paper_ids": ["ACE", "MACVO"],
+  "active_legacy_experiment_ids": ["A", "B"],
+  "reason": "User explicitly narrowed work to ACE and MAC-VO on 2026-11-02 and authorized retiring other datasets and old localization/diffusion data; retain source code and compact scientific records."
+}

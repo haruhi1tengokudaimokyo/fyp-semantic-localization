@@ -1898,6 +1898,8 @@ sys.path.insert(0, str(ROOT / "reproduction"))
 from extend_manifest import extend
 
 tasks = extend(tasks, REPO, B)
+from retention_scope import apply_scope
+tasks = apply_scope(tasks, ROOT / "manifests/active_scope.json")
 atomic(ROOT / "manifests/tasks.json", tasks)
 print("tasks", len(tasks))
 if __name__ == "__main__":

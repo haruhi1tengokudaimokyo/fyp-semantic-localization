@@ -1,5 +1,14 @@
 # FYP 持久科研实验系统
 
+## 2026-11-02 最新范围：仅继续 ACE 与 MAC-VO
+
+用户明确要求只保留ACE、MAC-VO实验线，清理其他数据及旧室内定位/diffusion数据，关键代码保留。本节覆盖下方所有较早的SG2Loc/OMCL/MINS/Hypersim/融合/动态任务继续要求。`manifests/active_scope.json`与`reproduction/retention_scope.py`在每次生成manifest时阻止非保留任务重新下载或运行；历史接受状态保留为当时的证据，不意味着已退休原数据仍在磁盘。
+
+保留7Scenes、TartanAir完整序列、作者MAC-VO Demo、ACE/MAC-VO模型/轨迹/指标/缓存、源码与运行环境。ACE通过research_base.pth依赖 `/data/fyp-semrayloc/envs/semrayloc`，两环境的Python又依赖 `/data/FYP_Indoor_Localization/tools/python`，这些共享依赖必须保留，禁止整棵删除旧项目。MAC-VO指标依赖macvo_metrics_overlay，亦保留。
+
+清理前已保留SQLite一致备份，并将退休目录的24931个代码/配置/小型科研记录归档、逐文件SHA256复验。清理计划、精确删除记录、代码索引、归档及可用空间见主工作区 `outputs/FYP_Automation/cleanup_20261102/`。旧benchmark core/monitor/publish timer已disable/stop；现有fyp-experiments和ACE/MAC-VO独立worker保持运行，不恢复Codex巡检。此次清理与Factory控制计时有重叠，该次时间不能作为独占资源速度结论；轨迹/精度验收不受此标记影响。
+
+
 ## 2026-11-02 MAC-VO 消融/速度核查
 
 ACE七场景原D-SLAM宏平均80.5221%，只与论文D-SLAM80.8%比较；97.1%是另一位姿条件。MAC-VO旧静态初值重放保留为受控后端实验。本轮增加真实TartanMotionNet初值的完整端到端w/o CovOpt、逐模块计时、精确输入/输出重放，以及保持12次decoder更新的独立FP16硬件候选。已通过实际198对应点的原ICP spawn验证，最终效果以完整轨迹验收为准。具体源文献、预先固定的精度判据与DAG入口见 [MACVO_FOLLOWUP_zh.md](reproduction/MACVO_FOLLOWUP_zh.md)。所有旧接受结果保持不变，不恢复巡检。
