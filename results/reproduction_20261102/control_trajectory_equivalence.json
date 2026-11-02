@@ -1,0 +1,12 @@
+{
+  "hospital": {
+    "frames": 563,
+    "max_pose_matrix_difference": 0.0,
+    "identical": true
+  },
+  "abandonedfactory": {
+    "frames": 2176,
+    "max_pose_matrix_difference": 0.0,
+    "identical": true
+  }
+}
