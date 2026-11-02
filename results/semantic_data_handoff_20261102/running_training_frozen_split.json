@@ -1,0 +1,35 @@
+{
+  "accepted_split": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "val": [
+      3000,
+      3001,
+      3002
+    ],
+    "test": [
+      3250,
+      3251,
+      3252
+    ]
+  },
+  "excluded_for_data_quality": [
+    9
+  ],
+  "requested_split_counts": [
+    10,
+    3,
+    3
+  ],
+  "complete_10_3_3": false,
+  "selection": "Source split and fixed data acceptance only; no localization score used"
+}

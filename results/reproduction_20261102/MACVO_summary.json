@@ -1,0 +1,359 @@
+{
+  "full_pipeline_controls": [
+    {
+      "sequence": "abandonedfactory",
+      "condition": "identity_fp32",
+      "frames": 2176,
+      "ATE_m": 4.879088657892743,
+      "lost_frames": 1,
+      "relative_metrics": {
+        "ATE_m": {
+          "rmse": 4.879088657892748,
+          "mean": 4.116338739404725,
+          "median": 3.2755795941631196,
+          "std": 2.61940098382313,
+          "min": 0.8724506190095926,
+          "max": 10.480763859091523,
+          "sse": 51800.781342312985
+        },
+        "translation_relative_m_per_frame": {
+          "rmse": 0.043211584414977064,
+          "mean": 0.028379090820709697,
+          "median": 0.02020360938997828,
+          "std": 0.032586319703866516,
+          "min": 0.0001499765911692938,
+          "max": 0.8104117412213537,
+          "sse": 4.061249235144597
+        },
+        "rotation_relative_deg_per_frame": {
+          "rmse": 0.2574573166319928,
+          "mean": 0.1685926511300865,
+          "median": 0.12758733905656247,
+          "std": 0.1945784876914073,
+          "min": 0.003929684553165714,
+          "max": 5.386371408193706,
+          "sse": 144.16828700497797
+        },
+        "RPE_full_transform": {
+          "rmse": 0.04367626186696939,
+          "mean": 0.02892428656416781,
+          "median": 0.02056796878681658,
+          "std": 0.032726159222034985,
+          "min": 0.0003921715516112999,
+          "max": 0.8104805596963528,
+          "sse": 4.149064475211784
+        }
+      },
+      "mean_runtime_ms": 1317.9088242077876,
+      "full_source_sequence": true,
+      "GT_online": false
+    },
+    {
+      "sequence": "abandonedfactory",
+      "condition": "original_fp32",
+      "frames": 2176,
+      "ATE_m": 2.7300540587277964,
+      "lost_frames": 1,
+      "relative_metrics": {
+        "ATE_m": {
+          "rmse": 2.7300540587277964,
+          "mean": 2.440927950468521,
+          "median": 2.3329205612471773,
+          "std": 1.2227288759973156,
+          "min": 0.3622427639102188,
+          "max": 4.652801641978545,
+          "sse": 16218.152675941625
+        },
+        "translation_relative_m_per_frame": {
+          "rmse": 0.017786586074533043,
+          "mean": 0.0028386715374301686,
+          "median": 0.0016788465100592567,
+          "std": 0.017558604388998478,
+          "min": 7.624239050225288e-05,
+          "max": 0.8104109299536895,
+          "sse": 0.6880887511062309
+        },
+        "rotation_relative_deg_per_frame": {
+          "rmse": 0.08612724885618879,
+          "mean": 0.030050999208602294,
+          "median": 0.01679379413103383,
+          "std": 0.08071456152455056,
+          "min": 0.000862984840018415,
+          "max": 1.468179450246325,
+          "sse": 16.133939015290522
+        },
+        "RPE_full_transform": {
+          "rmse": 0.017913174408114626,
+          "mean": 0.0030406579204477497,
+          "median": 0.0018013075288865969,
+          "std": 0.01765322114477557,
+          "min": 0.00012109194889997689,
+          "max": 0.8104797476312474,
+          "sse": 0.6979179527917838
+        }
+      },
+      "mean_runtime_ms": 1310.6145938772963,
+      "full_source_sequence": true,
+      "GT_online": false
+    },
+    {
+      "sequence": "hospital",
+      "condition": "identity_fp32",
+      "frames": 563,
+      "ATE_m": 0.43373120963551637,
+      "lost_frames": 0,
+      "relative_metrics": {
+        "ATE_m": {
+          "rmse": 0.43373120963551687,
+          "mean": 0.3760338262831359,
+          "median": 0.33516214591573934,
+          "std": 0.21615115938331933,
+          "min": 0.12172529385475979,
+          "max": 1.2372531567766096,
+          "sse": 105.91311512529334
+        },
+        "translation_relative_m_per_frame": {
+          "rmse": 0.015479687267929965,
+          "mean": 0.01150408606873753,
+          "median": 0.008817612611383065,
+          "std": 0.010357447640996897,
+          "min": 0.0010546160670238942,
+          "max": 0.10962751881300978,
+          "sse": 0.13466684346705715
+        },
+        "rotation_relative_deg_per_frame": {
+          "rmse": 0.440023844498554,
+          "mean": 0.2749916317774051,
+          "median": 0.1872022065544199,
+          "std": 0.34351213396281594,
+          "min": 0.008145761394788089,
+          "max": 4.646326810814685,
+          "sse": 108.81499285473564
+        },
+        "RPE_full_transform": {
+          "rmse": 0.01890938497801213,
+          "mean": 0.01356329405748933,
+          "median": 0.010065221542993663,
+          "std": 0.01317580716907869,
+          "min": 0.001295526688126722,
+          "max": 0.15862964427332915,
+          "sse": 0.20095144021862898
+        }
+      },
+      "mean_runtime_ms": 1339.0196779467876,
+      "full_source_sequence": true,
+      "GT_online": false
+    },
+    {
+      "sequence": "hospital",
+      "condition": "original_fp32",
+      "frames": 563,
+      "ATE_m": 0.1547372650203687,
+      "lost_frames": 0,
+      "relative_metrics": {
+        "ATE_m": {
+          "rmse": 0.15473726502036847,
+          "mean": 0.1341365597332282,
+          "median": 0.13422493462296062,
+          "std": 0.07714275422175335,
+          "min": 0.03530424235432189,
+          "max": 0.3349608476390296,
+          "sse": 13.480258727708847
+        },
+        "translation_relative_m_per_frame": {
+          "rmse": 0.00340181163715439,
+          "mean": 0.002492856345974548,
+          "median": 0.0018855102946961156,
+          "std": 0.0023147331710185208,
+          "min": 0.00012991961388606287,
+          "max": 0.020623485573998547,
+          "sse": 0.006503645197049615
+        },
+        "rotation_relative_deg_per_frame": {
+          "rmse": 0.08884907882347437,
+          "mean": 0.06140016963930631,
+          "median": 0.042320954650199305,
+          "std": 0.06421976312666039,
+          "min": 0.0023380684148335304,
+          "max": 0.6600605240055957,
+          "sse": 4.436517249972338
+        },
+        "RPE_full_transform": {
+          "rmse": 0.004047432025746455,
+          "mean": 0.002968002585921073,
+          "median": 0.002227168079340104,
+          "std": 0.0027518478615293903,
+          "min": 0.00022837031524362882,
+          "max": 0.024575391470663968,
+          "sse": 0.009206518773707388
+        }
+      },
+      "mean_runtime_ms": 1333.8335450903005,
+      "full_source_sequence": true,
+      "GT_online": false
+    }
+  ],
+  "demo": {
+    "status": "completed",
+    "evo_version": "v1.29.0",
+    "stored_pose_SO3_atol": 0.0001,
+    "precision_adaptation": "Process-local upstream-recommended SO3 check tolerance, original arrays unchanged; no shared library edit",
+    "alignment": "SE3 Umeyama, no scale correction; historical evo precedence for upstream redundant align_origin flag",
+    "upstream_evaluation_functions_used": true,
+    "GPU_recomputed": false,
+    "results": {
+      "Paper_FP32": {
+        "frames": 1274,
+        "raw_pose_max_orthogonality_error": 9.007235645119849e-06,
+        "metrics": {
+          "ATE_m": {
+            "rmse": 0.2265732786948034,
+            "mean": 0.20962329368221735,
+            "median": 0.2116189187124223,
+            "std": 0.08598561137964833,
+            "min": 0.06251662988109506,
+            "max": 0.6889176572409477,
+            "sse": 65.40136408798563
+          },
+          "t_rel_m_per_frame": {
+            "rmse": 0.0047571768907853085,
+            "mean": 0.002822589570306332,
+            "median": 0.0016295242735193283,
+            "std": 0.00382932371154747,
+            "min": 5.7602776099348445e-05,
+            "max": 0.054221344967915426,
+            "sse": 0.02880892179809232
+          },
+          "r_rel_deg_per_frame": {
+            "rmse": 0.0784319747127663,
+            "mean": 0.035370199742454,
+            "median": 0.02074985829123969,
+            "std": 0.0700037400966757,
+            "min": 0.0012986684755898624,
+            "max": 1.1567274430424257,
+            "sse": 7.83095453879893
+          },
+          "RPE_full_transformation": {
+            "rmse": 0.005135993872191986,
+            "mean": 0.003077316294066827,
+            "median": 0.0018270615041737998,
+            "std": 0.004112001639282801,
+            "min": 7.568191645018376e-05,
+            "max": 0.054446457131983206,
+            "sse": 0.0335797452792615
+          }
+        },
+        "lost_frames": 0,
+        "runtime_context": {
+          "hits": 3,
+          "misses": 1271,
+          "corrupt": 0
+        },
+        "source": "/data/fyp_3d/runs/formal/macvo/demo_paper_1274",
+        "sequence": "full provided P001_select demo, not established as complete parent benchmark trajectory"
+      },
+      "Fast_FP32": {
+        "frames": 1274,
+        "raw_pose_max_orthogonality_error": 5.894780252369003e-06,
+        "metrics": {
+          "ATE_m": {
+            "rmse": 1.8457216206814473,
+            "mean": 1.4509586611402452,
+            "median": 1.1839888144429151,
+            "std": 1.1407923845788313,
+            "min": 0.221905975334031,
+            "max": 6.1538774780799725,
+            "sse": 4340.120895538908
+          },
+          "t_rel_m_per_frame": {
+            "rmse": 0.010245615124304108,
+            "mean": 0.0043638972412479845,
+            "median": 0.001224325806297715,
+            "std": 0.009269791267509604,
+            "min": 7.925504504564381e-05,
+            "max": 0.069247470579109,
+            "sse": 0.13363015706754486
+          },
+          "r_rel_deg_per_frame": {
+            "rmse": 0.07325042033325391,
+            "mean": 0.03053477381636965,
+            "median": 0.01601287039024532,
+            "std": 0.0665826679172705,
+            "min": 0.0005665247212672399,
+            "max": 1.1713118862146659,
+            "sse": 6.830439452564933
+          },
+          "RPE_full_transformation": {
+            "rmse": 0.010403917842285216,
+            "mean": 0.0045258872051226005,
+            "median": 0.0013308907025104376,
+            "std": 0.009367916068983977,
+            "min": 0.0001478787378203525,
+            "max": 0.0694423988042344,
+            "sse": 0.1377914377350633
+          }
+        },
+        "lost_frames": 0,
+        "runtime_context": {
+          "hits": 1274,
+          "misses": 0,
+          "corrupt": 0
+        },
+        "source": "/data/fyp_3d/runs/formal/macvo/demo_fast_1274",
+        "sequence": "full provided P001_select demo, not established as complete parent benchmark trajectory"
+      },
+      "SGBM_LK_PnP": {
+        "frames": 1274,
+        "raw_pose_max_orthogonality_error": 1.176836406102666e-14,
+        "metrics": {
+          "ATE_m": {
+            "rmse": 16.472409937391756,
+            "mean": 14.423243045292764,
+            "median": 12.06182125786873,
+            "std": 7.956780077512298,
+            "min": 3.928612103703751,
+            "max": 32.039840797532634,
+            "sse": 345687.52837134496
+          },
+          "t_rel_m_per_frame": {
+            "rmse": 0.04172117621076604,
+            "mean": 0.010176072757256694,
+            "median": 0.001569454492696998,
+            "std": 0.040461142935522824,
+            "min": 5.9898277838017683e-05,
+            "max": 0.3926248140625182,
+            "sse": 2.2158557810336634
+          },
+          "r_rel_deg_per_frame": {
+            "rmse": 0.772039022102579,
+            "mean": 0.157465719113949,
+            "median": 0.017680465927732168,
+            "std": 0.7558100283490776,
+            "min": 0.0013821469002456743,
+            "max": 9.904050920037408,
+            "sse": 758.7643323493127
+          },
+          "RPE_full_transformation": {
+            "rmse": 0.045862969443996704,
+            "mean": 0.011637101316235098,
+            "median": 0.0016836389447952888,
+            "std": 0.04436203150416644,
+            "min": 7.182336483484275e-05,
+            "max": 0.40227847440977754,
+            "sse": 2.677643432999302
+          }
+        },
+        "lost_frames": 27,
+        "runtime_context": null,
+        "source": "/data/fyp_3d/runs/formal/macvo/demo_stereo_1274",
+        "sequence": "full provided P001_select demo, not established as complete parent benchmark trajectory"
+      }
+    },
+    "dataset": "Author-provided selected TartanAir v2 demo P001_select",
+    "paper_row_identity_verified": false,
+    "scope": "Paper metric definitions applied to existing evidence; additional original full benchmark trajectories still required",
+    "unit_note": "Paper Eq5 t_rel is mean meters/frame and r_rel degrees/frame; not percent drift per meter. No scale correction."
+  },
+  "static_initialization_replay": "Separate controlled backend experiment; not full VO ablation",
+  "speed_note": "FP32 GTX1660SUPER about 1.3sec/frame; no accepted FP16 speed claim; not author hardware"
+}

@@ -1,0 +1,21 @@
+[Unit]
+Description=ProcTHOR 100 train / 20 validation / 20 test data preparation ONLY
+
+[Service]
+Type=exec
+RemainAfterExit=yes
+WorkingDirectory=/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp
+ExecStart=/data/fyp_3d/envs/semantic_loc/bin/python research3d/semantic_localization/prepare_semantic_overnight.py
+Environment=OPENBLAS_NUM_THREADS=1
+Environment=OMP_NUM_THREADS=1
+MemoryMax=6G
+MemorySwapMax=1G
+CPUQuota=200%
+RuntimeMaxSec=36h
+TimeoutStopSec=20s
+KillMode=control-group
+StandardOutput=append:/data/fyp_3d/runs/semantic_localization_20261102/data_100_20_20/worker.log
+StandardError=append:/data/fyp_3d/runs/semantic_localization_20261102/data_100_20_20/worker.log
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,4726 @@
+{
+  "status": "PILOT_TRAINED",
+  "optimizer_steps": 100,
+  "trainable_parameter_count": 56462316,
+  "updated_parameter_count": 56462316,
+  "updated_tensors": [
+    {
+      "name": "query_embedder.layers_1.0.0.weight",
+      "numel": 648,
+      "l2_update": 0.052517394608661436
+    },
+    {
+      "name": "query_embedder.layers_1.0.1.weight",
+      "numel": 24,
+      "l2_update": 0.012110682757928627
+    },
+    {
+      "name": "query_embedder.layers_1.0.1.bias",
+      "numel": 24,
+      "l2_update": 0.009933743305286985
+    },
+    {
+      "name": "query_embedder.layers_1.1.0.block.0.0.weight",
+      "numel": 5184,
+      "l2_update": 0.14126482229766296
+    },
+    {
+      "name": "query_embedder.layers_1.1.0.block.0.1.weight",
+      "numel": 24,
+      "l2_update": 0.01072983442005966
+    },
+    {
+      "name": "query_embedder.layers_1.1.0.block.0.1.bias",
+      "numel": 24,
+      "l2_update": 0.008964815483253546
+    },
+    {
+      "name": "query_embedder.layers_1.1.1.block.0.0.weight",
+      "numel": 5184,
+      "l2_update": 0.1493139914770025
+    },
+    {
+      "name": "query_embedder.layers_1.1.1.block.0.1.weight",
+      "numel": 24,
+      "l2_update": 0.011113371855761557
+    },
+    {
+      "name": "query_embedder.layers_1.1.1.block.0.1.bias",
+      "numel": 24,
+      "l2_update": 0.010520192910555582
+    },
+    {
+      "name": "query_embedder.layers_1.2.0.block.0.0.weight",
+      "numel": 20736,
+      "l2_update": 0.3160118537188238
+    },
+    {
+      "name": "query_embedder.layers_1.2.0.block.0.1.weight",
+      "numel": 96,
+      "l2_update": 0.022100827412551545
+    },
+    {
+      "name": "query_embedder.layers_1.2.0.block.0.1.bias",
+      "numel": 96,
+      "l2_update": 0.02141969443564041
+    },
+    {
+      "name": "query_embedder.layers_1.2.0.block.1.0.weight",
+      "numel": 4608,
+      "l2_update": 0.15490822145839472
+    },
+    {
+      "name": "query_embedder.layers_1.2.0.block.1.1.weight",
+      "numel": 48,
+      "l2_update": 0.01599919166017743
+    },
+    {
+      "name": "query_embedder.layers_1.2.0.block.1.1.bias",
+      "numel": 48,
+      "l2_update": 0.014281418105914179
+    },
+    {
+      "name": "query_embedder.layers_1.2.1.block.0.0.weight",
+      "numel": 82944,
+      "l2_update": 0.6483702451508109
+    },
+    {
+      "name": "query_embedder.layers_1.2.1.block.0.1.weight",
+      "numel": 192,
+      "l2_update": 0.03371797307403978
+    },
+    {
+      "name": "query_embedder.layers_1.2.1.block.0.1.bias",
+      "numel": 192,
+      "l2_update": 0.03368906032843774
+    },
+    {
+      "name": "query_embedder.layers_1.2.1.block.1.0.weight",
+      "numel": 9216,
+      "l2_update": 0.223139959242644
+    },
+    {
+      "name": "query_embedder.layers_1.2.1.block.1.1.weight",
+      "numel": 48,
+      "l2_update": 0.014899504933757609
+    },
+    {
+      "name": "query_embedder.layers_1.2.1.block.1.1.bias",
+      "numel": 48,
+      "l2_update": 0.01374724551205802
+    },
+    {
+      "name": "query_embedder.layers_1.2.2.block.0.0.weight",
+      "numel": 82944,
+      "l2_update": 0.6317570377197684
+    },
+    {
+      "name": "query_embedder.layers_1.2.2.block.0.1.weight",
+      "numel": 192,
+      "l2_update": 0.03026014146754794
+    },
+    {
+      "name": "query_embedder.layers_1.2.2.block.0.1.bias",
+      "numel": 192,
+      "l2_update": 0.029350391416391848
+    },
+    {
+      "name": "query_embedder.layers_1.2.2.block.1.0.weight",
+      "numel": 9216,
+      "l2_update": 0.21654218184759746
+    },
+    {
+      "name": "query_embedder.layers_1.2.2.block.1.1.weight",
+      "numel": 48,
+      "l2_update": 0.012167764527531311
+    },
+    {
+      "name": "query_embedder.layers_1.2.2.block.1.1.bias",
+      "numel": 48,
+      "l2_update": 0.014303654057485068
+    },
+    {
+      "name": "query_embedder.layers_1.2.3.block.0.0.weight",
+      "numel": 82944,
+      "l2_update": 0.6314098614971311
+    },
+    {
+      "name": "query_embedder.layers_1.2.3.block.0.1.weight",
+      "numel": 192,
+      "l2_update": 0.03186739328818297
+    },
+    {
+      "name": "query_embedder.layers_1.2.3.block.0.1.bias",
+      "numel": 192,
+      "l2_update": 0.031425036256174856
+    },
+    {
+      "name": "query_embedder.layers_1.2.3.block.1.0.weight",
+      "numel": 9216,
+      "l2_update": 0.21376359758269278
+    },
+    {
+      "name": "query_embedder.layers_1.2.3.block.1.1.weight",
+      "numel": 48,
+      "l2_update": 0.012023139997247672
+    },
+    {
+      "name": "query_embedder.layers_1.2.3.block.1.1.bias",
+      "numel": 48,
+      "l2_update": 0.014624910630732579
+    },
+    {
+      "name": "query_embedder.layers_1.3.0.block.0.0.weight",
+      "numel": 82944,
+      "l2_update": 0.6303865120649199
+    },
+    {
+      "name": "query_embedder.layers_1.3.0.block.0.1.weight",
+      "numel": 192,
+      "l2_update": 0.029550016438228095
+    },
+    {
+      "name": "query_embedder.layers_1.3.0.block.0.1.bias",
+      "numel": 192,
+      "l2_update": 0.032159094962732435
+    },
+    {
+      "name": "query_embedder.layers_1.3.0.block.1.0.weight",
+      "numel": 12288,
+      "l2_update": 0.24258838850016617
+    },
+    {
+      "name": "query_embedder.layers_1.3.0.block.1.1.weight",
+      "numel": 64,
+      "l2_update": 0.01573985138976818
+    },
+    {
+      "name": "query_embedder.layers_1.3.0.block.1.1.bias",
+      "numel": 64,
+      "l2_update": 0.01701063114864863
+    },
+    {
+      "name": "query_embedder.layers_1.3.1.block.0.0.weight",
+      "numel": 147456,
+      "l2_update": 0.8350384594380901
+    },
+    {
+      "name": "query_embedder.layers_1.3.1.block.0.1.weight",
+      "numel": 256,
+      "l2_update": 0.03153751498560108
+    },
+    {
+      "name": "query_embedder.layers_1.3.1.block.0.1.bias",
+      "numel": 256,
+      "l2_update": 0.03315124950048238
+    },
+    {
+      "name": "query_embedder.layers_1.3.1.block.1.0.weight",
+      "numel": 16384,
+      "l2_update": 0.2819352236781889
+    },
+    {
+      "name": "query_embedder.layers_1.3.1.block.1.1.weight",
+      "numel": 64,
+      "l2_update": 0.014781618770941973
+    },
+    {
+      "name": "query_embedder.layers_1.3.1.block.1.1.bias",
+      "numel": 64,
+      "l2_update": 0.014010651299997958
+    },
+    {
+      "name": "query_embedder.layers_1.3.2.block.0.0.weight",
+      "numel": 147456,
+      "l2_update": 0.8399274032252507
+    },
+    {
+      "name": "query_embedder.layers_1.3.2.block.0.1.weight",
+      "numel": 256,
+      "l2_update": 0.03503154196640856
+    },
+    {
+      "name": "query_embedder.layers_1.3.2.block.0.1.bias",
+      "numel": 256,
+      "l2_update": 0.034890671930320014
+    },
+    {
+      "name": "query_embedder.layers_1.3.2.block.1.0.weight",
+      "numel": 16384,
+      "l2_update": 0.2850571685821934
+    },
+    {
+      "name": "query_embedder.layers_1.3.2.block.1.1.weight",
+      "numel": 64,
+      "l2_update": 0.016513888181459758
+    },
+    {
+      "name": "query_embedder.layers_1.3.2.block.1.1.bias",
+      "numel": 64,
+      "l2_update": 0.014890302589692136
+    },
+    {
+      "name": "query_embedder.layers_1.3.3.block.0.0.weight",
+      "numel": 147456,
+      "l2_update": 0.8320195283613973
+    },
+    {
+      "name": "query_embedder.layers_1.3.3.block.0.1.weight",
+      "numel": 256,
+      "l2_update": 0.03592019620424595
+    },
+    {
+      "name": "query_embedder.layers_1.3.3.block.0.1.bias",
+      "numel": 256,
+      "l2_update": 0.033823653772886736
+    },
+    {
+      "name": "query_embedder.layers_1.3.3.block.1.0.weight",
+      "numel": 16384,
+      "l2_update": 0.28425774991767283
+    },
+    {
+      "name": "query_embedder.layers_1.3.3.block.1.1.weight",
+      "numel": 64,
+      "l2_update": 0.01898062747378584
+    },
+    {
+      "name": "query_embedder.layers_1.3.3.block.1.1.bias",
+      "numel": 64,
+      "l2_update": 0.01574492062881725
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.0.0.weight",
+      "numel": 16384,
+      "l2_update": 0.280965100221024
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.0.1.weight",
+      "numel": 256,
+      "l2_update": 0.035137390476034855
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.0.1.bias",
+      "numel": 256,
+      "l2_update": 0.03669317462796578
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.1.0.weight",
+      "numel": 2304,
+      "l2_update": 0.10266776937389258
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.1.1.weight",
+      "numel": 256,
+      "l2_update": 0.03566336320454901
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.1.1.bias",
+      "numel": 256,
+      "l2_update": 0.03352081089196114
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.2.fc1.weight",
+      "numel": 4096,
+      "l2_update": 0.12484219756240239
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.2.fc1.bias",
+      "numel": 16,
+      "l2_update": 0.0077731184381332
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.2.fc2.weight",
+      "numel": 4096,
+      "l2_update": 0.13739172048180734
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.2.fc2.bias",
+      "numel": 256,
+      "l2_update": 0.035642611377949274
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.3.0.weight",
+      "numel": 32768,
+      "l2_update": 0.39181229632317943
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.3.1.weight",
+      "numel": 128,
+      "l2_update": 0.02146950457199991
+    },
+    {
+      "name": "query_embedder.layers.0.0.block.3.1.bias",
+      "numel": 128,
+      "l2_update": 0.02041798698925275
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.0.0.weight",
+      "numel": 65536,
+      "l2_update": 0.5767630220648176
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.0.1.weight",
+      "numel": 512,
+      "l2_update": 0.0515686864106512
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.0.1.bias",
+      "numel": 512,
+      "l2_update": 0.051212590414255965
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.1.0.weight",
+      "numel": 4608,
+      "l2_update": 0.15160319136129108
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.1.1.weight",
+      "numel": 512,
+      "l2_update": 0.0503953521815005
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.1.1.bias",
+      "numel": 512,
+      "l2_update": 0.05014172543587643
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.2.fc1.weight",
+      "numel": 16384,
+      "l2_update": 0.27822889747321106
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.2.fc1.bias",
+      "numel": 32,
+      "l2_update": 0.012123241954533485
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.2.fc2.weight",
+      "numel": 16384,
+      "l2_update": 0.2894560975077735
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.2.fc2.bias",
+      "numel": 512,
+      "l2_update": 0.051429320474183846
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.3.0.weight",
+      "numel": 65536,
+      "l2_update": 0.5761599424353527
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.3.1.weight",
+      "numel": 128,
+      "l2_update": 0.026619480476727686
+    },
+    {
+      "name": "query_embedder.layers.0.1.block.3.1.bias",
+      "numel": 128,
+      "l2_update": 0.0218180565774817
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.0.0.weight",
+      "numel": 65536,
+      "l2_update": 0.5222451875919185
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.0.1.weight",
+      "numel": 512,
+      "l2_update": 0.045178219104780835
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.0.1.bias",
+      "numel": 512,
+      "l2_update": 0.047019053784597566
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.1.0.weight",
+      "numel": 4608,
+      "l2_update": 0.13842816253654247
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.1.1.weight",
+      "numel": 512,
+      "l2_update": 0.04591274254786103
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.1.1.bias",
+      "numel": 512,
+      "l2_update": 0.04623227904003057
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.2.fc1.weight",
+      "numel": 16384,
+      "l2_update": 0.2502122125931353
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.2.fc1.bias",
+      "numel": 32,
+      "l2_update": 0.011020077387282492
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.2.fc2.weight",
+      "numel": 16384,
+      "l2_update": 0.260397133958401
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.2.fc2.bias",
+      "numel": 512,
+      "l2_update": 0.04516899794979518
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.3.0.weight",
+      "numel": 65536,
+      "l2_update": 0.516235949481216
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.3.1.weight",
+      "numel": 128,
+      "l2_update": 0.02356472838063363
+    },
+    {
+      "name": "query_embedder.layers.0.2.block.3.1.bias",
+      "numel": 128,
+      "l2_update": 0.02049629857590551
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.0.0.weight",
+      "numel": 65536,
+      "l2_update": 0.5460772314475418
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.0.1.weight",
+      "numel": 512,
+      "l2_update": 0.05261393109408057
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.0.1.bias",
+      "numel": 512,
+      "l2_update": 0.050112621055751545
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.1.0.weight",
+      "numel": 4608,
+      "l2_update": 0.14796553517169864
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.1.1.weight",
+      "numel": 512,
+      "l2_update": 0.04898158189872075
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.1.1.bias",
+      "numel": 512,
+      "l2_update": 0.0475462484698687
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.2.fc1.weight",
+      "numel": 16384,
+      "l2_update": 0.21391566838360235
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.2.fc1.bias",
+      "numel": 32,
+      "l2_update": 0.009273223197865273
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.2.fc2.weight",
+      "numel": 16384,
+      "l2_update": 0.2805553673028511
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.2.fc2.bias",
+      "numel": 512,
+      "l2_update": 0.04996321342152149
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.3.0.weight",
+      "numel": 65536,
+      "l2_update": 0.549692356815211
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.3.1.weight",
+      "numel": 128,
+      "l2_update": 0.024703815423858844
+    },
+    {
+      "name": "query_embedder.layers.0.3.block.3.1.bias",
+      "numel": 128,
+      "l2_update": 0.019733955450352243
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.0.0.weight",
+      "numel": 65536,
+      "l2_update": 0.5617636017529275
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.0.1.weight",
+      "numel": 512,
+      "l2_update": 0.05048599981829288
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.0.1.bias",
+      "numel": 512,
+      "l2_update": 0.0500473537726582
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.1.0.weight",
+      "numel": 4608,
+      "l2_update": 0.15141382137029372
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.1.1.weight",
+      "numel": 512,
+      "l2_update": 0.051358247298368055
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.1.1.bias",
+      "numel": 512,
+      "l2_update": 0.05088285629449705
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.2.fc1.weight",
+      "numel": 16384,
+      "l2_update": 0.28205019571396434
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.2.fc1.bias",
+      "numel": 32,
+      "l2_update": 0.012325871360041459
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.2.fc2.weight",
+      "numel": 16384,
+      "l2_update": 0.2895649783942364
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.2.fc2.bias",
+      "numel": 512,
+      "l2_update": 0.052542272850777956
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.3.0.weight",
+      "numel": 65536,
+      "l2_update": 0.571290016991235
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.3.1.weight",
+      "numel": 128,
+      "l2_update": 0.027178849382366494
+    },
+    {
+      "name": "query_embedder.layers.0.4.block.3.1.bias",
+      "numel": 128,
+      "l2_update": 0.020929481396875078
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.0.0.weight",
+      "numel": 65536,
+      "l2_update": 0.5526446286481106
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.0.1.weight",
+      "numel": 512,
+      "l2_update": 0.04826859957276974
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.0.1.bias",
+      "numel": 512,
+      "l2_update": 0.04966152555703959
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.1.0.weight",
+      "numel": 4608,
+      "l2_update": 0.14125619122638544
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.1.1.weight",
+      "numel": 512,
+      "l2_update": 0.04651556501874802
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.1.1.bias",
+      "numel": 512,
+      "l2_update": 0.04588295651887546
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.2.fc1.weight",
+      "numel": 16384,
+      "l2_update": 0.19270063636020413
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.2.fc1.bias",
+      "numel": 32,
+      "l2_update": 0.008417051908869775
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.2.fc2.weight",
+      "numel": 16384,
+      "l2_update": 0.2654434000702341
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.2.fc2.bias",
+      "numel": 512,
+      "l2_update": 0.04641566815033983
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.3.0.weight",
+      "numel": 65536,
+      "l2_update": 0.552158753006807
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.3.1.weight",
+      "numel": 128,
+      "l2_update": 0.02441202050299174
+    },
+    {
+      "name": "query_embedder.layers.0.5.block.3.1.bias",
+      "numel": 128,
+      "l2_update": 0.02001019600742992
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.0.0.weight",
+      "numel": 98304,
+      "l2_update": 0.6796925263541417
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.0.1.weight",
+      "numel": 768,
+      "l2_update": 0.05937865006021548
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.0.1.bias",
+      "numel": 768,
+      "l2_update": 0.061370869132254334
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.1.0.weight",
+      "numel": 6912,
+      "l2_update": 0.17788574926674436
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.1.1.weight",
+      "numel": 768,
+      "l2_update": 0.06072974921377009
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.1.1.bias",
+      "numel": 768,
+      "l2_update": 0.06086010874408672
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.2.fc1.weight",
+      "numel": 24576,
+      "l2_update": 0.3102332555301933
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.2.fc1.bias",
+      "numel": 32,
+      "l2_update": 0.011153393301616575
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.2.fc2.weight",
+      "numel": 24576,
+      "l2_update": 0.35673106317920583
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.2.fc2.bias",
+      "numel": 768,
+      "l2_update": 0.06130177824687792
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.3.0.weight",
+      "numel": 122880,
+      "l2_update": 0.7545982126376968
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.027583588654841278
+    },
+    {
+      "name": "query_embedder.layers.1.0.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.022486975594277692
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8929031630818094
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.0696850450774915
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.07225025979132109
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.21175102849453253
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06965461957853207
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.07247942826643845
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.4846841433471485
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.015657308054587524
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.4216272340468259
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06698387023900303
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8917607542839601
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.027180884518186142
+    },
+    {
+      "name": "query_embedder.layers.1.1.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.024464453005999705
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8293174452966245
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06761473401013657
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06880360849400607
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.19423741445515816
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06738956163756848
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.06750494851337185
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.5126955970819986
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.01673809228875693
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.41149990252675117
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06576334070504758
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8273586061461724
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.0244517756569366
+    },
+    {
+      "name": "query_embedder.layers.1.2.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.022251430576719158
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.845450129674246
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06820802587656852
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06609084933346451
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.2019497434474429
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06864501930069192
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.06609682560785927
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.39366100812293653
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.012616425367701646
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.4534607172816529
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06928028444295073
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8400564293750644
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.026010835374515984
+    },
+    {
+      "name": "query_embedder.layers.1.3.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.021999110514552334
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8450849447757992
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06836808147102354
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06758778554526886
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.2024674395603873
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06851681521413525
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.07058285199697044
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.5345796143893751
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.017357652972810684
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.4260563113326538
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06708592621073549
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8469317368056863
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.02607103630269869
+    },
+    {
+      "name": "query_embedder.layers.1.4.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.024200358842622057
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8183522636962586
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06290583238222879
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06532510818234855
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.19214246151694384
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06465026963854063
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.06388546893300237
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.40454510934244275
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.013054482091642033
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.4167331895097397
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06642369791185745
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8226370052719486
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.025329625729453215
+    },
+    {
+      "name": "query_embedder.layers.1.5.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.021415930610568353
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8585183704323927
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06730004471891914
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06758809340964442
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.20296368467588152
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.0678163339334415
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.06874329035890861
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.4850905200203936
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.015790636431321822
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.4240522808585032
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06635078759122694
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8648235575797523
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.024818141042767333
+    },
+    {
+      "name": "query_embedder.layers.1.6.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.021751873602600297
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8240684798862778
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06429500374179833
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06868785677480725
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.19580495771916512
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06487663693987934
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.0667372123916118
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.4518089823357257
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.014768260855289988
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.43033967862959077
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06661454155393441
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.847435723300577
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.026581907730552582
+    },
+    {
+      "name": "query_embedder.layers.1.7.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.02186320493823204
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.849917380692787
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06202759261811445
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06426877738048155
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.1988133546356109
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06518308166626796
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.06536948815818626
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.35657382966639006
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.011611116588102462
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.4213144710079126
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.06570431485472207
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.3.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8500375018196431
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.3.1.weight",
+      "numel": 160,
+      "l2_update": 0.026286625689044104
+    },
+    {
+      "name": "query_embedder.layers.1.8.block.3.1.bias",
+      "numel": 160,
+      "l2_update": 0.021771801253608253
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.0.0.weight",
+      "numel": 153600,
+      "l2_update": 0.8588440486176149
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.0.1.weight",
+      "numel": 960,
+      "l2_update": 0.06559617555310046
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.0.1.bias",
+      "numel": 960,
+      "l2_update": 0.06611001627767561
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.1.0.weight",
+      "numel": 8640,
+      "l2_update": 0.20210203885789757
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.1.1.weight",
+      "numel": 960,
+      "l2_update": 0.06644338483234088
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.1.1.bias",
+      "numel": 960,
+      "l2_update": 0.06677977179363488
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.2.fc1.weight",
+      "numel": 38400,
+      "l2_update": 0.154041330454906
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.2.fc1.bias",
+      "numel": 40,
+      "l2_update": 0.0046860856532628566
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.2.fc2.weight",
+      "numel": 38400,
+      "l2_update": 0.39461102861004604
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.2.fc2.bias",
+      "numel": 960,
+      "l2_update": 0.066567490514371
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.3.0.weight",
+      "numel": 245760,
+      "l2_update": 1.0837222380474754
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03338215569659365
+    },
+    {
+      "name": "query_embedder.layers.2.0.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.025903796795311032
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.5090629542160752
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09182878474564567
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09158287071136875
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.28041180267864396
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09126723593079232
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09077857267683923
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.766268683307093
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.019845352044988197
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.7419382262273886
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09340077019192577
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.506460525933903
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.04060753531939775
+    },
+    {
+      "name": "query_embedder.layers.2.1.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.02530830432554225
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3783555164574268
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08436767473271968
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.0839381646066755
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.2555942661704281
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08571760669706073
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08226818469139602
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.5247887009036586
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.013306695840483733
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.7063907364040422
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.08744740849393755
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3941874891860566
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03588995109716085
+    },
+    {
+      "name": "query_embedder.layers.2.2.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.024743005362062236
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.4778866907598922
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09224372510223522
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09329642786708679
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.27478986292699664
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09309485715811583
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09590556827412286
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.614102146439251
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.015477671261601376
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.760396173002518
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09496056948215836
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.4744154682815174
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03896006317386009
+    },
+    {
+      "name": "query_embedder.layers.2.3.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.025889794934700425
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.5055720324609423
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09429861750598967
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09507655587966254
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.27764256807193005
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09116915971004998
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08993188364086606
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.599969070781777
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.01510605600436202
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.731701675788285
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09426364188412784
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.494471709794736
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.037956056399586255
+    },
+    {
+      "name": "query_embedder.layers.2.4.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.02458338816020198
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.2561796640715732
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.0820992947910879
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.07922312389237575
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.2335918264478786
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08076176813563128
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08500624047429302
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.6511696080790441
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.016793458870122575
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.6021715886491646
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.07534771086195505
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.2483170500379759
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03277950150774129
+    },
+    {
+      "name": "query_embedder.layers.2.5.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.02279369014606352
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3608140143775749
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08855806138727183
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08630005671626789
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.24959582337813624
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08634976621128054
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08718409369796346
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.6640605126539725
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.017006622038744756
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.6988801141034451
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.08744458489166328
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3536975663809583
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03258214587038534
+    },
+    {
+      "name": "query_embedder.layers.2.6.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.022574496036360428
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.4298812786378474
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09062024379277993
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08855554234193942
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.2626843663931997
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09071873372024256
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08901216521158174
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.5767120895342689
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.014477599284976501
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.7208779029747364
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09005433971659074
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.4206940627952815
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.04057452817884674
+    },
+    {
+      "name": "query_embedder.layers.2.7.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.022115838463854058
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3928786603313255
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08818390421489644
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08602662187831411
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.24999210826013682
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08431231838763403
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08353866063709078
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.6367799556180526
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.016617828252151693
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.6839506822409264
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.08435313571106103
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3671999319963652
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.035282283333876806
+    },
+    {
+      "name": "query_embedder.layers.2.8.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.021752588825416412
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.4136964859817251
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08790930508084852
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08978792071481867
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.2559047093495864
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.0855045252193206
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08627217048140248
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.698092825011905
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.017770835112364627
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.714658281638465
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09050878295342692
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.4204514409680535
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.036075544546290486
+    },
+    {
+      "name": "query_embedder.layers.2.9.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.022158068810490143
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.546666370784766
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09460344733382053
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09394495467443527
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.2829357767699793
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09096559986842215
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08887086514186061
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.7355999861737108
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.01865653039384826
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.7506843222152503
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09452937125294325
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.5431525612485018
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03857460688478907
+    },
+    {
+      "name": "query_embedder.layers.2.10.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.020529985001530714
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3901815442792682
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08797022247254224
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08623620501084374
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.25856517612218827
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08885651170845786
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08758829729525441
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.619284121231583
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.015761818995813973
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.7089936747216982
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.08758283358244977
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3842575942028756
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03505621672298284
+    },
+    {
+      "name": "query_embedder.layers.2.11.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.019041694728135203
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3748223452700694
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08535720179562045
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08716433592789725
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.2449192914552557
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.08164770878175716
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.08216794103577539
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.6004282193019959
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.015186809171417478
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.6902440538210888
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.08734802885658059
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3646655075756242
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.03435656291197267
+    },
+    {
+      "name": "query_embedder.layers.2.12.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.019488984898052904
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.5289295160788656
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09816128290631392
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.1000979754984353
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.28856494255078435
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.1009089655311866
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.10047420033133038
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.7799242458841562
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.01956867659568243
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.7561473373388227
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.09395337179772409
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.5067036356686352
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.037232338034076384
+    },
+    {
+      "name": "query_embedder.layers.2.13.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.018288915028168654
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.0.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3624766266795476
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.0.1.weight",
+      "numel": 1536,
+      "l2_update": 0.09492230848556608
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.0.1.bias",
+      "numel": 1536,
+      "l2_update": 0.09251388689659565
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.1.0.weight",
+      "numel": 13824,
+      "l2_update": 0.27576711786691144
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.1.1.weight",
+      "numel": 1536,
+      "l2_update": 0.10224179215761837
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.1.1.bias",
+      "numel": 1536,
+      "l2_update": 0.10314518299417672
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.2.fc1.weight",
+      "numel": 98304,
+      "l2_update": 0.8267895340594745
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.2.fc1.bias",
+      "numel": 64,
+      "l2_update": 0.02195434074561339
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.2.fc2.weight",
+      "numel": 98304,
+      "l2_update": 0.6676279594083055
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.2.fc2.bias",
+      "numel": 1536,
+      "l2_update": 0.08378141515216636
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.3.0.weight",
+      "numel": 393216,
+      "l2_update": 1.3399399667898384
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.3.1.weight",
+      "numel": 256,
+      "l2_update": 0.031767769158790926
+    },
+    {
+      "name": "query_embedder.layers.2.14.block.3.1.bias",
+      "numel": 256,
+      "l2_update": 0.019091889463479925
+    },
+    {
+      "name": "query_embedder.layers.3.0.weight",
+      "numel": 327680,
+      "l2_update": 1.2963220608732833
+    },
+    {
+      "name": "query_embedder.layers.3.1.weight",
+      "numel": 1280,
+      "l2_update": 0.07552628395251385
+    },
+    {
+      "name": "query_embedder.layers.3.1.bias",
+      "numel": 1280,
+      "l2_update": 0.07400050209728237
+    },
+    {
+      "name": "query_embedder.dim_adaption.weight",
+      "numel": 860160,
+      "l2_update": 2.0287598321868723
+    },
+    {
+      "name": "query_embedder.dim_adaption.bias",
+      "numel": 640,
+      "l2_update": 0.05305834489394138
+    },
+    {
+      "name": "query_embedder.embedding.embedding_conv.weight",
+      "numel": 327680,
+      "l2_update": 1.632079478967046
+    },
+    {
+      "name": "query_embedder.embedding.embedding_conv.bias",
+      "numel": 256,
+      "l2_update": 0.046311086378579794
+    },
+    {
+      "name": "query_embedder.embedding.embedding_norm.weight",
+      "numel": 256,
+      "l2_update": 0.05969238993067753
+    },
+    {
+      "name": "query_embedder.embedding.embedding_norm.bias",
+      "numel": 256,
+      "l2_update": 0.09778145179861807
+    },
+    {
+      "name": "layout_decoder.decov_layers.1.weight",
+      "numel": 294912,
+      "l2_update": 1.9135945650689172
+    },
+    {
+      "name": "layout_decoder.decov_layers.1.bias",
+      "numel": 128,
+      "l2_update": 0.04980387894052123
+    },
+    {
+      "name": "layout_decoder.decov_layers.3.weight",
+      "numel": 128,
+      "l2_update": 0.062078649157675095
+    },
+    {
+      "name": "layout_decoder.decov_layers.3.bias",
+      "numel": 128,
+      "l2_update": 0.0956944992983128
+    },
+    {
+      "name": "layout_decoder.decov_layers.5.weight",
+      "numel": 73728,
+      "l2_update": 1.2332384520026904
+    },
+    {
+      "name": "layout_decoder.decov_layers.5.bias",
+      "numel": 64,
+      "l2_update": 0.05021783973180996
+    },
+    {
+      "name": "layout_decoder.decov_layers.7.weight",
+      "numel": 64,
+      "l2_update": 0.055481713510687654
+    },
+    {
+      "name": "layout_decoder.decov_layers.7.bias",
+      "numel": 64,
+      "l2_update": 0.06547585560957003
+    },
+    {
+      "name": "layout_decoder.decov_layers.9.weight",
+      "numel": 18432,
+      "l2_update": 0.7910463323654047
+    },
+    {
+      "name": "layout_decoder.decov_layers.9.bias",
+      "numel": 32,
+      "l2_update": 0.04258629652902059
+    },
+    {
+      "name": "layout_decoder.decov_layers.11.weight",
+      "numel": 32,
+      "l2_update": 0.04484058027942137
+    },
+    {
+      "name": "layout_decoder.decov_layers.11.bias",
+      "numel": 32,
+      "l2_update": 0.0544269308404906
+    },
+    {
+      "name": "layout_decoder.decov_layers.13.weight",
+      "numel": 9216,
+      "l2_update": 0.6697009871208266
+    },
+    {
+      "name": "layout_decoder.decov_layers.13.bias",
+      "numel": 32,
+      "l2_update": 0.05696615596635762
+    },
+    {
+      "name": "layout_decoder.decov_layers.15.weight",
+      "numel": 32,
+      "l2_update": 0.06232041241638172
+    },
+    {
+      "name": "layout_decoder.decov_layers.15.bias",
+      "numel": 32,
+      "l2_update": 0.06676396397202539
+    },
+    {
+      "name": "layout_decoder.semantic_head.0.weight",
+      "numel": 9216,
+      "l2_update": 1.1191849096953814
+    },
+    {
+      "name": "layout_decoder.semantic_head.0.bias",
+      "numel": 32,
+      "l2_update": 0.07372929637359481
+    },
+    {
+      "name": "layout_decoder.semantic_head.2.weight",
+      "numel": 32,
+      "l2_update": 0.07690869054174798
+    },
+    {
+      "name": "layout_decoder.semantic_head.2.bias",
+      "numel": 32,
+      "l2_update": 0.1378743336113895
+    },
+    {
+      "name": "layout_decoder.semantic_head.3.weight",
+      "numel": 192,
+      "l2_update": 0.23814524065824264
+    },
+    {
+      "name": "layout_decoder.semantic_head.3.bias",
+      "numel": 6,
+      "l2_update": 0.05131373913868648
+    },
+    {
+      "name": "layout_decoder.layout_head.0.weight",
+      "numel": 9216,
+      "l2_update": 0.7142828236258769
+    },
+    {
+      "name": "layout_decoder.layout_head.0.bias",
+      "numel": 32,
+      "l2_update": 0.046998309123489936
+    },
+    {
+      "name": "layout_decoder.layout_head.2.weight",
+      "numel": 32,
+      "l2_update": 0.06395824711051423
+    },
+    {
+      "name": "layout_decoder.layout_head.2.bias",
+      "numel": 32,
+      "l2_update": 0.08516907950277597
+    },
+    {
+      "name": "layout_decoder.layout_head.3.weight",
+      "numel": 96,
+      "l2_update": 0.11766518331349642
+    },
+    {
+      "name": "layout_decoder.layout_head.3.bias",
+      "numel": 3,
+      "l2_update": 0.030730444959852304
+    },
+    {
+      "name": "panorama_embedder.backdense_0.0.weight",
+      "numel": 3136,
+      "l2_update": 0.1073846632266835
+    },
+    {
+      "name": "panorama_embedder.backdense_0.0.bias",
+      "numel": 64,
+      "l2_update": 0.01754109547054043
+    },
+    {
+      "name": "panorama_embedder.backdense_1.0.weight",
+      "numel": 64,
+      "l2_update": 0.01671168471337387
+    },
+    {
+      "name": "panorama_embedder.backdense_1.0.bias",
+      "numel": 64,
+      "l2_update": 0.02068894205153404
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer1.norm1.weight",
+      "numel": 64,
+      "l2_update": 0.014960699592469626
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer1.norm1.bias",
+      "numel": 64,
+      "l2_update": 0.012729730306496436
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer1.conv1.weight",
+      "numel": 8192,
+      "l2_update": 0.1632377314499932
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer1.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.020580336887870136
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer1.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.021656342727532234
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer1.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.390928010638192
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer2.norm1.weight",
+      "numel": 96,
+      "l2_update": 0.019722440585572768
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer2.norm1.bias",
+      "numel": 96,
+      "l2_update": 0.018990919173181953
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer2.conv1.weight",
+      "numel": 12288,
+      "l2_update": 0.24558535448197277
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer2.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.027921665682880053
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer2.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025512241606236677
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer2.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44058534670397387
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer3.norm1.weight",
+      "numel": 128,
+      "l2_update": 0.02744660447482646
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer3.norm1.bias",
+      "numel": 128,
+      "l2_update": 0.028575173676566992
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer3.conv1.weight",
+      "numel": 16384,
+      "l2_update": 0.30349066663722074
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer3.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02946944690758655
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer3.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.03208998505538466
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer3.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44345047277695865
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer4.norm1.weight",
+      "numel": 160,
+      "l2_update": 0.025247681837400882
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer4.norm1.bias",
+      "numel": 160,
+      "l2_update": 0.02796521928320898
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer4.conv1.weight",
+      "numel": 20480,
+      "l2_update": 0.2931288897006755
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer4.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.027059884490943015
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer4.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.028904719882205394
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer4.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4320863639721276
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer5.norm1.weight",
+      "numel": 192,
+      "l2_update": 0.029221404144798128
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer5.norm1.bias",
+      "numel": 192,
+      "l2_update": 0.02888165228433865
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer5.conv1.weight",
+      "numel": 24576,
+      "l2_update": 0.30911009131752243
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer5.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026599244100345344
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer5.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.029958003366762315
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer5.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42956766245968125
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer6.norm1.weight",
+      "numel": 224,
+      "l2_update": 0.02553819668530989
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer6.norm1.bias",
+      "numel": 224,
+      "l2_update": 0.028312358436892227
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer6.conv1.weight",
+      "numel": 28672,
+      "l2_update": 0.32725395847514854
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer6.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.03131222716847835
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer6.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.030269740750577957
+    },
+    {
+      "name": "panorama_embedder.backdense_1.3.denselayer6.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.450927105660469
+    },
+    {
+      "name": "panorama_embedder.backdense_1.4.norm.weight",
+      "numel": 256,
+      "l2_update": 0.032673914552738374
+    },
+    {
+      "name": "panorama_embedder.backdense_1.4.norm.bias",
+      "numel": 256,
+      "l2_update": 0.03626172079875126
+    },
+    {
+      "name": "panorama_embedder.backdense_1.4.conv.weight",
+      "numel": 32768,
+      "l2_update": 0.39457141510079713
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer1.norm1.weight",
+      "numel": 128,
+      "l2_update": 0.021005150565398485
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer1.norm1.bias",
+      "numel": 128,
+      "l2_update": 0.021508880793900228
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer1.conv1.weight",
+      "numel": 16384,
+      "l2_update": 0.21151507015360702
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer1.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02153458596792184
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer1.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.019111615310879473
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer1.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.40368706973439217
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer2.norm1.weight",
+      "numel": 160,
+      "l2_update": 0.026539717703969106
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer2.norm1.bias",
+      "numel": 160,
+      "l2_update": 0.023627817514220113
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer2.conv1.weight",
+      "numel": 20480,
+      "l2_update": 0.306475326532149
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer2.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025354843183363972
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer2.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024928688751839265
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer2.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44330016077108425
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer3.norm1.weight",
+      "numel": 192,
+      "l2_update": 0.02898241736993197
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer3.norm1.bias",
+      "numel": 192,
+      "l2_update": 0.027264263193397087
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer3.conv1.weight",
+      "numel": 24576,
+      "l2_update": 0.30305600956247314
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer3.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.020246793523987602
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer3.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.021351725661143826
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer3.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.434582471850737
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer4.norm1.weight",
+      "numel": 224,
+      "l2_update": 0.03378612304544862
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer4.norm1.bias",
+      "numel": 224,
+      "l2_update": 0.034002972293647335
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer4.conv1.weight",
+      "numel": 28672,
+      "l2_update": 0.36426040079449035
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer4.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02583476517166762
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer4.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02744639243067511
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer4.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.41832092108984176
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer5.norm1.weight",
+      "numel": 256,
+      "l2_update": 0.026237112994767463
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer5.norm1.bias",
+      "numel": 256,
+      "l2_update": 0.027986960497178907
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer5.conv1.weight",
+      "numel": 32768,
+      "l2_update": 0.30797275549363695
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer5.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025032798710033086
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer5.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02679438052832761
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer5.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42475481782100755
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer6.norm1.weight",
+      "numel": 288,
+      "l2_update": 0.031216111311642685
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer6.norm1.bias",
+      "numel": 288,
+      "l2_update": 0.031367850036005826
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer6.conv1.weight",
+      "numel": 36864,
+      "l2_update": 0.37670024636707217
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer6.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.027702919365766295
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer6.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.026699180190463717
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer6.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4571028037261316
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer7.norm1.weight",
+      "numel": 320,
+      "l2_update": 0.040820520940110315
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer7.norm1.bias",
+      "numel": 320,
+      "l2_update": 0.041217800931069866
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer7.conv1.weight",
+      "numel": 40960,
+      "l2_update": 0.4314579087845505
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer7.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025826775871232114
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer7.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02589853577886612
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer7.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43552534386898456
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer8.norm1.weight",
+      "numel": 352,
+      "l2_update": 0.04002912457739898
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer8.norm1.bias",
+      "numel": 352,
+      "l2_update": 0.03843042598381018
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer8.conv1.weight",
+      "numel": 45056,
+      "l2_update": 0.43615628064210143
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer8.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02709001574382329
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer8.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.029465628439968323
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer8.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4379253320094749
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer9.norm1.weight",
+      "numel": 384,
+      "l2_update": 0.04127706646489563
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer9.norm1.bias",
+      "numel": 384,
+      "l2_update": 0.04005765300704806
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer9.conv1.weight",
+      "numel": 49152,
+      "l2_update": 0.4618411370121354
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer9.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.022870787793210532
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer9.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02327010129563596
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer9.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.435899018882928
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer10.norm1.weight",
+      "numel": 416,
+      "l2_update": 0.04407386256874603
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer10.norm1.bias",
+      "numel": 416,
+      "l2_update": 0.04532550221637362
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer10.conv1.weight",
+      "numel": 53248,
+      "l2_update": 0.49550978478949104
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer10.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.024647966063706523
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer10.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025134658908805393
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer10.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4321761154261331
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer11.norm1.weight",
+      "numel": 448,
+      "l2_update": 0.045034583851039464
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer11.norm1.bias",
+      "numel": 448,
+      "l2_update": 0.04404378887606779
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer11.conv1.weight",
+      "numel": 57344,
+      "l2_update": 0.49835933557025386
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer11.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025507629897930196
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer11.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025578435198752133
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer11.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4399621766181498
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer12.norm1.weight",
+      "numel": 480,
+      "l2_update": 0.0502444842328058
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer12.norm1.bias",
+      "numel": 480,
+      "l2_update": 0.04889769562903256
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer12.conv1.weight",
+      "numel": 61440,
+      "l2_update": 0.5421187789372167
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer12.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02360495365947089
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer12.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.023973518248178168
+    },
+    {
+      "name": "panorama_embedder.backdense_1.5.denselayer12.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4216867355681714
+    },
+    {
+      "name": "panorama_embedder.backdense_1.6.norm.weight",
+      "numel": 512,
+      "l2_update": 0.05025657781388029
+    },
+    {
+      "name": "panorama_embedder.backdense_1.6.norm.bias",
+      "numel": 512,
+      "l2_update": 0.05212560152075019
+    },
+    {
+      "name": "panorama_embedder.backdense_1.6.conv.weight",
+      "numel": 131072,
+      "l2_update": 0.8243749889664777
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer1.norm1.weight",
+      "numel": 256,
+      "l2_update": 0.034184366413361644
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer1.norm1.bias",
+      "numel": 256,
+      "l2_update": 0.0345583404589328
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer1.conv1.weight",
+      "numel": 32768,
+      "l2_update": 0.38355710491699047
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer1.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02220416751252837
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer1.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.022122704515744832
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer1.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44853911182046174
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer2.norm1.weight",
+      "numel": 288,
+      "l2_update": 0.0397092300594229
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer2.norm1.bias",
+      "numel": 288,
+      "l2_update": 0.03660924466627671
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer2.conv1.weight",
+      "numel": 36864,
+      "l2_update": 0.389645711375709
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer2.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025143769006822126
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer2.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.0234550410537069
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer2.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44164501992627875
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer3.norm1.weight",
+      "numel": 320,
+      "l2_update": 0.038436749945676356
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer3.norm1.bias",
+      "numel": 320,
+      "l2_update": 0.04007925309767605
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer3.conv1.weight",
+      "numel": 40960,
+      "l2_update": 0.4243195880775195
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer3.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023967051848890628
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer3.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02483562807199774
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer3.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43102757884399845
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer4.norm1.weight",
+      "numel": 352,
+      "l2_update": 0.0398209750311938
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer4.norm1.bias",
+      "numel": 352,
+      "l2_update": 0.03903167141460796
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer4.conv1.weight",
+      "numel": 45056,
+      "l2_update": 0.4484923126883543
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer4.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026528872613228168
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer4.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024720325637076206
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer4.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4247624853895472
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer5.norm1.weight",
+      "numel": 384,
+      "l2_update": 0.03975517792783562
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer5.norm1.bias",
+      "numel": 384,
+      "l2_update": 0.0369315612161302
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer5.conv1.weight",
+      "numel": 49152,
+      "l2_update": 0.4172229668557192
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer5.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025153750402057546
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer5.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025107391332454366
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer5.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.41604011723269535
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer6.norm1.weight",
+      "numel": 416,
+      "l2_update": 0.04311891061268232
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer6.norm1.bias",
+      "numel": 416,
+      "l2_update": 0.0401093123391289
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer6.conv1.weight",
+      "numel": 53248,
+      "l2_update": 0.455991317049022
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer6.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023199052157811755
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer6.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.023969397089457025
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer6.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4285821831761059
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer7.norm1.weight",
+      "numel": 448,
+      "l2_update": 0.03778518997804916
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer7.norm1.bias",
+      "numel": 448,
+      "l2_update": 0.0351838951311624
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer7.conv1.weight",
+      "numel": 57344,
+      "l2_update": 0.4136254047453806
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer7.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023148059996837
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer7.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.0242576961121421
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer7.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4176352687859814
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer8.norm1.weight",
+      "numel": 480,
+      "l2_update": 0.04259694645349026
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer8.norm1.bias",
+      "numel": 480,
+      "l2_update": 0.04372980886185933
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer8.conv1.weight",
+      "numel": 61440,
+      "l2_update": 0.5162176903694294
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer8.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.024968960322999067
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer8.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02540587190252439
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer8.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43098788634013313
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer9.norm1.weight",
+      "numel": 512,
+      "l2_update": 0.04816883746678668
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer9.norm1.bias",
+      "numel": 512,
+      "l2_update": 0.045483813936746866
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer9.conv1.weight",
+      "numel": 65536,
+      "l2_update": 0.5286199884035742
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer9.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.0211758846592892
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer9.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02136457183965833
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer9.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42028280220287967
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer10.norm1.weight",
+      "numel": 544,
+      "l2_update": 0.04385595852605704
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer10.norm1.bias",
+      "numel": 544,
+      "l2_update": 0.04248465907932403
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer10.conv1.weight",
+      "numel": 69632,
+      "l2_update": 0.5136323875995721
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer10.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025146900057480878
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer10.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025624182066968506
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer10.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4433354585355246
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer11.norm1.weight",
+      "numel": 576,
+      "l2_update": 0.048115907972724734
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer11.norm1.bias",
+      "numel": 576,
+      "l2_update": 0.04814779175969739
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer11.conv1.weight",
+      "numel": 73728,
+      "l2_update": 0.5528910717591637
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer11.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.028812953072522397
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer11.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02795616552519877
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer11.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4404163962165812
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer12.norm1.weight",
+      "numel": 608,
+      "l2_update": 0.050747913787253594
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer12.norm1.bias",
+      "numel": 608,
+      "l2_update": 0.04908910996931802
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer12.conv1.weight",
+      "numel": 77824,
+      "l2_update": 0.6050478125461385
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer12.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026819071436827414
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer12.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.023667781976684756
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer12.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.437572870222863
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer13.norm1.weight",
+      "numel": 640,
+      "l2_update": 0.04874509666176508
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer13.norm1.bias",
+      "numel": 640,
+      "l2_update": 0.04619502613403647
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer13.conv1.weight",
+      "numel": 81920,
+      "l2_update": 0.5187220652456404
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer13.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023741151816133253
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer13.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024129383156909403
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer13.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42417559976906766
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer14.norm1.weight",
+      "numel": 672,
+      "l2_update": 0.04701670088894498
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer14.norm1.bias",
+      "numel": 672,
+      "l2_update": 0.048206168145101945
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer14.conv1.weight",
+      "numel": 86016,
+      "l2_update": 0.5566182350904035
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer14.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02474590817679713
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer14.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024170051881680994
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer14.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43961601614069573
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer15.norm1.weight",
+      "numel": 704,
+      "l2_update": 0.05490811227244242
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer15.norm1.bias",
+      "numel": 704,
+      "l2_update": 0.05566064192691403
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer15.conv1.weight",
+      "numel": 90112,
+      "l2_update": 0.6148662074655489
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer15.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.024922010627186
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer15.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024212949825540397
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer15.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42815677648685807
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer16.norm1.weight",
+      "numel": 736,
+      "l2_update": 0.051039759092506215
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer16.norm1.bias",
+      "numel": 736,
+      "l2_update": 0.05130531378348033
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer16.conv1.weight",
+      "numel": 94208,
+      "l2_update": 0.5923230448146235
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer16.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023557489388258947
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer16.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024249415336480572
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer16.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43096358121128503
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer17.norm1.weight",
+      "numel": 768,
+      "l2_update": 0.061346802406652017
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer17.norm1.bias",
+      "numel": 768,
+      "l2_update": 0.05834074177765848
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer17.conv1.weight",
+      "numel": 98304,
+      "l2_update": 0.6743763673811478
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer17.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.024356681013950974
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer17.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.023719025879927868
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer17.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43296449780517604
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer18.norm1.weight",
+      "numel": 800,
+      "l2_update": 0.05548355302557959
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer18.norm1.bias",
+      "numel": 800,
+      "l2_update": 0.0564851943777751
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer18.conv1.weight",
+      "numel": 102400,
+      "l2_update": 0.6361738492522613
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer18.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025359215468520206
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer18.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.026030443403072513
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer18.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4402778998437761
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer19.norm1.weight",
+      "numel": 832,
+      "l2_update": 0.05371842932261109
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer19.norm1.bias",
+      "numel": 832,
+      "l2_update": 0.053089548520906533
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer19.conv1.weight",
+      "numel": 106496,
+      "l2_update": 0.6763857844739902
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer19.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.024038034882490757
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer19.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024434073989257666
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer19.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42859525941463117
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer20.norm1.weight",
+      "numel": 864,
+      "l2_update": 0.06502304181427586
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer20.norm1.bias",
+      "numel": 864,
+      "l2_update": 0.06392349426965337
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer20.conv1.weight",
+      "numel": 110592,
+      "l2_update": 0.7125068464874906
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer20.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02274161919688552
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer20.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02269426460145142
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer20.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44749901680654924
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer21.norm1.weight",
+      "numel": 896,
+      "l2_update": 0.062823678595619
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer21.norm1.bias",
+      "numel": 896,
+      "l2_update": 0.06295390388835087
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer21.conv1.weight",
+      "numel": 114688,
+      "l2_update": 0.7070640058546809
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer21.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02459502642004963
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer21.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024860696950697554
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer21.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44031440918915715
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer22.norm1.weight",
+      "numel": 928,
+      "l2_update": 0.06340924060853396
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer22.norm1.bias",
+      "numel": 928,
+      "l2_update": 0.06431711329137195
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer22.conv1.weight",
+      "numel": 118784,
+      "l2_update": 0.7293773131554401
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer22.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02757259457856505
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer22.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.027462941277918245
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer22.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.434951595556213
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer23.norm1.weight",
+      "numel": 960,
+      "l2_update": 0.06275334071962269
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer23.norm1.bias",
+      "numel": 960,
+      "l2_update": 0.05992391048702921
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer23.conv1.weight",
+      "numel": 122880,
+      "l2_update": 0.7261751709031868
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer23.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023713198552175924
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer23.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024844244656221648
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer23.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4377124503667025
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer24.norm1.weight",
+      "numel": 992,
+      "l2_update": 0.07279625561939923
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer24.norm1.bias",
+      "numel": 992,
+      "l2_update": 0.06582710724569636
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer24.conv1.weight",
+      "numel": 126976,
+      "l2_update": 0.7529872602887175
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer24.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.0316418487746534
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer24.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.026090414860758315
+    },
+    {
+      "name": "panorama_embedder.backdense_1.7.denselayer24.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.40041700610282627
+    },
+    {
+      "name": "panorama_embedder.backdense_1.8.norm.weight",
+      "numel": 1024,
+      "l2_update": 0.07235961229558177
+    },
+    {
+      "name": "panorama_embedder.backdense_1.8.norm.bias",
+      "numel": 1024,
+      "l2_update": 0.07143812366137839
+    },
+    {
+      "name": "panorama_embedder.backdense_1.8.conv.weight",
+      "numel": 524288,
+      "l2_update": 1.6159969854344756
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer1.norm1.weight",
+      "numel": 512,
+      "l2_update": 0.05276225821994062
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer1.norm1.bias",
+      "numel": 512,
+      "l2_update": 0.051234733967658
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer1.conv1.weight",
+      "numel": 65536,
+      "l2_update": 0.5843473591665457
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer1.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.027371291970422606
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer1.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025779067529289268
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer1.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42433637030840987
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer2.norm1.weight",
+      "numel": 544,
+      "l2_update": 0.04624036092532149
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer2.norm1.bias",
+      "numel": 544,
+      "l2_update": 0.04807317397028425
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer2.conv1.weight",
+      "numel": 69632,
+      "l2_update": 0.577664837003976
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer2.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02352079044139066
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer2.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024214077234533667
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer2.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4333690811549048
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer3.norm1.weight",
+      "numel": 576,
+      "l2_update": 0.04990318705430571
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer3.norm1.bias",
+      "numel": 576,
+      "l2_update": 0.04917588243830713
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer3.conv1.weight",
+      "numel": 73728,
+      "l2_update": 0.6099957561363042
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer3.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02639742250883914
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer3.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025401887674254612
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer3.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4385532376417692
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer4.norm1.weight",
+      "numel": 608,
+      "l2_update": 0.05751879892462614
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer4.norm1.bias",
+      "numel": 608,
+      "l2_update": 0.05449261601330137
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer4.conv1.weight",
+      "numel": 77824,
+      "l2_update": 0.6249530826777294
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer4.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.025047747213645857
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer4.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025683206778220967
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer4.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4287164450104974
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer5.norm1.weight",
+      "numel": 640,
+      "l2_update": 0.053307334557373784
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer5.norm1.bias",
+      "numel": 640,
+      "l2_update": 0.05291459098747747
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer5.conv1.weight",
+      "numel": 81920,
+      "l2_update": 0.6034683855630872
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer5.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023654155771615917
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer5.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02315715468882698
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer5.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42250145163628716
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer6.norm1.weight",
+      "numel": 672,
+      "l2_update": 0.061001915887618836
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer6.norm1.bias",
+      "numel": 672,
+      "l2_update": 0.061992373998132344
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer6.conv1.weight",
+      "numel": 86016,
+      "l2_update": 0.6580461332033379
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer6.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026365426706244727
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer6.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02679366452058629
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer6.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.45300376424725314
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer7.norm1.weight",
+      "numel": 704,
+      "l2_update": 0.05438174895611511
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer7.norm1.bias",
+      "numel": 704,
+      "l2_update": 0.05579684434284147
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer7.conv1.weight",
+      "numel": 90112,
+      "l2_update": 0.61516317014532
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer7.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02587980545431909
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer7.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025825266312039973
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer7.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42907593640218716
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer8.norm1.weight",
+      "numel": 736,
+      "l2_update": 0.052054750989508784
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer8.norm1.bias",
+      "numel": 736,
+      "l2_update": 0.05328741264201368
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer8.conv1.weight",
+      "numel": 94208,
+      "l2_update": 0.6179490054645104
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer8.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02456578523389647
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer8.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.024193431848491948
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer8.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4406987369747911
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer9.norm1.weight",
+      "numel": 768,
+      "l2_update": 0.05683380290969783
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer9.norm1.bias",
+      "numel": 768,
+      "l2_update": 0.058850879417133614
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer9.conv1.weight",
+      "numel": 98304,
+      "l2_update": 0.6379610112631623
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer9.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02824992767783435
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer9.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.028846289612345147
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer9.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.44044744089308235
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer10.norm1.weight",
+      "numel": 800,
+      "l2_update": 0.0585277786119174
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer10.norm1.bias",
+      "numel": 800,
+      "l2_update": 0.05628268021670248
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer10.conv1.weight",
+      "numel": 102400,
+      "l2_update": 0.6286687984976952
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer10.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026694456901409615
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer10.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.026817623947498287
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer10.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4426466122733468
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer11.norm1.weight",
+      "numel": 832,
+      "l2_update": 0.055858466443807056
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer11.norm1.bias",
+      "numel": 832,
+      "l2_update": 0.054454802444366575
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer11.conv1.weight",
+      "numel": 106496,
+      "l2_update": 0.6175988511249684
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer11.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026662376237097475
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer11.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.027222746423318362
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer11.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42524749853128035
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer12.norm1.weight",
+      "numel": 864,
+      "l2_update": 0.05238848210078807
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer12.norm1.bias",
+      "numel": 864,
+      "l2_update": 0.05505333030135385
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer12.conv1.weight",
+      "numel": 110592,
+      "l2_update": 0.6175840475777326
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer12.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.024202480092996106
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer12.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02460026508393608
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer12.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42591521388588394
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer13.norm1.weight",
+      "numel": 896,
+      "l2_update": 0.05284795923178604
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer13.norm1.bias",
+      "numel": 896,
+      "l2_update": 0.0513019403470734
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer13.conv1.weight",
+      "numel": 114688,
+      "l2_update": 0.6288218795567507
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer13.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.026236457860325482
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer13.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.025906802906275013
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer13.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.43613068912530484
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer14.norm1.weight",
+      "numel": 928,
+      "l2_update": 0.0562214590608037
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer14.norm1.bias",
+      "numel": 928,
+      "l2_update": 0.05638061975400954
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer14.conv1.weight",
+      "numel": 118784,
+      "l2_update": 0.6242337710446942
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer14.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.02665271537998994
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer14.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.026553586492254037
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer14.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.42682464668122944
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer15.norm1.weight",
+      "numel": 960,
+      "l2_update": 0.05239803411899615
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer15.norm1.bias",
+      "numel": 960,
+      "l2_update": 0.051260908106801374
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer15.conv1.weight",
+      "numel": 122880,
+      "l2_update": 0.5918724630235321
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer15.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.023227634331887598
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer15.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.023835599266232195
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer15.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4248355642539469
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer16.norm1.weight",
+      "numel": 992,
+      "l2_update": 0.05577704123675719
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer16.norm1.bias",
+      "numel": 992,
+      "l2_update": 0.05378358464967113
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer16.conv1.weight",
+      "numel": 126976,
+      "l2_update": 0.6558388440965919
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer16.norm2.weight",
+      "numel": 128,
+      "l2_update": 0.028581642585071895
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer16.norm2.bias",
+      "numel": 128,
+      "l2_update": 0.02870792021173191
+    },
+    {
+      "name": "panorama_embedder.backdense_1.9.denselayer16.conv2.weight",
+      "numel": 36864,
+      "l2_update": 0.4343410172090432
+    },
+    {
+      "name": "panorama_embedder.backdense_1.10.weight",
+      "numel": 1024,
+      "l2_update": 0.07282715102470737
+    },
+    {
+      "name": "panorama_embedder.backdense_1.10.bias",
+      "numel": 1024,
+      "l2_update": 0.06481686833947589
+    },
+    {
+      "name": "panorama_embedder.c1.weight",
+      "numel": 655360,
+      "l2_update": 1.8336261963999256
+    },
+    {
+      "name": "panorama_embedder.c1.bias",
+      "numel": 640,
+      "l2_update": 0.05567954316676106
+    },
+    {
+      "name": "panorama_embedder.n1.weight",
+      "numel": 640,
+      "l2_update": 0.06088743457793726
+    },
+    {
+      "name": "panorama_embedder.n1.bias",
+      "numel": 640,
+      "l2_update": 0.06315421104475763
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv1.conv.weight",
+      "numel": 3686400,
+      "l2_update": 4.445267840778477
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv1.conv.bias",
+      "numel": 640,
+      "l2_update": 0.05783148355475697
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv1.bn.weight",
+      "numel": 640,
+      "l2_update": 0.06423250249433969
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv1.bn.bias",
+      "numel": 640,
+      "l2_update": 0.05253447172712539
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv2.conv.weight",
+      "numel": 3686400,
+      "l2_update": 4.556285697335491
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv2.conv.bias",
+      "numel": 640,
+      "l2_update": 0.05935947259867246
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv2.bn.weight",
+      "numel": 640,
+      "l2_update": 0.06338916128744052
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.f_conv2.bn.bias",
+      "numel": 640,
+      "l2_update": 0.046702691361902214
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r1_conv.conv.weight",
+      "numel": 1474560,
+      "l2_update": 2.867748534365934
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r1_conv.conv.bias",
+      "numel": 256,
+      "l2_update": 0.03766126743532106
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r1_conv.bn.weight",
+      "numel": 256,
+      "l2_update": 0.053078159226118075
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r1_conv.bn.bias",
+      "numel": 256,
+      "l2_update": 0.03722124978756548
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r2_conv.conv.weight",
+      "numel": 1474560,
+      "l2_update": 2.7877553184986
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r2_conv.conv.bias",
+      "numel": 256,
+      "l2_update": 0.036406000906631354
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r2_conv.bn.weight",
+      "numel": 256,
+      "l2_update": 0.039294891799812375
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r2_conv.bn.bias",
+      "numel": 256,
+      "l2_update": 0.03347278102418498
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r3_conv.conv.weight",
+      "numel": 1474560,
+      "l2_update": 2.4465052362186324
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r3_conv.conv.bias",
+      "numel": 256,
+      "l2_update": 0.03223792780143099
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r3_conv.bn.weight",
+      "numel": 256,
+      "l2_update": 0.03759827744920323
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r3_conv.bn.bias",
+      "numel": 256,
+      "l2_update": 0.03440788502687156
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r_star_conv.conv.weight",
+      "numel": 3538944,
+      "l2_update": 4.534001349715674
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r_star_conv.conv.bias",
+      "numel": 512,
+      "l2_update": 0.05735563217969001
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r_star_conv.bn.weight",
+      "numel": 512,
+      "l2_update": 0.060271069977214556
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.r_star_conv.bn.bias",
+      "numel": 512,
+      "l2_update": 0.06931020611339879
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block1.conv.weight",
+      "numel": 1179648,
+      "l2_update": 2.579371987649007
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block1.conv.bias",
+      "numel": 256,
+      "l2_update": 0.042771815555511995
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block1.bn.weight",
+      "numel": 256,
+      "l2_update": 0.04764777320785562
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block1.bn.bias",
+      "numel": 256,
+      "l2_update": 0.03942181645740585
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block2.conv.weight",
+      "numel": 294912,
+      "l2_update": 1.470860421068344
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block2.conv.bias",
+      "numel": 128,
+      "l2_update": 0.033604329720758816
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block2.bn.weight",
+      "numel": 128,
+      "l2_update": 0.054839968007200514
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block2.bn.bias",
+      "numel": 128,
+      "l2_update": 0.05441641694405899
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block3.conv.weight",
+      "numel": 73728,
+      "l2_update": 0.9762038810453249
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block3.conv.bias",
+      "numel": 64,
+      "l2_update": 0.033378981048416634
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block3.bn.weight",
+      "numel": 64,
+      "l2_update": 0.03437535800469319
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block3.bn.bias",
+      "numel": 64,
+      "l2_update": 0.04748319501222216
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block4.conv.weight",
+      "numel": 18432,
+      "l2_update": 0.6520196142121111
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block4.conv.bias",
+      "numel": 32,
+      "l2_update": 0.03008028446715234
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block4.bn.weight",
+      "numel": 32,
+      "l2_update": 0.04916248374574938
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block4.bn.bias",
+      "numel": 32,
+      "l2_update": 0.052454495348733365
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block5.conv.weight",
+      "numel": 4608,
+      "l2_update": 0.4900797419902164
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block5.conv.bias",
+      "numel": 16,
+      "l2_update": 0.04316752525894742
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block5.bn.weight",
+      "numel": 16,
+      "l2_update": 0.026006810342277992
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.block5.bn.bias",
+      "numel": 16,
+      "l2_update": 0.038631851776740146
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.seg_out.weight",
+      "numel": 144,
+      "l2_update": 0.09109864772774208
+    },
+    {
+      "name": "bounding_box_decoder.correlation_model.mask_decoder.seg_out.bias",
+      "numel": 1,
+      "l2_update": 0.009827136993408203
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv1.weight",
+      "numel": 1179648,
+      "l2_update": 2.543968245702819
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv1.bias",
+      "numel": 256,
+      "l2_update": 0.036832508244226375
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv2.weight",
+      "numel": 589824,
+      "l2_update": 1.7590391805179832
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv2.bias",
+      "numel": 256,
+      "l2_update": 0.034310334131282004
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv3.weight",
+      "numel": 589824,
+      "l2_update": 1.6481656761967693
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv3.bias",
+      "numel": 256,
+      "l2_update": 0.03206620322152772
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv4.weight",
+      "numel": 589824,
+      "l2_update": 1.4882169930390983
+    },
+    {
+      "name": "bounding_box_decoder.classification.conv4.bias",
+      "numel": 256,
+      "l2_update": 0.025314823824136273
+    },
+    {
+      "name": "bounding_box_decoder.classification.output.weight",
+      "numel": 161280,
+      "l2_update": 0.40511157701318623
+    },
+    {
+      "name": "bounding_box_decoder.classification.output.bias",
+      "numel": 70,
+      "l2_update": 0.006322927334378432
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv1.weight",
+      "numel": 1179648,
+      "l2_update": 2.5612825515216087
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv1.bias",
+      "numel": 256,
+      "l2_update": 0.03710095129934996
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv2.weight",
+      "numel": 589824,
+      "l2_update": 1.774721380384539
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv2.bias",
+      "numel": 256,
+      "l2_update": 0.03332348994659103
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv3.weight",
+      "numel": 589824,
+      "l2_update": 1.4204550148617663
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv3.bias",
+      "numel": 256,
+      "l2_update": 0.019511597584329025
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv4.weight",
+      "numel": 589824,
+      "l2_update": 1.509171339679266
+    },
+    {
+      "name": "bounding_box_decoder.regression.conv4.bias",
+      "numel": 256,
+      "l2_update": 0.017620707792488883
+    },
+    {
+      "name": "bounding_box_decoder.regression.output.weight",
+      "numel": 322560,
+      "l2_update": 0.9834217451438881
+    },
+    {
+      "name": "bounding_box_decoder.regression.output.bias",
+      "numel": 140,
+      "l2_update": 0.01176757295047019
+    },
+    {
+      "name": "pano_bb_compress.conv1.weight",
+      "numel": 1474560,
+      "l2_update": 3.0611062999512186
+    },
+    {
+      "name": "pano_bb_compress.conv1.bias",
+      "numel": 320,
+      "l2_update": 0.04804214739934935
+    },
+    {
+      "name": "pano_bb_compress.conv2.weight",
+      "numel": 460800,
+      "l2_update": 1.7053834776253154
+    },
+    {
+      "name": "pano_bb_compress.conv2.bias",
+      "numel": 160,
+      "l2_update": 0.03188901863229786
+    },
+    {
+      "name": "pano_bb_compress.conv3.weight",
+      "numel": 115200,
+      "l2_update": 0.8006042268484659
+    },
+    {
+      "name": "pano_bb_compress.conv3.bias",
+      "numel": 80,
+      "l2_update": 0.025317262259072486
+    },
+    {
+      "name": "pose_estimator_mlp.fc1.weight",
+      "numel": 819200,
+      "l2_update": 1.635009101902663
+    },
+    {
+      "name": "pose_estimator_mlp.fc1.bias",
+      "numel": 1280,
+      "l2_update": 0.058161034360668565
+    },
+    {
+      "name": "pose_estimator_mlp.fc2.weight",
+      "numel": 819200,
+      "l2_update": 1.0543984416656365
+    },
+    {
+      "name": "pose_estimator_mlp.fc2.bias",
+      "numel": 640,
+      "l2_update": 0.03379070759899595
+    },
+    {
+      "name": "pose_estimator_mlp.fc3.weight",
+      "numel": 81920,
+      "l2_update": 0.2822951619766739
+    },
+    {
+      "name": "pose_estimator_mlp.fc3.bias",
+      "numel": 128,
+      "l2_update": 0.008544268124798525
+    },
+    {
+      "name": "pose_estimator_mlp.fc4_1.weight",
+      "numel": 384,
+      "l2_update": 0.02094798535171567
+    },
+    {
+      "name": "pose_estimator_mlp.fc4_1.bias",
+      "numel": 3,
+      "l2_update": 0.0012347092412936253
+    },
+    {
+      "name": "pose_estimator_mlp.fc4_2.weight",
+      "numel": 384,
+      "l2_update": 0.01447288094927601
+    },
+    {
+      "name": "pose_estimator_mlp.fc4_2.bias",
+      "numel": 3,
+      "l2_update": 0.0005746842327957943
+    },
+    {
+      "name": "gnn_loss.sax",
+      "numel": 1,
+      "l2_update": 0.02498626708984375
+    },
+    {
+      "name": "gnn_loss.sax_2",
+      "numel": 1,
+      "l2_update": 0.020011186599731445
+    },
+    {
+      "name": "gnn_loss.sax_3",
+      "numel": 1,
+      "l2_update": 0.02498626708984375
+    },
+    {
+      "name": "gnn_loss.saq",
+      "numel": 1,
+      "l2_update": 0.01560521125793457
+    },
+    {
+      "name": "gnn_loss.sa_l2",
+      "numel": 1,
+      "l2_update": 0.02498626708984375
+    },
+    {
+      "name": "gnn_loss.sa_classification",
+      "numel": 1,
+      "l2_update": 0.021118879318237305
+    },
+    {
+      "name": "gnn_loss.sa_regression",
+      "numel": 1,
+      "l2_update": 0.02149176597595215
+    },
+    {
+      "name": "gnn_loss.sa_mask",
+      "numel": 1,
+      "l2_update": 0.014321327209472656
+    },
+    {
+      "name": "gnn_loss.sa_decode_layout",
+      "numel": 1,
+      "l2_update": 0.02081298828125
+    },
+    {
+      "name": "gnn_loss.sa_decode_semantics",
+      "numel": 1,
+      "l2_update": 0.021451711654663086
+    }
+  ],
+  "best_checkpoint_by_validation_loss": "/data/fyp_3d/runs/semantic_localization_20261102/spvloc_pilot/checkpoints/epochepoch=0-stepstep=86.ckpt",
+  "best_validation_loss": 9374.3291015625,
+  "test_used_for_checkpoint_selection": false
+}

@@ -1,0 +1,1696 @@
+{
+  "dataset": "ProcTHOR-10K",
+  "target": {
+    "train": 100,
+    "val": 20,
+    "test": 20
+  },
+  "houses": [
+    {
+      "scene_id": 0,
+      "split": "train",
+      "official_house_index": 1,
+      "source_geometry_sha256": "b750160da297b55eec7475de288109d9d8c9cb71ae4fe923f7f5a09320efbae6",
+      "candidate_rank": 0,
+      "reserve": false
+    },
+    {
+      "scene_id": 1,
+      "split": "train",
+      "official_house_index": 3,
+      "source_geometry_sha256": "fa516cdb4afc2a15bdea6bc10b9bb4e6a0bc9f53d6f429c07f0c799445b0e2b8",
+      "candidate_rank": 1,
+      "reserve": false
+    },
+    {
+      "scene_id": 2,
+      "split": "train",
+      "official_house_index": 4,
+      "source_geometry_sha256": "61cabe6ff7f6986409d102638a7d7d7cad3e6c3b52fa213fcf37ba34f0ac56c3",
+      "candidate_rank": 2,
+      "reserve": false
+    },
+    {
+      "scene_id": 3,
+      "split": "train",
+      "official_house_index": 5,
+      "source_geometry_sha256": "e0990c7ad5ebb3506bff6ce9543edb3aa567aded700c18421aad00ab3e746bd1",
+      "candidate_rank": 3,
+      "reserve": false
+    },
+    {
+      "scene_id": 4,
+      "split": "train",
+      "official_house_index": 6,
+      "source_geometry_sha256": "dfd77849dc6bf5e0610512a0b2dd1481a6890bd2ff493f4e713d09d5f0eadb9d",
+      "candidate_rank": 4,
+      "reserve": false
+    },
+    {
+      "scene_id": 5,
+      "split": "train",
+      "official_house_index": 7,
+      "source_geometry_sha256": "f5a46cdc0d4530ea537cba4014a59865fc18ed75f1890ed64a2526c221882197",
+      "candidate_rank": 5,
+      "reserve": false
+    },
+    {
+      "scene_id": 6,
+      "split": "train",
+      "official_house_index": 8,
+      "source_geometry_sha256": "4faa91dd9a7195ba366a41df03734b5accd6a9808524d357d5a2234fc4af7e3e",
+      "candidate_rank": 6,
+      "reserve": false
+    },
+    {
+      "scene_id": 7,
+      "split": "train",
+      "official_house_index": 9,
+      "source_geometry_sha256": "a4e9015f9435d5f963e2ba0a4636c01c956d07f05da4e6302ba5e59dc81a0561",
+      "candidate_rank": 7,
+      "reserve": false
+    },
+    {
+      "scene_id": 8,
+      "split": "train",
+      "official_house_index": 10,
+      "source_geometry_sha256": "c07c85ce98d7afeb8f945fca39e85a8d2d2b0f430fb736449d81263865b22019",
+      "candidate_rank": 8,
+      "reserve": false
+    },
+    {
+      "scene_id": 9,
+      "split": "train",
+      "official_house_index": 11,
+      "source_geometry_sha256": "2b14bded804e278b95738e6ccb4b519e31ab8fa5a28cf0c17568fa5ced1c8d9d",
+      "candidate_rank": 9,
+      "reserve": false
+    },
+    {
+      "scene_id": 10,
+      "split": "train",
+      "official_house_index": 13,
+      "source_geometry_sha256": "72edb248e382af4b8b680c9ad710712eac85ac533b672d58377652c1f7ab56cd",
+      "candidate_rank": 10,
+      "reserve": false
+    },
+    {
+      "scene_id": 11,
+      "split": "train",
+      "official_house_index": 15,
+      "source_geometry_sha256": "3ed5e862af8b1e517e2bd66ef016abb99be4b8507285c0ecf27d69393a96d100",
+      "candidate_rank": 11,
+      "reserve": false
+    },
+    {
+      "scene_id": 12,
+      "split": "train",
+      "official_house_index": 16,
+      "source_geometry_sha256": "0d1726e852eef43e1bb22bc226c3518540fffdd617e76ee71ad5b3257b8a8744",
+      "candidate_rank": 12,
+      "reserve": false
+    },
+    {
+      "scene_id": 13,
+      "split": "train",
+      "official_house_index": 17,
+      "source_geometry_sha256": "66fe5f5bf2aa9df8f2005b6eba6a83b50d3f3986336fb7288c3f906f45643b59",
+      "candidate_rank": 13,
+      "reserve": false
+    },
+    {
+      "scene_id": 14,
+      "split": "train",
+      "official_house_index": 18,
+      "source_geometry_sha256": "dec3986fc70a229b818540a4d5b51ba3ca6788da4a0581dca8407f68fb9f9ca4",
+      "candidate_rank": 14,
+      "reserve": false
+    },
+    {
+      "scene_id": 15,
+      "split": "train",
+      "official_house_index": 19,
+      "source_geometry_sha256": "c106a94e6ded6185be1492de3df5a8bd73cd9b30e2543b0ac9440f8f5d879a3b",
+      "candidate_rank": 15,
+      "reserve": false
+    },
+    {
+      "scene_id": 16,
+      "split": "train",
+      "official_house_index": 20,
+      "source_geometry_sha256": "ae9b83f45459eec9739beeb83fbb7660afc48d66eec0b81b109e467c1241df2c",
+      "candidate_rank": 16,
+      "reserve": false
+    },
+    {
+      "scene_id": 17,
+      "split": "train",
+      "official_house_index": 22,
+      "source_geometry_sha256": "f46d07130b519f86ccac9f3c8e41d876b0c21eeeac35bfc769b95c5b65f7c289",
+      "candidate_rank": 17,
+      "reserve": false
+    },
+    {
+      "scene_id": 18,
+      "split": "train",
+      "official_house_index": 25,
+      "source_geometry_sha256": "4bf4d24e5dde8e47cf80acfb7145950124823460a25da54f831b1376702fe8d9",
+      "candidate_rank": 18,
+      "reserve": false
+    },
+    {
+      "scene_id": 19,
+      "split": "train",
+      "official_house_index": 26,
+      "source_geometry_sha256": "136c8323a0daa02c507cadac7d5bb3c70f3ed33c2c2dd5c79258b3ee433a34dd",
+      "candidate_rank": 19,
+      "reserve": false
+    },
+    {
+      "scene_id": 20,
+      "split": "train",
+      "official_house_index": 28,
+      "source_geometry_sha256": "7ed561ce2ff55aacdd88ee6f9f7ba9dd28215e91b99a819501264d4061a5d29d",
+      "candidate_rank": 20,
+      "reserve": false
+    },
+    {
+      "scene_id": 21,
+      "split": "train",
+      "official_house_index": 30,
+      "source_geometry_sha256": "b2ccb53863d6928049408f933144fd2532a85065390fc5e6690dab0c33e13755",
+      "candidate_rank": 21,
+      "reserve": false
+    },
+    {
+      "scene_id": 22,
+      "split": "train",
+      "official_house_index": 31,
+      "source_geometry_sha256": "c8c35f2962a626be490aa1e0539ac2f769ab368df49fe022e83a9533cbb95d4c",
+      "candidate_rank": 22,
+      "reserve": false
+    },
+    {
+      "scene_id": 23,
+      "split": "train",
+      "official_house_index": 32,
+      "source_geometry_sha256": "ca95a5773e2d417018fb78c04385438ae6d9f70dc9b43f3e5d407a444000d88c",
+      "candidate_rank": 23,
+      "reserve": false
+    },
+    {
+      "scene_id": 24,
+      "split": "train",
+      "official_house_index": 33,
+      "source_geometry_sha256": "ab454a4f18f8ee4b44c28b17448f82ddf3117810aae95f536aef0a2a4ae37669",
+      "candidate_rank": 24,
+      "reserve": false
+    },
+    {
+      "scene_id": 25,
+      "split": "train",
+      "official_house_index": 35,
+      "source_geometry_sha256": "567ee584cf045221b166c11131b74671e4459e4ab04d4e0bbaf01986e4044fdf",
+      "candidate_rank": 25,
+      "reserve": false
+    },
+    {
+      "scene_id": 26,
+      "split": "train",
+      "official_house_index": 36,
+      "source_geometry_sha256": "40197c160b939699aef5f3ce2ffc3a28c81f43604905c694ad115b0584d251d0",
+      "candidate_rank": 26,
+      "reserve": false
+    },
+    {
+      "scene_id": 27,
+      "split": "train",
+      "official_house_index": 37,
+      "source_geometry_sha256": "4412bb29fe6f1fdcf93d2d088d66d4b5e40f5bd152c53fc9df74199583ed0bea",
+      "candidate_rank": 27,
+      "reserve": false
+    },
+    {
+      "scene_id": 28,
+      "split": "train",
+      "official_house_index": 38,
+      "source_geometry_sha256": "7028d048589ae0de79c110710446f7c2cb73fcabafcd8f8132c4b627a037a5e2",
+      "candidate_rank": 28,
+      "reserve": false
+    },
+    {
+      "scene_id": 29,
+      "split": "train",
+      "official_house_index": 40,
+      "source_geometry_sha256": "24094eaafc359a5433b99da9eab07af81bf17b1e9cf22bdb817a8c46819d60ba",
+      "candidate_rank": 29,
+      "reserve": false
+    },
+    {
+      "scene_id": 30,
+      "split": "train",
+      "official_house_index": 41,
+      "source_geometry_sha256": "f45ec0216bad1d635becebcc8bfe23ba01dfc82dcdedae0bd9137679092f877f",
+      "candidate_rank": 30,
+      "reserve": false
+    },
+    {
+      "scene_id": 31,
+      "split": "train",
+      "official_house_index": 42,
+      "source_geometry_sha256": "22465b73b1f17740f889b3bb87160c375210073d88c26a745f4cd0992bc271cd",
+      "candidate_rank": 31,
+      "reserve": false
+    },
+    {
+      "scene_id": 32,
+      "split": "train",
+      "official_house_index": 43,
+      "source_geometry_sha256": "941587ab232124632bdd75c6795d9b822c810ec46a3f42ac62cac66c3415ad9c",
+      "candidate_rank": 32,
+      "reserve": false
+    },
+    {
+      "scene_id": 33,
+      "split": "train",
+      "official_house_index": 44,
+      "source_geometry_sha256": "d243ffce4e1f1f0da0c49aea33dfc51181fee253e54127c75c93e27cd2a42c1a",
+      "candidate_rank": 33,
+      "reserve": false
+    },
+    {
+      "scene_id": 34,
+      "split": "train",
+      "official_house_index": 45,
+      "source_geometry_sha256": "ab158ad348068956793114f5b051a9616d3c8cf2f417112816a3db6bce67a985",
+      "candidate_rank": 34,
+      "reserve": false
+    },
+    {
+      "scene_id": 35,
+      "split": "train",
+      "official_house_index": 46,
+      "source_geometry_sha256": "3836b10fe338f4a3105edd1bb3a8ce0b30b105907d3ae1d12c28d612a4c5b3b1",
+      "candidate_rank": 35,
+      "reserve": false
+    },
+    {
+      "scene_id": 36,
+      "split": "train",
+      "official_house_index": 47,
+      "source_geometry_sha256": "2ee3c09a21825f12044a7674dd13333741ab6d709328d778fa18d5200090e7a1",
+      "candidate_rank": 36,
+      "reserve": false
+    },
+    {
+      "scene_id": 37,
+      "split": "train",
+      "official_house_index": 48,
+      "source_geometry_sha256": "37f6f9cf32dbd7cfb06e0859ce3bb133a8aca548456eb897f405b7d9c63658d9",
+      "candidate_rank": 37,
+      "reserve": false
+    },
+    {
+      "scene_id": 38,
+      "split": "train",
+      "official_house_index": 50,
+      "source_geometry_sha256": "61aea081dd4e5d5f327b9d398d0a535f9c17d210d61e7b543b7486b6ae972cec",
+      "candidate_rank": 38,
+      "reserve": false
+    },
+    {
+      "scene_id": 39,
+      "split": "train",
+      "official_house_index": 51,
+      "source_geometry_sha256": "011b22c853caa6f4541488e9109e88b45f4d3dec2af2c3c9083b5c7bb56eba4d",
+      "candidate_rank": 39,
+      "reserve": false
+    },
+    {
+      "scene_id": 40,
+      "split": "train",
+      "official_house_index": 55,
+      "source_geometry_sha256": "c32c21df417e954db5ccc1245b6a1d44a3e4c4985ae37da0e3ab85c6e4454803",
+      "candidate_rank": 40,
+      "reserve": false
+    },
+    {
+      "scene_id": 41,
+      "split": "train",
+      "official_house_index": 56,
+      "source_geometry_sha256": "c70d637d60695732f9c8f2832b7d4f114d774931186c647b6e27f119ce7c4de4",
+      "candidate_rank": 41,
+      "reserve": false
+    },
+    {
+      "scene_id": 42,
+      "split": "train",
+      "official_house_index": 57,
+      "source_geometry_sha256": "eea7a88fe60528caec03c1d4e62602ed843e1a499b84f1899d2f146d68b319b2",
+      "candidate_rank": 42,
+      "reserve": false
+    },
+    {
+      "scene_id": 43,
+      "split": "train",
+      "official_house_index": 58,
+      "source_geometry_sha256": "33376ad928d851e369913f9e08679892228b5e54993df524b7583cf895289353",
+      "candidate_rank": 43,
+      "reserve": false
+    },
+    {
+      "scene_id": 44,
+      "split": "train",
+      "official_house_index": 59,
+      "source_geometry_sha256": "5a70a43663d4a9e28373b4584ac1108530a33f4984b96fc4237882e813901240",
+      "candidate_rank": 44,
+      "reserve": false
+    },
+    {
+      "scene_id": 45,
+      "split": "train",
+      "official_house_index": 63,
+      "source_geometry_sha256": "d9222b0ff808021d8de5e4d46251d44c8dce8d074afa5d526e57a6dd118f32f0",
+      "candidate_rank": 45,
+      "reserve": false
+    },
+    {
+      "scene_id": 46,
+      "split": "train",
+      "official_house_index": 64,
+      "source_geometry_sha256": "91ab956aedf6cfdff73fc80f0e52c9855aabd746f7b6ea3e341e86d77d5abb0b",
+      "candidate_rank": 46,
+      "reserve": false
+    },
+    {
+      "scene_id": 47,
+      "split": "train",
+      "official_house_index": 65,
+      "source_geometry_sha256": "8d4ef5f2671ec1e4905113ad3db8adce56ffb17d35ffcff0bbee3dc6033ebc80",
+      "candidate_rank": 47,
+      "reserve": false
+    },
+    {
+      "scene_id": 48,
+      "split": "train",
+      "official_house_index": 66,
+      "source_geometry_sha256": "2758def30bd3ba505702152d6113f7cc25d8449135153b5d555432fa50298056",
+      "candidate_rank": 48,
+      "reserve": false
+    },
+    {
+      "scene_id": 49,
+      "split": "train",
+      "official_house_index": 67,
+      "source_geometry_sha256": "2e3f088008859702390ec956d43913062a164c51ed76a98480615b82d8fb7b9b",
+      "candidate_rank": 49,
+      "reserve": false
+    },
+    {
+      "scene_id": 50,
+      "split": "train",
+      "official_house_index": 69,
+      "source_geometry_sha256": "7ec5b02ed9daeb7673cadf40b27899d39131039dda9e4ad13953d51f5c979e5e",
+      "candidate_rank": 50,
+      "reserve": false
+    },
+    {
+      "scene_id": 51,
+      "split": "train",
+      "official_house_index": 71,
+      "source_geometry_sha256": "f4986aedd4165b5b1ce973545a8e6f0ac9c70cb9dd7b489e33c7dd00ebfae89a",
+      "candidate_rank": 51,
+      "reserve": false
+    },
+    {
+      "scene_id": 52,
+      "split": "train",
+      "official_house_index": 72,
+      "source_geometry_sha256": "d60ec5ad52086f8b1ddb27b6dc8fb82dba120400a7faf5c316f4c708d288da78",
+      "candidate_rank": 52,
+      "reserve": false
+    },
+    {
+      "scene_id": 53,
+      "split": "train",
+      "official_house_index": 73,
+      "source_geometry_sha256": "55050e933a3f3b42bc5e9b43a268730124adc0ac4845dded3f06297ec5ce8984",
+      "candidate_rank": 53,
+      "reserve": false
+    },
+    {
+      "scene_id": 54,
+      "split": "train",
+      "official_house_index": 74,
+      "source_geometry_sha256": "63dff032d992960f93ce32a0037fcd9689fd6e6f1f198eb2a2bd63915238f3b1",
+      "candidate_rank": 54,
+      "reserve": false
+    },
+    {
+      "scene_id": 55,
+      "split": "train",
+      "official_house_index": 76,
+      "source_geometry_sha256": "50e76ba44f1963f9568e107146e007f53348389de90f5a989a2ff94201df0831",
+      "candidate_rank": 55,
+      "reserve": false
+    },
+    {
+      "scene_id": 56,
+      "split": "train",
+      "official_house_index": 77,
+      "source_geometry_sha256": "918f46ff55ca030b247c5457079e26f65c13e1961f659ccd1f615c4c9f2a5107",
+      "candidate_rank": 56,
+      "reserve": false
+    },
+    {
+      "scene_id": 57,
+      "split": "train",
+      "official_house_index": 78,
+      "source_geometry_sha256": "b76311b3e8fe418091ed9e7eec08d03b0e56f9a9492143022d581959bb4771e3",
+      "candidate_rank": 57,
+      "reserve": false
+    },
+    {
+      "scene_id": 58,
+      "split": "train",
+      "official_house_index": 79,
+      "source_geometry_sha256": "e9777690f618632a8bdf9bfe1f6de038e4c55dbdf40fe86f57c6f0c93ce98a78",
+      "candidate_rank": 58,
+      "reserve": false
+    },
+    {
+      "scene_id": 59,
+      "split": "train",
+      "official_house_index": 80,
+      "source_geometry_sha256": "393af52339e45075a0fb72af77749cc47d171eca0f540ca66c3aa1af5e9f5aa3",
+      "candidate_rank": 59,
+      "reserve": false
+    },
+    {
+      "scene_id": 60,
+      "split": "train",
+      "official_house_index": 81,
+      "source_geometry_sha256": "d0ece54f1cee2e14585854c5008330ac7b438e86f29e237ab4ba84974db64f90",
+      "candidate_rank": 60,
+      "reserve": false
+    },
+    {
+      "scene_id": 61,
+      "split": "train",
+      "official_house_index": 82,
+      "source_geometry_sha256": "16fb57d1f20b35fcf60cc07593b0be714dc4d8519b7c05e4a6701b736e75ec10",
+      "candidate_rank": 61,
+      "reserve": false
+    },
+    {
+      "scene_id": 62,
+      "split": "train",
+      "official_house_index": 83,
+      "source_geometry_sha256": "583cc7c588175a8a33dfa888507362494852bcffe3cefaeb36f471b2916521f2",
+      "candidate_rank": 62,
+      "reserve": false
+    },
+    {
+      "scene_id": 63,
+      "split": "train",
+      "official_house_index": 84,
+      "source_geometry_sha256": "beaa28b64439a052391be2a7f1ee9043af0bec348611c9607b946dcc80920003",
+      "candidate_rank": 63,
+      "reserve": false
+    },
+    {
+      "scene_id": 64,
+      "split": "train",
+      "official_house_index": 85,
+      "source_geometry_sha256": "4a8b54fe17950e11f6164f2efce5ab625072eb554cd574b5eb94075474f7272f",
+      "candidate_rank": 64,
+      "reserve": false
+    },
+    {
+      "scene_id": 65,
+      "split": "train",
+      "official_house_index": 86,
+      "source_geometry_sha256": "6848a16966302b59d45f197db310fa24052d6d17b4bb9baf7f074c161753d063",
+      "candidate_rank": 65,
+      "reserve": false
+    },
+    {
+      "scene_id": 66,
+      "split": "train",
+      "official_house_index": 88,
+      "source_geometry_sha256": "c5521fb6ac88bc831507bf7eb0b34b4fdf2db72a5b323587ccb29cd35e9464c3",
+      "candidate_rank": 66,
+      "reserve": false
+    },
+    {
+      "scene_id": 67,
+      "split": "train",
+      "official_house_index": 89,
+      "source_geometry_sha256": "6a4f8148d9db046e3a199a1779bebf5ec37af956b75f73ba60645e617081ceeb",
+      "candidate_rank": 67,
+      "reserve": false
+    },
+    {
+      "scene_id": 68,
+      "split": "train",
+      "official_house_index": 90,
+      "source_geometry_sha256": "8235970d906fdca592c68b7b4fa6b0c3424f5b92da39daa90438692c34f4e132",
+      "candidate_rank": 68,
+      "reserve": false
+    },
+    {
+      "scene_id": 69,
+      "split": "train",
+      "official_house_index": 91,
+      "source_geometry_sha256": "caf13f2d5b544c35eb823d8f4f225bc033b82ac590c65cef518f04097b2cd8c1",
+      "candidate_rank": 69,
+      "reserve": false
+    },
+    {
+      "scene_id": 70,
+      "split": "train",
+      "official_house_index": 92,
+      "source_geometry_sha256": "61dca65941c868339647971394ac3fa191632f93180b15bae34c94fc9d4c0499",
+      "candidate_rank": 70,
+      "reserve": false
+    },
+    {
+      "scene_id": 71,
+      "split": "train",
+      "official_house_index": 93,
+      "source_geometry_sha256": "d1a618e0fa1e834f0897b8aabb586d589af7e2d30642ac0c5b98559a8b99157d",
+      "candidate_rank": 71,
+      "reserve": false
+    },
+    {
+      "scene_id": 72,
+      "split": "train",
+      "official_house_index": 94,
+      "source_geometry_sha256": "f6929920fea0f981e08c731c1e6640fc6ae6d8671724a9b6605acb2d5f24a61c",
+      "candidate_rank": 72,
+      "reserve": false
+    },
+    {
+      "scene_id": 73,
+      "split": "train",
+      "official_house_index": 95,
+      "source_geometry_sha256": "631223f0a6605fb5e1d9b0dd637612495c19d449746a579ad3cb65e2dfd0e4b3",
+      "candidate_rank": 73,
+      "reserve": false
+    },
+    {
+      "scene_id": 74,
+      "split": "train",
+      "official_house_index": 97,
+      "source_geometry_sha256": "6dc5a859a33bbe30657c2266c3cf011a572d3ab6d8060e63e3d6431da624b614",
+      "candidate_rank": 74,
+      "reserve": false
+    },
+    {
+      "scene_id": 75,
+      "split": "train",
+      "official_house_index": 98,
+      "source_geometry_sha256": "fd314bd3ca00988d4a31bb7f3c8eeb80ba36897ff4d2579c461a6d45a16e7c89",
+      "candidate_rank": 75,
+      "reserve": false
+    },
+    {
+      "scene_id": 76,
+      "split": "train",
+      "official_house_index": 99,
+      "source_geometry_sha256": "1ee215174e4bc8ee5a50d87c2ae81fdf39384a7c4210dbb28bebad59dfd05ad1",
+      "candidate_rank": 76,
+      "reserve": false
+    },
+    {
+      "scene_id": 77,
+      "split": "train",
+      "official_house_index": 100,
+      "source_geometry_sha256": "72b2467d802d5d0ac33134cf457cb33a97fe3c8efd927ec778f3f480bddb7095",
+      "candidate_rank": 77,
+      "reserve": false
+    },
+    {
+      "scene_id": 78,
+      "split": "train",
+      "official_house_index": 101,
+      "source_geometry_sha256": "aa58a203e22bfc9cc6094c55a388e48f431518cfa40225e8e7c1a465547f4352",
+      "candidate_rank": 78,
+      "reserve": false
+    },
+    {
+      "scene_id": 79,
+      "split": "train",
+      "official_house_index": 102,
+      "source_geometry_sha256": "9218a4e1ea6eb6ee06f7b2ad27fdc809a8f35bc191cbd233271200b438064070",
+      "candidate_rank": 79,
+      "reserve": false
+    },
+    {
+      "scene_id": 80,
+      "split": "train",
+      "official_house_index": 103,
+      "source_geometry_sha256": "b7466dd18b0c568fdad38989ca80c4b610c14b52cc81b4df5367a5549c679b1c",
+      "candidate_rank": 80,
+      "reserve": false
+    },
+    {
+      "scene_id": 81,
+      "split": "train",
+      "official_house_index": 105,
+      "source_geometry_sha256": "4aa10efaf85d7c41cd4ff99292ddaf8172ceb56daebd28d7f6210ce0b9317298",
+      "candidate_rank": 81,
+      "reserve": false
+    },
+    {
+      "scene_id": 82,
+      "split": "train",
+      "official_house_index": 107,
+      "source_geometry_sha256": "7caeadec161314f2cc84c35a184b121b46b53a8fcba6ac8a5f507b7c8b95ea2f",
+      "candidate_rank": 82,
+      "reserve": false
+    },
+    {
+      "scene_id": 83,
+      "split": "train",
+      "official_house_index": 108,
+      "source_geometry_sha256": "37d62ac44cfc78eeb5389889f0a45bac8a07647bd08617778d9b2d6970560efc",
+      "candidate_rank": 83,
+      "reserve": false
+    },
+    {
+      "scene_id": 84,
+      "split": "train",
+      "official_house_index": 109,
+      "source_geometry_sha256": "b5acad517fdcc82e9d6812b1ea2dd5aaea74aebc20414ba137d17865bc4f8a0d",
+      "candidate_rank": 84,
+      "reserve": false
+    },
+    {
+      "scene_id": 85,
+      "split": "train",
+      "official_house_index": 110,
+      "source_geometry_sha256": "899411a21e3278e4b0068993949e7e89c86a729c2e5f710b78534cf73658bcda",
+      "candidate_rank": 85,
+      "reserve": false
+    },
+    {
+      "scene_id": 86,
+      "split": "train",
+      "official_house_index": 111,
+      "source_geometry_sha256": "f353f235a82b4fcc123114068a2a3f4e0cf1f8f31c730f52299c4f7379d6b275",
+      "candidate_rank": 86,
+      "reserve": false
+    },
+    {
+      "scene_id": 87,
+      "split": "train",
+      "official_house_index": 112,
+      "source_geometry_sha256": "c7c3d0d4d0fff9067ba1a3825936699034a69847513aaaaa391b3dfa1822eeef",
+      "candidate_rank": 87,
+      "reserve": false
+    },
+    {
+      "scene_id": 88,
+      "split": "train",
+      "official_house_index": 114,
+      "source_geometry_sha256": "85166000ad179add0911ae15bcb06931ab18f1a0b80fd36729163ab31f98cc57",
+      "candidate_rank": 88,
+      "reserve": false
+    },
+    {
+      "scene_id": 89,
+      "split": "train",
+      "official_house_index": 115,
+      "source_geometry_sha256": "1f2d406403f5ed78fb3c12dc5cc44a4e73d96a5b5956007222bf71215f73ea5a",
+      "candidate_rank": 89,
+      "reserve": false
+    },
+    {
+      "scene_id": 90,
+      "split": "train",
+      "official_house_index": 117,
+      "source_geometry_sha256": "0ac7f8c5df2da48d2c8961f551d5267fe0b9b551eec8a7c8302caa75a8bce4b6",
+      "candidate_rank": 90,
+      "reserve": false
+    },
+    {
+      "scene_id": 91,
+      "split": "train",
+      "official_house_index": 118,
+      "source_geometry_sha256": "63aee6dca81abd729736877ab07226bea8041bcdc0a016ba224c25568da673f4",
+      "candidate_rank": 91,
+      "reserve": false
+    },
+    {
+      "scene_id": 92,
+      "split": "train",
+      "official_house_index": 120,
+      "source_geometry_sha256": "2c2f520a0f9390d0d41f769cf801c06612df0c78006159597fb064322a763844",
+      "candidate_rank": 92,
+      "reserve": false
+    },
+    {
+      "scene_id": 93,
+      "split": "train",
+      "official_house_index": 122,
+      "source_geometry_sha256": "3a7cf2a6129857733a54dd79dc89937f7389b53a0d9ee3b33471f486fa62e5af",
+      "candidate_rank": 93,
+      "reserve": false
+    },
+    {
+      "scene_id": 94,
+      "split": "train",
+      "official_house_index": 123,
+      "source_geometry_sha256": "0f93b43ff465945de2e3a429369f0e75295cafb56230d3ea3d10bd123f013502",
+      "candidate_rank": 94,
+      "reserve": false
+    },
+    {
+      "scene_id": 95,
+      "split": "train",
+      "official_house_index": 124,
+      "source_geometry_sha256": "9524e2b516f39bf5e3bc52e433ca49f2796bacd8719863ce25e1b7f60092ba44",
+      "candidate_rank": 95,
+      "reserve": false
+    },
+    {
+      "scene_id": 96,
+      "split": "train",
+      "official_house_index": 125,
+      "source_geometry_sha256": "962e60c64692bc3f24d4790a5e0d64ecfca8e581cf35badcc9d8c3e9173dbeaa",
+      "candidate_rank": 96,
+      "reserve": false
+    },
+    {
+      "scene_id": 97,
+      "split": "train",
+      "official_house_index": 126,
+      "source_geometry_sha256": "5bc1a8a239dd312a3887b8230178900bc1617b20576d63f906b16dc577674055",
+      "candidate_rank": 97,
+      "reserve": false
+    },
+    {
+      "scene_id": 98,
+      "split": "train",
+      "official_house_index": 127,
+      "source_geometry_sha256": "68af51977cae7e46497ae2035561a5156f1c3853bb3e3c57bb76f36e1d9e87d4",
+      "candidate_rank": 98,
+      "reserve": false
+    },
+    {
+      "scene_id": 99,
+      "split": "train",
+      "official_house_index": 128,
+      "source_geometry_sha256": "242ee1fa3359add8bec2e6df7fb24968cca2ea787daabae058717e6e42270d52",
+      "candidate_rank": 99,
+      "reserve": false
+    },
+    {
+      "scene_id": 100,
+      "split": "train",
+      "official_house_index": 130,
+      "source_geometry_sha256": "29b3845e7210828612016aaa9a89bf95f0e07b59aa4536888592100f24abd3a2",
+      "candidate_rank": 100,
+      "reserve": true
+    },
+    {
+      "scene_id": 101,
+      "split": "train",
+      "official_house_index": 132,
+      "source_geometry_sha256": "86ca349511ae306a7a7f7d350d14ee6f4c398647a6e295616bd90074427fb7e5",
+      "candidate_rank": 101,
+      "reserve": true
+    },
+    {
+      "scene_id": 102,
+      "split": "train",
+      "official_house_index": 134,
+      "source_geometry_sha256": "9dd495e59ef4c475c24f07e68a641d9d6534c785ff4a5e4376b667658cb245c8",
+      "candidate_rank": 102,
+      "reserve": true
+    },
+    {
+      "scene_id": 103,
+      "split": "train",
+      "official_house_index": 135,
+      "source_geometry_sha256": "4897374276480e2909d70bb6ea28e98b114d720e504034ffbf47f8b80ea8d6d0",
+      "candidate_rank": 103,
+      "reserve": true
+    },
+    {
+      "scene_id": 104,
+      "split": "train",
+      "official_house_index": 137,
+      "source_geometry_sha256": "1bf8cddd1067f142a676815c852eb4602fb70802848ebe5dc3e89d31a295379b",
+      "candidate_rank": 104,
+      "reserve": true
+    },
+    {
+      "scene_id": 105,
+      "split": "train",
+      "official_house_index": 139,
+      "source_geometry_sha256": "6c5c1c75d88cf1c0d0fa04392ad97636fd1b2250c0c838dbcf66e3e649b92e1f",
+      "candidate_rank": 105,
+      "reserve": true
+    },
+    {
+      "scene_id": 106,
+      "split": "train",
+      "official_house_index": 140,
+      "source_geometry_sha256": "3895cf9a88394144dee8a125465bb8d064d3d3183dc2f4405026611a4b478dbd",
+      "candidate_rank": 106,
+      "reserve": true
+    },
+    {
+      "scene_id": 107,
+      "split": "train",
+      "official_house_index": 141,
+      "source_geometry_sha256": "484e386e7beac526a4b5a2adc0599949898a04f7b4209a6a42acf266fad4f550",
+      "candidate_rank": 107,
+      "reserve": true
+    },
+    {
+      "scene_id": 108,
+      "split": "train",
+      "official_house_index": 142,
+      "source_geometry_sha256": "89e30f6aa7e0d319c75a8553f119be13855d458abfebd15bdc4c3c2a94cf3d89",
+      "candidate_rank": 108,
+      "reserve": true
+    },
+    {
+      "scene_id": 109,
+      "split": "train",
+      "official_house_index": 143,
+      "source_geometry_sha256": "76d4d780fec767cb9ebefdd39bef668be7105faedd33ca8f324652ccc7f0a16d",
+      "candidate_rank": 109,
+      "reserve": true
+    },
+    {
+      "scene_id": 110,
+      "split": "train",
+      "official_house_index": 144,
+      "source_geometry_sha256": "a93c1e552feb37ff9a893f183d2e3e3e7f85fe3a1cfbbdb23f5fe691d5927e92",
+      "candidate_rank": 110,
+      "reserve": true
+    },
+    {
+      "scene_id": 111,
+      "split": "train",
+      "official_house_index": 145,
+      "source_geometry_sha256": "cc9a261b0045683c086317f150b3fbed417cbb41008fa9c56930e3719ee1a746",
+      "candidate_rank": 111,
+      "reserve": true
+    },
+    {
+      "scene_id": 112,
+      "split": "train",
+      "official_house_index": 146,
+      "source_geometry_sha256": "9d4a2b7cdcf352c9db7f4a92e63b3710a767a6ca26ea907875cfbe1bdcee50dd",
+      "candidate_rank": 112,
+      "reserve": true
+    },
+    {
+      "scene_id": 113,
+      "split": "train",
+      "official_house_index": 147,
+      "source_geometry_sha256": "846db54fd6814e23bffcbe094b745e71fa0ff929e8d1611d8ad5872de8316e08",
+      "candidate_rank": 113,
+      "reserve": true
+    },
+    {
+      "scene_id": 114,
+      "split": "train",
+      "official_house_index": 148,
+      "source_geometry_sha256": "5672c56464cdb2f64546dd0fe4e7e571646b28826409a361955c1b99e2e6ffd4",
+      "candidate_rank": 114,
+      "reserve": true
+    },
+    {
+      "scene_id": 115,
+      "split": "train",
+      "official_house_index": 149,
+      "source_geometry_sha256": "1020820c8b1eee1df4dd95cea91255b60c33a055eace312d17baea1cf7eda9ef",
+      "candidate_rank": 115,
+      "reserve": true
+    },
+    {
+      "scene_id": 116,
+      "split": "train",
+      "official_house_index": 150,
+      "source_geometry_sha256": "e5ef686379687849d6e85392656a9684fc3e347a4af7b9b1b17ed8bbf8eaa887",
+      "candidate_rank": 116,
+      "reserve": true
+    },
+    {
+      "scene_id": 117,
+      "split": "train",
+      "official_house_index": 151,
+      "source_geometry_sha256": "3ff8a9b2b311c163b054cb387799911f769fb1c419cfe113b9507d81088821b1",
+      "candidate_rank": 117,
+      "reserve": true
+    },
+    {
+      "scene_id": 118,
+      "split": "train",
+      "official_house_index": 152,
+      "source_geometry_sha256": "ea08548e9ff0d1008373bd23e47c354ec726220cdc146be428de1e29d344208d",
+      "candidate_rank": 118,
+      "reserve": true
+    },
+    {
+      "scene_id": 119,
+      "split": "train",
+      "official_house_index": 153,
+      "source_geometry_sha256": "80a63cf6833f3ec69a431afdbd2dc509bb6bfa2adacdabc39ec14cd19b09ecaf",
+      "candidate_rank": 119,
+      "reserve": true
+    },
+    {
+      "scene_id": 120,
+      "split": "train",
+      "official_house_index": 154,
+      "source_geometry_sha256": "b7bc2ad31834423a83b14a17326f8aae376e919c7d225a9f79f3754abfde7f3a",
+      "candidate_rank": 120,
+      "reserve": true
+    },
+    {
+      "scene_id": 121,
+      "split": "train",
+      "official_house_index": 155,
+      "source_geometry_sha256": "a00992cfc3ee5a801849af40af61e3733d13af667063d3cc2d183e7d8e1fc285",
+      "candidate_rank": 121,
+      "reserve": true
+    },
+    {
+      "scene_id": 122,
+      "split": "train",
+      "official_house_index": 157,
+      "source_geometry_sha256": "7517d66cdaf53be508c3c779a0c1f1449c022784f1f5a5911e91927eff23ec4f",
+      "candidate_rank": 122,
+      "reserve": true
+    },
+    {
+      "scene_id": 123,
+      "split": "train",
+      "official_house_index": 159,
+      "source_geometry_sha256": "b8e55afa5891252bcd5693b060d916e05e9c4746027a678d1ecd6ceb12abfb00",
+      "candidate_rank": 123,
+      "reserve": true
+    },
+    {
+      "scene_id": 124,
+      "split": "train",
+      "official_house_index": 160,
+      "source_geometry_sha256": "d19116ef26bbce207f6130a50e5bee5a86ee0bb85b09819f18c2b59a8cd0d50e",
+      "candidate_rank": 124,
+      "reserve": true
+    },
+    {
+      "scene_id": 125,
+      "split": "train",
+      "official_house_index": 162,
+      "source_geometry_sha256": "40101af2529ecc98360166bc69c5beeb6d335f4f2a28a08e929bc6a11b8542dc",
+      "candidate_rank": 125,
+      "reserve": true
+    },
+    {
+      "scene_id": 126,
+      "split": "train",
+      "official_house_index": 163,
+      "source_geometry_sha256": "ed0793aca9d6420b633acf5a6ef3178f8bd1c3f59545b76d96c88259a546f9c7",
+      "candidate_rank": 126,
+      "reserve": true
+    },
+    {
+      "scene_id": 127,
+      "split": "train",
+      "official_house_index": 164,
+      "source_geometry_sha256": "0a1fabaf0846425ded7f3879569104a1c30cb3db37e88e9d4a62ee4036936e99",
+      "candidate_rank": 127,
+      "reserve": true
+    },
+    {
+      "scene_id": 128,
+      "split": "train",
+      "official_house_index": 165,
+      "source_geometry_sha256": "f525a892895da1c06b1948fbdf01e87d5d439a38e96c2678a6caefa675f8c7f9",
+      "candidate_rank": 128,
+      "reserve": true
+    },
+    {
+      "scene_id": 129,
+      "split": "train",
+      "official_house_index": 167,
+      "source_geometry_sha256": "760bee495ddf27a8efda1967281e7624c1ba4376c24de03ebd6acd29fa5bb5a7",
+      "candidate_rank": 129,
+      "reserve": true
+    },
+    {
+      "scene_id": 130,
+      "split": "train",
+      "official_house_index": 169,
+      "source_geometry_sha256": "460490863f1567927406b4e0a27352646f649a71a7f5012e1fc79787f52426d0",
+      "candidate_rank": 130,
+      "reserve": true
+    },
+    {
+      "scene_id": 131,
+      "split": "train",
+      "official_house_index": 170,
+      "source_geometry_sha256": "39034a59b9ebe3a7093ce995f420513b8c03cef083fc9c090b5abef02b467d89",
+      "candidate_rank": 131,
+      "reserve": true
+    },
+    {
+      "scene_id": 132,
+      "split": "train",
+      "official_house_index": 171,
+      "source_geometry_sha256": "eb8f14dfc31134a73c5a5e018fdc5157754e890fb50ea48865ffd7f653f9ec43",
+      "candidate_rank": 132,
+      "reserve": true
+    },
+    {
+      "scene_id": 133,
+      "split": "train",
+      "official_house_index": 172,
+      "source_geometry_sha256": "0375be01faabf51e5c57bc91b31169a7390dadc8158c32ea180a7e0412e2db01",
+      "candidate_rank": 133,
+      "reserve": true
+    },
+    {
+      "scene_id": 134,
+      "split": "train",
+      "official_house_index": 173,
+      "source_geometry_sha256": "60825e7028d7ebe569b26d1485d4c9d42ad6a1ca20140b43d81fde0d3b42da9e",
+      "candidate_rank": 134,
+      "reserve": true
+    },
+    {
+      "scene_id": 135,
+      "split": "train",
+      "official_house_index": 174,
+      "source_geometry_sha256": "8a537cfd21e69ea2a8274fd529d5977daac1a50ea990fb8326e57a8ea6092e5b",
+      "candidate_rank": 135,
+      "reserve": true
+    },
+    {
+      "scene_id": 136,
+      "split": "train",
+      "official_house_index": 175,
+      "source_geometry_sha256": "1d4c572ecfc476ee44658753d51c7382ff9d849f9da6de6d338ade81a1d95e3c",
+      "candidate_rank": 136,
+      "reserve": true
+    },
+    {
+      "scene_id": 137,
+      "split": "train",
+      "official_house_index": 177,
+      "source_geometry_sha256": "6d104a677355208abe9d1aca5579f6e37eae45fdbd2c799c4acaf6ff0b305195",
+      "candidate_rank": 137,
+      "reserve": true
+    },
+    {
+      "scene_id": 138,
+      "split": "train",
+      "official_house_index": 178,
+      "source_geometry_sha256": "dfef4543af5551f04dbf8b15939624e57904b6b97f08456d6d18b62c9e1a7b9c",
+      "candidate_rank": 138,
+      "reserve": true
+    },
+    {
+      "scene_id": 139,
+      "split": "train",
+      "official_house_index": 179,
+      "source_geometry_sha256": "fd8e50fb71ad166aeccda41a4888d28811a31a3ea0857a0389b1c9af647ecb78",
+      "candidate_rank": 139,
+      "reserve": true
+    },
+    {
+      "scene_id": 140,
+      "split": "train",
+      "official_house_index": 182,
+      "source_geometry_sha256": "99310d09e73331fbef0569a156f21556a4bf92857911c2c57950bad38fb12409",
+      "candidate_rank": 140,
+      "reserve": true
+    },
+    {
+      "scene_id": 141,
+      "split": "train",
+      "official_house_index": 183,
+      "source_geometry_sha256": "eb13a5b87cf0f3524cfb56a7a37802049cc464d9c0a0ec477421086dc5a9c7d7",
+      "candidate_rank": 141,
+      "reserve": true
+    },
+    {
+      "scene_id": 142,
+      "split": "train",
+      "official_house_index": 184,
+      "source_geometry_sha256": "47263200afaa142e930060203c2087e47d5163b416545b861a177a244c3c748b",
+      "candidate_rank": 142,
+      "reserve": true
+    },
+    {
+      "scene_id": 143,
+      "split": "train",
+      "official_house_index": 186,
+      "source_geometry_sha256": "15b74420e126ffa215bd2007becfe5f6b42d603ea2ff06a10be498c1564c21b5",
+      "candidate_rank": 143,
+      "reserve": true
+    },
+    {
+      "scene_id": 144,
+      "split": "train",
+      "official_house_index": 187,
+      "source_geometry_sha256": "12dd3a27457191fd4e3bb9d8e13ab1c27e9689943f9af1814ed68912518ef69e",
+      "candidate_rank": 144,
+      "reserve": true
+    },
+    {
+      "scene_id": 145,
+      "split": "train",
+      "official_house_index": 188,
+      "source_geometry_sha256": "b882e08babc658b65bd97cf80689e5fcb898bcf5ca5c705d9e70e67fa654e66f",
+      "candidate_rank": 145,
+      "reserve": true
+    },
+    {
+      "scene_id": 146,
+      "split": "train",
+      "official_house_index": 189,
+      "source_geometry_sha256": "718488a477c739f7111dce658a34c31d52d77d850b5ec867bd97c80eb78e7b55",
+      "candidate_rank": 146,
+      "reserve": true
+    },
+    {
+      "scene_id": 147,
+      "split": "train",
+      "official_house_index": 190,
+      "source_geometry_sha256": "c55d85e2a73381b94e5d8c72a04fcfa321e254cb1afc8931ab5f424c4ede6a60",
+      "candidate_rank": 147,
+      "reserve": true
+    },
+    {
+      "scene_id": 148,
+      "split": "train",
+      "official_house_index": 191,
+      "source_geometry_sha256": "07cee23561442ee6a3aa72cdd1f095f8506dc4571b82d3073ea8de663e14be13",
+      "candidate_rank": 148,
+      "reserve": true
+    },
+    {
+      "scene_id": 149,
+      "split": "train",
+      "official_house_index": 193,
+      "source_geometry_sha256": "4b7a4457025c48477a3c781371e933245a1d57173875316b65d1ac2f24591d8e",
+      "candidate_rank": 149,
+      "reserve": true
+    },
+    {
+      "scene_id": 3000,
+      "split": "val",
+      "official_house_index": 0,
+      "source_geometry_sha256": "8b3275ae59875da833c8e191a4adbf68b5c45af608357212bca8cded9d81579f",
+      "candidate_rank": 0,
+      "reserve": false
+    },
+    {
+      "scene_id": 3001,
+      "split": "val",
+      "official_house_index": 1,
+      "source_geometry_sha256": "9f998566f18028505203abf9a56ee14799a9f293695acf77b52e53dc073715f2",
+      "candidate_rank": 1,
+      "reserve": false
+    },
+    {
+      "scene_id": 3002,
+      "split": "val",
+      "official_house_index": 2,
+      "source_geometry_sha256": "70386307a2e8a1e4d29c3f97badd89654eb0b52e09db500c8b6893be1122a2a0",
+      "candidate_rank": 2,
+      "reserve": false
+    },
+    {
+      "scene_id": 3003,
+      "split": "val",
+      "official_house_index": 3,
+      "source_geometry_sha256": "e2c596b3ca7095e766361a82e3bc64b2f4b034714b7d1134c8e2324e1b38d77e",
+      "candidate_rank": 3,
+      "reserve": false
+    },
+    {
+      "scene_id": 3004,
+      "split": "val",
+      "official_house_index": 4,
+      "source_geometry_sha256": "bfab2450397234c23a11d5b0aa7c83554d015f51d6a47bd62f8bba7bb4801cb2",
+      "candidate_rank": 4,
+      "reserve": false
+    },
+    {
+      "scene_id": 3005,
+      "split": "val",
+      "official_house_index": 5,
+      "source_geometry_sha256": "53cc44f6d896bafb0dbf66ed5e8db0a50c72713e43a952e2c307eeff7ef2861b",
+      "candidate_rank": 5,
+      "reserve": false
+    },
+    {
+      "scene_id": 3006,
+      "split": "val",
+      "official_house_index": 7,
+      "source_geometry_sha256": "f295e2b4f6915c779932e7e4f1c32707c886374026cee3b528691badf49691df",
+      "candidate_rank": 6,
+      "reserve": false
+    },
+    {
+      "scene_id": 3007,
+      "split": "val",
+      "official_house_index": 9,
+      "source_geometry_sha256": "ed5a8ab1ce760a2fc07a9a1287e2f9ec4f255034034a502bd43963449ec6534d",
+      "candidate_rank": 7,
+      "reserve": false
+    },
+    {
+      "scene_id": 3008,
+      "split": "val",
+      "official_house_index": 10,
+      "source_geometry_sha256": "ce6b46853cc150339e198b64f443cc1051ae27f907cbc4bf7762ea76c50a5f8f",
+      "candidate_rank": 8,
+      "reserve": false
+    },
+    {
+      "scene_id": 3009,
+      "split": "val",
+      "official_house_index": 11,
+      "source_geometry_sha256": "0afc4e3f8286cdab1a6b7c4d07dc6f5d42e14eae3fb7880162aa1c7b123ccf05",
+      "candidate_rank": 9,
+      "reserve": false
+    },
+    {
+      "scene_id": 3010,
+      "split": "val",
+      "official_house_index": 12,
+      "source_geometry_sha256": "2526ae803dec2e1f4d2d983150253fa137f634424073a123d74482bac6611fcc",
+      "candidate_rank": 10,
+      "reserve": false
+    },
+    {
+      "scene_id": 3011,
+      "split": "val",
+      "official_house_index": 13,
+      "source_geometry_sha256": "e2629aa1dd12d6797ee6934062008c52a2c684abb49d436942ea0c9a984bd30a",
+      "candidate_rank": 11,
+      "reserve": false
+    },
+    {
+      "scene_id": 3012,
+      "split": "val",
+      "official_house_index": 15,
+      "source_geometry_sha256": "541e592a174381c3b9b8df0c193bb73b1603f9277aa36d09b0459a4217df9d43",
+      "candidate_rank": 12,
+      "reserve": false
+    },
+    {
+      "scene_id": 3013,
+      "split": "val",
+      "official_house_index": 16,
+      "source_geometry_sha256": "4b90c71badeb88fb4fcdc97520ffb325dd2dc09b8c012c8c4b3ec40828760439",
+      "candidate_rank": 13,
+      "reserve": false
+    },
+    {
+      "scene_id": 3014,
+      "split": "val",
+      "official_house_index": 17,
+      "source_geometry_sha256": "0b4d9130557b41927dbc764fe13995d0f658769dff9a752df6aaa6badf3cce60",
+      "candidate_rank": 14,
+      "reserve": false
+    },
+    {
+      "scene_id": 3015,
+      "split": "val",
+      "official_house_index": 18,
+      "source_geometry_sha256": "a9d14a61f8f78beae9a0be1f715bc86944de45f54d3f0c53f7c4b14a303fc33e",
+      "candidate_rank": 15,
+      "reserve": false
+    },
+    {
+      "scene_id": 3016,
+      "split": "val",
+      "official_house_index": 19,
+      "source_geometry_sha256": "151be857a6d34429c144bbabc9c7b474a4e000ce03541064274306f31c432807",
+      "candidate_rank": 16,
+      "reserve": false
+    },
+    {
+      "scene_id": 3017,
+      "split": "val",
+      "official_house_index": 20,
+      "source_geometry_sha256": "f3d3856bcb3477b6ce59d0c99cb163c5ae3964bdd7ed8f84e85ce069830804bb",
+      "candidate_rank": 17,
+      "reserve": false
+    },
+    {
+      "scene_id": 3018,
+      "split": "val",
+      "official_house_index": 21,
+      "source_geometry_sha256": "835304b320845c879fdc5d5914c47f30e0875ae8f61de3be84ee697d971afccc",
+      "candidate_rank": 18,
+      "reserve": false
+    },
+    {
+      "scene_id": 3019,
+      "split": "val",
+      "official_house_index": 26,
+      "source_geometry_sha256": "b57e1dadb6a60cdcf1523332c993da2512829479ed3b82550fb68ba09c89fff9",
+      "candidate_rank": 19,
+      "reserve": false
+    },
+    {
+      "scene_id": 3020,
+      "split": "val",
+      "official_house_index": 27,
+      "source_geometry_sha256": "c51477d2e0590675d22ba657d33f88ab3b8f54844260ec77624585300f0c1d5d",
+      "candidate_rank": 20,
+      "reserve": true
+    },
+    {
+      "scene_id": 3021,
+      "split": "val",
+      "official_house_index": 29,
+      "source_geometry_sha256": "892745fe8a7dfba59d47bb5cc8f8258ae15e080043e82dc5d43723ea1969c77f",
+      "candidate_rank": 21,
+      "reserve": true
+    },
+    {
+      "scene_id": 3022,
+      "split": "val",
+      "official_house_index": 30,
+      "source_geometry_sha256": "907b7ede96c2ed2fabe5148831e80106809c5df1c7e409f7dbdb81f5b4f46fd9",
+      "candidate_rank": 22,
+      "reserve": true
+    },
+    {
+      "scene_id": 3023,
+      "split": "val",
+      "official_house_index": 31,
+      "source_geometry_sha256": "9135f3164fdc9368c304b074074e1c18c275a5d5eeeb32d6074796694ca9c190",
+      "candidate_rank": 23,
+      "reserve": true
+    },
+    {
+      "scene_id": 3024,
+      "split": "val",
+      "official_house_index": 32,
+      "source_geometry_sha256": "30474dca7d6feb9a1b232c311aa8978cfae573317678c32ca6a641206736c436",
+      "candidate_rank": 24,
+      "reserve": true
+    },
+    {
+      "scene_id": 3025,
+      "split": "val",
+      "official_house_index": 34,
+      "source_geometry_sha256": "171e3637f55df6db7b309927f73dac73137f78b2165d147ae7a84c99ecc6a569",
+      "candidate_rank": 25,
+      "reserve": true
+    },
+    {
+      "scene_id": 3026,
+      "split": "val",
+      "official_house_index": 36,
+      "source_geometry_sha256": "2fc190032b01229d8eb291fe6fcdec8b67151e19698e561b76d328e162eb09a8",
+      "candidate_rank": 26,
+      "reserve": true
+    },
+    {
+      "scene_id": 3027,
+      "split": "val",
+      "official_house_index": 37,
+      "source_geometry_sha256": "8cf0012599f854a1588576952c53dfc293e28d0e53a6d1b855107650b75c1b91",
+      "candidate_rank": 27,
+      "reserve": true
+    },
+    {
+      "scene_id": 3028,
+      "split": "val",
+      "official_house_index": 38,
+      "source_geometry_sha256": "15004f08639b332b5ca9e62ab6747b96ae5d6934735e8eb29045654914074d9a",
+      "candidate_rank": 28,
+      "reserve": true
+    },
+    {
+      "scene_id": 3029,
+      "split": "val",
+      "official_house_index": 39,
+      "source_geometry_sha256": "0d9015228f4c59f200ba991da01df14ecb382252bc2ac9d6efb9461641d6f548",
+      "candidate_rank": 29,
+      "reserve": true
+    },
+    {
+      "scene_id": 3250,
+      "split": "test",
+      "official_house_index": 0,
+      "source_geometry_sha256": "b411612a441119d09c22853fe282461ef07e43d0591f195f81f47d9c3e3b132e",
+      "candidate_rank": 0,
+      "reserve": false
+    },
+    {
+      "scene_id": 3251,
+      "split": "test",
+      "official_house_index": 1,
+      "source_geometry_sha256": "eed618a752f901bc6f4c0738a1b2c94f8243275c5ad7c84c865e1c97d591f121",
+      "candidate_rank": 1,
+      "reserve": false
+    },
+    {
+      "scene_id": 3252,
+      "split": "test",
+      "official_house_index": 2,
+      "source_geometry_sha256": "3a973cde6b63a8f5e0cbd9923941759b45a16154eaa9e0f7191309032630326f",
+      "candidate_rank": 2,
+      "reserve": false
+    },
+    {
+      "scene_id": 3253,
+      "split": "test",
+      "official_house_index": 4,
+      "source_geometry_sha256": "c906436118c492601e10d48b1af2e568f918366a759c51f8b5f0ff65b37a5f45",
+      "candidate_rank": 3,
+      "reserve": false
+    },
+    {
+      "scene_id": 3254,
+      "split": "test",
+      "official_house_index": 5,
+      "source_geometry_sha256": "5109cb55f042482900bd460fa8d91c7a543f4c815707bcb9ba316cf8612cf693",
+      "candidate_rank": 4,
+      "reserve": false
+    },
+    {
+      "scene_id": 3255,
+      "split": "test",
+      "official_house_index": 6,
+      "source_geometry_sha256": "0eea51b9634046aead0193536ae58e401cc10f520d80e6cf0d0edaf0c7211566",
+      "candidate_rank": 5,
+      "reserve": false
+    },
+    {
+      "scene_id": 3256,
+      "split": "test",
+      "official_house_index": 7,
+      "source_geometry_sha256": "b793975d27444e1aa7f39ae2a3920a662a0e31bb95d8128d8c496f05e90a47fd",
+      "candidate_rank": 6,
+      "reserve": false
+    },
+    {
+      "scene_id": 3257,
+      "split": "test",
+      "official_house_index": 10,
+      "source_geometry_sha256": "ad3859b857ad8df4e945531c43729101f0e09475bd9a2bdfc224beefa1ac7a31",
+      "candidate_rank": 7,
+      "reserve": false
+    },
+    {
+      "scene_id": 3258,
+      "split": "test",
+      "official_house_index": 11,
+      "source_geometry_sha256": "8ba01c6046f154eed9a41a6048b5228d33c16c699eff89035163db067735b3ff",
+      "candidate_rank": 8,
+      "reserve": false
+    },
+    {
+      "scene_id": 3259,
+      "split": "test",
+      "official_house_index": 12,
+      "source_geometry_sha256": "b50a24baf09fa425a95c7954619a2ed9fbab4bc36cc54d3d105cbf5c8241e87d",
+      "candidate_rank": 9,
+      "reserve": false
+    },
+    {
+      "scene_id": 3260,
+      "split": "test",
+      "official_house_index": 13,
+      "source_geometry_sha256": "c12a0c880333dc9ce3d07c5dda61f4f702b2466a6376b7b3585eefc09e0d3074",
+      "candidate_rank": 10,
+      "reserve": false
+    },
+    {
+      "scene_id": 3261,
+      "split": "test",
+      "official_house_index": 14,
+      "source_geometry_sha256": "cb70b0d1b85182ec895e5c7b094f7152c864da11e38833b462424687e4d2ad61",
+      "candidate_rank": 11,
+      "reserve": false
+    },
+    {
+      "scene_id": 3262,
+      "split": "test",
+      "official_house_index": 15,
+      "source_geometry_sha256": "62a8b2722ba88919b0f6453cfae89d03e380ac288cb07bd3d5df1a8d86cc5f4b",
+      "candidate_rank": 12,
+      "reserve": false
+    },
+    {
+      "scene_id": 3263,
+      "split": "test",
+      "official_house_index": 16,
+      "source_geometry_sha256": "c0125c31a5343bbd1c3d1cebb0c36bff965b9b39ed07376b43ac6a20a46500a4",
+      "candidate_rank": 13,
+      "reserve": false
+    },
+    {
+      "scene_id": 3264,
+      "split": "test",
+      "official_house_index": 17,
+      "source_geometry_sha256": "a28bcbabb78005be0a1a5793520a8cd186c62344521a41505fcb14b4382d88fc",
+      "candidate_rank": 14,
+      "reserve": false
+    },
+    {
+      "scene_id": 3265,
+      "split": "test",
+      "official_house_index": 18,
+      "source_geometry_sha256": "7154ad1721f31af31f1d727b4926a1416a2bb78ceb06677dc2c1421a43df50d1",
+      "candidate_rank": 15,
+      "reserve": false
+    },
+    {
+      "scene_id": 3266,
+      "split": "test",
+      "official_house_index": 19,
+      "source_geometry_sha256": "5176f6697eae29b5f1b1f0839d5c0e5469b56b682ea7edd8b239ec21d038f095",
+      "candidate_rank": 16,
+      "reserve": false
+    },
+    {
+      "scene_id": 3267,
+      "split": "test",
+      "official_house_index": 20,
+      "source_geometry_sha256": "a8b68b5ff976c8f7f0ad17cf89e6294a9e3c1d90626b27ec0424ff2a1afd2e6d",
+      "candidate_rank": 17,
+      "reserve": false
+    },
+    {
+      "scene_id": 3268,
+      "split": "test",
+      "official_house_index": 25,
+      "source_geometry_sha256": "5b445d9dbe5d9ea11fc4cb691dc5b7616566b82e932f6d40390a16e881f6f415",
+      "candidate_rank": 18,
+      "reserve": false
+    },
+    {
+      "scene_id": 3269,
+      "split": "test",
+      "official_house_index": 26,
+      "source_geometry_sha256": "bec71534619445663f86bb353c7439c6c5195757501eef7dbbce90dc606473e9",
+      "candidate_rank": 19,
+      "reserve": false
+    },
+    {
+      "scene_id": 3270,
+      "split": "test",
+      "official_house_index": 28,
+      "source_geometry_sha256": "ef0dfe8e24ca87cb1c6c5b36f737794fee94716a0024225e19f54933929dd628",
+      "candidate_rank": 20,
+      "reserve": true
+    },
+    {
+      "scene_id": 3271,
+      "split": "test",
+      "official_house_index": 29,
+      "source_geometry_sha256": "7a2db700b614036b88182eef14193661f2b27b77486693578d14c851e4920b48",
+      "candidate_rank": 21,
+      "reserve": true
+    },
+    {
+      "scene_id": 3272,
+      "split": "test",
+      "official_house_index": 30,
+      "source_geometry_sha256": "bedda51c01a0ed62892ca189c03356511a93b78db31285a679bffeef3ab259ab",
+      "candidate_rank": 22,
+      "reserve": true
+    },
+    {
+      "scene_id": 3273,
+      "split": "test",
+      "official_house_index": 31,
+      "source_geometry_sha256": "948f88be329c33224c2d78a9d98b6be9bcb2824dc37016fcf0d080d8be864596",
+      "candidate_rank": 23,
+      "reserve": true
+    },
+    {
+      "scene_id": 3274,
+      "split": "test",
+      "official_house_index": 32,
+      "source_geometry_sha256": "5f14d3425999072bc603b90ded8a25bc6fe06d3cf9437382c1650085b247aa39",
+      "candidate_rank": 24,
+      "reserve": true
+    },
+    {
+      "scene_id": 3275,
+      "split": "test",
+      "official_house_index": 33,
+      "source_geometry_sha256": "3b0ca59ea7dbd225fe5331810f1f61fea7477252df6bc52baafdf03d295bb34d",
+      "candidate_rank": 25,
+      "reserve": true
+    },
+    {
+      "scene_id": 3276,
+      "split": "test",
+      "official_house_index": 34,
+      "source_geometry_sha256": "df1da1e4361bd8e11638061166d6d4aad6f568eae8c48d9f3a1f68a8d44a5c83",
+      "candidate_rank": 26,
+      "reserve": true
+    },
+    {
+      "scene_id": 3277,
+      "split": "test",
+      "official_house_index": 35,
+      "source_geometry_sha256": "2966109124bf54dc89a35e4710be0bfb66673e93895d0646cf0dd070b716a012",
+      "candidate_rank": 27,
+      "reserve": true
+    },
+    {
+      "scene_id": 3278,
+      "split": "test",
+      "official_house_index": 36,
+      "source_geometry_sha256": "1090b937b38cc8a8f73078f51bd8c7bff7c93d76642120b67871d68181dda370",
+      "candidate_rank": 28,
+      "reserve": true
+    },
+    {
+      "scene_id": 3279,
+      "split": "test",
+      "official_house_index": 37,
+      "source_geometry_sha256": "09d03dd473bddf85279a2d46a175a390047bf36970cda1b1104aa02a3def0160",
+      "candidate_rank": 29,
+      "reserve": true
+    }
+  ],
+  "source": "https://github.com/allenai/procthor-10k",
+  "license": "Apache-2.0",
+  "source_commit": "439193522244720b86d8c81cde2e51e3a4d150cf",
+  "selection": "Publisher order, >=2 rooms, >=1 door and window; 50% bounded reserves. Replace only on predeclared acquisition/geometry/image failures within the same official split.",
+  "source_split_authoritative": true,
+  "no_test_localization_scores_used": true
+}

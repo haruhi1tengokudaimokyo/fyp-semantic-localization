@@ -1,0 +1,15 @@
+{
+  "stage": "WAITING_FOR_EXISTING_SPVLOC",
+  "unix_time": 1793621908.1618197,
+  "target": {
+    "train": 100,
+    "val": 20,
+    "test": 20
+  },
+  "automatic_full_training": false,
+  "protected_unit": "fyp-spvloc-16-pipeline.service",
+  "worker": "MainPID=182892\nActiveState=active",
+  "compute_pids": [
+    "252989"
+  ]
+}

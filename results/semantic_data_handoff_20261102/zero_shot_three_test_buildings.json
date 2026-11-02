@@ -1,0 +1,42 @@
+{
+  "status": "PILOT_EVALUATED_NOT_FULL_BENCHMARK",
+  "split": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "val": [
+      3000,
+      3001,
+      3002
+    ],
+    "test": [
+      3250,
+      3251,
+      3252
+    ]
+  },
+  "metrics": {
+    "initial_estimates": {
+      "samples": 401,
+      "translation_median_m": 2.830206681425776,
+      "rotation_median_deg": 82.40654196997271,
+      "success_1m30deg": 0.24937655860349128
+    },
+    "refined_estimates": {
+      "samples": 401,
+      "translation_median_m": 2.7073482482501436,
+      "rotation_median_deg": 80.85265644682806,
+      "success_1m30deg": 0.256857855361596
+    }
+  },
+  "checkpoint": "/data/fyp_3d/models/spvloc/ckpt_s3d.ckpt",
+  "queries": 401
+}

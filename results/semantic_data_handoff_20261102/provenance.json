@@ -1,0 +1,19 @@
+{
+  "spvloc": {
+    "commit": "754861115e38bf6f9b6b6b642db095f8e1ff6958",
+    "remote": "https://github.com/fraunhoferhhi/spvloc.git"
+  },
+  "spvloc_redner": {
+    "commit": "84f00efda06a16f7872f3ca202805cd31f3f8f81",
+    "remote": "https://github.com/gard-n/redner.git"
+  },
+  "procthor-10k": {
+    "commit": "439193522244720b86d8c81cde2e51e3a4d150cf",
+    "remote": "https://github.com/allenai/procthor-10k.git"
+  },
+  "AI2THOR_commit": "f0825767cd50d69f666c7f282e54abfe58f1e917",
+  "official_weights_sha256": "074ec5d9d2e45b74358b5cd0d0fc139eef1d2499c20b98daa0f0a80f07682e67",
+  "snapshot_time": "2026-11-02T20:26:17.877535+08:00",
+  "full_scale_training_started": false,
+  "VLM": "PAUSED"
+}

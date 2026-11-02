@@ -1,0 +1,25 @@
+import json,csv,hashlib,shutil,zipfile
+from pathlib import Path
+R=Path('/data/fyp_3d/datasets/structured3d_original_subset');G=1024**3
+reports=[]
+for n in ['Hotel-0','Office-2']:
+ d=json.loads((R/(n+'.validation.json')).read_text());a=json.loads((R/(n+'.archive_receipt.json')).read_text());x=json.loads((R/(n+'.extraction_receipt.json')).read_text());d['source_archive']=a;d['extracted_bytes']=x['uncompressed_bytes'];d['file_integrity_manifest']=str(R/(n+'.files.json'));reports.append(d)
+manifest=dict(status='NOT_DATA_READY',structured3d=dict(status='BLOCKED_ORIGINAL_SOURCE_AND_AUTHORIZATION',scenes=0,train=0,validation=0,test=0,reasons=['Both original panorama_00 and annotation_3d sources returned HTTP404 NoSuchKey on two finite probes','Official site requires signed agreement and granted download access; authorization not demonstrated']),replica_multiagent=dict(downloaded_scenes=2,raw_frames=sum(d['frames'] for d in reports),fully_qualified_scenes=0,independent_buildings_verified=None,publisher_train_val_test='Unspecified; not Structured3D scene-number splits',scenes=reports),SPVLoc_original_training_ready=False,alternative_semantic_training_ready=False,usage_decision='Do not train or localize using these Replica semantic labels until scene instance/class mapping and depth/pose/mesh discrepancy are resolved. ProcTHOR is a separate dataset and separately audited.')
+(R/'DATASET_SCENE_MANIFEST.json').write_text(json.dumps(manifest,indent=2))
+with (R/'SEMANTIC_CLASS_DISTRIBUTION.csv').open('w',newline='') as f:
+ w=csv.writer(f);w.writerow(['scene','raw_png_label','verified_class_name','pixels','instance_count','mapping_status'])
+ for d in reports:
+  for k,v in d['semantic_raw_id_pixels'].items():w.writerow([d['scene'],k,'UNRESOLVED',v,'UNRESOLVED','NO_TRUSTED_PER_SCENE_MAPPING'])
+checks=[]
+for p in sorted((R/'audit_sources').iterdir()):
+ if p.is_file():checks.append(dict(path=p.name,bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()))
+(R/'audit_sources_checksums.json').write_text(json.dumps(checks,indent=2))
+extra=R/'audit_sources/additional_habitat_configs.zip'
+if extra.exists():
+ with zipfile.ZipFile(extra) as z:assert z.testzip() is None
+ (R/'additional_configs_receipt.json').write_text(json.dumps(dict(url='https://dl.fbaipublicfiles.com/habitat/Replica/additional_habitat_configs.zip',bytes=extra.stat().st_size,sha256=hashlib.sha256(extra.read_bytes()).hexdigest(),CRC=True,contains_semantic_class_or_instance_mapping=False,archive_released=True),indent=2));extra.unlink()
+used=sum(p.stat().st_size for p in R.rglob('*') if p.is_file());disk=shutil.disk_usage('/data')
+(R/'DATASET_STORAGE_REPORT.md').write_text(f'''# 数据存储验收（2026-11-02）\n\n- 原始 Structured3D：0 场景，未下载大归档。\n- ReplicaMultiAgent 原始归档：Hotel-0 {reports[0]['source_archive']['bytes']:,} B；Office-2 {reports[1]['source_archive']['bytes']:,} B。\n- 解压有效载荷合计：{sum(x['extracted_bytes'] for x in reports):,} B。\n- 两份大归档已在全 ZIP CRC、逐文件 SHA256 复算和来源记录完成后释放，仅保留解压文件和校验清单。\n- 此目录当前逻辑占用：{used/G:.3f} GiB（包含审计环境和日志）。\n- /data 当前可用：{disk.free/G:.3f} GiB，100GiB 保留线通过。新数据部分的归档＋解压保守预估峰值低于 6GiB。\n- 获取器在每个写块核查 100GiB 可用线，并用保守累计账本约束本数据根目录 60GiB 上限。\n- 未删除或修改 ACE/MAC-VO 文件；其缓存和已验收结果保留。\n- ProcTHOR、定位网络环境与新实验分别占用其他明确目录，不计作此原始数据子集；全局 100GiB 保留线仍适用。\n''')
+rows='\n'.join(f"| {d['scene']} | {d['frames']} | {d['geometry']['nearest_mesh_vertex_distance_median_m']:.3f} | {d['geometry']['ray_depth_error_p95_m']:.3f} | 未通过 |" for d in reports)
+(R/'DATASET_DOWNLOAD_AUDIT.md').write_text(f'''# 原始数据下载与独立验收（2026-11-02）\n\n**结论：2 场景 / {sum(d['frames'] for d in reports)} 帧完整获取，但 0 场景满足语义＋几何定位验收；不标 DATA_READY。**\n\n## Structured3D\n\n[官网](https://structured3d-dataset.org/)要求提交协议并授予访问权限。本机未证明已取得授权，未代签或绕过访问控制。用户给定公开历史列表已存档；panorama_00、annotation_3d 均 DNS 可解析，但两次有限 HTTP Range 探测返回 404 / NoSuchKey，内容为 XML，不是 ZIP。完整证据在 network_probes.json、structured3d_retry.json。Train/Val/Test 均为 0，未假定任何分卷划分。\n\n## ReplicaMultiAgent Plus\n\n[官方公开发布页](https://mags-slam.github.io/dataset/)链接的 Google Drive Hotel-0 与 Office-2 均 HTTP206、ZIP 签名和中央目录有效。地址、ETag、长度、完整 ZIP SHA256 及各成员 CRC/SHA256 见各 archive_receipt.json、files.json。\n\n官方页面继承[Replica Dataset Research Terms](https://github.com/facebookresearch/Replica-Dataset/blob/main/LICENSE)：本 FYP 的非商业科研用途属于条款范围，数据没有改称 MIT/CC-BY；未上传数据至 GitHub。\n\n两场景共 8 条 agent 序列。RGB 全解码；Depth、Semantic 均 uint16；逐帧索引和 TUM 位姿/内参完整。按发布说明采用深度毫米→米、c2w OpenGL 相机轴。全序列每帧确定性采样点核查 Mesh 距离，另用独立 Mesh 三角形射线交点校验深度，没有拟合地图或测试位姿。\n\n| 场景 | 帧数 | 点到 Mesh 顶点中位距 m | 射线深度误差 P95 m | 数据资格 |\n|---|---:|---:|---:|---|\n{rows}\n\n语义 PNG 的标签范围与直接类别编码存在疑问；归档中没有 info_semantic.json，也没有 Semantic Mesh。原始 Replica 官方格式说明明确区分实例 ID 与 class_id；未取得两场景可信实例映射前，不凭编号猜墙、门、窗、家具。SEMANTIC_CLASS_DISTRIBUTION.csv 只给真实 raw-ID 像素计数，类别名称及实例统计保持 UNRESOLVED。\n\nTSDF PLY 仅有位置、法线、RGB，没有语义属性。它是几何 Mesh，不称语义 Mesh。简单坐标轴/径向深度替代解释的有限诊断亦未解除 Hotel-0 几何失败。首次大批量射线检查曾 OOM，后改为 8 射线批次，4GiB 地址空间上限后完成；失败日志保留。\n\n原始 Replica 补充 Habitat configs 已核查，不包含语义字典；公开镜像 ZIP 目录也未提供所需字典，另一派生资源返回401，未尝试绕过。Apartment-0 因前两场景未验收通过而未扩容。建筑独立性无充分元数据，不能把 2 场景说成 2 栋独立建筑。\n\n需解决的真实缺项：发布方/原始 Replica 场景实例映射、深度与 TSDF 坐标一致性。现有数据仅供诊断，不作 SPVLoc 原版训练或替代语义监督。\n''')
+print('DATASET_AUDIT_WRITTEN',disk.free/G,flush=True)

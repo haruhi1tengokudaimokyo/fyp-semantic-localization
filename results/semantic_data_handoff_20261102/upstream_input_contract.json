@@ -1,0 +1,104 @@
+{
+  "status": "UPSTREAM_PANORAMA_TRAINING_INPUT_COMPATIBLE",
+  "samples_in_house": 137,
+  "tensor_shapes": {
+    "image": [
+      3,
+      256,
+      256
+    ],
+    "image_orig": [
+      0
+    ],
+    "scene_idx": [],
+    "room_idx": [
+      1
+    ],
+    "pano_layout": [
+      0
+    ],
+    "pano_normal": [
+      0
+    ],
+    "pano_semantics": [
+      0
+    ],
+    "pano_pose": [
+      3
+    ],
+    "persp_layout": [
+      1,
+      256,
+      256
+    ],
+    "persp_normal": [
+      3,
+      256,
+      256
+    ],
+    "persp_semantics": [
+      1,
+      256,
+      256
+    ],
+    "persp_pose": [
+      4,
+      4
+    ],
+    "persp_fov": [],
+    "sampled_normals": [
+      5,
+      3,
+      128,
+      256
+    ],
+    "sampled_depth": [
+      5,
+      1,
+      128,
+      256
+    ],
+    "sampled_semantics": [
+      5,
+      1,
+      128,
+      256
+    ],
+    "sampled_poses": [
+      4,
+      3
+    ],
+    "sampled_room_idxs": [
+      4
+    ],
+    "boundingbox_2d": [
+      5,
+      5
+    ],
+    "bounding_mask": [
+      5,
+      128,
+      256
+    ],
+    "geometry": [
+      0
+    ],
+    "floor": [
+      0
+    ],
+    "combined_poses": [
+      5,
+      6
+    ],
+    "reference_histogram": [
+      6
+    ],
+    "aspect_visibility_mask": [
+      1,
+      256,
+      256
+    ]
+  },
+  "config": "CONSOLE_LOG_INVERVAL: 10\nCONVERSION:\n  ANGLE_OFFSET:\n  - - 0\n    - 0\n  - - 5\n    - 5\n  - - 10\n    - 10\n  - - 15\n    - 15\n  - - 20\n    - 20\n  INPUT_PATH: ''\n  OUTPUT_PATH: ''\n  SAMPLE_FOV:\n  - 60\n  - 80\n  - 90\n  - 120\nDATASET:\n  AUGMENT_QUERYS: true\n  CACHE_TEST_BATCHES: false\n  FILTER_EMPTY_IMAGES: true\n  MIN_AVERAGE_DISTANCE: 0.0\n  NAME: S3D\n  PATH: /data/fyp_3d/datasets/procthor_spvloc\n  PERSP_FROM_PANO: true\n  PERSP_FROM_PANO_CORRECT_ROLL: true\n  PERSP_FROM_PANO_FILTER_VALID_YAW: true\n  PERSP_FROM_PANO_FOV: 90.0\n  PERSP_FROM_PANO_RANGE:\n  - 180\n  - 10\n  - 10\n  PREPARED_DATA_PATH: pickle_v3_full160\n  PREPARED_DATA_PATH_TEST: pickle_test\n  S3D_NO_PERSP_IMAGES: false\n  TEST_LIGHTING:\n  - raw\n  TEST_SET_FURNITURE:\n  - empty\n  TRAIN_FURNITURE:\n  - full\n  TRAIN_LIGHTING:\n  - raw\n  USE_PREPARED_DATA: true\nINPUT:\n  IMG_SIZE:\n  - 256\n  - 256\n  NORMALISE_MEAN:\n  - 0.485\n  - 0.456\n  - 0.406\n  NORMALISE_STD:\n  - 0.229\n  - 0.224\n  - 0.225\nMODEL:\n  DECODER_RESOLUTION:\n  - 256\n  - 256\n  DECODER_SEMANTIC_CLASSES: 6\n  DESC_LENGTH: 256\n  EMBEDDER_TYPE_IMAGE_MODULE: spatial\n  IMAGE_BACKBONE: efficient_s\n  LEARN_ASPECT: false\n  LEARN_FOV: true\n  NORMALISE_EMBEDDING: true\n  NORMALIZE_PANO_INPUT: false\n  PANO_BB_EXTENSION_FACTOR: 1.2\n  PANO_ENCODE_DEPTH: false\n  PANO_ENCODE_NORMALS: false\n  PANO_ENCODE_SEMANTICS: true\n  PANO_MAX_DEPTH: 10.0\n  PANO_USE_EQUICONV: false\n  PREDICT_POSES: true\nOUT_DIR: ''\nPOSE_REFINE:\n  MAX_ITERS: 0\nRENDER:\n  FIX_SEED: false\n  IMG_SIZE:\n  - 256\n  - 256\n  PANO_SIZE:\n  - 128\n  - 256\nSEED: 42\nSYSTEM:\n  NUM_GPUS: 1\n  NUM_WORKERS: 0\nTEST:\n  ADVANCED_POSE_SAMPLING: false\n  CAMERA_HEIGHT: 1400\n  EVAL_GT_MAP_POINT: false\n  EVAL_TOP3: true\n  IGNORE_PRETRAINED: false\n  PLOT_OUTPUT: false\n  POSE_SAMPLE_STEP: 1200\n  SAVE_PLOT_DETAILS: false\n  SAVE_PLOT_OUTPUT: false\n  VAL_AS_TEST: false\nTRAIN:\n  BATCH_SIZE: 40\n  FILTER_PANO_SAMPLES: true\n  IGNORE_MASK_BCE: false\n  INITIAL_LR: 0.00025\n  LR_GAMMA: 0.5\n  LR_MILESTONES:\n  - 12\n  - 18\n  NUM_EPOCHS: 25\n  NUM_FAR_SAMPLES: 1\n  NUM_NEAR_SAMPLES: 4\n  PANO_POSE_OFFSETS:\n  - 1.4\n  - 1.4\n  - 0.3\n  PERSP_FROM_PANO_RANGE_OPTIMIZE_EULER: false\n  RETRAIN_DECODER: true\n  TEST_EVERY: 1\n",
+  "no_training_started": true
+}
