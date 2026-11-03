@@ -2,6 +2,16 @@
 
 Current repository: https://github.com/haruhi1tengokudaimokyo/fyp-semantic-localization
 
+## 2026-11-03: accepted data and full training
+
+The user has now authorized full training. **100/20/20 buildings, 22,400 raw views and 2,800 panoramas are DATA_READY**; all 185,500 accepted files were independently SHA256 rechecked, with 140 unique house geometries and zero rejected candidates. The following Nov 2 section is historical.
+
+`fyp-spvloc-140-train.service` runs the original SPVLoc network/losses for 25 epochs on the frozen full split, initialized from official weights. It uses the original random panorama query crops (45–135° FoV and yaw/pitch/roll; upstream-documented paper roll convention), FP32 Batch4 with accumulation10. The 20 validation buildings select the checkpoint; the 20 test buildings are evaluated afterwards, including original pose refinement. The official pretrained baseline then uses the identical test queries. A separate CPU process recomputes saved pose errors against offline-only GT before accepting each evaluation.
+
+Run directory: `/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_paper_pano/`. Progress and timing are recorded by training callbacks, without Codex monitoring. Best/last epoch checkpoints and a rolling 100-update recovery checkpoint are retained. No previous ACE, MAC-VO or small SPVLoc result is overwritten. Evidence: [results/semantic_training_20261103](results/semantic_training_20261103).
+
+The previous 9/3/3 perspective-mode run completed all 25 epochs and 401 test queries: refined median translation **0.896 m**, median rotation **5.55°**, success at 1m/30° **49.13%**. It is a separate small-data adaptation, not the new full-scale result. VLM remains paused.
+
 ## Current instruction: 2026-11-02 evening
 
 Focus on **SPVLoc**, using our own independently split ProcTHOR houses. **VLM experiments are paused**. Tonight's new worker prepares and validates data only; **it never launches full-scale training**. The existing 9-train/3-val/3-test model continues its original 25-epoch train/evaluate pipeline without restart. Tomorrow's full-scale run is a separate decision.

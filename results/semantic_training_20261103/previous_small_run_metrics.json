@@ -1,0 +1,42 @@
+{
+  "status": "PILOT_EVALUATED_NOT_FULL_BENCHMARK",
+  "split": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "val": [
+      3000,
+      3001,
+      3002
+    ],
+    "test": [
+      3250,
+      3251,
+      3252
+    ]
+  },
+  "metrics": {
+    "initial_estimates": {
+      "samples": 401,
+      "translation_median_m": 0.8917830141219537,
+      "rotation_median_deg": 5.432741806782957,
+      "success_1m30deg": 0.48877805486284287
+    },
+    "refined_estimates": {
+      "samples": 401,
+      "translation_median_m": 0.8956582616517322,
+      "rotation_median_deg": 5.552373861095572,
+      "success_1m30deg": 0.4912718204488778
+    }
+  },
+  "checkpoint": "/data/fyp_3d/runs/semantic_localization_20261102/spvloc_10_3_3_batch4/checkpoints/epochepoch=5-stepstep=186.ckpt",
+  "queries": 401
+}

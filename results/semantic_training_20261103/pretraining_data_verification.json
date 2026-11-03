@@ -1,0 +1,15 @@
+{
+  "status": "PASSED",
+  "buildings": 140,
+  "split": {
+    "train": 100,
+    "val": 20,
+    "test": 20
+  },
+  "raw_queries": 22400,
+  "panoramas": 2800,
+  "verified_files": 185500,
+  "seconds": 48.36227869987488,
+  "manifest_sha256": "6b1738de7147a7f64d358a2e58fabe815e2bdd1e65335aadce473c314ab6a5c6",
+  "unique_source_geometries": 140
+}

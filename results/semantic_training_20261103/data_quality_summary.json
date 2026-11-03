@@ -1,0 +1,13 @@
+{
+  "depth_p95_max_m": 0.034213069933957195,
+  "depth_p95_median_m": 0.015203889774911737,
+  "structural_semantic_agreement_min": 0.9982500130461461,
+  "raw_frames": 22400,
+  "panoramas": 2800,
+  "accepted_counts": {
+    "train": 100,
+    "val": 20,
+    "test": 20
+  },
+  "rejections": 0
+}
