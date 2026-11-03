@@ -14,8 +14,8 @@
     128,
     256
   ],
-  "cuda_peak_allocated_bytes": 4057660416,
-  "cuda_peak_reserved_bytes": 4429185024,
-  "first_update_seconds": 12.747708320617676,
-  "loss": 18.65625762939453
+  "cuda_peak_allocated_bytes": 4063783424,
+  "cuda_peak_reserved_bytes": 4437573632,
+  "first_update_seconds": 13.815907716751099,
+  "loss": -0.47449031472206116
 }

@@ -1,5 +1,5 @@
 """One authorized full training run followed by frozen held-out evaluation."""
-import hashlib,json,os,subprocess,sys,time
+import argparse,hashlib,json,os,subprocess,sys,time
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 ROOT=Path('/data/fyp_3d/runs/semantic_localization_20261103')
@@ -10,9 +10,14 @@ PY='/data/fyp_3d/envs/semantic_loc/bin/python'
 def atomic(path,value):
  tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(value,indent=2));tmp.replace(path)
 def invoke(name,args):
- with (ROOT/(name+'.log')).open('a') as log:
+ suffix='_float_v2' if RUN.name.endswith('_v2') else ''
+ with (ROOT/(name+suffix+'.log')).open('a') as log:
   subprocess.run([PY,HERE/'spvloc_experiment.py',*map(str,args)],env=os.environ,stdout=log,stderr=subprocess.STDOUT,check=True)
 def main():
+ global RUN
+ parser=argparse.ArgumentParser();parser.add_argument('--float-targets',action='store_true');options=parser.parse_args()
+ assert options.float_targets,'Uncorrected supervision path retired; use --float-targets and the v2 service'
+ if options.float_targets:RUN=ROOT/'spvloc_100_20_20_float_targets_v2'
  ROOT.mkdir(exist_ok=True)
  verified=json.loads((ROOT/'pretraining_data_verification.json').read_text())
  assert verified['status']=='PASSED' and verified['manifest_sha256']==hashlib.sha256(MANIFEST.read_bytes()).hexdigest()
@@ -20,6 +25,9 @@ def main():
  occupied=subprocess.check_output(['nvidia-smi','--query-compute-apps=pid','--format=csv,noheader,nounits'],text=True).strip()
  assert not occupied, 'GPU occupied; protected experiment will not be stopped'
  common=['--dataset-manifest',str(MANIFEST),'--paper-pano','--output-root',str(ROOT),'--run-name',RUN.name,'--batch','4','--accumulate','10']
+ if options.float_targets:
+  checks=json.loads((ROOT/'float_target_real_data_checks.json').read_text());assert checks['status']=='PASSED' and checks['scenes']==[0,1,3000,3250]
+  common+=['--float-targets']
  assert not (RUN/'training_protocol.json').exists(),'Existing training run must not be silently retrained'
  atomic(ROOT/'pipeline_status.json',dict(stage='TRAINING',started_unix=time.time(),run=str(RUN)))
  invoke('train_140',['train','--steps','-1',*common])

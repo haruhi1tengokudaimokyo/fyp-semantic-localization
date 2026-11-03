@@ -1,0 +1,18 @@
+{
+  "status": "CORRECTED_TRAINING_RUNNING",
+  "checked_at": "2026-11-03T21:09:34.488181+08:00",
+  "real_optimizer_steps": 14,
+  "total_steps": 8575,
+  "valid_fraction": 0.925,
+  "worker": "fyp-spvloc-140-train-v2.service",
+  "initialization": "Official original weights, no invalid run weights reused",
+  "estimated_remaining_hours": [
+    40,
+    48
+  ],
+  "estimated_finish_interval": [
+    "2026-11-05T13:09:34.488181+08:00",
+    "2026-11-05T21:09:34.488181+08:00"
+  ],
+  "old_invalid_runs_deleted": true
+}

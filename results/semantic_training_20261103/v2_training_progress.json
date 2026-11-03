@@ -1,0 +1,12 @@
+{
+  "status": "TRAINING",
+  "optimizer_step": 14,
+  "epoch": 0,
+  "total_optimizer_steps": 8575,
+  "elapsed_training_seconds": 202.34938049316406,
+  "mean_seconds_per_optimizer_step": 14.453527178083148,
+  "estimated_remaining_train_seconds": 123736.64617156982,
+  "validation_timing_included": false,
+  "original_filter_valid_fraction": 0.925,
+  "unix_time": 1793711368.542838
+}

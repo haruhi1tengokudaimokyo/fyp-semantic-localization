@@ -1,0 +1,59 @@
+{
+  "status": "QUARANTINED_INVALID_AUXILIARY_SUPERVISION",
+  "cause": "ToPILImage(mode=None) rescales float physical/class targets to uint8, wrapping values; ToTensor then rescales them to 0..1.",
+  "known_input": [
+    [
+      0.0,
+      1.0,
+      2.0
+    ],
+    [
+      3.0,
+      4.0,
+      5.0
+    ]
+  ],
+  "observed_default_output": [
+    [
+      [
+        0.0,
+        1.0,
+        0.9960784316062927
+      ],
+      [
+        0.9921568632125854,
+        0.9882352948188782,
+        0.9843137264251709
+      ]
+    ]
+  ],
+  "correct_float_mode_output": [
+    [
+      [
+        0.0,
+        1.0,
+        2.0
+      ],
+      [
+        3.0,
+        4.0,
+        5.0
+      ]
+    ]
+  ],
+  "logged_training_steps": 1992,
+  "all_logged_valid_samples_zero": true,
+  "old_progress": {
+    "status": "TRAINING",
+    "optimizer_step": 1992,
+    "epoch": 5,
+    "total_optimizer_steps": 8575,
+    "elapsed_training_seconds": 35522.546899318695,
+    "mean_seconds_per_optimizer_step": 17.832603865119825,
+    "estimated_remaining_train_seconds": 117392.03124408382,
+    "validation_timing_included": true,
+    "unix_time": 1793710947.8646095
+  },
+  "preserved": true,
+  "unix_time": 1793710954.1598277
+}

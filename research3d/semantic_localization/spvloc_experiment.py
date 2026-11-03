@@ -41,9 +41,18 @@ def config():
 def load_model(c,path):
  m=PerspectiveImageFromLayout(c);saved=torch.load(path,map_location='cpu');m.load_state_dict(saved['state_dict'],strict=True);del saved;gc.collect();return m
 class Evidence(Callback):
- def __init__(self):self.started=None;self.feasibility_saved=False;self.last_progress_step=0
+ def __init__(self):self.started=None;self.feasibility_saved=False;self.last_progress_step=0;self.valid_samples=0;self.total_samples=0
  def on_train_batch_start(self,trainer,module,batch,batch_idx):
   if self.started is None:self.started=time.time();torch.cuda.reset_peak_memory_stats()
+  if ARGS.float_targets:
+   h=batch['reference_histogram'];valid=(h[:,0]<.05)&((h[:,1:]>.002).sum(-1)>2)&(h[:,4]<.7)&(h[:,5]<.7)
+   self.valid_samples+=int(valid.sum());self.total_samples+=len(h)
+   if not (OUT/'real_batch_target_contract.json').exists():
+    sem=batch['persp_semantics'];depth=batch['persp_layout'];normal=batch['persp_normal']
+    assert torch.isfinite(sem).all() and torch.equal(sem,sem.round()) and sem.min()>=0 and sem.max()<=5
+    assert torch.isfinite(depth).all() and depth.min()>=0 and depth.max()>0
+    assert torch.isfinite(normal).all() and normal.abs().max()<=1.00001
+    atomic(OUT/'real_batch_target_contract.json',dict(status='PASSED',semantic_classes=sem.unique().tolist(),depth_range_m=[float(depth.min()),float(depth.max())],normal_range=[float(normal.min()),float(normal.max())],histogram_sums=h.sum(-1).tolist()))
  def on_train_batch_end(self,trainer,module,outputs,batch,batch_idx):
   if trainer.global_step==1 and not self.feasibility_saved:
    self.feasibility_saved=True
@@ -52,7 +61,7 @@ class Evidence(Callback):
   if step>self.last_progress_step:
    self.last_progress_step=step
    elapsed=time.time()-self.started
-   atomic(OUT/'training_progress.json',dict(status='TRAINING',optimizer_step=step,epoch=trainer.current_epoch,total_optimizer_steps=int(trainer.estimated_stepping_batches),elapsed_training_seconds=elapsed,mean_seconds_per_optimizer_step=elapsed/step,estimated_remaining_train_seconds=elapsed/step*(trainer.estimated_stepping_batches-step),validation_timing_included=trainer.current_epoch>0,unix_time=time.time()))
+   atomic(OUT/'training_progress.json',dict(status='TRAINING',optimizer_step=step,epoch=trainer.current_epoch,total_optimizer_steps=int(trainer.estimated_stepping_batches),elapsed_training_seconds=elapsed,mean_seconds_per_optimizer_step=elapsed/step,estimated_remaining_train_seconds=elapsed/step*(trainer.estimated_stepping_batches-step),validation_timing_included=trainer.current_epoch>0,original_filter_valid_fraction=self.valid_samples/self.total_samples if self.total_samples else None,unix_time=time.time()))
    if step%10==0:print('REAL_SPVLOC_UPDATE',step,float(outputs['loss']),flush=True)
 
 def train(c,steps):
@@ -109,7 +118,11 @@ def evaluate(c,path,label):
  if ARGS.dataset_manifest:
   subprocess.run([sys.executable,Path(__file__).with_name('verify_spvloc_metrics.py'),OUT,label],check=True)
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('mode',choices=['train','evaluate']);p.add_argument('--steps',type=int,default=100);p.add_argument('--checkpoint',default='/data/fyp_3d/models/spvloc/ckpt_s3d.ckpt');p.add_argument('--label',default='official_zero_shot');p.add_argument('--batch',type=int,default=1);p.add_argument('--accumulate',type=int,default=1);p.add_argument('--run-name',default='spvloc_pilot');p.add_argument('--full-split',action='store_true');p.add_argument('--dataset-manifest',type=Path);p.add_argument('--paper-pano',action='store_true');p.add_argument('--output-root',type=Path);a=p.parse_args();ARGS=a
+ p=argparse.ArgumentParser();p.add_argument('mode',choices=['train','evaluate']);p.add_argument('--steps',type=int,default=100);p.add_argument('--checkpoint',default='/data/fyp_3d/models/spvloc/ckpt_s3d.ckpt');p.add_argument('--label',default='official_zero_shot');p.add_argument('--batch',type=int,default=1);p.add_argument('--accumulate',type=int,default=1);p.add_argument('--run-name',default='spvloc_pilot');p.add_argument('--full-split',action='store_true');p.add_argument('--dataset-manifest',type=Path);p.add_argument('--paper-pano',action='store_true');p.add_argument('--output-root',type=Path);p.add_argument('--float-targets',action='store_true');a=p.parse_args();ARGS=a
+ if a.float_targets:
+  from float_targets import install
+  install()
+ if a.mode=='train':assert a.float_targets,'Uncorrected float supervision training has been retired'
  assert a.run_name.replace('_','').isalnum()
  OUT=(a.output_root or OUT.parent)/a.run_name;OUT.mkdir(parents=True,exist_ok=True)
  if a.dataset_manifest:
@@ -134,5 +147,6 @@ if __name__=='__main__':
    assert len(SPLIT['train'])>=3 and len(SPLIT['val'])>=1 and len(SPLIT['test'])>=1
    atomic(snapshot,dict(accepted_split=SPLIT,excluded_for_data_quality=excluded,requested_split_counts=[10,3,3],complete_10_3_3=not excluded,selection='Source split and fixed data acceptance only; no localization score used'))
  c=config()
+ if a.float_targets:atomic(OUT/'float_target_adapter.json',dict(enabled=True,PIL_mode='F',preserved=['semantic class IDs 0..5','depth metres','signed normal components'],RGB_pipeline_changed=False,original_network_and_loss_unchanged=True))
  if a.mode=='train':train(c,a.steps)
  else:evaluate(c,a.checkpoint,a.label)

@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "PIL_mode": "F",
+  "preserved": [
+    "semantic class IDs 0..5",
+    "depth metres",
+    "signed normal components"
+  ],
+  "RGB_pipeline_changed": false,
+  "original_network_and_loss_unchanged": true
+}

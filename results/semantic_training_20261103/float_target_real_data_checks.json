@@ -1,0 +1,224 @@
+{
+  "status": "PASSED",
+  "scenes": [
+    0,
+    1,
+    3000,
+    3250
+  ],
+  "real_queries": 8,
+  "samples_passing_original_filter": 7,
+  "class_depth_normal_values_preserved": true,
+  "RGB_transform_unchanged": true,
+  "rows": [
+    {
+      "scene_id": 0,
+      "index": 0,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "histogram": [
+        0.0,
+        0.4024810791015625,
+        0.408203125,
+        0.1739501953125,
+        0.0153656005859375,
+        0.0
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 1.3314123153686523,
+      "depth_max_m": 14.918370246887207
+    },
+    {
+      "scene_id": 0,
+      "index": 20,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "histogram": [
+        0.0,
+        0.024383544921875,
+        0.30694580078125,
+        0.2694549560546875,
+        0.3992156982421875,
+        0.0
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 1.3251837491989136,
+      "depth_max_m": 6.348516941070557
+    },
+    {
+      "scene_id": 1,
+      "index": 0,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "histogram": [
+        0.0,
+        0.3322906494140625,
+        0.2305908203125,
+        0.40545654296875,
+        0.010498046875,
+        0.0211639404296875
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 0.9065569043159485,
+      "depth_max_m": 11.587935447692871
+    },
+    {
+      "scene_id": 1,
+      "index": 20,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "histogram": [
+        0.0,
+        0.30194091796875,
+        0.235504150390625,
+        0.2855224609375,
+        0.010772705078125,
+        0.166259765625
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 0.5740646719932556,
+      "depth_max_m": 8.79401683807373
+    },
+    {
+      "scene_id": 3000,
+      "index": 0,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        2.0,
+        3.0,
+        4.0
+      ],
+      "histogram": [
+        0.0,
+        0.0,
+        0.0016326904296875,
+        0.60626220703125,
+        0.3921051025390625,
+        0.0
+      ],
+      "passes_original_filter": false,
+      "depth_min_m": 1.7824711799621582,
+      "depth_max_m": 3.1037652492523193
+    },
+    {
+      "scene_id": 3000,
+      "index": 20,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "histogram": [
+        0.0,
+        0.030792236328125,
+        0.0009307861328125,
+        0.6651153564453125,
+        0.30316162109375,
+        0.0
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 1.86982262134552,
+      "depth_max_m": 3.3045289516448975
+    },
+    {
+      "scene_id": 3250,
+      "index": 0,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "histogram": [
+        0.0,
+        0.0797882080078125,
+        0.1979827880859375,
+        0.5420379638671875,
+        0.1801910400390625,
+        0.0
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 0.4381066560745239,
+      "depth_max_m": 5.165797710418701
+    },
+    {
+      "scene_id": 3250,
+      "index": 20,
+      "max_absolute_transform_errors": {
+        "persp_semantics": 0.0,
+        "persp_layout": 0.0,
+        "persp_normal": 0.0
+      },
+      "classes": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "histogram": [
+        0.0,
+        0.1683197021484375,
+        0.298553466796875,
+        0.473907470703125,
+        0.0592193603515625,
+        0.0
+      ],
+      "passes_original_filter": true,
+      "depth_min_m": 1.6750928163528442,
+      "depth_max_m": 5.638339519500732
+    }
+  ]
+}

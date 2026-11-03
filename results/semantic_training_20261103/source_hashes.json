@@ -1,5 +1,7 @@
 {
-  "spvloc_experiment.py": "0c46684e7d04acb18a15212272b35db8bccdb2c7febd78c0417803ed251f340a",
-  "run_spvloc_140.py": "52bfdb1d75256e614d43a9731a4e36304f6d3e910be6c3ad233fff98ed088d10",
+  "spvloc_experiment.py": "1b7f70bc1b0c59defa86c57c534ba766aa21d55076761eef0bfecd93090dbce5",
+  "run_spvloc_140.py": "72d3ea054ffe84bca5174b5891ec94ab1ff41c67f821298a69cde485f7c081f0",
+  "float_targets.py": "edd11bc950e5469d9dfe8af6642faf1637aa2fb4ef9ad3a06969bd3a4cae84f9",
+  "verify_float_supervision.py": "b876d190f14961473a7bde52ea3f319a19b468396cc04ed8c8bb5b58c81db34c",
   "verify_spvloc_metrics.py": "70a80f653f88b146658d89efbc6b4790baf91538044ae72eaa6544f22c197b25"
 }

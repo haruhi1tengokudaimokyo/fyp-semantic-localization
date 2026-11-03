@@ -2,15 +2,21 @@
 
 Current repository: https://github.com/haruhi1tengokudaimokyo/fyp-semantic-localization
 
-## 2026-11-03: accepted data and full training
+## 2026-11-03 evening: supervision fix, corrected full training
+
+The first full training attempt was **invalid**: the current torchvision default float-to-PIL conversion wrapped semantic classes 2–5 into values near 1 and quantized metre depths / signed normals. Shape-only and finite-value startup checks missed this. The original validity metric was zero throughout the attempt. This was a training input conversion problem; the accepted raw dataset remains valid.
+
+The explicit scalar **PIL F-mode adapter** now preserves all rendered semantic, depth and normal targets exactly. Eight real queries across four train/val/test houses passed pre/post-transform comparisons with zero numerical error; the actual GPU batch also passes target-value assertions. RGB transforms, original network, criterion and sampling remain unchanged.
+
+The user authorized deletion of invalid runs: the first full attempt and both earlier small SPVLoc training attempts/checkpoints have been deleted (4.76 GB). Their semantic-training conclusions are withdrawn. A compact failure/cleanup audit remains. ACE/MAC-VO results and release assets are unaffected.
 
 The user has now authorized full training. **100/20/20 buildings, 22,400 raw views and 2,800 panoramas are DATA_READY**; all 185,500 accepted files were independently SHA256 rechecked, with 140 unique house geometries and zero rejected candidates. The following Nov 2 section is historical.
 
-`fyp-spvloc-140-train.service` runs the original SPVLoc network/losses for 25 epochs on the frozen full split, initialized from official weights. It uses the original random panorama query crops (45–135° FoV and yaw/pitch/roll; upstream-documented paper roll convention), FP32 Batch4 with accumulation10. The 20 validation buildings select the checkpoint; the 20 test buildings are evaluated afterwards, including original pose refinement. The official pretrained baseline then uses the identical test queries. A separate CPU process recomputes saved pose errors against offline-only GT before accepting each evaluation.
+`fyp-spvloc-140-train-v2.service` runs the corrected original SPVLoc network/losses for 25 epochs on the frozen full split, freshly initialized from official weights. It uses original random panorama query crops (45–135° FoV and yaw/pitch/roll; upstream-documented paper roll convention), FP32 Batch4 with accumulation10. The 20 validation buildings select the checkpoint; the 20 test buildings are evaluated afterwards, including original pose refinement. The official pretrained baseline then uses identical test queries. A separate CPU process recomputes saved pose errors against offline-only GT before accepting each evaluation.
 
-Run directory: `/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_paper_pano/`. Progress and timing are recorded by training callbacks, without Codex monitoring. Best/last epoch checkpoints and a rolling 100-update recovery checkpoint are retained. No previous ACE, MAC-VO or small SPVLoc result is overwritten. Evidence: [results/semantic_training_20261103](results/semantic_training_20261103).
+Run directory: `/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_float_targets_v2/`. Progress includes the original validity-filter fraction and actual GPU target ranges. Best/last epoch checkpoints and a rolling 100-update recovery checkpoint are retained. Evidence: [results/semantic_training_20261103](results/semantic_training_20261103).
 
-The previous 9/3/3 perspective-mode run completed all 25 epochs and 401 test queries: refined median translation **0.896 m**, median rotation **5.55°**, success at 1m/30° **49.13%**. It is a separate small-data adaptation, not the new full-scale result. VLM remains paused.
+The earlier 9/3/3 result is withdrawn as evidence of correct semantic training because it used the same defective conversion. VLM remains paused.
 
 ## Current instruction: 2026-11-02 evening
 
@@ -42,7 +48,7 @@ We use the [official SPVLoc implementation](https://github.com/fraunhoferhhi/spv
 
 This is a **ProcTHOR adaptation**, not reproduction of the original Structured3D benchmark. Native perspective training is used by the currently running small dataset. Panoramas are now independently crossprojected against genuine native queries; the upstream random panorama-crop training loader has also produced a real, finite original training item. Full-scale training has not started. GTX1660SUPER uses FP32 and Batch4 with accumulation10, rather than the paper's native Batch40; BatchNorm and filtering make these numerically different.
 
-The initial 3-building / 100-update pilot worsened held-out localization; it is retained as a failed small-data result, not presented as successful convergence. The larger running experiment retains a frozen split and validation-only checkpoint selection.
+The earlier SPVLoc training attempts were invalidated and deleted as described above. The corrected experiment retains a frozen split and validation-only checkpoint selection.
 
 ## Preserved accepted ACE / MAC-VO results
 

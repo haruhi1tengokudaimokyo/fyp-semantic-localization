@@ -1,0 +1,25 @@
+{
+  "status": "INVALID_RUNS_DELETED",
+  "reason": "Current torchvision float-to-uint8 conversion corrupted scalar auxiliary supervision; user authorized deletion.",
+  "records": [
+    {
+      "deleted": "/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_paper_pano",
+      "bytes": 2041077735
+    },
+    {
+      "deleted": "/data/fyp_3d/runs/semantic_localization_20261102/spvloc_pilot",
+      "bytes": 1360450586
+    },
+    {
+      "deleted": "/data/fyp_3d/runs/semantic_localization_20261102/spvloc_10_3_3_batch4",
+      "bytes": 1361467919
+    },
+    {
+      "deleted": "/data/fyp_3d/runs/semantic_localization_20261103/train_140.log",
+      "bytes": 1278270
+    }
+  ],
+  "released_bytes": 4764274510,
+  "active_corrected_run": "/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_float_targets_v2",
+  "time_unix": 1793711324.4995062
+}
