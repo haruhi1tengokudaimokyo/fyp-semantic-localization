@@ -1,0 +1,112 @@
+{
+  "checked_at": "2026-11-04T15:59:31.465086+08:00",
+  "progress": {
+    "status": "TRAINING",
+    "optimizer_step": 3701,
+    "epoch": 10,
+    "total_optimizer_steps": 8575,
+    "elapsed_training_seconds": 68001.04951286316,
+    "mean_seconds_per_optimizer_step": 18.373696166674726,
+    "estimated_remaining_train_seconds": 89553.39511637262,
+    "validation_timing_included": true,
+    "original_filter_valid_fraction": 0.9296988155668359,
+    "unix_time": 1793779167.2429695
+  },
+  "percent": 43.160349854227405,
+  "completed_epochs": 10,
+  "nonfinite_logged_values": 0,
+  "validation_epochs": [
+    {
+      "epoch": 0.0,
+      "step": 342.0,
+      "validation/loss_epoch": 225.7543487548828,
+      "validation/loss_decode_semantics_epoch": 0.09180369973182678,
+      "validation/loss_decode_layout_epoch": 0.024431312456727028,
+      "validation/translation_loss_abs_epoch": 0.17405301332473755,
+      "validation/rotation_loss_epoch": 0.06273246556520462
+    },
+    {
+      "epoch": 1.0,
+      "step": 685.0,
+      "validation/loss_epoch": 302.90869140625,
+      "validation/loss_decode_semantics_epoch": 0.08767129480838776,
+      "validation/loss_decode_layout_epoch": 0.02403264492750168,
+      "validation/translation_loss_abs_epoch": 0.16379067301750183,
+      "validation/rotation_loss_epoch": 0.06416574120521545
+    },
+    {
+      "epoch": 2.0,
+      "step": 1028.0,
+      "validation/loss_epoch": 564.4898071289062,
+      "validation/loss_decode_semantics_epoch": 0.08350130915641785,
+      "validation/loss_decode_layout_epoch": 0.022269129753112793,
+      "validation/translation_loss_abs_epoch": 0.16120962798595428,
+      "validation/rotation_loss_epoch": 0.06398709118366241
+    },
+    {
+      "epoch": 3.0,
+      "step": 1371.0,
+      "validation/loss_epoch": 40.74407196044922,
+      "validation/loss_decode_semantics_epoch": 0.07778073102235794,
+      "validation/loss_decode_layout_epoch": 0.0216537993401289,
+      "validation/translation_loss_abs_epoch": 0.1552107334136963,
+      "validation/rotation_loss_epoch": 0.06549828499555588
+    },
+    {
+      "epoch": 4.0,
+      "step": 1714.0,
+      "validation/loss_epoch": -28.434772491455078,
+      "validation/loss_decode_semantics_epoch": 0.09469873458147049,
+      "validation/loss_decode_layout_epoch": 0.02347531169652939,
+      "validation/translation_loss_abs_epoch": 0.15760579705238342,
+      "validation/rotation_loss_epoch": 0.06848514080047607
+    },
+    {
+      "epoch": 5.0,
+      "step": 2057.0,
+      "validation/loss_epoch": -28.982486724853516,
+      "validation/loss_decode_semantics_epoch": 0.08151613175868988,
+      "validation/loss_decode_layout_epoch": 0.022287407889962196,
+      "validation/translation_loss_abs_epoch": 0.15914849936962128,
+      "validation/rotation_loss_epoch": 0.0602869875729084
+    },
+    {
+      "epoch": 6.0,
+      "step": 2400.0,
+      "validation/loss_epoch": -30.686376571655273,
+      "validation/loss_decode_semantics_epoch": 0.07860676199197769,
+      "validation/loss_decode_layout_epoch": 0.02086506225168705,
+      "validation/translation_loss_abs_epoch": 0.1459018439054489,
+      "validation/rotation_loss_epoch": 0.058214906603097916
+    },
+    {
+      "epoch": 7.0,
+      "step": 2743.0,
+      "validation/loss_epoch": -30.687231063842773,
+      "validation/loss_decode_semantics_epoch": 0.07291881740093231,
+      "validation/loss_decode_layout_epoch": 0.02136288397014141,
+      "validation/translation_loss_abs_epoch": 0.15002241730690002,
+      "validation/rotation_loss_epoch": 0.062460530549287796
+    },
+    {
+      "epoch": 8.0,
+      "step": 3086.0,
+      "validation/loss_epoch": -30.95011329650879,
+      "validation/loss_decode_semantics_epoch": 0.07214608043432236,
+      "validation/loss_decode_layout_epoch": 0.020247379317879677,
+      "validation/translation_loss_abs_epoch": 0.15029434859752655,
+      "validation/rotation_loss_epoch": 0.056393492966890335
+    },
+    {
+      "epoch": 9.0,
+      "step": 3429.0,
+      "validation/loss_epoch": -28.43748664855957,
+      "validation/loss_decode_semantics_epoch": 0.07559368014335632,
+      "validation/loss_decode_layout_epoch": 0.02134576439857483,
+      "validation/translation_loss_abs_epoch": 0.15832599997520447,
+      "validation/rotation_loss_epoch": 0.05070505663752556
+    }
+  ],
+  "remaining_training_hours": 24.875943087881282,
+  "formal_test_evaluated": false
+}
