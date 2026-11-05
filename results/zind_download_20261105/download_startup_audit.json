@@ -1,0 +1,49 @@
+{
+  "authorization_verified": true,
+  "metadata_house_count": 1575,
+  "metadata_sha256": "a5090ad4e9394641a5379f416fd3c42b0d7aefb9cd9c93fe242ceb2157f5bed8",
+  "credential_persisted": false,
+  "progress": {
+    "stage": "DOWNLOADING",
+    "total_houses": 1575,
+    "complete_houses": 4,
+    "verified_images": 154,
+    "raw_dataset_only": true,
+    "verified_bytes": 358219299,
+    "failed_houses": [],
+    "current_home": "0000",
+    "free_GiB": 146.7815704345703,
+    "unix_time": 1793855966.9836311,
+    "three_split_pilot_verified": true
+  },
+  "pilot_receipts": [
+    {
+      "home_id": "0340",
+      "split": "val",
+      "image_count": 60,
+      "bytes": 26331996
+    },
+    {
+      "home_id": "0000",
+      "split": "train",
+      "image_count": 33,
+      "bytes": 15507564
+    },
+    {
+      "home_id": "0990",
+      "split": "test",
+      "image_count": 45,
+      "bytes": 18788502
+    },
+    {
+      "home_id": "0919",
+      "split": "train",
+      "image_count": 16,
+      "bytes": 6376442
+    }
+  ],
+  "official_source": "https://github.com/zillow/zind",
+  "source_commit": "06cfdbf295fa21500a857efe81f80f2243b8fb40",
+  "raw_data_uploaded": false,
+  "SPVLOC_DATA_READY": false
+}

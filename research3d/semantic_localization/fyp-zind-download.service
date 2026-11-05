@@ -1,0 +1,18 @@
+[Unit]
+Description=Authorized Zillow Indoor download with publisher MD5 and image checks
+
+[Service]
+Type=exec
+WorkingDirectory=/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp
+ExecStart=/data/fyp_3d/envs/zind_download/bin/python research3d/semantic_localization/acquire_zind_authorized.py download
+Environment=PYTHONUNBUFFERED=1
+MemoryMax=3G
+MemorySwapMax=512M
+CPUQuota=100%
+Nice=10
+IOWeight=25
+RuntimeMaxSec=72h
+TimeoutStopSec=20s
+KillMode=control-group
+StandardOutput=append:/data/fyp_3d/datasets/zind_original/worker.log
+StandardError=append:/data/fyp_3d/datasets/zind_original/worker.log
