@@ -3,3 +3,5 @@ research3d/docs/*.rtf binary
 research3d/results/logs/*.log -diff -whitespace
 # Generated scientific plots are reviewed as artifacts, not handwritten XML.
 research3d/results/figures/**/*.svg -diff linguist-generated=true
+# Preserve standard CSV CRLF, including original Lightning logger evidence.
+results/semantic_training_20261106/*.csv whitespace=cr-at-eol
