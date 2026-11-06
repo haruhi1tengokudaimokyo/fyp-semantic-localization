@@ -2,6 +2,16 @@
 
 Current repository: https://github.com/haruhi1tengokudaimokyo/fyp-semantic-localization
 
+## 2026-11-06: corrected full training and paired evaluation completed
+
+The corrected run finished normally on Nov 5 at 23:31 (Asia/Shanghai): **25 epochs / 8,575 updates**, all 56,462,316 trainable parameters updated, approximately 49.57 hours including validation. The checkpoint was selected at epoch 19 using validation loss only. The one-shot training service has exited successfully; no retraining was started.
+
+Both models were evaluated on the same **2,752 eligible queries across 20 unseen ProcTHOR buildings**. With one original refinement iteration, the fine-tuned model achieves **54.22% at <1m / <30°**, **0.464m** median 3D translation error and **4.29°** median full rotation error. Official pretrained weights achieve **22.06%**, **3.376m**, **82.64°**. Every saved pose error was independently recomputed. Tail failures remain substantial: fine-tuned translation P90 is 8.26m; this is not a reliable deployment claim or the original paper benchmark.
+
+Detailed Chinese report, 25-epoch curves, per-query/per-building CSV, raw training metrics and checkpoint provenance: **[completed training results](results/semantic_training_20261106/TRAINING_RESULTS_zh.md)**. Model and original pose evidence: [results-20261106-spvloc release](https://github.com/haruhi1tengokudaimokyo/fyp-semantic-localization/releases/tag/results-20261106-spvloc). Pure-geometry/semantic contribution ablations and the full paper evaluation coverage remain outstanding. VLM remains paused, and accepted ACE/MAC-VO results are preserved.
+
+Sections dated Nov 2–3 below preserve historical handoff context and do not describe current running jobs.
+
 ## 2026-11-03 evening: supervision fix, corrected full training
 
 The first full training attempt was **invalid**: the current torchvision default float-to-PIL conversion wrapped semantic classes 2–5 into values near 1 and quantized metre depths / signed normals. Shape-only and finite-value startup checks missed this. The original validity metric was zero throughout the attempt. This was a training input conversion problem; the accepted raw dataset remains valid.
@@ -18,7 +28,7 @@ Run directory: `/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_2
 
 The earlier 9/3/3 result is withdrawn as evidence of correct semantic training because it used the same defective conversion. VLM remains paused.
 
-## Current instruction: 2026-11-02 evening
+## Historical instruction: 2026-11-02 evening
 
 Focus on **SPVLoc**, using our own independently split ProcTHOR houses. **VLM experiments are paused**. Tonight's new worker prepares and validates data only; **it never launches full-scale training**. The existing 9-train/3-val/3-test model continues its original 25-epoch train/evaluate pipeline without restart. Tomorrow's full-scale run is a separate decision.
 

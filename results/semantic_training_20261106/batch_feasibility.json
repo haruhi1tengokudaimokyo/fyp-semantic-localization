@@ -1,0 +1,21 @@
+{
+  "real_optimizer_step": 1,
+  "precision": "FP32",
+  "query_batch_size": 4,
+  "gradient_accumulation": 10,
+  "nominal_effective_batch": 40,
+  "near_references": 4,
+  "far_references": 1,
+  "query_resolution": [
+    256,
+    256
+  ],
+  "pano_resolution": [
+    128,
+    256
+  ],
+  "cuda_peak_allocated_bytes": 4063783424,
+  "cuda_peak_reserved_bytes": 4437573632,
+  "first_update_seconds": 13.815907716751099,
+  "loss": -0.47449031472206116
+}

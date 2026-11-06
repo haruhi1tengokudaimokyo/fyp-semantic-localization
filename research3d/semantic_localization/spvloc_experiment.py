@@ -106,7 +106,9 @@ def evaluate(c,path,label):
     # SPVLoc stores camera reflections. Relative orientation is a proper rotation.
     cos=(np.trace(est[:3,:3]@gt[:3,:3].T)-1)/2;re=float(np.rad2deg(np.arccos(np.clip(cos,-1,1))))
     r[key]=dict(translation_error_m=te,rotation_error_deg=re,pose=est.tolist(),success_1m30deg=bool(te<1 and re<30))
-   rec=dict(scene_id=sid,query_index=i,seconds=seconds,estimates=r,GT_offline_only=True,reference_count=len(batch['sampled_depth']),checkpoint=path);atomic(p,rec);results.append(rec)
+   # Depth is a length-one placeholder when PANO_ENCODE_DEPTH=False.
+   # The actual reference population is the semantic panorama batch.
+   rec=dict(scene_id=sid,query_index=i,seconds=seconds,estimates=r,GT_offline_only=True,reference_count=len(batch['sampled_semantics']),checkpoint=path);atomic(p,rec);results.append(rec)
    print('REAL_SPVLOC_GLOBAL_POSE',label,sid,i,r['initial_estimates']['translation_error_m'],r['initial_estimates']['rotation_error_deg'],flush=True)
  metrics={}
  for key in ['initial_estimates','refined_estimates']:

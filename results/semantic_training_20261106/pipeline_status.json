@@ -1,0 +1,6 @@
+{
+  "stage": "COMPLETE",
+  "run": "/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_float_targets_v2",
+  "finished_unix": 1793892700.3674974,
+  "test_used_for_checkpoint_selection": false
+}

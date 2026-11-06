@@ -1,0 +1,9 @@
+{
+  "filename": "spvloc_procthor_100_20_20_epoch19_state_dict.pt",
+  "bytes": 227531506,
+  "sha256": "acb95080211a3a32aa52a79312b33dc70739b381fc45d2c580513cd851b01742",
+  "state_dict_tensor_count": 1693,
+  "all_state_dict_tensors_bit_identical_to_selected_checkpoint": true,
+  "optimizer_state_included": false,
+  "load_in_existing_wrapper": "--checkpoint <extracted .pt file>"
+}

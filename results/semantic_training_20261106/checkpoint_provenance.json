@@ -1,0 +1,8 @@
+{
+  "path": "/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_float_targets_v2/checkpoints/epochepoch=18-stepstep=6517.ckpt",
+  "bytes": 679997598,
+  "sha256": "daf323ccc1abc18dc7dd2a95d5f3e6be16183d60eda7f2498c9a593e2e5b54e3",
+  "selected_epoch": 19,
+  "selected_optimizer_step": 6517,
+  "selection": "validation/loss only; no test selection"
+}
