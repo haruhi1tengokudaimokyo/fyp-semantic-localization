@@ -1,0 +1,60 @@
+{
+  "schema": "fyp.stereo_capture.v1",
+  "map_id": "procthor/val/0:8b3275ae59875da8",
+  "camera_id": "left",
+  "width": 640,
+  "height": 480,
+  "native_resolution": true,
+  "distortion_model": "pinhole_none",
+  "K": [
+    [
+      415.69219381653056,
+      0.0,
+      319.5
+    ],
+    [
+      0.0,
+      415.69219381653056,
+      239.5
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "baseline_m": 0.12,
+  "T_left_right": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.12
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "transform_convention": "T_A_B maps points in B into A",
+  "map_axes": "ProcTHOR canonical map (X,Y,Z)=(Unity x,z,y), metres",
+  "camera_axes": "right-handed CV: x right, y down, z forward",
+  "depth_convention": "optical_axis_z_metres; OFFLINE_ONLY",
+  "capture_clock": "synthetic fixed sampling clock; not Unity action/wall time",
+  "fps": 5,
+  "vertical_fov_deg": 60
+}

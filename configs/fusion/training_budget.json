@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "experiment": "spvloc_equal_update_source_comparison",
+  "official_source": "/data/fyp_3d/sources/spvloc",
+  "official_commit": "754861115e38bf6f9b6b6b642db095f8e1ff6958",
+  "python": "/data/fyp_3d/envs/semantic_loc/bin/python",
+  "run_root": "/data/fyp_3d/runs/fusion_training",
+  "runtime_environment": {
+    "LD_LIBRARY_PATH": "/data/fyp_3d/sources/spvloc_redner/redner-dependencies/embree/lib-linux",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYOPENGL_PLATFORM": "egl"
+  },
+  "initialization": "/data/fyp_3d/models/spvloc/ckpt_s3d.ckpt",
+  "initialization_sha256": "074ec5d9d2e45b74358b5cd0d0fc139eef1d2499c20b98daa0f0a80f07682e67",
+  "arms": {"P": ["procthor"], "Z": ["zind"], "P+Z": ["procthor", "zind"]},
+  "validation_sources": ["procthor", "zind"],
+  "seeds": [20261107, 20261108, 20261109],
+  "optimizer_updates": 8575,
+  "validation_interval_updates": 343,
+  "validation_views_per_building": 8,
+  "micro_batch_size": 4,
+  "accumulate_grad_batches": 10,
+  "precision": "32-true",
+  "bn_policy": "frozen_running_statistics_trainable_affine",
+  "initial_lr": 0.00025,
+  "lr_milestone_updates": [4116, 6174],
+  "lr_gamma": 0.5,
+  "correct_roll": false,
+  "num_workers": 0,
+  "minimum_free_gib": 100,
+  "reserved_run_gib": 4,
+  "sources": {
+    "procthor": {
+      "root": "/data/fyp_3d/datasets/procthor_spvloc",
+      "manifest": "/data/fyp_3d/datasets/procthor_spvloc/building_split_manifest_100_20_20_accepted.json",
+      "official_dataset_name": "S3D",
+      "prepared_cache": "pickle_v4_paper_pano"
+    },
+    "zind": {
+      "root": "/data/fyp_3d/datasets/zind_spvloc_converted",
+      "raw_root": "/data/fyp_3d/datasets/zind_original",
+      "raw_status": "/data/fyp_3d/datasets/zind_original/download_status.json",
+      "manifest": "/data/fyp_3d/datasets/zind_spvloc_converted/qualification_manifest.json",
+      "official_partition": "/data/fyp_3d/sources/spvloc/data/datasets/zind/zind_partition.json",
+      "official_dataset_name": "Zillow",
+      "prepared_cache": "pickle_fusion_v1"
+    }
+  },
+  "scope": {
+    "macvo": "frozen; never trained by this entry point",
+    "ace": "scene heads trained separately using target-map reference only",
+    "vlm": "disabled",
+    "budget_claim": "equal optimizer updates and attempted samples, not equal post-filter sample counts or A100 paper reproduction",
+    "reference_only_paper_scale": {"optimizer_updates": 42000, "lr_milestone_updates": [20160, 30240]},
+    "launch_policy": "explicit train subcommand only; no cloud rental or automatic launch"
+  }
+}

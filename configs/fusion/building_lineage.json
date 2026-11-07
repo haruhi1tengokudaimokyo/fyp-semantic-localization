@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "selection_used_localization_results": false,
+  "development": [
+    {
+      "source_id": "procthor",
+      "building_id": "val/0",
+      "scene_id": 3000,
+      "original_split": "val",
+      "base_building_geometry_sha256": "8b3275ae59875da833c8e191a4adbf68b5c45af608357212bca8cded9d81579f",
+      "house_file": "/data/fyp_3d/datasets/procthor_spvloc/scene_03000/procthor_house.json",
+      "house_file_sha256": "9e6b74a4c6b640c5c70013ed3701e2109de62790a0c788bed1a069e5710cfcc9",
+      "role": "system_development"
+    },
+    {
+      "source_id": "procthor",
+      "building_id": "val/1",
+      "scene_id": 3001,
+      "original_split": "val",
+      "base_building_geometry_sha256": "9f998566f18028505203abf9a56ee14799a9f293695acf77b52e53dc073715f2",
+      "house_file": "/data/fyp_3d/datasets/procthor_spvloc/scene_03001/procthor_house.json",
+      "house_file_sha256": "0c54471166397fa5cc1a28d69245901a459e015daba49b359a872b0768507e13",
+      "role": "system_development"
+    },
+    {
+      "source_id": "procthor",
+      "building_id": "val/2",
+      "scene_id": 3002,
+      "original_split": "val",
+      "base_building_geometry_sha256": "70386307a2e8a1e4d29c3f97badd89654eb0b52e09db500c8b6893be1122a2a0",
+      "house_file": "/data/fyp_3d/datasets/procthor_spvloc/scene_03002/procthor_house.json",
+      "house_file_sha256": "1cb140d78da981843beada3bf116219bf6ee6ac0cb3355a8175935303c587dcb",
+      "role": "system_development"
+    }
+  ],
+  "sealed_system_test": [
+    {
+      "source_id": "procthor",
+      "building_id": "test/39",
+      "official_house_index": 39,
+      "original_split": "test",
+      "base_building_geometry_sha256": "9ac516ae57fc1e1ac022a2c700f8e40e8c1e69c6bf89ba2a5a8c1d1235dacd05",
+      "role": "sealed_system_test_not_captured"
+    },
+    {
+      "source_id": "procthor",
+      "building_id": "test/41",
+      "official_house_index": 41,
+      "original_split": "test",
+      "base_building_geometry_sha256": "76c5f80fe2b687234a531f06fc8cb855057f74dd5d010ac4cf8746f1658effe7",
+      "role": "sealed_system_test_not_captured"
+    },
+    {
+      "source_id": "procthor",
+      "building_id": "test/45",
+      "official_house_index": 45,
+      "original_split": "test",
+      "base_building_geometry_sha256": "621262724b41a6780ec9664051fbdf3778c94ccdd3ca92ddab2d276e255afdb7",
+      "role": "sealed_system_test_not_captured"
+    },
+    {
+      "source_id": "procthor",
+      "building_id": "test/50",
+      "official_house_index": 50,
+      "original_split": "test",
+      "base_building_geometry_sha256": "922492a2177f991942b11a022c007f1763f37b75fce9be48b1a5546fd0a6954e",
+      "role": "sealed_system_test_not_captured"
+    },
+    {
+      "source_id": "procthor",
+      "building_id": "test/51",
+      "official_house_index": 51,
+      "original_split": "test",
+      "base_building_geometry_sha256": "a4cd99e9c13c4a529e9651d3ceec80692b7d969b615b6a13d5a555d545c8e3c6",
+      "role": "sealed_system_test_not_captured"
+    }
+  ],
+  "original_manifest_sha256": "f413a49e3a54c94656b7d4b9e6c3b4f21e1dffec8ab53792b95fe7385e569858",
+  "publisher_test_gzip_sha256": "9a9fa6f134e76fe87f3fd92c00883651cf9fadf4e9ad4072d6d73be229f001dc",
+  "status": "LINEAGE_FROZEN_NOT_DATA_READY"
+}

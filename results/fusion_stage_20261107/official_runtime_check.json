@@ -1,0 +1,10 @@
+{
+  "status": "CPU_OFFICIAL_LOADER_AND_CHECKPOINT_PASSED",
+  "source": "procthor",
+  "real_scene": 0,
+  "panorama_views": 20,
+  "parameters": 56462316,
+  "optimizer_steps": 0,
+  "rendered_batches": 0,
+  "full_training_qualification": false
+}

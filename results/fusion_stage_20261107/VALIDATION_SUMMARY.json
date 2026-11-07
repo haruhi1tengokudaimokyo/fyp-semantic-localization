@@ -1,0 +1,18 @@
+{
+  "status": "CONFIGURATION_AND_INTERFACES_VALIDATED",
+  "research_result": false,
+  "tests_summary": "74 passed, 2 skipped in 0.93s",
+  "skipped_scope": "two retired common-scene cached-result tests; all new fusion tests run",
+  "real_render": "PILOT_CAPTURE_QA_PASSED, 3 reference + 3 query frames, not full sequence",
+  "official_model": "CPU strict checkpoint load, 56462316 parameters, optimizer_steps=0",
+  "real_capture_offline_evaluator_schema": "PASSED for 3 real query pose records, no model predictions",
+  "new_training_started": false,
+  "remaining": [
+    "full shared trajectories and official frontend adapters",
+    "map-specific ACE heads",
+    "three-method complementarity on actual shared inputs",
+    "ZInD official conversion acceptance",
+    "fixed-lag optimization and real scheduling evaluation"
+  ],
+  "data_free_gib_snapshot": 119.84589004516602
+}

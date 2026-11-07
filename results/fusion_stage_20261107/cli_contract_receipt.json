@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "scope": "SOFTWARE_CONTRACT_ONLY_NOT_LOCALIZATION_BENCHMARK",
+  "synthetic_queries": 5,
+  "commands": [
+    "python3 -m research3d.fusion.replay",
+    "python3 -m research3d.fusion.diagnostics"
+  ],
+  "checks": [
+    "CLI replay completed",
+    "offline metrics accepted replay schema",
+    "synthetic_software_test labeling retained"
+  ],
+  "input_and_output_sha256": {
+    "diagnostics.json": "dd47e1f47209416623b67f07d2135983feaff8303e84bfc2e4f5f2a9d8c9e71f",
+    "gt.jsonl": "4c6494f9e2c01369b29f13a2b0d80d4ce28f989f5e6a203f81d033f6bb8fe482",
+    "motion.jsonl": "f6b1dfe9c5ec08882b321634ea21cd285aafdb2157e77fb9b389f5ff3a55077a",
+    "observations.jsonl": "99743e460da66532e8f957f159b3f90e0048750969ca7d20a6af85990fd6c9d8",
+    "replay/audit.json": "af854d29e67dc7645e793133e2615a6186134c0028efafd7a2b82f85571e8c40",
+    "replay/outputs.jsonl": "a00c052f4b6c97aae40cce1df5e034131ebcc75e0c29e1fb3de5b004688b2537"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "config_valid": true,
+  "disk_free_gib": 119.84589004516602,
+  "reserve_gib": 100,
+  "new_data_budget_gib": 16,
+  "existing_procthor_manifest_sha256": "f413a49e3a54c94656b7d4b9e6c3b4f21e1dffec8ab53792b95fe7385e569858",
+  "zind_download_status": "INCOMPLETE",
+  "zind_complete_houses": 1574,
+  "zind_total_houses": 1575,
+  "readiness": {
+    "configuration": "VALIDATED",
+    "shared_continuous_stereo": "NOT_YET_ACCEPTED",
+    "same_map_ACE_heads": "NOT_TRAINED",
+    "shared_frontend_observations": "NOT_YET_ACCEPTED",
+    "ZInD_SPVLoc_conversion": "NOT_YET_ACCEPTED",
+    "fusion_effectiveness": "NOT_EVALUATED"
+  },
+  "no_training_started": true,
+  "no_background_services_changed": true
+}

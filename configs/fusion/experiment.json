@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "study": "same_known_map_reliable_localization_and_recovery",
+  "stage": "DEVELOPMENT_CONFIGURATION_NOT_A_RESULT",
+  "seed": 20261107,
+  "resources": {
+    "min_data_free_gib": 100,
+    "max_new_data_peak_gib": 16,
+    "concurrent_gpu_jobs": 1,
+    "cloud_rental_authorized": false,
+    "automatic_training": false,
+    "protected_projects": ["ACE", "MACVO", "SPVLoc_100_20_20"]
+  },
+  "data": {
+    "source_root": "/data/fyp_3d/datasets/procthor_spvloc",
+    "accepted_manifest": "/data/fyp_3d/datasets/procthor_spvloc/building_split_manifest_100_20_20_accepted.json",
+    "development_scene_ids": [3000, 3001, 3002],
+    "forbidden_for_system_tuning_scene_ids": [3250, 3251, 3252, 3253, 3254, 3255, 3256, 3257, 3258, 3259, 3260, 3261, 3262, 3263, 3264, 3265, 3266, 3267, 3268, 3269],
+    "new_final_test_buildings": 5,
+    "final_test_selection": "publisher_test_order_excluding_all_existing_candidates_and_duplicate_geometry",
+    "lineage_group": ["source_id", "base_building_geometry_sha256"],
+    "target_reference_use": ["fixed_map_preparation", "ACE_scene_head_training"],
+    "target_query_use": "development_only_until_new_test_manifest_is_sealed",
+    "stereo": {"width": 640, "height": 480, "vertical_fov_deg": 60, "baseline_m": 0.12, "sample_hz": 5, "camera_height_m": 1.5},
+    "synthetic_clock": "capture_time=frame_index/sample_hz; wall_clock_recorded_separately",
+    "route_targets": {"reference_frames_per_building": 300, "query_frames_per_building": 600, "max_speed_m_s": 0.25, "max_angular_speed_deg_s": 20},
+    "readiness": "requires_actual_capture_geometry_and_cross_method_input_acceptance"
+  },
+  "frontends": {
+    "macvo": {"frozen": true, "configuration": "Paper", "precision": "FP32", "input": ["left_rgb", "right_rgb", "calibration"], "gt_online": false},
+    "ace": {"encoder_frozen": true, "head_scope": "one_map_one_head", "reference_features": 8000000, "epochs": 16, "seed": 2089, "input": ["left_rgb", "calibration", "map_specific_head"], "gt_online": false},
+    "spvloc": {"frozen_for_complementarity": true, "top_k": 3, "pose_refine_iters": 1, "input": ["left_rgb", "calibration", "fixed_structural_map"], "gt_online": false, "reference_embedding_cache_key": ["map_sha256", "model_sha256", "render_config_sha256", "dtype", "source_commit"]}
+  },
+  "replay_defaults": {
+    "initialization": "global_unknown",
+    "top_k": 3,
+    "confirmation_frames": 3,
+    "independent_recovery": true,
+    "conflicts_before_lost": 3,
+    "max_observation_age_s": 3.0,
+    "hypothesis_ttl_s": 2.0,
+    "max_dead_reckoning_s": 10.0,
+    "source_priority": ["ace", "spvloc"],
+    "quality": {"ace": {"min_pnp_inliers": 50}, "spvloc": {"min_viewport_score": 0.0}},
+    "tracking_gate": {"ace": [0.5, 15.0], "spvloc": [2.0, 35.0]},
+    "recovery_gate": {"ace": [0.5, 15.0], "spvloc": [1.0, 25.0]},
+    "threshold_status": "UNVALIDATED_DEVELOPMENT_DEFAULTS_NOT_CALIBRATED_PROBABILITIES"
+  },
+  "variants": {
+    "A_macvo_local": {"absolute_sources": [], "top_k": 1, "confirmation_frames": 1, "independent_recovery": false},
+    "B_macvo_ace": {"absolute_sources": ["ace"], "top_k": 1, "independent_recovery": false},
+    "C_macvo_spvloc": {"absolute_sources": ["spvloc"], "top_k": 1, "independent_recovery": false},
+    "D_three_fixed": {"absolute_sources": ["ace", "spvloc"], "top_k": 1, "independent_recovery": false},
+    "E_three_recovery": {"absolute_sources": ["ace", "spvloc"]},
+    "E_top1": {"absolute_sources": ["ace", "spvloc"], "top_k": 1},
+    "E_single_frame": {"absolute_sources": ["ace", "spvloc"], "confirmation_frames": 1},
+    "E_no_independent_recovery": {"absolute_sources": ["ace", "spvloc"], "independent_recovery": false}
+  },
+  "deferred_experiments": {
+    "gtsam_fixed_lag": "BLOCKED_UNTIL_SHARED_OBSERVATIONS_AND_POSE_WEIGHT_CALIBRATION",
+    "event_vs_fixed_schedule": "REQUIRES_CAUSAL_SCHEDULER_AND_EQUAL_CALL_OR_GPU_BUDGET_NOT_IMPLEMENTED",
+    "known_start_tracking": "SEPARATE_PROTOCOL_REQUIRED_DO_NOT_INJECT_QUERY_GT_IN_GLOBAL_RUNS",
+    "geometry_vs_semantics": "REQUIRES_MATCHED_TRAINING_NOT_ZEROED_SEMANTICS",
+    "ace_reference_coverage": [1.0, 0.5, 0.25]
+  },
+  "evaluation": {
+    "gt_scope": "offline_only",
+    "absolute_alignment": "none",
+    "thresholds": [[0.05, 5], [0.25, 10], [1.0, 30]],
+    "primary_threshold": [1.0, 30],
+    "missing_predictions": "count_as_failures",
+    "recovery_confirmation_frames": 3,
+    "statistical_unit": "building_then_route",
+    "report": ["success_coverage", "wrong_acceptances", "harmful_corrections", "recovery_success_and_censoring", "P50_P95_absolute_error", "longest_failure_s", "latency_and_output_age", "local_ATE_RPE_separately"],
+    "test_tuning_allowed": false,
+    "cached_replay_is_realtime_evidence": false
+  }
+}

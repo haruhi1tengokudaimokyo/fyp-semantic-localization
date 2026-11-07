@@ -1,0 +1,52 @@
+{
+  "successful_capture_command": "timeout --signal=TERM --kill-after=10s 600s /data/fyp_3d/envs/semantic_loc/bin/python -m research3d.fusion.capture --scenes 3000 --output /tmp/fyp_fusion_capture_probe4 --software-render --max-frames-per-split 3 --min-free-gib 2 --max-new-gib 0.2 --quality Low",
+  "independent_validation_command": "/data/fyp_3d/envs/semantic_loc/bin/python -m research3d.fusion.data_validation /tmp/fyp_fusion_capture_probe4/scene_03000",
+  "test_command": "/data/fyp_3d/envs/semantic_loc/bin/python -m pytest -q research3d/tests/test_fusion_capture.py",
+  "result": "PILOT_CAPTURE_QA_PASSED",
+  "new_training_started": false,
+  "protected_data_modified": false,
+  "actual_data_path": "/tmp/fyp_fusion_capture_probe4/scene_03000",
+  "total_artifact_bytes": 16881318,
+  "runtime_limit_seconds": 600,
+  "capture_seconds_excluding_renderer_startup": 176.9151445569987,
+  "honest_limits": [
+    "Only 3 reference + 3 query frames; 0.1m route per split; not a full trajectory benchmark.",
+    "Low rendering quality is an explicit pilot override; full collection defaults High.",
+    "This run was started before the final status-name/preflight-only lineage patch; final validator rerun on saved raw artifacts.",
+    "No ACE, MAC-VO or SPVLoc frontend run on these captures yet."
+  ],
+  "failed_attempts": [
+    {
+      "attempt": "probe1",
+      "result": "renderer startup could not write /data/.../unity.log",
+      "fix": "write SDK logs under output/.renderer; no data files changed"
+    },
+    {
+      "attempt": "probe1 software retry",
+      "result": "Unity automatic device selector returned nil for llvmpipe and crashed",
+      "fix": "official -force-device-index 0 selects sole software Vulkan device"
+    },
+    {
+      "attempt": "probe2",
+      "result": "source SHA comparison incorrectly treated canonical geometry SHA as file SHA; exited before capture",
+      "fix": "canonical geometry and file SHA computed separately"
+    },
+    {
+      "attempt": "probe3",
+      "result": "external 240s timeout during 5+5 capture; partial not published or accepted",
+      "path": "/tmp/fyp_fusion_capture_probe3/.scene_03000.partial",
+      "fix": "bounded 3+3 interface pilot, 600s external runtime limit"
+    }
+  ],
+  "sealed_scene_negative_test": {
+    "scene_id": 3250,
+    "exit_code": 2,
+    "result": "rejected before renderer startup by frozen development manifest"
+  },
+  "current_source_sha256": {
+    "research3d/fusion/capture.py": "0f27ea8126e9a13dfe755f7c195976963d4e0629b5de08ccd9b342b2d592ffb1",
+    "research3d/fusion/data_validation.py": "0c98d954c3d7cd1d51378bd2330593fc59fb4f4dfe3380b9ff7bf7330f77a4c6",
+    "research3d/tests/test_fusion_capture.py": "fba1acf3eee399e050915872945ca021668ccdcbebdc0e46cf95ed807daed17d"
+  },
+  "recorded_metadata_schema_fix_no_image_changes": "offline provenance string migrated to source/role/calibration_sha256 object; all RGB/depth/pose numeric values unchanged"
+}

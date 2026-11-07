@@ -1,0 +1,6 @@
+........................................................................ [ 94%]
+ss..                                                                     [100%]
+=========================== short test summary info ============================
+SKIPPED [1] research3d/tests/test_common_observations.py:78: completed real common-scene cache required
+SKIPPED [1] research3d/tests/test_common_observations.py:69: completed real common-scene cache required
+74 passed, 2 skipped in 0.93s

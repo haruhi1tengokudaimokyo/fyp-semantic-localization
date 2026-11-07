@@ -1,0 +1,74 @@
+{
+  "status": "PREFLIGHT_ONLY_NO_TRAINING",
+  "official_commit": "754861115e38bf6f9b6b6b642db095f8e1ff6958",
+  "sources": {
+    "procthor": {
+      "status": "QUALIFIED_LOADER_INPUTS",
+      "counts": {
+        "train": 100,
+        "val": 20,
+        "test": 20
+      },
+      "manifest_sha256": "f413a49e3a54c94656b7d4b9e6c3b4f21e1dffec8ab53792b95fe7385e569858"
+    },
+    "zind": {
+      "status": "BLOCKED",
+      "reason": "zind: missing qualified conversion manifest: /data/fyp_3d/datasets/zind_spvloc_converted/qualification_manifest.json",
+      "raw_download": {
+        "stage": "INCOMPLETE",
+        "complete_houses": 1574,
+        "total_houses": 1575,
+        "raw_dataset_only": true
+      }
+    }
+  },
+  "arms": {
+    "P": {
+      "status": "BLOCKED",
+      "blocked_sources": [
+        "zind"
+      ],
+      "runtime_errors": []
+    },
+    "Z": {
+      "status": "BLOCKED",
+      "blocked_sources": [
+        "zind"
+      ],
+      "runtime_errors": []
+    },
+    "P+Z": {
+      "status": "BLOCKED",
+      "blocked_sources": [
+        "zind"
+      ],
+      "runtime_errors": []
+    }
+  },
+  "conversion_commands": [
+    [
+      "/data/fyp_3d/envs/semantic_loc/bin/python",
+      "-m",
+      "spvloc.tools.zind_to_s3d",
+      "-i",
+      "/data/fyp_3d/datasets/zind_original",
+      "-o",
+      "/data/fyp_3d/datasets/zind_spvloc_converted",
+      "-idx",
+      "0"
+    ],
+    [
+      "/data/fyp_3d/envs/semantic_loc/bin/python",
+      "-m",
+      "spvloc.tools.dataset_from_csv",
+      "-d",
+      "data/datasets/zind/dataset_info.csv",
+      "-i",
+      "/data/fyp_3d/datasets/zind_spvloc_converted",
+      "-o",
+      "/data/fyp_3d/datasets/zind_spvloc_converted_official_test"
+    ]
+  ],
+  "conversion_cwd": "/data/fyp_3d/sources/spvloc",
+  "conversion_is_not_qualification": true
+}

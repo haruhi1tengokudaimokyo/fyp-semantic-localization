@@ -2,6 +2,12 @@
 
 Current repository: https://github.com/haruhi1tengokudaimokyo/fyp-semantic-localization
 
+## 2026-11-07: fusion-stage experiment setup
+
+Branch `research/fusion-stage` adds a [known-map localization and recovery protocol](docs/FUSION_STAGE_zh.md), genuine synchronous stereo collection, causal candidate replay, offline complementarity/recovery metrics, and [equal-budget SPVLoc P/Z/P+Z training entry points](docs/FUSION_TRAINING_zh.md). Three development buildings and five new, sealed system-test building identities are fixed separately from the completed experiments.
+
+This is implementation and configuration validation, **not a completed fusion benchmark**. Shared-map ACE heads and three-frontend trajectories remain pending; raw ZInD has not passed SPVLoc conversion acceptance, so the formal multi-source training fails closed. No new training, cloud rental, or background monitoring was started. Existing ACE/MAC-VO/SPVLoc results below remain unchanged.
+
 ## 2026-11-06: corrected full training and paired evaluation completed
 
 The corrected run finished normally on Nov 5 at 23:31 (Asia/Shanghai): **25 epochs / 8,575 updates**, all 56,462,316 trainable parameters updated, approximately 49.57 hours including validation. The checkpoint was selected at epoch 19 using validation loss only. The one-shot training service has exited successfully; no retraining was started.

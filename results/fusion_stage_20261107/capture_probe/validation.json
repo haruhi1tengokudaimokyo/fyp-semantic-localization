@@ -1,0 +1,38 @@
+{
+  "schema": "fyp.stereo_qa.v1",
+  "passed": true,
+  "errors": [],
+  "metrics": {
+    "structure_plane_counts": {
+      "ceiling": 7,
+      "door": 6,
+      "floor": 7,
+      "wall": 30,
+      "window": 4
+    },
+    "reference": {
+      "frames": 3,
+      "duration_s": 0.4,
+      "path_length_m": 0.09999990463256836,
+      "max_step_m": 0.04999995231628418,
+      "max_yaw_step_deg": 0.0,
+      "worst_reprojection_p95_m": 0.00142669677734375,
+      "worst_structural_p95_m": 0.0004937648773193359,
+      "structural_samples": 29077
+    },
+    "query": {
+      "frames": 3,
+      "duration_s": 0.4,
+      "path_length_m": 0.09999990463256836,
+      "max_step_m": 0.04999995231628418,
+      "max_yaw_step_deg": 0.0,
+      "worst_reprojection_p95_m": 0.0023560523986816406,
+      "worst_structural_p95_m": 0.00034742069244408924,
+      "structural_samples": 40924
+    },
+    "reference_query_min_rig_center_separation_m": 5.58323393569075,
+    "formal_sequence_complete": false,
+    "semantic_supervision": "source structural annotation only; no raster-class supervision claimed"
+  },
+  "scope": "stereo pixels, metric depth cross-view consistency, source structural polygon projection, poses and split identity; not localization accuracy"
+}

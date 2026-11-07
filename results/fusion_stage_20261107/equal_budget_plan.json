@@ -1,0 +1,99 @@
+{
+  "protocol": "equal_update_source_comparison_v1",
+  "seed": 20261107,
+  "initialization_sha256": "074ec5d9d2e45b74358b5cd0d0fc139eef1d2499c20b98daa0f0a80f07682e67",
+  "optimizer_updates": 8575,
+  "attempted_queries": 343000,
+  "effective_batch": 40,
+  "micro_batch": 4,
+  "bn_policy": "frozen_running_statistics_trainable_affine",
+  "validation_sources": [
+    "procthor",
+    "zind"
+  ],
+  "selection": "minimum source-macro/building-macro validation original total loss; no test access",
+  "arms": {
+    "P": {
+      "training_sources": [
+        "procthor"
+      ],
+      "expected_attempted_queries_per_source": 343000,
+      "command": [
+        "env",
+        "LD_LIBRARY_PATH=/data/fyp_3d/sources/spvloc_redner/redner-dependencies/embree/lib-linux",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "PYOPENGL_PLATFORM=egl",
+        "/data/fyp_3d/envs/semantic_loc/bin/python",
+        "-m",
+        "research3d.fusion.training",
+        "train",
+        "--config",
+        "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/configs/fusion/training_budget.json",
+        "--arm",
+        "P",
+        "--seed",
+        "20261107",
+        "--output",
+        "/data/fyp_3d/runs/fusion_training/P_20261107"
+      ]
+    },
+    "Z": {
+      "training_sources": [
+        "zind"
+      ],
+      "expected_attempted_queries_per_source": 343000,
+      "command": [
+        "env",
+        "LD_LIBRARY_PATH=/data/fyp_3d/sources/spvloc_redner/redner-dependencies/embree/lib-linux",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "PYOPENGL_PLATFORM=egl",
+        "/data/fyp_3d/envs/semantic_loc/bin/python",
+        "-m",
+        "research3d.fusion.training",
+        "train",
+        "--config",
+        "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/configs/fusion/training_budget.json",
+        "--arm",
+        "Z",
+        "--seed",
+        "20261107",
+        "--output",
+        "/data/fyp_3d/runs/fusion_training/Z_20261107"
+      ]
+    },
+    "P+Z": {
+      "training_sources": [
+        "procthor",
+        "zind"
+      ],
+      "expected_attempted_queries_per_source": 171500,
+      "command": [
+        "env",
+        "LD_LIBRARY_PATH=/data/fyp_3d/sources/spvloc_redner/redner-dependencies/embree/lib-linux",
+        "OPENBLAS_NUM_THREADS=1",
+        "OMP_NUM_THREADS=1",
+        "PYOPENGL_PLATFORM=egl",
+        "/data/fyp_3d/envs/semantic_loc/bin/python",
+        "-m",
+        "research3d.fusion.training",
+        "train",
+        "--config",
+        "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/configs/fusion/training_budget.json",
+        "--arm",
+        "P+Z",
+        "--seed",
+        "20261107",
+        "--output",
+        "/data/fyp_3d/runs/fusion_training/P_Z_20261107"
+      ]
+    }
+  },
+  "limitations": [
+    "This is an adapted equal-budget experiment, not an original-data paper benchmark",
+    "Frozen BN running statistics differ from paper native batch-40 training",
+    "Post-filter valid counts must be reported per source; equal attempts are not equal usable samples",
+    "MAC-VO remains frozen; no VLM training; official S3D initialization already has S3D exposure"
+  ]
+}

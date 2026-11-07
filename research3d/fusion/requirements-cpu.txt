@@ -1,0 +1,5 @@
+# CPU protocol/replay/metrics tests only; use existing semantic_loc for rendering/training.
+numpy==1.26.4
+scipy==1.11.4
+Pillow>=9.0
+pytest>=7.4
