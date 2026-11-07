@@ -1,0 +1,24 @@
+{
+  "status": "OFFLINE_VISUALIZATION_COMPLETE",
+  "frames": 561,
+  "gif_frames": 113,
+  "source_duration_s": 59.9,
+  "displayed_duration_s": 60.4,
+  "GT_scope": "offline display/evaluation only",
+  "MACVO_alignment": "one first-valid-camera pose origin, no full-trajectory fit",
+  "MACVO_anchor_query_id": "query/000000",
+  "interpolation": false,
+  "missing_outputs": "gaps and explicit MISSING status",
+  "fusion_timing": "offline_accuracy",
+  "real_time_claim": false,
+  "map_id": "procthor_scene03000_structure_v1",
+  "gif_bytes": 5738736,
+  "input_sha256": {
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset/query/frames.jsonl": "1f8610edfdccc48830c917578940f15a52077b8462b88511ce0ec5972a580bdd",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset/offline_gt/query_poses.jsonl": "b360bb4364c473748b07887cf3ebf59e9a6eefd4eaf2d83792799a7f3bbd467c",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_queries/predictions.jsonl": "c51186009309cdf246c0768e9c96ce2cb1dd4fabf588da121f0ed5b20d55f1e4",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/spvloc_openroof/predictions.jsonl": "23a89f755c40206d6bf68853253d470b9ac425dd0563672cfb0f4e2b3bef4aeb",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/predictions.jsonl": "83295a2ddde8663e581daeae4c187f4eeb66ab9da0a391dd603cdad2b0ceb22a",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/fusion_replay/offline_accuracy/E_three_recovery/outputs.jsonl": "3c5bd33a0877e65bf18af7e474f5537930df3f33cca97c3c6a444cf6296f85b6"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "scope": "compact evidence only; no model weights or full query predictions",
+  "files": [
+    {
+      "filename": "metrics.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_queries/metrics.json",
+      "sha256": "9b5b75eca1250e6b99755a30cca90da2d2f79c7d0ab88653b34c073fecbf5ae3",
+      "bytes": 1802
+    },
+    {
+      "filename": "inference_summary.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_queries/summary.json",
+      "sha256": "e921db585310397ff2edd0a06e4420ce289b7917c64e1f14e2a711dfe1ed19a4",
+      "bytes": 171
+    },
+    {
+      "filename": "inference_protocol.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_queries/protocol.json",
+      "sha256": "169642431a8a5278b34b93a694e2278711c7f283dfbc3189461fccfed9ccdbee",
+      "bytes": 11686
+    },
+    {
+      "filename": "model_binding.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_train/model_binding.json",
+      "sha256": "26e8f63fc0a39e73d44ce9e6585cae57a81450f883dd979909c4b04de9812ac1",
+      "bytes": 1934
+    },
+    {
+      "filename": "training_resources.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_train/training_resources.json",
+      "sha256": "5b59f9c52c296ee37fb5378d7387ec20b9573277e308504b23537975b8e2ab90",
+      "bytes": 642
+    }
+  ],
+  "generated_files": [
+    {
+      "filename": "README_zh.md",
+      "sha256": "a50ce28c58a8fda960dc9a594ab45d5cc715c1843899a6bb6ae5c12f4d9d95ea",
+      "bytes": 2552
+    },
+    {
+      "filename": "read_guard_verification.json",
+      "sha256": "26675f514bd8bd773d23c31fbb3382f6a2745ebfed00bb8ef98baf4d2c3dfd58",
+      "bytes": 966
+    },
+    {
+      "filename": "reference_export_audit.json",
+      "sha256": "f0524891c6faee6a220bb3c915f78548d41740e805fa179f5f58717701738941",
+      "bytes": 1600
+    },
+    {
+      "filename": "training_protocol.json",
+      "sha256": "5948558b1457e35389e6572add2822fdeec9e92c6535e4e0841970edfdbf2bd5",
+      "bytes": 2263
+    }
+  ]
+}

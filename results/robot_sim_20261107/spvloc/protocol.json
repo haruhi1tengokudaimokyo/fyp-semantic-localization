@@ -1,0 +1,44 @@
+{
+  "map_id": "procthor_scene03000_structure_v1",
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "annotation_sha256": "a5004b0fd7684d15c1b87626ea617d18101e3e3ef6d1c8a96a37231cf8222fd3",
+  "camera_height_m": 0.6,
+  "pose_grid_step_mm": 1200,
+  "pano_size": [
+    128,
+    256
+  ],
+  "reference_count": 82,
+  "semantic_labels": [
+    0,
+    1,
+    3,
+    4,
+    5
+  ],
+  "reference_sha256": "696d49270e49098030814440a7c7442c1484b7ddb5c6a9cc432b044db25d343e",
+  "official_core": "PerspectiveImageFromLayout.test_step_full_epoch",
+  "top_k": 3,
+  "refinement": "official_one_iteration_for_top1_only",
+  "query_gt_read": false,
+  "checkpoint_sha256": "daf323ccc1abc18dc7dd2a95d5f3e6be16183d60eda7f2498c9a593e2e5b54e3",
+  "map_geometry_audit": {
+    "actual_world_has_ceiling_geometry": false,
+    "source_ceiling_plane_ids_removed": [
+      11,
+      17,
+      22,
+      29,
+      35,
+      43,
+      49
+    ],
+    "retained_planes": 47,
+    "retained_plane_ids_contiguous": true,
+    "actual_sdf_model_inventory_verified": true,
+    "door_window_semantics": "source-declared openings; no solid door/window mesh is asserted",
+    "world_light_named_ceiling_is_not_a_geometry_plane": true
+  },
+  "known_domain_difference": "Gazebo structure-only RGB, 0.60m camera; training AI2-THOR furnished RGB with higher camera",
+  "building_split_caveat": "scene_03000 belongs to prior validation set used for checkpoint selection; not heldout building evidence"
+}

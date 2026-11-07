@@ -1,0 +1,47 @@
+{
+  "scope": "CPU-only ROS domain75 EKF ablation on existing fault recording; no models or live simulator",
+  "files": [
+    {
+      "filename": "metrics.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/evaluation/metrics.json",
+      "sha256": "a4c281ee2d6fd3fabea2a552cc90e8d76af879b07842c69b4f7e3970b4683119",
+      "bytes": 3146
+    },
+    {
+      "filename": "replay_receipt.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/replay_receipt.json",
+      "sha256": "0086c1711b7eac3e28f4e1f0a1a48fd391f54fab0d669de91da88efe99cd1e92",
+      "bytes": 1740
+    },
+    {
+      "filename": "launcher_receipt.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/launcher_receipt.json",
+      "sha256": "946bb4e5330f951174207502dd63181701b650e23d78fcc885b85304d2499f45",
+      "bytes": 273
+    },
+    {
+      "filename": "protocol.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/protocol.json",
+      "sha256": "7fac8eda988342ed967a2ba7ae48d04bc06ace25e0fd5e76d515f54fb6d76a6d",
+      "bytes": 2511
+    },
+    {
+      "filename": "runtime_summary.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/localization/runtime_summary.json",
+      "sha256": "7386f2ae3a1277920b89406d096d8aa8592b9f85701ab810e7c153eb6e1c0bfe",
+      "bytes": 1525
+    },
+    {
+      "filename": "workers_ready.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/localization/workers_ready.json",
+      "sha256": "bb8d5afebe407b39f63bb9dafb8d52131e5879d93cf8075c2312f42290d2aa57",
+      "bytes": 120
+    },
+    {
+      "filename": "localization_config.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/localization/localization_config.json",
+      "sha256": "75dac587b143a3eb60dfa5a6e2015336d38b63bd310a72dfb9fe12709e360f88",
+      "bytes": 1569
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "schema": "robot_macvo_run_v1",
+  "map_id": "procthor_scene03000_structure_v1",
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "dataset_root": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset",
+  "map_manifest_sha256": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+  "online_manifest_sha256": "1f8610edfdccc48830c917578940f15a52077b8462b88511ce0ec5972a580bdd",
+  "source_commit": "8683b532d6f6e8981f6b1a646fb5f52f02c1ea61",
+  "source_modules_sha256": {
+    "Odometry/MACVO.py": "568c8219ffa910332dad0812f951c42ae2f11f7ca615131e0e46bae19964df32",
+    "Module/MotionModel.py": "819f278e9297bb0ce03055575442cea38b124be79e74a872e922d0a0fcc65e75",
+    "Module/Optimization/TwoFramePGO/Optimizer.py": "d2bd3eedf0b110b6e6ecb0404c6267bcd696004b05ddad6ef08ba268ab27d32e",
+    "Module/Optimization/TwoFramePGO/Graphs.py": "f79bca297d7c249cc761bd44e3ba2152154057637c223310b022933f11a49208",
+    "Module/Network/FlowFormerCov/covhead.py": "67be8e04b5dd6dfcec79831de3e462a0f882933e048fda841b052e513d49e428"
+  },
+  "source_worktree_status": [
+    " M Module/Network/FlowFormerCov/covhead.py"
+  ],
+  "source_change_note": "pre-existing covhead.py hardware compatibility retained; this adapter does not edit upstream source",
+  "checkpoint_sha256": "bec6edd7e195bab863132f1e9659cdd26e6eaeae7cfd24a626828de294cf5b3a",
+  "motion_checkpoint_sha256": "32a2456c3a66e46d563f984ea58ceee68c8eaaad525ccda9587e610a33f32bed",
+  "config": {
+    "Odometry": {
+      "name": "Gazebo_Paper_FP32_full_sequence",
+      "args": {
+        "device": "cuda",
+        "edgewidth": 32,
+        "num_point": 200,
+        "match_cov_default": 0.25,
+        "profile": false,
+        "mapping": false
+      },
+      "cov": {
+        "obs": {
+          "type": "MatchCovariance",
+          "args": {
+            "device": "cuda",
+            "kernel_size": 31,
+            "match_cov_default": 0.25,
+            "min_depth_cov": 0.05,
+            "min_flow_cov": 0.25
+          }
+        }
+      },
+      "keypoint": {
+        "type": "CovAwareSelector",
+        "args": {
+          "device": "cuda",
+          "kernel_size": 7,
+          "mask_width": 32,
+          "max_depth": "auto",
+          "max_depth_cov": 250.0,
+          "max_match_cov": 100.0
+        }
+      },
+      "mappoint": {
+        "type": "MappingPointSelector",
+        "args": {
+          "device": "cuda",
+          "max_depth": 5.0,
+          "max_depth_cov": 0.005,
+          "mask_width": 32
+        }
+      },
+      "frontend": {
+        "type": "CUDAGraph_FlowFormerCovFrontend",
+        "args": {
+          "device": "cuda",
+          "weight": "/data/fyp_3d/models/MACVO_FrontendCov.pth",
+          "enc_dtype": "fp32",
+          "dec_dtype": "fp32",
+          "decoder_depth": 12,
+          "enforce_positive_disparity": false
+        }
+      },
+      "motion": {
+        "type": "TartanMotionNet",
+        "args": {
+          "weight": "/data/fyp_3d/models/MACVO_posenet.pkl",
+          "device": "cuda"
+        }
+      },
+      "outlier": {
+        "type": "FilterCompose",
+        "args": {
+          "filter_args": [
+            {
+              "type": "CovarianceSanityFilter",
+              "args": null
+            },
+            {
+              "type": "SimpleDepthFilter",
+              "args": {
+                "min_depth": 0.05,
+                "max_depth": "auto"
+              }
+            },
+            {
+              "type": "LikelyFrontOfCamFilter",
+              "args": null
+            }
+          ]
+        }
+      },
+      "postprocess": {
+        "type": "MotionInterpolate",
+        "args": null
+      },
+      "keyframe": {
+        "type": "AllKeyframe",
+        "args": null
+      },
+      "optimizer": {
+        "type": "TwoFrame_PGO",
+        "args": {
+          "device": "cpu",
+          "vectorize": true,
+          "parallel": true,
+          "graph_type": "icp",
+          "autodiff": true
+        }
+      }
+    }
+  },
+  "seed": 1305,
+  "frames": 561,
+  "full_captured_sequence": true,
+  "preprocessing": "native 640x480 RGB; no resize, frame clipping, GT loader or upstream dataset template instantiated",
+  "timestamp_source": "synchronized Gazebo sensor simulation clock",
+  "GT_online": false,
+  "online_inputs": "rectified stereo RGB + calibration + timestamps only",
+  "camera": {
+    "width": 640,
+    "height": 480,
+    "K": [
+      [
+        320.0,
+        0.0,
+        320.0
+      ],
+      [
+        0.0,
+        320.00000953674316,
+        240.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "baseline_m": 0.1,
+  "pose_convention": "T_odom_camera optical, initial arbitrary odometric gauge; no world/map anchoring",
+  "output_policy": "raw pre-interpolation trajectory and explicit lost mask; no test GT read",
+  "paper_scope": "new Gazebo environment adaptation; not original paper benchmark",
+  "dense_mapping": false,
+  "covariance_scope": "point covariance; not calibrated pose covariance"
+}

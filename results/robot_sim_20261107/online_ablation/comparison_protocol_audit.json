@@ -1,0 +1,11 @@
+{
+  "normal_same_capture_hashes": true,
+  "normal_same_all_other_gate_parameters": true,
+  "all_ace_heads_same": true,
+  "head_sha256": "0358d0b6a80d22e740c9f96a5d2bf9ab64d58a36ecf85111a235918cd7629edf",
+  "normal_denominator": 570,
+  "fault_denominator": 533,
+  "repeat_count_per_condition": 1,
+  "GT_used_for_online_decisions": false,
+  "caveat": "Same raw recordings and weights; ROS DDS delivery and DSAC sampling may vary between runs. EKF-only local error uses one offline initial origin and is not absolute global localization."
+}

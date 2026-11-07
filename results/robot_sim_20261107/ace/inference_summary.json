@@ -1,0 +1,8 @@
+{
+  "status": "INFERENCE_COMPLETE_NOT_EVALUATED",
+  "frames": 561,
+  "failed": 0,
+  "wall_seconds": 98.26105785099935,
+  "GT_online": false,
+  "worker_persistent": true
+}

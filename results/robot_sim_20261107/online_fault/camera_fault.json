@@ -1,0 +1,17 @@
+{
+  "origin_timestamp_s": 9.4,
+  "interval_s": [
+    15.0,
+    35.0
+  ],
+  "counts": {
+    "left": 562,
+    "right": 603
+  },
+  "blackouts": {
+    "left": 188,
+    "right": 199
+  },
+  "scope": "declared image-interface camera failure; not physical or natural occlusion",
+  "GT_read": false
+}

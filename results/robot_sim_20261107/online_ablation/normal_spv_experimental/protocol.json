@@ -1,0 +1,69 @@
+{
+  "mode": "ace_spv_experimental",
+  "recording": {
+    "input_sha256": {
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture/map_manifest.json": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture/query/frames.jsonl": "f6e5dd59b36037830b3ffd8baec2d5c0a5153158ce98c652327460ff4c2ae531",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture/query/sensors/joint_states.jsonl": "d415d96fe700f3c477f41f1bc65adbe333d5a2a38c48f31d83ae10d5c7519129",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture/query/sensors/imu.jsonl": "6263c0328d7837d9e1835ffa0619f3e2520fab4cc0dbd9dd9eec93b7f778dca3"
+    },
+    "map_id": "procthor_scene03000_structure_v1",
+    "counts": {
+      "stereo": 570,
+      "joint_states": 25263,
+      "imu": 6011
+    },
+    "first_timestamp_ns": 12282000000,
+    "last_timestamp_ns": 72406000000,
+    "recorded_duration_s": 60.124,
+    "max_gap_s": {
+      "imu": 0.02,
+      "joint_states": 0.052,
+      "stereo": 0.3
+    },
+    "GT_read": false,
+    "source": "recorded Gazebo sensors; not live physics or physical-robot data"
+  },
+  "replay_rate": 1.0,
+  "start_models_before_replay": true,
+  "model_rpc_enabled": true,
+  "spvloc_corrections_allowed": true,
+  "domain_id": 74,
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "-m",
+      "research3d.robot_sim.run_localization",
+      "--map-manifest",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture/map_manifest.json",
+      "--output",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_normal_spv_experimental/localization",
+      "--domain-id",
+      "74",
+      "--duration-wall-s",
+      "210.124",
+      "--ace-command-json",
+      "[\"/data/fyp_3d/envs/ace/bin/python\", \"-m\", \"research3d.robot_sim.ace_worker\", \"--binding\", \"/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_train/model_binding.json\", \"--online-root\", \"/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_normal_spv_experimental/localization/queries\", \"--source\", \"/data/fyp_3d/sources/ace\"]",
+      "--spvloc-command-json",
+      "[\"/usr/bin/env\", \"LD_LIBRARY_PATH=/data/fyp_3d/sources/spvloc_redner/redner-dependencies/embree/lib-linux:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib\", \"PYOPENGL_PLATFORM=egl\", \"MPLCONFIGDIR=/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_normal_spv_experimental/matplotlib\", \"/data/fyp_3d/envs/semantic_loc/bin/python\", \"-m\", \"research3d.robot_sim.spvloc_worker\", \"--references\", \"/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/spvloc_openroof\", \"--online-root\", \"/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_normal_spv_experimental/localization/queries\", \"--dataset-root\", \"/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture\", \"--checkpoint\", \"/data/fyp_3d/runs/semantic_localization_20261103/spvloc_100_20_20_float_targets_v2/checkpoints/epochepoch=18-stepstep=6517.ckpt\"]",
+      "--allow-spvloc-corrections"
+    ],
+    [
+      "/usr/bin/python3",
+      "-m",
+      "research3d.robot_sim.replay_sensors",
+      "--dataset",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_normal/capture",
+      "--receipt",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_normal_spv_experimental/replay_receipt.json",
+      "--domain-id",
+      "74",
+      "--rate",
+      "1",
+      "--start-delay-s",
+      "3"
+    ]
+  ],
+  "published_GT": false,
+  "scope": "same recorded sensors with measured online model latency; no live physics/control and no new benchmark capture"
+}

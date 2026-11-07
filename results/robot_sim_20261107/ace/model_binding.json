@@ -1,0 +1,50 @@
+{
+  "schema": "robot_ace_model_v1",
+  "status": "TRAINED_NOT_LOCALIZATION_VALIDATED",
+  "map_id": "procthor_scene03000_structure_v1",
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "dataset_root": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset",
+  "camera": {
+    "width": 640,
+    "height": 480,
+    "K": [
+      [
+        320.0,
+        0.0,
+        320.0
+      ],
+      [
+        0.0,
+        320.00000953674316,
+        240.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "head_path": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_train/heads_local.pt",
+  "head_sha256": "0358d0b6a80d22e740c9f96a5d2bf9ab64d58a36ecf85111a235918cd7629edf",
+  "encoder_sha256": "c69ca934d82056c9f2e9be9582d85841bd53355ac04a007c11618b1760c00a8c",
+  "trainer_sha256": "1b9540cb9b82ed09a3813f8b3344e8ec5d70faef67ad0b887ec8fc040eb82292",
+  "export_audit_sha256": "d4eccb815f262f871f1c1778919138d2acf4f1caf48eed2d2c3d87f657e1e67a",
+  "reference_manifest_sha256": "f39dd2e316e0a43ed42d291e2b56d0d828c01e912cccb7d128003ab4bbba9b9f",
+  "training_resources": {
+    "wall_seconds": 345.3627386830012,
+    "torch_peak_allocated_MiB": 3443.3671875,
+    "torch_peak_reserved_MiB": 3468.0,
+    "process_maxrss_MiB": 1640.8203125,
+    "buffer_features": 1000000,
+    "buffer_storage": "cuda",
+    "temporary_feature_cache": null,
+    "epochs": 16,
+    "batch_size": 5120,
+    "base_seed": 2089,
+    "workers": 2,
+    "scene": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_scene",
+    "scope": "Official ACE trainer/encoder, original split. Buffer size recorded explicitly. Storage offload and optimizer-counter compatibility are hardware/runtime adaptations, not a changed model/loss/batch/schedule."
+  },
+  "covariance_policy": "DSAC hard inlier count is not a calibrated pose covariance"
+}

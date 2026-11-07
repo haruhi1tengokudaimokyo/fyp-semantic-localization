@@ -1,0 +1,14 @@
+{
+  "status": "WORKERS_READY",
+  "receipts": {
+    "ace": {
+      "event": "ready",
+      "protocol": "robot_ace_rpc_v1",
+      "map_id": "procthor_scene03000_structure_v1",
+      "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+      "head_sha256": "0358d0b6a80d22e740c9f96a5d2bf9ab64d58a36ecf85111a235918cd7629edf"
+    }
+  },
+  "local_only": false,
+  "map_id": "procthor_scene03000_structure_v1"
+}

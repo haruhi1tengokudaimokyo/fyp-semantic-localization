@@ -1,0 +1,29 @@
+[
+  {
+    "query_id": "reference/000000",
+    "same_timestamp": true,
+    "different_images": true,
+    "ratio_matches": 80,
+    "epipolar_inliers": 76,
+    "median_vertical_error_px": 0.02362823486328125,
+    "median_disparity_px": 4.3075714111328125
+  },
+  {
+    "query_id": "reference/000001",
+    "same_timestamp": true,
+    "different_images": true,
+    "ratio_matches": 139,
+    "epipolar_inliers": 137,
+    "median_vertical_error_px": 0.014617919921875,
+    "median_disparity_px": 4.71588134765625
+  },
+  {
+    "query_id": "reference/000002",
+    "same_timestamp": true,
+    "different_images": true,
+    "ratio_matches": 125,
+    "epipolar_inliers": 122,
+    "median_vertical_error_px": 0.019817352294921875,
+    "median_disparity_px": 7.7689056396484375
+  }
+]

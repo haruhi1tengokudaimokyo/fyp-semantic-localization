@@ -1,0 +1,36 @@
+# Official robot_localization EKF: raw wheel rates, nonholonomic vy=0, IMU gyro.
+# Never fuse Gazebo world-pose odometry, ACE pose, or a second already-fused odom.
+ekf_filter_node:
+  ros__parameters:
+    use_sim_time: true
+    frequency: 30.0
+    sensor_timeout: 0.2
+    two_d_mode: true
+    publish_tf: true
+    publish_acceleration: false
+    print_diagnostics: true
+    reset_on_time_jump: true
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+    transform_time_offset: 0.0
+    transform_timeout: 0.0
+    odom0: /wheel/odometry
+    # The planar differential-drive constraint vy=0 is a robot model constraint,
+    # not a second measured odometry stream. Its finite uncertainty allows slip.
+    # x,y,z,roll,pitch,yaw,vx,vy,vz,vroll,vpitch,vyaw,ax,ay,az
+    odom0_config: [false, false, false, false, false, false,
+                   true, true, false, false, false, true,
+                   false, false, false]
+    odom0_queue_size: 20
+    odom0_differential: false
+    odom0_relative: false
+    imu0: /imu/data
+    imu0_config: [false, false, false, false, false, false,
+                  false, false, false, false, false, true,
+                  false, false, false]
+    imu0_queue_size: 50
+    imu0_differential: false
+    imu0_relative: false
+    imu0_remove_gravitational_acceleration: false

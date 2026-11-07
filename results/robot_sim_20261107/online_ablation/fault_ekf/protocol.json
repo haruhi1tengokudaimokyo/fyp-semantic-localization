@@ -1,0 +1,64 @@
+{
+  "mode": "ekf",
+  "recording": {
+    "input_sha256": {
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/map_manifest.json": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/frames.jsonl": "aaefae34d375114b4805311f5cd7338d52d0e2c42eca41b9bd91302c0f904508",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/sensors/joint_states.jsonl": "6c847e5597f903112284bc5b0e88c4bb8cfd2d6c5ea64f2035d62cf8204c0056",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/sensors/imu.jsonl": "760e39a6988740a5260a9b55c19268b8f249d6ecfdb863daf86538c95bde58af"
+    },
+    "map_id": "procthor_scene03000_structure_v1",
+    "counts": {
+      "stereo": 533,
+      "joint_states": 26815,
+      "imu": 5988
+    },
+    "first_timestamp_ns": 9432000000,
+    "last_timestamp_ns": 69708000000,
+    "recorded_duration_s": 60.276,
+    "max_gap_s": {
+      "imu": 0.19,
+      "joint_states": 0.218,
+      "stereo": 0.5
+    },
+    "GT_read": false,
+    "source": "recorded Gazebo sensors; not live physics or physical-robot data"
+  },
+  "replay_rate": 1.0,
+  "start_models_before_replay": true,
+  "model_rpc_enabled": false,
+  "spvloc_corrections_allowed": false,
+  "domain_id": 75,
+  "commands": [
+    [
+      "/usr/bin/python3",
+      "-m",
+      "research3d.robot_sim.run_localization",
+      "--map-manifest",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/map_manifest.json",
+      "--output",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/localization",
+      "--domain-id",
+      "75",
+      "--duration-wall-s",
+      "210.276"
+    ],
+    [
+      "/usr/bin/python3",
+      "-m",
+      "research3d.robot_sim.replay_sensors",
+      "--dataset",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture",
+      "--receipt",
+      "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ablation_fault_ekf/replay_receipt.json",
+      "--domain-id",
+      "75",
+      "--rate",
+      "1",
+      "--start-delay-s",
+      "3"
+    ]
+  ],
+  "published_GT": false,
+  "scope": "same recorded sensors with measured online model latency; no live physics/control and no new benchmark capture"
+}

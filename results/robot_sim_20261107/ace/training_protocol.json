@@ -1,0 +1,67 @@
+{
+  "audit": {
+    "schema": "robot_ace_export_v1",
+    "status": "REFERENCE_EXPORT_VERIFIED",
+    "map_id": "procthor_scene03000_structure_v1",
+    "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+    "map_manifest_sha256": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+    "dataset_root": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset",
+    "reference_manifest_sha256": "f39dd2e316e0a43ed42d291e2b56d0d828c01e912cccb7d128003ab4bbba9b9f",
+    "query_online_manifest_sha256": "1f8610edfdccc48830c917578940f15a52077b8462b88511ce0ec5972a580bdd",
+    "reference_count": 192,
+    "query_count": 561,
+    "unique_reference_images": 192,
+    "unique_query_images": 495,
+    "reference_query_hash_overlap": 0,
+    "camera": {
+      "width": 640,
+      "height": 480,
+      "K": [
+        [
+          320.0,
+          0.0,
+          320.0
+        ],
+        [
+          0.0,
+          320.00000953674316,
+          240.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "coordinate_convention": "camera optical (right/down/forward) to metric world/map, c2w SE3",
+    "query_gt_read": false,
+    "reference_gt_role": "offline mapping/training only",
+    "protocol": {
+      "buffer_features": 1000000,
+      "epochs": 16,
+      "batch_size": 5120,
+      "seed": 2089,
+      "scope": "new Gazebo map engineering pilot, not official 8M benchmark"
+    },
+    "full_audit_path": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_scene/export_audit.json",
+    "full_audit_sha256": "d4eccb815f262f871f1c1778919138d2acf4f1caf48eed2d2c3d87f657e1e67a"
+  },
+  "command": [
+    "/data/fyp_3d/envs/ace/bin/python",
+    "-m",
+    "research3d.scripts.train_ace_local",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_scene",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_train",
+    "--ace",
+    "/data/fyp_3d/sources/ace",
+    "--seed",
+    "2089",
+    "--buffer-features",
+    "1000000",
+    "--buffer-storage",
+    "cuda"
+  ],
+  "status": "STARTING",
+  "full_protocol_sha256": "6d97b8d0088dba3dcd2ecd011ebea7b1118347b35b041eef51d5ae617ff10cf2"
+}

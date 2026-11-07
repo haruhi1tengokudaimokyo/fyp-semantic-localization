@@ -1,0 +1,64 @@
+{
+  "status": "EVALUATED_FIXED_MAP_GAZEBO_DEVELOPMENT_PILOT",
+  "evaluated": 561,
+  "map_id": "procthor_scene03000_structure_v1",
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "alignment": "none; original fixed map camera optical frame",
+  "ground_truth_usage": "offline only; exact query_id and timestamp_ns association",
+  "test_tuning": false,
+  "top1": {
+    "evaluated": 561,
+    "valid": 561,
+    "missing_or_invalid": 0,
+    "coverage": 1.0,
+    "translation_rmse_m": 7.849359224250138,
+    "translation_median_m": 7.974330278128508,
+    "translation_p95_m": 9.509842768190696,
+    "rotation_median_deg": 84.17629841617973,
+    "rotation_p95_deg": 179.05808215390346,
+    "success_count_5cm5deg": 0,
+    "success_5cm5deg": 0.0,
+    "success_count_25cm10deg": 0,
+    "success_25cm10deg": 0.0,
+    "success_count_1m30deg": 0,
+    "success_1m30deg": 0.0
+  },
+  "refined_top1": {
+    "evaluated": 561,
+    "valid": 561,
+    "missing_or_invalid": 0,
+    "coverage": 1.0,
+    "translation_rmse_m": 7.994760720668205,
+    "translation_median_m": 8.309123076094947,
+    "translation_p95_m": 9.810952606368083,
+    "rotation_median_deg": 87.03090029800188,
+    "rotation_p95_deg": 178.64417838900042,
+    "success_count_5cm5deg": 0,
+    "success_5cm5deg": 0.0,
+    "success_count_25cm10deg": 0,
+    "success_25cm10deg": 0.0,
+    "success_count_1m30deg": 0,
+    "success_1m30deg": 0.0
+  },
+  "top3_oracle_candidate_recall": {
+    "5cm5deg": 0.0,
+    "25cm10deg": 0.0,
+    "1m30deg": 0.0
+  },
+  "top3_scope": "Any one unrefined candidate satisfying BOTH thresholds. Requires oracle selection; not actual localization success.",
+  "failure_counts": {
+    "top1": {},
+    "refined_top1": {}
+  },
+  "failure_counts_scope": "Inference/data/pose-validity failures only; geometrically wrong finite predictions are counted by success thresholds and per-frame success flags.",
+  "latency_s": {
+    "p50": 0.338237215000845,
+    "p95": 0.34821019700029865
+  },
+  "generalization_scope": "scene03000 was a checkpoint-selection validation building; cross-renderer development only, not unseen-building evidence",
+  "input_sha256": {
+    "frames": "1f8610edfdccc48830c917578940f15a52077b8462b88511ce0ec5972a580bdd",
+    "offline_gt": "b360bb4364c473748b07887cf3ebf59e9a6eefd4eaf2d83792799a7f3bbd467c",
+    "predictions": "23a89f755c40206d6bf68853253d470b9ac425dd0563672cfb0f4e2b3bef4aeb"
+  }
+}

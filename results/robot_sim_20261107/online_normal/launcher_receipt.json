@@ -1,0 +1,27 @@
+{
+  "child_pids": [
+    168730,
+    168731,
+    168772,
+    168986
+  ],
+  "child_names": [
+    "gazebo",
+    "bridge",
+    "localization_launcher",
+    "collector"
+  ],
+  "exit_codes": [
+    0,
+    130,
+    0,
+    0
+  ],
+  "domain_id": 72,
+  "GZ_PARTITION": "fyp_demo_168720",
+  "elapsed_wall_s": 77.51948512600211,
+  "capture_wall_s": 61.23054376899745,
+  "requested_simulation_duration_s": 60.0,
+  "interrupted": false,
+  "cleanup": "only process groups created by this launcher"
+}

@@ -1,0 +1,15 @@
+{
+  "matching_robot_sim_processes_after_bounded_runs": [],
+  "automatic_monitor_created": false,
+  "prior_experiments_stopped": false,
+  "disk": {
+    "data": {
+      "free_GiB": 115.60126876831055,
+      "total_GiB": 316.7991943359375
+    },
+    "workspace": {
+      "free_GiB": 11.965274810791016,
+      "total_GiB": 85.1629867553711
+    }
+  }
+}

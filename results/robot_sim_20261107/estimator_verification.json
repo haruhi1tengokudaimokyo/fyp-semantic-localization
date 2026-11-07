@@ -1,0 +1,67 @@
+{
+  "type": "controlled_raw_sensor_ROS_integration_not_benchmark",
+  "ROS_DOMAIN_ID": 154,
+  "filtered_messages": 992,
+  "rate_hz": 30.012113870381583,
+  "final_x_m": 6.607999999999715,
+  "velocity_m_s": 0.2,
+  "final_pose_covariance_trace": 34.11787525244536,
+  "final_lateral_velocity_variance": 0.0009155408237493305,
+  "fake_ace_observations": 0,
+  "GT_to_estimator": false,
+  "core_contract_tests": {
+    "passed": 28,
+    "file": "tests/test_robot_localization.py"
+  },
+  "spvloc_adapter_tests": {
+    "passed": 7,
+    "file": "tests/test_robot_spvloc.py"
+  },
+  "fix": "Add finite-uncertainty differential-drive lateral velocity constraint; no GT tuning or relaxed acceptance threshold.",
+  "online_spvloc_runtime_verification": {
+    "status": "PASSED_REAL_OFFICIAL_SPVLOC_RPC",
+    "actual_rgb_queries": 1,
+    "top_k": 3,
+    "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+    "checkpoint_sha256": "daf323ccc1abc18dc7dd2a95d5f3e6be16183d60eda7f2498c9a593e2e5b54e3",
+    "query_gt_passed": false,
+    "fake_prediction_used": false,
+    "latency_s": 0.5319195560005028,
+    "max_pose_matrix_difference_vs_offline": 0.0,
+    "scope": "RPC/coordinate parity; not additional independent localization benchmark"
+  },
+  "odom_origin_invariant_gate_test": true,
+  "offline_spvloc_scoring_tests": {
+    "passed": 3,
+    "file": "tests/test_robot_spvloc_evaluation.py"
+  },
+  "spvloc_query_count": 561,
+  "spvloc_map": "actual open-roof Gazebo geometry; ceiling planes removed with topology reindexing",
+  "spvloc_accuracy": "0/561 Top-1, refined Top-1, and Top-3 oracle candidate recall at 1m/30deg; interface acceptance does not imply localization success",
+  "spvloc_deployment_policy": {
+    "default": "shadow_unqualified_model",
+    "override": "--allow-spvloc-corrections",
+    "real_inference_retained": true,
+    "default_updates_map_odom": false,
+    "gates_changed": false,
+    "network_changed": false,
+    "ace_three_confirmation_with_interleaved_spv_shadow_test": "passed"
+  },
+  "latest_controlled_ros_run": "tmp/robot_ros_verification_ready_fairness/test_real_ekf_raw_encoder_and_0/ros/controlled_ros_verification.json",
+  "rpc_protocol_tests": {
+    "passed": 3,
+    "file": "tests/test_robot_scheduler_rpc.py",
+    "uses_real_local_child_process": true,
+    "fake_localization_benchmark": false
+  },
+  "latest_cpu_checks": {
+    "passed": 44,
+    "coverage": "localization, scheduler, RPC process handshake, SPV adapter/scoring and raw sensor replay contracts"
+  },
+  "execution_fairness": "Actual execution alternates ACE/SPV, never overwritten-submission parity; 25 overwritten submissions tested.",
+  "timestamp_audit": "Image header capture timestamp retained. Actual RPC return ROS time and monotonic wall durations recorded. Candidate callback ROS time enforces conservative age and historical odometry gates.",
+  "replay_ablation_entrypoint": "python3 -m research3d.robot_sim.replay_ablation",
+  "recorded_sensor_ablation_status": "COMPLETED: normal EKF-only, normal ACE, normal ACE+SPV experimental, fault ACE; all 1x, exact frozen capture hashes and model hashes audited.",
+  "recorded_sensor_ablation_summary": "results/robot_sim_20261107/online_ablation/summary.json",
+  "recorded_sensor_ablation_scope": "Single run per condition; no proof of semantic improvement. Original 561 frame capture still lacks raw logs, and was not used for EKF replay."
+}

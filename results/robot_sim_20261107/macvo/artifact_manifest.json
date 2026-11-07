@@ -1,0 +1,41 @@
+{
+  "scope": "compact evidence only; no model weights or full query predictions",
+  "files": [
+    {
+      "filename": "metrics.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/metrics.json",
+      "sha256": "fe36945e07e6dbc008fb1da15ed6366d30e9b3ae3399fbf1255c650a43dbeb81",
+      "bytes": 1789
+    },
+    {
+      "filename": "summary.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/summary.json",
+      "sha256": "907ed5c0349cb010e08ec2a4733381a3639b3a121ca309cfa5228ee902b8c0f5",
+      "bytes": 485
+    },
+    {
+      "filename": "protocol.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/protocol.json",
+      "sha256": "482ad533e6ead3a076b4648e09ed6348fcfa9b10690553df201e8c2bae235cf1",
+      "bytes": 5016
+    },
+    {
+      "filename": "checkpoint_audit.json",
+      "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/checkpoint_audit.json",
+      "sha256": "0651a489af8a9327bb2c30b4db3065e170fb1b4ada5b04960989aadfb17c792e",
+      "bytes": 486
+    }
+  ],
+  "generated_files": [
+    {
+      "filename": "README_zh.md",
+      "sha256": "98e6e21fc6134fa9afa8b673155679c8768dededf546c5fec311b4233a43e6fd",
+      "bytes": 2698
+    },
+    {
+      "filename": "raw_pose_provenance.json",
+      "sha256": "d8602da7b9475ef5571d14ef14db2e42de2c38d3b13dd36548773acdad6a1cc3",
+      "bytes": 906
+    }
+  ]
+}

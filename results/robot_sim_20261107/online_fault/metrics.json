@@ -1,0 +1,165 @@
+{
+  "status": "EVALUATED_GAZEBO_DEVELOPMENT_PILOT_NOT_REAL_ROBOT_VALIDATION",
+  "map_id": "procthor_scene03000_structure_v1",
+  "samples": 533,
+  "duration_s": 59.900000000000006,
+  "path_length_m": 7.054083398267158,
+  "path_statistics": {
+    "sampled_continuous_path_length_m": 7.054083398267158,
+    "relocation_jump_distance_m": 2.316925402688008,
+    "total_sampled_displacement_including_relocations_m": 9.371008800955167,
+    "detected_jumps": [
+      {
+        "timestamp_s": 41.1,
+        "translation_m": 2.316925402688008,
+        "rotation_deg": 19.515827735143603
+      }
+    ],
+    "discontinuity_rule": "adjacent GT displacement >1m or rotation >45deg; jumps excluded from travelled path"
+  },
+  "absolute": {
+    "valid": 390,
+    "evaluated": 533,
+    "coverage": 0.7317073170731707,
+    "translation_rmse_m": 0.03997858135293132,
+    "translation_median_m": 0.025176702308129795,
+    "translation_p95_m": 0.07528817486586825,
+    "rotation_median_deg": 0.5992370214503344,
+    "success_5cm5deg": 0.6022514071294559,
+    "success_25cm10deg": 0.7317073170731707,
+    "success_1m30deg": 0.7317073170731707
+  },
+  "local_initial_origin_only": {
+    "valid": 521,
+    "evaluated": 533,
+    "coverage": 0.9774859287054409,
+    "translation_rmse_m": 1.444886803569894,
+    "translation_median_m": 0.043109720713459844,
+    "translation_p95_m": 2.250669917335619,
+    "rotation_median_deg": 2.792980963143,
+    "success_5cm5deg": 0.5121951219512195,
+    "success_25cm10deg": 0.5121951219512195,
+    "success_1m30deg": 0.5121951219512195
+  },
+  "absolute_alignment": "none",
+  "local_alignment": "one first-pose origin; offline diagnostic only",
+  "first_global_output_after_route_start_s": 3.9339999999999993,
+  "accepted_correct": 15,
+  "accepted_wrong_1m30deg": 0,
+  "accepted_outside_evaluation": 3,
+  "harmful_corrections": 0,
+  "decision_reasons": {
+    "awaiting_temporal_confirmation": 4,
+    "spvloc_shadow_unqualified_model": 5,
+    "confirmed_global_recovery": 2,
+    "tracking_correction": 16,
+    "implausible_planar_robot_pose": 1,
+    "insufficient_inliers": 1
+  },
+  "inference_latency_ms": {
+    "p50": 167.4046529988118,
+    "p95": 270.9839186507451
+  },
+  "measured_runtime_by_method": {
+    "official_ace_dsacstar": {
+      "calls_returned": 24,
+      "accepted": 18,
+      "outcomes": {
+        "awaiting_temporal_confirmation": 4,
+        "confirmed_global_recovery": 2,
+        "tracking_correction": 16,
+        "implausible_planar_robot_pose": 1,
+        "insufficient_inliers": 1
+      },
+      "rpc_roundtrip_wall_s": {
+        "count": 24,
+        "p50": 0.16871143049866077,
+        "p95": 0.2733060851498521,
+        "maximum": 1.378315437999845
+      },
+      "pending_wait_wall_s": {
+        "count": 24,
+        "p50": 0.0004207759993732907,
+        "p95": 0.0017488775982201308,
+        "maximum": 0.03138911700079916
+      },
+      "capture_to_decision_simulation_s": {
+        "count": 24,
+        "p50": 0.20000000000000284,
+        "p95": 0.2713999999999988,
+        "maximum": 1.4000000000000004
+      }
+    },
+    "official_spvloc": {
+      "calls_returned": 5,
+      "accepted": 0,
+      "outcomes": {
+        "spvloc_shadow_unqualified_model": 5
+      },
+      "rpc_roundtrip_wall_s": {
+        "count": 5,
+        "p50": 0.3497151030023815,
+        "p95": 0.6166163464018609,
+        "maximum": 0.6770212440023897
+      },
+      "pending_wait_wall_s": {
+        "count": 5,
+        "p50": 0.0005685489995812532,
+        "p95": 0.3062644425997859,
+        "maximum": 0.3826794050000899
+      },
+      "capture_to_decision_simulation_s": {
+        "count": 5,
+        "p50": 0.3999999999999986,
+        "p95": 0.9347999999999997,
+        "maximum": 1.0679999999999996
+      }
+    }
+  },
+  "gt_usage": "offline evaluation only; reference GT restricted to map training",
+  "output_age_s": {
+    "p50": 0.03200000000000003,
+    "p95": 0.03200000000000358
+  },
+  "recovery_events": [
+    {
+      "event": "kidnap",
+      "requested_timestamp_s": 40.8,
+      "actual_jump_timestamp_s": 41.1,
+      "horizon_timestamp_s": 69.7,
+      "event_observed_in_gt": true,
+      "success": true,
+      "confirmed_output_timestamp_s": 49.834,
+      "first_correct_output_timestamp_s": 49.634,
+      "recovery_time_s": 8.734000000000002,
+      "first_correct_delay_s": 8.533999999999999,
+      "criterion": "three distinct correct outputs on consecutive evaluated frames spanning >=0.2s, <=1m/30deg; detection time is third confirming output availability",
+      "censored": false
+    }
+  ],
+  "recovery_experiment": "measured simulator kidnapping",
+  "test_tuning": false,
+  "camera_fault": {
+    "protocol": {
+      "origin_timestamp_s": 9.4,
+      "interval_s": [
+        15.0,
+        35.0
+      ],
+      "counts": {
+        "left": 562,
+        "right": 603
+      },
+      "blackouts": {
+        "left": 188,
+        "right": 199
+      },
+      "scope": "declared image-interface camera failure; not physical or natural occlusion",
+      "GT_read": false
+    },
+    "evaluated_frames": 183,
+    "local_coverage_during_blackout": 0.9836065573770492,
+    "global_coverage_during_blackout": 0.726775956284153,
+    "scope": "synthetic image blackout, not natural occlusion"
+  }
+}

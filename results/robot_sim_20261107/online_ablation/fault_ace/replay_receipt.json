@@ -1,0 +1,42 @@
+{
+  "input_sha256": {
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/map_manifest.json": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/frames.jsonl": "aaefae34d375114b4805311f5cd7338d52d0e2c42eca41b9bd91302c0f904508",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/sensors/joint_states.jsonl": "6c847e5597f903112284bc5b0e88c4bb8cfd2d6c5ea64f2035d62cf8204c0056",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/sensors/imu.jsonl": "760e39a6988740a5260a9b55c19268b8f249d6ecfdb863daf86538c95bde58af"
+  },
+  "map_id": "procthor_scene03000_structure_v1",
+  "counts": {
+    "stereo": 533,
+    "joint_states": 26815,
+    "imu": 5988
+  },
+  "first_timestamp_ns": 9432000000,
+  "last_timestamp_ns": 69708000000,
+  "recorded_duration_s": 60.276,
+  "max_gap_s": {
+    "imu": 0.19,
+    "joint_states": 0.218,
+    "stereo": 0.5
+  },
+  "GT_read": false,
+  "source": "recorded Gazebo sensors; not live physics or physical-robot data",
+  "status": "RECORDED_SENSOR_REPLAY_COMPLETE",
+  "published": {
+    "joint_states": 26815,
+    "imu": 5988,
+    "stereo": 533
+  },
+  "domain_id": 74,
+  "requested_rate": 1.0,
+  "elapsed_wall_s": 60.28168241300227,
+  "scheduling_lag_s": {
+    "p50": 0.0001883295008155983,
+    "p95": 0.0034626140013642726,
+    "maximum": 0.07571869500316097
+  },
+  "published_GT": false,
+  "published_actuator_commands": false,
+  "live_Gazebo_execution": false,
+  "online_localization_success": "requires separate estimator output evaluation"
+}

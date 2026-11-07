@@ -162,3 +162,26 @@ def test_recovery_support_cannot_accumulate_beyond_temporal_window():
     obs = [observation(i, [10 + i]) for i in [0, 2, 4]]
     rows, _ = run_replay(m, obs, cfg(confirmation_frames=3, hypothesis_ttl_s=2))
     assert not any(r["valid"] for r in rows)
+
+
+def test_recovery_decisions_invariant_to_large_odometry_origin_shift():
+    from scipy.spatial.transform import Rotation
+    motions=[motion(i) for i in range(4)]
+    observations=[observation(i,[10+i],source="spvloc") for i in range(4)]
+    for i,row in enumerate(observations):
+        candidate=np.asarray(row['candidates'][0]['T_map_camera'])
+        candidate[:3,:3]=Rotation.from_euler('z',i*.5,degrees=True).as_matrix()
+        row['candidates'][0]['T_map_camera']=candidate.tolist()
+    shifted=copy.deepcopy(motions)
+    gauge=np.eye(4);gauge[:3,3]=[1000.,-700.,80.]
+    gauge[:3,:3]=Rotation.from_euler('zyx',[40.,10.,-15.],degrees=True).as_matrix()
+    for row in shifted:
+        row['T_odom_camera']=(gauge@np.asarray(row['T_odom_camera'])).tolist()
+    normal,audit=run_replay(motions,observations,cfg())
+    other,shifted_audit=run_replay(shifted,observations,cfg())
+    assert normal[2]['valid']
+    assert [r['status'] for r in normal]==[r['status'] for r in other]
+    assert audit['decisions']==shifted_audit['decisions']
+    for a,b in zip(normal,other):
+        if a['valid']:
+            np.testing.assert_allclose(a['T_map_camera'],b['T_map_camera'],atol=1e-10)

@@ -1,0 +1,14 @@
+{
+  "child_pids": [
+    171623,
+    171789
+  ],
+  "exit_codes": {
+    "estimator_launcher": 0,
+    "sensor_replay": 0
+  },
+  "error": null,
+  "interrupted": false,
+  "elapsed_wall_s": 68.49639547200059,
+  "cleanup": "only child process groups launched by this invocation"
+}

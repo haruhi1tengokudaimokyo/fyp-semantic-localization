@@ -1,0 +1,375 @@
+{
+  "status": "FOUR_RECORDED_SENSOR_ABLATIONS_COMPLETED",
+  "single_run_each": true,
+  "records": [
+    {
+      "run": "normal_ekf",
+      "samples": 570,
+      "absolute": {
+        "valid": 0,
+        "evaluated": 570,
+        "coverage": 0.0,
+        "translation_rmse_m": null,
+        "translation_median_m": null,
+        "rotation_median_deg": null,
+        "success_1m30deg": 0.0
+      },
+      "local_initial_origin_only": {
+        "valid": 567,
+        "evaluated": 570,
+        "coverage": 0.9947368421052631,
+        "translation_rmse_m": 0.0658170214198983,
+        "translation_median_m": 0.034230417997720405,
+        "translation_p95_m": 0.1174371538159738,
+        "rotation_median_deg": 2.7186648639743387,
+        "success_5cm5deg": 0.5789473684210527,
+        "success_25cm10deg": 0.9947368421052631,
+        "success_1m30deg": 0.9947368421052631
+      },
+      "first_global_output_after_route_start_s": null,
+      "accepted_correct": 0,
+      "accepted_wrong_1m30deg": 0,
+      "harmful_corrections": 0,
+      "recovery_events": [],
+      "measured_runtime_by_method": {},
+      "published_counts": {
+        "joint_states": 25263,
+        "imu": 6011,
+        "stereo": 570
+      },
+      "estimator_received_counts": {
+        "joint_messages": 25249,
+        "wheel_messages": 25249,
+        "imu_messages": 6011,
+        "local_poses": 1803,
+        "camera_messages": 559,
+        "queries_submitted": 0,
+        "candidate_messages": 0,
+        "invalid_input": 0
+      },
+      "replay_elapsed_wall_s": 60.143112817000656,
+      "replay_scheduling_lag_s": {
+        "p50": 0.00015613399955327623,
+        "p95": 0.004209588798403273,
+        "maximum": 0.03353219099881244
+      },
+      "launcher_exit_codes": {
+        "estimator_launcher": 0,
+        "sensor_replay": 0
+      }
+    },
+    {
+      "run": "normal_ace",
+      "samples": 570,
+      "absolute": {
+        "valid": 545,
+        "evaluated": 570,
+        "coverage": 0.956140350877193,
+        "translation_rmse_m": 0.174711954910972,
+        "translation_median_m": 0.046573124016160684,
+        "translation_p95_m": 0.1501649005903652,
+        "rotation_median_deg": 0.5010643291200344,
+        "success_5cm5deg": 0.5157894736842106,
+        "success_25cm10deg": 0.9105263157894737,
+        "success_1m30deg": 0.956140350877193
+      },
+      "local_initial_origin_only": {
+        "valid": 567,
+        "evaluated": 570,
+        "coverage": 0.9947368421052631,
+        "translation_rmse_m": 0.06581540976390556,
+        "translation_median_m": 0.034227598563007666,
+        "translation_p95_m": 0.1174394696045487,
+        "rotation_median_deg": 2.718720900376187,
+        "success_5cm5deg": 0.5789473684210527,
+        "success_25cm10deg": 0.9947368421052631,
+        "success_1m30deg": 0.9947368421052631
+      },
+      "first_global_output_after_route_start_s": 2.734,
+      "accepted_correct": 29,
+      "accepted_wrong_1m30deg": 0,
+      "harmful_corrections": 2,
+      "recovery_events": [],
+      "measured_runtime_by_method": {
+        "official_ace_dsacstar": {
+          "calls_returned": 38,
+          "accepted": 29,
+          "outcomes": {
+            "awaiting_temporal_confirmation": 2,
+            "confirmed_global_recovery": 1,
+            "tracking_correction": 28,
+            "insufficient_inliers": 5,
+            "implausible_planar_robot_pose": 2
+          },
+          "rpc_roundtrip_wall_s": {
+            "count": 38,
+            "p50": 0.19351625650051574,
+            "p95": 0.23751424954789394,
+            "maximum": 1.3667534779997368
+          },
+          "pending_wait_wall_s": {
+            "count": 38,
+            "p50": 0.0005422399990493432,
+            "p95": 0.0023316228003750434,
+            "maximum": 0.36955195399787044
+          },
+          "capture_to_decision_simulation_s": {
+            "count": 38,
+            "p50": 0.23400000000000176,
+            "p95": 0.34019999999999717,
+            "maximum": 1.3999999999999986
+          }
+        }
+      },
+      "published_counts": {
+        "joint_states": 25263,
+        "imu": 6011,
+        "stereo": 570
+      },
+      "estimator_received_counts": {
+        "joint_messages": 25245,
+        "wheel_messages": 25245,
+        "imu_messages": 6011,
+        "local_poses": 1803,
+        "camera_messages": 512,
+        "queries_submitted": 38,
+        "candidate_messages": 38,
+        "invalid_input": 0
+      },
+      "replay_elapsed_wall_s": 60.13261196399981,
+      "replay_scheduling_lag_s": {
+        "p50": 0.00017673349975666497,
+        "p95": 0.00425355575061985,
+        "maximum": 0.027109382001071936
+      },
+      "launcher_exit_codes": {
+        "estimator_launcher": 0,
+        "sensor_replay": 0
+      }
+    },
+    {
+      "run": "normal_spv_experimental",
+      "samples": 570,
+      "absolute": {
+        "valid": 528,
+        "evaluated": 570,
+        "coverage": 0.9263157894736842,
+        "translation_rmse_m": 0.17287151993032837,
+        "translation_median_m": 0.053486440507302876,
+        "translation_p95_m": 0.637728038305569,
+        "rotation_median_deg": 0.6290956597213531,
+        "success_5cm5deg": 0.45087719298245615,
+        "success_25cm10deg": 0.8543859649122807,
+        "success_1m30deg": 0.9263157894736842
+      },
+      "local_initial_origin_only": {
+        "valid": 568,
+        "evaluated": 570,
+        "coverage": 0.9964912280701754,
+        "translation_rmse_m": 0.06570329019330487,
+        "translation_median_m": 0.03424178325255,
+        "translation_p95_m": 0.11722725944337312,
+        "rotation_median_deg": 2.6992327966793583,
+        "success_5cm5deg": 0.5807017543859649,
+        "success_25cm10deg": 0.9964912280701754,
+        "success_1m30deg": 0.9964912280701754
+      },
+      "first_global_output_after_route_start_s": 4.634000000000002,
+      "accepted_correct": 29,
+      "accepted_wrong_1m30deg": 0,
+      "harmful_corrections": 2,
+      "recovery_events": [],
+      "measured_runtime_by_method": {
+        "official_ace_dsacstar": {
+          "calls_returned": 36,
+          "accepted": 29,
+          "outcomes": {
+            "awaiting_temporal_confirmation": 2,
+            "confirmed_global_recovery": 1,
+            "tracking_correction": 28,
+            "insufficient_inliers": 4,
+            "implausible_planar_robot_pose": 1
+          },
+          "rpc_roundtrip_wall_s": {
+            "count": 36,
+            "p50": 0.19037761350045912,
+            "p95": 0.3076259212493824,
+            "maximum": 1.3018270729990036
+          },
+          "pending_wait_wall_s": {
+            "count": 36,
+            "p50": 0.00039558349999424536,
+            "p95": 0.00227842949971091,
+            "maximum": 0.0027131810020364355
+          },
+          "capture_to_decision_simulation_s": {
+            "count": 36,
+            "p50": 0.23400000000000176,
+            "p95": 0.3420000000000041,
+            "maximum": 1.3340000000000014
+          }
+        },
+        "official_spvloc": {
+          "calls_returned": 2,
+          "accepted": 0,
+          "outcomes": {
+            "awaiting_temporal_confirmation": 2
+          },
+          "rpc_roundtrip_wall_s": {
+            "count": 2,
+            "p50": 0.4907551995001995,
+            "p95": 0.6240051751499777,
+            "maximum": 0.6388107279999531
+          },
+          "pending_wait_wall_s": {
+            "count": 2,
+            "p50": 0.1539799935017072,
+            "p95": 0.29088112965182517,
+            "maximum": 0.3060923670018383
+          },
+          "capture_to_decision_simulation_s": {
+            "count": 2,
+            "p50": 0.6680000000000001,
+            "p95": 0.938,
+            "maximum": 0.968
+          }
+        }
+      },
+      "published_counts": {
+        "joint_states": 25263,
+        "imu": 6011,
+        "stereo": 570
+      },
+      "estimator_received_counts": {
+        "joint_messages": 25235,
+        "wheel_messages": 25235,
+        "imu_messages": 6011,
+        "local_poses": 1803,
+        "camera_messages": 525,
+        "queries_submitted": 38,
+        "candidate_messages": 38,
+        "invalid_input": 0
+      },
+      "replay_elapsed_wall_s": 60.1284031590003,
+      "replay_scheduling_lag_s": {
+        "p50": 0.00016721449901524466,
+        "p95": 0.004346731400801213,
+        "maximum": 0.03695539300315431
+      },
+      "launcher_exit_codes": {
+        "estimator_launcher": 0,
+        "sensor_replay": 0
+      }
+    },
+    {
+      "run": "fault_ace",
+      "samples": 533,
+      "absolute": {
+        "valid": 435,
+        "evaluated": 533,
+        "coverage": 0.8161350844277674,
+        "translation_rmse_m": 0.059098174026712455,
+        "translation_median_m": 0.047006683266797564,
+        "translation_p95_m": 0.13959246161648978,
+        "rotation_median_deg": 0.4442343023908518,
+        "success_5cm5deg": 0.4165103189493433,
+        "success_25cm10deg": 0.8161350844277674,
+        "success_1m30deg": 0.8161350844277674
+      },
+      "local_initial_origin_only": {
+        "valid": 523,
+        "evaluated": 533,
+        "coverage": 0.9812382739212008,
+        "translation_rmse_m": 1.447829102739082,
+        "translation_median_m": 0.043026713002123684,
+        "translation_p95_m": 2.251349852579792,
+        "rotation_median_deg": 2.8671408733201473,
+        "success_5cm5deg": 0.5103189493433395,
+        "success_25cm10deg": 0.5103189493433395,
+        "success_1m30deg": 0.5103189493433395
+      },
+      "first_global_output_after_route_start_s": 2.3339999999999996,
+      "accepted_correct": 20,
+      "accepted_wrong_1m30deg": 0,
+      "harmful_corrections": 0,
+      "recovery_events": [
+        {
+          "event": "kidnap",
+          "requested_timestamp_s": 40.8,
+          "actual_jump_timestamp_s": 41.1,
+          "horizon_timestamp_s": 69.7,
+          "event_observed_in_gt": true,
+          "success": true,
+          "confirmed_output_timestamp_s": 47.034,
+          "first_correct_output_timestamp_s": 46.834,
+          "recovery_time_s": 5.9339999999999975,
+          "first_correct_delay_s": 5.734000000000002,
+          "criterion": "three distinct correct outputs on consecutive evaluated frames spanning >=0.2s, <=1m/30deg; detection time is third confirming output availability",
+          "censored": false
+        }
+      ],
+      "measured_runtime_by_method": {
+        "official_ace_dsacstar": {
+          "calls_returned": 25,
+          "accepted": 20,
+          "outcomes": {
+            "awaiting_temporal_confirmation": 4,
+            "confirmed_global_recovery": 2,
+            "tracking_correction": 18,
+            "implausible_planar_robot_pose": 1
+          },
+          "rpc_roundtrip_wall_s": {
+            "count": 25,
+            "p50": 0.17281304800053476,
+            "p95": 0.3242731086000275,
+            "maximum": 1.223615086000791
+          },
+          "pending_wait_wall_s": {
+            "count": 25,
+            "p50": 0.0006861330002720933,
+            "p95": 0.002356229599536163,
+            "maximum": 0.23467526200329303
+          },
+          "capture_to_decision_simulation_s": {
+            "count": 25,
+            "p50": 0.20000000000000284,
+            "p95": 0.3955999999999988,
+            "maximum": 1.267999999999999
+          }
+        }
+      },
+      "published_counts": {
+        "joint_states": 26815,
+        "imu": 5988,
+        "stereo": 533
+      },
+      "estimator_received_counts": {
+        "joint_messages": 26676,
+        "wheel_messages": 26676,
+        "imu_messages": 5988,
+        "local_poses": 1801,
+        "camera_messages": 513,
+        "queries_submitted": 25,
+        "candidate_messages": 25,
+        "invalid_input": 0
+      },
+      "replay_elapsed_wall_s": 60.28168241300227,
+      "replay_scheduling_lag_s": {
+        "p50": 0.0001883295008155983,
+        "p95": 0.0034626140013642726,
+        "maximum": 0.07571869500316097
+      },
+      "launcher_exit_codes": {
+        "estimator_launcher": 0,
+        "sensor_replay": 0
+      }
+    }
+  ],
+  "limits": [
+    "Replay uses actual frozen raw sensors at 1x; it is not a second live simulator route.",
+    "Only EKF-only local diagnostic has one offline first-pose origin alignment; absolute results use the fixed map without GT alignment.",
+    "RMSE uses valid emitted outputs; success denominators include all 570 normal or 533 fault frames.",
+    "SPV experimental had two real calls, zero accepted corrections; no semantic performance benefit established.",
+    "No thresholds or weights changed between these runs; DDS delivery and DSAC randomness may differ."
+  ]
+}

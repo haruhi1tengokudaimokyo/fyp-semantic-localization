@@ -1,0 +1,137 @@
+{
+  "status": "EVALUATED_GAZEBO_DEVELOPMENT_PILOT_NOT_REAL_ROBOT_VALIDATION",
+  "map_id": "procthor_scene03000_structure_v1",
+  "samples": 533,
+  "duration_s": 59.900000000000006,
+  "path_length_m": 7.054083398267158,
+  "path_statistics": {
+    "sampled_continuous_path_length_m": 7.054083398267158,
+    "relocation_jump_distance_m": 2.316925402688008,
+    "total_sampled_displacement_including_relocations_m": 9.371008800955167,
+    "detected_jumps": [
+      {
+        "timestamp_s": 41.1,
+        "translation_m": 2.316925402688008,
+        "rotation_deg": 19.515827735143603
+      }
+    ],
+    "discontinuity_rule": "adjacent GT displacement >1m or rotation >45deg; jumps excluded from travelled path"
+  },
+  "absolute": {
+    "valid": 435,
+    "evaluated": 533,
+    "coverage": 0.8161350844277674,
+    "translation_rmse_m": 0.059098174026712455,
+    "translation_median_m": 0.047006683266797564,
+    "translation_p95_m": 0.13959246161648978,
+    "rotation_median_deg": 0.4442343023908518,
+    "success_5cm5deg": 0.4165103189493433,
+    "success_25cm10deg": 0.8161350844277674,
+    "success_1m30deg": 0.8161350844277674
+  },
+  "local_initial_origin_only": {
+    "valid": 523,
+    "evaluated": 533,
+    "coverage": 0.9812382739212008,
+    "translation_rmse_m": 1.447829102739082,
+    "translation_median_m": 0.043026713002123684,
+    "translation_p95_m": 2.251349852579792,
+    "rotation_median_deg": 2.8671408733201473,
+    "success_5cm5deg": 0.5103189493433395,
+    "success_25cm10deg": 0.5103189493433395,
+    "success_1m30deg": 0.5103189493433395
+  },
+  "absolute_alignment": "none",
+  "local_alignment": "one first-pose origin; offline diagnostic only",
+  "first_global_output_after_route_start_s": 2.3339999999999996,
+  "accepted_correct": 20,
+  "accepted_wrong_1m30deg": 0,
+  "accepted_outside_evaluation": 0,
+  "harmful_corrections": 0,
+  "decision_reasons": {
+    "awaiting_temporal_confirmation": 4,
+    "confirmed_global_recovery": 2,
+    "tracking_correction": 18,
+    "implausible_planar_robot_pose": 1
+  },
+  "inference_latency_ms": {
+    "p50": 171.04736699911882,
+    "p95": 315.55233060062153
+  },
+  "measured_runtime_by_method": {
+    "official_ace_dsacstar": {
+      "calls_returned": 25,
+      "accepted": 20,
+      "outcomes": {
+        "awaiting_temporal_confirmation": 4,
+        "confirmed_global_recovery": 2,
+        "tracking_correction": 18,
+        "implausible_planar_robot_pose": 1
+      },
+      "rpc_roundtrip_wall_s": {
+        "count": 25,
+        "p50": 0.17281304800053476,
+        "p95": 0.3242731086000275,
+        "maximum": 1.223615086000791
+      },
+      "pending_wait_wall_s": {
+        "count": 25,
+        "p50": 0.0006861330002720933,
+        "p95": 0.002356229599536163,
+        "maximum": 0.23467526200329303
+      },
+      "capture_to_decision_simulation_s": {
+        "count": 25,
+        "p50": 0.20000000000000284,
+        "p95": 0.3955999999999988,
+        "maximum": 1.267999999999999
+      }
+    }
+  },
+  "gt_usage": "offline evaluation only; reference GT restricted to map training",
+  "output_age_s": {
+    "p50": 0.004000000000001336,
+    "p95": 0.03999999999999915
+  },
+  "recovery_events": [
+    {
+      "event": "kidnap",
+      "requested_timestamp_s": 40.8,
+      "actual_jump_timestamp_s": 41.1,
+      "horizon_timestamp_s": 69.7,
+      "event_observed_in_gt": true,
+      "success": true,
+      "confirmed_output_timestamp_s": 47.034,
+      "first_correct_output_timestamp_s": 46.834,
+      "recovery_time_s": 5.9339999999999975,
+      "first_correct_delay_s": 5.734000000000002,
+      "criterion": "three distinct correct outputs on consecutive evaluated frames spanning >=0.2s, <=1m/30deg; detection time is third confirming output availability",
+      "censored": false
+    }
+  ],
+  "recovery_experiment": "measured simulator kidnapping",
+  "test_tuning": false,
+  "camera_fault": {
+    "protocol": {
+      "origin_timestamp_s": 9.4,
+      "interval_s": [
+        15.0,
+        35.0
+      ],
+      "counts": {
+        "left": 562,
+        "right": 603
+      },
+      "blackouts": {
+        "left": 188,
+        "right": 199
+      },
+      "scope": "declared image-interface camera failure; not physical or natural occlusion",
+      "GT_read": false
+    },
+    "evaluated_frames": 183,
+    "local_coverage_during_blackout": 0.9836065573770492,
+    "global_coverage_during_blackout": 0.726775956284153,
+    "scope": "synthetic image blackout, not natural occlusion"
+  }
+}

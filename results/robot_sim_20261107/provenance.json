@@ -1,0 +1,35 @@
+{
+  "scope": "one Gazebo known-map development building, not original paper benchmark or real robot validation",
+  "branch": "research/fusion-stage",
+  "source_commits": {
+    "ACE": "e9e90f2d02ee92c348bf411a5a60e230af6c315e",
+    "MACVO": "8683b532d6f6e8981f6b1a646fb5f52f02c1ea61",
+    "SPVLoc": "754861115e38bf6f9b6b6b642db095f8e1ff6958"
+  },
+  "source_urls": {
+    "ACE": "https://github.com/nianticlabs/ace",
+    "MACVO": "https://github.com/MAC-VO/MAC-VO",
+    "SPVLoc": "https://github.com/fraunhoferhhi/spvloc"
+  },
+  "artifact_root": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107",
+  "hardware": "GTX 1660 SUPER 6GB",
+  "map_id": "procthor_scene03000_structure_v1",
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "building_split": "previous SPVLoc validation/checkpoint-selection building; development only",
+  "online_GT": false,
+  "retained_previous_experiments": true,
+  "SPVLoc_policy": "actual inference, default shadow after failed development localization audit; original gates preserved as explicit ablation",
+  "training_new_ACE_head": {
+    "reference_views": 192,
+    "buffer_features": 1000000,
+    "epochs": 16,
+    "seed": 2089,
+    "official_trainer": true,
+    "paper_8M_reproduction_claim": false
+  },
+  "unqualified_data_excluded": [
+    "dataset: initial unsafe image/pose association diagnostic",
+    "spvloc: ceiling-inconsistent first rendering diagnostic"
+  ],
+  "raw_sensor_limitation": "first 561-frame stereo_dataset has no raw wheel/IMU logs; subsequent online demos record them"
+}

@@ -1,0 +1,124 @@
+{
+  "counts": {
+    "joint_messages": 25245,
+    "wheel_messages": 25245,
+    "imu_messages": 6011,
+    "local_poses": 1803,
+    "camera_messages": 512,
+    "queries_submitted": 38,
+    "candidate_messages": 38,
+    "invalid_input": 0
+  },
+  "last_status": {
+    "timestamp_s": 72.406,
+    "pose_time_s": 72.38,
+    "map_id": "procthor_scene03000_structure_v1",
+    "local_state": "TRACKING",
+    "global_state": "TRACKING",
+    "local_valid": true,
+    "global_valid": true,
+    "local_quality": "TRACKING",
+    "local_pose_covariance_trace": 17.31812111299509,
+    "T_odom_base": [
+      [
+        0.9396830072713538,
+        -0.3420465550849254,
+        0.0,
+        0.2988701471169432
+      ],
+      [
+        0.3420465550849254,
+        0.9396830072713538,
+        0.0,
+        -0.28013891569708954
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "T_map_odom": [
+      [
+        0.9946439881367164,
+        -0.10336022863503841,
+        0.0,
+        1.1630438119095547
+      ],
+      [
+        0.10336022863503841,
+        0.9946439881367164,
+        0.0,
+        6.085161326447879
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.1
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "T_map_base": [
+      [
+        0.8992960437992773,
+        -0.4373404001541228,
+        0.0,
+        1.4892684293489813
+      ],
+      [
+        0.4373404001541228,
+        0.8992960437992773,
+        0.0,
+        5.837414124844825
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.1
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "last_absolute_capture_s": 72.1,
+    "recovery_hypotheses": 0,
+    "accepted_count": 29,
+    "rejected_count": 9,
+    "last_decision": {
+      "accepted": true,
+      "reason": "tracking_correction",
+      "query_id": "rgb_72_100000000_000038",
+      "capture_time_s": 72.1
+    },
+    "backend": "wheel_imu_ekf_plus_gated_absolute_map_odom",
+    "spvloc_corrections_allowed": false,
+    "spvloc_available": false,
+    "macvo_available": false,
+    "online_gt_used": false
+  },
+  "ace_enabled": true,
+  "spvloc_enabled": false,
+  "query_trigger_counts": {
+    "scheduled": 38,
+    "rate_limited": 288,
+    "healthy_recent_global_pose": 186
+  },
+  "pending_queries_replaced": 0
+}

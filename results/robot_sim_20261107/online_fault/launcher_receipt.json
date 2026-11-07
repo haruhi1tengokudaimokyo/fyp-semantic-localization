@@ -1,0 +1,30 @@
+{
+  "child_pids": [
+    169791,
+    169792,
+    169833,
+    170107,
+    170108
+  ],
+  "child_names": [
+    "gazebo",
+    "bridge",
+    "localization_launcher",
+    "camera_fault",
+    "collector"
+  ],
+  "exit_codes": [
+    0,
+    130,
+    0,
+    1,
+    0
+  ],
+  "domain_id": 72,
+  "GZ_PARTITION": "fyp_demo_169781",
+  "elapsed_wall_s": 74.71624711600089,
+  "capture_wall_s": 61.426878114998544,
+  "requested_simulation_duration_s": 60.0,
+  "interrupted": false,
+  "cleanup": "only process groups created by this launcher"
+}

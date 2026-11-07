@@ -1,0 +1,12 @@
+{
+  "status": "PASSED_REAL_OFFICIAL_SPVLOC_RPC",
+  "actual_rgb_queries": 1,
+  "top_k": 3,
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "checkpoint_sha256": "daf323ccc1abc18dc7dd2a95d5f3e6be16183d60eda7f2498c9a593e2e5b54e3",
+  "query_gt_passed": false,
+  "fake_prediction_used": false,
+  "latency_s": 0.5319195560005028,
+  "max_pose_matrix_difference_vs_offline": 0.0,
+  "scope": "RPC/coordinate parity; not additional independent localization benchmark"
+}

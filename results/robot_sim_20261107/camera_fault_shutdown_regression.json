@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "node_exit_code": 0,
+  "scope": "actual ROS node SIGINT shutdown regression only; no new inference or localization result",
+  "original_fault_receipt_preserved": true
+}

@@ -1,0 +1,68 @@
+{
+  "counts": {
+    "joint_messages": 26808,
+    "wheel_messages": 26808,
+    "imu_messages": 5988,
+    "local_poses": 1801,
+    "camera_messages": 516,
+    "queries_submitted": 0,
+    "candidate_messages": 0,
+    "invalid_input": 0
+  },
+  "last_status": {
+    "timestamp_s": 69.708,
+    "pose_time_s": 69.698,
+    "map_id": "procthor_scene03000_structure_v1",
+    "local_state": "TRACKING",
+    "global_state": "UNINITIALIZED",
+    "local_valid": true,
+    "global_valid": false,
+    "local_quality": "TRACKING",
+    "local_pose_covariance_trace": 16.914581653167414,
+    "T_odom_base": [
+      [
+        0.8900797800470829,
+        -0.4558047664859777,
+        0.0,
+        0.5842458021238536
+      ],
+      [
+        0.4558047664859777,
+        0.8900797800470829,
+        0.0,
+        -0.46247563120704405
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "T_map_odom": null,
+    "T_map_base": null,
+    "last_absolute_capture_s": null,
+    "recovery_hypotheses": 0,
+    "accepted_count": 0,
+    "rejected_count": 0,
+    "last_decision": {
+      "accepted": false,
+      "reason": "no_observation"
+    },
+    "backend": "wheel_imu_ekf_plus_gated_absolute_map_odom",
+    "spvloc_corrections_allowed": false,
+    "spvloc_available": false,
+    "macvo_available": false,
+    "online_gt_used": false
+  },
+  "ace_enabled": false,
+  "spvloc_enabled": false,
+  "query_trigger_counts": {},
+  "pending_queries_replaced": 0
+}

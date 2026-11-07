@@ -1,0 +1,16 @@
+{
+  "removed_unused_keys": [
+    "context_encoder.svt.norm.bias",
+    "context_encoder.svt.norm.weight",
+    "memory_decoder.att.pos_emb.rel_height.weight",
+    "memory_decoder.att.pos_emb.rel_ind",
+    "memory_decoder.att.pos_emb.rel_width.weight",
+    "memory_encoder.feat_encoder.svt.norm.bias",
+    "memory_encoder.feat_encoder.svt.norm.weight"
+  ],
+  "constructed_deterministic_buffers": [
+    "memory_decoder.delta"
+  ],
+  "missing_learned_parameters": [],
+  "loaded_keys": 428
+}

@@ -1,0 +1,215 @@
+{
+  "status": "INDEPENDENT_CPU_AUDIT_PASS_WITH_DISCLOSED_BOUNDARY_DIFFERENCE",
+  "evaluate_module_called": false,
+  "GT_scope": "offline audit only",
+  "runs": {
+    "online_normal": {
+      "status": "PASS",
+      "discrepancies": [],
+      "absolute_recomputed_from_raw_trace": {
+        "valid": 522,
+        "evaluated": 570,
+        "coverage": 0.9157894736842105,
+        "translation_rmse_m": 0.11845116289075346,
+        "translation_median_m": 0.03401167423988523,
+        "translation_p95_m": 0.30601000901967257,
+        "rotation_median_deg": 0.3200948506653814,
+        "translation_range_m": [
+          0.0056839562602343215,
+          0.3310098152546731
+        ],
+        "success_1m30deg": 0.9157894736842105
+      },
+      "absolute_alignment": "identity: raw T_map_base compared directly to GT; no optimization, rigid fit, or scale fit",
+      "audit_sampling": "Saved per-frame association timestamps checked against actual raw trace; independent GT interpolation with discontinuity guard",
+      "accepted": {
+        "count": 28,
+        "assessable": 28,
+        "wrong_1m30deg": 0,
+        "unassociated": [],
+        "harmful": [
+          {
+            "timestamp_s": 48.702,
+            "error": [
+              0.3250783131157896,
+              0.16634852244521575
+            ],
+            "correct_1m30deg": true,
+            "harmful_delta_25cm_or_10deg": true,
+            "before_error": [
+              0.06174470003330198,
+              1.0154957365940107
+            ]
+          }
+        ]
+      },
+      "recovery": [],
+      "images": {
+        "pairs": 570,
+        "same_timestamp_pairs": 570
+      },
+      "sensors": {
+        "imu_records": 6011,
+        "joint_records": 25263,
+        "IMU_orientation_absent": true,
+        "wheel_rates_present_all_records": true,
+        "online_fused": "wheel vx/yaw-rate; gyro z; finite-uncertainty vy=0 robot constraint",
+        "recorded_but_not_fused": "IMU linear acceleration, joint positions"
+      },
+      "active_algorithms": "wheel/IMU EKF + ACE global correction; SPVLoc real shadow inference only; MAC-VO absent from live loop",
+      "file_sha256": {
+        "localization/localization.jsonl": "2ea2c1494bfa8b3240c2c226c1bcdcef044c7d9f64a1fba9c9db3714ef9a0de1",
+        "localization/ace_decisions.jsonl": "13bbb7952e4ed5f841708dfaf7987da0910e1d8b349fdc2445bc020c08055b2c",
+        "localization/protocol.json": "a0c9e353a36423e2ec8a5509d88855cd24cd705293367e516ff282269961fd2a",
+        "evaluation/metrics.json": "1fc5d1302b10f84fc16f3a702bac262c76d64b25bff08f64ffb3d6979ec4039a",
+        "capture/offline_gt/query_poses.jsonl": "51b5f9b4b97d0dd03e30ce9d7b08da0fadbe106ee3b570a4d85c77e51854b9dd",
+        "capture/query/frames.jsonl": "f6e5dd59b36037830b3ffd8baec2d5c0a5153158ce98c652327460ff4c2ae531"
+      }
+    },
+    "online_fault": {
+      "status": "PASS_WITH_DISCLOSED_BOUNDARY_DIFFERENCE",
+      "discrepancies": [
+        {
+          "kind": "declared_window_differs_from_actual_black_pixels",
+          "declared_window_evaluation_frames": 183,
+          "actual_black_stereo_pairs": 182,
+          "cause": "camera_fault elapsed-time subtraction at 24.4s is slightly below 15.0s; the first declared-window image stays visible",
+          "effect": "One declared-window sample must not be described as an actual black image; core localization/recovery metrics are unaffected."
+        }
+      ],
+      "absolute_recomputed_from_raw_trace": {
+        "valid": 390,
+        "evaluated": 533,
+        "coverage": 0.7317073170731707,
+        "translation_rmse_m": 0.039978581352931315,
+        "translation_median_m": 0.025176702308129982,
+        "translation_p95_m": 0.0752881748658683,
+        "rotation_median_deg": 0.5992370214503344,
+        "translation_range_m": [
+          0.007445553751338097,
+          0.08222655530231186
+        ],
+        "success_1m30deg": 0.7317073170731707
+      },
+      "absolute_alignment": "identity: raw T_map_base compared directly to GT; no optimization, rigid fit, or scale fit",
+      "audit_sampling": "Saved per-frame association timestamps checked against actual raw trace; independent GT interpolation with discontinuity guard",
+      "accepted": {
+        "count": 18,
+        "assessable": 15,
+        "wrong_1m30deg": 0,
+        "unassociated": [
+          {
+            "query_id": "rgb_56_100000000_000021",
+            "capture_s": 56.1,
+            "nearest_pose_s": 56.102,
+            "gt_bracket_s": [
+              55.9,
+              56.4
+            ],
+            "reason": "no extrapolation or interpolation across >0.25s GT gap"
+          },
+          {
+            "query_id": "rgb_63_600000000_000027",
+            "capture_s": 63.6,
+            "nearest_pose_s": 63.602,
+            "gt_bracket_s": [
+              63.6,
+              63.9
+            ],
+            "reason": "no extrapolation or interpolation across >0.25s GT gap"
+          },
+          {
+            "query_id": "rgb_69_700000000_000029",
+            "capture_s": 69.7,
+            "nearest_pose_s": 69.702,
+            "gt_bracket_s": [
+              69.7
+            ],
+            "reason": "no extrapolation or interpolation across >0.25s GT gap"
+          }
+        ],
+        "harmful": []
+      },
+      "recovery": [
+        {
+          "first_postjump_gt_s": 41.1,
+          "last_prejump_gt_s": 41.0,
+          "translation_m": 2.316925402688008,
+          "confirming_outputs": [
+            {
+              "query_timestamp_s": 49.6,
+              "pose_timestamp_s": 49.602,
+              "output_timestamp_s": 49.634,
+              "translation_m": 0.07688578408345638,
+              "rotation_deg": 0.7170058784679294
+            },
+            {
+              "query_timestamp_s": 49.7,
+              "pose_timestamp_s": 49.7,
+              "output_timestamp_s": 49.734,
+              "translation_m": 0.0766444546209087,
+              "rotation_deg": 0.7196303476518948
+            },
+            {
+              "query_timestamp_s": 49.8,
+              "pose_timestamp_s": 49.802,
+              "output_timestamp_s": 49.834,
+              "translation_m": 0.07639388295000617,
+              "rotation_deg": 0.715540057073789
+            }
+          ],
+          "third_output_delay_s": 8.734000000000002,
+          "first_correct_output_delay_s": 8.533999999999999,
+          "jump_time_sampling_uncertainty_s": 0.10000000000000142
+        }
+      ],
+      "images": {
+        "pairs": 533,
+        "same_timestamp_pairs": 533,
+        "decoded_pngs": 1066,
+        "blackout_pairs": 182,
+        "nonblack_pairs": 351,
+        "black_pair_time_range_s": [
+          24.5,
+          44.3
+        ],
+        "mismatches": [],
+        "actual_black_local_coverage": 0.9835164835164835,
+        "actual_black_global_coverage": 0.7252747252747253,
+        "raw_fault_events": {
+          "left": 562,
+          "right": 603
+        },
+        "note": "Raw fault callbacks have unequal left/right delivery counts; every accepted captured pair is exactly synchronized and equally blacked out."
+      },
+      "sensors": {
+        "imu_records": 5988,
+        "joint_records": 26815,
+        "IMU_orientation_absent": true,
+        "wheel_rates_present_all_records": true,
+        "online_fused": "wheel vx/yaw-rate; gyro z; finite-uncertainty vy=0 robot constraint",
+        "recorded_but_not_fused": "IMU linear acceleration, joint positions"
+      },
+      "active_algorithms": "wheel/IMU EKF + ACE global correction; SPVLoc real shadow inference only; MAC-VO absent from live loop",
+      "file_sha256": {
+        "localization/localization.jsonl": "4a1e164ba78a48f0f1facf1be94c5460726a96f7ad7cbc74e072d4a7a6fb1eb7",
+        "localization/ace_decisions.jsonl": "f6099b905b46fda7b62a347e88e20f0588e698dacb629adbfb6e01906c3c2211",
+        "localization/protocol.json": "64600f3d70222a81f8dcd073691f04136a2b42bcebda58f80bb877981f985211",
+        "evaluation/metrics.json": "b3ce19a6b02d53c54eef31a77dda5ffbf7c5a8ba8afd2d96478d9932c955a501",
+        "capture/offline_gt/query_poses.jsonl": "9ddb56cec8ade90eace0b9d0b22fbff0dda22b57fccfcea6fb52afc0af212260",
+        "capture/query/frames.jsonl": "aaefae34d375114b4805311f5cd7338d52d0e2c42eca41b9bd91302c0f904508"
+      }
+    }
+  },
+  "source_review": {
+    "ekf_pose_fields_all_disabled": true,
+    "imu_orientation_and_acceleration_disabled": true,
+    "online_GT_subscription": false,
+    "note": "ROS source subscription allowlist reviewed; no world/model pose subscribed by estimator. Collector GT remains separate.",
+    "hashes": {
+      "research3d/robot_sim/ros_localization_node.py": "803e5275660ad4c574ab4802bf409ae1155e539e547bc213d7680c4275703ce2",
+      "configs/robot_sim/ekf.yaml": "0772128abb428ae5cd9ce3b4b3fe7ed2bc16f58abf70baa7f97ed09d62b09461",
+      "research3d/robot_sim/camera_fault.py": "6783b976cec18903ab93ab04aa6200d1a096ade85298dcac00de479be0b49c26"
+    }
+  }
+}

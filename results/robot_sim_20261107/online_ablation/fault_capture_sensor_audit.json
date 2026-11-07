@@ -1,0 +1,45 @@
+{
+  "dataset": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture",
+  "scope": "actual raw log coverage and time monotonicity; no reconstructed sensor input",
+  "GT_read": false,
+  "streams": {
+    "stereo": {
+      "count": 533,
+      "first_timestamp_ns": 9800000000,
+      "last_timestamp_ns": 69700000000,
+      "strictly_increasing": true,
+      "mean_rate_hz": 8.881469115191987,
+      "interval_s": {
+        "p50": 0.1,
+        "p95": 0.2,
+        "max": 0.5
+      }
+    },
+    "joint_states": {
+      "count": 26815,
+      "first_timestamp_ns": 9432000000,
+      "last_timestamp_ns": 69708000000,
+      "strictly_increasing": true,
+      "mean_rate_hz": 444.8536731037228,
+      "interval_s": {
+        "p50": 0.002,
+        "p95": 0.002,
+        "max": 0.218
+      },
+      "covers_all_query_images": true
+    },
+    "imu": {
+      "count": 5988,
+      "first_timestamp_ns": 9440000000,
+      "last_timestamp_ns": 69700000000,
+      "strictly_increasing": true,
+      "mean_rate_hz": 99.35280451377365,
+      "interval_s": {
+        "p50": 0.01,
+        "p95": 0.01,
+        "max": 0.19
+      },
+      "covers_all_query_images": true
+    }
+  }
+}

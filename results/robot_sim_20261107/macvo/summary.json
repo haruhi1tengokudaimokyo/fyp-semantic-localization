@@ -1,0 +1,14 @@
+{
+  "status": "INFERENCE_COMPLETE_NOT_EVALUATED",
+  "frames": 561,
+  "full_captured_sequence": true,
+  "lost_frames": 0,
+  "GT_online": false,
+  "raw_before_interpolation": true,
+  "wall_seconds": 756.565162586001,
+  "model_initialization_ms": 2367.2047649997694,
+  "runtime_mean_ms": 1330.7964236916703,
+  "runtime_p95_ms": 1331.3956289966882,
+  "torch_peak_allocated_MiB": 2960.35400390625,
+  "trajectory_sha256": "53f85dedd90109d0fefbe581d4643adf7d24ce33d8b64ba2fa4200c392cc87c5"
+}

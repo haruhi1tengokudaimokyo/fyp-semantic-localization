@@ -141,9 +141,13 @@ def run_replay(motions, observations, config):
             modes = [m for m in modes if t - m["last_time"] <= cfg["hypothesis_ttl_s"]]
             # Process older images first. Source correlation never creates two hits.
             for b in sorted(batch, key=lambda b: (b["observation"]["capture_time_s"], b["rank"])):
-                matching = [m for m in modes if _close(m["origin"], b["origin"], cfg["recovery_gate"][b["source"]])]
+                # A map<-odom origin is not a robot pose. Comparing origin
+                # translations makes a small yaw difference appear arbitrarily
+                # large after translating the odometry gauge. Propagate both
+                # hypotheses to this same current camera before gating/ranking.
+                matching = [m for m in modes if _close(m["origin"] @ odom, b["pose_now"], cfg["recovery_gate"][b["source"]])]
                 if matching:
-                    m = min(matching, key=lambda m: discrepancy(m["origin"], b["origin"])[0])
+                    m = min(matching, key=lambda m: discrepancy(m["origin"] @ odom, b["pose_now"])[0])
                 else:
                     m = dict(origin=b["origin"], queries={}, last_time=b["observation"]["capture_time_s"], item=b)
                     modes.append(m)

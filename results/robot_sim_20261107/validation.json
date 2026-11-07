@@ -1,0 +1,30 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_fusion_replay.py",
+    "tests/test_fusion_diagnostics.py",
+    "tests/test_fusion_training.py",
+    "tests/test_robot_ace.py",
+    "tests/test_robot_camera_fault.py",
+    "tests/test_robot_localization.py",
+    "tests/test_robot_macvo.py",
+    "tests/test_robot_online_video.py",
+    "tests/test_robot_ros_ekf.py",
+    "tests/test_robot_scheduler_rpc.py",
+    "tests/test_robot_sim_collect.py",
+    "tests/test_robot_sim_evaluate.py",
+    "tests/test_robot_sim_replay_models.py",
+    "tests/test_robot_sim_replay_sensors.py",
+    "tests/test_robot_sim_world.py",
+    "tests/test_robot_spvloc.py",
+    "tests/test_robot_spvloc_evaluation.py"
+  ],
+  "returncode": 0,
+  "output": "........................................................................ [ 48%]\n....................................s................................... [ 97%]\n...                                                                      [100%]\n146 passed, 1 skipped in 1.46s\n",
+  "actual_ROS_integration": "separate host ROS run passed; see estimator_verification.json",
+  "actual_models_and_live_Gazebo": "see actual inference/online/fault reports; unit tests alone do not qualify localization",
+  "final_camera_fault_boundary_fix": "integer-ns regression passed; frozen experimental data was not rewritten"
+}

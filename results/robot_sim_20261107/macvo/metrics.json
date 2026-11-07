@@ -1,0 +1,49 @@
+{
+  "n": 561,
+  "alignment": "SE3, no scale correction",
+  "ate_se3_aligned_rmse_m": 0.12380884305405976,
+  "ate_first_pose_anchored_rmse_m": 0.3172814472970156,
+  "path_length_m": 8.476673194679417,
+  "endpoint_first_pose_anchored_error_m": 0.37554258959364667,
+  "endpoint_drift_per_meter": 0.04430306335619554,
+  "rpe_frame_delta": {
+    "1": {
+      "translation_rmse_m": 0.002855483755716266,
+      "rotation_rmse_deg": 0.055420113172165185,
+      "pairs": 560
+    },
+    "5": {
+      "translation_rmse_m": 0.011943739685727334,
+      "rotation_rmse_deg": 0.22946592108131622,
+      "pairs": 556
+    },
+    "10": {
+      "translation_rmse_m": 0.022268113873493135,
+      "rotation_rmse_deg": 0.431107195571143,
+      "pairs": 551
+    }
+  },
+  "tracking_availability": 1.0,
+  "lost_frames": 0,
+  "max_failure_run_frames": 0,
+  "failure_duration_seconds": 0.0,
+  "timestamp_note": "real Gazebo simulation timestamps; no physical hardware time claim",
+  "status": "EVALUATED",
+  "source": "independent CPU SE3 metrics on raw MAC-VO output",
+  "GT_online": false,
+  "full_captured_sequence": true,
+  "trajectory_sha256": "53f85dedd90109d0fefbe581d4643adf7d24ce33d8b64ba2fa4200c392cc87c5",
+  "offline_gt_sha256": "b360bb4364c473748b07887cf3ebf59e9a6eefd4eaf2d83792799a7f3bbd467c",
+  "duration_sim_seconds": 59.9,
+  "input_sampling": {
+    "median_interval_s": 0.1,
+    "max_interval_s": 0.3,
+    "recorded_intervals_over_1_5_median": 37,
+    "observed_rate_hz": 9.34891485809683,
+    "scope": "capture gaps are retained; these are separate from algorithm lost frames"
+  },
+  "max_failure_run_seconds": 0.0,
+  "time_weighted_tracking_availability": 1.0,
+  "world_absolute_localization": false,
+  "alignment_warning": "GT rigid alignment only for VO evaluation, never online localization"
+}

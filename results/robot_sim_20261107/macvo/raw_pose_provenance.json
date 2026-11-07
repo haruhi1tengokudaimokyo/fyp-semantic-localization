@@ -1,0 +1,13 @@
+{
+  "adapter_source": "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/research3d/robot_sim/run_macvo.py",
+  "adapter_source_sha256": "1aeabdd270315d700793bdb5d4d401a745381fd2484048619a3509015e2a6108",
+  "raw_capture": "MapRefiner.elaborate_map hook copies graph poses and need_interp BEFORE invoking official MotionInterpolate",
+  "saved_output": "T_odom_camera = C.T @ captured_raw_pose_NED @ C; no post-refinement pose saved as raw",
+  "original_algorithm_unchanged": true,
+  "GT_online": false,
+  "GT_evaluation": "separate CPU evaluate command after infer process exited 0",
+  "lost_before_interpolation": 0,
+  "trajectory_sha256": "53f85dedd90109d0fefbe581d4643adf7d24ce33d8b64ba2fa4200c392cc87c5",
+  "camera_path_length_m": 8.476673194679417,
+  "note": "camera path includes the .20m forward lever arm during turning; it differs from base_link path (~7.131m), not a coordinate-scale error"
+}

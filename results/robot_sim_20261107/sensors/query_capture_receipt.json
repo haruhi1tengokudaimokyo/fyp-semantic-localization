@@ -1,0 +1,13 @@
+{
+  "status": "CAPTURED",
+  "mode": "query",
+  "frames": 561,
+  "sensor_counts": {
+    "imu": 6000,
+    "joint_states": 21697
+  },
+  "simulator": "Gazebo Harmonic",
+  "supervision": "reference only; query GT isolated",
+  "source_world_manifest_sha256": "737779adfd3bb9973ce3c05f568223cf4842eb33c5c7ce93d0faef853ab4f6c7",
+  "query_physical_motion": true
+}

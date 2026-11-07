@@ -1,0 +1,107 @@
+{
+  "config": {
+    "sequence_id": "gazebo_known_map_query",
+    "expected_frames": {
+      "camera": "camera_optical_frame",
+      "imu": "base_link"
+    },
+    "topics": {
+      "joint_states": "/robot/joint_states",
+      "imu": "/robot/imu",
+      "rgb": "/fault_camera/left/image",
+      "camera_info": "/robot/camera/camera_info"
+    },
+    "wheel": {
+      "left_joint": "left_wheel_joint",
+      "right_joint": "right_wheel_joint",
+      "radius_m": 0.1,
+      "separation_m": 0.42,
+      "forward_std_m_s": 0.03,
+      "lateral_constraint_std_m_s": 0.05,
+      "yaw_std_rad_s": 0.05
+    },
+    "imu_gyro_std_rad_s": 0.01,
+    "T_base_camera_optical": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.2
+      ],
+      [
+        -1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        0.5
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "max_query_transport_age_s": 0.25,
+    "global": {
+      "map_id": "procthor_scene03000_structure_v1",
+      "allow_spvloc_corrections": false,
+      "map_base_height_m": 0.1,
+      "min_inliers": 100,
+      "max_observation_age_s": 2.5,
+      "confirmations": 3,
+      "confirmation_span_s": 1.0,
+      "conflicts_to_recover": 2,
+      "tracking_translation_m": 1.0,
+      "tracking_rotation_deg": 25.0,
+      "recovery_translation_m": 0.5,
+      "recovery_rotation_deg": 15.0,
+      "hypothesis_ttl_s": 5.0,
+      "max_dead_reckoning_s": 15.0,
+      "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a"
+    },
+    "query_trigger": {
+      "max_hz": 1.0,
+      "refresh_s": 3.0,
+      "min_std": 4.0,
+      "min_mean": 2.0,
+      "movement_m": 0.25
+    }
+  },
+  "local_algorithm": "official_robot_localization_EKF",
+  "global_algorithms": [
+    "official_ACE_DSACStar",
+    "official_SPVLoc"
+  ],
+  "ace_enabled": true,
+  "spvloc_enabled": true,
+  "macvo_enabled": false,
+  "spvloc_corrections_allowed": false,
+  "spvloc_policy": "shadow_unqualified_model",
+  "spvloc_qualification_note": "Current checkpoint failed fixed-map development localization. Default real inference records candidates but cannot alter map->odom; opt-in is an explicit ablation, not qualification.",
+  "global_schedule": "at_most_1Hz_total; alternate actual ACE/SPV executions when globally unknown; ACE tracking updates; one latest pending slot",
+  "timestamp_policy": "capture time from image header; RPC return ROS and monotonic wall times measured independently; callback now used for conservative stale/history gates",
+  "wheel_source": "simulated_joint_encoder_velocity_not_world_odometry",
+  "imu_fused_fields": [
+    "angular_velocity.z"
+  ],
+  "wheel_fused_fields": [
+    "linear.x",
+    "angular.z"
+  ],
+  "robot_motion_constraint": {
+    "linear.y": 0.0,
+    "standard_deviation_m_s": 0.05,
+    "type": "finite_uncertainty_nonholonomic_differential_drive"
+  },
+  "online_gt_used": false,
+  "ace_pose_covariance_available": false,
+  "update_policy": "gated_map_to_odom_correction_not_pose_graph",
+  "parameters_chosen_without_test_ground_truth": true,
+  "measurement_covariance_note": "declared engineering sensor uncertainty, not calibrated from truth"
+}

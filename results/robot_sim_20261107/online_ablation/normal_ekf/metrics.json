@@ -1,0 +1,53 @@
+{
+  "status": "EVALUATED_GAZEBO_DEVELOPMENT_PILOT_NOT_REAL_ROBOT_VALIDATION",
+  "map_id": "procthor_scene03000_structure_v1",
+  "samples": 570,
+  "duration_s": 59.800000000000004,
+  "path_length_m": 7.137193171248907,
+  "path_statistics": {
+    "sampled_continuous_path_length_m": 7.137193171248907,
+    "relocation_jump_distance_m": 0.0,
+    "total_sampled_displacement_including_relocations_m": 7.137193171248907,
+    "detected_jumps": [],
+    "discontinuity_rule": "adjacent GT displacement >1m or rotation >45deg; jumps excluded from travelled path"
+  },
+  "absolute": {
+    "valid": 0,
+    "evaluated": 570,
+    "coverage": 0.0,
+    "translation_rmse_m": null,
+    "translation_median_m": null,
+    "rotation_median_deg": null,
+    "success_1m30deg": 0.0
+  },
+  "local_initial_origin_only": {
+    "valid": 567,
+    "evaluated": 570,
+    "coverage": 0.9947368421052631,
+    "translation_rmse_m": 0.0658170214198983,
+    "translation_median_m": 0.034230417997720405,
+    "translation_p95_m": 0.1174371538159738,
+    "rotation_median_deg": 2.7186648639743387,
+    "success_5cm5deg": 0.5789473684210527,
+    "success_25cm10deg": 0.9947368421052631,
+    "success_1m30deg": 0.9947368421052631
+  },
+  "absolute_alignment": "none",
+  "local_alignment": "one first-pose origin; offline diagnostic only",
+  "first_global_output_after_route_start_s": null,
+  "accepted_correct": 0,
+  "accepted_wrong_1m30deg": 0,
+  "accepted_outside_evaluation": 0,
+  "harmful_corrections": 0,
+  "decision_reasons": {},
+  "inference_latency_ms": null,
+  "measured_runtime_by_method": {},
+  "gt_usage": "offline evaluation only; reference GT restricted to map training",
+  "output_age_s": {
+    "p50": 0.02400000000000091,
+    "p95": 0.02400000000000091
+  },
+  "recovery_events": [],
+  "recovery_experiment": "not measured: no recorded failure event",
+  "test_tuning": false
+}

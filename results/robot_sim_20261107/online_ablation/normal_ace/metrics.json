@@ -1,0 +1,95 @@
+{
+  "status": "EVALUATED_GAZEBO_DEVELOPMENT_PILOT_NOT_REAL_ROBOT_VALIDATION",
+  "map_id": "procthor_scene03000_structure_v1",
+  "samples": 570,
+  "duration_s": 59.800000000000004,
+  "path_length_m": 7.137193171248907,
+  "path_statistics": {
+    "sampled_continuous_path_length_m": 7.137193171248907,
+    "relocation_jump_distance_m": 0.0,
+    "total_sampled_displacement_including_relocations_m": 7.137193171248907,
+    "detected_jumps": [],
+    "discontinuity_rule": "adjacent GT displacement >1m or rotation >45deg; jumps excluded from travelled path"
+  },
+  "absolute": {
+    "valid": 545,
+    "evaluated": 570,
+    "coverage": 0.956140350877193,
+    "translation_rmse_m": 0.174711954910972,
+    "translation_median_m": 0.046573124016160684,
+    "translation_p95_m": 0.1501649005903652,
+    "rotation_median_deg": 0.5010643291200344,
+    "success_5cm5deg": 0.5157894736842106,
+    "success_25cm10deg": 0.9105263157894737,
+    "success_1m30deg": 0.956140350877193
+  },
+  "local_initial_origin_only": {
+    "valid": 567,
+    "evaluated": 570,
+    "coverage": 0.9947368421052631,
+    "translation_rmse_m": 0.06581540976390556,
+    "translation_median_m": 0.034227598563007666,
+    "translation_p95_m": 0.1174394696045487,
+    "rotation_median_deg": 2.718720900376187,
+    "success_5cm5deg": 0.5789473684210527,
+    "success_25cm10deg": 0.9947368421052631,
+    "success_1m30deg": 0.9947368421052631
+  },
+  "absolute_alignment": "none",
+  "local_alignment": "one first-pose origin; offline diagnostic only",
+  "first_global_output_after_route_start_s": 2.734,
+  "accepted_correct": 29,
+  "accepted_wrong_1m30deg": 0,
+  "accepted_outside_evaluation": 0,
+  "harmful_corrections": 2,
+  "decision_reasons": {
+    "awaiting_temporal_confirmation": 2,
+    "confirmed_global_recovery": 1,
+    "tracking_correction": 28,
+    "insufficient_inliers": 5,
+    "implausible_planar_robot_pose": 2
+  },
+  "inference_latency_ms": {
+    "p50": 192.59831849922193,
+    "p95": 237.07011584865535
+  },
+  "measured_runtime_by_method": {
+    "official_ace_dsacstar": {
+      "calls_returned": 38,
+      "accepted": 29,
+      "outcomes": {
+        "awaiting_temporal_confirmation": 2,
+        "confirmed_global_recovery": 1,
+        "tracking_correction": 28,
+        "insufficient_inliers": 5,
+        "implausible_planar_robot_pose": 2
+      },
+      "rpc_roundtrip_wall_s": {
+        "count": 38,
+        "p50": 0.19351625650051574,
+        "p95": 0.23751424954789394,
+        "maximum": 1.3667534779997368
+      },
+      "pending_wait_wall_s": {
+        "count": 38,
+        "p50": 0.0005422399990493432,
+        "p95": 0.0023316228003750434,
+        "maximum": 0.36955195399787044
+      },
+      "capture_to_decision_simulation_s": {
+        "count": 38,
+        "p50": 0.23400000000000176,
+        "p95": 0.34019999999999717,
+        "maximum": 1.3999999999999986
+      }
+    }
+  },
+  "gt_usage": "offline evaluation only; reference GT restricted to map training",
+  "output_age_s": {
+    "p50": 0.02400000000000091,
+    "p95": 0.0259999999999998
+  },
+  "recovery_events": [],
+  "recovery_experiment": "not measured: no recorded failure event",
+  "test_tuning": false
+}

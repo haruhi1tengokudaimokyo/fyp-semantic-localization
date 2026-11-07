@@ -1,0 +1,123 @@
+{
+  "status": "EVALUATED_GAZEBO_DEVELOPMENT_PILOT_NOT_REAL_ROBOT_VALIDATION",
+  "map_id": "procthor_scene03000_structure_v1",
+  "samples": 570,
+  "duration_s": 59.800000000000004,
+  "path_length_m": 7.137193171248907,
+  "path_statistics": {
+    "sampled_continuous_path_length_m": 7.137193171248907,
+    "relocation_jump_distance_m": 0.0,
+    "total_sampled_displacement_including_relocations_m": 7.137193171248907,
+    "detected_jumps": [],
+    "discontinuity_rule": "adjacent GT displacement >1m or rotation >45deg; jumps excluded from travelled path"
+  },
+  "absolute": {
+    "valid": 522,
+    "evaluated": 570,
+    "coverage": 0.9157894736842105,
+    "translation_rmse_m": 0.1184511628907535,
+    "translation_median_m": 0.03401167423988488,
+    "translation_p95_m": 0.3060100090196725,
+    "rotation_median_deg": 0.3200948506653814,
+    "success_5cm5deg": 0.6157894736842106,
+    "success_25cm10deg": 0.8,
+    "success_1m30deg": 0.9157894736842105
+  },
+  "local_initial_origin_only": {
+    "valid": 566,
+    "evaluated": 570,
+    "coverage": 0.9929824561403509,
+    "translation_rmse_m": 0.07658521564865475,
+    "translation_median_m": 0.040945308263899874,
+    "translation_p95_m": 0.13552721357769573,
+    "rotation_median_deg": 3.1098549154591226,
+    "success_5cm5deg": 0.5578947368421052,
+    "success_25cm10deg": 0.9929824561403509,
+    "success_1m30deg": 0.9929824561403509
+  },
+  "absolute_alignment": "none",
+  "local_alignment": "one first-pose origin; offline diagnostic only",
+  "first_global_output_after_route_start_s": 5.534000000000001,
+  "accepted_correct": 28,
+  "accepted_wrong_1m30deg": 0,
+  "accepted_outside_evaluation": 0,
+  "harmful_corrections": 1,
+  "decision_reasons": {
+    "invalid_pose_or_history:observation outside odometry history; no extrapolation": 1,
+    "spvloc_shadow_unqualified_model": 3,
+    "awaiting_temporal_confirmation": 2,
+    "confirmed_global_recovery": 1,
+    "tracking_correction": 27,
+    "insufficient_inliers": 6,
+    "implausible_planar_robot_pose": 1
+  },
+  "inference_latency_ms": {
+    "p50": 176.81446800088452,
+    "p95": 239.4468703014354
+  },
+  "measured_runtime_by_method": {
+    "official_ace_dsacstar": {
+      "calls_returned": 38,
+      "accepted": 28,
+      "outcomes": {
+        "invalid_pose_or_history:observation outside odometry history; no extrapolation": 1,
+        "awaiting_temporal_confirmation": 2,
+        "confirmed_global_recovery": 1,
+        "tracking_correction": 27,
+        "insufficient_inliers": 6,
+        "implausible_planar_robot_pose": 1
+      },
+      "rpc_roundtrip_wall_s": {
+        "count": 38,
+        "p50": 0.177418609500819,
+        "p95": 0.24000752125211874,
+        "maximum": 1.8973673770015012
+      },
+      "pending_wait_wall_s": {
+        "count": 38,
+        "p50": 0.00037781300125061534,
+        "p95": 0.0005744318495999323,
+        "maximum": 0.5594780339997669
+      },
+      "capture_to_decision_simulation_s": {
+        "count": 38,
+        "p50": 0.20000000000000284,
+        "p95": 0.34779999999999994,
+        "maximum": 1.968
+      }
+    },
+    "official_spvloc": {
+      "calls_returned": 3,
+      "accepted": 0,
+      "outcomes": {
+        "spvloc_shadow_unqualified_model": 3
+      },
+      "rpc_roundtrip_wall_s": {
+        "count": 3,
+        "p50": 0.357687994997832,
+        "p95": 0.5917397288001666,
+        "maximum": 0.617745477000426
+      },
+      "pending_wait_wall_s": {
+        "count": 3,
+        "p50": 0.000611067000136245,
+        "p95": 0.8397510932994918,
+        "maximum": 0.9329888739994203
+      },
+      "capture_to_decision_simulation_s": {
+        "count": 3,
+        "p50": 0.40000000000000036,
+        "p95": 1.4799999999999995,
+        "maximum": 1.5999999999999996
+      }
+    }
+  },
+  "gt_usage": "offline evaluation only; reference GT restricted to map training",
+  "output_age_s": {
+    "p50": 0.03200000000000003,
+    "p95": 0.03200000000000358
+  },
+  "recovery_events": [],
+  "recovery_experiment": "not measured: no recorded failure event",
+  "test_tuning": false
+}

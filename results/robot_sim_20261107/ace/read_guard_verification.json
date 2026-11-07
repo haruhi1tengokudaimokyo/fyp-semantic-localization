@@ -1,0 +1,17 @@
+{
+  "command": [
+    "python3",
+    "-m",
+    "pytest",
+    "tests/test_robot_ace.py::test_gt_open_rejected_inside_inference_subprocess",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": ".                                                                        [100%]\n1 passed in 0.21s\n",
+  "wall_seconds": 0.41612650100069004,
+  "scope": "actual Python subprocess open() attempt of a protected offline GT file raised PermissionError; intentional leaking predictor is a test fixture, not a real ACE prediction",
+  "mechanism": "sys.addaudithook; Python file-open protection, not an OS sandbox or a C/C++ syscall filter",
+  "official_inference": "561 successful official ACE+DSAC process responses with the worker guard installed by default; no query GT field in SensorObservation",
+  "worker_source_sha256": "c4a2cb97a99e17f4a16302283c35d58316e20d3f41bfa8431f609a127e0d9591",
+  "test_source_sha256": "9adb55f430a5851d46cdba3dedae2a36108cd1300eaed8b12c3d482d4b5af172"
+}

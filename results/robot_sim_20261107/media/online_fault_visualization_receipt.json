@@ -1,0 +1,37 @@
+{
+  "status": "ACTUAL_ONLINE_RUN_OFFLINE_VISUALIZATION",
+  "frames": 533,
+  "rendered_frames": 108,
+  "source_duration_s": 59.900000000000006,
+  "displayed_duration_s": 60.4,
+  "source": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault",
+  "map_id": "procthor_scene03000_structure_v1",
+  "local_origin": {
+    "query_id": "query/000000",
+    "truth_timestamp_s": 9.8,
+    "output_timestamp_s": 9.8,
+    "local_pose_timestamp_s": 9.77,
+    "timestamp_difference_s": 0.030000000000001137,
+    "scope": "one first available origin, no interpolation or full trajectory fitting"
+  },
+  "GT_scope": "offline display and single local origin; no online GT input",
+  "output_selection": "timestamp_s <= displayed capture time; candidate received_time_s <= displayed time",
+  "pose_interpolation": false,
+  "trajectory_fitting": false,
+  "future_candidate_selection": false,
+  "SPVLoc": "actual shadow candidates only; no state correction",
+  "MACVO": "not run on this capture, not shown",
+  "axis_limits_scope": "full output range for layout only; future points never displayed early",
+  "all_outliers_visible": true,
+  "gif_bytes": 8466210,
+  "input_sha256": {
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/map_manifest.json": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/query/frames.jsonl": "aaefae34d375114b4805311f5cd7338d52d0e2c42eca41b9bd91302c0f904508",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/offline_gt/query_poses.jsonl": "9ddb56cec8ade90eace0b9d0b22fbff0dda22b57fccfcea6fb52afc0af212260",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/localization/localization.jsonl": "4a1e164ba78a48f0f1facf1be94c5460726a96f7ad7cbc74e072d4a7a6fb1eb7",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/localization/ace_decisions.jsonl": "f6099b905b46fda7b62a347e88e20f0588e698dacb629adbfb6e01906c3c2211",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/evaluation/metrics.json": "b3ce19a6b02d53c54eef31a77dda5ffbf7c5a8ba8afd2d96478d9932c955a501",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/offline_gt/events.json": "abb4455decce237b06b2d88c410ce355685e0f66d0b187e5d76d9a9722ad3684",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/online_fault/capture/offline_gt/camera_fault.json": "897559945f5937958a77cfef56e2bea76835c90b3ae2a73f57892618b378f546"
+  }
+}

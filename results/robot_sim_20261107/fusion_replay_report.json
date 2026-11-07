@@ -1,0 +1,536 @@
+{
+  "status": "ACTUAL_FRONTENDS_REPLAYED_AND_INDEPENDENTLY_VERIFIED",
+  "scope": "Single known-map Gazebo development building; not an original-paper benchmark or physical robot validation",
+  "queries": 561,
+  "duration_s": 59.9,
+  "map_id": "procthor_scene03000_structure_v1",
+  "map_sha256": "688d33978990c4470867bc5fcb56b7aaec13fb84d08d82cac2c8493286524d9a",
+  "source": {
+    "path": "/data/fyp_3d/datasets/procthor_spvloc/scene_03000/procthor_house.json",
+    "sha256": "9e6b74a4c6b640c5c70013ed3701e2109de62790a0c788bed1a069e5710cfcc9",
+    "dataset": "ProcTHOR-10K",
+    "scene": "scene_03000",
+    "official_split": "validation",
+    "rooms": 7,
+    "walls_source": 46,
+    "walls_unique_nonempty": 22,
+    "openings": [
+      {
+        "id": "door|2|6",
+        "category": "door",
+        "wall_id": "wall|2|8.54|4.27|8.54|10.68",
+        "wall_start": [
+          8.544,
+          10.68
+        ],
+        "wall_end": [
+          8.544,
+          4.272
+        ],
+        "local_bounds": [
+          1.057997100331945,
+          2.0938092398430532,
+          0,
+          2.0956010818481445
+        ]
+      },
+      {
+        "id": "door|3|4",
+        "category": "door",
+        "wall_id": "wall|3|0.00|4.27|4.27|4.27",
+        "wall_start": [
+          4.272,
+          4.272
+        ],
+        "wall_end": [
+          0.0,
+          4.272
+        ],
+        "local_bounds": [
+          2.3917510336581738,
+          3.4732513254825146,
+          0,
+          2.1302273273468018
+        ]
+      },
+      {
+        "id": "window|3|0",
+        "category": "window",
+        "wall_id": "wall|3|0.00|4.27|0.00|10.68",
+        "wall_start": [
+          0.0,
+          4.272
+        ],
+        "wall_end": [
+          0.0,
+          10.68
+        ],
+        "local_bounds": [
+          0.061812304537415826,
+          1.3944804897714858,
+          0.8328604718505841,
+          2.080913426524351
+        ]
+      },
+      {
+        "id": "window|4|0",
+        "category": "window",
+        "wall_id": "wall|4|0.00|2.14|0.00|4.27",
+        "wall_start": [
+          0.0,
+          2.136
+        ],
+        "wall_end": [
+          0.0,
+          4.272
+        ],
+        "local_bounds": [
+          0.1119001550401166,
+          1.6330480022157148,
+          0.8540753146469098,
+          2.07017022574539
+        ]
+      },
+      {
+        "id": "door|4|5",
+        "category": "door",
+        "wall_id": "wall|4|6.41|2.14|6.41|4.27",
+        "wall_start": [
+          6.408,
+          4.272
+        ],
+        "wall_end": [
+          6.408,
+          2.136
+        ],
+        "local_bounds": [
+          0.09869830178747646,
+          2.0415083603812265,
+          0,
+          2.09014630317688
+        ]
+      },
+      {
+        "id": "door|1|4",
+        "category": "door",
+        "wall_id": "wall|4|0.00|2.14|6.41|2.14",
+        "wall_start": [
+          6.408,
+          2.136
+        ],
+        "wall_end": [
+          0.0,
+          2.136
+        ],
+        "local_bounds": [
+          4.08443430659933,
+          5.108879601933192,
+          0,
+          2.09014630317688
+        ]
+      },
+      {
+        "id": "window|6|0",
+        "category": "window",
+        "wall_id": "wall|6|8.54|10.68|10.68|10.68",
+        "wall_start": [
+          8.544,
+          10.68
+        ],
+        "wall_end": [
+          10.68,
+          10.68
+        ],
+        "local_bounds": [
+          0.044551910163597115,
+          0.9526296269909897,
+          0.8541935106574994,
+          2.06464261019821
+        ]
+      },
+      {
+        "id": "door|6|7",
+        "category": "door",
+        "wall_id": "wall|6|12.82|4.27|12.82|8.54",
+        "wall_start": [
+          12.816,
+          8.544
+        ],
+        "wall_end": [
+          12.816,
+          4.272
+        ],
+        "local_bounds": [
+          0.83418646900476,
+          1.8586317643386223,
+          0,
+          2.09014630317688
+        ]
+      },
+      {
+        "id": "door|6|8",
+        "category": "door",
+        "wall_id": "wall|6|8.54|4.27|12.82|4.27",
+        "wall_start": [
+          12.816,
+          4.272
+        ],
+        "wall_end": [
+          8.544,
+          4.272
+        ],
+        "local_bounds": [
+          1.5245126990909263,
+          3.467322757684676,
+          0,
+          2.09014630317688
+        ]
+      },
+      {
+        "id": "window|7|0",
+        "category": "window",
+        "wall_id": "wall|7|12.82|8.54|17.09|8.54",
+        "wall_start": [
+          12.816,
+          8.544
+        ],
+        "wall_end": [
+          17.088,
+          8.544
+        ],
+        "local_bounds": [
+          0.14240779638257137,
+          1.4750759816166412,
+          0.8328604718505841,
+          2.080913426524351
+        ]
+      }
+    ],
+    "appearance": "original procedural wall textures and floor; source furniture assets omitted; not an AI2-THOR photometric reproduction",
+    "coordinate_conversion": "position(x,y,z)->(x,z,y); do not transform quaternions by simple permutation",
+    "scope": "same known building mapping/query system-development experiment; not held-out SPVLoc network benchmark"
+  },
+  "thresholds": {
+    "translation_m": 1,
+    "rotation_deg": 30,
+    "service_fifo_output_age_s": 0.5
+  },
+  "independent_verification": {
+    "status": "PASS",
+    "output_rows_checked": 5610,
+    "method": "Direct numpy translation and scipy SO(3) angle from output poses plus original GT; no replay metric function reused",
+    "checks": [
+      "every evaluation output",
+      "success counts",
+      "raw accepted-candidate correctness",
+      "harmful corrections",
+      "ACE/SPVLoc complementarity",
+      "frozen source checksums",
+      "exact stereo timestamps"
+    ]
+  },
+  "complementarity": {
+    "evaluation_instants": 561,
+    "four_cells": {
+      "both_correct": 0,
+      "ace_only_correct": 497,
+      "spvloc_only_correct": 0,
+      "both_wrong": 64
+    },
+    "ace_top1_successes": 497,
+    "spvloc_top1_successes": 0,
+    "spvloc_top3_oracle_successes": 0,
+    "top1_union_oracle_successes": 497,
+    "ace_plus_spvloc_top3_oracle_successes": 497,
+    "potential_top1_gain_over_ace_count": 0,
+    "ace_missing_or_failed": 0,
+    "spvloc_missing_or_failed": 0,
+    "spvloc_fewer_than_three_candidates": 0,
+    "ace_top1_recall": 0.8859180035650623,
+    "spvloc_top1_recall": 0.0,
+    "spvloc_top3_oracle_recall": 0.0,
+    "top1_union_oracle_recall": 0.8859180035650623,
+    "ace_plus_spvloc_top3_oracle_recall": 0.8859180035650623,
+    "potential_top1_gain_over_ace": 0.0,
+    "per_query": "See fusion_replay/complementarity.json"
+  },
+  "results": [
+    {
+      "mode": "offline_accuracy",
+      "variant": "A_macvo_local",
+      "queries": 561,
+      "valid_outputs": 0,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": null,
+      "translation_rmse_m": null,
+      "rotation_median_deg": null,
+      "output_age_p95_s": null,
+      "accepted_candidates": 0,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": null,
+      "correction_events_assessable": 0,
+      "states": {
+        "LOST": 561
+      },
+      "outputs_sha256": "a76cb68f6f3a602b78127cb1b2b8eddae8eda14cd2492d16290f5dc9ff5efb23"
+    },
+    {
+      "mode": "offline_accuracy",
+      "variant": "B_macvo_ace",
+      "queries": 561,
+      "valid_outputs": 559,
+      "successes": 559,
+      "global_success_percent": 99.64349376114082,
+      "translation_median_m": 0.05535248494895388,
+      "translation_rmse_m": 0.20824005198973072,
+      "rotation_median_deg": 0.7120373201470414,
+      "output_age_p95_s": 0.0,
+      "accepted_candidates": 465,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": 0,
+      "correction_events_assessable": 464,
+      "states": {
+        "RECOVERING": 2,
+        "TRACKING": 465,
+        "DEAD_RECKONING": 94
+      },
+      "outputs_sha256": "dce4988fd2e2c72287f3f53cb0435204004c1de581e421e3f15531d7a0188f02"
+    },
+    {
+      "mode": "offline_accuracy",
+      "variant": "C_macvo_spvloc",
+      "queries": 561,
+      "valid_outputs": 553,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": 8.232217024394906,
+      "translation_rmse_m": 8.422392937466316,
+      "rotation_median_deg": 85.69384328382398,
+      "output_age_p95_s": 0.0,
+      "accepted_candidates": 229,
+      "wrong_accepted_candidates": 229,
+      "harmful_correct_to_wrong_events": 0,
+      "correction_events_assessable": 227,
+      "states": {
+        "RECOVERING": 7,
+        "TRACKING": 229,
+        "DEAD_RECKONING": 324,
+        "LOST": 1
+      },
+      "outputs_sha256": "2182777cd6529bfd1ba4bf78c4a44a8c13cd40a180c7117be767f40603ae4c1e"
+    },
+    {
+      "mode": "offline_accuracy",
+      "variant": "D_three_fixed",
+      "queries": 561,
+      "valid_outputs": 0,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": null,
+      "translation_rmse_m": null,
+      "rotation_median_deg": null,
+      "output_age_p95_s": null,
+      "accepted_candidates": 0,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": null,
+      "correction_events_assessable": 0,
+      "states": {
+        "RECOVERING": 561
+      },
+      "outputs_sha256": "3c5bd33a0877e65bf18af7e474f5537930df3f33cca97c3c6a444cf6296f85b6"
+    },
+    {
+      "mode": "offline_accuracy",
+      "variant": "E_three_recovery",
+      "queries": 561,
+      "valid_outputs": 0,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": null,
+      "translation_rmse_m": null,
+      "rotation_median_deg": null,
+      "output_age_p95_s": null,
+      "accepted_candidates": 0,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": null,
+      "correction_events_assessable": 0,
+      "states": {
+        "RECOVERING": 561
+      },
+      "outputs_sha256": "3c5bd33a0877e65bf18af7e474f5537930df3f33cca97c3c6a444cf6296f85b6"
+    },
+    {
+      "mode": "measured_service_fifo",
+      "variant": "A_macvo_local",
+      "queries": 561,
+      "valid_outputs": 0,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": null,
+      "translation_rmse_m": null,
+      "rotation_median_deg": null,
+      "output_age_p95_s": null,
+      "accepted_candidates": 0,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": null,
+      "correction_events_assessable": 0,
+      "states": {
+        "LOST": 561
+      },
+      "outputs_sha256": "a647d4c8940e03e2cb9a3d415427561befaad7303575c8a04f978aa1cb45350b"
+    },
+    {
+      "mode": "measured_service_fifo",
+      "variant": "B_macvo_ace",
+      "queries": 561,
+      "valid_outputs": 558,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": 0.056127258699411965,
+      "translation_rmse_m": 0.20823811849958104,
+      "rotation_median_deg": 0.7086457439251757,
+      "output_age_p95_s": 747.1349326915799,
+      "accepted_candidates": 464,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": 0,
+      "correction_events_assessable": 463,
+      "states": {
+        "LOST": 1,
+        "RECOVERING": 2,
+        "TRACKING": 464,
+        "DEAD_RECKONING": 94
+      },
+      "outputs_sha256": "734e9000de0067a50236a0fbcec33134313024142f1a34ffd5464885bd3a0bd8"
+    },
+    {
+      "mode": "measured_service_fifo",
+      "variant": "C_macvo_spvloc",
+      "queries": 561,
+      "valid_outputs": 553,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": 8.239018455765676,
+      "translation_rmse_m": 8.425011957340011,
+      "rotation_median_deg": 85.69284059550124,
+      "output_age_p95_s": 833.248552856964,
+      "accepted_candidates": 230,
+      "wrong_accepted_candidates": 230,
+      "harmful_correct_to_wrong_events": 0,
+      "correction_events_assessable": 228,
+      "states": {
+        "LOST": 2,
+        "RECOVERING": 6,
+        "TRACKING": 230,
+        "DEAD_RECKONING": 323
+      },
+      "outputs_sha256": "4e6911090f6538231990d67d989736a6e823a444178572ffbfa8764d70cc35a0"
+    },
+    {
+      "mode": "measured_service_fifo",
+      "variant": "D_three_fixed",
+      "queries": 561,
+      "valid_outputs": 0,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": null,
+      "translation_rmse_m": null,
+      "rotation_median_deg": null,
+      "output_age_p95_s": null,
+      "accepted_candidates": 0,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": null,
+      "correction_events_assessable": 0,
+      "states": {
+        "LOST": 1,
+        "RECOVERING": 560
+      },
+      "outputs_sha256": "41d5864a2787ef861fe3d261d9682060ea1e06a7b13bc932cb37b3edb3f9079a"
+    },
+    {
+      "mode": "measured_service_fifo",
+      "variant": "E_three_recovery",
+      "queries": 561,
+      "valid_outputs": 0,
+      "successes": 0,
+      "global_success_percent": 0.0,
+      "translation_median_m": null,
+      "translation_rmse_m": null,
+      "rotation_median_deg": null,
+      "output_age_p95_s": null,
+      "accepted_candidates": 0,
+      "wrong_accepted_candidates": 0,
+      "harmful_correct_to_wrong_events": null,
+      "correction_events_assessable": 0,
+      "states": {
+        "LOST": 1,
+        "RECOVERING": 560
+      },
+      "outputs_sha256": "41d5864a2787ef861fe3d261d9682060ea1e06a7b13bc932cb37b3edb3f9079a"
+    }
+  ],
+  "macvo_local_diagnostic": {
+    "n": 561,
+    "ate_se3_aligned_rmse_m": 0.12380884305405976,
+    "ate_first_pose_anchored_rmse_m": 0.3172814472970156,
+    "path_length_m": 8.476673194679417,
+    "lost_frames": 0,
+    "input_sampling": {
+      "median_interval_s": 0.1,
+      "max_interval_s": 0.3,
+      "recorded_intervals_over_1_5_median": 37,
+      "observed_rate_hz": 9.34891485809683,
+      "scope": "capture gaps are retained; these are separate from algorithm lost frames"
+    },
+    "world_absolute_localization": false,
+    "alignment_warning": "GT rigid alignment only for VO evaluation, never online localization"
+  },
+  "interpretation": [
+    "B MAC-VO+ACE improves complete-trajectory absolute-pose coverage in ideal offline replay; this is not real-time performance.",
+    "SPVLoc has zero successful top1/top3 candidates in this Gazebo appearance domain; semantic complementarity is not established.",
+    "D/E preserve conflicting modes and abstain; zero valid global outputs must not be described as successful three-model fusion.",
+    "A has arbitrary odometry gauge, so global coverage is undefined operationally; consult separate local MAC-VO diagnostics.",
+    "Measured serial-service FIFO is a warm-model scheduling lower bound retaining inference backlog; excludes model swaps and unmeasured I/O.",
+    "All measured-service outputs fail the 0.5s freshness requirement. Offline accuracy must not imply real-time readiness.",
+    "No independent kidnapping events occur in this shared 561-image capture; recovery performance is not measured here.",
+    "Scene03000 is an existing validation building reused for system development; this run is not held-out cross-building generalization evidence."
+  ],
+  "GT_online": false,
+  "frontend_predictions_modified": false,
+  "thresholds_tuned_on_query_GT": false,
+  "interpolation": false,
+  "real_time_claim": false,
+  "input_sha256": {
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset/query/frames.jsonl": "1f8610edfdccc48830c917578940f15a52077b8462b88511ce0ec5972a580bdd",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset/map_manifest.json": "e98bd73a68a235810042a783d280ea8e501df8cfa45140fe195ba0c9cf908724",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/work/fyp/configs/fusion/experiment.json": "59e71a9ad00fdab2e982023755f0a8d161ca4d44d59d04072b64f5b86277ac59",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/predictions.jsonl": "83295a2ddde8663e581daeae4c187f4eeb66ab9da0a391dd603cdad2b0ceb22a",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/ace_queries/predictions.jsonl": "c51186009309cdf246c0768e9c96ce2cb1dd4fabf588da121f0ed5b20d55f1e4",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/spvloc_openroof/predictions.jsonl": "23a89f755c40206d6bf68853253d470b9ac425dd0563672cfb0f4e2b3bef4aeb",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/protocol.json": "482ad533e6ead3a076b4648e09ed6348fcfa9b10690553df201e8c2bae235cf1",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/macvo_queries/per_frame.json": "637bb32f21f313fc6c0e6f52d501c3b66d00db066eb6d8614f036a428097a357",
+    "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/stereo_dataset/offline_gt/query_poses.jsonl": "b360bb4364c473748b07887cf3ebf59e9a6eefd4eaf2d83792799a7f3bbd467c"
+  },
+  "artifacts": {
+    "localization_replay.gif": {
+      "path": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/three_model_visualization/localization_replay.gif",
+      "sha256": "830b912c093f196744623701930bc9dc7c85098e40e0676df9b1b9abcb41d192",
+      "bytes": 5738736
+    },
+    "trajectory.png": {
+      "path": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/three_model_visualization/trajectory.png",
+      "sha256": "137faed2c08f90de267b558c94542930e57eeeb7ce6bcad7cc07ca76c269aa0a",
+      "bytes": 83161
+    },
+    "final_frame.png": {
+      "path": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/three_model_visualization/final_frame.png",
+      "sha256": "832f1003ad777fbee0c73f8c11f7fc83a229de1886a2e7be11303a5d75517dc8",
+      "bytes": 94955
+    },
+    "visualization_receipt.json": {
+      "path": "/home/csy/Documents/Codex/2026-10-31/new-chat/outputs/RobotSim_20261107/three_model_visualization/visualization_receipt.json",
+      "sha256": "2f17f7c9ca12632c745d8ec50a8e5770c81a2ab588c0d2010f2a89e9f422e351",
+      "bytes": 1687
+    }
+  }
+}
